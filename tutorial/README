@@ -1,0 +1,68 @@
+
+Description
+-----------
+
+This file briefly describes each of the various example programs you find
+in this directory.  The first sixteen files (tvguid[0-9][0-9].cc) are
+provided by Borland, the others are mine.
+
+File		Description
+-------------	-----------
+
+tvguid01.cc	the basic application: empty desktop, the default menu bar and
+		the default status line
+
+tvguid02.cc	empty desktop, default menu bar and two commands in the
+		status line
+
+tvguid03.cc	empty desktop, commands both in the menu bar and in the status
+		line
+
+tvguid04.cc	this shows how to redefine custom windows and how to instance
+		them by using menu commands
+
+tvguid05.cc	this example shows how to create custom views and how to
+		insert them in windows
+
+tvguid06.cc	a basic text scrolling window, with imperfect draw method
+
+tvguid07.cc	same as tvguid06 except for improved draw method
+
+tvguid08.cc	same as tvguid07 except for scrolling interior using scroll
+		bars
+
+tvguid09.cc	same as tvguid08 except for multiple panes
+
+tvguid10.cc	same as tvguid09 except for better handling of resizing
+
+tvguid11.cc	same as tvguid10 except for added dialog box
+
+tvguid12.cc	same as tvguid11 except for making the dialog modal
+
+tvguid13.cc	same as tvguid12 except for extra buttons in dialog
+
+tvguid14.cc	same as tvguid13 except for extra checkboxes, radiobuttons,
+		and labels
+
+tvguid15.cc	same as tvguid14 except for extra input line in dialog
+
+tvguid16.cc	same as tvguid15 except for saving and restoring dialog
+		contents
+
+basicMakefile	a makefile template showing how to write a makefile
+
+background.cc	how to change the background pattern
+
+listbox.cc	how to use the TListBox class
+
+load.cc		how to create custom views
+
+nomenus.cc	how to handle dialogs without menu bar and status line
+
+splash.cc	how to show a dialog box at startup
+
+tvedit.cc	a simple text editor
+
+tvlife.cc	the classic life example
+
+validator.cc	how to use range validators in input lines

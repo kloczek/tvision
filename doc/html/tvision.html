@@ -1,0 +1,1194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<!-- Created on September, 22  2001 by texi2html 1.65 -->
+<!-- 
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Olaf Bachmann <obachman@mathematik.uni-kl.de>
+Send bugs and suggestions to <texi2html@mathematik.uni-kl.de>
+ 
+-->
+<HEAD>
+<TITLE>TVision library installation handbook: </TITLE>
+
+<META NAME="description" CONTENT="TVision library installation handbook: ">
+<META NAME="keywords" CONTENT="TVision library installation handbook: ">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META NAME="Generator" CONTENT="texi2html 1.65">
+
+</HEAD>
+
+<BODY LANG="en" BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000FF" VLINK="#800080" ALINK="#FF0000">
+
+<A NAME="SEC_Top"></A>
+<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
+<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top">Top</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Contents">Contents</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_About"> ? </A>]</TD>
+</TR></TABLE>
+<H1>TVision library installation handbook</H1></P><P>
+
+This document covers the installation and operation of TVision under the
+FreeBSD and Linux operating systems.
+</P><P>
+
+<BLOCKQUOTE><TABLE BORDER=0 CELLSPACING=0> 
+<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="tvision.html#SEC1">1. Overview</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">An overview of the TVision package.</TD></TR>
+<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="tvision.html#SEC2">2. Reporting Bugs</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">Submitting effective bug reports.</TD></TR>
+<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="tvision.html#SEC3">3. File Structure</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">Notes on the file hierarchy.</TD></TR>
+<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="tvision.html#SEC4">4. Copyright</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">This copyright license says how you can copy and
+                          use TVision.</TD></TR>
+</TABLE>
+
+<br>
+<TABLE BORDER=0 CELLSPACING=0>
+<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="tvision.html#SEC5">5. Portability issues</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">The portability of the package.</TD></TR>
+<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="tvision.html#SEC6">6. Keyboard</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">The keyboard handling.</TD></TR>
+<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="tvision.html#SEC8">7. Screen</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">The screen handling.</TD></TR>
+<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="tvision.html#SEC14">8. Mouse</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">The mouse handling.</TD></TR>
+<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="tvision.html#SEC17">9. Environment Variables</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">The user modifiable environment variables.</TD></TR>
+</TABLE>
+
+<br>
+<TABLE BORDER=0 CELLSPACING=0>
+<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="tvision.html#SEC22">10. Compiling TVision</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">How to compile the library.</TD></TR>
+<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="tvision.html#SEC24">11. Resources</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">A list of useful sites.</TD></TR>
+</TABLE>
+
+<br>
+<TABLE BORDER=0 CELLSPACING=0>
+<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="tvision.html#SEC25">12. Credits</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">Contributors and useful links.</TD></TR>
+<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="tvision.html#SEC26">13. Author's address</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">To send him a nice postcard.</TD></TR>
+</TABLE></BLOCKQUOTE>
+<P>
+
+<HR SIZE=1>
+<A NAME="SEC1"></A>
+<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
+<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top"> &lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC2"> &gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top"> &lt;&lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top"> Up </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC2"> &gt;&gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top">Top</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Contents">Contents</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_About"> ? </A>]</TD>
+</TR></TABLE>
+<A NAME="Overview"></A>
+</P><P>
+
+<H1> 1. Overview </H1>
+<!--docid::SEC1::-->
+Turbo Vision (or TV, for short) is a library that provides an application
+framework.  With TV you can write a beautiful object-oriented character-mode
+user interface in a short time.
+<P>
+
+TV is available in C++ and Pascal and is a product of Borland International.
+It was developed to run on MS-DOS systems, but today it is available for many
+other platforms (ported by independent programmers).
+</P><P>
+
+This port is based on the Borland 2.0 version with fixes.  Original Turbo
+Vision 2.0 sources should be available at:
+</P><P>
+
+<A HREF="ftp://ftp.borland.com/pub/borlandcpp/devsupport/archive/turbovision">ftp://ftp.borland.com/pub/borlandcpp/devsupport/archive/turbovision</A>
+</P><P>
+
+<A HREF="ftp://ftp.inprise.com/pub/borlandcpp/devsupport/archive/turbovision">ftp://ftp.inprise.com/pub/borlandcpp/devsupport/archive/turbovision</A>
+</P><P>
+
+See the <A HREF="tvision.html#SEC25">12. Credits</A> section for a list of other useful sites.
+</P><P>
+
+<A NAME="Reporting Bugs"></A>
+</P><P>
+
+<HR SIZE="6">
+<A NAME="SEC2"></A>
+<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
+<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC1"> &lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC3"> &gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC1"> &lt;&lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top"> Up </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC3"> &gt;&gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top">Top</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Contents">Contents</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_About"> ? </A>]</TD>
+</TR></TABLE>
+<H1> 2. Reporting Bugs </H1>
+<!--docid::SEC2::-->
+We welcome bug reports or suggestions for the TVision system, both programs
+and documentations.  Please email them to <A HREF="mailto:sergio@sigala.it">sergio@sigala.it</A>.  You can
+download the latest version of TVision from
+<A HREF="http://www.sigala.it/sergio/tvision">http://www.sigala.it/sergio/tvision</A>.
+<P>
+
+For bug reports, please include enough information for the maintainers to
+reproduce the problem.  Generally speaking, that means:
+</P><P>
+
+<UL>
+<LI>the version number of TVision and the program(s) involved;
+<P>
+
+<LI>hardware, operating system, and compiler versions;
+<P>
+
+<LI>any unusual options you gave to `<TT>configure</TT>';
+<P>
+
+<LI>the list of actions and/or the contents of any input files necessary to
+reproduce the bug;
+<P>
+
+<LI>a description of the problem and samples of any erroneous output;
+<P>
+
+<LI>anything else that you think would be helpful.
+</UL>
+<P>
+
+When in doubt whether something is needed or not, include it.  It's better to
+include too much than to leave out something important.
+</P><P>
+
+Patches are most welcome; if possible, please make them with
+`<SAMP>diff -ru</SAMP>' (see See section `Overview' in <CITE>The diff program</CITE>, for
+details).
+</P><P>
+
+When sending email, please do not encode or split the messages in any way if
+possible; it's much easier to deal with one plain text message, however large,
+than many small ones.
+</P><P>
+
+<A NAME="File Structure"></A>
+</P><P>
+
+<HR SIZE="6">
+<A NAME="SEC3"></A>
+<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
+<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC2"> &lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC4"> &gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC2"> &lt;&lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top"> Up </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC4"> &gt;&gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top">Top</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Contents">Contents</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_About"> ? </A>]</TD>
+</TR></TABLE>
+<H1> 3. File Structure </H1>
+<!--docid::SEC3::-->
+A few notes on the file hierarchy used in this package.
+<P>
+
+<UL>
+<LI>Directory `<TT>doc</TT>' and its subdirectories contain all the
+documentation of the library, along with this manual.
+<P>
+
+<UL>
+<LI>`<TT>html/index.html</TT>' is the main page of the documentation. From there
+you can reach both the <EM>installation handbook</EM> and the <EM>class hierarchy
+documentation</EM>. Starting explorations from this page is highly recommended,
+since this file will always stay there in all future versions of the library.
+Anyway, you can alternatively open the various files individually, following
+the instructions given below.
+<P>
+
+<LI>`<TT>tvision.info</TT>' is the Texinfo version of this manual, hereinafter
+called <EM>installation handbook</EM>. It contains information regarding
+installation, keyboard handling, screen manipulation, environment variables
+and mouse support. You should take a look at it before using the library. Just
+type `<SAMP>info -f tvision.info</SAMP>' to proceed.
+The Texinfo format allows searching for topics, commands and functions from
+the many indices.
+<P>
+
+`<TT>tvision.info</TT>' was automatically extracted from `<TT>tvision.texi</TT>' with
+the program `<SAMP>makeinfo</SAMP>'.
+The command `<SAMP>texi2dvi tvision.texi</SAMP>' will output `<TT>tvision.dvi</TT>',
+which can then be processed with `<SAMP>dvips</SAMP>' and optionally `<SAMP>gs</SAMP>'
+(Ghostscript) to produce a nicely formatted printed manual. See
+section `Overview' in <CITE>The Texinfo format</CITE>, and
+See section `Getting Started' in <CITE>The info program</CITE>, for more about the
+Texinfo documentation system.
+</P><P>
+
+<LI>`<TT>html/tvision.html</TT>' is the html version of these installation
+notes, automatically produced by applying the `<SAMP>texi2html</SAMP>' utility to
+file `<TT>tvision.texi</TT>'. Since it is built automatically the output may
+appear ugly, so don't blame me.
+<P>
+
+<LI>Files `<TT>html/hierarchy.html</TT>', `<TT>html/classes.html</TT>',
+`<TT>html/annotated.html</TT>', `<TT>html/files.html</TT>', `<TT>html/functions.html</TT>'
+and `<TT>html/globals.html</TT>' are the main pages of the <EM>class hierarchy
+documentation</EM>. These information describe each class, its methods and data
+members with some degree of detail.
+<P>
+
+To produce this documentation, I annotated each class directly in the header
+file (.h) where it appears. Then I ran `<SAMP>doxygen</SAMP>', a powerful
+documentation extractor available from
+<A HREF="http://www.doxygen.org/index.html">http://www.doxygen.org/index.html</A> or from
+<A HREF="http://www.stack.nl/~dimitri/doxygen/download.html">http://www.stack.nl/~dimitri/doxygen/download.html</A>. It automatically
+fetches these information and generates a nice html manual.
+</UL>
+<P>
+
+<LI>Directory `<TT>lib</TT>' contains all the sources of the library, both header
+(.h) and program (.cc) files.  Object files (.lo, .o) and the generated
+library files (libtvision.a, libtvision.la) are also placed here, after a
+successful compilation.
+<P>
+
+Before compiling the library, a trick in `<TT>Makefile.am</TT>' creates a symbolic
+link named `<TT>tvision</TT>' to this same directory.  This recursive link allows
+the smooth compilation of the various source files, because all of them try to
+include `<TT>tvision/tv.h</TT>'.
+</P><P>
+
+`<TT>tv.h</TT>' is the only header every application needs to include.  It
+automatically includes the required TVision header files by looking at the
+various `<SAMP>Uses_XXXX</SAMP>' macros.  If one macro is defined the relevant header
+is included.
+</P><P>
+
+<LI>Directory `<TT>demo</TT>' presents a complete application made with this
+library, named `<SAMP>demo</SAMP>'.  It shows how to use predefined views, how to
+subclass them to create custom views, how to handle the various events and how
+to deal with the online help system.  It also gives some advises on how to
+store and recover views to and from streams.
+<P>
+
+<LI>Directory `<TT>tutorial</TT>' contains a lot of simple examples.  Read file
+`<TT>README</TT>' in that directory to know exactly what each program does.
+File `<TT>basicMakefile</TT>' is a simple makefile template you can easily modify
+to build your own programs.
+<P>
+
+<LI>Finally, directory `<TT>tvhc</TT>' includes the help compiler, the default
+program used to translate a source help file in the binary form TVision
+internally uses.  Some documentation for it is given there in file
+`<TT>README</TT>'.
+</UL>
+<P>
+
+<A NAME="Copyright"></A>
+</P><P>
+
+<HR SIZE="6">
+<A NAME="SEC4"></A>
+<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
+<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC3"> &lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC5"> &gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC3"> &lt;&lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top"> Up </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC5"> &gt;&gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top">Top</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Contents">Contents</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_About"> ? </A>]</TD>
+</TR></TABLE>
+<H1> 4. Copyright </H1>
+<!--docid::SEC4::-->
+<BLOCKQUOTE>
+All changes copyright (c) 1997-2001 Sergio Sigala, Brescia, Italy.
+All rights reserved.
+<P>
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+</P><P>
+
+<OL>
+<LI>Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+<LI>Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+</OL>
+<P>
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</BLOCKQUOTE>
+<P>
+
+Warning: this BSD-style copyright is applicable only to the modifications
+brought by Sergio Sigala to the original code.  Borland has released the code
+to the public, but still owns the original copyright (see file `<TT>lib/tv.h</TT>'
+for instance).
+</P><P>
+
+Other contributors have their respective copyright.
+</P><P>
+
+<A NAME="Portability issues"></A>
+</P><P>
+
+<HR SIZE="6">
+<A NAME="SEC5"></A>
+<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
+<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC4"> &lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC6"> &gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC4"> &lt;&lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top"> Up </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC6"> &gt;&gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top">Top</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Contents">Contents</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_About"> ? </A>]</TD>
+</TR></TABLE>
+<H1> 5. Portability issues </H1>
+<!--docid::SEC5::-->
+The TV library was originally written to run on 80x86 processor.  These
+processors are little-endian and the original library assumes this as a
+premise.  In fact, some code may not run properly on big-endian machines.
+This means it requires a big effort to make the library fully portable across
+all Unix machines.
+<P>
+
+I made various changes in the code to make it run correctly under big-endian
+machines.  I tested it with a PowerPC running Linux and it works fine (maybe
+some other minor changes are required).
+</P><P>
+
+Another problem is the massive usage of the PC-specific character set.  This
+usually gives a nice look when the applications run in the system console, but
+can show very annoying characters when they run in a remote terminal or under
+a X shell.
+</P><P>
+
+<A NAME="Keyboard"></A>
+</P><P>
+
+<HR SIZE="6">
+<A NAME="SEC6"></A>
+<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
+<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC5"> &lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC8"> &gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC5"> &lt;&lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top"> Up </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC8"> &gt;&gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top">Top</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Contents">Contents</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_About"> ? </A>]</TD>
+</TR></TABLE>
+<H1> 6. Keyboard </H1>
+<!--docid::SEC6::-->
+The ncurses library is systematically used in TVision to perform keyboard
+input, and usually to do video output also.  These routines give the user a
+terminal-independent method for getting input characters and to update
+character screens with reasonable optimization.  The name `<SAMP>ncurses</SAMP>'
+stands for `new curses' and is the approved replacement for the 4.4BSD classic
+`<SAMP>curses</SAMP>' library, which has been discontinued.
+<P>
+
+More specifically, the ncurses package supports:
+</P><P>
+
+<UL>
+<LI>output to windows and reading terminal input;
+<LI>control over terminals and their input and output capabilities;
+<LI>some color manipulation;
+<LI>terminfo capabilities;
+<LI>access to low-level terminal-manipulation routines.
+</UL>
+<P>
+
+In addition to drawing characters on the screen, video attributes and colors
+may be supported, causing the characters to show up in such modes as
+underlined, in  reverse video, or in color on terminals that support such
+display enhancements.  Line drawing characters may be specified to be output.
+On input, ncurses is also able to translate arrow and function keys that
+transmit escape sequences into single value integers.  Type
+`<SAMP>man ncurses</SAMP>' for more.
+</P><P>
+
+Under Linux a special output mechanism called VCS, which gives direct access
+to the console screen memory, may be used.  This is noticeably faster than the
+standard ncurses output.  See <A HREF="tvision.html#SEC8">7. Screen</A> for details.
+</P><P>
+
+<A NAME="SEC7"></A>
+<H2> Key combinations </H2>
+<!--docid::SEC7::-->
+Two notes, whose applicability is strictly dependent on the operating system
+you are using:
+<P>
+
+<UL>
+<LI>Under FreeBSD <KBD>ALT</KBD> combinations aren't currently supported.  You can
+emulate them with <KBD>ESC</KBD> sequences.  To perform an <KBD>ALT</KBD> emulation you
+should press <KBD>ESC</KBD> followed by the required letter key within some tenth of
+second.  The default time interval is 0.4 seconds, see file `<TT>system.cc</TT>'
+for further details on how to change it.
+<P>
+
+For example, to generate the <KBD>Alt-X</KBD> combination press <KBD>ESC X</KBD>.  To
+generate <KBD>ESC</KBD> alone press it once and wait 0.4 seconds or press it twice.
+If the second key is pressed outside the time interval, the entire sequence is
+treated like two ordinary key presses are.
+</P><P>
+
+Support for <KBD>CTRL</KBD> and <KBD>SHIFT</KBD> key combinations is also missing.
+</P><P>
+
+<LI>Under Linux <KBD>ALT</KBD> combinations are usable only when you run
+applications from the system console.  In this mode the library can easily
+detect the state of <KBD>ALT</KBD>, <KBD>CTRL</KBD> and <KBD>SHIFT</KBD> keys by using a
+Linux-specific system call (`<SAMP>TIOCLINUX</SAMP>', see `<TT>sys/kd.h</TT>' for
+more), so strange combinations like `<SAMP>kbCtrlLeft</SAMP>' are always possible.
+In other environments (namely remote terminals and X shells) these sequences
+can't be detected, so you need to compose the same sequences seen above for
+FreeBSD.
+</UL>
+<P>
+
+<A NAME="Screen"></A>
+</P><P>
+
+<HR SIZE="6">
+<A NAME="SEC8"></A>
+<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
+<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC6"> &lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC14"> &gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC6"> &lt;&lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top"> Up </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC14"> &gt;&gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top">Top</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Contents">Contents</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_About"> ? </A>]</TD>
+</TR></TABLE>
+<H1> 7. Screen </H1>
+<!--docid::SEC8::-->
+A few, useful notes about screen handling.
+<P>
+
+<A NAME="SEC9"></A>
+<H2> The importance of SIGWINCH </H2>
+<!--docid::SEC9::-->
+The `<SAMP>SIGWINCH</SAMP>' signal is always hooked, so we can resize the screen at
+runtime and the application will adapt itself.  Obviously, this capability is
+especially useful in X shells.
+<P>
+
+<A NAME="SEC10"></A>
+<H2> Two drawbacks of ncurses </H2>
+<!--docid::SEC10::-->
+Like mentioned previously, the ncurses library is usually used to perform
+video output.  This should work well under any operating system, in any kind of
+terminal (system console, dumb terminal or X shell).  But there are at least
+two problems with this otherwise perfectly portable solution:
+<P>
+
+<OL>
+<LI>This mechanism can't output all the 256 characters the 8 bit encoding
+would permit, including those nice semi-graphical signs usually used in
+text-mode applications on PCs.  Since TVision uses them all (to draw frames,
+window icons and various other views), your application may appear
+graphically poor.
+<P>
+
+<LI>This mechanism is slow.  On the system console it's slower on Linux than
+FreeBSD, because of the advanced system FreeBSD uses to update the screen
+memory.  Equally slow on the other kinds of terminal.  This limit appears
+noticeably on 486 and low-end Pentiums.
+</OL>
+<P>
+
+There is no way to speedup this process without doing some low-level,
+operating-system-specific trickery, necessarily non portable across the
+various operating systems.
+</P><P>
+
+<A NAME="SEC11"></A>
+<H2> The Linux way: virtual console mode versus remote mode </H2>
+<!--docid::SEC11::-->
+Linux has a special output mechanism called VCS (or VCSA), which gives direct
+access to the screen memory.  VCS stands for <EM>virtual console system</EM>.
+<P>
+
+This mechanism is a lot faster than the standard ncurses output; we'll call it
+<EM>virtual console mode</EM>.  For clearness, we'll refer to the conventional,
+ncurses-based output approach, as <EM>remote mode</EM>.  Not surprising, this
+facility is capable of displaying all of the 256 characters with all colors
+the graphic adapter allows, so it fixes the first problem too.
+</P><P>
+
+The Linux kernel provides a handful of special devices which refer to the
+memories of the various virtual consoles; they are described below:
+</P><P>
+
+<UL>
+<LI>`<TT>/dev/vcs0</TT>' is a character device with major number 7 and minor
+number 0, usually of mode 0644 and owner root.tty.  It refers to the memory of
+the currently displayed virtual console terminal.
+<P>
+
+<LI>`<TT>/dev/vcs[1-63]</TT>' are character devices for virtual console
+terminals, they have major number 7 and minor number 1 to 63, usually mode
+0644 and owner root.tty.
+<P>
+
+<LI>`<TT>/dev/vcsa[0-63]</TT>' are the same as above, but including attributes,
+and prefixed with four bytes giving the screen dimensions and cursor position:
+lines, columns, x and y.
+</UL>
+<P>
+
+These devices replace the screendump ioctls of `<SAMP>console(4)</SAMP>', so the
+system administrator can control access using file system permissions.  Your
+application may require root privileges, in order to gain access to these
+devices.  Type `<SAMP>man vcs</SAMP>' for more.
+</P><P>
+
+If not already present, the devices for the first eight virtual consoles may
+be created by:
+</P><P>
+
+<TABLE><tr><td>&nbsp;</td><td class=example><pre>for x in 0 1 2 3 4 5 6 7 8; do
+        mknod -m 644 /dev/vcs$x c 7 $x;
+        mknod -m 644 /dev/vcsa$x c 7 $[$x+128];
+done
+chown root:tty /dev/vcs*
+</pre></td></tr></table></P><P>
+
+Alternatively, you may try the following script, taken from the Midnight
+Commander, which builds all the 64 devices:
+</P><P>
+
+<TABLE><tr><td>&nbsp;</td><td class=example><pre>#!/bin/sh
+#
+# Script by Jakub Jelinek
+#
+if test -e /dev/vcs0
+then
+        exit
+fi
+
+I=0
+while [ $I -lt 64 ] 
+do
+        mknod /dev/vcs$I c 7 $I
+        chmod 622 /dev/vcs$I
+        chown root.tty /dev/vcs$I
+        mknod /dev/vcsa$I c 7 `expr $I + 128`
+        chmod 622 /dev/vcsa$I
+        chown root.tty /dev/vcsa$I
+        I=`expr $I + 1`
+done
+</pre></td></tr></table></P><P>
+
+<A NAME="SEC12"></A>
+<H2> Conclusions on Linux </H2>
+<!--docid::SEC12::-->
+Under Linux every program can run in two ways:
+<P>
+
+<UL>
+<LI><EM>Virtual console mode</EM> is the fastest output method and should be
+automatically selected when you start your application from the system
+console and it has the required write privileges.  Its output goes directly to
+the display via one of the various `<TT>/dev/vcsa*</TT>' devices.
+<P>
+
+<LI><EM>Remote mode</EM> is used when you run the application from a remote
+terminal, under telnet, in a X shell or in the system console but it has not
+write privileges to the `<TT>/dev/vcsa*</TT>' devices.  Its output goes to the
+display via standard out, so it's very slow compared to the former.
+</UL>
+<P>
+
+In any case, colors are used if the terminal supports them.  Otherwise, a
+monochrome palette with bold and inverse attributes is used to mark the text.
+</P><P>
+
+<A NAME="SEC13"></A>
+<H2> Two notes on FreeBSD </H2>
+<!--docid::SEC13::-->
+<UL>
+<LI>FreeBSD lacks a mechanism like VCS.  But it does not really need it,
+because his conventional ncurses output is moderately fast thanks to the
+peculiar screen updating technique it uses.
+<P>
+
+<LI>The last screen line is not used because otherwise the display will
+scroll up (it's an example of the <EM>last character syndrome</EM>, which
+sometimes affects computer programs).
+</UL>
+<P>
+
+<A NAME="Mouse"></A>
+</P><P>
+
+<HR SIZE="6">
+<A NAME="SEC14"></A>
+<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
+<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC8"> &lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC17"> &gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC8"> &lt;&lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top"> Up </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC17"> &gt;&gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top">Top</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Contents">Contents</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_About"> ? </A>]</TD>
+</TR></TABLE>
+<H1> 8. Mouse </H1>
+<!--docid::SEC14::-->
+The mouse handling varies a lot, depending on the operating system you are
+using.  If you need to change some timing see the `<TT>system.cc</TT>' file.
+<P>
+
+<A NAME="SEC15"></A>
+<H2> Mouse support under FreeBSD </H2>
+<!--docid::SEC15::-->
+The library requires the `<SAMP>moused</SAMP>' daemon to be loaded.  See the moused
+man page (by typing `<SAMP>man moused</SAMP>') for more details.  For example, if
+you have a Microsoft compatible mouse connected to COM1, you should issue this
+command:
+<P>
+
+<TABLE><tr><td>&nbsp;</td><td class=example><pre>moused -p /dev/cuaa0 -t microsoft
+</pre></td></tr></table></P><P>
+
+By using the `<SAMP>TVOPT</SAMP>' environment variable, you can modify the shape of
+the cursor.  Setting it to `<SAMP>noarrow</SAMP>' disables the arrow pointer; the
+block pointer will instead be used.  See the <A HREF="tvision.html#SEC17">9. Environment Variables</A>
+section for more.
+</P><P>
+
+<A NAME="SEC16"></A>
+<H2> Mouse support under Linux </H2>
+<!--docid::SEC16::-->
+The library requires `<SAMP>Gpm</SAMP>'.  The Gpm package is a mouse server for the
+Linux console.  It is meant to provide cooked mouse events to text-only
+applications, such as editors and simple menu-based programs.  I tested
+TVision with Gpm version 1.18.1.
+<P>
+
+<A NAME="Environment Variables"></A>
+</P><P>
+
+<HR SIZE="6">
+<A NAME="SEC17"></A>
+<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
+<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC14"> &lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC22"> &gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC14"> &lt;&lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top"> Up </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC22"> &gt;&gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top">Top</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Contents">Contents</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_About"> ? </A>]</TD>
+</TR></TABLE>
+<H1> 9. Environment Variables </H1>
+<!--docid::SEC17::-->
+By setting the two environment variables `<SAMP>TVLOG</SAMP>' and `<SAMP>TVOPT</SAMP>', you
+can modify the way TVision applications act on your system.
+<P>
+
+<A NAME="SEC18"></A>
+<H2> TVLOG </H2>
+<!--docid::SEC18::-->
+With `<SAMP>TVLOG</SAMP>' you can force TVision to write a log file.  For example, the
+following line will produce a log file named `<SAMP>mylog</SAMP>' when the application
+is executed:
+<P>
+
+<TABLE><tr><td>&nbsp;</td><td class=example><pre>TVLOG=mylog
+</pre></td></tr></table></P><P>
+
+The log file creation can be suppressed by assigning an empty string to this
+variable.
+</P><P>
+
+<A NAME="SEC19"></A>
+<H2> TVOPT </H2>
+<!--docid::SEC19::-->
+You can modify some of the behavior of the library by defining the other
+environment variable `<SAMP>TVOPT</SAMP>'.  This variable is a set of strings
+separated by one or more space characters.  Valid strings are:
+<P>
+
+<DL COMPACT>
+<DT>`<SAMP>cyrillic</SAMP>'
+<DD>enables cyrillic character set mapping (for Linux and VCS only).  See
+<A HREF="tvision.html#SEC8">7. Screen</A> for more about VCS.
+<P>
+
+<DT>`<SAMP>latin</SAMP>'
+<DD>enables latin character set mapping (for Linux and VCS only).  See
+<A HREF="tvision.html#SEC8">7. Screen</A> for more about VCS.
+<P>
+
+Note: this option and the one above are useful only when the VCS is enabled;
+in any other mode the application should automatically select the correct
+mapping, thanks to the translation kindly done by ncurses and the operating
+system.
+</P><P>
+
+<DT>`<SAMP>noarrow</SAMP>'
+<DD>disables the arrow pointer (FreeBSD only); the block pointer will instead be
+used.  See <A HREF="tvision.html#SEC14">8. Mouse</A> for more about mouse handling.
+<P>
+
+<DT>`<SAMP>nogpm</SAMP>'
+<DD>disables support for the Gpm mouse driver (Linux only); the application
+will run without mouse.  See <A HREF="tvision.html#SEC14">8. Mouse</A> for more about mouse handling.
+<P>
+
+<DT>`<SAMP>novcs</SAMP>'
+<DD>inhibits the use of VCS to do video output (Linux only); the application will
+always use remote mode.  See <A HREF="tvision.html#SEC8">7. Screen</A> for more about VCS.
+</DL>
+<P>
+
+<A NAME="SEC20"></A>
+<H2> Examples for the Bourne shell </H2>
+<!--docid::SEC20::-->
+<TABLE><tr><td>&nbsp;</td><td class=example><pre>export TVOPT=nogpm         ==> does not use Gpm
+export TVOPT="nogpm novcs" ==> disables both Gpm and VCS
+export TVOPT=              ==> cleans the environment variable
+</pre></td></tr></table><P>
+
+<A NAME="SEC21"></A>
+<H2> Examples for the C shell </H2>
+<!--docid::SEC21::-->
+<TABLE><tr><td>&nbsp;</td><td class=example><pre>setenv TVOPT nogpm         ==> does not use Gpm
+setenv TVOPT "nogpm novcs" ==> disables both Gpm and VCS
+unsetenv TVOPT             ==> cleans the environment variable
+</pre></td></tr></table><P>
+
+<A NAME="Compiling TVision"></A>
+</P><P>
+
+<HR SIZE="6">
+<A NAME="SEC22"></A>
+<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
+<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC17"> &lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC24"> &gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC17"> &lt;&lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top"> Up </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC24"> &gt;&gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top">Top</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Contents">Contents</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_About"> ? </A>]</TD>
+</TR></TABLE>
+<H1> 10. Compiling TVision </H1>
+<!--docid::SEC22::-->
+This section gives you some information for installing TVision.  For further
+details please read the `<TT>INSTALL</TT>' file that can be found in the root
+directory of the source package.
+<P>
+
+<UL>
+<LI>Type `<SAMP>./configure</SAMP>' to automatically detect the system features.
+<P>
+
+<LI>Type `<SAMP>make</SAMP>' in the main directory to compile all the sources.  This
+creates both the static and dynamic libraries.  Libraries are placed in
+directory `<SAMP>lib</SAMP>' with source files.  The `<SAMP>demo</SAMP>' example and the
+tutorials are statically linked against the TVision library.
+<P>
+
+<LI>Type `<SAMP>make install</SAMP>' to install the library in
+`<TT>/usr/local/include</TT>' and `<TT>/usr/local/lib</TT>'.  The default prefix
+directory is thus `<SAMP>/usr/local</SAMP>' and it's automatically selected by
+`<SAMP>configure</SAMP>' if you missed to specify a custom prefix directory with
+the option `<SAMP>--prefix=PATH</SAMP>'.
+<P>
+
+<LI>Type `<SAMP>make uninstall</SAMP>' to remove the library.
+<P>
+
+Note: this command and the previous (`<SAMP>make install</SAMP>') both need root
+privileges and should possibly be followed by `<SAMP>ldconfig</SAMP>' to update the
+linker cache.
+</P><P>
+
+<LI>Type `<SAMP>make clean</SAMP>' in the main directory to remove objects,
+backup files and executables in the main directory and in all the
+subdirectories.
+<P>
+
+<LI>Type `<SAMP>make dist</SAMP>' to build the distribution package.
+</UL>
+<P>
+
+<A NAME="SEC23"></A>
+<H2> Quick start </H2>
+<!--docid::SEC23::-->
+To start, just say `<SAMP>./configure &#38;&#38; make</SAMP>' to your shell.  Binaries are not
+released with the package because it's safer for you to compile the package by
+yourself.
+<P>
+
+<A NAME="Resources"></A>
+</P><P>
+
+<HR SIZE="6">
+<A NAME="SEC24"></A>
+<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
+<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC22"> &lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC25"> &gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC22"> &lt;&lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top"> Up </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC25"> &gt;&gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top">Top</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Contents">Contents</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_About"> ? </A>]</TD>
+</TR></TABLE>
+<H1> 11. Resources </H1>
+<!--docid::SEC24::-->
+Please connect to <A HREF="http://www.sigala.it/sergio/tvision">http://www.sigala.it/sergio/tvision</A> for fresh
+resources. It is the official TVision site, from which you can download the
+latest version of the package; there is a number of example programs too.
+<P>
+
+<A NAME="Credits"></A>
+</P><P>
+
+<HR SIZE="6">
+<A NAME="SEC25"></A>
+<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
+<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC24"> &lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC26"> &gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC24"> &lt;&lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top"> Up </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC26"> &gt;&gt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top">Top</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Contents">Contents</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_About"> ? </A>]</TD>
+</TR></TABLE>
+<H1> 12. Credits </H1>
+<!--docid::SEC25::-->
+The following are most of the contributors, listed in chronologic order.
+Sorry if I missed somebody (please contact me in case I did,
+<A HREF="mailto:sergio@sigala.it">sergio@sigala.it</A>).
+<P>
+
+<UL>
+<LI>Vasily Egoshin <A HREF="mailto:wasa@nica.marstu.mari.su">wasa@nica.marstu.mari.su</A>
+<LI>Rainer Keuchel <A HREF="mailto:r_keuchel@smaug.netwave.de">r_keuchel@smaug.netwave.de</A>
+<LI>Martynas Kunigelis <A HREF="mailto:algikun@santaka.sc-uni.ktu.lt">algikun@santaka.sc-uni.ktu.lt</A>
+<LI>Bonni Mierzejewska <A HREF="mailto:u6ed4@wvnvm.wvnet.edu">u6ed4@wvnvm.wvnet.edu</A>
+<LI>Ruslan V. Brushkoff <A HREF="mailto:ruslan@Baby.TM.Odessa.UA">ruslan@Baby.TM.Odessa.UA</A>
+<LI>Dmitrij Korovkin <A HREF="mailto:tkf@glasnet.ru">tkf@glasnet.ru</A>
+<LI>Sergey Clushin <A HREF="mailto:serg@lamport.ru">serg@lamport.ru</A> <A HREF="mailto:Clushin@deol.ru">Clushin@deol.ru</A>
+<LI>Harald Hoyer <A HREF="mailto:HarryH@Royal.Net">HarryH@Royal.Net</A>
+<LI>John Polstra <A HREF="mailto:jdp@polstra.com">jdp@polstra.com</A>
+<LI>Pedro F. Giffuni <A HREF="mailto:giffunip@asme.org">giffunip@asme.org</A>
+<LI>Vitaly Fedrushkov <A HREF="mailto:willy@snowyowl.csu.ac.ru">willy@snowyowl.csu.ac.ru</A>
+<LI>Piotr Klaban <A HREF="mailto:makler@man.torun.pl">makler@man.torun.pl</A>
+<LI>Artur Harasimiuk <A HREF="mailto:maniak@qna.softomat.com.pl">maniak@qna.softomat.com.pl</A>
+<LI>Thorsten Dittmar <A HREF="mailto:dittmar@Mathematik.Uni-Marburg.de">dittmar@Mathematik.Uni-Marburg.de</A>
+<LI>Javor Dimitrov <A HREF="mailto:logix@dobrich-sat.net">logix@dobrich-sat.net</A>
+</UL>
+<P>
+
+<A NAME="Author address"></A>
+</P><P>
+
+<HR SIZE="6">
+<A NAME="SEC26"></A>
+<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
+<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC25"> &lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[ &gt; ]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC25"> &lt;&lt; </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top"> Up </A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[ &gt;&gt; ]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top">Top</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Contents">Contents</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_About"> ? </A>]</TD>
+</TR></TABLE>
+<H1> 13. Author's address </H1>
+<!--docid::SEC26::-->
+<PRE>Sergio Sigala <A HREF="mailto:sergio@sigala.it">sergio@sigala.it</A>
+Viale De Gasperi, 8
+25041 Boario Terme (BS)
+Italy
+</PRE>
+<P>
+
+<HR SIZE="6">
+<A NAME="SEC_Contents"></A>
+<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
+<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top">Top</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Contents">Contents</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_About"> ? </A>]</TD>
+</TR></TABLE>
+<H1>Table of Contents</H1>
+<BLOCKQUOTE>
+<A NAME="TOC1" HREF="tvision.html#SEC1">1. Overview</A>
+<BR>
+<A NAME="TOC2" HREF="tvision.html#SEC2">2. Reporting Bugs</A>
+<BR>
+<A NAME="TOC3" HREF="tvision.html#SEC3">3. File Structure</A>
+<BR>
+<A NAME="TOC4" HREF="tvision.html#SEC4">4. Copyright</A>
+<BR>
+<A NAME="TOC5" HREF="tvision.html#SEC5">5. Portability issues</A>
+<BR>
+<A NAME="TOC6" HREF="tvision.html#SEC6">6. Keyboard</A>
+<BR>
+<A NAME="TOC8" HREF="tvision.html#SEC8">7. Screen</A>
+<BR>
+<A NAME="TOC14" HREF="tvision.html#SEC14">8. Mouse</A>
+<BR>
+<A NAME="TOC17" HREF="tvision.html#SEC17">9. Environment Variables</A>
+<BR>
+<A NAME="TOC22" HREF="tvision.html#SEC22">10. Compiling TVision</A>
+<BR>
+<A NAME="TOC24" HREF="tvision.html#SEC24">11. Resources</A>
+<BR>
+<A NAME="TOC25" HREF="tvision.html#SEC25">12. Credits</A>
+<BR>
+<A NAME="TOC26" HREF="tvision.html#SEC26">13. Author's address</A>
+<BR>
+</BLOCKQUOTE>
+<HR SIZE=1>
+<A NAME="SEC_OVERVIEW"></A>
+<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
+<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top">Top</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Contents">Contents</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_About"> ? </A>]</TD>
+</TR></TABLE>
+<H1>Short Table of Contents</H1>
+<BLOCKQUOTE>
+<A NAME="TOC1" HREF="tvision.html#SEC1">1. Overview</A>
+<BR>
+<A NAME="TOC2" HREF="tvision.html#SEC2">2. Reporting Bugs</A>
+<BR>
+<A NAME="TOC3" HREF="tvision.html#SEC3">3. File Structure</A>
+<BR>
+<A NAME="TOC4" HREF="tvision.html#SEC4">4. Copyright</A>
+<BR>
+<A NAME="TOC5" HREF="tvision.html#SEC5">5. Portability issues</A>
+<BR>
+<A NAME="TOC6" HREF="tvision.html#SEC6">6. Keyboard</A>
+<BR>
+<A NAME="TOC8" HREF="tvision.html#SEC8">7. Screen</A>
+<BR>
+<A NAME="TOC14" HREF="tvision.html#SEC14">8. Mouse</A>
+<BR>
+<A NAME="TOC17" HREF="tvision.html#SEC17">9. Environment Variables</A>
+<BR>
+<A NAME="TOC22" HREF="tvision.html#SEC22">10. Compiling TVision</A>
+<BR>
+<A NAME="TOC24" HREF="tvision.html#SEC24">11. Resources</A>
+<BR>
+<A NAME="TOC25" HREF="tvision.html#SEC25">12. Credits</A>
+<BR>
+<A NAME="TOC26" HREF="tvision.html#SEC26">13. Author's address</A>
+<BR>
+
+</BLOCKQUOTE>
+<HR SIZE=1>
+<A NAME="SEC_About"></A>
+<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
+<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Top">Top</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_Contents">Contents</A>]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
+<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="tvision.html#SEC_About"> ? </A>]</TD>
+</TR></TABLE>
+<H1>About this document</H1>
+This document was generated 
+using <A HREF="http://www.mathematik.uni-kl.de/~obachman/Texi2html
+"><I>texi2html</I></A>
+<P></P>  
+The buttons in the navigation panels have the following meaning:
+<P></P>
+<table border = "1">
+<TR>
+<TH> Button </TH>
+<TH> Name </TH>
+<TH> Go to </TH>
+<TH> From 1.2.3 go to</TH>
+</TR>
+<TR>
+<TD ALIGN="CENTER">
+ [ &lt; ] </TD>
+<TD ALIGN="CENTER">
+Back
+</TD>
+<TD>
+previous section in reading order
+</TD>
+<TD>
+1.2.2
+</TD>
+</TR>
+<TR>
+<TD ALIGN="CENTER">
+ [ &gt; ] </TD>
+<TD ALIGN="CENTER">
+Forward
+</TD>
+<TD>
+next section in reading order
+</TD>
+<TD>
+1.2.4
+</TD>
+</TR>
+<TR>
+<TD ALIGN="CENTER">
+ [ &lt;&lt; ] </TD>
+<TD ALIGN="CENTER">
+FastBack
+</TD>
+<TD>
+previous or up-and-previous section 
+</TD>
+<TD>
+1.1
+</TD>
+</TR>
+<TR>
+<TD ALIGN="CENTER">
+ [ Up ] </TD>
+<TD ALIGN="CENTER">
+Up
+</TD>
+<TD>
+up section
+</TD>
+<TD>
+1.2
+</TD>
+</TR>
+<TR>
+<TD ALIGN="CENTER">
+ [ &gt;&gt; ] </TD>
+<TD ALIGN="CENTER">
+FastForward
+</TD>
+<TD>
+next or up-and-next section
+</TD>
+<TD>
+1.3
+</TD>
+</TR>
+<TR>
+<TD ALIGN="CENTER">
+ [Top] </TD>
+<TD ALIGN="CENTER">
+Top
+</TD>
+<TD>
+cover (top) of document
+</TD>
+<TD>
+ &nbsp; 
+</TD>
+</TR>
+<TR>
+<TD ALIGN="CENTER">
+ [Contents] </TD>
+<TD ALIGN="CENTER">
+Contents
+</TD>
+<TD>
+table of contents
+</TD>
+<TD>
+ &nbsp; 
+</TD>
+</TR>
+<TR>
+<TD ALIGN="CENTER">
+ [Index] </TD>
+<TD ALIGN="CENTER">
+Index
+</TD>
+<TD>
+concept index
+</TD>
+<TD>
+ &nbsp; 
+</TD>
+</TR>
+<TR>
+<TD ALIGN="CENTER">
+ [ ? ] </TD>
+<TD ALIGN="CENTER">
+About
+</TD>
+<TD>
+this page
+</TD>
+<TD>
+ &nbsp; 
+</TD>
+</TR>
+</TABLE>
+<P></P>
+where the <STRONG> Example </STRONG> assumes that the current position 
+is at <STRONG> Subsubsection One-Two-Three </STRONG> of a document of 
+the following structure:
+<UL>
+<LI> 1. Section One  </LI>
+<UL>
+<LI>1.1 Subsection One-One</LI>
+<UL>
+<LI> ... </LI>
+</UL>
+<LI>1.2 Subsection One-Two</LI>
+<UL>
+<LI>1.2.1 Subsubsection One-Two-One
+</LI><LI>1.2.2 Subsubsection One-Two-Two
+</LI><LI>1.2.3 Subsubsection One-Two-Three &nbsp; &nbsp; <STRONG>
+&lt;== Current Position </STRONG>
+</LI><LI>1.2.4 Subsubsection One-Two-Four
+</LI></UL>
+<LI>1.3 Subsection One-Three</LI>
+<UL>
+<LI> ... </LI>
+</UL>
+<LI>1.4 Subsection One-Four</LI>
+</UL>
+</UL>
+
+<HR SIZE=1>
+<BR>  
+<FONT SIZE="-1">
+This document was generated
+by <I>Sergio Sigala</I> on <I>September, 22  2001</I>
+using <A HREF="http://www.mathematik.uni-kl.de/~obachman/Texi2html
+"><I>texi2html</I></A>
+</FONT>
+
+</BODY>
+</HTML>

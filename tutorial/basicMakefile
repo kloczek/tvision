@@ -1,0 +1,72 @@
+
+# Example: how to write a makefile
+
+#######################################################
+# Suppose you compiled the TV library in your home
+# directory by doing:
+#
+#	./configure
+# 	make
+#
+# and dind't want to install it in the system with
+#
+#	make install
+#
+# With this basic makefile you have the opportunity
+# to compile and link your programs against the TV
+# library you have in your home directory.  Copy
+# this file as Makefile in your application directory
+# and then adjust the following strings according to
+# your needs.
+#
+# To compile your program type:
+#
+# 	make
+#
+# To remove backup and object files type:
+#
+#	make clean
+#######################################################
+
+########################################
+# Insert here the library base directory
+########################################
+
+LIBPATH = /home/sergio/tvision-0.8
+
+######################################################
+# Insert here the object files which form your program
+######################################################
+
+OBJS = validator.o
+
+################################
+# Write here the executable name
+################################
+
+OUT = my_prog
+
+################################################
+# Any other library required by your application
+################################################
+
+OTHERLIBS =
+
+########################
+# Do not touch down here
+########################
+
+CXX = g++
+CFLAGS = -g -O2 -I$(LIBPATH) -I$(LIBPATH)/lib
+LIBS = $(LIBPATH)/lib/libtvision.a -lncurses -lgpm $(OTHERLIBS)
+
+.cc.o:
+	$(CXX) $(CFLAGS) -c $<
+
+all: $(OBJS)
+	$(CXX) -o $(OUT) $(OBJS) $(LIBS)
+
+.PHONY:
+
+clean:
+	rm -f *.o *~ $(OUT)

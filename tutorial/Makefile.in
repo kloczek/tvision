@@ -1,0 +1,578 @@
+# Makefile.in generated automatically by automake 1.5 from Makefile.am.
+
+# Copyright 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001
+# Free Software Foundation, Inc.
+# This Makefile.in is free software; the Free Software Foundation
+# gives unlimited permission to copy and/or distribute it,
+# with or without modifications, as long as this notice is preserved.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY, to the extent permitted by law; without
+# even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+@SET_MAKE@
+
+SHELL = @SHELL@
+
+srcdir = @srcdir@
+top_srcdir = @top_srcdir@
+VPATH = @srcdir@
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+
+bindir = @bindir@
+sbindir = @sbindir@
+libexecdir = @libexecdir@
+datadir = @datadir@
+sysconfdir = @sysconfdir@
+sharedstatedir = @sharedstatedir@
+localstatedir = @localstatedir@
+libdir = @libdir@
+infodir = @infodir@
+mandir = @mandir@
+includedir = @includedir@
+oldincludedir = /usr/include
+pkgdatadir = $(datadir)/@PACKAGE@
+pkglibdir = $(libdir)/@PACKAGE@
+pkgincludedir = $(includedir)/@PACKAGE@
+top_builddir = ..
+
+ACLOCAL = @ACLOCAL@
+AUTOCONF = @AUTOCONF@
+AUTOMAKE = @AUTOMAKE@
+AUTOHEADER = @AUTOHEADER@
+
+INSTALL = @INSTALL@
+INSTALL_PROGRAM = @INSTALL_PROGRAM@
+INSTALL_DATA = @INSTALL_DATA@
+INSTALL_SCRIPT = @INSTALL_SCRIPT@
+INSTALL_HEADER = $(INSTALL_DATA)
+transform = @program_transform_name@
+NORMAL_INSTALL = :
+PRE_INSTALL = :
+POST_INSTALL = :
+NORMAL_UNINSTALL = :
+PRE_UNINSTALL = :
+POST_UNINSTALL = :
+host_alias = @host_alias@
+host_triplet = @host@
+AMTAR = @AMTAR@
+AS = @AS@
+AWK = @AWK@
+CC = @CC@
+CPP = @CPP@
+CXX = @CXX@
+DEPDIR = @DEPDIR@
+DLLTOOL = @DLLTOOL@
+ECHO = @ECHO@
+EXEEXT = @EXEEXT@
+INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
+LIBTOOL = @LIBTOOL@
+LN_S = @LN_S@
+OBJDUMP = @OBJDUMP@
+OBJEXT = @OBJEXT@
+PACKAGE = @PACKAGE@
+RANLIB = @RANLIB@
+STRIP = @STRIP@
+VERSION = @VERSION@
+am__include = @am__include@
+am__quote = @am__quote@
+install_sh = @install_sh@
+
+AUTOMAKE_OPTIONS = foreign
+
+EXTRA_DIST = README basicMakefile
+
+noinst_PROGRAMS = tvguid01 tvguid02 tvguid03 tvguid04 tvguid05 tvguid06 \
+tvguid07 tvguid08 tvguid09 tvguid10 tvguid11 tvguid12 tvguid13 tvguid14 \
+tvguid15 tvguid16 background listbox load nomenus splash tvedit tvlife  \
+validator
+
+
+tvguid01_SOURCES = tvguid01.cc
+tvguid02_SOURCES = tvguid02.cc
+tvguid03_SOURCES = tvguid03.cc
+tvguid04_SOURCES = tvguid04.cc
+tvguid05_SOURCES = tvguid05.cc
+tvguid06_SOURCES = tvguid06.cc
+tvguid07_SOURCES = tvguid07.cc
+tvguid08_SOURCES = tvguid08.cc
+tvguid09_SOURCES = tvguid09.cc
+tvguid10_SOURCES = tvguid10.cc
+tvguid11_SOURCES = tvguid11.cc
+tvguid12_SOURCES = tvguid12.cc
+tvguid13_SOURCES = tvguid13.cc
+tvguid14_SOURCES = tvguid14.cc
+tvguid15_SOURCES = tvguid15.cc
+tvguid16_SOURCES = tvguid16.cc
+background_SOURCES = background.cc
+listbox_SOURCES = listbox.cc
+load_SOURCES = load.cc
+nomenus_SOURCES = nomenus.cc
+splash_SOURCES = splash.cc
+tvedit_SOURCES = tvedit.cc
+tvlife_SOURCES = tvlife.cc
+validator_SOURCES = validator.cc
+
+LDADD = ../lib/libtvision.a
+
+INCLUDES = -I../lib
+subdir = tutorial
+mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+CONFIG_HEADER = $(top_builddir)/config.h
+CONFIG_CLEAN_FILES =
+noinst_PROGRAMS = tvguid01$(EXEEXT) tvguid02$(EXEEXT) tvguid03$(EXEEXT) \
+	tvguid04$(EXEEXT) tvguid05$(EXEEXT) tvguid06$(EXEEXT) \
+	tvguid07$(EXEEXT) tvguid08$(EXEEXT) tvguid09$(EXEEXT) \
+	tvguid10$(EXEEXT) tvguid11$(EXEEXT) tvguid12$(EXEEXT) \
+	tvguid13$(EXEEXT) tvguid14$(EXEEXT) tvguid15$(EXEEXT) \
+	tvguid16$(EXEEXT) background$(EXEEXT) listbox$(EXEEXT) \
+	load$(EXEEXT) nomenus$(EXEEXT) splash$(EXEEXT) tvedit$(EXEEXT) \
+	tvlife$(EXEEXT) validator$(EXEEXT)
+PROGRAMS = $(noinst_PROGRAMS)
+
+am_background_OBJECTS = background.$(OBJEXT)
+background_OBJECTS = $(am_background_OBJECTS)
+background_LDADD = $(LDADD)
+background_DEPENDENCIES = ../lib/libtvision.a
+background_LDFLAGS =
+am_listbox_OBJECTS = listbox.$(OBJEXT)
+listbox_OBJECTS = $(am_listbox_OBJECTS)
+listbox_LDADD = $(LDADD)
+listbox_DEPENDENCIES = ../lib/libtvision.a
+listbox_LDFLAGS =
+am_load_OBJECTS = load.$(OBJEXT)
+load_OBJECTS = $(am_load_OBJECTS)
+load_LDADD = $(LDADD)
+load_DEPENDENCIES = ../lib/libtvision.a
+load_LDFLAGS =
+am_nomenus_OBJECTS = nomenus.$(OBJEXT)
+nomenus_OBJECTS = $(am_nomenus_OBJECTS)
+nomenus_LDADD = $(LDADD)
+nomenus_DEPENDENCIES = ../lib/libtvision.a
+nomenus_LDFLAGS =
+am_splash_OBJECTS = splash.$(OBJEXT)
+splash_OBJECTS = $(am_splash_OBJECTS)
+splash_LDADD = $(LDADD)
+splash_DEPENDENCIES = ../lib/libtvision.a
+splash_LDFLAGS =
+am_tvedit_OBJECTS = tvedit.$(OBJEXT)
+tvedit_OBJECTS = $(am_tvedit_OBJECTS)
+tvedit_LDADD = $(LDADD)
+tvedit_DEPENDENCIES = ../lib/libtvision.a
+tvedit_LDFLAGS =
+am_tvguid01_OBJECTS = tvguid01.$(OBJEXT)
+tvguid01_OBJECTS = $(am_tvguid01_OBJECTS)
+tvguid01_LDADD = $(LDADD)
+tvguid01_DEPENDENCIES = ../lib/libtvision.a
+tvguid01_LDFLAGS =
+am_tvguid02_OBJECTS = tvguid02.$(OBJEXT)
+tvguid02_OBJECTS = $(am_tvguid02_OBJECTS)
+tvguid02_LDADD = $(LDADD)
+tvguid02_DEPENDENCIES = ../lib/libtvision.a
+tvguid02_LDFLAGS =
+am_tvguid03_OBJECTS = tvguid03.$(OBJEXT)
+tvguid03_OBJECTS = $(am_tvguid03_OBJECTS)
+tvguid03_LDADD = $(LDADD)
+tvguid03_DEPENDENCIES = ../lib/libtvision.a
+tvguid03_LDFLAGS =
+am_tvguid04_OBJECTS = tvguid04.$(OBJEXT)
+tvguid04_OBJECTS = $(am_tvguid04_OBJECTS)
+tvguid04_LDADD = $(LDADD)
+tvguid04_DEPENDENCIES = ../lib/libtvision.a
+tvguid04_LDFLAGS =
+am_tvguid05_OBJECTS = tvguid05.$(OBJEXT)
+tvguid05_OBJECTS = $(am_tvguid05_OBJECTS)
+tvguid05_LDADD = $(LDADD)
+tvguid05_DEPENDENCIES = ../lib/libtvision.a
+tvguid05_LDFLAGS =
+am_tvguid06_OBJECTS = tvguid06.$(OBJEXT)
+tvguid06_OBJECTS = $(am_tvguid06_OBJECTS)
+tvguid06_LDADD = $(LDADD)
+tvguid06_DEPENDENCIES = ../lib/libtvision.a
+tvguid06_LDFLAGS =
+am_tvguid07_OBJECTS = tvguid07.$(OBJEXT)
+tvguid07_OBJECTS = $(am_tvguid07_OBJECTS)
+tvguid07_LDADD = $(LDADD)
+tvguid07_DEPENDENCIES = ../lib/libtvision.a
+tvguid07_LDFLAGS =
+am_tvguid08_OBJECTS = tvguid08.$(OBJEXT)
+tvguid08_OBJECTS = $(am_tvguid08_OBJECTS)
+tvguid08_LDADD = $(LDADD)
+tvguid08_DEPENDENCIES = ../lib/libtvision.a
+tvguid08_LDFLAGS =
+am_tvguid09_OBJECTS = tvguid09.$(OBJEXT)
+tvguid09_OBJECTS = $(am_tvguid09_OBJECTS)
+tvguid09_LDADD = $(LDADD)
+tvguid09_DEPENDENCIES = ../lib/libtvision.a
+tvguid09_LDFLAGS =
+am_tvguid10_OBJECTS = tvguid10.$(OBJEXT)
+tvguid10_OBJECTS = $(am_tvguid10_OBJECTS)
+tvguid10_LDADD = $(LDADD)
+tvguid10_DEPENDENCIES = ../lib/libtvision.a
+tvguid10_LDFLAGS =
+am_tvguid11_OBJECTS = tvguid11.$(OBJEXT)
+tvguid11_OBJECTS = $(am_tvguid11_OBJECTS)
+tvguid11_LDADD = $(LDADD)
+tvguid11_DEPENDENCIES = ../lib/libtvision.a
+tvguid11_LDFLAGS =
+am_tvguid12_OBJECTS = tvguid12.$(OBJEXT)
+tvguid12_OBJECTS = $(am_tvguid12_OBJECTS)
+tvguid12_LDADD = $(LDADD)
+tvguid12_DEPENDENCIES = ../lib/libtvision.a
+tvguid12_LDFLAGS =
+am_tvguid13_OBJECTS = tvguid13.$(OBJEXT)
+tvguid13_OBJECTS = $(am_tvguid13_OBJECTS)
+tvguid13_LDADD = $(LDADD)
+tvguid13_DEPENDENCIES = ../lib/libtvision.a
+tvguid13_LDFLAGS =
+am_tvguid14_OBJECTS = tvguid14.$(OBJEXT)
+tvguid14_OBJECTS = $(am_tvguid14_OBJECTS)
+tvguid14_LDADD = $(LDADD)
+tvguid14_DEPENDENCIES = ../lib/libtvision.a
+tvguid14_LDFLAGS =
+am_tvguid15_OBJECTS = tvguid15.$(OBJEXT)
+tvguid15_OBJECTS = $(am_tvguid15_OBJECTS)
+tvguid15_LDADD = $(LDADD)
+tvguid15_DEPENDENCIES = ../lib/libtvision.a
+tvguid15_LDFLAGS =
+am_tvguid16_OBJECTS = tvguid16.$(OBJEXT)
+tvguid16_OBJECTS = $(am_tvguid16_OBJECTS)
+tvguid16_LDADD = $(LDADD)
+tvguid16_DEPENDENCIES = ../lib/libtvision.a
+tvguid16_LDFLAGS =
+am_tvlife_OBJECTS = tvlife.$(OBJEXT)
+tvlife_OBJECTS = $(am_tvlife_OBJECTS)
+tvlife_LDADD = $(LDADD)
+tvlife_DEPENDENCIES = ../lib/libtvision.a
+tvlife_LDFLAGS =
+am_validator_OBJECTS = validator.$(OBJEXT)
+validator_OBJECTS = $(am_validator_OBJECTS)
+validator_LDADD = $(LDADD)
+validator_DEPENDENCIES = ../lib/libtvision.a
+validator_LDFLAGS =
+
+DEFS = @DEFS@
+DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+CPPFLAGS = @CPPFLAGS@
+LDFLAGS = @LDFLAGS@
+LIBS = @LIBS@
+depcomp = $(SHELL) $(top_srcdir)/depcomp
+@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/background.Po $(DEPDIR)/listbox.Po \
+@AMDEP_TRUE@	$(DEPDIR)/load.Po $(DEPDIR)/nomenus.Po \
+@AMDEP_TRUE@	$(DEPDIR)/splash.Po $(DEPDIR)/tvedit.Po \
+@AMDEP_TRUE@	$(DEPDIR)/tvguid01.Po $(DEPDIR)/tvguid02.Po \
+@AMDEP_TRUE@	$(DEPDIR)/tvguid03.Po $(DEPDIR)/tvguid04.Po \
+@AMDEP_TRUE@	$(DEPDIR)/tvguid05.Po $(DEPDIR)/tvguid06.Po \
+@AMDEP_TRUE@	$(DEPDIR)/tvguid07.Po $(DEPDIR)/tvguid08.Po \
+@AMDEP_TRUE@	$(DEPDIR)/tvguid09.Po $(DEPDIR)/tvguid10.Po \
+@AMDEP_TRUE@	$(DEPDIR)/tvguid11.Po $(DEPDIR)/tvguid12.Po \
+@AMDEP_TRUE@	$(DEPDIR)/tvguid13.Po $(DEPDIR)/tvguid14.Po \
+@AMDEP_TRUE@	$(DEPDIR)/tvguid15.Po $(DEPDIR)/tvguid16.Po \
+@AMDEP_TRUE@	$(DEPDIR)/tvlife.Po $(DEPDIR)/validator.Po
+CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) \
+	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+	$(AM_CXXFLAGS) $(CXXFLAGS)
+CXXLD = $(CXX)
+CXXLINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) \
+	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+CXXFLAGS = @CXXFLAGS@
+DIST_SOURCES = $(background_SOURCES) $(listbox_SOURCES) $(load_SOURCES) \
+	$(nomenus_SOURCES) $(splash_SOURCES) $(tvedit_SOURCES) \
+	$(tvguid01_SOURCES) $(tvguid02_SOURCES) $(tvguid03_SOURCES) \
+	$(tvguid04_SOURCES) $(tvguid05_SOURCES) $(tvguid06_SOURCES) \
+	$(tvguid07_SOURCES) $(tvguid08_SOURCES) $(tvguid09_SOURCES) \
+	$(tvguid10_SOURCES) $(tvguid11_SOURCES) $(tvguid12_SOURCES) \
+	$(tvguid13_SOURCES) $(tvguid14_SOURCES) $(tvguid15_SOURCES) \
+	$(tvguid16_SOURCES) $(tvlife_SOURCES) $(validator_SOURCES)
+DIST_COMMON = README Makefile.am Makefile.in
+SOURCES = $(background_SOURCES) $(listbox_SOURCES) $(load_SOURCES) $(nomenus_SOURCES) $(splash_SOURCES) $(tvedit_SOURCES) $(tvguid01_SOURCES) $(tvguid02_SOURCES) $(tvguid03_SOURCES) $(tvguid04_SOURCES) $(tvguid05_SOURCES) $(tvguid06_SOURCES) $(tvguid07_SOURCES) $(tvguid08_SOURCES) $(tvguid09_SOURCES) $(tvguid10_SOURCES) $(tvguid11_SOURCES) $(tvguid12_SOURCES) $(tvguid13_SOURCES) $(tvguid14_SOURCES) $(tvguid15_SOURCES) $(tvguid16_SOURCES) $(tvlife_SOURCES) $(validator_SOURCES)
+
+all: all-am
+
+.SUFFIXES:
+.SUFFIXES: .cc .lo .o .obj
+
+mostlyclean-libtool:
+	-rm -f *.lo
+
+clean-libtool:
+	-rm -rf .libs _libs
+
+distclean-libtool:
+	-rm -f libtool
+$(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+	cd $(top_srcdir) && \
+	  $(AUTOMAKE) --foreign  tutorial/Makefile
+Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
+	cd $(top_builddir) && \
+	  CONFIG_HEADERS= CONFIG_LINKS= \
+	  CONFIG_FILES=$(subdir)/$@ $(SHELL) ./config.status
+
+clean-noinstPROGRAMS:
+	-test -z "$(noinst_PROGRAMS)" || rm -f $(noinst_PROGRAMS)
+background$(EXEEXT): $(background_OBJECTS) $(background_DEPENDENCIES) 
+	@rm -f background$(EXEEXT)
+	$(CXXLINK) $(background_LDFLAGS) $(background_OBJECTS) $(background_LDADD) $(LIBS)
+listbox$(EXEEXT): $(listbox_OBJECTS) $(listbox_DEPENDENCIES) 
+	@rm -f listbox$(EXEEXT)
+	$(CXXLINK) $(listbox_LDFLAGS) $(listbox_OBJECTS) $(listbox_LDADD) $(LIBS)
+load$(EXEEXT): $(load_OBJECTS) $(load_DEPENDENCIES) 
+	@rm -f load$(EXEEXT)
+	$(CXXLINK) $(load_LDFLAGS) $(load_OBJECTS) $(load_LDADD) $(LIBS)
+nomenus$(EXEEXT): $(nomenus_OBJECTS) $(nomenus_DEPENDENCIES) 
+	@rm -f nomenus$(EXEEXT)
+	$(CXXLINK) $(nomenus_LDFLAGS) $(nomenus_OBJECTS) $(nomenus_LDADD) $(LIBS)
+splash$(EXEEXT): $(splash_OBJECTS) $(splash_DEPENDENCIES) 
+	@rm -f splash$(EXEEXT)
+	$(CXXLINK) $(splash_LDFLAGS) $(splash_OBJECTS) $(splash_LDADD) $(LIBS)
+tvedit$(EXEEXT): $(tvedit_OBJECTS) $(tvedit_DEPENDENCIES) 
+	@rm -f tvedit$(EXEEXT)
+	$(CXXLINK) $(tvedit_LDFLAGS) $(tvedit_OBJECTS) $(tvedit_LDADD) $(LIBS)
+tvguid01$(EXEEXT): $(tvguid01_OBJECTS) $(tvguid01_DEPENDENCIES) 
+	@rm -f tvguid01$(EXEEXT)
+	$(CXXLINK) $(tvguid01_LDFLAGS) $(tvguid01_OBJECTS) $(tvguid01_LDADD) $(LIBS)
+tvguid02$(EXEEXT): $(tvguid02_OBJECTS) $(tvguid02_DEPENDENCIES) 
+	@rm -f tvguid02$(EXEEXT)
+	$(CXXLINK) $(tvguid02_LDFLAGS) $(tvguid02_OBJECTS) $(tvguid02_LDADD) $(LIBS)
+tvguid03$(EXEEXT): $(tvguid03_OBJECTS) $(tvguid03_DEPENDENCIES) 
+	@rm -f tvguid03$(EXEEXT)
+	$(CXXLINK) $(tvguid03_LDFLAGS) $(tvguid03_OBJECTS) $(tvguid03_LDADD) $(LIBS)
+tvguid04$(EXEEXT): $(tvguid04_OBJECTS) $(tvguid04_DEPENDENCIES) 
+	@rm -f tvguid04$(EXEEXT)
+	$(CXXLINK) $(tvguid04_LDFLAGS) $(tvguid04_OBJECTS) $(tvguid04_LDADD) $(LIBS)
+tvguid05$(EXEEXT): $(tvguid05_OBJECTS) $(tvguid05_DEPENDENCIES) 
+	@rm -f tvguid05$(EXEEXT)
+	$(CXXLINK) $(tvguid05_LDFLAGS) $(tvguid05_OBJECTS) $(tvguid05_LDADD) $(LIBS)
+tvguid06$(EXEEXT): $(tvguid06_OBJECTS) $(tvguid06_DEPENDENCIES) 
+	@rm -f tvguid06$(EXEEXT)
+	$(CXXLINK) $(tvguid06_LDFLAGS) $(tvguid06_OBJECTS) $(tvguid06_LDADD) $(LIBS)
+tvguid07$(EXEEXT): $(tvguid07_OBJECTS) $(tvguid07_DEPENDENCIES) 
+	@rm -f tvguid07$(EXEEXT)
+	$(CXXLINK) $(tvguid07_LDFLAGS) $(tvguid07_OBJECTS) $(tvguid07_LDADD) $(LIBS)
+tvguid08$(EXEEXT): $(tvguid08_OBJECTS) $(tvguid08_DEPENDENCIES) 
+	@rm -f tvguid08$(EXEEXT)
+	$(CXXLINK) $(tvguid08_LDFLAGS) $(tvguid08_OBJECTS) $(tvguid08_LDADD) $(LIBS)
+tvguid09$(EXEEXT): $(tvguid09_OBJECTS) $(tvguid09_DEPENDENCIES) 
+	@rm -f tvguid09$(EXEEXT)
+	$(CXXLINK) $(tvguid09_LDFLAGS) $(tvguid09_OBJECTS) $(tvguid09_LDADD) $(LIBS)
+tvguid10$(EXEEXT): $(tvguid10_OBJECTS) $(tvguid10_DEPENDENCIES) 
+	@rm -f tvguid10$(EXEEXT)
+	$(CXXLINK) $(tvguid10_LDFLAGS) $(tvguid10_OBJECTS) $(tvguid10_LDADD) $(LIBS)
+tvguid11$(EXEEXT): $(tvguid11_OBJECTS) $(tvguid11_DEPENDENCIES) 
+	@rm -f tvguid11$(EXEEXT)
+	$(CXXLINK) $(tvguid11_LDFLAGS) $(tvguid11_OBJECTS) $(tvguid11_LDADD) $(LIBS)
+tvguid12$(EXEEXT): $(tvguid12_OBJECTS) $(tvguid12_DEPENDENCIES) 
+	@rm -f tvguid12$(EXEEXT)
+	$(CXXLINK) $(tvguid12_LDFLAGS) $(tvguid12_OBJECTS) $(tvguid12_LDADD) $(LIBS)
+tvguid13$(EXEEXT): $(tvguid13_OBJECTS) $(tvguid13_DEPENDENCIES) 
+	@rm -f tvguid13$(EXEEXT)
+	$(CXXLINK) $(tvguid13_LDFLAGS) $(tvguid13_OBJECTS) $(tvguid13_LDADD) $(LIBS)
+tvguid14$(EXEEXT): $(tvguid14_OBJECTS) $(tvguid14_DEPENDENCIES) 
+	@rm -f tvguid14$(EXEEXT)
+	$(CXXLINK) $(tvguid14_LDFLAGS) $(tvguid14_OBJECTS) $(tvguid14_LDADD) $(LIBS)
+tvguid15$(EXEEXT): $(tvguid15_OBJECTS) $(tvguid15_DEPENDENCIES) 
+	@rm -f tvguid15$(EXEEXT)
+	$(CXXLINK) $(tvguid15_LDFLAGS) $(tvguid15_OBJECTS) $(tvguid15_LDADD) $(LIBS)
+tvguid16$(EXEEXT): $(tvguid16_OBJECTS) $(tvguid16_DEPENDENCIES) 
+	@rm -f tvguid16$(EXEEXT)
+	$(CXXLINK) $(tvguid16_LDFLAGS) $(tvguid16_OBJECTS) $(tvguid16_LDADD) $(LIBS)
+tvlife$(EXEEXT): $(tvlife_OBJECTS) $(tvlife_DEPENDENCIES) 
+	@rm -f tvlife$(EXEEXT)
+	$(CXXLINK) $(tvlife_LDFLAGS) $(tvlife_OBJECTS) $(tvlife_LDADD) $(LIBS)
+validator$(EXEEXT): $(validator_OBJECTS) $(validator_DEPENDENCIES) 
+	@rm -f validator$(EXEEXT)
+	$(CXXLINK) $(validator_LDFLAGS) $(validator_OBJECTS) $(validator_LDADD) $(LIBS)
+
+mostlyclean-compile:
+	-rm -f *.$(OBJEXT) core *.core
+
+distclean-compile:
+	-rm -f *.tab.c
+
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/background.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/listbox.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/load.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/nomenus.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/splash.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tvedit.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tvguid01.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tvguid02.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tvguid03.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tvguid04.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tvguid05.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tvguid06.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tvguid07.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tvguid08.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tvguid09.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tvguid10.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tvguid11.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tvguid12.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tvguid13.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tvguid14.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tvguid15.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tvguid16.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tvlife.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/validator.Po@am__quote@
+
+distclean-depend:
+	-rm -rf $(DEPDIR)
+
+.cc.o:
+@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(CXXCOMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
+
+.cc.obj:
+@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(CXXCOMPILE) -c -o $@ `cygpath -w $<`
+
+.cc.lo:
+@AMDEP_TRUE@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(LTCXXCOMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
+CXXDEPMODE = @CXXDEPMODE@
+uninstall-info-am:
+
+tags: TAGS
+
+ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
+	list='$(SOURCES) $(HEADERS) $(TAGS_FILES)'; \
+	unique=`for i in $$list; do \
+	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+	  done | \
+	  $(AWK) '    { files[$$0] = 1; } \
+	       END { for (i in files) print i; }'`; \
+	mkid -fID $$unique $(LISP)
+
+TAGS:  $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) \
+		$(TAGS_FILES) $(LISP)
+	tags=; \
+	here=`pwd`; \
+	list='$(SOURCES) $(HEADERS) $(TAGS_FILES)'; \
+	unique=`for i in $$list; do \
+	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+	  done | \
+	  $(AWK) '    { files[$$0] = 1; } \
+	       END { for (i in files) print i; }'`; \
+	test -z "$(ETAGS_ARGS)$$unique$(LISP)$$tags" \
+	  || etags $(ETAGS_ARGS) $$tags  $$unique $(LISP)
+
+GTAGS:
+	here=`CDPATH=: && cd $(top_builddir) && pwd` \
+	  && cd $(top_srcdir) \
+	  && gtags -i $(GTAGS_ARGS) $$here
+
+distclean-tags:
+	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
+
+DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+
+top_distdir = ..
+distdir = $(top_distdir)/$(PACKAGE)-$(VERSION)
+
+distdir: $(DISTFILES)
+	@for file in $(DISTFILES); do \
+	  if test -f $$file; then d=.; else d=$(srcdir); fi; \
+	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+	  if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+	    $(mkinstalldirs) "$(distdir)/$$dir"; \
+	  fi; \
+	  if test -d $$d/$$file; then \
+	    cp -pR $$d/$$file $(distdir) \
+	    || exit 1; \
+	  else \
+	    test -f $(distdir)/$$file \
+	    || cp -p $$d/$$file $(distdir)/$$file \
+	    || exit 1; \
+	  fi; \
+	done
+check-am: all-am
+check: check-am
+all-am: Makefile $(PROGRAMS)
+
+installdirs:
+
+install: install-am
+install-exec: install-exec-am
+install-data: install-data-am
+uninstall: uninstall-am
+
+install-am: all-am
+	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
+
+installcheck: installcheck-am
+install-strip:
+	$(MAKE) $(AM_MAKEFLAGS) INSTALL_PROGRAM="$(INSTALL_STRIP_PROGRAM)" \
+	  `test -z '$(STRIP)' || \
+	    echo "INSTALL_PROGRAM_ENV=STRIPPROG='$(STRIP)'"` install
+mostlyclean-generic:
+
+clean-generic:
+
+distclean-generic:
+	-rm -f Makefile $(CONFIG_CLEAN_FILES) stamp-h stamp-h[0-9]*
+
+maintainer-clean-generic:
+	@echo "This command is intended for maintainers to use"
+	@echo "it deletes files that may require special tools to rebuild."
+clean: clean-am
+
+clean-am: clean-generic clean-libtool clean-noinstPROGRAMS \
+	mostlyclean-am
+
+distclean: distclean-am
+
+distclean-am: clean-am distclean-compile distclean-depend \
+	distclean-generic distclean-libtool distclean-tags
+
+dvi: dvi-am
+
+dvi-am:
+
+info: info-am
+
+info-am:
+
+install-data-am:
+
+install-exec-am:
+
+install-info: install-info-am
+
+install-man:
+
+installcheck-am:
+
+maintainer-clean: maintainer-clean-am
+
+maintainer-clean-am: distclean-am maintainer-clean-generic
+
+mostlyclean: mostlyclean-am
+
+mostlyclean-am: mostlyclean-compile mostlyclean-generic \
+	mostlyclean-libtool
+
+uninstall-am: uninstall-info-am
+
+.PHONY: GTAGS all all-am check check-am clean clean-generic \
+	clean-libtool clean-noinstPROGRAMS distclean distclean-compile \
+	distclean-depend distclean-generic distclean-libtool \
+	distclean-tags distdir dvi dvi-am info info-am install \
+	install-am install-data install-data-am install-exec \
+	install-exec-am install-info install-info-am install-man \
+	install-strip installcheck installcheck-am installdirs \
+	maintainer-clean maintainer-clean-generic mostlyclean \
+	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
+	tags uninstall uninstall-am uninstall-info-am
+
+# Tell versions [3.59,3.63) of GNU make to not export all variables.
+# Otherwise a system limit (for SysV at least) may be exceeded.
+.NOEXPORT:

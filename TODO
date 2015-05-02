@@ -1,0 +1,50 @@
+
+Known bugs and things to do
+---------------------------
+- Fix textview.cc, textview.h and TTerminal::prevLines() in `asm.cc'.
+
+- Applications will crash if you write more than 1024 characters in a single
+  row in a TEditor object.  Search for maxLineLength in `TEditor.cc' to see
+  why this happens.
+
+- Apparently, we can't hide the cursor when the virtual console system
+  output mechanism is used. Javor Dimitrov <logix@dobrich-sat.net>
+  suggested to use ctermid(3) to get the controlling terminal name and then,
+  if it's something like /dev/tty*, we could safely use the following escape
+  sequences:
+
+  ESC [ ? 25 l		To hide the cursor
+  ESC [ ? 25 h		To show the cursor
+
+  to do the job.  Take a look on console_codes(4) also.
+
+- The use of the SIGALARM signal can conflict with other programs, any
+  efficient alternative way would be better.
+
+- Javor Dimitrov <java@dobrich-sat.net> reported that TFileEditor does not
+  correctly restore original file attributes after saving files.
+
+- "DOS shell" and "Alt-F3" menu items in the demo program are misleading:
+  under Linux the first one doesn't have sense and the second switches to
+  the third system console.
+
+- Javor Dimitrov <java@dobrich-sat.net> gots a problem when he tried to
+  detect errors on fpstream. Borland provides some documentation at:
+
+  http://community.borland.com/article/0,1410,16134,00.html
+
+  but it would not work he thinks, because the lines
+
+  S = new fpstream(FileName, ios::out|ios::in|ios::binary);
+  if (!S)
+  {
+    cout << "Error opening stream\n";
+    exit(1);
+  }
+
+  can detect an memory allocation error, but not file open error.
+
+- `make dist' gives problems with the recursive link `lib/tvision' when
+  compressing.
+
+<end>

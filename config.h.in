@@ -1,0 +1,54 @@
+/* config.h.in.  Generated automatically from configure.in by autoheader.  */
+/* The package name. */
+#undef PACKAGE
+
+/* The package version. */
+#undef VERSION
+
+/* Define this to enable the Russian character set. */
+#undef ENABLE_RUSSIAN_CHARSET
+
+/* Define this to disable the alterate character set. */
+#undef DISABLE_ACS
+
+/* Define this to disable the 8 bit output. */
+#undef DISABLE_8BIT_CHARS
+
+/* Define to enable the Linux GPM mouse support. */
+#undef ENABLE_GPM
+
+/* Define to enable the Linux VCS support. */
+#undef ENABLE_VCS
+
+/* Define to enable the FreeBSD mouse support. */
+#undef ENABLE_FBSDM
+
+/* Define if you have the <curses.h> header file. */
+#undef HAVE_CURSES_H
+
+/* Define if you have the <dlfcn.h> header file. */
+#undef HAVE_DLFCN_H
+
+/* Define if you have the <gpm.h> header file. */
+#undef HAVE_GPM_H
+
+/* Define if you have the `curses' library (-lcurses). */
+#undef HAVE_LIBCURSES
+
+/* Define if you have the `gpm' library (-lgpm). */
+#undef HAVE_LIBGPM
+
+/* Define if you have the `ncurses' library (-lncurses). */
+#undef HAVE_LIBNCURSES
+
+/* Define if you have the <ncurses.h> header file. */
+#undef HAVE_NCURSES_H
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Version number of package */
+#undef VERSION

@@ -1,0 +1,676 @@
+This is tvision.info, produced by makeinfo version 4.0 from
+tvision.texi.
+
+   Copyright (C) 1997-2001 Sergio Sigala <sergio@sigala.it>.
+
+INFO-DIR-SECTION Programming tools
+START-INFO-DIR-ENTRY
+* TVision: (tvision).                  The TVision library: installation notes
+END-INFO-DIR-ENTRY
+
+
+File: tvision.info,  Node: Top,  Next: Overview,  Prev: (dir),  Up: (dir)
+
+   This document covers the installation and operation of TVision under
+the FreeBSD and Linux operating systems.
+
+* Menu:
+
+* Overview::              An overview of the TVision package.
+* Reporting Bugs::        Submitting effective bug reports.
+* File Structure::        Notes on the file hierarchy.
+* Copyright::             This copyright license says how you can copy and
+                          use TVision.
+
+* Portability issues::    The portability of the package.
+* Keyboard::              The keyboard handling.
+* Screen::                The screen handling.
+* Mouse::                 The mouse handling.
+* Environment Variables:: The user modifiable environment variables.
+
+* Compiling TVision::     How to compile the library.
+* Resources::             A list of useful sites.
+
+* Credits::               Contributors and useful links.
+* Author address::        To send him a nice postcard.
+
+
+File: tvision.info,  Node: Overview,  Next: Reporting Bugs,  Prev: Top,  Up: Top
+
+Overview
+********
+
+   Turbo Vision (or TV, for short) is a library that provides an
+application framework.  With TV you can write a beautiful
+object-oriented character-mode user interface in a short time.
+
+   TV is available in C++ and Pascal and is a product of Borland
+International.  It was developed to run on MS-DOS systems, but today it
+is available for many other platforms (ported by independent
+programmers).
+
+   This port is based on the Borland 2.0 version with fixes.  Original
+Turbo Vision 2.0 sources should be available at:
+
+   <ftp://ftp.borland.com/pub/borlandcpp/devsupport/archive/turbovision>
+
+   <ftp://ftp.imprise.com/pub/borlandcpp/devsupport/archive/turbovision>
+
+   See the *Note Credits:: section for a list of other useful sites.
+
+
+File: tvision.info,  Node: Reporting Bugs,  Next: File Structure,  Prev: Overview,  Up: Top
+
+Reporting Bugs
+**************
+
+   We welcome bug reports or suggestions for the TVision system, both
+programs and documentations.  Please email them to <sergio@sigala.it>.
+You can download the latest version of TVision from
+<http://www.sigala.it/sergio/tvision>.
+
+   For bug reports, please include enough information for the
+maintainers to reproduce the problem.  Generally speaking, that means:
+
+   * the version number of TVision and the program(s) involved;
+
+   * hardware, operating system, and compiler versions;
+
+   * any unusual options you gave to `configure';
+
+   * the list of actions and/or the contents of any input files
+     necessary to reproduce the bug;
+
+   * a description of the problem and samples of any erroneous output;
+
+   * anything else that you think would be helpful.
+
+   When in doubt whether something is needed or not, include it.  It's
+better to include too much than to leave out something important.
+
+   Patches are most welcome; if possible, please make them with
+`diff -ru' (see *Note Overview: (diff)Top, for details).
+
+   When sending email, please do not encode or split the messages in
+any way if possible; it's much easier to deal with one plain text
+message, however large, than many small ones.
+
+
+File: tvision.info,  Node: File Structure,  Next: Copyright,  Prev: Reporting Bugs,  Up: Top
+
+File Structure
+**************
+
+   A few notes on the file hierarchy used in this package.
+
+   * Directory `doc' and its subdirectories contain all the
+     documentation of the library, along with this manual.
+
+        - `html/index.html' is the main page of the documentation. From
+          there you can reach both the "installation notes" and the
+          "class hierarchy documentation". Starting explorations from
+          this page is highly recommended, since this file will always
+          stay there in all future versions of the library.  Anyway,
+          you can alternatively open the various files individually,
+          following the instructions given below.
+
+        - `tvision.info' is the Texinfo version of this manual,
+          hereinafter called "installation notes". It contains
+          information regarding installation, keyboard handling, screen
+          manipulation, environment variables and mouse support. You
+          should take a look at it before using the library. Just type
+          `info -f tvision.info' to proceed.  The Texinfo format allows
+          searching for topics, commands and functions from the many
+          indices.
+
+          `tvision.info' was automatically extracted from
+          `tvision.texi' with the program `makeinfo'.  The command
+          `texi2dvi tvision.texi' will output `tvision.dvi', which can
+          then be processed with `dvips' and optionally `gs'
+          (Ghostscript) to produce a nicely formatted printed manual.
+          See *Note Overview: (Texinfo)Top, and *Note Getting Started:
+          (info)Top, for more about the Texinfo documentation system.
+
+        - `html/tvision.html' is the html version of these installation
+          notes, automatically produced by applying the `texi2html'
+          utility to file `tvision.texi'. Since it is built
+          automatically the output may appear ugly, so don't blame me.
+
+        - Files `html/hierarchy.html', `html/classes.html',
+          `html/annotated.html', `html/files.html',
+          `html/functions.html' and `html/globals.html' are the main
+          pages of the "class hierarchy documentation". These
+          information describe each class, its methods and data members
+          with some degree of detail.
+
+          To produce this documentation, I annotated each class
+          directly in the header file (.h) where it appears. Then I ran
+          `doxygen', a powerful documentation extractor available from
+          <http://www.doxygen.org/index.html> or from
+          <http://www.stack.nl/~dimitri/doxygen/download.html>. It
+          automatically fetches these information and generate a nice
+          html manual.
+
+   * Directory `lib' contains all the sources of the library, both
+     header (.h) and program (.cc) files.  Object files (.lo, .o) and
+     the generated library files (libtvision.a, libtvision.la) are also
+     placed here, after a successful compilation.
+
+     Before compiling the library, a trick in `Makefile.am' creates a
+     symbolic link named `tvision' to this same directory.  This
+     recursive link allows the smooth compilation of the various source
+     files, because all of them try to include `tvision/tv.h'.
+
+     `tv.h' is the only header every application needs to include.  It
+     automatically includes the required TVision header files by
+     looking at the various `Uses_XXXX' macros.  If one macro is
+     defined the relevant header is included.
+
+   * Directory `demo' presents a complete application made with this
+     library, named `demo'.  It shows how to use predefined views, how
+     to subclass them to create custom views, how to handle the various
+     events and how to deal with the online help system.  It also gives
+     some advises on how to store and recover views to and from streams.
+
+   * Directory `tutorial' contains a lot of simple examples.  Read file
+     `README' in that directory to know exactly what each program does.
+     File `basicMakefile' is a simple makefile template you can easily
+     modify to build your own programs.
+
+   * Finally, directory `tvhc' includes the help compiler, the default
+     program used to translate a source help file in the binary form
+     TVision internally uses.  Some documentation for it is given there
+     in file `README'.
+
+
+File: tvision.info,  Node: Copyright,  Next: Portability issues,  Prev: File Structure,  Up: Top
+
+Copyright
+*********
+
+     All changes copyright (c) 1997-2001 Sergio Sigala, Brescia, Italy.
+     All rights reserved.
+
+     Redistribution and use in source and binary forms, with or without
+     modification, are permitted provided that the following conditions
+     are met:
+
+       1. Redistributions of source code must retain the above copyright
+          notice, this list of conditions and the following disclaimer.
+
+       2. Redistributions in binary form must reproduce the above
+          copyright notice, this list of conditions and the following
+          disclaimer in the documentation and/or other materials
+          provided with the distribution.
+
+     THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR
+     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+     WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+     ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+     DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+     DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+     GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+     INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+     WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+     NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+     SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+   Warning: this BSD-style copyright is applicable only to the
+modifications brought by Sergio Sigala to the original code.  Borland
+has released the code to the public, but still owns the original
+copyright (see file `lib/tv.h' for instance).
+
+   Other contributors have their respective copyright.
+
+
+File: tvision.info,  Node: Portability issues,  Next: Keyboard,  Prev: Copyright,  Up: Top
+
+Portability issues
+******************
+
+   The TV library was originally written to run on 80x86 processor.
+These processors are little-endian and the original library assumes
+this as a premise.  In fact, some code may not run properly on
+big-endian machines.  This means it requires a big effort to make the
+library fully portable across all Unix machines.
+
+   I made various changes in the code to make it run correctly under
+big-endian machines.  I tested it with a PowerPC running Linux and it
+works fine (maybe some other minor changes are required).
+
+   Another problem is the massive usage of the PC-specific character
+set.  This usually gives a nice look when the applications run in the
+system console, but can show very annoying characters when they run in
+a remote terminal or under a X shell.
+
+
+File: tvision.info,  Node: Keyboard,  Next: Screen,  Prev: Portability issues,  Up: Top
+
+Keyboard
+********
+
+   The ncurses library is systematically used in TVision to perform
+keyboard input, and usually to do video output also.  These routines
+give the user a terminal-independent method for getting input
+characters and to update character screens with reasonable
+optimization.  The name `ncurses' stands for `new curses' and is the
+approved replacement for the 4.4BSD classic `curses' library, which has
+been discontinued.
+
+   More specifically, the ncurses package supports:
+
+   * output to windows and reading terminal input;
+
+   * control over terminals and their input and output capabilities;
+
+   * some color manipulation;
+
+   * terminfo capabilities;
+
+   * access to low-level terminal-manipulation routines.
+
+   In addition to drawing characters on the screen, video attributes
+and colors may be supported, causing the characters to show up in such
+modes as underlined, in  reverse video, or in color on terminals that
+support such display enhancements.  Line drawing characters may be
+specified to be output.  On input, ncurses is also able to translate
+arrow and function keys that transmit escape sequences into single
+value integers.  Type `man ncurses' for more.
+
+   Under Linux a special output mechanism called VCS, which gives
+direct access to the console screen memory, may be used.  This is
+noticeably faster than the standard ncurses output.  See *Note Screen::
+for details.
+
+Key combinations
+================
+
+   Two notes, whose applicability is strictly dependent on the
+operating system you are using:
+
+   * Under FreeBSD <ALT> combinations aren't currently supported.  You
+     can emulate them with <ESC> sequences.  To perform an <ALT>
+     emulation you should press <ESC> followed by the required letter
+     key within some tenth of second.  The default time interval is 0.4
+     seconds, see file `system.cc' for further details on how to change
+     it.
+
+     For example, to generate the `Alt-X' combination press `ESC X'.  To
+     generate <ESC> alone press it once and wait 0.4 seconds or press
+     it twice.  If the second key is pressed outside the time interval,
+     the entire sequence is treated like two ordinary key presses are.
+
+     Support for <CTRL> and <SHIFT> key combinations is also missing.
+
+   * Under Linux <ALT> combinations are usable only when you run
+     applications from the system console.  In this mode the library
+     can easily detect the state of <ALT>, <CTRL> and <SHIFT> keys by
+     using a Linux-specific system call (`TIOCLINUX', see `sys/kd.h' for
+     more), so strange combinations like `kbCtrlLeft' are always
+     possible.  In other environments (namely remote terminals and X
+     shells) these sequences can't be detected, so you need to compose
+     the same sequences seen above for FreeBSD.
+
+
+File: tvision.info,  Node: Screen,  Next: Mouse,  Prev: Keyboard,  Up: Top
+
+Screen
+******
+
+   A few, useful notes about screen handling.
+
+The importance of SIGWINCH
+==========================
+
+   The `SIGWINCH' signal is always hooked, so we can resize the screen
+at runtime and the application will adapt itself.  Obviously, this
+capability is especially useful in X shells.
+
+Two drawbacks of ncurses
+========================
+
+   Like mentioned previously, the ncurses library is usually used to
+perform video output.  This should work well under any operating
+system, in any kind of terminal (system console, dumb terminal or X
+shell).  But there are at least two problems with this otherwise
+perfectly portable solution:
+
+  1. This mechanism can't output all the 256 characters the 8 bit
+     encoding would permit, including those nice semi-graphical signs
+     usually used in text-mode applications on PCs.  Since TVision uses
+     them all (to draw frames, window icons and various other views),
+     your application may appear graphically poor.
+
+  2. This mechanism is slow.  On the system console it's slower on
+     Linux than FreeBSD, because of the advanced system FreeBSD uses to
+     update the screen memory.  Equally slow on the other kinds of
+     terminal.  This limit appears noticeably on 486 and low-end
+     Pentiums.
+
+   There is no way to speedup this process without doing some low-level,
+operating-system-specific trickery, necessarily non portable across the
+various operating systems.
+
+The Linux way: virtual console mode versus remote mode
+======================================================
+
+   Linux has a special output mechanism called VCS (or VCSA), which
+gives direct access to the screen memory.  VCS stands for "virtual
+console system".
+
+   This mechanism is a lot faster than the standard ncurses output;
+we'll call it "virtual console mode".  For clearness, we'll refer to
+the conventional, ncurses-based output approach, as "remote mode".  Not
+surprising, this facility is capable of displaying all of the 256
+characters with all colors the graphic adapter allows, so it fixes the
+first problem too.
+
+   The Linux kernel provides a handful of special devices which refer
+to the memories of the various virtual consoles; they are described
+below:
+
+   * `/dev/vcs0' is a character device with major number 7 and minor
+     number 0, usually of mode 0644 and owner root.tty.  It refers to
+     the memory of the currently displayed virtual console terminal.
+
+   * `/dev/vcs[1-63]' are character devices for virtual console
+     terminals, they have major number 7 and minor number 1 to 63,
+     usually mode 0644 and owner root.tty.
+
+   * `/dev/vcsa[0-63]' are the same as above, but including attributes,
+     and prefixed with four bytes giving the screen dimensions and
+     cursor position: lines, columns, x and y.
+
+   These devices replace the screendump ioctls of `console(4)', so the
+system administrator can control access using file system permissions.
+Your application may require root privileges, in order to gain access
+to these devices.  Type `man vcs' for more.
+
+   If not already present, the devices for the first eight virtual
+consoles may be created by:
+
+     for x in 0 1 2 3 4 5 6 7 8; do
+             mknod -m 644 /dev/vcs$x c 7 $x;
+             mknod -m 644 /dev/vcsa$x c 7 $[$x+128];
+     done
+     chown root:tty /dev/vcs*
+
+   Alternatively, you may try the following script, taken from the
+Midnight Commander, which builds all the 64 devices:
+
+     #!/bin/sh
+     #
+     # Script by Jakub Jelinek
+     #
+     if test -e /dev/vcs0
+     then
+             exit
+     fi
+     
+     I=0
+     while [ $I -lt 64 ]
+     do
+             mknod /dev/vcs$I c 7 $I
+             chmod 622 /dev/vcs$I
+             chown root.tty /dev/vcs$I
+             mknod /dev/vcsa$I c 7 `expr $I + 128`
+             chmod 622 /dev/vcsa$I
+             chown root.tty /dev/vcsa$I
+             I=`expr $I + 1`
+     done
+
+Conclusions on Linux
+====================
+
+   Under Linux every program can run in two ways:
+
+   * "Virtual console mode" is the fastest output method and should be
+     automatically selected when you start your application from the
+     system console and it has the required write privileges.  Its
+     output goes directly to the display via one of the various
+     `/dev/vcsa*' devices.
+
+   * "Remote mode" is used when you run the application from a remote
+     terminal, under telnet, in a X shell or in the system console but
+     it has not write privileges to the `/dev/vcsa*' devices.  Its
+     output goes to the display via standard out, so it's very slow
+     compared to the former.
+
+   In any case, if the terminal supports colors they are used.
+Otherwise, a monochrome palette with bold and inverse attributes is
+used to mark the text.
+
+Two notes on FreeBSD
+====================
+
+   * FreeBSD lacks a mechanism like VCS.  But it does not really need
+     it, because his conventional ncurses output is moderately fast
+     thanks to the peculiar screen updating technique it uses.
+
+   * The last screen line is not used because otherwise the display will
+     scroll up (it's an example of the "last character syndrome", which
+     sometimes affects computer programs).
+
+
+File: tvision.info,  Node: Mouse,  Next: Environment Variables,  Prev: Screen,  Up: Top
+
+Mouse
+*****
+
+   The mouse handling varies a lot, depending on the operating system
+you are using.  If you need to change some timing see the `system.cc'
+file.
+
+Mouse support under FreeBSD
+===========================
+
+   The library requires the `moused' daemon to be loaded.  See the
+moused man page (by typing `man moused') for more details.  For
+example, if you have a Microsoft compatible mouse connected to COM1,
+you should issue this command:
+
+     moused -p /dev/cuaa0 -t microsoft
+
+   By using the `TVOPT' environment variable, you can modify the shape
+of the cursor.  Setting it to `noarrow' disables the arrow pointer; the
+block pointer will instead be used.  See the *Note Environment
+Variables:: section for more.
+
+Mouse support under Linux
+=========================
+
+   The library requires `Gpm'.  The Gpm package is a mouse server for
+the Linux console.  It is meant to provide cooked mouse events to
+text-only applications, such as editors and simple menu-based programs.
+I tested TVision with Gpm version 1.10.
+
+
+File: tvision.info,  Node: Environment Variables,  Next: Compiling TVision,  Prev: Mouse,  Up: Top
+
+Environment Variables
+*********************
+
+   By setting the two environment variables `TVLOG' and `TVOPT', you
+can modify the way TVision applications act on your system.
+
+TVLOG
+=====
+
+   With `TVLOG' you can force TVision to write a log file.  For
+example, the following line will produce a log file named `mylog' when
+the application is executed:
+
+     TVLOG=mylog
+
+   The log file creation can be suppressed by assigning an empty string
+to this variable.
+
+TVOPT
+=====
+
+   You can modify some of the behavior of the library by defining the
+other environment variable `TVOPT'.  This variable is a set of strings
+separated by one or more space characters.  Valid strings are:
+
+`cyrillic'
+     enables cyrillic character set mapping (for Linux and VCS only).
+     See *Note Screen:: for more about VCS.
+
+`latin'
+     enables latin character set mapping (for Linux and VCS only).  See
+     *Note Screen:: for more about VCS.
+
+     Note: this option and the one above are useful only when the VCS
+     is enabled; in any other mode the application should automatically
+     select the correct mapping, thanks to the translation kindly done
+     by ncurses and the operating system.
+
+`noarrow'
+     disables the arrow pointer (FreeBSD only); the block pointer will
+     instead be used.  See *Note Mouse:: for more about mouse handling.
+
+`nogpm'
+     disables support for the Gpm mouse driver (Linux only); the
+     application will run without mouse.  See *Note Mouse:: for more
+     about mouse handling.
+
+`novcs'
+     inhibits the use of VCS to do video output (Linux only); the
+     application will use remote mode.  See *Note Screen:: for more
+     about VCS.
+
+Examples for the Bourne shell
+=============================
+
+     export TVOPT=nogpm         ==> does not use Gpm
+     export TVOPT="nogpm novcs" ==> disables both Gpm and VCS
+     export TVOPT=              ==> cleans the environment variable
+
+Examples for the C shell
+========================
+
+     setenv TVOPT nogpm         ==> does not use Gpm
+     setenv TVOPT "nogpm novcs" ==> disables both Gpm and VCS
+     unsetenv TVOPT             ==> cleans the environment variable
+
+
+File: tvision.info,  Node: Compiling TVision,  Next: Resources,  Prev: Environment Variables,  Up: Top
+
+Compiling TVision
+*****************
+
+   This section gives you some information for installing TVision.  For
+further details please read the `INSTALL' file that can be found in the
+root directory of the source package.
+
+   * Type `./configure' to automatically detect the system features.
+
+   * Type `make' in the main directory to compile all the sources.  This
+     creates both the static and dynamic libraries.  Libraries are
+     placed in directory `lib' with source files.  The `demo' example
+     and the tutorials are statically linked against the TVision
+     library.
+
+   * Type `make install' to install the library in `/usr/local/include'
+     and `/usr/local/lib'.  The default prefix directory is thus
+     `/usr/local' and it's automatically selected by `configure' if you
+     missed to specify a custom prefix directory with the option
+     `--prefix=PATH'.
+
+   * Type `make uninstall' to remove the library.
+
+     Note: this command and the previous (`make install') both need root
+     privileges and should possibly be followed by `ldconfig' to update
+     the linker cache.
+
+   * Type `make clean' in the main directory to remove objects, backup
+     files and executables in the main directory and in all the
+     subdirectories.
+
+   * Type `make dist' to build the distribution package.
+
+Quick start
+===========
+
+   To start, just say `./configure && make' to your shell.  Binaries
+are not released with the package because it's safer for you to compile
+the package by yourself.
+
+
+File: tvision.info,  Node: Resources,  Next: Credits,  Prev: Compiling TVision,  Up: Top
+
+Resources
+*********
+
+   Please connect to <http://www.sigala.it/sergio/tvision> for fresh
+resources. It is the official TVision site, from which you can download
+the latest version of the package; there are also be a number of example
+programs.
+
+
+File: tvision.info,  Node: Credits,  Next: Author address,  Prev: Resources,  Up: Top
+
+Credits
+*******
+
+   The following are most of the contributors, listed in chronologic
+order.  Sorry if I missed somebody (please contact me in case I did).
+
+   * Vasily Egoshin <wasa@nica.marstu.mari.su>
+
+   * Rainer Keuchel <r_keuchel@smaug.netwave.de>
+
+   * Martynas Kunigelis <algikun@santaka.sc-uni.ktu.lt>
+
+   * Bonni Mierzejewska <u6ed4@wvnvm.wvnet.edu>
+
+   * Ruslan V. Brushkoff <ruslan@Baby.TM.Odessa.UA>
+
+   * Dmitrij Korovkin <tkf@glasnet.ru>
+
+   * Sergey Clushin <serg@lamport.ru> <Clushin@deol.ru>
+
+   * Harald Hoyer <HarryH@Royal.Net>
+
+   * John Polstra <jdp@polstra.com>
+
+   * Pedro F. Giffuni <giffunip@asme.org>
+
+   * Vitaly Fedrushkov <willy@snowyowl.csu.ac.ru>
+
+   * Piotr Klaban <makler@man.torun.pl>
+
+   * Artur Harasimiuk <maniak@qna.softomat.com.pl>
+
+   * Thorsten Dittmar <dittmar@Mathematik.Uni-Marburg.de>
+
+
+File: tvision.info,  Node: Author address,  Prev: Credits,  Up: Top
+
+Author's address
+****************
+
+Sergio Sigala <sergio@sigala.it>
+Viale De Gasperi, 8
+25041 Boario Terme (BS)
+Italy
+
+
+
+Tag Table:
+Node: Top292
+Node: Overview1272
+Node: Reporting Bugs2114
+Node: File Structure3449
+Node: Copyright7872
+Node: Portability issues9701
+Node: Keyboard10600
+Node: Screen13480
+Node: Mouse18727
+Node: Environment Variables19846
+Node: Compiling TVision22094
+Node: Resources23704
+Node: Credits24042
+Node: Author address24963
+
+End Tag Table
