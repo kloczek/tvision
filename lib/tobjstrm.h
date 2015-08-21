@@ -154,9 +154,9 @@ typedef TStreamable *(*BUILDER)();
  */
 class TStreamableClass
 {
-    friend TStreamableTypes;
-    friend opstream;
-    friend ipstream;
+    friend class TStreamableTypes;
+    friend class opstream;
+    friend class ipstream;
 public:
     /**
      * Creates a TStreamable object with the given name and the given builder
@@ -286,7 +286,7 @@ private:
  */
 class TPWrittenObjects : public TNSSortedCollection
 {
-    friend opstream;
+    friend class opstream;
 public:
     /**
      * Undocumented.
@@ -341,7 +341,7 @@ private:
  */
 class TPWObj
 {
-    friend TPWrittenObjects;
+    friend class TPWrittenObjects;
 private:
     TPWObj( const void *adr, P_id_type id );
     const void *address;
@@ -375,7 +375,7 @@ private:
  */
 class TPReadObjects : public TNSCollection
 {
-    friend ipstream;
+    friend class ipstream;
 public:
     /**
      * Undocumented.
@@ -413,7 +413,7 @@ private:
 
 class streambuf;
 
-#include <iostream.h>
+#include <iostream>
 
 class TStreamableTypes;
 
@@ -423,7 +423,7 @@ class TStreamableTypes;
  */
 class pstream
 {
-    friend TStreamableTypes;
+    friend class  TStreamableTypes;
 public:
     /**
      * Undocumented.
@@ -551,7 +551,7 @@ protected:
 #if defined( Uses_ipstream ) && !defined( __ipstream )
 #define __ipstream
 
-#include <iostream.h>
+#include <iostream>
 
 class TStreamableClass;
 
@@ -586,12 +586,12 @@ public:
     /**
      * Returns the (absolute) current stream position.
      */
-    streampos tellg();
+    std::streampos tellg();
     /**
      * This form moves the stream position to the absolute position given by
      * `pos'.
      */
-    ipstream& seekg( streampos pos );
+    ipstream& seekg( std::streampos pos );
     /**
      * This form moves to a position relative to the current position by an
      * offset `off' (+ or -) starting at `dir'. Parameter `dir' can be set to:
@@ -604,7 +604,7 @@ public:
      * end (end of stream)
      * </pre>
      */
-    ipstream& seekg( streamoff off, ios::seek_dir dir );
+    ipstream& seekg( std::streamoff off, std::ios::seek_dir dir );
     /**
      * Returns the character at the current stream position.
      */
@@ -728,7 +728,7 @@ private:
 #if defined( Uses_opstream ) && !defined( __opstream )
 #define __opstream
 
-#include <iostream.h>
+#include <iostream>
 
 class TStreamableClass;
 
@@ -763,12 +763,12 @@ public:
     /**
      * Returns the (absolute) current stream position.
      */
-    streampos tellp();
+    std::streampos tellp();
     /**
      * This form moves the stream's current position to the absolute position
      * given by `pos'.
      */
-    opstream& seekp( streampos pos );
+    opstream& seekp( std::streampos pos );
     /**
      * This form moves to a position relative to the current position by an
      * offset `off' (+ or -) starting at `dir'. Parameter `dir' can be set to:
@@ -781,7 +781,7 @@ public:
      * end (end of stream)
      * </pre>
      */
-    opstream& seekp( streamoff off, ios::seek_dir dir );
+    opstream& seekp( std::streamoff off, std::ios::seek_dir dir );
     /**
      * Flushes the stream.
      */
@@ -1045,7 +1045,7 @@ public:
      * to the stream by specifying the `name', `omode', and `prot'
      * (protection) arguments.
      */
-    ifpstream(const char *name, int omode = ios::in,
+    ifpstream(const char *name, int omode = std::ios::in,
         int prot = filebuf::openprot );
     /**
      * Creates a buffered ifpstream object. You can open a file and attach it
