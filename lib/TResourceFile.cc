@@ -49,15 +49,15 @@ struct THeader
 TResourceFile::TResourceFile( fpstream *aStream ) : TObject()
 {
     THeader *header;
-    int handle;
     int found;
     int repeat;
     long streamSize;
 
     stream = aStream;
     basePos = stream->tellp();
-    handle = stream->rdbuf()->fd();
+    stream->seekg(0, std::ios::end);
     streamSize = filelength(handle);
+    stream->seekg(basePos);
     header = new THeader;
     found = 0;
     do {
