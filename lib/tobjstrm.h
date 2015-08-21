@@ -909,7 +909,7 @@ private:
 #if defined( Uses_iopstream ) && !defined( __iopstream )
 #define __iopstream
 
-#include <iostream.h>
+#include <iostream>
 
 /**
  * Class iopstream is a simple "mix" of its bases, @ref opstream and
@@ -950,7 +950,7 @@ protected:
 #if defined( Uses_fpbase ) && !defined( __fpbase )
 #define __fpbase
 
-#include <fstream.h>
+#include <fstream>
 
 /**
  * fpbase provides the basic operations common to all object file stream I/O.
@@ -968,7 +968,7 @@ public:
      * the stream by specifying the `name', `omode', and `prot' (protection)
      * arguments.
      */
-    fpbase( const char *name, int omode, int prot = filebuf::openprot );
+    fpbase( const char *name, int omode, int prot );
     /**
      * Creates a buffered fpbase object. You can open a file and attach it to
      * the stream by specifying the file descriptor, `f'.
@@ -990,7 +990,7 @@ public:
      * trunc, nocreate, noreplace) and protection. The opened file is
      * attached to this stream.
      */
-    void open( const char *name, int omode, int prot = filebuf::openprot );
+    void open( const char *name, int omode, int prot );
     /**
      * Attaches the file with descriptor `f' to this stream if possible.
      */
@@ -1006,9 +1006,9 @@ public:
     /**
      * Returns a pointer to the current file buffer.
      */
-    filebuf * rdbuf();
+    std::filebuf * rdbuf();
 private:
-    filebuf buf;
+    std::filebuf buf;
 };
 
 #endif  // Uses_fpbase
@@ -1024,7 +1024,7 @@ private:
 #if defined( Uses_ifpstream ) && !defined( __ifpstream )
 #define __ifpstream
 
-#include <iostream.h>
+#include <iostream>
 
 /**
  * ifpstream is a simple "mix" of its bases, @ref fpbase and @ref ipstream.
@@ -1045,8 +1045,7 @@ public:
      * to the stream by specifying the `name', `omode', and `prot'
      * (protection) arguments.
      */
-    ifpstream(const char *name, int omode = std::ios::in,
-        int prot = filebuf::openprot );
+    ifpstream(const char *name, int omode = std::ios::in, int prot );
     /**
      * Creates a buffered ifpstream object. You can open a file and attach it
      * to the stream by specifying the file descriptor, `f'.
@@ -1066,15 +1065,14 @@ public:
     /**
      * Returns a pointer to the current file buffer.
      */
-    filebuf * rdbuf();
+    std::filebuf * rdbuf();
     /**
      * Opens the the named file in the given mode (app, ate, in, out, binary,
      * trunc, nocreate, or noreplace) and protection. The default mode is in
      * (input) with openprot protection. The opened file is attached to this
      * stream.
      */
-    void open( const char *name, int omode = ios::in,
-        int prot = filebuf::openprot );
+    void open( const char *name, int omode = ios::in, int prot );
 };
 
 #endif  // Uses_ifpstream
@@ -1090,7 +1088,7 @@ public:
 #if defined( Uses_ofpstream ) && !defined( __ofpstream )
 #define __ofpstream
 
-#include <iostream.h>
+#include <iostream>
 
 /**
  * Class ofpstream is a simple "mix" of its bases, @ref fpbase and
@@ -1111,8 +1109,7 @@ public:
      * to the stream by specifying the `name', `omode', and `prot'
      * (protection) arguments.
      */
-    ofpstream( const char *name, int omode = ios::out, int prot =
-        filebuf::openprot );
+    ofpstream( const char *name, int omode = std::ios::out, int prot );
     /**
      * Creates a buffered ofpstream object. You can open a file and attach it
      * to the stream by specifying the file descriptor, `f'.
@@ -1132,15 +1129,14 @@ public:
     /**
      * Returns the current file buffer.
      */
-    filebuf * rdbuf();
+    std::filebuf * rdbuf();
     /**
      * Opens the the named file in the given mode (app, ate, in, out, binary,
      * trunc, nocreate, or noreplace) and protection. The default mode is out
      * (output) with openprot protection. The opened file is attached to this
      * stream.
      */
-    void open( const char *name, int omode = ios::out,
-        int prot = filebuf::openprot );
+    void open( const char *name, int omode = std::ios::out, int prot );
 };
 
 #endif  // Uses_ofpstream
@@ -1157,7 +1153,7 @@ public:
 #if defined( Uses_fpstream ) && !defined( __fpstream )
 #define __fpstream
 
-#include <iostream.h>
+#include <iostream>
 
 /**
  * fpstream is a simple "mix" of its bases, @ref fpbase and @ref iopstream.
@@ -1179,7 +1175,7 @@ public:
      * to the stream by specifying the `name', `omode', and `prot'
      * (protection) arguments.
      */
-    fpstream( const char *name, int omode, int prot = filebuf::openprot );
+    fpstream( const char *name, int omode, int prot );
     /**
      * Creates a buffered fpstream object. You can open a file and attach it
      * to the stream by specifying the file descriptor, `f'.
@@ -1205,7 +1201,7 @@ public:
      * trunc, nocreate, noreplace) and protection. The opened file is
      * attatched to this stream.
      */
-    void open( const char *name, int omode, int prot = filebuf::openprot );
+    void open( const char *name, int omode, int prot);
 };
 
 #endif  // Uses_fpstream
