@@ -18,7 +18,7 @@
 #define Uses_ipstream
 #include <tvision/tv.h>
 
-#include <fstream.h>
+#include <fstream>
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
