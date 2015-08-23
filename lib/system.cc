@@ -49,8 +49,6 @@
 
 #include <ctype.h>
 #include <fcntl.h>
-#include <fstream.h>
-#include <iostream.h>
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -59,6 +57,8 @@
 #include <sys/stat.h>
 #include <sys/time.h>
 #include <unistd.h>
+#include <fstream>
+#include <iostream>
 
 #include <config.h>		/* configuration file */
 
@@ -587,7 +587,7 @@ static int doRepaint;		/* should redraw the screen ? */
 static int doResize;		/* resize screen ? */
 static int evLength;		/* number of events in the queue */
 static int msOldButtons;	/* mouse button status */
-static ofstream xlog;		/* a logging file */
+static std::ofstream xlog;		/* a logging file */
 
 /*
  * A simple class which implements a timer.
@@ -627,7 +627,7 @@ unsigned char *vcsMap;		/* define which character table to use */
  * GENERAL FUNCTIONS
  */
 
-#define LOG(s) xlog << s << endl
+#define LOG(s) xlog << s << std::endl
 
 inline int range(int test, int min, int max)
 {
