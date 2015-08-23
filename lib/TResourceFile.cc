@@ -56,7 +56,7 @@ TResourceFile::TResourceFile( fpstream *aStream ) : TObject()
     stream = aStream;
     basePos = stream->tellp();
     stream->seekg(0, std::ios::end);
-    streamSize = filelength(handle);
+    streamSize = stream->tellg();
     stream->seekg(basePos);
     header = new THeader;
     found = 0;
