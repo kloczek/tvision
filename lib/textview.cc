@@ -281,7 +281,7 @@ TerminalBuf::TerminalBuf(TTerminal *tt): term(tt)
 
 int TerminalBuf::overflow(int c)
 {
-	streamsize n = pptr() - pbase();
+        std::streamsize n = pptr() - pbase();
 
 	if (n > 0 && sync() == EOF) return EOF;
 	if (c != EOF)
@@ -296,14 +296,14 @@ int TerminalBuf::overflow(int c)
 
 int TerminalBuf::sync()
 {
-	streamsize n = pptr() - pbase();
+        std::streamsize n = pptr() - pbase();
 
 	if (n > 0) term->do_sputn(pbase(), n);
 	return 0;
 }
 
 otstream::otstream( TTerminal *tt ):
-	ostream(&buf),
+        std::ostream(&buf),
 	buf(tt)
 {
 }
