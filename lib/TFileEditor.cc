@@ -97,9 +97,9 @@ Boolean TFileEditor::loadFile()
         }
     else
         {
-	stream->seekg(0, std::ios::end);
-	uint fSize = filelength( f.tellg() );
-	stream->seekg(0, std::ios::beg);
+	f.seekg(0, std::ios::end);
+	uint fSize = f.tellg();
+	f.seekg(0, std::ios::beg);
         if( setBufSize(fSize) == False )
             {
             editorDialog( edOutOfMemory );
