@@ -210,9 +210,9 @@ void TColorSelector::handleEvent( TEvent& event )
 		 * SS: some non-portable code changed.
 		 */
                 if( selType == csBackground )
-                    color = (int)event.message.infoPtr >> 4;
+                    color = (long)event.message.infoPtr >> 4;
                 else
-                    color = (int)event.message.infoPtr & 0x0F;
+		    color = (long)event.message.infoPtr & 0x0F;
                 drawView();
                 return ;
                 }
@@ -278,7 +278,7 @@ void TMonoSelector::handleEvent( TEvent& event )
 	/*
 	 * SS: some non-portable code changed.
 	 */
-        value = (int)event.message.infoPtr;
+        value = (long)event.message.infoPtr;
         drawView();
         }
 }
@@ -357,12 +357,12 @@ void TColorDisplay::handleEvent( TEvent& event )
 		/*
 		 * SS: some non-portable code changed.
 		 */
-                *color = (*color & 0x0F) | (((int)event.message.infoPtr << 4) & 0xF0);
+                *color = (*color & 0x0F) | (((long)event.message.infoPtr << 4) & 0xF0);
                 drawView();
                 break;
 
             case cmColorForegroundChanged:
-                *color = (*color & 0xF0) | ((int)event.message.infoPtr & 0x0F);
+                *color = (*color & 0xF0) | ((long)event.message.infoPtr & 0x0F);
                 drawView();
             }
 }
@@ -507,7 +507,7 @@ void TColorGroupList::handleEvent(TEvent& ev)
 	/*
 	 * SS: some non-portable code changed.
 	 */
-        setGroupIndex(focused, (int)ev.message.infoPtr);
+        setGroupIndex(focused, (long)ev.message.infoPtr);
 }
 
 void TColorGroupList::setGroupIndex(uchar groupNum, uchar itemNum)
@@ -810,7 +810,7 @@ void TColorDialog::handleEvent( TEvent& event )
 	/*
 	 * SS: some non-portable code changed.
 	 */
-        display->setColor( (uchar *)&pal->data[(int)event.message.infoPtr] );
+        display->setColor( (uchar *)&pal->data[(long)event.message.infoPtr] );
 }
 
 ushort TColorDialog::dataSize()

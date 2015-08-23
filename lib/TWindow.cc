@@ -153,7 +153,7 @@ void TWindow::handleEvent( TEvent& event )
 		/*
 		 * Some non-portable code changed.  See `TProgram.cc'.
 		 */
-		(int)event.message.infoPtr == number &&
+		(long)event.message.infoPtr == number &&
              (options & ofSelectable) != 0
            )
             {
