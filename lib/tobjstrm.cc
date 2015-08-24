@@ -714,24 +714,25 @@ fpbase::fpbase()
     pstream::init( &buf );
 }
 
-fpbase::fpbase( const char *name, int omode, int prot )
 
+fpbase::fpbase( const char *name, std::ios::openmode omode)
 {
     pstream::init( &buf );
+    open( name, omode);
 }
 
 fpbase::~fpbase()
 {
 }
 
-void fpbase::open( const char *b, int m, int prot )
+void fpbase::open( const char *b, std::ios::openmode m)
 {
     if( buf.is_open() )
-        clear(ios::failbit);        // fail - already open
-    else if( buf.open(b, m, prot) )
-        clear(ios::goodbit);        // successful open
+        clear(std::ios::failbit);        // fail - already open
+    else if( buf.open(b, m) )
+        clear(std::ios::goodbit);        // successful open
     else
-        clear(ios::badbit);     // open failed
+        clear(std::ios::badbit);     // open failed
 }
 
 void fpbase::close()
@@ -759,8 +760,8 @@ ifpstream::ifpstream()
 {
 }
 
-ifpstream::ifpstream( const char* name, int omode, int prot ) :
-        fpbase( name, omode | ios::in | ios::bin, prot )
+ifpstream::ifpstream( const char* name, std::ios::openmode omode) :
+        fpbase( name, omode | std::ios::in | std::ios::binary)
 {
 }
 
@@ -773,17 +774,17 @@ std::filebuf *ifpstream::rdbuf()
     return fpbase::rdbuf();
 }
 
-void ifpstream::open( const char *name, int omode, int prot )
+void ifpstream::open( const char *name, std::ios::openmode omode)
 {
-    fpbase::open( name, omode | ios::in | ios::bin, prot );
+    fpbase::open( name, omode | std::ios::in | std::ios::binary);
 }
 
 ofpstream::ofpstream()
 {
 }
 
-ofpstream::ofpstream( const char* name, int omode, int prot ) :
-        fpbase( name, omode | ios::out | ios::bin, prot )
+ofpstream::ofpstream( const char* name, std::ios::openmode omode) :
+        fpbase( name, omode | std::ios::out | std::ios::binary)
 {
 }
 
@@ -796,17 +797,17 @@ std::filebuf *ofpstream::rdbuf()
     return fpbase::rdbuf();
 }
 
-void ofpstream::open( const char *name, int omode, int prot )
+void ofpstream::open( const char *name, std::ios::openmode omode)
 {
-    fpbase::open( name, omode | ios::out | ios::bin, prot );
+    fpbase::open( name, omode | std::ios::out | std::ios::binary);
 }
 
 fpstream::fpstream()
 {
 }
 
-fpstream::fpstream( const char* name, int omode, int prot ) :
-        fpbase( name, omode | ios::out | ios::bin, prot )
+fpstream::fpstream( const char* name, std::ios::openmode omode) :
+        fpbase( name, omode | std::ios::out | std::ios::binary)
 {
 }
 
@@ -819,7 +820,7 @@ std::filebuf *fpstream::rdbuf()
     return fpbase::rdbuf();
 }
 
-void fpstream::open( const char *name, int omode, int prot )
+void fpstream::open( const char *name, std::ios::openmode omode)
 {
-    fpbase::open( name, omode | ios::in | ios::out | ios::bin, prot );
+    fpbase::open( name, omode | std::ios::in | std::ios::out | std::ios::binary);
 }

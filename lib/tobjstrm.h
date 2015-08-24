@@ -963,20 +963,19 @@ public:
     fpbase();
     /**
      * Creates a buffered fpbase object. You can open a file and attach it to
-     * the stream by specifying the `name', `omode', and `prot' (protection)
-     * arguments.
+     * the stream by specifying the `name' and `omode' arguments.
      */
-    fpbase( const char *name, int omode, int prot );
+    fpbase( const char *name, std::ios::openmode omode);
     /**
      * Destroys the fpbase object.
      */
     ~fpbase();
     /**
-     * Opens the named file in the given mode (app, ate, in, out, binary,
-     * trunc, nocreate, noreplace) and protection. The opened file is
+     * Opens the named file in and the given mode (app, ate, in, out, binary,
+     * trunc, nocreate, noreplace). The opened file is
      * attached to this stream.
      */
-    void open( const char *name, int omode, int prot );
+    void open( const char *name, std::ios::openmode omode);
     /**
      * Closes the stream and associated file.
      */
@@ -984,7 +983,7 @@ public:
     /**
      * Allocates a buffer of size `len'.
      */
-    void setbuf( char *buf, int len );
+    void setbuf( char *buf, std::streamsize len );
     /**
      * Returns a pointer to the current file buffer.
      */
@@ -1024,10 +1023,9 @@ public:
     ifpstream();
     /**
      * Creates a buffered ifpstream object. You can open a file and attach it
-     * to the stream by specifying the `name', `omode', and `prot'
-     * (protection) arguments.
+     * to the stream by specifying the `name' and `omode' arguments.
      */
-    ifpstream(const char *name, int omode = std::ios::in, int prot );
+    ifpstream(const char *name, std::ios::openmode omode = std::ios::in);
     /**
      * Destroys the ifpstream object.
      */
@@ -1037,12 +1035,11 @@ public:
      */
     std::filebuf * rdbuf();
     /**
-     * Opens the the named file in the given mode (app, ate, in, out, binary,
-     * trunc, nocreate, or noreplace) and protection. The default mode is in
-     * (input) with openprot protection. The opened file is attached to this
+     * Opens the the named file in and the given mode (app, ate, in, out, binary,
+     * trunc, nocreate, or noreplace). The opened file is attached to this
      * stream.
      */
-    void open( const char *name, int omode = ios::in, int prot );
+    void open( const char *name, std::ios::openmode omode = std::ios::in);
 };
 
 #endif  // Uses_ifpstream
@@ -1076,10 +1073,9 @@ public:
     ofpstream();
     /**
      * Creates a buffered ofpstream object. You can open a file and attach it
-     * to the stream by specifying the `name', `omode', and `prot'
-     * (protection) arguments.
+     * to the stream by specifying the `name' and `omode' arguments.
      */
-    ofpstream( const char *name, int omode = std::ios::out, int prot );
+    ofpstream( const char *name, std::ios::openmode omode = std::ios::out);
     /**
      * Destroys the ofpstream object.
      */
@@ -1089,12 +1085,11 @@ public:
      */
     std::filebuf * rdbuf();
     /**
-     * Opens the the named file in the given mode (app, ate, in, out, binary,
-     * trunc, nocreate, or noreplace) and protection. The default mode is out
-     * (output) with openprot protection. The opened file is attached to this
+     * Opens the the named file in and the given mode (app, ate, in, out, binary,
+     * trunc, nocreate, or noreplace). The opened file is attached to this
      * stream.
      */
-    void open( const char *name, int omode = std::ios::out, int prot );
+    void open( const char *name, std::ios::openmode omode = std::ios::out);
 };
 
 #endif  // Uses_ofpstream
@@ -1130,10 +1125,9 @@ public:
     fpstream();
     /**
      * Creates a buffered fpstream object. You can open a file and attach it
-     * to the stream by specifying the `name', `omode', and `prot'
-     * (protection) arguments.
+     * to the stream by specifying the `name'and `omode' arguments.
      */
-    fpstream( const char *name, int omode, int prot );
+    fpstream( const char *name, std::ios::openmode omode);
     /**
      * Destroys the fpstream object.
      */
@@ -1141,13 +1135,13 @@ public:
     /**
      * Returns the data member bp.
      */
-    filebuf * rdbuf();
+    std::filebuf * rdbuf();
     /**
-     * Opens the named file in the given mode (app, ate, in, out, binary,
-     * trunc, nocreate, noreplace) and protection. The opened file is
-     * attatched to this stream.
+     * Opens the named file in and the given mode (app, ate, in, out,
+     * binary, trunc, nocreate, noreplace) The opened file is attatched
+     * to this stream.
      */
-    void open( const char *name, int omode, int prot);
+    void open( const char *name, std::ios::openmode omode);
 };
 
 #endif  // Uses_fpstream
