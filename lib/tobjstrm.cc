@@ -715,17 +715,7 @@ fpbase::fpbase()
 }
 
 fpbase::fpbase( const char *name, int omode, int prot )
-{
-    pstream::init( &buf );
-    open( name, omode, prot );
-}
 
-fpbase::fpbase( int f ) : buf( f )
-{
-    pstream::init( &buf );
-}
-
-fpbase::fpbase( int f, char *b, int len ) : buf( f, b, len )
 {
     pstream::init( &buf );
 }
@@ -742,16 +732,6 @@ void fpbase::open( const char *b, int m, int prot )
         clear(ios::goodbit);        // successful open
     else
         clear(ios::badbit);     // open failed
-}
-
-void fpbase::attach( int f )
-{
-    if( buf.is_open() )
-        setstate(ios::failbit);
-    else if( buf.attach(f) )
-        clear(ios::goodbit);
-    else
-        clear(ios::badbit);
 }
 
 void fpbase::close()
@@ -784,14 +764,6 @@ ifpstream::ifpstream( const char* name, int omode, int prot ) :
 {
 }
 
-ifpstream::ifpstream( int f ) : fpbase( f )
-{
-}
-
-ifpstream::ifpstream(int f, char* b, int len) : fpbase(f, b, len)
-{
-}
-
 ifpstream::~ifpstream()
 {
 }
@@ -815,14 +787,6 @@ ofpstream::ofpstream( const char* name, int omode, int prot ) :
 {
 }
 
-ofpstream::ofpstream( int f ) : fpbase( f )
-{
-}
-
-ofpstream::ofpstream(int f, char* b, int len) : fpbase(f, b, len)
-{
-}
-
 ofpstream::~ofpstream()
 {
 }
@@ -843,14 +807,6 @@ fpstream::fpstream()
 
 fpstream::fpstream( const char* name, int omode, int prot ) :
         fpbase( name, omode | ios::out | ios::bin, prot )
-{
-}
-
-fpstream::fpstream( int f ) : fpbase( f )
-{
-}
-
-fpstream::fpstream(int f, char* b, int len) : fpbase(f, b, len)
 {
 }
 

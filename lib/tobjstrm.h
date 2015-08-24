@@ -968,18 +968,6 @@ public:
      */
     fpbase( const char *name, int omode, int prot );
     /**
-     * Creates a buffered fpbase object. You can open a file and attach it to
-     * the stream by specifying the file descriptor, `f'.
-     */
-    fpbase( int f );
-    /**
-     * Creates a buffered fpbase object. You can set the size and initial
-     * contents of the buffer with the `len' and `b' arguments. You can open
-     * a file and attach it to the stream by specifying the file descriptor,
-     * `f'.
-     */
-    fpbase( int f, char *b, int len);
-    /**
      * Destroys the fpbase object.
      */
     ~fpbase();
@@ -989,10 +977,6 @@ public:
      * attached to this stream.
      */
     void open( const char *name, int omode, int prot );
-    /**
-     * Attaches the file with descriptor `f' to this stream if possible.
-     */
-    void attach( int f );
     /**
      * Closes the stream and associated file.
      */
@@ -1045,18 +1029,6 @@ public:
      */
     ifpstream(const char *name, int omode = std::ios::in, int prot );
     /**
-     * Creates a buffered ifpstream object. You can open a file and attach it
-     * to the stream by specifying the file descriptor, `f'.
-     */
-    ifpstream( int f );
-    /**
-     * Creates a buffered ifpstream object. You can set the size and initial
-     * contents of the buffer with the `len' and `b' arguments. You can open
-     * a file and attach it to the stream by specifying the file descriptor,
-     * `f'.
-     */
-    ifpstream( int f, char *b, int len );
-    /**
      * Destroys the ifpstream object.
      */
     ~ifpstream();
@@ -1108,18 +1080,6 @@ public:
      * (protection) arguments.
      */
     ofpstream( const char *name, int omode = std::ios::out, int prot );
-    /**
-     * Creates a buffered ofpstream object. You can open a file and attach it
-     * to the stream by specifying the file descriptor, `f'.
-     */
-    ofpstream( int f );
-    /**
-     * Creates a buffered ofpstream object. You can set the size and initial
-     * contents of the buffer using the `len' and `b' arguments. You can open
-     * a file and attach it to the stream by specifying the file descriptor,
-     * `f'.
-     */
-    ofpstream( int f, char *b, int len );
     /**
      * Destroys the ofpstream object.
      */
@@ -1174,18 +1134,6 @@ public:
      * (protection) arguments.
      */
     fpstream( const char *name, int omode, int prot );
-    /**
-     * Creates a buffered fpstream object. You can open a file and attach it
-     * to the stream by specifying the file descriptor, `f'.
-     */
-    fpstream( int f );
-    /**
-     * Creates a buffered fpstream object. You can set the size and initial
-     * contents of the buffer using the `len' and `b' arguments. You can open
-     * a file and attach it to the stream by specifying the file descriptor,
-     * `f'.
-     */
-    fpstream( int f, char *b, int len );
     /**
      * Destroys the fpstream object.
      */
