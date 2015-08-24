@@ -144,7 +144,7 @@ const P_id_type P_id_notFound = UINT_MAX;
  */
 typedef TStreamable *(*BUILDER)();
 
-#define __DELTA( d ) ((int)(TStreamable*)(d*)1-1 )
+#define __DELTA( d ) ((long)(TStreamable*)(d*)1-1 )
 
 /**
  * TStreamableClass is used by @ref TStreamableTypes and @ref pstream in the
