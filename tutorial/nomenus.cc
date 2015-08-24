@@ -18,6 +18,8 @@
 #define Uses_TView
 #define Uses_TWindow
 
+
+#include <cstring>
 #include <tvision/tv.h>
 
 //define a custom background
@@ -43,7 +45,7 @@ void TMyBackground::draw()
     while (x < size.x)
     {
 	b.moveStr(x, s, 0x17);
-	x += strlen(s);
+	x += std::strlen(s);
     }
     writeLine(0, 0, size.x, size.y, b);
 }

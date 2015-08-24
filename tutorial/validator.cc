@@ -25,7 +25,7 @@
 
 const int cmOpenDialog	= 100;
 
-class Demo: public TApplication 
+class Demo: public TApplication
 {
 public:
 	Demo();
@@ -130,7 +130,7 @@ MyDialog::MyDialog():
 	selectNext(False);
 }
 
-void main()
+int main()
 {
 	Demo a;
 	a.run();

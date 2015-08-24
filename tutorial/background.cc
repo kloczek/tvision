@@ -9,7 +9,7 @@
 
 #include <tvision/tv.h>
 
-class Demo: public TApplication 
+class Demo: public TApplication
 {
 public:
 	Demo();
@@ -20,7 +20,7 @@ Demo::Demo(): TProgInit(&Demo::initStatusLine, &Demo::initMenuBar,
 {
 }
 
-void main()
+int main()
 {
 	TDeskTop::defaultBkgrnd = '?';
 	Demo a;

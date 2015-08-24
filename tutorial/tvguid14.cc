@@ -13,8 +13,8 @@
 // modify TMyApp::newDialog
 
 #include <stdlib.h>             // for exit(), random()
-#include <iostream.h>
-#include <fstream.h>            // for ifstream
+#include <iostream>
+#include <fstream>            // for ifstream
 #include <stdio.h>              // for puts() etc
 #include <string.h>             // for strlen etc
 #include <ctype.h>
@@ -101,10 +101,10 @@ private:
 
 void readFile( const char *fileName )
 {
-    ifstream fileToView( fileName );
+  std::ifstream fileToView( fileName );
     if( !fileToView )
         {
-        cout << "Invalid file name..." << endl;
+	  std::cout << "Invalid file name..." << std::endl;
         exit( 1 );
         }
     else
@@ -185,7 +185,7 @@ TInterior *TDemoWindow::makeInterior( const TRect& bounds, Boolean left )
     TScrollBar *vScrollBar = new TScrollBar( r );
     if( vScrollBar == 0 )
         {
-        cout << "vScrollbar init error" << endl;
+	  std::cout << "vScrollbar init error" << std::endl;
         exit(1);
         }
         // production code would display error dialog box
@@ -198,7 +198,7 @@ TInterior *TDemoWindow::makeInterior( const TRect& bounds, Boolean left )
     TScrollBar *hScrollBar = new TScrollBar( r );
     if( hScrollBar == 0 )
         {
-        cout << "hScrollbar init error" << endl;
+	  std::cout << "hScrollbar init error" << std::endl;
         exit(1);
         }
     hScrollBar->options |= ofPostProcess;
