@@ -411,8 +411,6 @@ private:
 #if defined( Uses_pstream ) && !defined( __pstream )
 #define __pstream
 
-class streambuf;
-
 #include <iostream>
 
 class TStreamableTypes;
