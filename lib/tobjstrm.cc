@@ -26,11 +26,11 @@
 
 #include <assert.h>
 #include <fcntl.h>
-#include <fstream.h>
-#include <limits.h>
 #include <stdlib.h>
-#include <string.h>
 #include <sys/stat.h>
+#include <cstring>
+#include <limits>
+#include <fstream>
 
 const uchar nullStringLen = UCHAR_MAX;
 
