@@ -435,7 +435,7 @@ public:
      * This form creates a buffered pstream with the given buffer and sets the
      * @ref bp data member to `buf'. The @ref state data member is set to 0.
      */
-    pstream( streambuf *buf );
+    pstream( std::streambuf *buf );
     /**
      * Destroys the pstream object.
      */
@@ -479,7 +479,7 @@ public:
     /**
      * Returns the @ref bp pointer to this stream's assigned buffer.
      */
-    streambuf * rdbuf() const;
+    std::streambuf * rdbuf() const;
     /**
      * Creates the associated @ref TStreamableTypes object types. Called by the
      * @ref TStreamableClass constructor.
@@ -515,7 +515,7 @@ protected:
     /**
      * Pointer to the stream buffer.
      */
-    streambuf *bp;
+    std::streambuf *bp;
     /**
      * The format state flags, as enumerated in ios. Use @ref rdstate() to
      * access the current state.
@@ -524,7 +524,7 @@ protected:
     /**
      * Initializes the stream: sets @ref state to 0 and @ref bp to `sbp'.
      */
-    void init( streambuf *sbp );
+    void init( std::streambuf *sbp );
     /**
      * Updates the @ref state data member with state |= (b & 0 xFF).
      */
@@ -576,7 +576,7 @@ public:
      * the @ref bp data member to `buf'. The @ref state data member is set
      * to 0.
      */
-    ipstream( streambuf *buf );
+    ipstream( std::streambuf *buf );
     /**
      * Destroys the ipstream object.
      */
@@ -602,7 +602,7 @@ public:
      * end (end of stream)
      * </pre>
      */
-    ipstream& seekg( std::streamoff off, std::ios::seek_dir dir );
+    ipstream& seekg( std::streamoff off, std::ios::seekdir dir );
     /**
      * Returns the character at the current stream position.
      */
@@ -753,7 +753,7 @@ public:
      * the @ref bp data member to `buf'. The @ref state data member is set
      * to 0.
      */
-    opstream( streambuf *buf );
+    opstream( std::streambuf *buf );
     /**
      * Destroys the opstream object.
      */
@@ -779,7 +779,7 @@ public:
      * end (end of stream)
      * </pre>
      */
-    opstream& seekp( std::streamoff off, std::ios::seek_dir dir );
+    opstream& seekp( std::streamoff off, std::ios::seekdir dir );
     /**
      * Flushes the stream.
      */
@@ -923,7 +923,7 @@ public:
      * Creates a buffered iopstream with the given buffer and sets the @ref bp
      * data member to `buf'. The @ref state data member is set to 0.
      */
-    iopstream( streambuf *buf );
+    iopstream( std::streambuf *buf );
     /**
      * Destroys the iopstream object.
      */
