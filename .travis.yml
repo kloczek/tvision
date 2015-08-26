@@ -5,6 +5,8 @@ python:
 addons:
   apt:
     packages:
+      - libncurses-dev
+      - libgpm-dev
       - ccache
 cache:
   - ccache
