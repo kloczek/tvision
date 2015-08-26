@@ -27,8 +27,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include <strstream.h>
-#include <iomanip.h>
+#include <strstream>
+#include <iomanip>
 #include <time.h>
 
 #include "gadgets.h"

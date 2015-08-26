@@ -12,8 +12,8 @@
 // same as tvguid06 except for improved draw method
 
 #include <stdlib.h>             // for exit(), random()
-#include <iostream.h>
-#include <fstream.h>            // for ifstream
+#include <iostream>
+#include <fstream>            // for ifstream
 #include <stdio.h>              // for puts() etc
 #include <string.h>             // for strlen etc
 #include <ctype.h>
@@ -49,10 +49,10 @@ int lineCount = 0;
 
 void readFile( const char *fileName )
 {
-    ifstream fileToView( fileName );
+    std::ifstream fileToView( fileName );
     if( !fileToView )
         {
-        cout << "Invalid file name..." << endl;
+	std::cout << "Invalid file name..." << std::endl;
         exit( 1 );
         }
     else

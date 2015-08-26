@@ -103,8 +103,7 @@ void TChDirDialog::handleEvent( TEvent& event )
 #ifndef __UNPATCHED
 		//!! Handle directory selection.
                 case cmDirSelection:
-                    chDirButton->makeDefault( Boolean( int(
-			event.message.infoPtr ) ) );
+		  chDirButton->makeDefault( Boolean( long( event.message.infoPtr ) ) );
                     return;     // NOTE: THIS IS RETURN NOT BREAK!!
 #endif
                 default:

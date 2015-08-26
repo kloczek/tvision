@@ -18,7 +18,8 @@
 
 #include <tvision/tv.h>
 
-#include <fstream.h>
+#include <fstream>
+#include <cstring>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -57,7 +58,7 @@ void TProgressBar::draw()
 	sprintf(str, "%d%%", max == 0 ? 100 : 100 * value / max);
 	b.moveChar(0, ' ', colLeft, mid);
 	b.moveChar(mid, ' ', colRight, size.x - mid);
-	b.moveStr((size.x - strlen(str)) / 2, str, 0);
+	b.moveStr((size.x - std::strlen(str)) / 2, str, 0);
 	writeBuf(0, 0, size.x, size.y, b);
 }
 
@@ -121,7 +122,7 @@ void TLoadWindow::update()
 		oldTime = newTime;
 		pTime->setText(ctime(&oldTime));
 
-		ifstream f("/proc/loadavg");
+		std::ifstream f("/proc/loadavg");
 		for (int i = 0; f && i < count; i++)
 		{
 			double v;
@@ -139,7 +140,7 @@ void TLoadWindow::sizeLimits(TPoint &min, TPoint &max)
 	min.y = max.y = minH;
 }
 
-class myApp: public TApplication 
+class myApp: public TApplication
 {
 public:
 	myApp();

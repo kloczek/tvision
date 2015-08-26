@@ -18,7 +18,7 @@
 
 const int cmAboutCmd    = 100;
 
-class Demo: public TApplication 
+class Demo: public TApplication
 {
 public:
 	Demo();
@@ -84,7 +84,7 @@ void Demo::aboutDlgBox()
     executeDialog(aboutBox);
 }
 
-void main()
+int main()
 {
 	Demo a;
 	a.run();

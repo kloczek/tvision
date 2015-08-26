@@ -32,8 +32,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include <strstream.h>
-#include <iomanip.h>
+#include <strstream>
+#include <iomanip>
 
 #include "mousedlg.h"
 
@@ -148,4 +148,3 @@ void TMouseDialog::handleEvent(TEvent& event)
             break;
         }
 }
-

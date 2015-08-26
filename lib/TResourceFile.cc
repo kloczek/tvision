@@ -49,22 +49,22 @@ struct THeader
 TResourceFile::TResourceFile( fpstream *aStream ) : TObject()
 {
     THeader *header;
-    int handle;
     int found;
     int repeat;
     long streamSize;
 
     stream = aStream;
     basePos = stream->tellp();
-    handle = stream->rdbuf()->fd();
-    streamSize = filelength(handle);
+    stream->seekg(0, std::ios::end);
+    streamSize = stream->tellg();
+    stream->seekg(basePos);
     header = new THeader;
     found = 0;
     do {
        repeat = 0;
        if (basePos <= (streamSize - (long)sizeof(THeader)))
            {
-           stream->seekg(basePos, ios::beg);
+	   stream->seekg(basePos, std::ios::beg);
            stream->readBytes(header, sizeof(THeader));
            if (header->signature == 0x5a4d)
                {
@@ -90,9 +90,9 @@ TResourceFile::TResourceFile( fpstream *aStream ) : TObject()
 
     if (found)
     {
-        stream->seekg(basePos + sizeof(long) * 2, ios::beg);
+        stream->seekg(basePos + sizeof(long) * 2, std::ios::beg);
         *stream >> indexPos;
-        stream->seekg(basePos + indexPos, ios::beg);
+        stream->seekg(basePos + indexPos, std::ios::beg);
         *stream >> index;
     }
     else
@@ -131,10 +131,10 @@ void TResourceFile::flush()
 
     if (modified == True)
     {
-        stream->seekp(basePos + indexPos, ios::beg);
+        stream->seekp(basePos + indexPos, std::ios::beg);
         *stream << index;
         lenRez =  stream->tellp() - basePos -  sizeof(long) * 2;
-        stream->seekp(basePos, ios::beg);
+        stream->seekp(basePos, std::ios::beg);
         *stream << rStreamMagic;
         *stream << lenRez;
         *stream << indexPos;
@@ -150,7 +150,7 @@ void *TResourceFile::get( const char *key)
 
     if (! index->search((char *)key, i))
         return  0;
-    stream->seekg(basePos + ((TResourceItem*)(index->at(i)))->pos, ios::beg);
+    stream->seekg(basePos + ((TResourceItem*)(index->at(i)))->pos, std::ios::beg);
     *stream >> p;
     return p;
 }
@@ -174,7 +174,7 @@ void TResourceFile::put(TStreamable *item, const char *key)
         index->atInsert(i, p);
     }
     p->pos =  indexPos;
-    stream->seekp(basePos + indexPos, ios::beg);
+    stream->seekp(basePos + indexPos, std::ios::beg);
     *stream << item;
     indexPos = stream->tellp() - basePos;
     p->size  = indexPos - p->pos;

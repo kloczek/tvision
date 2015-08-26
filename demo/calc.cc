@@ -32,8 +32,8 @@ __link( RButton )
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include <strstream.h>
-#include <iomanip.h>
+#include <strstream>
+#include <iomanip>
 
 #include "calc.h"
 
@@ -160,16 +160,16 @@ void TCalcDisplay::setDisplay(double r)
 {
     int  len;
     char str[64];
-    ostrstream displayStr( str, sizeof str );
+    std::ostrstream displayStr( str, sizeof str );
 
     if(r < 0.0)
         {
         sign = '-';
-        displayStr << -r << ends;
+        displayStr << -r << std::ends;
         }
     else
         {
-        displayStr << r << ends;
+	  displayStr << r << std::ends;
         sign = ' ';
         }
 
@@ -207,7 +207,7 @@ void TCalcDisplay::calcKey(unsigned char key)
         case '0':   case '1':   case '2':   case '3':   case '4':
         case '5':   case '6':   case '7':   case '8':   case '9':
             checkFirst();
-            if (strlen(number) < 15) 
+            if (strlen(number) < 15)
                 {                       // 15 is max visible display length
                 if (strcmp(number, "0") == 0)
                     number[0] = '\0';
@@ -343,4 +343,3 @@ TCalculator::TCalculator() :
     r = TRect( 3, 2, 21, 3 );
     insert( new TCalcDisplay(r) );
 }
-

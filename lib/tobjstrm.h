@@ -144,7 +144,7 @@ const P_id_type P_id_notFound = UINT_MAX;
  */
 typedef TStreamable *(*BUILDER)();
 
-#define __DELTA( d ) ((int)(TStreamable*)(d*)1-1 )
+#define __DELTA( d ) ((long)(TStreamable*)(d*)1-1 )
 
 /**
  * TStreamableClass is used by @ref TStreamableTypes and @ref pstream in the
@@ -154,9 +154,9 @@ typedef TStreamable *(*BUILDER)();
  */
 class TStreamableClass
 {
-    friend TStreamableTypes;
-    friend opstream;
-    friend ipstream;
+    friend class TStreamableTypes;
+    friend class opstream;
+    friend class ipstream;
 public:
     /**
      * Creates a TStreamable object with the given name and the given builder
@@ -286,7 +286,7 @@ private:
  */
 class TPWrittenObjects : public TNSSortedCollection
 {
-    friend opstream;
+    friend class opstream;
 public:
     /**
      * Undocumented.
@@ -341,7 +341,7 @@ private:
  */
 class TPWObj
 {
-    friend TPWrittenObjects;
+    friend class TPWrittenObjects;
 private:
     TPWObj( const void *adr, P_id_type id );
     const void *address;
@@ -375,7 +375,7 @@ private:
  */
 class TPReadObjects : public TNSCollection
 {
-    friend ipstream;
+    friend class ipstream;
 public:
     /**
      * Undocumented.
@@ -411,9 +411,7 @@ private:
 #if defined( Uses_pstream ) && !defined( __pstream )
 #define __pstream
 
-class streambuf;
-
-#include <iostream.h>
+#include <iostream>
 
 class TStreamableTypes;
 
@@ -423,7 +421,7 @@ class TStreamableTypes;
  */
 class pstream
 {
-    friend TStreamableTypes;
+    friend class  TStreamableTypes;
 public:
     /**
      * Undocumented.
@@ -437,7 +435,7 @@ public:
      * This form creates a buffered pstream with the given buffer and sets the
      * @ref bp data member to `buf'. The @ref state data member is set to 0.
      */
-    pstream( streambuf *buf );
+    pstream( std::streambuf *buf );
     /**
      * Destroys the pstream object.
      */
@@ -481,7 +479,7 @@ public:
     /**
      * Returns the @ref bp pointer to this stream's assigned buffer.
      */
-    streambuf * rdbuf() const;
+    std::streambuf * rdbuf() const;
     /**
      * Creates the associated @ref TStreamableTypes object types. Called by the
      * @ref TStreamableClass constructor.
@@ -517,7 +515,7 @@ protected:
     /**
      * Pointer to the stream buffer.
      */
-    streambuf *bp;
+    std::streambuf *bp;
     /**
      * The format state flags, as enumerated in ios. Use @ref rdstate() to
      * access the current state.
@@ -526,7 +524,7 @@ protected:
     /**
      * Initializes the stream: sets @ref state to 0 and @ref bp to `sbp'.
      */
-    void init( streambuf *sbp );
+    void init( std::streambuf *sbp );
     /**
      * Updates the @ref state data member with state |= (b & 0 xFF).
      */
@@ -551,7 +549,7 @@ protected:
 #if defined( Uses_ipstream ) && !defined( __ipstream )
 #define __ipstream
 
-#include <iostream.h>
+#include <iostream>
 
 class TStreamableClass;
 
@@ -578,7 +576,7 @@ public:
      * the @ref bp data member to `buf'. The @ref state data member is set
      * to 0.
      */
-    ipstream( streambuf *buf );
+    ipstream( std::streambuf *buf );
     /**
      * Destroys the ipstream object.
      */
@@ -586,12 +584,12 @@ public:
     /**
      * Returns the (absolute) current stream position.
      */
-    streampos tellg();
+    std::streampos tellg();
     /**
      * This form moves the stream position to the absolute position given by
      * `pos'.
      */
-    ipstream& seekg( streampos pos );
+    ipstream& seekg( std::streampos pos );
     /**
      * This form moves to a position relative to the current position by an
      * offset `off' (+ or -) starting at `dir'. Parameter `dir' can be set to:
@@ -604,7 +602,7 @@ public:
      * end (end of stream)
      * </pre>
      */
-    ipstream& seekg( streamoff off, ios::seek_dir dir );
+    ipstream& seekg( std::streamoff off, std::ios::seekdir dir );
     /**
      * Returns the character at the current stream position.
      */
@@ -728,7 +726,7 @@ private:
 #if defined( Uses_opstream ) && !defined( __opstream )
 #define __opstream
 
-#include <iostream.h>
+#include <iostream>
 
 class TStreamableClass;
 
@@ -755,7 +753,7 @@ public:
      * the @ref bp data member to `buf'. The @ref state data member is set
      * to 0.
      */
-    opstream( streambuf *buf );
+    opstream( std::streambuf *buf );
     /**
      * Destroys the opstream object.
      */
@@ -763,12 +761,12 @@ public:
     /**
      * Returns the (absolute) current stream position.
      */
-    streampos tellp();
+    std::streampos tellp();
     /**
      * This form moves the stream's current position to the absolute position
      * given by `pos'.
      */
-    opstream& seekp( streampos pos );
+    opstream& seekp( std::streampos pos );
     /**
      * This form moves to a position relative to the current position by an
      * offset `off' (+ or -) starting at `dir'. Parameter `dir' can be set to:
@@ -781,7 +779,7 @@ public:
      * end (end of stream)
      * </pre>
      */
-    opstream& seekp( streamoff off, ios::seek_dir dir );
+    opstream& seekp( std::streamoff off, std::ios::seekdir dir );
     /**
      * Flushes the stream.
      */
@@ -909,7 +907,7 @@ private:
 #if defined( Uses_iopstream ) && !defined( __iopstream )
 #define __iopstream
 
-#include <iostream.h>
+#include <iostream>
 
 /**
  * Class iopstream is a simple "mix" of its bases, @ref opstream and
@@ -925,7 +923,7 @@ public:
      * Creates a buffered iopstream with the given buffer and sets the @ref bp
      * data member to `buf'. The @ref state data member is set to 0.
      */
-    iopstream( streambuf *buf );
+    iopstream( std::streambuf *buf );
     /**
      * Destroys the iopstream object.
      */
@@ -950,7 +948,7 @@ protected:
 #if defined( Uses_fpbase ) && !defined( __fpbase )
 #define __fpbase
 
-#include <fstream.h>
+#include <fstream>
 
 /**
  * fpbase provides the basic operations common to all object file stream I/O.
@@ -965,36 +963,19 @@ public:
     fpbase();
     /**
      * Creates a buffered fpbase object. You can open a file and attach it to
-     * the stream by specifying the `name', `omode', and `prot' (protection)
-     * arguments.
+     * the stream by specifying the `name' and `omode' arguments.
      */
-    fpbase( const char *name, int omode, int prot = filebuf::openprot );
-    /**
-     * Creates a buffered fpbase object. You can open a file and attach it to
-     * the stream by specifying the file descriptor, `f'.
-     */
-    fpbase( int f );
-    /**
-     * Creates a buffered fpbase object. You can set the size and initial
-     * contents of the buffer with the `len' and `b' arguments. You can open
-     * a file and attach it to the stream by specifying the file descriptor,
-     * `f'.
-     */
-    fpbase( int f, char *b, int len);
+    fpbase( const char *name, std::ios::openmode omode);
     /**
      * Destroys the fpbase object.
      */
     ~fpbase();
     /**
-     * Opens the named file in the given mode (app, ate, in, out, binary,
-     * trunc, nocreate, noreplace) and protection. The opened file is
+     * Opens the named file in and the given mode (app, ate, in, out, binary,
+     * trunc, nocreate, noreplace). The opened file is
      * attached to this stream.
      */
-    void open( const char *name, int omode, int prot = filebuf::openprot );
-    /**
-     * Attaches the file with descriptor `f' to this stream if possible.
-     */
-    void attach( int f );
+    void open( const char *name, std::ios::openmode omode);
     /**
      * Closes the stream and associated file.
      */
@@ -1002,13 +983,13 @@ public:
     /**
      * Allocates a buffer of size `len'.
      */
-    void setbuf( char *buf, int len );
+    void setbuf( char *buf, std::streamsize len );
     /**
      * Returns a pointer to the current file buffer.
      */
-    filebuf * rdbuf();
+    std::filebuf * rdbuf();
 private:
-    filebuf buf;
+    std::filebuf buf;
 };
 
 #endif  // Uses_fpbase
@@ -1024,7 +1005,7 @@ private:
 #if defined( Uses_ifpstream ) && !defined( __ifpstream )
 #define __ifpstream
 
-#include <iostream.h>
+#include <iostream>
 
 /**
  * ifpstream is a simple "mix" of its bases, @ref fpbase and @ref ipstream.
@@ -1042,23 +1023,9 @@ public:
     ifpstream();
     /**
      * Creates a buffered ifpstream object. You can open a file and attach it
-     * to the stream by specifying the `name', `omode', and `prot'
-     * (protection) arguments.
+     * to the stream by specifying the `name' and `omode' arguments.
      */
-    ifpstream(const char *name, int omode = ios::in,
-        int prot = filebuf::openprot );
-    /**
-     * Creates a buffered ifpstream object. You can open a file and attach it
-     * to the stream by specifying the file descriptor, `f'.
-     */
-    ifpstream( int f );
-    /**
-     * Creates a buffered ifpstream object. You can set the size and initial
-     * contents of the buffer with the `len' and `b' arguments. You can open
-     * a file and attach it to the stream by specifying the file descriptor,
-     * `f'.
-     */
-    ifpstream( int f, char *b, int len );
+    ifpstream(const char *name, std::ios::openmode omode = std::ios::in);
     /**
      * Destroys the ifpstream object.
      */
@@ -1066,15 +1033,13 @@ public:
     /**
      * Returns a pointer to the current file buffer.
      */
-    filebuf * rdbuf();
+    std::filebuf * rdbuf();
     /**
-     * Opens the the named file in the given mode (app, ate, in, out, binary,
-     * trunc, nocreate, or noreplace) and protection. The default mode is in
-     * (input) with openprot protection. The opened file is attached to this
+     * Opens the the named file in and the given mode (app, ate, in, out, binary,
+     * trunc, nocreate, or noreplace). The opened file is attached to this
      * stream.
      */
-    void open( const char *name, int omode = ios::in,
-        int prot = filebuf::openprot );
+    void open( const char *name, std::ios::openmode omode = std::ios::in);
 };
 
 #endif  // Uses_ifpstream
@@ -1090,7 +1055,7 @@ public:
 #if defined( Uses_ofpstream ) && !defined( __ofpstream )
 #define __ofpstream
 
-#include <iostream.h>
+#include <iostream>
 
 /**
  * Class ofpstream is a simple "mix" of its bases, @ref fpbase and
@@ -1108,23 +1073,9 @@ public:
     ofpstream();
     /**
      * Creates a buffered ofpstream object. You can open a file and attach it
-     * to the stream by specifying the `name', `omode', and `prot'
-     * (protection) arguments.
+     * to the stream by specifying the `name' and `omode' arguments.
      */
-    ofpstream( const char *name, int omode = ios::out, int prot =
-        filebuf::openprot );
-    /**
-     * Creates a buffered ofpstream object. You can open a file and attach it
-     * to the stream by specifying the file descriptor, `f'.
-     */
-    ofpstream( int f );
-    /**
-     * Creates a buffered ofpstream object. You can set the size and initial
-     * contents of the buffer using the `len' and `b' arguments. You can open
-     * a file and attach it to the stream by specifying the file descriptor,
-     * `f'.
-     */
-    ofpstream( int f, char *b, int len );
+    ofpstream( const char *name, std::ios::openmode omode = std::ios::out);
     /**
      * Destroys the ofpstream object.
      */
@@ -1132,15 +1083,13 @@ public:
     /**
      * Returns the current file buffer.
      */
-    filebuf * rdbuf();
+    std::filebuf * rdbuf();
     /**
-     * Opens the the named file in the given mode (app, ate, in, out, binary,
-     * trunc, nocreate, or noreplace) and protection. The default mode is out
-     * (output) with openprot protection. The opened file is attached to this
+     * Opens the the named file in and the given mode (app, ate, in, out, binary,
+     * trunc, nocreate, or noreplace). The opened file is attached to this
      * stream.
      */
-    void open( const char *name, int omode = ios::out,
-        int prot = filebuf::openprot );
+    void open( const char *name, std::ios::openmode omode = std::ios::out);
 };
 
 #endif  // Uses_ofpstream
@@ -1157,7 +1106,7 @@ public:
 #if defined( Uses_fpstream ) && !defined( __fpstream )
 #define __fpstream
 
-#include <iostream.h>
+#include <iostream>
 
 /**
  * fpstream is a simple "mix" of its bases, @ref fpbase and @ref iopstream.
@@ -1176,22 +1125,9 @@ public:
     fpstream();
     /**
      * Creates a buffered fpstream object. You can open a file and attach it
-     * to the stream by specifying the `name', `omode', and `prot'
-     * (protection) arguments.
+     * to the stream by specifying the `name'and `omode' arguments.
      */
-    fpstream( const char *name, int omode, int prot = filebuf::openprot );
-    /**
-     * Creates a buffered fpstream object. You can open a file and attach it
-     * to the stream by specifying the file descriptor, `f'.
-     */
-    fpstream( int f );
-    /**
-     * Creates a buffered fpstream object. You can set the size and initial
-     * contents of the buffer using the `len' and `b' arguments. You can open
-     * a file and attach it to the stream by specifying the file descriptor,
-     * `f'.
-     */
-    fpstream( int f, char *b, int len );
+    fpstream( const char *name, std::ios::openmode omode);
     /**
      * Destroys the fpstream object.
      */
@@ -1199,13 +1135,13 @@ public:
     /**
      * Returns the data member bp.
      */
-    filebuf * rdbuf();
+    std::filebuf * rdbuf();
     /**
-     * Opens the named file in the given mode (app, ate, in, out, binary,
-     * trunc, nocreate, noreplace) and protection. The opened file is
-     * attatched to this stream.
+     * Opens the named file in and the given mode (app, ate, in, out,
+     * binary, trunc, nocreate, noreplace) The opened file is attatched
+     * to this stream.
      */
-    void open( const char *name, int omode, int prot = filebuf::openprot );
+    void open( const char *name, std::ios::openmode omode);
 };
 
 #endif  // Uses_fpstream

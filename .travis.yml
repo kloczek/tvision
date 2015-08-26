@@ -1,0 +1,16 @@
+language: python
+sudo: false
+addons:
+  apt:
+    packages:
+      - libncurses-dev
+      - libgpm-dev
+      - ccache
+cache:
+  - ccache
+before_install:
+  - ccache -s
+  - export PATH=/usr/lib/ccache:${PATH}
+script:
+  - ./configure
+  - make

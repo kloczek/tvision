@@ -49,8 +49,6 @@
 
 #include <ctype.h>
 #include <fcntl.h>
-#include <fstream.h>
-#include <iostream.h>
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -59,6 +57,8 @@
 #include <sys/stat.h>
 #include <sys/time.h>
 #include <unistd.h>
+#include <fstream>
+#include <iostream>
 
 #include <config.h>		/* configuration file */
 
@@ -297,7 +297,7 @@ static unsigned char cyrillicTable[128] =
 
 static unsigned char cyrillicTable[128] =
 {
-	192, 193, 194, 195, 196, 197, 198, 199, /* 0x80 - 0x87 */ 
+	192, 193, 194, 195, 196, 197, 198, 199, /* 0x80 - 0x87 */
 	200, 201, 202, 203, 204, 205 ,206, 207, /* 0x88 - 0x8f */
 	208, 209, 210, 211, 212, 213, 214, 215, /* 0x90 - 0x97 */
 	216, 217, 218, 219, 220, 221, 222, 223, /* 0x98 - 0x9f */
@@ -314,7 +314,7 @@ static unsigned char cyrillicTable[128] =
 	143, 159, 144, 145, 146, 147, 134, 130,	/* 0xf0 - 0xf7 */
 	156, 155, 135, 152, 157, 153, 151, 154	/* 0xf8 - 0xff */
 };
-	
+
 /* lookup table for LATIN1 to CP437 enconding */
 
 static unsigned char latinTable[128] =
@@ -523,14 +523,14 @@ static unsigned pcToAscii[256] =
 #elif defined(ENABLE_RUSSIAN_CHARSET)
 	32,
 	225, 226, 247, 231, 228, 229, 246, 250, 233,
-	234, 235, 236, 237, 238, 239, 240, 242, 243, 
-	244, 245, 230, 232, 227, 254, 251, 253, 223, 
-	249, 248, 252, 224, 241, 193, 194, 215, 199, 
+	234, 235, 236, 237, 238, 239, 240, 242, 243,
+	244, 245, 230, 232, 227, 254, 251, 253, 223,
+	249, 248, 252, 224, 241, 193, 194, 215, 199,
 	196, 197, 214, 218, 201, 202, 203, 204, 205,
 	206, 207, 208, 177, 177, 178, 179, 180, 181,
 	182, 183, 184, 185, 186, 187, 188, 189, 190,
 	191, 192, 193, 194, 195, 196, 197, 198, 199,
-	200, 201, 202, 203, 204, 205, 206, 207, 208, 
+	200, 201, 202, 203, 204, 205, 206, 207, 208,
 	209, 210, 211, 212, 213, 214, 215, 216, 217,
 	218, 219, 220, 221, 222, 223, 210, 211, 212,
 	213, 198, 200, 195, 222, 219, 221, 223, 217,
@@ -587,7 +587,7 @@ static int doRepaint;		/* should redraw the screen ? */
 static int doResize;		/* resize screen ? */
 static int evLength;		/* number of events in the queue */
 static int msOldButtons;	/* mouse button status */
-static ofstream xlog;		/* a logging file */
+static std::ofstream xlog;		/* a logging file */
 
 /*
  * A simple class which implements a timer.
@@ -627,7 +627,7 @@ unsigned char *vcsMap;		/* define which character table to use */
  * GENERAL FUNCTIONS
  */
 
-#define LOG(s) xlog << s << endl
+#define LOG(s) xlog << s << std::endl
 
 inline int range(int test, int min, int max)
 {
@@ -1296,10 +1296,10 @@ static void vcsInit()
 			THistory::icon = "\x9E~\x19~\x9D";
 			TColorSelector::icon = '\x9B';
 			TStatusLine::hintSeparator = "\xB3 ";
-			TScrollChars vc = {'\x1E', '\x1F', 
+			TScrollChars vc = {'\x1E', '\x1F',
 					   '\xB1', '\x9B', '\xB2'};
 			memcpy(TScrollBar::vChars, vc, sizeof(vc));
-			TScrollChars hc = {'\x11', '\x10', 
+			TScrollChars hc = {'\x11', '\x10',
 					   '\xB1', '\x9B', '\xB2'};
 			memcpy(TScrollBar::hChars, hc, sizeof(hc));
 			TButton::shadows = "\x9D\x9B\x9F";
@@ -1319,7 +1319,7 @@ static void vcsInit()
 			vcsMap = latinTable;
 		}
 		else
-		{ 
+		{
 #ifdef ENABLE_RUSSIAN_CHARSET
 			LOG("wrong Russian character set");
 			TFrame::closeIcon = "[~\x04~]";
@@ -1404,7 +1404,7 @@ static void selectPalette()
 		 * ...                 ...
 		 * ...                 ...
 		 * 0/0 0/1 0/2 ... ... 0/7
-		 * 
+		 *
 		 * The first color pair must be 7/0 because it was hardcoded
 		 * to WHITE foreground on BLACK background in the ncurses
 		 * library.
@@ -1419,7 +1419,7 @@ static void selectPalette()
 				 * BLACK, so it does not allow redefinition.
 				 */
 				if (i != 0) init_pair(i, fore, back);
-				i++; 
+				i++;
 			}
 		}
 		/*
@@ -1443,7 +1443,7 @@ static void selectPalette()
 			 *  4 red		4 blue
 			 *  5 magenta		5 magenta
 			 *  6 brown		6 cyan
-			 *  7 white		7 white 
+			 *  7 white		7 white
 			 *  8 gray		0 black + A_BOLD
 			 *  9 light blue	1 red + A_BOLD
 			 * 10 light green	2 green + A_BOLD
@@ -2333,7 +2333,7 @@ long int filelength(int fd)
 
 void expandPath(const char *path, char *dir, char *file)
 {
-	char *tag = strrchr(path, '/');
+	const char *tag = strrchr(path, '/');
 
 	/* the path is in the form /dir1/dir2/file ? */
 

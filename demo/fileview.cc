@@ -13,7 +13,7 @@
 /*
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
- 
+
 #define Uses_MsgBox
 #define Uses_TKeys
 #define Uses_TScroller
@@ -31,7 +31,7 @@ __link(RScrollBar)
 #include <stdlib.h>
 #include <ctype.h>
 
-#include <fstream.h>
+#include <fstream>
 
 #include "tvcmds.h"
 #include "fileview.h"
@@ -98,7 +98,7 @@ void TFileViewer::readFile( const char *fName )
     limit.x = 0;
     fileName = newStr( fName );
     fileLines = new TLineCollection(5, 5);
-    ifstream fileToView( fName );
+    std::ifstream fileToView( fName );
     if( !fileToView )
         {
         messageBox( "Invalid drive or directory", mfError | mfOKButton );
@@ -108,8 +108,8 @@ void TFileViewer::readFile( const char *fName )
         {
         char line[maxLineLength+1];
         while( !lowMemory() &&
-               !fileToView.eof() && 
-               fileToView.get( line, sizeof line ) != 0 
+               !fileToView.eof() &&
+               fileToView.get( line, sizeof line ) != 0
              )
             {
             char c;
@@ -142,7 +142,7 @@ void *TFileViewer::read(ipstream& is)
     fName = is.readString();
     fileName = 0;
     readFile(fName);
-    delete fName; 
+    delete fName;
     return this;
 }
 

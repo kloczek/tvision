@@ -132,10 +132,10 @@ void TVDemo::getEvent(TEvent &event)
     switch (event.what)
         {
         case evCommand:
-            if ((event.message.command == cmHelp) && ( helpInUse == False)) 
+            if ((event.message.command == cmHelp) && ( helpInUse == False))
                 {
                 helpInUse = True;
-                helpStrm = new fpstream(HELP_FILENAME, ios::in|ios::bin);
+                helpStrm = new fpstream(HELP_FILENAME, std::ios::in|std::ios::binary);
                 hFile = new THelpFile(*helpStrm);
                 if (!helpStrm)
                     {
@@ -161,7 +161,7 @@ void TVDemo::getEvent(TEvent &event)
             break;
         }
 
-}  
+}
 
 //
 // Create statusline.
@@ -219,7 +219,7 @@ void TVDemo::retrieveDesktop()
         else
         {
 	fclose(fp);
-        fpstream *f = new fpstream("TVDEMO.DST", ios::in|ios::bin);
+        fpstream *f = new fpstream("TVDEMO.DST", std::ios::in|std::ios::binary);
         if( !f )
             messageBox("Could not open desktop file", mfOKButton | mfError);
         else
@@ -238,7 +238,7 @@ void TVDemo::retrieveDesktop()
 
 void TVDemo::saveDesktop()
 {
-    fpstream *f = new fpstream("TVDEMO.DST", ios::out|ios::bin);
+  fpstream *f = new fpstream("TVDEMO.DST", std::ios::out|std::ios::binary);
 
     if( f )
         {

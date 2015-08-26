@@ -18,7 +18,7 @@
 #define Uses_ipstream
 #include <tvision/tv.h>
 
-#include <fstream.h>
+#include <fstream>
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -89,7 +89,7 @@ void TFileEditor::initBuffer()
 
 Boolean TFileEditor::loadFile()
 {
-    ifstream f( fileName, ios::in | ios::bin );
+    std::ifstream f( fileName, std::ios::in | std::ios::binary );
     if( !f )
         {
         setBufLen( 0 );
@@ -97,7 +97,9 @@ Boolean TFileEditor::loadFile()
         }
     else
         {
-        uint fSize = filelength( f.rdbuf()->fd() );
+	f.seekg(0, std::ios::end);
+	uint fSize = f.tellg();
+	f.seekg(0, std::ios::beg);
         if( setBufSize(fSize) == False )
             {
             editorDialog( edOutOfMemory );
@@ -139,7 +141,7 @@ Boolean TFileEditor::saveAs()
     return res;
 }
 
-static void writeBlock( ofstream& f, char *buf, uint len )
+static void writeBlock( std::ofstream& f, char *buf, uint len )
 {
     while( len > 0 )
         {
@@ -161,7 +163,7 @@ Boolean TFileEditor::saveFile()
         rename( fileName, backupName );
         }
 
-    ofstream f( fileName, ios::out | ios::bin );
+    std::ofstream f( fileName, std::ios::out | std::ios::binary );
 
     if( !f )
         {

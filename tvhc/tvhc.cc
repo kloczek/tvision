@@ -88,19 +88,19 @@
 #include <tv.h>
 
 #include "tvhc.h"
-#include <string.h>
+#include <cstring>
 #include <limits.h>
 #include <unistd.h>
 #include <ctype.h>
 #include <stdlib.h>
-#include <fstream.h>
-#include <strstream.h>
+#include <fstream>
+#include <strstream>
 #include <errno.h>
 
 //======================= File Management ===============================//
 
-TProtectedStream::TProtectedStream( char *aFileName, ushort aMode ) :
-    fstream( aFileName, aMode )
+TProtectedStream::TProtectedStream( char *aFileName, std::ios::openmode aMode ) :
+  std::fstream( aFileName, aMode )
 {
     strcpy(fileName, aFileName);
     mode = aMode;
@@ -117,12 +117,12 @@ void error(char *text);
 #if 0
 char *replaceExt( char *fileName, char *nExt, Boolean force )
 {
-    char dir[MAXPATH]; 
+    char dir[MAXPATH];
     char name[MAXFILE];
     char ext[MAXEXT];
     char drive[MAXDRIVE];
     char buffer[MAXPATH];
-    ostrstream os(buffer, MAXPATH);
+    std:: ostrstream os(buffer, MAXPATH);
 
     fnsplit(fileName, drive, dir, name, ext);
     if (force || (strlen(ext) == 0))
@@ -152,7 +152,7 @@ Boolean fExists(char *fileName)
 //  Returns the next line out of the stream.                             //
 //-----------------------------------------------------------------------//
 
-char *getLine( fstream& s)
+char *getLine( std::fstream& s)
 {
     if (s.eof())
         {
@@ -197,10 +197,10 @@ void unGetLine( char *s )
 void prntMsg( char *pref, char *text )
 {
     if (lineCount > 0)
-        cout << pref << ": " << helpName << "("
+      std::cout << pref << ": " << helpName << "("
              << lineCount << "): " << text << "\n";
     else
-        cout << pref << ": " << helpName << " "
+      std::cout << pref << ": " << helpName << " "
              << text << "\n";
 }
 
@@ -502,7 +502,7 @@ TTopicDefinition *topicDefinitionList( char *line, int &i )
         if (p == 0 )
             {
             if (topicList != 0)
-                delete topicList; 
+                delete topicList;
             return(0);
             }
         p->next = topicList;
@@ -689,7 +689,7 @@ Boolean isEndParagraph( State state )
 // references and updates the xRefs variable.                            //
 //-----------------------------------------------------------------------//
 
-TParagraph *readParagraph( fstream& textFile, int& offset, TCrossRefNode *&xRefs )
+TParagraph *readParagraph( std::fstream& textFile, int& offset, TCrossRefNode *&xRefs )
 {
     State state;
     Boolean flag;
@@ -747,7 +747,7 @@ void handleCrossRefs( opstream& s, int xRefValue )
         recordReference((p->topic), s);
 }
 
-void skipBlankLines( fstream& s )
+void skipBlankLines( std::fstream& s )
 {
     char line[256];
 
@@ -772,7 +772,7 @@ void disposeXRefs( TCrossRefNode  *p )
 {
     TCrossRefNode *q;
 
-    while (p != 0) 
+    while (p != 0)
         {
         q = p;
         p = p->next;
@@ -795,7 +795,7 @@ void recordTopicDefinitions( TTopicDefinition *p, THelpFile& helpFile )
 // Read a topic from the source file and write it to the help file      //
 //----------------------------------------------------------------------//
 
-void readTopic( fstream& textFile, THelpFile& helpFile )
+void readTopic( std::fstream& textFile, THelpFile& helpFile )
 {
     TParagraph *p;
     THelpTopic *topic;
@@ -839,20 +839,20 @@ void readTopic( fstream& textFile, THelpFile& helpFile )
     crossRefHandler = handleCrossRefs;
     helpFile.putTopic(topic);
 
-    
+
     if (topic != 0)
     delete topic;
     if (topicDef != 0)
     delete topicDef;
     disposeXRefs(xRefs);
-    
+
     skipBlankLines(textFile);
 }
 
 void doWriteSymbol(void *p, void *p1)
 {
     int numBlanks, i;
-    ostrstream os(line, MAXSTRSIZE);
+    std::ostrstream os(line, MAXSTRSIZE);
 
     TProtectedStream *symbFile = (TProtectedStream *)p1;
     if (((TReference *)p)->resolved )
@@ -861,13 +861,13 @@ void doWriteSymbol(void *p, void *p1)
         numBlanks = 20 - strlen((char *)((TReference *)p)->topic);
         for (i = 0; i < numBlanks; ++i)
             os << ' ';
-        os << " = " << ((TReference *)p)->val.value << ","<< ends;
+        os << " = " << ((TReference *)p)->val.value << ","<< std::ends;
         *symbFile << os.str() << "\n";
         }
     else
         {
         os << "Unresolved forward reference \""
-           << ((TReference *)p)->topic << "\"" << ends;
+           << ((TReference *)p)->topic << "\"" << std::ends;
         warning(os.str());
         }
 }
@@ -882,7 +882,7 @@ void writeSymbFile( TProtectedStream *symbFile )
 
     *symbFile << header1;
     refTable->forEach(doWriteSymbol, symbFile);
-    symbFile->seekp(-2L, ios::end);
+    symbFile->seekp(-2L, std::ios::end);
     *symbFile << ";\n";
 
 }
@@ -899,7 +899,7 @@ void processText( TProtectedStream& textFile,
 
     helpRez =  new THelpFile(helpFile);
 
-    while (!textFile.eof()) 
+    while (!textFile.eof())
         readTopic(textFile, *helpRez);
     writeSymbFile(&symbFile);
     delete helpRez;
@@ -914,8 +914,8 @@ void checkOverwrite( char *fName )
 {
     if (fExists(fName))
         {
-        cerr << "File already exists: " << fName << ".  Overwrite? (y/n) ";
-        char ch = ({ char s[MAXSTRSIZE]; cin >> s; s[0]; });
+	  std::cerr << "File already exists: " << fName << ".  Overwrite? (y/n) ";
+	  char ch = ({ char s[MAXSTRSIZE]; std::cin >> s; s[0]; });
         if( toupper(ch) != 'Y' )
             exit(1);
         }
@@ -941,11 +941,11 @@ int main(int argc, char **argv)
 
     char bufStr[MAXSTRSIZE];
 
-    cout << initialText;
+    std::cout << initialText;
     if (argc != 4)
         {
-        cout << helpText;
-        exit(1); 
+	  std::cout << helpText;
+        exit(1);
         }
 
     //  Calculate file names
@@ -964,10 +964,10 @@ int main(int argc, char **argv)
     symbName = argv[3];
     checkOverwrite( symbName );
 
-    TProtectedStream textStrm(textName, ios::in);
-    TProtectedStream symbStrm(symbName, ios::out | ios::trunc);
+    TProtectedStream textStrm(textName, std::ios::in);
+    TProtectedStream symbStrm(symbName, std::ios::out | std::ios::trunc);
 
-    helpStrm =  new fpstream(helpName, ios::out | ios::trunc);
+    helpStrm =  new fpstream(helpName, std::ios::out | std::ios::trunc);
     processText(textStrm, *helpStrm, symbStrm);
     return 0;
 }

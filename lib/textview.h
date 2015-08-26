@@ -16,7 +16,7 @@
  * textview.h
  */
 
-#include <iostream.h>
+#include <iostream>
 
 class TRect;
 class TScrollBar;
@@ -170,12 +170,13 @@ protected:
 
 class ostream;
 
-#include <iostream.h>
+#include <iostream>
+#include <cstdio>
 
 /**
  * Undocumented.
  */
-class TerminalBuf: public streambuf
+class TerminalBuf: public std::streambuf
 {
 protected:
     /**
@@ -208,7 +209,7 @@ public:
 /**
  * Undocumented.
  */
-class otstream : public ostream
+class otstream : public std::ostream
 {
 protected:
     /**

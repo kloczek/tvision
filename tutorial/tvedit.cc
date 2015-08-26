@@ -28,7 +28,7 @@
 #define Uses_TStatusLine
 #define Uses_TSubMenu
 
-#include <fstream.h>
+#include <fstream>
 #include <signal.h>
 #include <stdarg.h>
 #include <stdio.h>
@@ -44,7 +44,7 @@ enum
 
 //main class of our application
 
-class TVDemo: public TApplication 
+class TVDemo: public TApplication
 {
 private:
     TEditWindow *clipWindow;
@@ -321,7 +321,7 @@ void TVDemo::idle()
 	enableCommand(cmTile);
 	enableCommand(cmCascade);
     }
-    else 
+    else
     {
 	disableCommand(cmSave);
 	disableCommand(cmSaveAs);
@@ -395,7 +395,7 @@ TStatusLine *TVDemo::initStatusLine(TRect r)
     *new TStatusItem("~F3~ Open", kbF3, cmOpen) +
     *new TStatusItem("~Alt-F3~ Close", kbAltF3, cmClose) +
     *new TStatusItem("~F5~ Zoom", kbF5, cmZoom) +
-    *new TStatusItem("~F6~ Next", kbF6, cmNext) + 
+    *new TStatusItem("~F6~ Next", kbF6, cmNext) +
     *new TStatusItem("~F10~ Menu", kbF10, cmMenu) +
     *new TStatusItem("", kbCtrlF5, cmResize));
 }

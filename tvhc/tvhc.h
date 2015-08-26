@@ -29,12 +29,12 @@ const int bufferSize = 4096;
 
 typedef enum State { undefined, wrapping, notWrapping };
 
-class TProtectedStream : public fstream
+class TProtectedStream : public std::fstream
 {
 
 public:
 
-    TProtectedStream( char *aFileName, ushort  aMode );
+    TProtectedStream( char *aFileName, std::ios::openmode aMode );
 
 private:
 
@@ -62,7 +62,7 @@ union Content
 
 };
 
-struct TReference 
+struct TReference
 {
 
     char *topic;
