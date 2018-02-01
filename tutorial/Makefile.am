@@ -34,4 +34,4 @@ validator_SOURCES = validator.cc
 
 LDADD = ../lib/libtvision.a
 
-INCLUDES = -I../lib
+AM_CPPFLAGS = -I../lib

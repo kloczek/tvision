@@ -22,7 +22,7 @@ lib_LIBRARIES = libtvision.a
 lib_LTLIBRARIES = libtvision.la
 libtvision_la_LDFLAGS = -version-info 0:7:0
 
-INCLUDES = -I..
+AM_CPPFLAGS = -I..
 
 libtvision_a_SOURCES = TApplication.cc TBackground.cc TButton.cc \
 TChDirDialog.cc TCheckBoxes.cc \
