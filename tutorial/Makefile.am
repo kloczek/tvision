@@ -32,6 +32,6 @@ tvedit_SOURCES = tvedit.cc
 tvlife_SOURCES = tvlife.cc
 validator_SOURCES = validator.cc
 
-LDADD = ../lib/libtvision.a
+LDADD = $(top_builddir)/lib/libtvision.la
 
 AM_CPPFLAGS = -I../lib
