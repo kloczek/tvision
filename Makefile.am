@@ -1,3 +1,5 @@
+ACLOCAL_AMFLAGS = -I m4
+
 AUTOMAKE_OPTIONS = foreign
 
 SUBDIRS = doc lib demo tutorial tvhc
