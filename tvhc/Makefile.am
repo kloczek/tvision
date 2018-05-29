@@ -4,8 +4,8 @@ noinst_PROGRAMS = tvhc
 
 tvhc_SOURCES = tvhc.cc tvhc.h
 
-LDADD = ../lib/libtvision.a
+LDADD = $(top_builddir)/lib/libtvision.la
 
-INCLUDES = -I../lib
+AM_CPPFLAGS = -I../lib
 
 EXTRA_DIST = DEMOHELP.TXT README

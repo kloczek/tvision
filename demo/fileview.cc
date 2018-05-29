@@ -109,7 +109,7 @@ void TFileViewer::readFile( const char *fName )
         char line[maxLineLength+1];
         while( !lowMemory() &&
                !fileToView.eof() &&
-               fileToView.get( line, sizeof line ) != 0
+               fileToView.getline( line, sizeof line )
              )
             {
             char c;

@@ -171,7 +171,7 @@ typedef struct
 	int in;
 	char type;
 	char modifiers;
-	short out;
+	unsigned short out;
 }
 keym_t;
 
@@ -2222,7 +2222,7 @@ void TScreen::moveCursor(int x, int y)
 #ifdef ENABLE_VCS
 	if (vcsFd >= 0)		/* use vcs */
 	{
-		unsigned char where[2] = {x, y};
+		int where[2] = {x, y};
 
 		lseek(vcsFd, 2, SEEK_SET);
 		write(vcsFd, where, sizeof(where));
