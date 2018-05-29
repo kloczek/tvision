@@ -111,7 +111,7 @@ void readFile( const char *fileName )
         {
         char buf[maxLineLength];
         while( lineCount < maxLines &&
-               fileToView.getline( buf, maxLineLength ) != 0 )
+               fileToView.getline( buf, maxLineLength ) )
             {
             lines[lineCount] = newStr( buf );
             lineCount++;
