@@ -6,6 +6,6 @@ tvhc_SOURCES = tvhc.cc tvhc.h
 
 LDADD = ../lib/libtvision.a
 
-INCLUDES = -I../lib
+AM_CPPFLAGS = -I../lib
 
 EXTRA_DIST = DEMOHELP.TXT README

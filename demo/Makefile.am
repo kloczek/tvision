@@ -9,6 +9,6 @@ puzzle.h tvcmds.h tvdemo.h
 
 LDADD = ../lib/libtvision.a
 
-INCLUDES = -I../lib
+AM_CPPFLAGS = -I../lib
 
 EXTRA_DIST = DEMOHELP.H32
