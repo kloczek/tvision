@@ -7,7 +7,7 @@ mousedlg.cc puzzle.cc tvdemo1.cc tvdemo2.cc tvdemo3.cc \
 ascii.h calc.h calendar.h demohelp.h fileview.h gadgets.h mousedlg.h \
 puzzle.h tvcmds.h tvdemo.h
 
-LDADD = ../lib/libtvision.a
+LDADD = $(top_builddir)/lib/libtvision.la
 
 AM_CPPFLAGS = -I../lib
 
