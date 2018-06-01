@@ -1,18 +1,21 @@
-= TVision 
-:toc:
-:toc-placement: preamble
+# TVision - Turbo Vision
 
-== Changelog
+## Table of Contents
 
-include::Changelog[]
+# Changelog
+- [Changelog](#changelog)
+- [Wanted](#wanted)
+- [History](#history)
 
-== Wanted
+## Changelog
+
+## Wanted
 
 If you wrote a program using TVision or know any useful site please tell me
 its address.  I'll add it in the list at the very bottom of file
 `doc/tvision.texi' (see below).
 
-== How to install the package
+## How to install the package
 
 Read the `INSTALL' file for generic informations on installing this library.
 More options are available for `configure':
@@ -36,7 +39,7 @@ Miscellaneous options:
   --disable-linux-vcs     disable Linux VCS support
   --disable-freebsd-mouse disable FreeBSD mouse support
 
-== Where to find documentation
+## Where to find documentation
 
 See directory `doc' and its subdirectory.  Here is a summary of their contents.
 
@@ -49,6 +52,8 @@ See directory `doc' and its subdirectory.  Here is a summary of their contents.
   links to both the html version of the "installation handbook" and to the
   "class hierarchy documentation".  The latter is a detailed reference
   manual for the various classes, methods and data members TVision uses.
+
+## History
 
 Sergio Sigala
 sergio@sigala.it
