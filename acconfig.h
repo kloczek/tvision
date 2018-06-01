@@ -1,9 +1,3 @@
-/* The package name. */
-#undef PACKAGE
-
-/* The package version. */
-#undef VERSION
-
 /* Define this to enable the Russian character set. */
 #undef ENABLE_RUSSIAN_CHARSET
 
