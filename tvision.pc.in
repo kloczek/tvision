@@ -1,0 +1,14 @@
+# Package Information for pkg-config
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+datadir=@datadir@
+datarootdir=@datarootdir@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: @PACKAGE@
+Description: TVision - Turbo Vision
+Version: @PACKAGE_VERSION@
+URL: https://zabbix.com/
+Cflags: -I${includedir}
+Libs: -L${libdir} -ltvision

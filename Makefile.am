@@ -4,6 +4,13 @@ AUTOMAKE_OPTIONS = foreign
 
 SUBDIRS = doc lib demo tutorial tvhc
 
-CLEANFILES = *~
++pkgconfigdir	= ${libdir}/pkgconfig
++pkgconfig_DATA	= tvision.pc
 
-EXTRA_DIST = Announce COPYRIGHT color-xterm.ti myendian.h
+EXTRA_DIST	= \
+	Announce \
+	color-xterm.ti \
+	myendian.h \
+	tvision.pc.in
+
+CLEANFILES = *~

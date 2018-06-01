@@ -5,6 +5,8 @@
   Ioannis Tziakos <ioannist@enthought.com>)
 - fixed autoconf ncurses library detection
 - fixed all compile errors using g++ 8.0.x
+- added install tvision.pc file to allow easy detect availability
+  of the tvition library using pkg-config
 
 >>>>>>>> Changes from version 0.7 to 0.8 <<<<<<<<
 

@@ -94,6 +94,7 @@ esac
 
 AC_OUTPUT([
 	Makefile
+	tvision.pc
 	lib/Makefile
 	tvhc/Makefile
 	demo/Makefile
