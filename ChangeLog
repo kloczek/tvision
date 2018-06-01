@@ -3,24 +3,19 @@
 - New maintainer (Tomasz Kłoczko). Git repository trasfered from
   https://github.com/itziakos/tvision (previousely owned by
   Ioannis Tziakos <ioannist@enthought.com>)
+- fixed autoconf ncurses library detection
 
 >>>>>>>> Changes from version 0.7 to 0.8 <<<<<<<<
 
 - Piotr Klaban <makler@man.torun.pl> helped to port the library under
   Sun Solaris 2.6.
-
 - Vitaly Fedrushkov <willy@snowyowl.csu.ac.ru> fixed some warnings with egcs
   and improved signal handling.
-
 - Artur Harasimiuk <maniak@qna.softomat.com.pl> fixed a bug in TMemo.cc.
-
 - Thorsten Dittmar <dittmar@Mathematik.Uni-Marburg.de> helped to spot a
   buffer overflow problem in asm.cc.
-
 - Vladimir Zarozhevsky <vladimir@mark-itt.ru> sent a patch for bsdi.
-
 - Sergey Clushin <serg@lamport.ru> ported the help compiler.
-
 - Helmut Fahrion <hefa@bitctrl.de>
 
 >>>>>>>> Changes from version 0.6 to 0.7 <<<<<<<<
@@ -29,10 +24,8 @@
   - fixed a bug in system.cc about function has_colors()
   - changed some things in TMenuView.cc that prevent building with egcs-1.0.3
   - fixed configure.in
-
 - Fixed some cursor things in system.cc.  Nice exit when the user teminates
   the program with Ctrl-C.
-
 - Cosmetic changes and general cleaning in the code.  Now the library should
   compile without warnings, even using flags `-W -Wall'.  If you want to try
   just type:
@@ -40,36 +33,29 @@
   CXXFLAGS='-W -Wall' ./configure
 
   followed by `make'.
-
 - More documentation included.  I used KDOC, a program distributed with KDE.
   KDOC uses specially-formatted documentation embedded in C++ class
   declarations to generate documentation for the classes.  Warning: this work
   is not finished yet.  Only the main classes are documented.
-
 - Changes to fix warnings with egcs-1.1
-
 - John Polstra <jdp@polstra.com> fixed a problem with gcc under FreeBSD
 
 >>>>>>>> Changes from version 0.5 to 0.6 <<<<<<<<
 
 - A real configure script.
-
 - TVLOG environment variable introduced.  Log informations are written in the
   file specified by the TVLOG variable.  If the variable is not set, no log
   informations are produced.  Log informations will never be written on the
   screen.
-
 - Dmitrij Korovkin <tkf@glasnet.ru> added the following changes:
   - TEditor and TFileEditor classes are modified to support files
     larger than 64kB
   - better signal handling
   - improved cyrillic character set support
   - mouse support in xterm
-
 - Harald Hoyer <HarryH@Royal.Net> added the following:
   - mouse support in xterm
   - some changes is system.cc
-
 - Pedro F. Giffuni <giffunip@asme.org> helped to fix a problem in
   `configure.in' under FreeBSD.
 
@@ -78,11 +64,9 @@
 - Added some changes in system.cc to have a better ncurses support.
   From: Ruslan V. Brushkoff <ruslan@Baby.TM.Odessa.UA>
   Date: Wed, 18 Jun 1997 07:32:15 +0300 (EET DST)
-
 - Big changes in system.cc.  Now all the code uses only high level ncurses
   functions.  The drawback of this is that the video output is slower than
   the previous version.
-
 - Fixed some code to make TV run under Linux for the PowerPC and other big
   endian architectures.  It runs fine, but maybe some other changes are
   required.
@@ -93,9 +77,7 @@
   This bug can close any dialog box when the input line is focused, you
   hold down the shift key and press any letter key.
   Date: Sun Feb 23 15:15:49 MET 1997
-
 - Fixed double click event under Linux.
-
 - Added mouse support under FreeBSD.
 
 >>>>>>>> Changes from version 0.2 to 0.3 <<<<<<<<
@@ -105,42 +87,32 @@
   the file name is correct.
   Patch from: Vasily Egoshin <wasa@nica.marstu.mari.su>
   Date: Thu,  9 Jan 1997 16:36:10 +0300 (MSK)
-
 - Temporary hack to see Russian letters added in TEditor.cc.  To enable
   this feature, add '-D__RUSSIAN_LETTERS' to the CONF_CFLAGS string in the
   make.conf file.
   Code from: Vasily Egoshin <wasa@nica.marstu.mari.su>
   Date: Sun, 12 Jan 1997 12:09:52 +0300 (MSK)
-
 - 'glob' function is used in TFileList::readDirectory(), file TFileList.cc.
   Code from: Rainer Keuchel <r_keuchel@smaug.netwave.de>
   Date: 18 Jan 1997 22:52:12 +0000
-
 - New approach to detect the number of the console the user is on.  See
   function TScreen::TScreen() in file linux.cc.
   Idea from: Martynas Kunigelis <algikun@santaka.sc-uni.ktu.lt>
   Date: Mon, 20 Jan 1997 15:55:14 +0000 (EET)
-
 - In file TFileList.cc, function readFf_blk(): month value should begin
   at 1.
   Date: Thu, 23 Jan 1997 11:34:50 +0100 (MET)
-
 - evMouseAuto event fixed in file linux.cc.
   Date: Tue, 28 Jan 1997 19:35:31 +0100 (MET)
-
 - Added support for TVOPT environment variable in file linux.cc.
   Date: Wed, 29 Jan 1997 16:51:40 +0100 (MET)
-
 - Added support for colored output.
   Date: Sun,  2 Feb 1997 14:05:04 +0100 (CET)
-
 - Added support for the FreeBSD operating system.
   Date: Mon,  3 Feb 1997 17:14:01 +0100 (CET)
-
 - Fixed some grammar errors in the text files.
   Help from: Bonni Mierzejewska <u6ed4@wvnvm.wvnet.edu>
   Date: Wed, 5 Feb 1997 14:07:42 -0500 (EST)
-
 - Signals SIGINT (Ctrl-Z) and SIGQUIT (usually generated by Ctrl-\) trapped.
   Date: Wed, 12 Feb 1997 10:45:55 +0100 (MET)
 
@@ -148,13 +120,10 @@
 
 - (n)curses functions are used to read keys and do video output (if
   the /dev/vcs* system can not be used).
-
 - Under X-Window a monochrome palette is used and bold and inverse
   attributes are used to draw the text.  SIGWINCH signal is hooked
   so the screen can be resized at runtime.
-
 - Help system fixed.
-
 - "File Open" style dialogs fixed.
 
 <end>
