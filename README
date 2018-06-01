@@ -1,13 +1,18 @@
+= TVision 
+:toc:
+:toc-placement: preamble
 
-Wanted
-------
+== Changelog
+
+include::Changelog[]
+
+== Wanted
 
 If you wrote a program using TVision or know any useful site please tell me
 its address.  I'll add it in the list at the very bottom of file
 `doc/tvision.texi' (see below).
 
-How to install the package
---------------------------
+== How to install the package
 
 Read the `INSTALL' file for generic informations on installing this library.
 More options are available for `configure':
@@ -31,8 +36,7 @@ Miscellaneous options:
   --disable-linux-vcs     disable Linux VCS support
   --disable-freebsd-mouse disable FreeBSD mouse support
 
-Where to find documentation
----------------------------
+== Where to find documentation
 
 See directory `doc' and its subdirectory.  Here is a summary of their contents.
 
