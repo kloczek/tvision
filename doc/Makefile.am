@@ -4,8 +4,14 @@ AUTOMAKE_OPTIONS = foreign
 
 CLEANFILES = *~
 
-EXTRA_DIST = Doxyfile texinfo.tex tvision.texi \
-	example.gif.in index.html.in tvision.info html/*
+EXTRA_DIST = \
+	Doxyfile \
+	example.gif.in \
+	html/* \
+	index.html.in \
+	texinfo.tex \
+	tvision.info \
+	tvision.texi
 
 SRCS = app.h buffers.h colorsel.h dialogs.h drawbuf.h editors.h \
 	help.h helpbase.h menus.h msgbox.h objects.h outline.h resource.h \

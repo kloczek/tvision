@@ -2,10 +2,31 @@ AUTOMAKE_OPTIONS = foreign
 
 EXTRA_DIST = README basicMakefile
 
-noinst_PROGRAMS = tvguid01 tvguid02 tvguid03 tvguid04 tvguid05 tvguid06 \
-tvguid07 tvguid08 tvguid09 tvguid10 tvguid11 tvguid12 tvguid13 tvguid14 \
-tvguid15 tvguid16 background listbox load nomenus splash tvedit tvlife  \
-validator
+noinst_PROGRAMS = \
+	tvguid01 \
+	tvguid02 \
+	tvguid03 \
+	tvguid04 \
+	tvguid05 \
+	tvguid06 \
+	tvguid07 \
+	tvguid08 \
+	tvguid09 \
+	tvguid10 \
+	tvguid11 \
+	tvguid12 \
+	tvguid13 \
+	tvguid14 \
+	tvguid15 \
+	tvguid16 \
+	background \
+	listbox \
+	load \
+	nomenus \
+	splash \
+	tvedit \
+	tvlife  \
+	validator
 
 tvguid01_SOURCES = tvguid01.cc
 tvguid02_SOURCES = tvguid02.cc
