@@ -3,6 +3,7 @@ AC_CONFIG_MACRO_DIRS([m4])
 
 AC_INIT(lib/tv.h)
 AM_INIT_AUTOMAKE(tvision, 0.8)
+AC_CONFIG_MACRO_DIRS([m4])
 AM_CONFIG_HEADER(config.h)
 
 dnl Check for system.
