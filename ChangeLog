@@ -4,7 +4,7 @@
   https://github.com/itziakos/tvision (previousely owned by
   Ioannis Tziakos <ioannist@enthought.com>)
 - fixed autoconf ncurses library detection
-- fixed compile all compile errors using g++ 8.0.x
+- fixed all compile errors using g++ 8.0.x
 
 >>>>>>>> Changes from version 0.7 to 0.8 <<<<<<<<
 
