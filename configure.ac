@@ -1,4 +1,6 @@
 dnl Process this file with `autoconf' to produce a configure script.
+AC_CONFIG_MACRO_DIRS([m4])
+
 AC_INIT(lib/tv.h)
 AM_INIT_AUTOMAKE(tvision, 0.8)
 AM_CONFIG_HEADER(config.h)
