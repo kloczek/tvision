@@ -14,6 +14,10 @@ AC_PROG_CC
 AC_PROG_CXX
 AC_PROG_CPP
 
+AM_ENABLE_SHARED
+AM_DISABLE_STATIC
+AM_PROG_LIBTOOL
+
 dnl Checks for header files.
 AC_STDC_HEADERS
 AC_CHECK_HEADERS(ncurses.h curses.h gpm.h)
@@ -27,8 +31,6 @@ AC_SEARCH_LIBS(initscr, [ncursesw ncurses curses],
 dnl Checks for library functions.
 AC_CHECK_LIB(gpm, Gpm_Close)
 
-dnl Checks for dynamic libraries.
-AM_PROG_LIBTOOL
 
 dnl Various enable/disable checks.
 
