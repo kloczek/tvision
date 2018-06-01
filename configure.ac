@@ -19,12 +19,13 @@ AC_STDC_HEADERS
 AC_CHECK_HEADERS(ncurses.h curses.h gpm.h)
 
 dnl Checks for libraries.
-AC_CHECK_LIB(ncurses, initscr, ,
-	AC_CHECK_LIB(curses, initscr))
+AC_SEARCH_LIBS(initscr, [ncursesw ncurses curses],
+	[],
+	[AC_MSG_ERROR(You need to install the ncurses or curses library)]
+)
 
 dnl Checks for library functions.
 AC_CHECK_LIB(gpm, Gpm_Close)
-dnl AC_CHECK_LIB(mytinfo, ???)
 
 dnl Checks for dynamic libraries.
 dnl AM_PROG_RANLIB
