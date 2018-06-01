@@ -171,7 +171,7 @@ typedef struct
 	int in;
 	char type;
 	char modifiers;
-	short out;
+	unsigned short out;
 }
 keym_t;
 
