@@ -2,7 +2,12 @@ ACLOCAL_AMFLAGS = -I m4
 
 AUTOMAKE_OPTIONS = foreign
 
-SUBDIRS = doc lib demo tutorial tvhc
+SUBDIRS		= \
+	tvision \
+	tvhc \
+	demo \
+	tutorial \
+	doc
 
 +pkgconfigdir	= ${libdir}/pkgconfig
 +pkgconfig_DATA	= tvision.pc

@@ -1,17 +1,5 @@
 AUTOMAKE_OPTIONS = foreign
 
-# Hack to create a symbolic link `tvision' pointing to this directory.
-# This is needed because the sources contain directives like:
-#     #include <tvision/tv.h>
-# so the `tvision' directory must exist.
-
-Makefile: tvision
-
-tvision:
-	ln -s $(srcdir)/. tvision
-
-CLEANFILES = tvision
-
 pkginclude_HEADERS = \
 	app.h \
 	buffers.h \

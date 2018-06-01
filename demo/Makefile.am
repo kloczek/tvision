@@ -1,5 +1,8 @@
 AUTOMAKE_OPTIONS = foreign
 
+LDADD		= $(top_builddir)/tvision/libtvision.la
+AM_CPPFLAGS	= -I$(top_srcdir)/tvision
+
 noinst_PROGRAMS = demo
 
 demo_SOURCES = \
@@ -23,9 +26,5 @@ demo_SOURCES = \
 	tvdemo2.cc \
 	tvdemo3.cc \
 	tvdemo.h
-
-LDADD = $(top_builddir)/lib/libtvision.la
-
-AM_CPPFLAGS = -I../lib
 
 EXTRA_DIST = DEMOHELP.H32

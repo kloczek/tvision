@@ -1,7 +1,7 @@
 dnl Process this file with `autoconf' to produce a configure script.
 AC_CONFIG_MACRO_DIRS([m4])
 
-AC_INIT(lib/tv.h)
+AC_INIT(tvision/tv.h)
 AM_INIT_AUTOMAKE(tvision, 0.8)
 AC_CONFIG_MACRO_DIRS([m4])
 AM_CONFIG_HEADER(config.h)
@@ -95,7 +95,7 @@ esac
 AC_OUTPUT([
 	Makefile
 	tvision.pc
-	lib/Makefile
+	tvision/Makefile
 	tvhc/Makefile
 	demo/Makefile
 	tutorial/Makefile
