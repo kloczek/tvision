@@ -11,6 +11,7 @@ pkginclude_HEADERS = \
 	help.h \
 	menus.h \
 	msgbox.h \
+	myendian.h \
 	objects.h \
 	outline.h \
 	resource.h \
@@ -103,5 +104,4 @@ libtvision_la_SOURCES = \
 	system.cc \
 	textview.cc \
 	tobjstrm.cc \
-	tvision \
 	tvtext.cc

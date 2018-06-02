@@ -15,7 +15,6 @@ SUBDIRS		= \
 EXTRA_DIST	= \
 	Announce \
 	color-xterm.ti \
-	myendian.h \
 	tvision.pc.in
 
 CLEANFILES = *~
