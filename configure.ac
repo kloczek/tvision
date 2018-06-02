@@ -6,6 +6,7 @@ AC_INIT([tvision],
 	[],
 	[https://github.com/kloczek/tvision])
 AM_INIT_AUTOMAKE([
+	--warnings=all --warnings=error
 	dist-xz 
 	no-dist-gzip
 	foreign
@@ -22,6 +23,7 @@ dnl Checks for programs.
 AC_PROG_CC
 AC_PROG_CXX
 AC_PROG_CPP
+AM_PROG_AR
 
 AM_ENABLE_SHARED
 AM_DISABLE_STATIC
