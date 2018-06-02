@@ -1,6 +1,8 @@
 
 Known bugs and things to do
 ---------------------------
+- integrate tvision/myendian.h into tvision/system.h
+
 - Fix textview.cc, textview.h and TTerminal::prevLines() in `asm.cc'.
 
 - Applications will crash if you write more than 1024 characters in a single
