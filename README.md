@@ -2,12 +2,30 @@
 
 ## Table of Contents
 
-# Changelog
+- [Description](#description)
 - [Changelog](#changelog)
 - [Wanted](#wanted)
 - [History](#history)
 
+## Description
+
+Turbo Vision (or TV, for short) is a library that provides an application
+framework.  With TV you can write a beautiful object-oriented character-mode
+user interface in a short time.
+
+Original TV was available in C++ and Pascal and is a product of Borland International.
+It was developed to run on MS-DOS systems, but today it is available for many
+other platforms (ported by independent programmers).
+
+This port is based on the Borland 2.0 version with fixes.
+
+Warning: the BSD-style copyright is applicable only to the modifications
+brought by Sergio Sigala to the original code.
+
+Happy hacking!
+
 ## Changelog
+- 0.8
 
 ## Wanted
 
