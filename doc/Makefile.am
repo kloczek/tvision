@@ -7,7 +7,6 @@ CLEANFILES = *~
 EXTRA_DIST = \
 	Doxyfile \
 	example.gif.in \
-	html/* \
 	index.html.in \
 	texinfo.tex \
 	tvision.info \
