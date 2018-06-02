@@ -1,5 +1,3 @@
-AUTOMAKE_OPTIONS = foreign
-
 EXTRA_DIST = README basicMakefile
 
 LDADD		= $(top_builddir)/tvision/libtvision.la

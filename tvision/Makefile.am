@@ -1,5 +1,3 @@
-AUTOMAKE_OPTIONS = foreign
-
 pkginclude_HEADERS = \
 	app.h \
 	buffers.h \

@@ -1,5 +1,3 @@
-AUTOMAKE_OPTIONS = foreign
-
 noinst_PROGRAMS	= tvhc
 
 tvhc_SOURCES	= \

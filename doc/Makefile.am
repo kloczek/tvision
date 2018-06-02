@@ -1,5 +1,3 @@
-AUTOMAKE_OPTIONS = foreign
-
 #info_TEXINFOS = tvision.info
 
 CLEANFILES = *~

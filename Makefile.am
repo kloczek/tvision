@@ -1,7 +1,5 @@
 ACLOCAL_AMFLAGS = -I m4
 
-AUTOMAKE_OPTIONS = foreign
-
 SUBDIRS		= \
 	tvision \
 	tvhc \
@@ -13,7 +11,6 @@ SUBDIRS		= \
 +pkgconfig_DATA	= tvision.pc
 
 EXTRA_DIST	= \
-	Announce \
 	README.md \
 	color-xterm.ti \
 	tvision.pc.in

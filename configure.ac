@@ -5,7 +5,11 @@ AC_INIT([tvision],
 	[https://github.com/kloczek/tvision/issues],
 	[],
 	[https://github.com/kloczek/tvision])
-AM_INIT_AUTOMAKE([dist-xz no-dist-gzip])
+AM_INIT_AUTOMAKE([
+	dist-xz 
+	no-dist-gzip
+	foreign
+])
 
 AM_MAINTAINER_MODE([disable])
 AC_CONFIG_HEADERS(config.h)

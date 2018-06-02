@@ -1,5 +1,3 @@
-AUTOMAKE_OPTIONS = foreign
-
 LDADD		= $(top_builddir)/tvision/libtvision.la
 AM_CPPFLAGS	= -I$(top_srcdir)/tvision
 
