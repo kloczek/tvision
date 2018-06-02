@@ -47,7 +47,7 @@ AC_MSG_CHECKING(if the Russian character set should be enabled (now obsolete))
 AC_ARG_ENABLE(russian,
 	[  --enable-russian        enable Russian character set (now obsolete)],
 	[AC_MSG_RESULT(yes)
-	AC_DEFINE(ENABLE_RUSSIAN_CHARSET)
+	AC_DEFINE(ENABLE_RUSSIAN_CHARSET, 1, [the Russian character set])
 	],
 	[AC_MSG_RESULT(no)]
 )
@@ -56,7 +56,7 @@ AC_MSG_CHECKING(if the alternate character set should be disabled)
 AC_ARG_ENABLE(acs,
 	[  --disable-acs           disable alternate character set],
 	[AC_MSG_RESULT(yes)
-	AC_DEFINE(DISABLE_ACS)
+	AC_DEFINE(DISABLE_ACS, 1, [alterate character set])
 	],
 	[AC_MSG_RESULT(no)]
 )
@@ -65,7 +65,7 @@ AC_MSG_CHECKING(if the 8 bit output should be disabled)
 AC_ARG_ENABLE(8bit,
 	[  --disable-8bit          disable 8 bit output],
 	[AC_MSG_RESULT(yes)
-	AC_DEFINE(DISABLE_8BIT_CHARS)
+	AC_DEFINE(DISABLE_8BIT_CHARS, 1, [the 8 bit output])
 	],
 	[AC_MSG_RESULT(no)]
 )
@@ -77,7 +77,7 @@ AC_ARG_ENABLE(linux-gpm,
 	[  --disable-linux-gpm     disable Linux GPM mouse support],
 	[AC_MSG_RESULT(yes)],
 	[AC_MSG_RESULT(no)
-	AC_DEFINE(ENABLE_GPM)]
+	AC_DEFINE(ENABLE_GPM, 1, [Linux GPM mouse support])]
 )
 
 AC_MSG_CHECKING(if the Linux VCS support should be disabled)
@@ -85,7 +85,7 @@ AC_ARG_ENABLE(linux-vcs,
 	[  --disable-linux-vcs     disable Linux VCS support],
 	[AC_MSG_RESULT(yes)],
 	[AC_MSG_RESULT(no)
-	AC_DEFINE(ENABLE_VCS)
+	AC_DEFINE(ENABLE_VCS, 1, [Linux VCS support])
 	]
 )
 	;;
@@ -95,7 +95,7 @@ AC_ARG_ENABLE(freebsd-mouse,
 	[  --disable-freebsd-mouse disable FreeBSD mouse support],
 	[AC_MSG_RESULT(yes)],
 	[AC_MSG_RESULT(no)
-	AC_DEFINE(ENABLE_FBSDM)
+	AC_DEFINE(ENABLE_FBSDM, 1, [the FreeBSD mouse support])
 	]
 )
 	;;
