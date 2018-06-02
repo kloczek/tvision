@@ -14,6 +14,7 @@ SUBDIRS		= \
 
 EXTRA_DIST	= \
 	Announce \
+	README.md \
 	color-xterm.ti \
 	tvision.pc.in
 
