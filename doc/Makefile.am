@@ -1,8 +1,6 @@
 #info_TEXINFOS = tvision.info
 
-CLEANFILES = *~
-
-EXTRA_DIST = \
+EXTRA_DIST	= \
 	Doxyfile \
 	example.gif.in \
 	index.html.in \

@@ -1,37 +1,9 @@
-pkginclude_HEADERS = \
-	app.h \
-	buffers.h \
-	colorsel.h \
-	dialogs.h \
-	drawbuf.h \
-	editors.h \
-	helpbase.h \
-	help.h \
-	menus.h \
-	msgbox.h \
-	myendian.h \
-	objects.h \
-	outline.h \
-	resource.h \
-	stddlg.h \
-	system.h \
-	textview.h \
-	tkeys.h \
-	tobjstrm.h \
-	ttypes.h \
-	tvconfig.h \
-	tv.h \
-	tvobjs.h \
-	util.h \
-	validate.h \
-	views.h
-
-lib_LTLIBRARIES = libtvision.la
-libtvision_la_LDFLAGS = -version-info 0:7:0
+lib_LTLIBRARIES		= libtvision.la
+libtvision_la_LDFLAGS	= -version-info 0:7:0
 
 AM_CPPFLAGS		= -I$(top_srcdir)/tvision
 
-libtvision_la_SOURCES = \
+libtvision_la_SOURCES	= \
 	TApplication.cc \
 	TBackground.cc \
 	TButton.cc \
@@ -103,3 +75,31 @@ libtvision_la_SOURCES = \
 	textview.cc \
 	tobjstrm.cc \
 	tvtext.cc
+
+pkginclude_HEADERS = \
+	app.h \
+	buffers.h \
+	colorsel.h \
+	dialogs.h \
+	drawbuf.h \
+	editors.h \
+	helpbase.h \
+	help.h \
+	menus.h \
+	msgbox.h \
+	myendian.h \
+	objects.h \
+	outline.h \
+	resource.h \
+	stddlg.h \
+	system.h \
+	textview.h \
+	tkeys.h \
+	tobjstrm.h \
+	ttypes.h \
+	tvconfig.h \
+	tv.h \
+	tvobjs.h \
+	util.h \
+	validate.h \
+	views.h

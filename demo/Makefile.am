@@ -3,7 +3,7 @@ AM_CPPFLAGS	= -I$(top_srcdir)/tvision
 
 noinst_PROGRAMS = demo
 
-demo_SOURCES = \
+demo_SOURCES	= \
 	ascii.cc \
 	ascii.h \
 	calc.cc \
@@ -25,4 +25,5 @@ demo_SOURCES = \
 	tvdemo3.cc \
 	tvdemo.h
 
-EXTRA_DIST = DEMOHELP.H32
+EXTRA_DIST	= \
+	DEMOHELP.H32

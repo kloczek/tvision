@@ -1,5 +1,3 @@
-EXTRA_DIST = README basicMakefile
-
 LDADD		= $(top_builddir)/tvision/libtvision.la
 AM_CPPFLAGS	= -I$(top_srcdir)/tvision
 
@@ -53,3 +51,7 @@ splash_SOURCES		= splash.cc
 tvedit_SOURCES		= tvedit.cc
 tvlife_SOURCES		= tvlife.cc
 validator_SOURCES	= validator.cc
+
+EXTRA_DIST	= \
+	README \
+	basicMakefile

@@ -7,12 +7,10 @@ SUBDIRS		= \
 	tutorial \
 	doc
 
-+pkgconfigdir	= ${libdir}/pkgconfig
-+pkgconfig_DATA	= tvision.pc
+pkgconfigdir	= ${libdir}/pkgconfig
+pkgconfig_DATA	= tvision.pc
 
 EXTRA_DIST	= \
 	README.md \
 	color-xterm.ti \
 	tvision.pc.in
-
-CLEANFILES = *~
