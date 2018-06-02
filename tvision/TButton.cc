@@ -16,7 +16,7 @@
 #define Uses_TGroup
 #define Uses_opstream
 #define Uses_ipstream
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <ctype.h>
 #include <string.h>

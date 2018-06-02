@@ -13,7 +13,7 @@
 #define Uses_opstream
 #define Uses_ipstream
 #define Uses_TSortedCollection
-#include <tvision/tv.h>
+#include <tv.h>
 
 
 ccIndex TNSSortedCollection::indexOf(void *item)

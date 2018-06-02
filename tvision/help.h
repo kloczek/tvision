@@ -27,9 +27,9 @@
 #define Uses_TScroller
 #define Uses_TScrollBar
 #define Uses_TWindow
-#include <tvision/tv.h>
+#include <tv.h>
 
-#include <tvision/helpbase.h>
+#include <helpbase.h>
 
 // THelpViewer
 

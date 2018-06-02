@@ -17,7 +17,7 @@
 #define Uses_TVMemMgr
 #define Uses_TView
 #define Uses_pstream
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <string.h>
 

@@ -13,7 +13,7 @@
 #define Uses_TStatusItem
 #define Uses_TStatusDef
 #define Uses_TDeskTop
-#include <tvision/tv.h>
+#include <tv.h>
 
 // tv.h ensures that the correct *.h files are included for each
 // of the above classes and their bases.

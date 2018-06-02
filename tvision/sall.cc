@@ -68,7 +68,7 @@
 #define Uses_TValidator
 #define Uses_TView
 #define Uses_TWindow
-#include <tvision/tv.h>
+#include <tv.h>
 
 __link( RButton )
 __link( RCluster )

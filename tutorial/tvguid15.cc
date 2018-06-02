@@ -44,7 +44,7 @@
 #define Uses_TRadioButtons
 #define Uses_TLabel
 #define Uses_TInputLine
-#include <tvision/tv.h>
+#include <tv.h>
 
 // note the extra #define above
 

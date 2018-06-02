@@ -17,7 +17,7 @@
 #define Uses_TRangeValidator
 #define Uses_TLookupValidator
 #define Uses_TStringLookupValidator
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <ctype.h>
 #include <stdio.h>

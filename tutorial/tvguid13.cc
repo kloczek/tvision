@@ -38,7 +38,7 @@
 #define Uses_TScrollBar
 #define Uses_TDialog
 #define Uses_TButton
-#include <tvision/tv.h>
+#include <tv.h>
 
 // note the extra #define above
 

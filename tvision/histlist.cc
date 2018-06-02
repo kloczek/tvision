@@ -9,7 +9,7 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <stdlib.h>
 #include <string.h>

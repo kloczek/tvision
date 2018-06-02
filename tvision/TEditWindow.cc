@@ -21,7 +21,7 @@
 #define Uses_TScrollBar
 #define Uses_opstream
 #define Uses_ipstream
-#include <tvision/tv.h>
+#include <tv.h>
 
 const TPoint minEditWinSize = {24, 6};
 

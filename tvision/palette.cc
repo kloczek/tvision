@@ -10,7 +10,7 @@
  */
 
 #define Uses_TPalette
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <string.h>
 

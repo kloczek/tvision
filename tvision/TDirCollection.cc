@@ -13,7 +13,7 @@
 #define Uses_TDirEntry
 #define Uses_opstream
 #define Uses_ipstream
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <stdio.h>
 #include <string.h>

@@ -14,7 +14,7 @@
 #include <stdlib.h>
 
 #define Uses_TVMemMgr
-#include <tvision/tv.h>
+#include <tv.h>
 
 TBufListEntry * TBufListEntry::bufList = 0;
 

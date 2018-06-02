@@ -10,7 +10,7 @@
  */
 
 #define Uses_TCheckBoxes
-#include <tvision/tv.h>
+#include <tv.h>
 
 void TCheckBoxes::draw()
 {

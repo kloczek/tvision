@@ -12,7 +12,7 @@
 #define Uses_TKeys
 #define Uses_TDialog
 #define Uses_TEvent
-#include <tvision/tv.h>
+#include <tv.h>
 
 // TMultiCheckboxes flags
 //   hibyte = number of bits

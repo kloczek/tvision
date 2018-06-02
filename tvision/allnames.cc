@@ -67,7 +67,7 @@
 #define Uses_TStringLookupValidator
 #define Uses_TView
 #define Uses_TWindow
-#include <tvision/tv.h>
+#include <tv.h>
 
 const char * const TBackground::name = "TBackground";
 const char * const TButton::name = "TButton";

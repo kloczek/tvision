@@ -19,7 +19,7 @@
 #define Uses_TMenuBox
 #define Uses_opstream
 #define Uses_ipstream
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <assert.h>
 #include <ctype.h>

@@ -19,7 +19,7 @@
 #define Uses_TInputLine
 #define Uses_TDeskTop
 #define Uses_TLabel
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <stdarg.h>
 #include <stdio.h>

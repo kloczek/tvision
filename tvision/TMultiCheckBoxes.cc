@@ -10,7 +10,7 @@
  */
 
 #define Uses_TMultiCheckBoxes
-#include <tvision/tv.h>
+#include <tv.h>
 
 TMultiCheckBoxes::TMultiCheckBoxes( TRect& bounds, TSItem* aStrings,
                                     uchar aSelRange, ushort aFlags,

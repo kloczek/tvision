@@ -16,7 +16,7 @@
 #define Uses_TSubMenu
 #define Uses_TWindow
 
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <fstream>
 #include <cstring>

@@ -10,7 +10,7 @@
  */
 
 #define Uses_TCommandSet
-#include <tvision/tv.h>
+#include <tv.h>
 
 int TCommandSet::masks[8] =
 {

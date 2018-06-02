@@ -27,7 +27,7 @@
 #define Uses_TButton
 #define Uses_TSItem
 #define Uses_TEventQueue
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <string.h>
 #include <stdlib.h>

@@ -17,7 +17,7 @@
 #define Uses_TEvent
 #define Uses_TGroup
 #define Uses_TKeys
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <sys/stat.h>
 #include <sys/types.h>

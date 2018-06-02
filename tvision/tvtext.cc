@@ -40,8 +40,8 @@
 #define Uses_TStringLookupValidator
 #define Uses_TListViewer
 #define Uses_TOutlineViewer
-#include <tvision/tv.h>
-#include <tvision/help.h>
+#include <tv.h>
+#include <help.h>
 
 #include <ctype.h>
 

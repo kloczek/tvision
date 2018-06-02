@@ -11,7 +11,7 @@
 
 #define Uses_TKeys
 #define Uses_TDrawBuffer
-#include <tvision/tv.h>
+#include <tv.h>
 
 /*------------------------------------------------------------------------*/
 /*                                                                        */

@@ -11,7 +11,7 @@
 
 #define Uses_TFileCollection
 #define Uses_TSearchRec
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <string.h>
 

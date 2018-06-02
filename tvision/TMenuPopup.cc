@@ -14,7 +14,7 @@
 #define Uses_TMenu
 #define Uses_TMenuItem
 #define Uses_TMenuPopup
-#include <tvision/tv.h>
+#include <tv.h>
 
 TMenuPopup::TMenuPopup(TRect& bounds, TMenu* aMenu) :
     TMenuBox( bounds, aMenu, 0 )

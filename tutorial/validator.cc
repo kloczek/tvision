@@ -21,7 +21,7 @@
 #define Uses_TSubMenu
 #define Uses_TStaticText
 
-#include <tvision/tv.h>
+#include <tv.h>
 
 const int cmOpenDialog	= 100;
 

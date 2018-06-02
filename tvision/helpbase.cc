@@ -16,14 +16,14 @@
 #define Uses_opstream
 #define Uses_fpstream
 #define Uses_TRect
-#include <tvision/tv.h>
+#include <tv.h>
 
 #if !defined( __HELP_H )
-#include "tvision/helpbase.h"
+#include "helpbase.h"
 #endif  // __HELP_H
 
 #if !defined( __UTIL_H )
-#include "tvision/util.h"
+#include "util.h"
 #endif  // __UTIL_H
 
 #include <ctype.h>

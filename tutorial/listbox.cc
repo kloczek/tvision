@@ -25,7 +25,7 @@
 #define Uses_TButton
 #define Uses_MsgBox
 
-#include <tvision/tv.h>
+#include <tv.h>
 
 const int cmNewDialog  = 200;
 

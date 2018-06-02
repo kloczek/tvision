@@ -10,7 +10,7 @@
  */
 
 #define Uses_TRadioButtons
-#include <tvision/tv.h>
+#include <tv.h>
 
 void TRadioButtons::draw()
 {

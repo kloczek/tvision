@@ -20,7 +20,7 @@
 
 
 #include <cstring>
-#include <tvision/tv.h>
+#include <tv.h>
 
 //define a custom background
 

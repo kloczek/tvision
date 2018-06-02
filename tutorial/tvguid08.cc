@@ -36,7 +36,7 @@
 #define Uses_TWindow
 #define Uses_TScroller
 #define Uses_TScrollBar
-#include <tvision/tv.h>
+#include <tv.h>
 
 const int cmMyFileOpen = 200; // assign new command values
 const int cmMyNewWin   = 201;

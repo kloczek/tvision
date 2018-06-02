@@ -15,7 +15,7 @@
 #define Uses_TChDirDialog
 #define Uses_TDirEntry
 #define Uses_TButton
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <sys/stat.h>
 #include <sys/types.h>

@@ -22,7 +22,7 @@
 #define Uses_ifpstream
 #define Uses_ofpstream
 #define Uses_fpstream
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <assert.h>
 #include <fcntl.h>

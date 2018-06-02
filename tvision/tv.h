@@ -614,87 +614,87 @@ Inc., 100 Borland Way, Scotts Valley, CA 95066.
 #define __INC_TKEYS_H
 #endif
 
-#include <tvision/tvconfig.h>
-#include <tvision/ttypes.h>
+#include <tvconfig.h>
+#include <ttypes.h>
 
 //#if defined( __INC_HARDWARE_H )
-//#include <tvision/hardware.h>
+//#include <hardware.h>
 //#endif
 
 #if defined( __INC_TKEYS_H )
-#include <tvision/tkeys.h>
+#include <tkeys.h>
 #endif
 
-#include <tvision/util.h>
+#include <util.h>
 
 #if defined( __INC_TVOBJS_H )
-#include <tvision/tvobjs.h>
+#include <tvobjs.h>
 #endif
 
 #if defined( __INC_TOBJSTRM_H )
-#include <tvision/tobjstrm.h>
+#include <tobjstrm.h>
 #endif
 
 #if defined( __INC_DRAWBUF_H )
-#include <tvision/drawbuf.h>
+#include <drawbuf.h>
 #endif
 
 #if defined( __INC_OBJECTS_H )
-#include <tvision/objects.h>
+#include <objects.h>
 #endif
 
 #if defined( __INC_SYSTEM_H )
-#include <tvision/system.h>
+#include <system.h>
 #endif
 
 #if defined( __INC_MSGBOX_H )
-#include <tvision/msgbox.h>
+#include <msgbox.h>
 #endif
 
 #if defined( __INC_RESOURCE_H )
-#include <tvision/resource.h>
+#include <resource.h>
 #endif
 
 #if defined( __INC_VIEWS_H )
-#include <tvision/views.h>
+#include <views.h>
 #endif
 
 #if defined( __INC_BUFFERS_H )
-#include <tvision/buffers.h>
+#include <buffers.h>
 #endif
 
 #if defined( __INC_DIALOGS_H )
-#include <tvision/dialogs.h>
+#include <dialogs.h>
 #endif
 
 #if defined( __INC_VALIDATOR_H )
-#include <tvision/validate.h>
+#include <validate.h>
 #endif
 
 #if defined( __INC_STDDLG_H )
-#include <tvision/stddlg.h>
+#include <stddlg.h>
 #endif
 
 #if defined( __INC_COLORSEL_H )
-#include <tvision/colorsel.h>
+#include <colorsel.h>
 #endif
 
 #if defined( __INC_MENUS_H )
-#include <tvision/menus.h>
+#include <menus.h>
 #endif
 
 #if defined( __INC_TEXTVIEW_H )
-#include <tvision/textview.h>
+#include <textview.h>
 #endif
 
 #if defined( __INC_EDITORS_H )
-#include <tvision/editors.h>
+#include <editors.h>
 #endif
 
 #if defined( __INC_OUTLINE_H )
-#include <tvision/outline.h>
+#include <outline.h>
 #endif
 
 #if defined( __INC_APP_H )
-#include <tvision/app.h>
+#include <app.h>
 #endif

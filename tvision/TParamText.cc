@@ -10,7 +10,7 @@
  */
 
 #define Uses_TParamText
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <stdarg.h>
 #include <stdio.h>

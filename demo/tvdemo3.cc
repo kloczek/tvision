@@ -30,7 +30,7 @@
 #define Uses_TDialog
 #define Uses_TEventQueue
 
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include "tvdemo.h"
 #include "tvcmds.h"
@@ -39,7 +39,7 @@
 #include "demohelp.h"
 #include "fileview.h"
 
-#include <tvision/help.h>
+#include <help.h>
 
 //
 // Mouse Control Dialog Box function

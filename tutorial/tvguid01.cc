@@ -7,7 +7,7 @@
 /*---------------------------------------------------------*/
 
 #define Uses_TApplication
-#include <tvision/tv.h>
+#include <tv.h>
 
 // tv.h will pull in the headers needed for TApplication and its
 // base classes. Add a #define Uses_Txxx statement (before the

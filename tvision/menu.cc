@@ -14,7 +14,7 @@
 #define Uses_TStatusDef
 #define Uses_TStatusItem
 #define Uses_TMenu
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <string.h>
 

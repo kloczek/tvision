@@ -28,14 +28,14 @@
 #define Uses_TWindow
 #define Uses_TDeskTop
 
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include "tvdemo.h"
 #include "gadgets.h"
 #include "fileview.h"
 #include "puzzle.h"
 #include "demohelp.h"
-#include <tvision/help.h>
+#include <help.h>
 
 #include <stdio.h>
 #include <string.h>

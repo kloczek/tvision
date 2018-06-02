@@ -42,7 +42,7 @@
 #define Uses_TCheckBoxes
 #define Uses_TRadioButtons
 #define Uses_TLabel
-#include <tvision/tv.h>
+#include <tv.h>
 
 // note the extra #defines above
 

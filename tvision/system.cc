@@ -45,7 +45,7 @@
 #define Uses_TScreen
 #define Uses_TScrollBar
 #define Uses_TStatusLine
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <ctype.h>
 #include <fcntl.h>

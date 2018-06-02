@@ -15,7 +15,7 @@
 #define Uses_TCollection
 #define Uses_TStringCollection
 #define Uses_TResourceCollection
-#include <tvision/tv.h>
+#include <tv.h>
 
 /*
  * SS: Warning, this file is non-portable.  It is not used by any of the

@@ -19,7 +19,7 @@
 #define Uses_TDrawBuffer
 #define Uses_TFileDialog
 #define Uses_TSortedCollection
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <ctype.h>
 #include <errno.h>

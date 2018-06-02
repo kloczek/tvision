@@ -24,7 +24,7 @@
 #define Uses_TWindow
 
 #include <stdlib.h>
-#include <tvision/tv.h>
+#include <tv.h>
 
 enum
 {

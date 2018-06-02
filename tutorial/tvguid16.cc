@@ -44,7 +44,7 @@
 #define Uses_TRadioButtons
 #define Uses_TLabel
 #define Uses_TInputLine
-#include <tvision/tv.h>
+#include <tv.h>
 
 const int cmMyFileOpen = 200;   // assign new command values
 const int cmMyNewWin   = 201;

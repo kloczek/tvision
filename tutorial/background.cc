@@ -7,7 +7,7 @@
 #define Uses_TApplication
 #define Uses_TDeskTop
 
-#include <tvision/tv.h>
+#include <tv.h>
 
 class Demo: public TApplication
 {

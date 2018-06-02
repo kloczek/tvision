@@ -17,7 +17,7 @@
 #ifndef __UNPATCHED
 #define Uses_TVMemMgr
 #endif
-#include <tvision/tv.h>
+#include <tv.h>
 
 void initHistory();
 void doneHistory();

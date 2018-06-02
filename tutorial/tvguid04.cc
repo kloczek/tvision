@@ -23,7 +23,7 @@
 #define Uses_TStatusDef
 #define Uses_TDeskTop
 #define Uses_TWindow
-#include <tvision/tv.h>
+#include <tv.h>
 
 const int cmMyFileOpen = 200; // assign new command values
 const int cmMyNewWin   = 201;

@@ -12,7 +12,7 @@
 #define Uses_TTextDevice
 #define Uses_TTerminal
 #define Uses_otstream
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <string.h>
 

@@ -10,7 +10,7 @@
  */
 
 #define Uses_TPoint
-#include <tvision/tv.h>
+#include <tv.h>
 
 TPoint operator - ( const TPoint& one, const TPoint& two )
 {

@@ -13,7 +13,7 @@
 #define Uses_THistoryViewer
 #define Uses_TScrollBar
 #define Uses_TEvent
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <ctype.h>
 #include <string.h>

@@ -31,7 +31,7 @@ pkginclude_HEADERS = \
 lib_LTLIBRARIES = libtvision.la
 libtvision_la_LDFLAGS = -version-info 0:7:0
 
-AM_CPPFLAGS = -I..
+AM_CPPFLAGS		= -I$(top_srcdir)/tvision
 
 libtvision_la_SOURCES = \
 	TApplication.cc \

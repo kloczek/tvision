@@ -32,7 +32,7 @@
 #include <signal.h>
 #include <stdarg.h>
 #include <stdio.h>
-#include <tvision/tv.h>
+#include <tv.h>
 
 //new command codes; standard commands are defined in views.h
 

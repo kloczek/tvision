@@ -22,7 +22,7 @@
 #define Uses_TScreen
 #define Uses_TTerminal
 #define Uses_TView
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <ctype.h>
 #include <fcntl.h>

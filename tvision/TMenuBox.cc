@@ -13,7 +13,7 @@
 #define Uses_TMenu
 #define Uses_TMenuItem
 #define Uses_TMenuBox
-#include <tvision/tv.h>
+#include <tv.h>
 
 #include <string.h>
 
