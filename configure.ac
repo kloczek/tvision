@@ -1,10 +1,15 @@
 dnl Process this file with `autoconf' to produce a configure script.
-AC_CONFIG_MACRO_DIRS([m4])
+AC_PREREQ(2.59)
+AC_INIT([tvision],
+	[0.8.0],
+	[https://github.com/kloczek/tvision/issues],
+	[],
+	[https://github.com/kloczek/tvision])
+AM_INIT_AUTOMAKE([dist-xz no-dist-gzip])
 
-AC_INIT(tvision/tv.h)
-AM_INIT_AUTOMAKE(tvision, 0.8)
-AC_CONFIG_MACRO_DIRS([m4])
-AM_CONFIG_HEADER(config.h)
+AM_MAINTAINER_MODE([disable])
+AC_CONFIG_HEADERS(config.h)
+AC_CONFIG_MACRO_DIR([m4])
 
 dnl Check for system.
 AC_CANONICAL_HOST
