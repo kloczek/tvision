@@ -35,16 +35,16 @@ AC_CHECK_HEADERS(ncurses.h curses.h gpm.h)
 
 dnl Checks for libraries.
 AC_SEARCH_LIBS(initscr, [ncursesw ncurses curses],
-	[],
+	[AC_SUBST([SCREEN_LIB], ["-l${ac_lib}"])],
 	[AC_MSG_ERROR(You need to install the ncurses or curses library)]
 )
+LIBS=""
 
 dnl Checks for library functions.
 AC_CHECK_LIB(gpm, Gpm_Close)
 
 
 dnl Various enable/disable checks.
-
 AC_MSG_CHECKING(if the Russian character set should be enabled (now obsolete))
 AC_ARG_ENABLE(russian,
 	[  --enable-russian        enable Russian character set (now obsolete)],
