@@ -1,0 +1,1297 @@
+    185 -Wwrite-strings
+    180 -Wreorder
+     16 -Wdangling-else
+      8 -Wcpp
+      6 -Wint-to-pointer-cast
+      6 -Wdelete-incomplete
+      5 -Wformat-overflow=
+      2 -Wsign-compare
+      2 -Wreturn-type
+      2 -Wparentheses
+      2 -Wnarrowing
+      1 -Wunused-variable
+      1 -Wchar-subscripts
+
+----------------------------------------------------------------
+../../../tvision/TButton.cc: In member function ‘void TButton::drawState(Boolean)’:
+../../../tvision/TButton.cc:100:11: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+         if( (state & sfActive) != 0 )
+           ^
+In file included from ../../../tvision/tv.h:675,
+                 from ../../../tvision/TChDirDialog.cc:27:
+../../../tvision/stddlg.h: In constructor ‘TChDirDialog::TChDirDialog(StreamableInit)’:
+../../../tvision/stddlg.h:1452:46: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+         TWindowInit( TChDirDialog::initFrame ) {}
+                                              ^
+../../../tvision/stddlg.h:1452:46: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/stddlg.h:1451:5: warning:   when initialized here [-Wreorder]
+     TChDirDialog( StreamableInit ) : TDialog( streamableInit ),
+     ^~~~~~~~~~~~
+../../../tvision/TChDirDialog.cc: In constructor ‘TChDirDialog::TChDirDialog(ushort, ushort)’:
+../../../tvision/TChDirDialog.cc:36:43: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+     TWindowInit( &TChDirDialog::initFrame )
+                                           ^
+../../../tvision/TChDirDialog.cc:36:43: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/TChDirDialog.cc:34:1: warning:   when initialized here [-Wreorder]
+ TChDirDialog::TChDirDialog( ushort opts, ushort histId ) :
+ ^~~~~~~~~~~~
+../../../tvision/TCollection.cc: In member function ‘virtual void TNSCollection::freeItem(void*)’:
+../../../tvision/TCollection.cc:155:12: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
+     delete item;
+            ^~~~
+../../../tvision/TDeskTop.cc: In constructor ‘TDeskTop::TDeskTop(const TRect&)’:
+../../../tvision/TDeskTop.cc:30:42: warning: base ‘TGroup’ will be initialized after [-Wreorder]
+     TDeskInit( &TDeskTop::initBackground )
+                                          ^
+../../../tvision/TDeskTop.cc:30:42: warning:   base ‘TDeskInit’ [-Wreorder]
+../../../tvision/TDeskTop.cc:28:1: warning:   when initialized here [-Wreorder]
+ TDeskTop::TDeskTop( const TRect& bounds ) :
+ ^~~~~~~~
+../../../tvision/TDeskTop.cc: In constructor ‘TDeskTop::TDeskTop(StreamableInit)’:
+../../../tvision/TDeskTop.cc:253:37: warning: base ‘TGroup’ will be initialized after [-Wreorder]
+     TDeskInit( 0 /*streamableInit*/ )
+                                     ^
+../../../tvision/TDeskTop.cc:253:37: warning:   base ‘TDeskInit’ [-Wreorder]
+../../../tvision/TDeskTop.cc:251:1: warning:   when initialized here [-Wreorder]
+ TDeskTop::TDeskTop( StreamableInit ) :
+ ^~~~~~~~
+../../../tvision/TDialog.cc: In constructor ‘TDialog::TDialog(const TRect&, const char*)’:
+../../../tvision/TDialog.cc:24:38: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+     TWindowInit( &TDialog::initFrame )
+                                      ^
+../../../tvision/TDialog.cc:24:38: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/TDialog.cc:22:1: warning:   when initialized here [-Wreorder]
+ TDialog::TDialog( const TRect& bounds, const char *aTitle ) :
+ ^~~~~~~
+../../../tvision/TDialog.cc: In constructor ‘TDialog::TDialog(StreamableInit)’:
+../../../tvision/TDialog.cc:109:20: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+     TWindowInit( 0 )
+                    ^
+../../../tvision/TDialog.cc:109:20: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/TDialog.cc:107:1: warning:   when initialized here [-Wreorder]
+ TDialog::TDialog( StreamableInit ) :
+ ^~~~~~~
+In file included from ../../../tvision/tv.h:675,
+                 from ../../../tvision/TDirListBox.cc:18:
+../../../tvision/stddlg.h: In constructor ‘TChDirDialog::TChDirDialog(StreamableInit)’:
+../../../tvision/stddlg.h:1452:46: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+         TWindowInit( TChDirDialog::initFrame ) {}
+                                              ^
+../../../tvision/stddlg.h:1452:46: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/stddlg.h:1451:5: warning:   when initialized here [-Wreorder]
+     TChDirDialog( StreamableInit ) : TDialog( streamableInit ),
+     ^~~~~~~~~~~~
+../../../tvision/TDirListBox.cc: In member function ‘void TDirListBox::showDirs(TDirCollection*)’:
+../../../tvision/TDirListBox.cc:117:16: warning: ‘sprintf’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+  sprintf(path, "%s.", dir);
+                ^~~~~
+../../../tvision/TDirListBox.cc:117:9: note: ‘sprintf’ output between 2 and 4097 bytes into a destination of size 4096
+  sprintf(path, "%s.", dir);
+  ~~~~~~~^~~~~~~~~~~~~~~~~~
+../../../tvision/TDirListBox.cc:129:18: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
+    sprintf(path, "%s%s", dir, de->d_name);
+                  ^~~~~~
+../../../tvision/TDirListBox.cc:129:11: note: ‘sprintf’ output between 1 and 4351 bytes into a destination of size 4096
+    sprintf(path, "%s%s", dir, de->d_name);
+    ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../tvision/TEditor.cc: In member function ‘virtual void TEditor::convertEvent(TEvent&)’:
+../../../tvision/TEditor.cc:258:11: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+         if( key != 0 )
+           ^
+../../../tvision/TEditor.cc: In member function ‘Boolean TEditor::insertBuffer(char*, uint, uint, Boolean, Boolean)’:
+../../../tvision/TEditor.cc:673:7: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+     if( allowUndo == True )
+       ^
+../../../tvision/TEditWindow.cc: In constructor ‘TEditWindow::TEditWindow(const TRect&, const char*, int)’:
+../../../tvision/TEditWindow.cc:33:42: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+     TWindowInit( &TEditWindow::initFrame )
+                                          ^
+../../../tvision/TEditWindow.cc:33:42: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/TEditWindow.cc:28:1: warning:   when initialized here [-Wreorder]
+ TEditWindow::TEditWindow( const TRect& bounds,
+ ^~~~~~~~~~~
+../../../tvision/TEditWindow.cc: In constructor ‘TEditWindow::TEditWindow(StreamableInit)’:
+../../../tvision/TEditWindow.cc:116:39: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+     TWindowInit( 0 /*streamableInit*/ )
+                                       ^
+../../../tvision/TEditWindow.cc:116:39: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/TEditWindow.cc:114:1: warning:   when initialized here [-Wreorder]
+ TEditWindow::TEditWindow( StreamableInit ) :
+ ^~~~~~~~~~~
+In file included from ../../../tvision/tv.h:675,
+                 from ../../../tvision/TFileDialog.cc:25:
+../../../tvision/stddlg.h: In constructor ‘TFileDialog::TFileDialog(StreamableInit)’:
+../../../tvision/stddlg.h:889:45: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+         TWindowInit( TFileDialog::initFrame ) {}
+                                             ^
+../../../tvision/stddlg.h:889:45: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/stddlg.h:888:5: warning:   when initialized here [-Wreorder]
+     TFileDialog( StreamableInit ) : TDialog ( streamableInit ),
+     ^~~~~~~~~~~
+../../../tvision/TFileDialog.cc: In constructor ‘TFileDialog::TFileDialog(const char*, const char*, const char*, ushort, uchar)’:
+../../../tvision/TFileDialog.cc:49:27: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+     directory( newStr("") )
+                           ^
+../../../tvision/TFileDialog.cc:49:27: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/TFileDialog.cc:41:1: warning:   when initialized here [-Wreorder]
+ TFileDialog::TFileDialog( const char *aWildCard,
+ ^~~~~~~~~~~
+../../../tvision/TFileList.cc: In static member function ‘static void* DirSearchRec::operator new(size_t)’:
+../../../tvision/TFileList.cc:143:16: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
+         delete temp;
+                ^~~~
+../../../tvision/TFileList.cc: In member function ‘void TFileList::readDirectory(const char*)’:
+../../../tvision/TFileList.cc:181:20: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  for (int i = 0; i < gl.gl_pathc; i++)
+                  ~~^~~~~~~~~~~~~
+../../../tvision/TFileList.cc:230:49: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   if (stat(path, &s) == 0) p->readFf_blk("..", s);
+                                                 ^
+../../../tvision/TFileList.cc:201:16: warning: ‘sprintf’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+  sprintf(path, "%s.", dir);
+                ^~~~~
+../../../tvision/TFileList.cc:201:9: note: ‘sprintf’ output between 2 and 4097 bytes into a destination of size 4096
+  sprintf(path, "%s.", dir);
+  ~~~~~~~^~~~~~~~~~~~~~~~~~
+../../../tvision/TFileList.cc:213:18: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
+    sprintf(path, "%s%s", dir, de->d_name);
+                  ^~~~~~
+../../../tvision/TFileList.cc:213:11: note: ‘sprintf’ output between 1 and 4351 bytes into a destination of size 4096
+    sprintf(path, "%s%s", dir, de->d_name);
+    ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../tvision/TFileList.cc:229:17: warning: ‘..’ directive writing 2 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
+   sprintf(path, "%s..", dir);
+                 ^~~~~~
+../../../tvision/TFileList.cc:229:10: note: ‘sprintf’ output between 3 and 4098 bytes into a destination of size 4096
+   sprintf(path, "%s..", dir);
+   ~~~~~~~^~~~~~~~~~~~~~~~~~~
+../../../tvision/THistoryWindow.cc: In constructor ‘THistoryWindow::THistoryWindow(const TRect&, ushort)’:
+../../../tvision/THistoryWindow.cc:27:45: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+     TWindowInit( &THistoryWindow::initFrame )
+                                             ^
+../../../tvision/THistoryWindow.cc:27:45: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/THistoryWindow.cc:23:1: warning:   when initialized here [-Wreorder]
+ THistoryWindow::THistoryWindow( const TRect& bounds,
+ ^~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/backward/strstream:50,
+                 from ../../../tvision/TIndicator.cc:21:
+/usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+ #warning \
+  ^~~~~~~
+../../../tvision/TListViewer.cc: In member function ‘virtual void TListViewer::focusItem(short int)’:
+../../../tvision/TListViewer.cc:165:11: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+         if( item >= topItem + size.y*numCols )
+           ^
+../../../tvision/TListViewer.cc: In member function ‘virtual void TListViewer::setState(ushort, Boolean)’:
+../../../tvision/TListViewer.cc:381:11: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+         if( hScrollBar != 0 )
+           ^
+../../../tvision/TListViewer.cc:386:11: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+         if( vScrollBar != 0 )
+           ^
+../../../tvision/TMemo.cc: In member function ‘virtual void* TMemo::read(ipstream&)’:
+../../../tvision/TMemo.cc:89:32: warning: ISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
+         is.seekg( is.tellg() + length );
+                                ^~~~~~
+In file included from /usr/include/c++/8/iosfwd:40,
+                 from /usr/include/c++/8/ios:38,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from ../../../tvision/tobjstrm.h:414,
+                 from ../../../tvision/tv.h:635,
+                 from ../../../tvision/TMemo.cc:18:
+/usr/include/c++/8/bits/postypes.h:178:7: note: candidate 1: ‘std::fpos<_StateT> std::fpos<_StateT>::operator+(std::streamoff) const [with _StateT = __mbstate_t; std::streamoff = long int]’
+       operator+(streamoff __off) const
+       ^~~~~~~~
+../../../tvision/TMemo.cc:89:32: note: candidate 2: ‘operator+(std::streamoff {aka long int}, uint {aka unsigned int})’ <built-in>
+         is.seekg( is.tellg() + length );
+                                ^~~~~~
+../../../tvision/TMenuView.cc: In member function ‘virtual ushort TMenuView::execute()’:
+../../../tvision/TMenuView.cc:299:11: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+         if( (action == doSelect || (action == doNothing && autoSelect)) &&
+           ^
+../../../tvision/TMenuView.cc: In member function ‘Boolean TMenuView::updateMenu(TMenu*)’:
+../../../tvision/TMenuView.cc:392:15: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+             if( p->name != 0 )
+               ^
+../../../tvision/TMenuView.cc: In member function ‘TMenuItem* TMenuView::findHotKey(TMenuItem*, ushort)’:
+../../../tvision/TMenuView.cc:469:11: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+         if( p->name != 0 )
+           ^
+../../../tvision/TProgram.cc: In member function ‘virtual void TProgram::handleEvent(TEvent&)’:
+../../../tvision/TProgram.cc:212:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+                   (void *)(c - '0')) != 0 )
+                                   ^
+../../../tvision/TProgram.cc: In member function ‘virtual TWindow* TProgram::insertWindow(TWindow*)’:
+../../../tvision/TProgram.cc:300:8: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+     if (validView(pWin))
+        ^
+../../../tvision/TResourceFile.cc: In member function ‘void TResourceFile::flush()’:
+../../../tvision/TResourceFile.cc:136:63: warning: ISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
+         lenRez =  stream->tellp() - basePos -  sizeof(long) * 2;
+                                                               ^
+In file included from /usr/include/c++/8/iosfwd:40,
+                 from /usr/include/c++/8/ios:38,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from ../../../tvision/tobjstrm.h:414,
+                 from ../../../tvision/tv.h:635,
+                 from ../../../tvision/TResourceFile.cc:18:
+/usr/include/c++/8/bits/postypes.h:192:7: note: candidate 1: ‘std::fpos<_StateT> std::fpos<_StateT>::operator-(std::streamoff) const [with _StateT = __mbstate_t; std::streamoff = long int]’
+       operator-(streamoff __off) const
+       ^~~~~~~~
+../../../tvision/TResourceFile.cc:136:63: note: candidate 2: ‘operator-(std::streamoff {aka long int}, long unsigned int)’ <built-in>
+         lenRez =  stream->tellp() - basePos -  sizeof(long) * 2;
+                                                               ^
+../../../tvision/TScroller.cc: In member function ‘void TScroller::showSBar(TScrollBar*)’:
+../../../tvision/TScroller.cc:144:7: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+     if( sBar != 0 )
+       ^
+../../../tvision/TStaticText.cc: In member function ‘virtual void TStaticText::draw()’:
+../../../tvision/TStaticText.cc:67:16: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+             if (p > i + size.x)
+                ^
+../../../tvision/TStringCollection.cc: In member function ‘virtual void TStringCollection::freeItem(void*)’:
+../../../tvision/TStringCollection.cc:31:12: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
+     delete item;
+            ^~~~
+../../../tvision/TValidator.cc: In constructor ‘TPXPictureValidator::TPXPictureValidator(const char*, Boolean)’:
+../../../tvision/TValidator.cc:99:7: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   s = "";
+       ^~
+../../../tvision/TView.cc: In member function ‘Boolean TView::focus()’:
+../../../tvision/TView.cc:409:16: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+             if (result)
+                ^
+../../../tvision/TView.cc: In member function ‘void TView::putInFrontOf(TView*)’:
+../../../tvision/TView.cc:635:7: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+     if( owner != 0 && Target != this && Target != nextView() &&
+       ^
+../../../tvision/TWindow.cc: In constructor ‘TWindow::TWindow(const TRect&, const char*, short int)’:
+../../../tvision/TWindow.cc:42:29: warning: base ‘TGroup’ will be initialized after [-Wreorder]
+     title( newStr( aTitle ) )
+                             ^
+../../../tvision/TWindow.cc:42:29: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/TWindow.cc:32:1: warning:   when initialized here [-Wreorder]
+ TWindow::TWindow( const TRect& bounds,
+ ^~~~~~~
+../../../tvision/TWindow.cc: In constructor ‘TWindow::TWindow(StreamableInit)’:
+../../../tvision/TWindow.cc:256:39: warning: base ‘TGroup’ will be initialized after [-Wreorder]
+     TWindowInit( 0 /*streamableInit*/ )
+                                       ^
+../../../tvision/TWindow.cc:256:39: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/TWindow.cc:254:1: warning:   when initialized here [-Wreorder]
+ TWindow::TWindow( StreamableInit ) :
+ ^~~~~~~
+In file included from ../../../tvision/tv.h:675,
+                 from ../../../tvision/allnames.cc:70:
+../../../tvision/stddlg.h: In constructor ‘TFileDialog::TFileDialog(StreamableInit)’:
+../../../tvision/stddlg.h:889:45: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+         TWindowInit( TFileDialog::initFrame ) {}
+                                             ^
+../../../tvision/stddlg.h:889:45: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/stddlg.h:888:5: warning:   when initialized here [-Wreorder]
+     TFileDialog( StreamableInit ) : TDialog ( streamableInit ),
+     ^~~~~~~~~~~
+../../../tvision/stddlg.h: In constructor ‘TChDirDialog::TChDirDialog(StreamableInit)’:
+../../../tvision/stddlg.h:1452:46: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+         TWindowInit( TChDirDialog::initFrame ) {}
+                                              ^
+../../../tvision/stddlg.h:1452:46: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/stddlg.h:1451:5: warning:   when initialized here [-Wreorder]
+     TChDirDialog( StreamableInit ) : TDialog( streamableInit ),
+     ^~~~~~~~~~~~
+../../../tvision/asm.cc: In member function ‘void TView::writeViewRec1(short int, short int, TView*, int)’:
+../../../tvision/asm.cc:748:22: warning: suggest parentheses around arithmetic in operand of ‘|’ [-Wparentheses]
+    ushort d = *src++ & 0xff | (shadowAttr << 8);
+               ~~~~~~~^~~~~~
+../../../tvision/colorsel.cc: In member function ‘void TColorSelector::colorChanged()’:
+../../../tvision/colorsel.cc:138:47: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+     message( owner, evBroadcast, msg, (void *)color );
+                                               ^~~~~
+../../../tvision/colorsel.cc: In member function ‘virtual void TColorDisplay::setColor(uchar*)’:
+../../../tvision/colorsel.cc:373:61: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+     message( owner, evBroadcast, cmColorSet, (void *)(*color) );
+                                                             ^
+../../../tvision/colorsel.cc: In member function ‘virtual void TColorItemList::focusItem(short int)’:
+../../../tvision/colorsel.cc:637:57: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+     message(owner,evBroadcast, cmSaveColorIndex, (void*)item);
+                                                         ^~~~
+../../../tvision/colorsel.cc:642:74: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+     message( owner, evBroadcast, cmNewColorIndex, (void *)(curItem->index));
+                                                                          ^
+../../../tvision/colorsel.cc: In constructor ‘TColorDialog::TColorDialog(TPalette*, TColorGroup*)’:
+../../../tvision/colorsel.cc:702:43: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+     TWindowInit( &TColorDialog::initFrame )
+                                           ^
+../../../tvision/colorsel.cc:702:43: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/colorsel.cc:696:1: warning:   when initialized here [-Wreorder]
+ TColorDialog::TColorDialog( TPalette *aPalette, TColorGroup *aGroups ):
+ ^~~~~~~~~~~~
+../../../tvision/colorsel.cc: In constructor ‘TColorDialog::TColorDialog(StreamableInit)’:
+../../../tvision/colorsel.cc:914:39: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+     TWindowInit( 0 /*streamableInit*/ )
+                                       ^
+../../../tvision/colorsel.cc:914:39: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/colorsel.cc:912:1: warning:   when initialized here [-Wreorder]
+ TColorDialog::TColorDialog( StreamableInit ) :
+ ^~~~~~~~~~~~
+../../../tvision/helpbase.cc: In destructor ‘virtual THelpFile::~THelpFile()’:
+../../../tvision/helpbase.cc:596:30: warning: ISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
+     size = stream->tellg() - 8;
+                              ^
+In file included from /usr/include/c++/8/iosfwd:40,
+                 from /usr/include/c++/8/ios:38,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from ../../../tvision/tobjstrm.h:414,
+                 from ../../../tvision/tv.h:635,
+                 from ../../../tvision/helpbase.cc:19:
+/usr/include/c++/8/bits/postypes.h:192:7: note: candidate 1: ‘std::fpos<_StateT> std::fpos<_StateT>::operator-(std::streamoff) const [with _StateT = __mbstate_t; std::streamoff = long int]’
+       operator-(streamoff __off) const
+       ^~~~~~~~
+../../../tvision/helpbase.cc:596:30: note: candidate 2: ‘operator-(std::streamoff {aka long int}, int)’ <built-in>
+     size = stream->tellg() - 8;
+                              ^
+../../../tvision/help.cc: In constructor ‘THelpWindow::THelpWindow(THelpFile*, ushort)’:
+../../../tvision/help.cc:258:44: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+        TWindowInit( &THelpWindow::initFrame)
+                                            ^
+../../../tvision/help.cc:258:44: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/help.cc:256:1: warning:   when initialized here [-Wreorder]
+ THelpWindow::THelpWindow( THelpFile *hFile, ushort context ):
+ ^~~~~~~~~~~
+../../../tvision/histlist.cc: In static member function ‘static void* HistRec::operator new(size_t)’:
+../../../tvision/histlist.cc:41:12: warning: ‘operator new’ must not return NULL unless it is declared ‘throw()’ (or -fcheck-new is in effect)
+     return 0;
+            ^
+../../../tvision/new.cc: In static member function ‘static void* TBufListEntry::operator new(size_t)’:
+../../../tvision/new.cc:48:12: warning: ‘operator new’ must not return NULL unless it is declared ‘throw()’ (or -fcheck-new is in effect)
+     return 0;
+            ^
+../../../tvision/new.cc: In function ‘void* allocBlock(size_t)’:
+../../../tvision/new.cc:148:7: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+     if( temp == 0 )
+       ^
+In file included from ../../../tvision/tv.h:675,
+                 from ../../../tvision/sall.cc:71:
+../../../tvision/stddlg.h: In constructor ‘TFileDialog::TFileDialog(StreamableInit)’:
+../../../tvision/stddlg.h:889:45: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+         TWindowInit( TFileDialog::initFrame ) {}
+                                             ^
+../../../tvision/stddlg.h:889:45: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/stddlg.h:888:5: warning:   when initialized here [-Wreorder]
+     TFileDialog( StreamableInit ) : TDialog ( streamableInit ),
+     ^~~~~~~~~~~
+../../../tvision/stddlg.h: In constructor ‘TChDirDialog::TChDirDialog(StreamableInit)’:
+../../../tvision/stddlg.h:1452:46: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+         TWindowInit( TChDirDialog::initFrame ) {}
+                                              ^
+../../../tvision/stddlg.h:1452:46: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/stddlg.h:1451:5: warning:   when initialized here [-Wreorder]
+     TChDirDialog( StreamableInit ) : TDialog( streamableInit ),
+     ^~~~~~~~~~~~
+In file included from ../../../tvision/tv.h:675,
+                 from ../../../tvision/stddlg.cc:22:
+../../../tvision/stddlg.h: In constructor ‘TFileDialog::TFileDialog(StreamableInit)’:
+../../../tvision/stddlg.h:889:45: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+         TWindowInit( TFileDialog::initFrame ) {}
+                                             ^
+../../../tvision/stddlg.h:889:45: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/stddlg.h:888:5: warning:   when initialized here [-Wreorder]
+     TFileDialog( StreamableInit ) : TDialog ( streamableInit ),
+     ^~~~~~~~~~~
+../../../tvision/system.cc: In static member function ‘static void TScreen::moveCursor(int, int)’:
+../../../tvision/system.cc:2225:33: warning: narrowing conversion of ‘x’ from ‘int’ to ‘unsigned char’ inside { } [-Wnarrowing]
+   unsigned char where[2] = {x, y};
+                                 ^
+../../../tvision/system.cc:2225:33: warning: narrowing conversion of ‘y’ from ‘int’ to ‘unsigned char’ inside { } [-Wnarrowing]
+In file included from ../../../tvision/tv.h:675,
+                 from ../../../tvision/tvtext.cc:43:
+../../../tvision/stddlg.h: In constructor ‘TFileDialog::TFileDialog(StreamableInit)’:
+../../../tvision/stddlg.h:889:45: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+         TWindowInit( TFileDialog::initFrame ) {}
+                                             ^
+../../../tvision/stddlg.h:889:45: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/stddlg.h:888:5: warning:   when initialized here [-Wreorder]
+     TFileDialog( StreamableInit ) : TDialog ( streamableInit ),
+     ^~~~~~~~~~~
+../../../tvision/stddlg.h: In constructor ‘TChDirDialog::TChDirDialog(StreamableInit)’:
+../../../tvision/stddlg.h:1452:46: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+         TWindowInit( TChDirDialog::initFrame ) {}
+                                              ^
+../../../tvision/stddlg.h:1452:46: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/stddlg.h:1451:5: warning:   when initialized here [-Wreorder]
+     TChDirDialog( StreamableInit ) : TDialog( streamableInit ),
+     ^~~~~~~~~~~~
+In file included from /usr/include/c++/8/backward/strstream:50,
+                 from ../../../tvhc/tvhc.cc:97:
+/usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+ #warning \
+  ^~~~~~~
+In file included from ../../../tvhc/tvhc.cc:90:
+../../../tvhc/tvhc.h:30:1: warning: ‘typedef’ was ignored in this declaration
+ typedef enum State { undefined, wrapping, notWrapping };
+ ^~~~~~~
+../../../tvhc/tvhc.cc: In function ‘void error(char*)’:
+../../../tvhc/tvhc.cc:213:26: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     prntMsg("Error", text);
+                          ^
+../../../tvhc/tvhc.cc: In function ‘void warning(char*)’:
+../../../tvhc/tvhc.cc:223:28: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     prntMsg("Warning", text);
+                            ^
+../../../tvhc/tvhc.cc: In function ‘void skipWhite(char*, int&)’:
+../../../tvhc/tvhc.cc:384:35: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+     while (i <= (int)strlen(line) && (line[i] == ' ') || (line[i] == 8))
+            ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+../../../tvhc/tvhc.cc: In function ‘TTopicDefinition* topicDefinition(char*, int&)’:
+../../../tvhc/tvhc.cc:465:42: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+         error("Expected topic definition");
+                                          ^
+../../../tvhc/tvhc.cc:477:41: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+                 error("Expected numeric");
+                                         ^
+../../../tvhc/tvhc.cc: In function ‘TTopicDefinition* topicHeader(char*)’:
+../../../tvhc/tvhc.cc:534:31: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+         error("TOPIC expected");
+                               ^
+../../../tvhc/tvhc.cc: In function ‘void addToBuffer(char*, Boolean)’:
+../../../tvhc/tvhc.cc:546:30: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+         error("Text too long");
+                              ^
+../../../tvhc/tvhc.cc: In function ‘void scanForCrossRefs(char*, int&, TCrossRefNode*&)’:
+../../../tvhc/tvhc.cc:630:58: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+                     error("Unterminated topic reference.");
+                                                          ^
+../../../tvhc/tvhc.cc: In function ‘TParagraph* readParagraph(std::fstream&, int&, TCrossRefNode*&)’:
+../../../tvhc/tvhc.cc:716:12: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+         if (state == undefined )
+            ^
+In file included from /usr/include/c++/8/backward/strstream:50,
+                 from ../../../demo/ascii.cc:35:
+/usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+ #warning \
+  ^~~~~~~
+In file included from ../../../demo/ascii.cc:38:
+../../../demo/ascii.h: In constructor ‘TAsciiChart::TAsciiChart(StreamableInit)’:
+../../../demo/ascii.h:108:30: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+        TWindowInit(&initFrame) { };
+                              ^
+../../../demo/ascii.h:108:30: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../demo/ascii.h:107:5: warning:   when initialized here [-Wreorder]
+     TAsciiChart( StreamableInit ) : TWindow(streamableInit),
+     ^~~~~~~~~~~
+../../../demo/ascii.cc: In member function ‘void TTable::charFocused()’:
+../../../demo/ascii.cc:104:41: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+       (void *) (cursor.x + 32 * cursor.y));
+                                         ^
+../../../demo/ascii.cc: In constructor ‘TAsciiChart::TAsciiChart()’:
+../../../demo/ascii.cc:272:42: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+     TWindowInit( &TAsciiChart::initFrame )
+                                          ^
+../../../demo/ascii.cc:272:42: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../demo/ascii.cc:270:1: warning:   when initialized here [-Wreorder]
+ TAsciiChart::TAsciiChart() :
+ ^~~~~~~~~~~
+In file included from /usr/include/c++/8/backward/strstream:50,
+                 from ../../../demo/calc.cc:35:
+/usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+ #warning \
+  ^~~~~~~
+In file included from ../../../demo/calc.cc:38:
+../../../demo/calc.h: In constructor ‘TCalculator::TCalculator(StreamableInit)’:
+../../../demo/calc.h:87:69: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+         TDialog(streamableInit), TWindowInit(&TCalculator::initFrame) { };
+                                                                     ^
+../../../demo/calc.h:87:69: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../demo/calc.h:86:5: warning:   when initialized here [-Wreorder]
+     TCalculator( StreamableInit ) :
+     ^~~~~~~~~~~
+../../../demo/calc.cc: At global scope:
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     };
+     ^
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc:303:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calc.cc: In constructor ‘TCalculator::TCalculator()’:
+../../../demo/calc.cc:326:42: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+     TWindowInit( &TCalculator::initFrame )
+                                          ^
+../../../demo/calc.cc:326:42: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../demo/calc.cc:324:1: warning:   when initialized here [-Wreorder]
+ TCalculator::TCalculator() :
+ ^~~~~~~~~~~
+In file included from /usr/include/c++/8/backward/strstream:50,
+                 from ../../../demo/calendar.cc:32:
+/usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+ #warning \
+  ^~~~~~~
+In file included from ../../../demo/calendar.cc:36:
+../../../demo/calendar.h: In constructor ‘TCalendarWindow::TCalendarWindow(StreamableInit)’:
+../../../demo/calendar.h:64:73: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+         TWindow(streamableInit), TWindowInit(&TCalendarWindow::initFrame) { };
+                                                                         ^
+../../../demo/calendar.h:64:73: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../demo/calendar.h:63:5: warning:   when initialized here [-Wreorder]
+     TCalendarWindow( StreamableInit ) :
+     ^~~~~~~~~~~~~~~
+../../../demo/calendar.cc: At global scope:
+../../../demo/calendar.cc:43:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ };
+ ^
+../../../demo/calendar.cc:43:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calendar.cc:43:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calendar.cc:43:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calendar.cc:43:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calendar.cc:43:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calendar.cc:43:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calendar.cc:43:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calendar.cc:43:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calendar.cc:43:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calendar.cc:43:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calendar.cc:43:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calendar.cc:43:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../demo/calendar.cc: In constructor ‘TCalendarWindow::TCalendarWindow()’:
+../../../demo/calendar.cc:277:46: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+     TWindowInit( &TCalendarWindow::initFrame )
+                                              ^
+../../../demo/calendar.cc:277:46: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../demo/calendar.cc:275:1: warning:   when initialized here [-Wreorder]
+ TCalendarWindow::TCalendarWindow() :
+ ^~~~~~~~~~~~~~~
+In file included from ../../../demo/fileview.cc:37:
+../../../demo/fileview.h: In member function ‘virtual void TLineCollection::freeItem(void*)’:
+../../../demo/fileview.h:30:46: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
+     virtual void  freeItem(void *p) { delete p; }
+                                              ^
+../../../demo/fileview.cc: In constructor ‘TFileWindow::TFileWindow(const char*)’:
+../../../demo/fileview.cc:172:42: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+     TWindowInit( &TFileWindow::initFrame )
+                                          ^
+../../../demo/fileview.cc:172:42: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../demo/fileview.cc:170:1: warning:   when initialized here [-Wreorder]
+ TFileWindow::TFileWindow( const char *fileName ) :
+ ^~~~~~~~~~~
+In file included from /usr/include/c++/8/backward/strstream:50,
+                 from ../../../demo/gadgets.cc:30:
+/usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+ #warning \
+  ^~~~~~~
+In file included from /usr/include/c++/8/backward/strstream:50,
+                 from ../../../demo/mousedlg.cc:35:
+/usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+ #warning \
+  ^~~~~~~
+../../../demo/mousedlg.cc: In constructor ‘TMouseDialog::TMouseDialog()’:
+../../../demo/mousedlg.cc:100:43: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+     TWindowInit( &TMouseDialog::initFrame )
+                                           ^
+../../../demo/mousedlg.cc:100:43: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../demo/mousedlg.cc:98:1: warning:   when initialized here [-Wreorder]
+ TMouseDialog::TMouseDialog() :
+ ^~~~~~~~~~~~
+../../../demo/mousedlg.cc:116:61: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     insert(new TClickTester(r, "Fast       Medium      Slow"));
+                                                             ^
+In file included from /usr/include/c++/8/backward/strstream:50,
+                 from ../../../demo/puzzle.cc:33:
+/usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+ #warning \
+  ^~~~~~~
+In file included from ../../../demo/puzzle.cc:38:
+../../../demo/puzzle.h: In constructor ‘TPuzzleWindow::TPuzzleWindow(StreamableInit)’:
+../../../demo/puzzle.h:71:71: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+         TWindow(streamableInit), TWindowInit(&TPuzzleWindow::initFrame) { };
+                                                                       ^
+../../../demo/puzzle.h:71:71: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../demo/puzzle.h:70:5: warning:   when initialized here [-Wreorder]
+     TPuzzleWindow( StreamableInit ) :
+     ^~~~~~~~~~~~~
+../../../demo/puzzle.cc: In member function ‘virtual void TPuzzleView::draw()’:
+../../../demo/puzzle.cc:139:75: warning: array subscript has type ‘char’ [-Wchar-subscripts]
+                 buf.moveStr( (short)(j*3), tmp, color[map[board[i][j]-'A']]);
+                                                                           ^
+../../../demo/puzzle.cc: At global scope:
+../../../demo/puzzle.cc:300:25: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ static char *solution = "ABCDEFGHIJKLMNO ";
+                         ^~~~~~~~~~~~~~~~~~
+../../../demo/puzzle.cc: In constructor ‘TPuzzleWindow::TPuzzleWindow()’:
+../../../demo/puzzle.cc:351:44: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+     TWindowInit( &TPuzzleWindow::initFrame )
+                                            ^
+../../../demo/puzzle.cc:351:44: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../demo/puzzle.cc:349:1: warning:   when initialized here [-Wreorder]
+ TPuzzleWindow::TPuzzleWindow() :
+ ^~~~~~~~~~~~~
+In file included from ../../../demo/tvdemo1.cc:35:
+../../../demo/fileview.h: In member function ‘virtual void TLineCollection::freeItem(void*)’:
+../../../demo/fileview.h:30:46: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
+     virtual void  freeItem(void *p) { delete p; }
+                                              ^
+In file included from ../../../demo/tvdemo1.cc:36:
+../../../demo/puzzle.h: In constructor ‘TPuzzleWindow::TPuzzleWindow(StreamableInit)’:
+../../../demo/puzzle.h:71:71: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+         TWindow(streamableInit), TWindowInit(&TPuzzleWindow::initFrame) { };
+                                                                       ^
+../../../demo/puzzle.h:71:71: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../demo/puzzle.h:70:5: warning:   when initialized here [-Wreorder]
+     TPuzzleWindow( StreamableInit ) :
+     ^~~~~~~~~~~~~
+In file included from ../../../tvision/tv.h:675,
+                 from ../../../demo/tvdemo2.cc:32:
+../../../tvision/stddlg.h: In constructor ‘TChDirDialog::TChDirDialog(StreamableInit)’:
+../../../tvision/stddlg.h:1452:46: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+         TWindowInit( TChDirDialog::initFrame ) {}
+                                              ^
+../../../tvision/stddlg.h:1452:46: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/stddlg.h:1451:5: warning:   when initialized here [-Wreorder]
+     TChDirDialog( StreamableInit ) : TDialog( streamableInit ),
+     ^~~~~~~~~~~~
+In file included from ../../../demo/tvdemo2.cc:37:
+../../../demo/ascii.h: In constructor ‘TAsciiChart::TAsciiChart(StreamableInit)’:
+../../../demo/ascii.h:108:30: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+        TWindowInit(&initFrame) { };
+                              ^
+../../../demo/ascii.h:108:30: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../demo/ascii.h:107:5: warning:   when initialized here [-Wreorder]
+     TAsciiChart( StreamableInit ) : TWindow(streamableInit),
+     ^~~~~~~~~~~
+In file included from ../../../demo/tvdemo2.cc:38:
+../../../demo/calendar.h: In constructor ‘TCalendarWindow::TCalendarWindow(StreamableInit)’:
+../../../demo/calendar.h:64:73: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+         TWindow(streamableInit), TWindowInit(&TCalendarWindow::initFrame) { };
+                                                                         ^
+../../../demo/calendar.h:64:73: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../demo/calendar.h:63:5: warning:   when initialized here [-Wreorder]
+     TCalendarWindow( StreamableInit ) :
+     ^~~~~~~~~~~~~~~
+In file included from ../../../demo/tvdemo2.cc:39:
+../../../demo/calc.h: In constructor ‘TCalculator::TCalculator(StreamableInit)’:
+../../../demo/calc.h:87:69: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+         TDialog(streamableInit), TWindowInit(&TCalculator::initFrame) { };
+                                                                     ^
+../../../demo/calc.h:87:69: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../demo/calc.h:86:5: warning:   when initialized here [-Wreorder]
+     TCalculator( StreamableInit ) :
+     ^~~~~~~~~~~
+../../../demo/tvdemo2.cc: In member function ‘virtual void TVDemo::handleEvent(TEvent&)’:
+../../../demo/tvdemo2.cc:89:29: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+                 openFile("*");
+                             ^
+In file included from ../../../tvision/tv.h:675,
+                 from ../../../demo/tvdemo3.cc:33:
+../../../tvision/stddlg.h: In constructor ‘TFileDialog::TFileDialog(StreamableInit)’:
+../../../tvision/stddlg.h:889:45: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+         TWindowInit( TFileDialog::initFrame ) {}
+                                             ^
+../../../tvision/stddlg.h:889:45: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/stddlg.h:888:5: warning:   when initialized here [-Wreorder]
+     TFileDialog( StreamableInit ) : TDialog ( streamableInit ),
+     ^~~~~~~~~~~
+In file included from ../../../demo/tvdemo3.cc:40:
+../../../demo/fileview.h: In member function ‘virtual void TLineCollection::freeItem(void*)’:
+../../../demo/fileview.h:30:46: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
+     virtual void  freeItem(void *p) { delete p; }
+                                              ^
+../../../demo/tvdemo3.cc: In static member function ‘static TMenuBar* TVDemo::initMenuBar(TRect)’:
+../../../demo/tvdemo3.cc:194:69: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+         *new TMenuItem( "~O~pen...", cmOpenCmd, kbF3, hcFOpen, "F3" ) +
+                                                                     ^
+../../../demo/tvdemo3.cc:198:68: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+         *new TMenuItem( "E~x~it", cmQuit, kbAltX, hcFExit, "Alt-X" );
+                                                                    ^
+../../../demo/tvdemo3.cc:202:85: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+         *new TMenuItem( "~R~esize/move", cmResize, kbCtrlF5, hcWSizeMove, "Ctrl-F5" ) +
+                                                                                     ^
+../../../demo/tvdemo3.cc:203:63: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+         *new TMenuItem( "~Z~oom", cmZoom, kbF5, hcWZoom, "F5" ) +
+                                                               ^
+../../../demo/tvdemo3.cc:204:63: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+         *new TMenuItem( "~N~ext", cmNext, kbF6, hcWNext, "F6" ) +
+                                                               ^
+../../../demo/tvdemo3.cc:205:73: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+         *new TMenuItem( "~C~lose", cmClose, kbAltF3, hcWClose, "Alt-F3" ) +
+                                                                         ^
+../../../tutorial/tvguid03.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
+../../../tutorial/tvguid03.cc:64:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~O~pen", cmMyFileOpen, kbF3, hcNoContext, "F3" )+
+                                                                             ^
+../../../tutorial/tvguid03.cc:65:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ew",  cmMyNewWin,   kbF4, hcNoContext, "F4" )+
+                                                                             ^
+../../../tutorial/tvguid03.cc:67:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X" )+
+                                                                            ^
+../../../tutorial/tvguid03.cc:69:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ext", cmNext,     kbF6, hcNoContext, "F6" )+
+                                                                           ^
+../../../tutorial/tvguid03.cc:70:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~Z~oom", cmZoom,     kbF5, hcNoContext, "F5" )
+                                                                           ^
+../../../tutorial/tvguid04.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
+../../../tutorial/tvguid04.cc:92:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~O~pen", cmMyFileOpen, kbF3, hcNoContext, "F3" )+
+                                                                             ^
+../../../tutorial/tvguid04.cc:93:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ew",  cmMyNewWin,   kbF4, hcNoContext, "F4" )+
+                                                                             ^
+../../../tutorial/tvguid04.cc:95:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X" )+
+                                                                            ^
+../../../tutorial/tvguid04.cc:97:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ext", cmNext,     kbF6, hcNoContext, "F6" )+
+                                                                           ^
+../../../tutorial/tvguid04.cc:98:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~Z~oom", cmZoom,     kbF5, hcNoContext, "F5" )
+                                                                           ^
+../../../tutorial/tvguid04.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
+../../../tutorial/tvguid04.cc:135:25: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+                         )
+                         ^
+../../../tutorial/tvguid04.cc:135:25: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tutorial/tvguid04.cc:132:1: warning:   when initialized here [-Wreorder]
+ TDemoWindow::TDemoWindow( const TRect& r, const char *aTitle, short aNumber):
+ ^~~~~~~~~~~
+../../../tutorial/tvguid05.cc: In member function ‘virtual void TInterior::draw()’:
+../../../tutorial/tvguid05.cc:74:18: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     char *hstr = "Hello World!";
+                  ^~~~~~~~~~~~~~
+../../../tutorial/tvguid05.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
+../../../tutorial/tvguid05.cc:111:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~O~pen", cmMyFileOpen, kbF3, hcNoContext, "F3" )+
+                                                                             ^
+../../../tutorial/tvguid05.cc:112:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ew",  cmMyNewWin,   kbF4, hcNoContext, "F4" )+
+                                                                             ^
+../../../tutorial/tvguid05.cc:114:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X" )+
+                                                                            ^
+../../../tutorial/tvguid05.cc:116:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ext", cmNext,     kbF6, hcNoContext, "F6" )+
+                                                                           ^
+../../../tutorial/tvguid05.cc:117:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~Z~oom", cmZoom,     kbF5, hcNoContext, "F5" )
+                                                                           ^
+../../../tutorial/tvguid05.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
+../../../tutorial/tvguid05.cc:155:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+          TWindowInit( &TDemoWindow::initFrame )
+                                               ^
+../../../tutorial/tvguid05.cc:155:47: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tutorial/tvguid05.cc:152:1: warning:   when initialized here [-Wreorder]
+ TDemoWindow::TDemoWindow( const TRect& bounds, const char *aTitle,
+ ^~~~~~~~~~~
+../../../tutorial/tvguid06.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
+../../../tutorial/tvguid06.cc:151:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~O~pen", cmMyFileOpen, kbF3, hcNoContext, "F3" )+
+                                                                             ^
+../../../tutorial/tvguid06.cc:152:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ew",  cmMyNewWin,   kbF4, hcNoContext, "F4" )+
+                                                                             ^
+../../../tutorial/tvguid06.cc:154:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X" )+
+                                                                            ^
+../../../tutorial/tvguid06.cc:156:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ext", cmNext,     kbF6, hcNoContext, "F6" )+
+                                                                           ^
+../../../tutorial/tvguid06.cc:157:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~Z~oom", cmZoom,     kbF5, hcNoContext, "F5" )
+                                                                           ^
+../../../tutorial/tvguid06.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
+../../../tutorial/tvguid06.cc:195:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+          TWindowInit( &TDemoWindow::initFrame )
+                                               ^
+../../../tutorial/tvguid06.cc:195:47: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tutorial/tvguid06.cc:192:1: warning:   when initialized here [-Wreorder]
+ TDemoWindow::TDemoWindow( const TRect& bounds, const char *aTitle,
+ ^~~~~~~~~~~
+../../../tutorial/tvguid07.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
+../../../tutorial/tvguid07.cc:161:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~O~pen", cmMyFileOpen, kbF3, hcNoContext, "F3" )+
+                                                                             ^
+../../../tutorial/tvguid07.cc:162:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ew",  cmMyNewWin,   kbF4, hcNoContext, "F4" )+
+                                                                             ^
+../../../tutorial/tvguid07.cc:164:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X" )+
+                                                                            ^
+../../../tutorial/tvguid07.cc:166:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ext", cmNext,     kbF6, hcNoContext, "F6" )+
+                                                                           ^
+../../../tutorial/tvguid07.cc:167:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~Z~oom", cmZoom,     kbF5, hcNoContext, "F5" )
+                                                                           ^
+../../../tutorial/tvguid07.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
+../../../tutorial/tvguid07.cc:205:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+          TWindowInit( &TDemoWindow::initFrame )
+                                               ^
+../../../tutorial/tvguid07.cc:205:47: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tutorial/tvguid07.cc:202:1: warning:   when initialized here [-Wreorder]
+ TDemoWindow::TDemoWindow( const TRect& bounds, const char *aTitle,
+ ^~~~~~~~~~~
+../../../tutorial/tvguid08.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
+../../../tutorial/tvguid08.cc:187:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~O~pen", cmMyFileOpen, kbF3, hcNoContext, "F3" )+
+                                                                             ^
+../../../tutorial/tvguid08.cc:188:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ew",  cmMyNewWin,   kbF4, hcNoContext, "F4" )+
+                                                                             ^
+../../../tutorial/tvguid08.cc:190:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X" )+
+                                                                            ^
+../../../tutorial/tvguid08.cc:192:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ext", cmNext,     kbF6, hcNoContext, "F6" )+
+                                                                           ^
+../../../tutorial/tvguid08.cc:193:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~Z~oom", cmZoom,     kbF5, hcNoContext, "F5" )
+                                                                           ^
+../../../tutorial/tvguid08.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
+../../../tutorial/tvguid08.cc:229:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+          TWindowInit( &TDemoWindow::initFrame )
+                                               ^
+../../../tutorial/tvguid08.cc:229:47: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tutorial/tvguid08.cc:226:1: warning:   when initialized here [-Wreorder]
+ TDemoWindow::TDemoWindow( const TRect& bounds, const char *aTitle,
+ ^~~~~~~~~~~
+../../../tutorial/tvguid09.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
+../../../tutorial/tvguid09.cc:150:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+          TWindowInit( &TDemoWindow::initFrame )
+                                               ^
+../../../tutorial/tvguid09.cc:150:47: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tutorial/tvguid09.cc:147:1: warning:   when initialized here [-Wreorder]
+ TDemoWindow::TDemoWindow( const TRect& bounds, const char *aTitle,
+ ^~~~~~~~~~~
+../../../tutorial/tvguid09.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
+../../../tutorial/tvguid09.cc:228:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~O~pen", cmMyFileOpen, kbF3, hcNoContext, "F3" )+
+                                                                             ^
+../../../tutorial/tvguid09.cc:229:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ew",  cmMyNewWin,   kbF4, hcNoContext, "F4" )+
+                                                                             ^
+../../../tutorial/tvguid09.cc:231:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X" )+
+                                                                            ^
+../../../tutorial/tvguid09.cc:233:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ext", cmNext,     kbF6, hcNoContext, "F6" )+
+                                                                           ^
+../../../tutorial/tvguid09.cc:234:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~Z~oom", cmZoom,     kbF5, hcNoContext, "F5" )
+                                                                           ^
+../../../tutorial/tvguid10.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
+../../../tutorial/tvguid10.cc:156:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+          TWindowInit( &TDemoWindow::initFrame )
+                                               ^
+../../../tutorial/tvguid10.cc:156:47: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tutorial/tvguid10.cc:153:1: warning:   when initialized here [-Wreorder]
+ TDemoWindow::TDemoWindow( const TRect& bounds, const char *aTitle,
+ ^~~~~~~~~~~
+../../../tutorial/tvguid10.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
+../../../tutorial/tvguid10.cc:240:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~O~pen", cmMyFileOpen, kbF3, hcNoContext, "F3" )+
+                                                                             ^
+../../../tutorial/tvguid10.cc:241:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ew",  cmMyNewWin,   kbF4, hcNoContext, "F4" )+
+                                                                             ^
+../../../tutorial/tvguid10.cc:243:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X" )+
+                                                                            ^
+../../../tutorial/tvguid10.cc:245:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ext", cmNext,     kbF6, hcNoContext, "F6" )+
+                                                                           ^
+../../../tutorial/tvguid10.cc:246:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~Z~oom", cmZoom,     kbF5, hcNoContext, "F5" )
+                                                                           ^
+../../../tutorial/tvguid11.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
+../../../tutorial/tvguid11.cc:163:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+          TWindowInit( &TDemoWindow::initFrame )
+                                               ^
+../../../tutorial/tvguid11.cc:163:47: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tutorial/tvguid11.cc:160:1: warning:   when initialized here [-Wreorder]
+ TDemoWindow::TDemoWindow( const TRect& bounds, const char *aTitle,
+ ^~~~~~~~~~~
+../../../tutorial/tvguid11.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
+../../../tutorial/tvguid11.cc:249:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~O~pen", cmMyFileOpen, kbF3, hcNoContext, "F3" )+
+                                                                             ^
+../../../tutorial/tvguid11.cc:250:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ew",  cmMyNewWin,   kbF4, hcNoContext, "F4" )+
+                                                                             ^
+../../../tutorial/tvguid11.cc:252:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X" )+
+                                                                            ^
+../../../tutorial/tvguid11.cc:254:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ext", cmNext,     kbF6, hcNoContext, "F6" )+
+                                                                           ^
+../../../tutorial/tvguid11.cc:255:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~Z~oom", cmZoom,     kbF5, hcNoContext, "F5" )+
+                                                                           ^
+../../../tutorial/tvguid11.cc:256:78: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~D~ialog", cmNewDialog, kbF2, hcNoContext, "F2" )
+                                                                              ^
+../../../tutorial/tvguid12.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
+../../../tutorial/tvguid12.cc:161:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+          TWindowInit( &TDemoWindow::initFrame )
+                                               ^
+../../../tutorial/tvguid12.cc:161:47: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tutorial/tvguid12.cc:158:1: warning:   when initialized here [-Wreorder]
+ TDemoWindow::TDemoWindow( const TRect& bounds, const char *aTitle,
+ ^~~~~~~~~~~
+../../../tutorial/tvguid12.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
+../../../tutorial/tvguid12.cc:247:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~O~pen", cmMyFileOpen, kbF3, hcNoContext, "F3" )+
+                                                                             ^
+../../../tutorial/tvguid12.cc:248:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ew",  cmMyNewWin,   kbF4, hcNoContext, "F4" )+
+                                                                             ^
+../../../tutorial/tvguid12.cc:250:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X" )+
+                                                                            ^
+../../../tutorial/tvguid12.cc:252:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ext", cmNext,     kbF6, hcNoContext, "F6" )+
+                                                                           ^
+../../../tutorial/tvguid12.cc:253:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~Z~oom", cmZoom,     kbF5, hcNoContext, "F5" )+
+                                                                           ^
+../../../tutorial/tvguid12.cc:254:78: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~D~ialog", cmNewDialog, kbF2, hcNoContext, "F2" )
+                                                                              ^
+../../../tutorial/tvguid13.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
+../../../tutorial/tvguid13.cc:165:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+          TWindowInit( &TDemoWindow::initFrame )
+                                               ^
+../../../tutorial/tvguid13.cc:165:47: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tutorial/tvguid13.cc:162:1: warning:   when initialized here [-Wreorder]
+ TDemoWindow::TDemoWindow( const TRect& bounds, const char *aTitle,
+ ^~~~~~~~~~~
+../../../tutorial/tvguid13.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
+../../../tutorial/tvguid13.cc:251:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~O~pen", cmMyFileOpen, kbF3, hcNoContext, "F3" )+
+                                                                             ^
+../../../tutorial/tvguid13.cc:252:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ew",  cmMyNewWin,   kbF4, hcNoContext, "F4" )+
+                                                                             ^
+../../../tutorial/tvguid13.cc:254:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X" )+
+                                                                            ^
+../../../tutorial/tvguid13.cc:256:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ext", cmNext,     kbF6, hcNoContext, "F6" )+
+                                                                           ^
+../../../tutorial/tvguid13.cc:257:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~Z~oom", cmZoom,     kbF5, hcNoContext, "F5" )+
+                                                                           ^
+../../../tutorial/tvguid13.cc:258:78: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~D~ialog", cmNewDialog, kbF2, hcNoContext, "F2" )
+                                                                              ^
+../../../tutorial/tvguid14.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
+../../../tutorial/tvguid14.cc:167:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+          TWindowInit( &TDemoWindow::initFrame )
+                                               ^
+../../../tutorial/tvguid14.cc:167:47: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tutorial/tvguid14.cc:164:1: warning:   when initialized here [-Wreorder]
+ TDemoWindow::TDemoWindow( const TRect& bounds, const char *aTitle,
+ ^~~~~~~~~~~
+../../../tutorial/tvguid14.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
+../../../tutorial/tvguid14.cc:253:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~O~pen", cmMyFileOpen, kbF3, hcNoContext, "F3" )+
+                                                                             ^
+../../../tutorial/tvguid14.cc:254:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ew",  cmMyNewWin,   kbF4, hcNoContext, "F4" )+
+                                                                             ^
+../../../tutorial/tvguid14.cc:256:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X" )+
+                                                                            ^
+../../../tutorial/tvguid14.cc:258:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ext", cmNext,     kbF6, hcNoContext, "F6" )+
+                                                                           ^
+../../../tutorial/tvguid14.cc:259:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~Z~oom", cmZoom,     kbF5, hcNoContext, "F5" )+
+                                                                           ^
+../../../tutorial/tvguid14.cc:260:78: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~D~ialog", cmNewDialog, kbF2, hcNoContext, "F2" )
+                                                                              ^
+../../../tutorial/tvguid15.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
+../../../tutorial/tvguid15.cc:168:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+          TWindowInit( &TDemoWindow::initFrame )
+                                               ^
+../../../tutorial/tvguid15.cc:168:47: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tutorial/tvguid15.cc:165:1: warning:   when initialized here [-Wreorder]
+ TDemoWindow::TDemoWindow( const TRect& bounds, const char *aTitle,
+ ^~~~~~~~~~~
+../../../tutorial/tvguid15.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
+../../../tutorial/tvguid15.cc:254:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~O~pen", cmMyFileOpen, kbF3, hcNoContext, "F3" )+
+                                                                             ^
+../../../tutorial/tvguid15.cc:255:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ew",  cmMyNewWin,   kbF4, hcNoContext, "F4" )+
+                                                                             ^
+../../../tutorial/tvguid15.cc:257:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X" )+
+                                                                            ^
+../../../tutorial/tvguid15.cc:259:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ext", cmNext,     kbF6, hcNoContext, "F6" )+
+                                                                           ^
+../../../tutorial/tvguid15.cc:260:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~Z~oom", cmZoom,     kbF5, hcNoContext, "F5" )+
+                                                                           ^
+../../../tutorial/tvguid15.cc:261:78: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~D~ialog", cmNewDialog, kbF2, hcNoContext, "F2" )
+                                                                              ^
+../../../tutorial/tvguid16.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
+../../../tutorial/tvguid16.cc:178:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+          TWindowInit( &TDemoWindow::initFrame )
+                                               ^
+../../../tutorial/tvguid16.cc:178:47: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tutorial/tvguid16.cc:175:1: warning:   when initialized here [-Wreorder]
+ TDemoWindow::TDemoWindow( const TRect& bounds, const char *aTitle,
+ ^~~~~~~~~~~
+../../../tutorial/tvguid16.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
+../../../tutorial/tvguid16.cc:276:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~O~pen", cmMyFileOpen, kbF3, hcNoContext, "F3" )+
+                                                                             ^
+../../../tutorial/tvguid16.cc:277:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ew",  cmMyNewWin,   kbF4, hcNoContext, "F4" )+
+                                                                             ^
+../../../tutorial/tvguid16.cc:279:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X" )+
+                                                                            ^
+../../../tutorial/tvguid16.cc:281:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ext", cmNext,     kbF6, hcNoContext, "F6" )+
+                                                                           ^
+../../../tutorial/tvguid16.cc:282:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~Z~oom", cmZoom,     kbF5, hcNoContext, "F5" )+
+                                                                           ^
+../../../tutorial/tvguid16.cc:283:78: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~D~ialog", cmNewDialog, kbF2, hcNoContext, "F2" )
+                                                                              ^
+../../../tutorial/listbox.cc: In member function ‘void TMyApp::newDialog()’:
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   };
+   ^
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/listbox.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
+../../../tutorial/listbox.cc:137:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X" )+
+                                                                            ^
+../../../tutorial/listbox.cc:139:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~N~ext", cmNext,     kbF6, hcNoContext, "F6" )+
+                                                                           ^
+../../../tutorial/listbox.cc:140:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~Z~oom", cmZoom,     kbF5, hcNoContext, "F5" )+
+                                                                           ^
+../../../tutorial/listbox.cc:141:78: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             *new TMenuItem( "~D~ialog", cmNewDialog, kbF2, hcNoContext, "F2" )
+                                                                              ^
+../../../tutorial/load.cc: In constructor ‘TLoadWindow::TLoadWindow(int, int)’:
+../../../tutorial/load.cc:91:50: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+  TWindowInit(&TLoadWindow::initFrame), oldTime(-1)
+                                                  ^
+../../../tutorial/load.cc:91:50: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tutorial/load.cc:89:1: warning:   when initialized here [-Wreorder]
+ TLoadWindow::TLoadWindow(int x, int y):
+ ^~~~~~~~~~~
+../../../tutorial/load.cc: In static member function ‘static TMenuBar* myApp::initMenuBar(TRect)’:
+../../../tutorial/load.cc:234:74: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   *new TMenuItem("System ~l~oad", cmNewLoad, kbAltL, hcNoContext, "Alt-L") +
+                                                                          ^
+../../../tutorial/load.cc:236:64: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   *new TMenuItem("E~x~it", cmQuit, kbAltX, hcNoContext, "Alt-X");
+                                                                ^
+../../../tutorial/load.cc:238:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   *new TMenuItem("~R~esize/move", cmResize, kbCtrlF5, hcNoContext, "Ctrl-F5") +
+                                                                             ^
+../../../tutorial/load.cc:239:59: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   *new TMenuItem("~Z~oom", cmZoom, kbF5, hcNoContext, "F5") +
+                                                           ^
+../../../tutorial/load.cc:240:59: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   *new TMenuItem("~N~ext", cmNext, kbF6, hcNoContext, "F6") +
+                                                           ^
+../../../tutorial/load.cc:241:68: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   *new TMenuItem("~C~lose", cmClose, kbAltF3, hcNoContext, "Alt-F3") +
+                                                                    ^
+../../../tutorial/nomenus.cc: In constructor ‘TMyDeskTop::TMyDeskTop(const TRect&)’:
+../../../tutorial/nomenus.cc:63:60: warning: base ‘TDeskTop’ will be initialized after [-Wreorder]
+     TDeskTop(bounds), TDeskInit(&TMyDeskTop::initBackground)
+                                                            ^
+../../../tutorial/nomenus.cc:63:60: warning:   base ‘TDeskInit’ [-Wreorder]
+../../../tutorial/nomenus.cc:62:1: warning:   when initialized here [-Wreorder]
+ TMyDeskTop::TMyDeskTop(const TRect& bounds):
+ ^~~~~~~~~~
+../../../tutorial/nomenus.cc: In member function ‘ushort TMyApp::doWork()’:
+../../../tutorial/nomenus.cc:184:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from ../../../tvision/tv.h:675,
+                 from ../../../tutorial/tvedit.cc:35:
+../../../tvision/stddlg.h: In constructor ‘TFileDialog::TFileDialog(StreamableInit)’:
+../../../tvision/stddlg.h:889:45: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+         TWindowInit( TFileDialog::initFrame ) {}
+                                             ^
+../../../tvision/stddlg.h:889:45: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/stddlg.h:888:5: warning:   when initialized here [-Wreorder]
+     TFileDialog( StreamableInit ) : TDialog ( streamableInit ),
+     ^~~~~~~~~~~
+../../../tvision/stddlg.h: In constructor ‘TChDirDialog::TChDirDialog(StreamableInit)’:
+../../../tvision/stddlg.h:1452:46: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+         TWindowInit( TChDirDialog::initFrame ) {}
+                                              ^
+../../../tvision/stddlg.h:1452:46: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tvision/stddlg.h:1451:5: warning:   when initialized here [-Wreorder]
+     TChDirDialog( StreamableInit ) : TDialog( streamableInit ),
+     ^~~~~~~~~~~~
+../../../tutorial/tvedit.cc: In member function ‘virtual void TVDemo::handleEvent(TEvent&)’:
+../../../tutorial/tvedit.cc:291:14: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  openFile("*");
+              ^
+../../../tutorial/tvedit.cc: In static member function ‘static TMenuBar* TVDemo::initMenuBar(TRect)’:
+../../../tutorial/tvedit.cc:349:64: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~O~pen...", cmOpen, kbF3, hcNoContext, "F3") +
+                                                                ^
+../../../tutorial/tvedit.cc:350:60: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~N~ew", cmNew, kbNoKey, hcNoContext, "") +
+                                                            ^
+../../../tutorial/tvedit.cc:351:61: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~S~ave", cmSave, kbF2, hcNoContext, "F2") +
+                                                             ^
+../../../tutorial/tvedit.cc:352:70: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("S~a~ve as...", cmSaveAs, kbNoKey, hcNoContext, "") +
+                                                                      ^
+../../../tutorial/tvedit.cc:354:72: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~C~hange dir...", cmChDir, kbNoKey, hcNoContext, "") +
+                                                                        ^
+../../../tutorial/tvedit.cc:355:71: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~D~OS shell", cmDosShell, kbNoKey, hcNoContext, "") +
+                                                                       ^
+../../../tutorial/tvedit.cc:356:66: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("E~x~it", cmQuit, kbAltX, hcNoContext, "Alt-X");
+                                                                  ^
+../../../tutorial/tvedit.cc:359:62: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~U~ndo", cmUndo, kbNoKey, hcNoContext, "") +
+                                                              ^
+../../../tutorial/tvedit.cc:361:72: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("Cu~t~", cmCut, kbShiftDel, hcNoContext, "Shift-Del") +
+                                                                        ^
+../../../tutorial/tvedit.cc:362:72: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~C~opy", cmCopy, kbCtrlIns, hcNoContext, "Ctrl-Ins") +
+                                                                        ^
+../../../tutorial/tvedit.cc:363:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~P~aste", cmPaste, kbShiftIns, hcNoContext, "Shift-Ins") +
+                                                                            ^
+../../../tutorial/tvedit.cc:364:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~S~how clipboard", cmShowClip, kbNoKey, hcNoContext, "") +
+                                                                            ^
+../../../tutorial/tvedit.cc:366:74: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~C~lear", cmClear, kbCtrlDel, hcNoContext, "Ctrl-Del");
+                                                                          ^
+../../../tutorial/tvedit.cc:374:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~S~ize/move", cmResize, kbCtrlF5, hcNoContext, "Ctrl-F5") +
+                                                                             ^
+../../../tutorial/tvedit.cc:375:61: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~Z~oom", cmZoom, kbF5, hcNoContext, "F5") +
+                                                             ^
+../../../tutorial/tvedit.cc:376:61: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~N~ext", cmNext, kbF6, hcNoContext, "F6") +
+                                                             ^
+../../../tutorial/tvedit.cc:377:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~P~revious", cmPrev, kbShiftF6, hcNoContext, "Shift-F6") +
+                                                                            ^
+../../../tutorial/tvedit.cc:378:70: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~C~lose", cmClose, kbAltF3, hcNoContext, "Alt-F3") +
+                                                                      ^
+../../../tutorial/tvedit.cc: In static member function ‘static ushort TVDemo::doEditorDialog(int, ...)’:
+../../../tutorial/tvedit.cc:238:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../../../tutorial/tvlife.cc: In constructor ‘TLifeInterior::TLifeInterior(TRect&)’:
+../../../tutorial/tvlife.cc:49:9: warning: ‘TLifeInterior::board’ will be initialized after [-Wreorder]
+  uchar* board;
+         ^~~~~
+../../../tutorial/tvlife.cc:48:6: warning:   ‘int TLifeInterior::running’ [-Wreorder]
+  int running;
+      ^~~~~~~
+../../../tutorial/tvlife.cc:466:1: warning:   when initialized here [-Wreorder]
+ TLifeInterior::TLifeInterior(TRect& bounds): TView(bounds), board(0),
+ ^~~~~~~~~~~~~
+../../../tutorial/tvlife.cc: In constructor ‘TLifeWindow::TLifeWindow(TRect&, char*, int)’:
+../../../tutorial/tvlife.cc:753:64: warning: base ‘TWindow’ will be initialized after [-Wreorder]
+  TWindow(bounds, str, num), TWindowInit(&TLifeWindow::initFrame)
+                                                                ^
+../../../tutorial/tvlife.cc:753:64: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tutorial/tvlife.cc:752:1: warning:   when initialized here [-Wreorder]
+ TLifeWindow::TLifeWindow(TRect& bounds, char* str, int num):
+ ^~~~~~~~~~~
+../../../tutorial/tvlife.cc: In member function ‘void TMyApp::createLifeWindow()’:
+../../../tutorial/tvlife.cc:795:51: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  TView *w = validView(new TLifeWindow(r, "Life", 0));
+                                                   ^
+../../../tutorial/tvlife.cc: In member function ‘TCommandSet TMyApp::getCommands()’:
+../../../tutorial/tvlife.cc:809:20: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
+  for (int i = 0; i < NPATS; i++) //scan pattern commands
+                    ^
+../../../tutorial/tvlife.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
+../../../tutorial/tvlife.cc:865:70: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~L~ife window", cmCreate, kbF9, hcNoContext, "F9") +
+                                                                      ^
+../../../tutorial/tvlife.cc:867:66: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("E~x~it", cmQuit, kbAltX, hcNoContext, "Alt-X");
+                                                                  ^
+../../../tutorial/tvlife.cc:876:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~S~ize/move", cmResize, kbCtrlF5, hcNoContext, "Ctrl-F5") +
+                                                                             ^
+../../../tutorial/tvlife.cc:877:61: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~Z~oom", cmZoom, kbF5, hcNoContext, "F5") +
+                                                             ^
+../../../tutorial/tvlife.cc:878:61: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~N~ext", cmNext, kbF6, hcNoContext, "F6") +
+                                                             ^
+../../../tutorial/tvlife.cc:879:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~P~revious", cmPrev, kbShiftF6, hcNoContext, "Shift-F6") +
+                                                                            ^
+../../../tutorial/tvlife.cc:880:70: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     *new TMenuItem("~C~lose", cmClose, kbAltF3, hcNoContext, "Alt-F3") +
+                                                                      ^
+../../../tutorial/validator.cc: In constructor ‘MyDialog::MyDialog()’:
+../../../tutorial/validator.cc:82:35: warning: base ‘TDialog’ will be initialized after [-Wreorder]
+  TWindowInit( &TDialog::initFrame )
+                                   ^
+../../../tutorial/validator.cc:82:35: warning:   base ‘TWindowInit’ [-Wreorder]
+../../../tutorial/validator.cc:80:1: warning:   when initialized here [-Wreorder]
+ MyDialog::MyDialog():
+ ^~~~~~~~
+../../../tutorial/validator.cc:85:14: warning: unused variable ‘bar’ [-Wunused-variable]
+  TScrollBar *bar;
+              ^~~
