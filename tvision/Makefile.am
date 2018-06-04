@@ -1,6 +1,6 @@
 lib_LTLIBRARIES		= libtvision.la
 
-libtvision_la_LDFLAGS	= -version-info 0:7:0
+libtvision_la_LDFLAGS	= -version-info 0:8:0
 libtvision_la_LIBADD	= $(SCREEN_LIB)
 libtvision_la_CPPFLAGS	= -I$(top_srcdir)/tvision
 
