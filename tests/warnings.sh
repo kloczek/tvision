@@ -10,7 +10,7 @@ cd warnings
 LDFLAGS="-Wl,--as-needed -flto -fuse-linker-plugin" \
 CXXFLAGS="-Wall" \
 AR="gcc-ar" RANLIB="gcc-ranlib" NM="gcc-nm" \
-../../configure --quiet
+../../configure --quiet --enable-maintainer-mode
 echo make
 make >/dev/null 2> >(tee ../warnings.err >&2)
 cd ..
