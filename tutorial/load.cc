@@ -87,8 +87,9 @@ public:
 };
 
 TLoadWindow::TLoadWindow(int x, int y):
+	TWindowInit(&TLoadWindow::initFrame),
 	TWindow(TRect(x, y, x + minW, y + minH), "System load", wnNoNumber),
-	TWindowInit(&TLoadWindow::initFrame), oldTime(-1)
+	oldTime(-1)
 {
 	options |= ofTileable;
 	for (int i = 0; i < count; i++)

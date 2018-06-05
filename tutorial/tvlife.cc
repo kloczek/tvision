@@ -463,8 +463,10 @@ static int patterns[][2 * NUMPTS + 1] =
 
 #define NPATS (sizeof patterns / sizeof patterns[0])
 
-TLifeInterior::TLifeInterior(TRect& bounds): TView(bounds), board(0),
-	running(0)
+TLifeInterior::TLifeInterior(TRect& bounds):
+	TView(bounds),
+	running(0),
+	board(0)
 {
 	eventMask = evMouseDown | evKeyDown | evCommand | evBroadcast;
 	growMode = gfGrowHiX | gfGrowHiY;
@@ -750,7 +752,8 @@ void TLifeInterior::setState(ushort aState, Boolean enable)
 }
 
 TLifeWindow::TLifeWindow(TRect& bounds, char* str, int num):
-	TWindow(bounds, str, num), TWindowInit(&TLifeWindow::initFrame)
+	TWindowInit(&TLifeWindow::initFrame),
+	TWindow(bounds, str, num)
 {
 	options |= ofFirstClick | ofTileable;
 

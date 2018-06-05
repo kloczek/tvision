@@ -32,8 +32,8 @@
 #include <unistd.h>
 
 TChDirDialog::TChDirDialog( ushort opts, ushort histId ) :
-    TDialog( TRect( 16, 2, 64, 20 ), changeDirTitle ),
-    TWindowInit( &TChDirDialog::initFrame )
+    TWindowInit( &TChDirDialog::initFrame ),
+    TDialog( TRect( 16, 2, 64, 20 ), changeDirTitle )
 {
     options |= ofCentered;
 

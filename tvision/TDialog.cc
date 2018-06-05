@@ -20,8 +20,8 @@
 
 
 TDialog::TDialog( const TRect& bounds, const char *aTitle ) :
-    TWindow( bounds, aTitle, wnNoNumber ),
-    TWindowInit( &TDialog::initFrame )
+    TWindowInit( &TDialog::initFrame ),
+    TWindow( bounds, aTitle, wnNoNumber )
 {
    growMode = 0;
    flags = wfMove | wfClose;
@@ -105,8 +105,8 @@ TStreamable *TDialog::build()
 }
 
 TDialog::TDialog( StreamableInit ) :
-    TWindow( streamableInit ),
-    TWindowInit( 0 )
+    TWindowInit( 0 ),
+    TWindow( streamableInit )
 {
 }
 

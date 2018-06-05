@@ -885,8 +885,9 @@ protected:
     /**
      * Undocumented.
      */
-    TFileDialog( StreamableInit ) : TDialog ( streamableInit ),
-        TWindowInit( TFileDialog::initFrame ) {}
+    TFileDialog( StreamableInit ) :
+        TWindowInit( TFileDialog::initFrame ),
+        TDialog ( streamableInit ) {}
     /**
      * Writes to the output stream `os'.
      */
@@ -1448,8 +1449,9 @@ protected:
      *
      * Used to recover the view from a stream.
      */
-    TChDirDialog( StreamableInit ) : TDialog( streamableInit ),
-        TWindowInit( TChDirDialog::initFrame ) {}
+    TChDirDialog( StreamableInit ) : 
+        TWindowInit( TChDirDialog::initFrame ), 
+        TDialog( streamableInit ) {}
     /**
      * Used to store the view in a stream.
      * Writes to the output stream `os'.

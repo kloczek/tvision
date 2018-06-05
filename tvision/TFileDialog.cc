@@ -44,8 +44,8 @@ TFileDialog::TFileDialog( const char *aWildCard,
                           ushort aOptions,
                           uchar histId
                         ) :
-    TDialog( TRect( 15, 1, 64, 20 ), aTitle ),
     TWindowInit( &TFileDialog::initFrame ),
+    TDialog( TRect( 15, 1, 64, 20 ), aTitle ),
     directory( newStr("") )
 {
     options |= ofCentered;

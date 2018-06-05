@@ -1,4 +1,3 @@
-    180 -Wreorder
      27 -Wwrite-strings
       8 -Wcpp
       6 -Wint-to-pointer-cast
@@ -11,63 +10,13 @@
       1 -Wchar-subscripts
 
 ----------------------------------------------------------------
-In file included from ../../../tvision/tv.h:675,
-                 from ../../../tvision/TChDirDialog.cc:27:
-../../../tvision/stddlg.h: In constructor ‘TChDirDialog::TChDirDialog(StreamableInit)’:
-../../../tvision/stddlg.h:1452:46: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tvision/stddlg.h:1452:46: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/stddlg.h:1451:5: warning:   when initialized here [-Wreorder]
-../../../tvision/TChDirDialog.cc: In constructor ‘TChDirDialog::TChDirDialog(ushort, ushort)’:
-../../../tvision/TChDirDialog.cc:36:43: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tvision/TChDirDialog.cc:36:43: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/TChDirDialog.cc:34:1: warning:   when initialized here [-Wreorder]
 ../../../tvision/TCollection.cc: In member function ‘virtual void TNSCollection::freeItem(void*)’:
 ../../../tvision/TCollection.cc:155:12: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
-../../../tvision/TDeskTop.cc: In constructor ‘TDeskTop::TDeskTop(const TRect&)’:
-../../../tvision/TDeskTop.cc:30:42: warning: base ‘TGroup’ will be initialized after [-Wreorder]
-../../../tvision/TDeskTop.cc:30:42: warning:   base ‘TDeskInit’ [-Wreorder]
-../../../tvision/TDeskTop.cc:28:1: warning:   when initialized here [-Wreorder]
-../../../tvision/TDeskTop.cc: In constructor ‘TDeskTop::TDeskTop(StreamableInit)’:
-../../../tvision/TDeskTop.cc:253:37: warning: base ‘TGroup’ will be initialized after [-Wreorder]
-../../../tvision/TDeskTop.cc:253:37: warning:   base ‘TDeskInit’ [-Wreorder]
-../../../tvision/TDeskTop.cc:251:1: warning:   when initialized here [-Wreorder]
-../../../tvision/TDialog.cc: In constructor ‘TDialog::TDialog(const TRect&, const char*)’:
-../../../tvision/TDialog.cc:24:38: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tvision/TDialog.cc:24:38: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/TDialog.cc:22:1: warning:   when initialized here [-Wreorder]
-../../../tvision/TDialog.cc: In constructor ‘TDialog::TDialog(StreamableInit)’:
-../../../tvision/TDialog.cc:109:20: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tvision/TDialog.cc:109:20: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/TDialog.cc:107:1: warning:   when initialized here [-Wreorder]
-In file included from ../../../tvision/tv.h:675,
-                 from ../../../tvision/TDirListBox.cc:18:
-../../../tvision/stddlg.h: In constructor ‘TChDirDialog::TChDirDialog(StreamableInit)’:
-../../../tvision/stddlg.h:1452:46: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tvision/stddlg.h:1452:46: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/stddlg.h:1451:5: warning:   when initialized here [-Wreorder]
 ../../../tvision/TDirListBox.cc: In member function ‘void TDirListBox::showDirs(TDirCollection*)’:
 ../../../tvision/TDirListBox.cc:117:16: warning: ‘sprintf’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
 ../../../tvision/TDirListBox.cc:117:9: note: ‘sprintf’ output between 2 and 4097 bytes into a destination of size 4096
 ../../../tvision/TDirListBox.cc:129:18: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
 ../../../tvision/TDirListBox.cc:129:11: note: ‘sprintf’ output between 1 and 4351 bytes into a destination of size 4096
-../../../tvision/TEditWindow.cc: In constructor ‘TEditWindow::TEditWindow(const TRect&, const char*, int)’:
-../../../tvision/TEditWindow.cc:33:42: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tvision/TEditWindow.cc:33:42: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/TEditWindow.cc:28:1: warning:   when initialized here [-Wreorder]
-../../../tvision/TEditWindow.cc: In constructor ‘TEditWindow::TEditWindow(StreamableInit)’:
-../../../tvision/TEditWindow.cc:116:39: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tvision/TEditWindow.cc:116:39: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/TEditWindow.cc:114:1: warning:   when initialized here [-Wreorder]
-In file included from ../../../tvision/tv.h:675,
-                 from ../../../tvision/TFileDialog.cc:25:
-../../../tvision/stddlg.h: In constructor ‘TFileDialog::TFileDialog(StreamableInit)’:
-../../../tvision/stddlg.h:889:45: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tvision/stddlg.h:889:45: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/stddlg.h:888:5: warning:   when initialized here [-Wreorder]
-../../../tvision/TFileDialog.cc: In constructor ‘TFileDialog::TFileDialog(const char*, const char*, const char*, ushort, uchar)’:
-../../../tvision/TFileDialog.cc:49:27: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tvision/TFileDialog.cc:49:27: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/TFileDialog.cc:41:1: warning:   when initialized here [-Wreorder]
 ../../../tvision/TFileList.cc: In static member function ‘static void* DirSearchRec::operator new(size_t)’:
 ../../../tvision/TFileList.cc:143:16: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
 ../../../tvision/TFileList.cc: In member function ‘void TFileList::readDirectory(const char*)’:
@@ -79,10 +28,6 @@ In file included from ../../../tvision/tv.h:675,
 ../../../tvision/TFileList.cc:213:11: note: ‘sprintf’ output between 1 and 4351 bytes into a destination of size 4096
 ../../../tvision/TFileList.cc:229:17: warning: ‘..’ directive writing 2 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
 ../../../tvision/TFileList.cc:229:10: note: ‘sprintf’ output between 3 and 4098 bytes into a destination of size 4096
-../../../tvision/THistoryWindow.cc: In constructor ‘THistoryWindow::THistoryWindow(const TRect&, ushort)’:
-../../../tvision/THistoryWindow.cc:27:45: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tvision/THistoryWindow.cc:27:45: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/THistoryWindow.cc:23:1: warning:   when initialized here [-Wreorder]
 In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../tvision/TIndicator.cc:21:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
@@ -114,24 +59,6 @@ In file included from /usr/include/c++/8/iosfwd:40,
 ../../../tvision/TStringCollection.cc:31:12: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
 ../../../tvision/TValidator.cc: In constructor ‘TPXPictureValidator::TPXPictureValidator(const char*, Boolean)’:
 ../../../tvision/TValidator.cc:99:7: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tvision/TWindow.cc: In constructor ‘TWindow::TWindow(const TRect&, const char*, short int)’:
-../../../tvision/TWindow.cc:42:29: warning: base ‘TGroup’ will be initialized after [-Wreorder]
-../../../tvision/TWindow.cc:42:29: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/TWindow.cc:32:1: warning:   when initialized here [-Wreorder]
-../../../tvision/TWindow.cc: In constructor ‘TWindow::TWindow(StreamableInit)’:
-../../../tvision/TWindow.cc:256:39: warning: base ‘TGroup’ will be initialized after [-Wreorder]
-../../../tvision/TWindow.cc:256:39: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/TWindow.cc:254:1: warning:   when initialized here [-Wreorder]
-In file included from ../../../tvision/tv.h:675,
-                 from ../../../tvision/allnames.cc:70:
-../../../tvision/stddlg.h: In constructor ‘TFileDialog::TFileDialog(StreamableInit)’:
-../../../tvision/stddlg.h:889:45: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tvision/stddlg.h:889:45: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/stddlg.h:888:5: warning:   when initialized here [-Wreorder]
-../../../tvision/stddlg.h: In constructor ‘TChDirDialog::TChDirDialog(StreamableInit)’:
-../../../tvision/stddlg.h:1452:46: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tvision/stddlg.h:1452:46: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/stddlg.h:1451:5: warning:   when initialized here [-Wreorder]
 ../../../tvision/asm.cc: In member function ‘void TView::writeViewRec1(short int, short int, TView*, int)’:
 ../../../tvision/asm.cc:748:22: warning: suggest parentheses around arithmetic in operand of ‘|’ [-Wparentheses]
 ../../../tvision/colorsel.cc: In member function ‘void TColorSelector::colorChanged()’:
@@ -141,14 +68,6 @@ In file included from ../../../tvision/tv.h:675,
 ../../../tvision/colorsel.cc: In member function ‘virtual void TColorItemList::focusItem(short int)’:
 ../../../tvision/colorsel.cc:637:57: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
 ../../../tvision/colorsel.cc:642:74: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
-../../../tvision/colorsel.cc: In constructor ‘TColorDialog::TColorDialog(TPalette*, TColorGroup*)’:
-../../../tvision/colorsel.cc:702:43: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tvision/colorsel.cc:702:43: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/colorsel.cc:696:1: warning:   when initialized here [-Wreorder]
-../../../tvision/colorsel.cc: In constructor ‘TColorDialog::TColorDialog(StreamableInit)’:
-../../../tvision/colorsel.cc:914:39: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tvision/colorsel.cc:914:39: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/colorsel.cc:912:1: warning:   when initialized here [-Wreorder]
 ../../../tvision/helpbase.cc: In destructor ‘virtual THelpFile::~THelpFile()’:
 ../../../tvision/helpbase.cc:596:30: warning: ISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
 In file included from /usr/include/c++/8/iosfwd:40,
@@ -160,43 +79,13 @@ In file included from /usr/include/c++/8/iosfwd:40,
                  from ../../../tvision/helpbase.cc:19:
 /usr/include/c++/8/bits/postypes.h:192:7: note: candidate 1: ‘std::fpos<_StateT> std::fpos<_StateT>::operator-(std::streamoff) const [with _StateT = __mbstate_t; std::streamoff = long int]’
 ../../../tvision/helpbase.cc:596:30: note: candidate 2: ‘operator-(std::streamoff {aka long int}, int)’ <built-in>
-../../../tvision/help.cc: In constructor ‘THelpWindow::THelpWindow(THelpFile*, ushort)’:
-../../../tvision/help.cc:258:44: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tvision/help.cc:258:44: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/help.cc:256:1: warning:   when initialized here [-Wreorder]
 ../../../tvision/histlist.cc: In static member function ‘static void* HistRec::operator new(size_t)’:
 ../../../tvision/histlist.cc:41:12: warning: ‘operator new’ must not return NULL unless it is declared ‘throw()’ (or -fcheck-new is in effect)
 ../../../tvision/new.cc: In static member function ‘static void* TBufListEntry::operator new(size_t)’:
 ../../../tvision/new.cc:48:12: warning: ‘operator new’ must not return NULL unless it is declared ‘throw()’ (or -fcheck-new is in effect)
-In file included from ../../../tvision/tv.h:675,
-                 from ../../../tvision/sall.cc:71:
-../../../tvision/stddlg.h: In constructor ‘TFileDialog::TFileDialog(StreamableInit)’:
-../../../tvision/stddlg.h:889:45: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tvision/stddlg.h:889:45: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/stddlg.h:888:5: warning:   when initialized here [-Wreorder]
-../../../tvision/stddlg.h: In constructor ‘TChDirDialog::TChDirDialog(StreamableInit)’:
-../../../tvision/stddlg.h:1452:46: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tvision/stddlg.h:1452:46: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/stddlg.h:1451:5: warning:   when initialized here [-Wreorder]
-In file included from ../../../tvision/tv.h:675,
-                 from ../../../tvision/stddlg.cc:22:
-../../../tvision/stddlg.h: In constructor ‘TFileDialog::TFileDialog(StreamableInit)’:
-../../../tvision/stddlg.h:889:45: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tvision/stddlg.h:889:45: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/stddlg.h:888:5: warning:   when initialized here [-Wreorder]
 ../../../tvision/system.cc: In static member function ‘static void TScreen::moveCursor(int, int)’:
 ../../../tvision/system.cc:2225:33: warning: narrowing conversion of ‘x’ from ‘int’ to ‘unsigned char’ inside { } [-Wnarrowing]
 ../../../tvision/system.cc:2225:33: warning: narrowing conversion of ‘y’ from ‘int’ to ‘unsigned char’ inside { } [-Wnarrowing]
-In file included from ../../../tvision/tv.h:675,
-                 from ../../../tvision/tvtext.cc:43:
-../../../tvision/stddlg.h: In constructor ‘TFileDialog::TFileDialog(StreamableInit)’:
-../../../tvision/stddlg.h:889:45: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tvision/stddlg.h:889:45: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/stddlg.h:888:5: warning:   when initialized here [-Wreorder]
-../../../tvision/stddlg.h: In constructor ‘TChDirDialog::TChDirDialog(StreamableInit)’:
-../../../tvision/stddlg.h:1452:46: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tvision/stddlg.h:1452:46: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/stddlg.h:1451:5: warning:   when initialized here [-Wreorder]
 In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../tvhc/tvhc.cc:97:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
@@ -207,48 +96,17 @@ In file included from ../../../tvhc/tvhc.cc:90:
 In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../demo/ascii.cc:35:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
-In file included from ../../../demo/ascii.cc:38:
-../../../demo/ascii.h: In constructor ‘TAsciiChart::TAsciiChart(StreamableInit)’:
-../../../demo/ascii.h:108:30: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../demo/ascii.h:108:30: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../demo/ascii.h:107:5: warning:   when initialized here [-Wreorder]
 ../../../demo/ascii.cc: In member function ‘void TTable::charFocused()’:
 ../../../demo/ascii.cc:104:41: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
-../../../demo/ascii.cc: In constructor ‘TAsciiChart::TAsciiChart()’:
-../../../demo/ascii.cc:272:42: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../demo/ascii.cc:272:42: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../demo/ascii.cc:270:1: warning:   when initialized here [-Wreorder]
 In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../demo/calc.cc:35:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
-In file included from ../../../demo/calc.cc:38:
-../../../demo/calc.h: In constructor ‘TCalculator::TCalculator(StreamableInit)’:
-../../../demo/calc.h:87:69: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../demo/calc.h:87:69: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../demo/calc.h:86:5: warning:   when initialized here [-Wreorder]
-../../../demo/calc.cc: In constructor ‘TCalculator::TCalculator()’:
-../../../demo/calc.cc:326:42: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../demo/calc.cc:326:42: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../demo/calc.cc:324:1: warning:   when initialized here [-Wreorder]
 In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../demo/calendar.cc:32:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
-In file included from ../../../demo/calendar.cc:36:
-../../../demo/calendar.h: In constructor ‘TCalendarWindow::TCalendarWindow(StreamableInit)’:
-../../../demo/calendar.h:64:73: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../demo/calendar.h:64:73: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../demo/calendar.h:63:5: warning:   when initialized here [-Wreorder]
-../../../demo/calendar.cc: In constructor ‘TCalendarWindow::TCalendarWindow()’:
-../../../demo/calendar.cc:277:46: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../demo/calendar.cc:277:46: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../demo/calendar.cc:275:1: warning:   when initialized here [-Wreorder]
 In file included from ../../../demo/fileview.cc:37:
 ../../../demo/fileview.h: In member function ‘virtual void TLineCollection::freeItem(void*)’:
 ../../../demo/fileview.h:30:46: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
-../../../demo/fileview.cc: In constructor ‘TFileWindow::TFileWindow(const char*)’:
-../../../demo/fileview.cc:172:42: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../demo/fileview.cc:172:42: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../demo/fileview.cc:170:1: warning:   when initialized here [-Wreorder]
 In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../demo/gadgets.cc:30:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
@@ -256,118 +114,22 @@ In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../demo/mousedlg.cc:35:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
 ../../../demo/mousedlg.cc: In constructor ‘TMouseDialog::TMouseDialog()’:
-../../../demo/mousedlg.cc:100:43: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../demo/mousedlg.cc:100:43: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../demo/mousedlg.cc:98:1: warning:   when initialized here [-Wreorder]
 ../../../demo/mousedlg.cc:116:61: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../demo/puzzle.cc:33:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
-In file included from ../../../demo/puzzle.cc:38:
-../../../demo/puzzle.h: In constructor ‘TPuzzleWindow::TPuzzleWindow(StreamableInit)’:
-../../../demo/puzzle.h:71:71: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../demo/puzzle.h:71:71: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../demo/puzzle.h:70:5: warning:   when initialized here [-Wreorder]
 ../../../demo/puzzle.cc: In member function ‘virtual void TPuzzleView::draw()’:
 ../../../demo/puzzle.cc:139:75: warning: array subscript has type ‘char’ [-Wchar-subscripts]
-../../../demo/puzzle.cc: In constructor ‘TPuzzleWindow::TPuzzleWindow()’:
-../../../demo/puzzle.cc:351:44: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../demo/puzzle.cc:351:44: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../demo/puzzle.cc:349:1: warning:   when initialized here [-Wreorder]
 In file included from ../../../demo/tvdemo1.cc:35:
 ../../../demo/fileview.h: In member function ‘virtual void TLineCollection::freeItem(void*)’:
 ../../../demo/fileview.h:30:46: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
-In file included from ../../../demo/tvdemo1.cc:36:
-../../../demo/puzzle.h: In constructor ‘TPuzzleWindow::TPuzzleWindow(StreamableInit)’:
-../../../demo/puzzle.h:71:71: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../demo/puzzle.h:71:71: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../demo/puzzle.h:70:5: warning:   when initialized here [-Wreorder]
-In file included from ../../../tvision/tv.h:675,
-                 from ../../../demo/tvdemo2.cc:32:
-../../../tvision/stddlg.h: In constructor ‘TChDirDialog::TChDirDialog(StreamableInit)’:
-../../../tvision/stddlg.h:1452:46: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tvision/stddlg.h:1452:46: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/stddlg.h:1451:5: warning:   when initialized here [-Wreorder]
-In file included from ../../../demo/tvdemo2.cc:37:
-../../../demo/ascii.h: In constructor ‘TAsciiChart::TAsciiChart(StreamableInit)’:
-../../../demo/ascii.h:108:30: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../demo/ascii.h:108:30: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../demo/ascii.h:107:5: warning:   when initialized here [-Wreorder]
-In file included from ../../../demo/tvdemo2.cc:38:
-../../../demo/calendar.h: In constructor ‘TCalendarWindow::TCalendarWindow(StreamableInit)’:
-../../../demo/calendar.h:64:73: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../demo/calendar.h:64:73: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../demo/calendar.h:63:5: warning:   when initialized here [-Wreorder]
-In file included from ../../../demo/tvdemo2.cc:39:
-../../../demo/calc.h: In constructor ‘TCalculator::TCalculator(StreamableInit)’:
-../../../demo/calc.h:87:69: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../demo/calc.h:87:69: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../demo/calc.h:86:5: warning:   when initialized here [-Wreorder]
 ../../../demo/tvdemo2.cc: In member function ‘virtual void TVDemo::handleEvent(TEvent&)’:
 ../../../demo/tvdemo2.cc:89:29: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-In file included from ../../../tvision/tv.h:675,
-                 from ../../../demo/tvdemo3.cc:33:
-../../../tvision/stddlg.h: In constructor ‘TFileDialog::TFileDialog(StreamableInit)’:
-../../../tvision/stddlg.h:889:45: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tvision/stddlg.h:889:45: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/stddlg.h:888:5: warning:   when initialized here [-Wreorder]
 In file included from ../../../demo/tvdemo3.cc:40:
 ../../../demo/fileview.h: In member function ‘virtual void TLineCollection::freeItem(void*)’:
 ../../../demo/fileview.h:30:46: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
-../../../tutorial/tvguid04.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
-../../../tutorial/tvguid04.cc:135:25: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tutorial/tvguid04.cc:135:25: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tutorial/tvguid04.cc:132:1: warning:   when initialized here [-Wreorder]
 ../../../tutorial/tvguid05.cc: In member function ‘virtual void TInterior::draw()’:
 ../../../tutorial/tvguid05.cc:74:18: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid05.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
-../../../tutorial/tvguid05.cc:155:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tutorial/tvguid05.cc:155:47: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tutorial/tvguid05.cc:152:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid06.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
-../../../tutorial/tvguid06.cc:195:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tutorial/tvguid06.cc:195:47: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tutorial/tvguid06.cc:192:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid07.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
-../../../tutorial/tvguid07.cc:205:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tutorial/tvguid07.cc:205:47: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tutorial/tvguid07.cc:202:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid08.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
-../../../tutorial/tvguid08.cc:229:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tutorial/tvguid08.cc:229:47: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tutorial/tvguid08.cc:226:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid09.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
-../../../tutorial/tvguid09.cc:150:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tutorial/tvguid09.cc:150:47: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tutorial/tvguid09.cc:147:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid10.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
-../../../tutorial/tvguid10.cc:156:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tutorial/tvguid10.cc:156:47: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tutorial/tvguid10.cc:153:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid11.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
-../../../tutorial/tvguid11.cc:163:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tutorial/tvguid11.cc:163:47: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tutorial/tvguid11.cc:160:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid12.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
-../../../tutorial/tvguid12.cc:161:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tutorial/tvguid12.cc:161:47: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tutorial/tvguid12.cc:158:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid13.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
-../../../tutorial/tvguid13.cc:165:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tutorial/tvguid13.cc:165:47: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tutorial/tvguid13.cc:162:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid14.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
-../../../tutorial/tvguid14.cc:167:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tutorial/tvguid14.cc:167:47: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tutorial/tvguid14.cc:164:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid15.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
-../../../tutorial/tvguid15.cc:168:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tutorial/tvguid15.cc:168:47: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tutorial/tvguid15.cc:165:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid16.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
-../../../tutorial/tvguid16.cc:178:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tutorial/tvguid16.cc:178:47: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tutorial/tvguid16.cc:175:1: warning:   when initialized here [-Wreorder]
 ../../../tutorial/listbox.cc: In member function ‘void TMyApp::newDialog()’:
 ../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
@@ -389,43 +151,13 @@ In file included from ../../../demo/tvdemo3.cc:40:
 ../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/load.cc: In constructor ‘TLoadWindow::TLoadWindow(int, int)’:
-../../../tutorial/load.cc:91:50: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tutorial/load.cc:91:50: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tutorial/load.cc:89:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/nomenus.cc: In constructor ‘TMyDeskTop::TMyDeskTop(const TRect&)’:
-../../../tutorial/nomenus.cc:63:60: warning: base ‘TDeskTop’ will be initialized after [-Wreorder]
-../../../tutorial/nomenus.cc:63:60: warning:   base ‘TDeskInit’ [-Wreorder]
-../../../tutorial/nomenus.cc:62:1: warning:   when initialized here [-Wreorder]
 ../../../tutorial/nomenus.cc: In member function ‘ushort TMyApp::doWork()’:
-../../../tutorial/nomenus.cc:184:1: warning: no return statement in function returning non-void [-Wreturn-type]
-In file included from ../../../tvision/tv.h:675,
-                 from ../../../tutorial/tvedit.cc:35:
-../../../tvision/stddlg.h: In constructor ‘TFileDialog::TFileDialog(StreamableInit)’:
-../../../tvision/stddlg.h:889:45: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tvision/stddlg.h:889:45: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/stddlg.h:888:5: warning:   when initialized here [-Wreorder]
-../../../tvision/stddlg.h: In constructor ‘TChDirDialog::TChDirDialog(StreamableInit)’:
-../../../tvision/stddlg.h:1452:46: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tvision/stddlg.h:1452:46: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tvision/stddlg.h:1451:5: warning:   when initialized here [-Wreorder]
+../../../tutorial/nomenus.cc:185:1: warning: no return statement in function returning non-void [-Wreturn-type]
 ../../../tutorial/tvedit.cc: In member function ‘virtual void TVDemo::handleEvent(TEvent&)’:
 ../../../tutorial/tvedit.cc:291:14: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/tvedit.cc: In static member function ‘static ushort TVDemo::doEditorDialog(int, ...)’:
 ../../../tutorial/tvedit.cc:238:1: warning: control reaches end of non-void function [-Wreturn-type]
-../../../tutorial/tvlife.cc: In constructor ‘TLifeInterior::TLifeInterior(TRect&)’:
-../../../tutorial/tvlife.cc:49:9: warning: ‘TLifeInterior::board’ will be initialized after [-Wreorder]
-../../../tutorial/tvlife.cc:48:6: warning:   ‘int TLifeInterior::running’ [-Wreorder]
-../../../tutorial/tvlife.cc:466:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvlife.cc: In constructor ‘TLifeWindow::TLifeWindow(TRect&, char*, int)’:
-../../../tutorial/tvlife.cc:753:64: warning: base ‘TWindow’ will be initialized after [-Wreorder]
-../../../tutorial/tvlife.cc:753:64: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tutorial/tvlife.cc:752:1: warning:   when initialized here [-Wreorder]
 ../../../tutorial/tvlife.cc: In member function ‘void TMyApp::createLifeWindow()’:
-../../../tutorial/tvlife.cc:795:51: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+../../../tutorial/tvlife.cc:798:51: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/tvlife.cc: In member function ‘TCommandSet TMyApp::getCommands()’:
-../../../tutorial/tvlife.cc:809:20: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
-../../../tutorial/validator.cc: In constructor ‘MyDialog::MyDialog()’:
-../../../tutorial/validator.cc:82:35: warning: base ‘TDialog’ will be initialized after [-Wreorder]
-../../../tutorial/validator.cc:82:35: warning:   base ‘TWindowInit’ [-Wreorder]
-../../../tutorial/validator.cc:80:1: warning:   when initialized here [-Wreorder]
+../../../tutorial/tvlife.cc:812:20: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]

@@ -60,7 +60,8 @@ public:
 };
 
 TMyDeskTop::TMyDeskTop(const TRect& bounds):
-    TDeskTop(bounds), TDeskInit(&TMyDeskTop::initBackground)
+    TDeskInit(&TMyDeskTop::initBackground),
+    TDeskTop(bounds)
 {
 }
 

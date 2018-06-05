@@ -84,7 +84,9 @@ public:
 
     TCalculator();
     TCalculator( StreamableInit ) :
-        TDialog(streamableInit), TWindowInit(&TCalculator::initFrame) { };
+        TWindowInit(&TCalculator::initFrame),
+        TDialog(streamableInit)
+         { };
 
 private:
 

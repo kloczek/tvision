@@ -78,8 +78,8 @@ TMenuBar *Demo::initMenuBar(TRect r)
 }
 
 MyDialog::MyDialog():
-	TDialog(TRect(0, 0, 42, 16), "TValidator example"),
-	TWindowInit( &TDialog::initFrame )
+	TWindowInit( &TDialog::initFrame ),
+	TDialog(TRect(0, 0, 42, 16), "TValidator example")
 {
 	TInputLine *line;
 	TView *obj;

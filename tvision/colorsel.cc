@@ -694,12 +694,12 @@ TColorItemList::TColorItemList( StreamableInit ) :
 #endif
 
 TColorDialog::TColorDialog( TPalette *aPalette, TColorGroup *aGroups ):
+    TWindowInit( &TColorDialog::initFrame ),
 #if 1 //__UNPATCHED
-    TDialog( TRect( 0, 0, 79, 18 ), colors ),
+    TDialog( TRect( 0, 0, 79, 18 ), colors )
 #else
-    TDialog( TRect( 0, 0, 61, 18 ), colors ),
+    TDialog( TRect( 0, 0, 61, 18 ), colors )
 #endif
-    TWindowInit( &TColorDialog::initFrame )
 {
     options |= ofCentered;
     if( aPalette != 0 )
@@ -910,8 +910,8 @@ TStreamable *TColorDialog::build()
 }
 
 TColorDialog::TColorDialog( StreamableInit ) :
-    TDialog( streamableInit ),
-    TWindowInit( 0 /*streamableInit*/ )
+    TWindowInit( 0 /*streamableInit*/ ),
+    TDialog( streamableInit )
 {
 }
 
