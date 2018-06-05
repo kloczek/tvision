@@ -9,7 +9,6 @@
       2 -Wreturn-type
       2 -Wparentheses
       2 -Wnarrowing
-      1 -Wunused-variable
       1 -Wchar-subscripts
 
 ----------------------------------------------------------------
@@ -1292,6 +1291,3 @@ In file included from ../../../tvision/tv.h:675,
 ../../../tutorial/validator.cc:80:1: warning:   when initialized here [-Wreorder]
  MyDialog::MyDialog():
  ^~~~~~~~
-../../../tutorial/validator.cc:85:14: warning: unused variable ‘bar’ [-Wunused-variable]
-  TScrollBar *bar;
-              ^~~

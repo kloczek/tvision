@@ -82,7 +82,6 @@ MyDialog::MyDialog():
 	TWindowInit( &TDialog::initFrame )
 {
 	TInputLine *line;
-	TScrollBar *bar;
 	TView *obj;
 
 	options |= ofCentered;
