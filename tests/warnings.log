@@ -1,5 +1,5 @@
     180 -Wreorder
-    144 -Wwrite-strings
+     27 -Wwrite-strings
      16 -Wdangling-else
       8 -Wcpp
       6 -Wint-to-pointer-cast
@@ -346,67 +346,24 @@ In file included from ../../../tvision/tv.h:675,
 In file included from ../../../demo/tvdemo3.cc:40:
 ../../../demo/fileview.h: In member function ‘virtual void TLineCollection::freeItem(void*)’:
 ../../../demo/fileview.h:30:46: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
-../../../demo/tvdemo3.cc: In static member function ‘static TMenuBar* TVDemo::initMenuBar(TRect)’:
-../../../demo/tvdemo3.cc:194:69: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../demo/tvdemo3.cc:198:68: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../demo/tvdemo3.cc:202:85: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../demo/tvdemo3.cc:203:63: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../demo/tvdemo3.cc:204:63: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../demo/tvdemo3.cc:205:73: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid03.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
-../../../tutorial/tvguid03.cc:64:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid03.cc:65:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid03.cc:67:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid03.cc:69:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid03.cc:70:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid04.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
-../../../tutorial/tvguid04.cc:92:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid04.cc:93:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid04.cc:95:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid04.cc:97:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid04.cc:98:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/tvguid04.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
 ../../../tutorial/tvguid04.cc:135:25: warning: base ‘TWindow’ will be initialized after [-Wreorder]
 ../../../tutorial/tvguid04.cc:135:25: warning:   base ‘TWindowInit’ [-Wreorder]
 ../../../tutorial/tvguid04.cc:132:1: warning:   when initialized here [-Wreorder]
 ../../../tutorial/tvguid05.cc: In member function ‘virtual void TInterior::draw()’:
 ../../../tutorial/tvguid05.cc:74:18: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid05.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
-../../../tutorial/tvguid05.cc:111:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid05.cc:112:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid05.cc:114:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid05.cc:116:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid05.cc:117:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/tvguid05.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
 ../../../tutorial/tvguid05.cc:155:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
 ../../../tutorial/tvguid05.cc:155:47: warning:   base ‘TWindowInit’ [-Wreorder]
 ../../../tutorial/tvguid05.cc:152:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid06.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
-../../../tutorial/tvguid06.cc:151:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid06.cc:152:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid06.cc:154:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid06.cc:156:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid06.cc:157:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/tvguid06.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
 ../../../tutorial/tvguid06.cc:195:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
 ../../../tutorial/tvguid06.cc:195:47: warning:   base ‘TWindowInit’ [-Wreorder]
 ../../../tutorial/tvguid06.cc:192:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid07.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
-../../../tutorial/tvguid07.cc:161:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid07.cc:162:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid07.cc:164:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid07.cc:166:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid07.cc:167:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/tvguid07.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
 ../../../tutorial/tvguid07.cc:205:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
 ../../../tutorial/tvguid07.cc:205:47: warning:   base ‘TWindowInit’ [-Wreorder]
 ../../../tutorial/tvguid07.cc:202:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid08.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
-../../../tutorial/tvguid08.cc:187:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid08.cc:188:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid08.cc:190:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid08.cc:192:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid08.cc:193:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/tvguid08.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
 ../../../tutorial/tvguid08.cc:229:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
 ../../../tutorial/tvguid08.cc:229:47: warning:   base ‘TWindowInit’ [-Wreorder]
@@ -415,88 +372,34 @@ In file included from ../../../demo/tvdemo3.cc:40:
 ../../../tutorial/tvguid09.cc:150:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
 ../../../tutorial/tvguid09.cc:150:47: warning:   base ‘TWindowInit’ [-Wreorder]
 ../../../tutorial/tvguid09.cc:147:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid09.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
-../../../tutorial/tvguid09.cc:228:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid09.cc:229:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid09.cc:231:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid09.cc:233:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid09.cc:234:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/tvguid10.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
 ../../../tutorial/tvguid10.cc:156:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
 ../../../tutorial/tvguid10.cc:156:47: warning:   base ‘TWindowInit’ [-Wreorder]
 ../../../tutorial/tvguid10.cc:153:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid10.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
-../../../tutorial/tvguid10.cc:240:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid10.cc:241:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid10.cc:243:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid10.cc:245:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid10.cc:246:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/tvguid11.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
 ../../../tutorial/tvguid11.cc:163:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
 ../../../tutorial/tvguid11.cc:163:47: warning:   base ‘TWindowInit’ [-Wreorder]
 ../../../tutorial/tvguid11.cc:160:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid11.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
-../../../tutorial/tvguid11.cc:249:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid11.cc:250:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid11.cc:252:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid11.cc:254:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid11.cc:255:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid11.cc:256:78: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/tvguid12.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
 ../../../tutorial/tvguid12.cc:161:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
 ../../../tutorial/tvguid12.cc:161:47: warning:   base ‘TWindowInit’ [-Wreorder]
 ../../../tutorial/tvguid12.cc:158:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid12.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
-../../../tutorial/tvguid12.cc:247:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid12.cc:248:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid12.cc:250:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid12.cc:252:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid12.cc:253:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid12.cc:254:78: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/tvguid13.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
 ../../../tutorial/tvguid13.cc:165:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
 ../../../tutorial/tvguid13.cc:165:47: warning:   base ‘TWindowInit’ [-Wreorder]
 ../../../tutorial/tvguid13.cc:162:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid13.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
-../../../tutorial/tvguid13.cc:251:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid13.cc:252:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid13.cc:254:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid13.cc:256:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid13.cc:257:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid13.cc:258:78: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/tvguid14.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
 ../../../tutorial/tvguid14.cc:167:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
 ../../../tutorial/tvguid14.cc:167:47: warning:   base ‘TWindowInit’ [-Wreorder]
 ../../../tutorial/tvguid14.cc:164:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid14.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
-../../../tutorial/tvguid14.cc:253:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid14.cc:254:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid14.cc:256:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid14.cc:258:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid14.cc:259:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid14.cc:260:78: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/tvguid15.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
 ../../../tutorial/tvguid15.cc:168:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
 ../../../tutorial/tvguid15.cc:168:47: warning:   base ‘TWindowInit’ [-Wreorder]
 ../../../tutorial/tvguid15.cc:165:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid15.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
-../../../tutorial/tvguid15.cc:254:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid15.cc:255:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid15.cc:257:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid15.cc:259:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid15.cc:260:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid15.cc:261:78: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/tvguid16.cc: In constructor ‘TDemoWindow::TDemoWindow(const TRect&, const char*, short int)’:
 ../../../tutorial/tvguid16.cc:178:47: warning: base ‘TWindow’ will be initialized after [-Wreorder]
 ../../../tutorial/tvguid16.cc:178:47: warning:   base ‘TWindowInit’ [-Wreorder]
 ../../../tutorial/tvguid16.cc:175:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/tvguid16.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
-../../../tutorial/tvguid16.cc:276:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid16.cc:277:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid16.cc:279:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid16.cc:281:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid16.cc:282:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvguid16.cc:283:78: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/listbox.cc: In member function ‘void TMyApp::newDialog()’:
 ../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
@@ -518,22 +421,10 @@ In file included from ../../../demo/tvdemo3.cc:40:
 ../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
-../../../tutorial/listbox.cc:137:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:139:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:140:75: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:141:78: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/load.cc: In constructor ‘TLoadWindow::TLoadWindow(int, int)’:
 ../../../tutorial/load.cc:91:50: warning: base ‘TWindow’ will be initialized after [-Wreorder]
 ../../../tutorial/load.cc:91:50: warning:   base ‘TWindowInit’ [-Wreorder]
 ../../../tutorial/load.cc:89:1: warning:   when initialized here [-Wreorder]
-../../../tutorial/load.cc: In static member function ‘static TMenuBar* myApp::initMenuBar(TRect)’:
-../../../tutorial/load.cc:234:74: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/load.cc:236:64: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/load.cc:238:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/load.cc:239:59: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/load.cc:240:59: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/load.cc:241:68: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/nomenus.cc: In constructor ‘TMyDeskTop::TMyDeskTop(const TRect&)’:
 ../../../tutorial/nomenus.cc:63:60: warning: base ‘TDeskTop’ will be initialized after [-Wreorder]
 ../../../tutorial/nomenus.cc:63:60: warning:   base ‘TDeskInit’ [-Wreorder]
@@ -552,25 +443,6 @@ In file included from ../../../tvision/tv.h:675,
 ../../../tvision/stddlg.h:1451:5: warning:   when initialized here [-Wreorder]
 ../../../tutorial/tvedit.cc: In member function ‘virtual void TVDemo::handleEvent(TEvent&)’:
 ../../../tutorial/tvedit.cc:291:14: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvedit.cc: In static member function ‘static TMenuBar* TVDemo::initMenuBar(TRect)’:
-../../../tutorial/tvedit.cc:349:64: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvedit.cc:350:60: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvedit.cc:351:61: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvedit.cc:352:70: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvedit.cc:354:72: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvedit.cc:355:71: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvedit.cc:356:66: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvedit.cc:359:62: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvedit.cc:361:72: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvedit.cc:362:72: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvedit.cc:363:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvedit.cc:364:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvedit.cc:366:74: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvedit.cc:374:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvedit.cc:375:61: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvedit.cc:376:61: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvedit.cc:377:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvedit.cc:378:70: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/tvedit.cc: In static member function ‘static ushort TVDemo::doEditorDialog(int, ...)’:
 ../../../tutorial/tvedit.cc:238:1: warning: control reaches end of non-void function [-Wreturn-type]
 ../../../tutorial/tvlife.cc: In constructor ‘TLifeInterior::TLifeInterior(TRect&)’:
@@ -585,14 +457,6 @@ In file included from ../../../tvision/tv.h:675,
 ../../../tutorial/tvlife.cc:795:51: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/tvlife.cc: In member function ‘TCommandSet TMyApp::getCommands()’:
 ../../../tutorial/tvlife.cc:809:20: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
-../../../tutorial/tvlife.cc: In static member function ‘static TMenuBar* TMyApp::initMenuBar(TRect)’:
-../../../tutorial/tvlife.cc:865:70: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvlife.cc:867:66: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvlife.cc:876:77: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvlife.cc:877:61: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvlife.cc:878:61: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvlife.cc:879:76: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/tvlife.cc:880:70: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/validator.cc: In constructor ‘MyDialog::MyDialog()’:
 ../../../tutorial/validator.cc:82:35: warning: base ‘TDialog’ will be initialized after [-Wreorder]
 ../../../tutorial/validator.cc:82:35: warning:   base ‘TWindowInit’ [-Wreorder]

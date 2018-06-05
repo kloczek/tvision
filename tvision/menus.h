@@ -60,7 +60,7 @@ public:
                ushort aCommand,
                ushort aKeyCode,
                ushort aHelpCtx = hcNoContext,
-               char *p = 0,
+               const char *p = 0,
                TMenuItem *aNext = 0
              );
     /**
