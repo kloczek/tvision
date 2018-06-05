@@ -1,6 +1,6 @@
 ------------------------------------------------------
-LDFLAGS=-Wl,--as-needed
-CXXFLAGS=-O2
+LDFLAGS="-Wl,--as-needed"
+CXXFLAGS="-O2"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
   85194	   4484	    424	  90102	  15ff6	demo
@@ -38,8 +38,8 @@ CXXFLAGS=-O2
 
 
 ------------------------------------------------------
-LDFLAGS=-O2 -Wl,--as-needed -flto -fuse-linker-plugin
-CXXFLAGS=-O2 -flto
+LDFLAGS="-O2 -Wl,--as-needed -flto -fuse-linker-plugin"
+CXXFLAGS="-O2 -flto"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
   76386	   4492	    432	  81310	  13d9e	demo
@@ -77,8 +77,8 @@ CXXFLAGS=-O2 -flto
 
 
 ------------------------------------------------------
-LDFLAGS=-Wl,--as-needed
-CXXFLAGS=-Os
+LDFLAGS="-Wl,--as-needed"
+CXXFLAGS="-Os"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
   73744	   4308	    424	  78476	  1328c	demo
@@ -116,8 +116,8 @@ CXXFLAGS=-Os
 
 
 ------------------------------------------------------
-LDFLAGS=-Os -Wl,--as-needed -flto -fuse-linker-plugin
-CXXFLAGS=-Os -flto
+LDFLAGS="-Os -Wl,--as-needed -flto -fuse-linker-plugin"
+CXXFLAGS="-Os -flto"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
   66176	   4084	    432	  70692	  11424	demo
@@ -155,8 +155,8 @@ CXXFLAGS=-Os -flto
 
 
 ------------------------------------------------------
-LDFLAGS=-Os -Wl,--as-needed -flto -fuse-linker-plugin
-CXXFLAGS=-Os -flto -fno-exceptions -fno-rtti
+LDFLAGS="-Os -Wl,--as-needed -flto -fuse-linker-plugin"
+CXXFLAGS="-Os -flto -fno-exceptions -fno-rtti"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
   59839	   3428	    432	  63699	   f8d3	demo

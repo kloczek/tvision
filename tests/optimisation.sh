@@ -20,6 +20,8 @@ LDFLAGS_max_opt="-Os -Wl,--as-needed -flto -fuse-linker-plugin"
 
 all_targets="O2 O2_lto Os Os_lto max_opt"
 
+> optimisation.log
+
 rm -rf $all_targets {demo,background,listbox,load,nomenus,splash,tvedit,tvguid*,tvlife,validator,tvhc,libtvision.so.0.0*}
 for i in $all_targets; do
 	echo $i
@@ -35,8 +37,8 @@ for i in $all_targets; do
 	echo "make $i"
 	make -j10 >/dev/null 2>&1
 	echo "------------------------------------------------------" >> ../optimisation.log
-	echo LDFLAGS="$LDFLAGS" >> ../roptimisation.log
-	echo CXXFLAGS="$CXXFLAGS" >> ../roptimisation.log
+	echo LDFLAGS=\""$LDFLAGS"\" >> ../optimisation.log
+	echo CXXFLAGS=\""$CXXFLAGS"\" >> ../optimisation.log
 	echo "------------------------------------------------------" >> ../optimisation.log
 	cd ..
 	cp $i/*/.libs/{demo,background,listbox,load,nomenus,splash,tvedit,tvguid*,tvlife,validator,tvhc,libtvision.so.0.0*} .
