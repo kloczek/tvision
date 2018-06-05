@@ -1,4 +1,4 @@
-## This directory contains only tools used on testing the code, and some log files with tests results and statistics used od development stage.
+## This directory contains tools used only on testing the code, some log files and tests results/statistics used od development stage.
 
 - ```optimisation.log```
 
