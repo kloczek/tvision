@@ -1,6 +1,9 @@
 
 Known bugs and things to do
 ---------------------------
+- seems like all tvision code isn't well formated. Ater finish fixing all
+  compile waring indent whole code (probably using indent)
+
 - integrate tvision/myendian.h into tvision/system.h
 
 - Fix textview.cc, textview.h and TTerminal::prevLines() in `asm.cc'.
