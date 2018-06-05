@@ -157,16 +157,22 @@ void TListViewer::focusItem( short item )
     else
         drawView();
     if( item < topItem )
+        {
         if( numCols == 1 )
             topItem = item;
         else
             topItem = item - item % size.y;
+        }
     else
+        {
         if( item >= topItem + size.y*numCols )
+            {
             if( numCols == 1 )
                 topItem = item - size.y + 1;
             else
                 topItem = item - item % size.y - (size.y * (numCols-1));
+            }
+        }
 }
 
 void TListViewer::focusItemNum( short item )
@@ -379,15 +385,19 @@ void TListViewer::setState( ushort aState, Boolean enable )
     if( (aState & (sfSelected | sfActive | sfVisible)) != 0 )
         {
         if( hScrollBar != 0 )
+            {
             if( getState(sfActive) && getState(sfVisible))
                 hScrollBar->show();
             else
                 hScrollBar->hide();
+    	    }
         if( vScrollBar != 0 )
+    	    {
             if( getState(sfActive) && getState(sfVisible))
                 vScrollBar->show();
             else
                 vScrollBar->hide();
+            }
         drawView();
         }
 }

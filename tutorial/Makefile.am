@@ -53,5 +53,4 @@ tvlife_SOURCES		= tvlife.cc
 validator_SOURCES	= validator.cc
 
 EXTRA_DIST	= \
-	README \
-	basicMakefile
+	README

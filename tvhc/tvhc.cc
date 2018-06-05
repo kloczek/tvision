@@ -714,10 +714,12 @@ TParagraph *readParagraph( std::fstream& textFile, int& offset, TCrossRefNode *&
     while (isEndParagraph(state) == False)
         {
         if (state == undefined )
+    	    {
             if (line[0] == ' ')
                 state = notWrapping;
             else
                 state = wrapping;
+            }
         scanForCrossRefs(line, offset, xRefs);
         flag = (state == wrapping)? True: False;
         addToBuffer(line, flag);

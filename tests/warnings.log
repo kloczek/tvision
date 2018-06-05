@@ -1,6 +1,5 @@
     180 -Wreorder
      27 -Wwrite-strings
-     16 -Wdangling-else
       8 -Wcpp
       6 -Wint-to-pointer-cast
       6 -Wdelete-incomplete
@@ -12,8 +11,6 @@
       1 -Wchar-subscripts
 
 ----------------------------------------------------------------
-../../../tvision/TButton.cc: In member function ‘void TButton::drawState(Boolean)’:
-../../../tvision/TButton.cc:100:11: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
 In file included from ../../../tvision/tv.h:675,
                  from ../../../tvision/TChDirDialog.cc:27:
 ../../../tvision/stddlg.h: In constructor ‘TChDirDialog::TChDirDialog(StreamableInit)’:
@@ -53,10 +50,6 @@ In file included from ../../../tvision/tv.h:675,
 ../../../tvision/TDirListBox.cc:117:9: note: ‘sprintf’ output between 2 and 4097 bytes into a destination of size 4096
 ../../../tvision/TDirListBox.cc:129:18: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
 ../../../tvision/TDirListBox.cc:129:11: note: ‘sprintf’ output between 1 and 4351 bytes into a destination of size 4096
-../../../tvision/TEditor.cc: In member function ‘virtual void TEditor::convertEvent(TEvent&)’:
-../../../tvision/TEditor.cc:258:11: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
-../../../tvision/TEditor.cc: In member function ‘Boolean TEditor::insertBuffer(char*, uint, uint, Boolean, Boolean)’:
-../../../tvision/TEditor.cc:673:7: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
 ../../../tvision/TEditWindow.cc: In constructor ‘TEditWindow::TEditWindow(const TRect&, const char*, int)’:
 ../../../tvision/TEditWindow.cc:33:42: warning: base ‘TWindow’ will be initialized after [-Wreorder]
 ../../../tvision/TEditWindow.cc:33:42: warning:   base ‘TWindowInit’ [-Wreorder]
@@ -93,11 +86,6 @@ In file included from ../../../tvision/tv.h:675,
 In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../tvision/TIndicator.cc:21:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
-../../../tvision/TListViewer.cc: In member function ‘virtual void TListViewer::focusItem(short int)’:
-../../../tvision/TListViewer.cc:165:11: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
-../../../tvision/TListViewer.cc: In member function ‘virtual void TListViewer::setState(ushort, Boolean)’:
-../../../tvision/TListViewer.cc:381:11: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
-../../../tvision/TListViewer.cc:386:11: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
 ../../../tvision/TMemo.cc: In member function ‘virtual void* TMemo::read(ipstream&)’:
 ../../../tvision/TMemo.cc:89:32: warning: ISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
 In file included from /usr/include/c++/8/iosfwd:40,
@@ -109,16 +97,8 @@ In file included from /usr/include/c++/8/iosfwd:40,
                  from ../../../tvision/TMemo.cc:18:
 /usr/include/c++/8/bits/postypes.h:178:7: note: candidate 1: ‘std::fpos<_StateT> std::fpos<_StateT>::operator+(std::streamoff) const [with _StateT = __mbstate_t; std::streamoff = long int]’
 ../../../tvision/TMemo.cc:89:32: note: candidate 2: ‘operator+(std::streamoff {aka long int}, uint {aka unsigned int})’ <built-in>
-../../../tvision/TMenuView.cc: In member function ‘virtual ushort TMenuView::execute()’:
-../../../tvision/TMenuView.cc:299:11: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
-../../../tvision/TMenuView.cc: In member function ‘Boolean TMenuView::updateMenu(TMenu*)’:
-../../../tvision/TMenuView.cc:392:15: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
-../../../tvision/TMenuView.cc: In member function ‘TMenuItem* TMenuView::findHotKey(TMenuItem*, ushort)’:
-../../../tvision/TMenuView.cc:469:11: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
 ../../../tvision/TProgram.cc: In member function ‘virtual void TProgram::handleEvent(TEvent&)’:
 ../../../tvision/TProgram.cc:212:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
-../../../tvision/TProgram.cc: In member function ‘virtual TWindow* TProgram::insertWindow(TWindow*)’:
-../../../tvision/TProgram.cc:300:8: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
 ../../../tvision/TResourceFile.cc: In member function ‘void TResourceFile::flush()’:
 ../../../tvision/TResourceFile.cc:136:63: warning: ISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
 In file included from /usr/include/c++/8/iosfwd:40,
@@ -130,18 +110,10 @@ In file included from /usr/include/c++/8/iosfwd:40,
                  from ../../../tvision/TResourceFile.cc:18:
 /usr/include/c++/8/bits/postypes.h:192:7: note: candidate 1: ‘std::fpos<_StateT> std::fpos<_StateT>::operator-(std::streamoff) const [with _StateT = __mbstate_t; std::streamoff = long int]’
 ../../../tvision/TResourceFile.cc:136:63: note: candidate 2: ‘operator-(std::streamoff {aka long int}, long unsigned int)’ <built-in>
-../../../tvision/TScroller.cc: In member function ‘void TScroller::showSBar(TScrollBar*)’:
-../../../tvision/TScroller.cc:144:7: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
-../../../tvision/TStaticText.cc: In member function ‘virtual void TStaticText::draw()’:
-../../../tvision/TStaticText.cc:67:16: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
 ../../../tvision/TStringCollection.cc: In member function ‘virtual void TStringCollection::freeItem(void*)’:
 ../../../tvision/TStringCollection.cc:31:12: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
 ../../../tvision/TValidator.cc: In constructor ‘TPXPictureValidator::TPXPictureValidator(const char*, Boolean)’:
 ../../../tvision/TValidator.cc:99:7: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tvision/TView.cc: In member function ‘Boolean TView::focus()’:
-../../../tvision/TView.cc:409:16: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
-../../../tvision/TView.cc: In member function ‘void TView::putInFrontOf(TView*)’:
-../../../tvision/TView.cc:635:7: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
 ../../../tvision/TWindow.cc: In constructor ‘TWindow::TWindow(const TRect&, const char*, short int)’:
 ../../../tvision/TWindow.cc:42:29: warning: base ‘TGroup’ will be initialized after [-Wreorder]
 ../../../tvision/TWindow.cc:42:29: warning:   base ‘TWindowInit’ [-Wreorder]
@@ -196,8 +168,6 @@ In file included from /usr/include/c++/8/iosfwd:40,
 ../../../tvision/histlist.cc:41:12: warning: ‘operator new’ must not return NULL unless it is declared ‘throw()’ (or -fcheck-new is in effect)
 ../../../tvision/new.cc: In static member function ‘static void* TBufListEntry::operator new(size_t)’:
 ../../../tvision/new.cc:48:12: warning: ‘operator new’ must not return NULL unless it is declared ‘throw()’ (or -fcheck-new is in effect)
-../../../tvision/new.cc: In function ‘void* allocBlock(size_t)’:
-../../../tvision/new.cc:148:7: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
 In file included from ../../../tvision/tv.h:675,
                  from ../../../tvision/sall.cc:71:
 ../../../tvision/stddlg.h: In constructor ‘TFileDialog::TFileDialog(StreamableInit)’:
@@ -234,8 +204,6 @@ In file included from ../../../tvhc/tvhc.cc:90:
 ../../../tvhc/tvhc.h:30:1: warning: ‘typedef’ was ignored in this declaration
 ../../../tvhc/tvhc.cc: In function ‘void skipWhite(char*, int&)’:
 ../../../tvhc/tvhc.cc:384:35: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
-../../../tvhc/tvhc.cc: In function ‘TParagraph* readParagraph(std::fstream&, int&, TCrossRefNode*&)’:
-../../../tvhc/tvhc.cc:716:12: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
 In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../demo/ascii.cc:35:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
