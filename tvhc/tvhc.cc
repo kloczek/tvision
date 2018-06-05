@@ -106,7 +106,7 @@ TProtectedStream::TProtectedStream( char *aFileName, std::ios::openmode aMode ) 
     mode = aMode;
 }
 
-void error(char *text);
+void error(const char *text);
 
 //----- replaceExt(fileName, nExt, force) -------------------------------//
 //  Replace the extension of the given file with the given extension.    //
@@ -194,7 +194,7 @@ void unGetLine( char *s )
 //  Used by Error and Warning to print the message.                      //
 //-----------------------------------------------------------------------//
 
-void prntMsg( char *pref, char *text )
+void prntMsg( const char *pref, const char *text )
 {
     if (lineCount > 0)
       std::cout << pref << ": " << helpName << "("
@@ -208,7 +208,7 @@ void prntMsg( char *pref, char *text )
 //  Used to indicate an error.  Terminates the program                   //
 //-----------------------------------------------------------------------//
 
-void error( char *text )
+void error( const char *text )
 {
     prntMsg("Error", text);
     exit(1);
@@ -218,7 +218,7 @@ void error( char *text )
 //  Used to indicate an warning.                                         //
 //-----------------------------------------------------------------------//
 
-void warning( char *text )
+void warning( const char *text )
 {
     prntMsg("Warning", text);
 }

@@ -3,7 +3,7 @@ LDFLAGS="-Wl,--as-needed"
 CXXFLAGS="-O2"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
-  85194	   4484	    424	  90102	  15ff6	demo
+  84858	   4784	    424	  90066	  15fd2	demo
    8752	   1180	      4	   9936	   26d0	background
   13720	   1748	     16	  15484	   3c7c	listbox
   25508	   2372	     16	  27896	   6cf8	load
@@ -81,7 +81,7 @@ LDFLAGS="-Wl,--as-needed"
 CXXFLAGS="-Os"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
-  73744	   4308	    424	  78476	  1328c	demo
+  73408	   4608	    424	  78440	  13268	demo
    8620	   1180	      4	   9804	   264c	background
   16327	   2596	     16	  18939	   49fb	listbox
   21617	   1900	     16	  23533	   5bed	load
