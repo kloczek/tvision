@@ -3,6 +3,9 @@ sudo: false
 addons:
   apt:
     packages:
+      - autoconf
+      - automake
+      - libtool
       - libncurses-dev
       - libgpm-dev
       - ccache
@@ -12,5 +15,6 @@ before_install:
   - ccache -s
   - export PATH=/usr/lib/ccache:${PATH}
 script:
-  - ./configure
+  - ./bootstrap.sh
+  - CXXFLAGS="-Wall" LDFLAGS="-Wl,--as-needed" ./configure
   - make
