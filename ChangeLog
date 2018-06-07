@@ -9,6 +9,7 @@
   of the tvition library using pkg-config
 - rename lib/ to tvision/ and now hack with adding tvision symlink in lib/
   is no longer needed
+- install tvhc help file compiler in install target
 
 >>>>>>>> Changes from version 0.7 to 0.8 <<<<<<<<
 
