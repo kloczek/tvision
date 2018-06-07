@@ -1,0 +1,51 @@
+Summary:	An intuitive TUI interface for console applications
+Name:		tvision
+Version:	0.8.0
+Release:	1%{dist}
+License:	BSD
+URL:		http://github.com/kloczek/tvision/
+Source0:	tvision-%{version}.tar.gz
+BuildRequires:	libstdc++-devel
+
+%description 
+This is the shared library for programs using the TVision library.
+
+The TVision library gives an intuitive and user friendly TUI (Textual User
+Interface) for programs using this library and running in a console.
+
+This library is based on the Turbo Vision library made by Borland
+Corporation.  That library was released by Borland under a Public Domain
+license.
+
+%package devel
+Summary:	TVision library development
+Requires:	%{name} = %{version}-%{release}
+Requires:	libstdc++-devel
+
+%description devel
+Libraries and include files you can use for developing applications using
+the TVision library.
+
+%prep
+%autosetup -p1
+
+%build
+%configure
+%make_build
+
+%install
+%make_install
+
+%files
+%attr(755,root,root) %{_libdir}/lib*.so.*
+
+%files devel
+%attr(755,root,root) %{_bindir}/*
+%{_includedir}/tvision
+%{_libdir}/lib*.so
+%exclude %{_libdir}/lib*.la
+%{_libdir}/pkgconfig/*.pc
+
+%changelog
+* Thu Jun 07 2018 Tomasz Kłoczko <kloczek@fedoraproject.org> 0.8.0-1
+- initial version based on spec from RHTvion by Michel Catudal <bbcat@netonecom.net>

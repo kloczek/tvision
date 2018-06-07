@@ -105,10 +105,11 @@ esac
 
 AC_OUTPUT([
 	Makefile
-	tvision.pc
 	tvision/Makefile
 	tvhc/Makefile
 	demo/Makefile
 	tutorial/Makefile
 	doc/Makefile
+	tvision.pc
+	tvision.spec
 ])

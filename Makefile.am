@@ -13,4 +13,6 @@ pkgconfig_DATA	= tvision.pc
 EXTRA_DIST	= \
 	README.md \
 	color-xterm.ti \
-	tvision.pc.in
+	tvision.pc.in \
+	tvision.spec \
+	tvision.spec.in
