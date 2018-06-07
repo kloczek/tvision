@@ -1,6 +1,8 @@
 
 Known bugs and things to do
 ---------------------------
+- add tvhc(1) man page
+
 - seems like all tvision code isn't well formated. Ater finish fixing all
   compile waring indent whole code (probably using indent)
 
