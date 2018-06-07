@@ -3,6 +3,7 @@
       6 -Wint-to-pointer-cast
       6 -Wdelete-incomplete
       5 -Wformat-overflow=
+      2 -Wsized-deallocation
       2 -Wsign-compare
       2 -Wreturn-type
       2 -Wparentheses
@@ -80,6 +81,9 @@ In file included from /usr/include/c++/8/iosfwd:40,
 ../../../tvision/histlist.cc:41:12: warning: ‘operator new’ must not return NULL unless it is declared ‘throw()’ (or -fcheck-new is in effect)
 ../../../tvision/new.cc: In static member function ‘static void* TBufListEntry::operator new(size_t)’:
 ../../../tvision/new.cc:48:12: warning: ‘operator new’ must not return NULL unless it is declared ‘throw()’ (or -fcheck-new is in effect)
+../../../tvision/new.cc: At global scope:
+../../../tvision/new.cc:198:6: warning: the program should also define ‘void operator delete(void*, std::size_t)’ [-Wsized-deallocation]
+../../../tvision/new.cc:203:6: warning: the program should also define ‘void operator delete [](void*, std::size_t)’ [-Wsized-deallocation]
 ../../../tvision/system.cc: In static member function ‘static void TScreen::moveCursor(int, int)’:
 ../../../tvision/system.cc:2225:33: warning: narrowing conversion of ‘x’ from ‘int’ to ‘unsigned char’ inside { } [-Wnarrowing]
 ../../../tvision/system.cc:2225:33: warning: narrowing conversion of ‘y’ from ‘int’ to ‘unsigned char’ inside { } [-Wnarrowing]

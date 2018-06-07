@@ -16,5 +16,5 @@ before_install:
   - export PATH=/usr/lib/ccache:${PATH}
 script:
   - ./bootstrap.sh
-  - CXXFLAGS="-Wall" LDFLAGS="-Wl,--as-needed" ./configure
+  - CXXFLAGS="-Wall -Wextra" LDFLAGS="-Wl,--as-needed" ./configure
   - make
