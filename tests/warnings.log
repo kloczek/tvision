@@ -1,4 +1,4 @@
-     27 -Wwrite-strings
+     25 -Wwrite-strings
       8 -Wcpp
       6 -Wint-to-pointer-cast
       6 -Wdelete-incomplete
@@ -21,7 +21,6 @@
 ../../../tvision/TFileList.cc:143:16: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
 ../../../tvision/TFileList.cc: In member function ‘void TFileList::readDirectory(const char*)’:
 ../../../tvision/TFileList.cc:181:20: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
-../../../tvision/TFileList.cc:230:49: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tvision/TFileList.cc:201:16: warning: ‘sprintf’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
 ../../../tvision/TFileList.cc:201:9: note: ‘sprintf’ output between 2 and 4097 bytes into a destination of size 4096
 ../../../tvision/TFileList.cc:213:18: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
@@ -57,8 +56,6 @@ In file included from /usr/include/c++/8/iosfwd:40,
 ../../../tvision/TResourceFile.cc:136:63: note: candidate 2: ‘operator-(std::streamoff {aka long int}, long unsigned int)’ <built-in>
 ../../../tvision/TStringCollection.cc: In member function ‘virtual void TStringCollection::freeItem(void*)’:
 ../../../tvision/TStringCollection.cc:31:12: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
-../../../tvision/TValidator.cc: In constructor ‘TPXPictureValidator::TPXPictureValidator(const char*, Boolean)’:
-../../../tvision/TValidator.cc:99:7: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tvision/asm.cc: In member function ‘void TView::writeViewRec1(short int, short int, TView*, int)’:
 ../../../tvision/asm.cc:748:22: warning: suggest parentheses around arithmetic in operand of ‘|’ [-Wparentheses]
 ../../../tvision/colorsel.cc: In member function ‘void TColorSelector::colorChanged()’:

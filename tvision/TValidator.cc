@@ -91,12 +91,12 @@ TPXPictureValidator::TPXPictureValidator(const char* aPic, Boolean autoFill)
     : TValidator()
 {
 
-  char *s;
+  char s[1];
 
   pic = newStr(aPic);
   if ( autoFill )
        options |= voFill;
-  s = "";
+  s[0] = 0;
   if (picture(s, False) != prEmpty)
     status = vsSyntax;
 }
