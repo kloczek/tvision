@@ -3,7 +3,7 @@ Warning: the BSD-style copyright is applicable only to the modifications
 apported by Sergio Sigala to the original code.
 
 Borland has released the code to the public, but still owns the original
-copyright (see lib/tv.h for instance).
+copyright (see tvision/tv.h for instance).
 
 Other contributors have their respective copyright.
 
