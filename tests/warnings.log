@@ -3,10 +3,10 @@
       5 -Wformat-overflow=
       2 -Wsized-deallocation
       2 -Wsign-compare
-      2 -Wreturn-type
       2 -Wparentheses
       2 -Wnarrowing
       2 -Wdelete-incomplete
+      1 -Wreturn-type
       1 -Wchar-subscripts
 
 ----------------------------------------------------------------
@@ -108,8 +108,6 @@ In file included from /usr/include/c++/8/backward/strstream:50,
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
 ../../../demo/puzzle.cc: In member function ‘virtual void TPuzzleView::draw()’:
 ../../../demo/puzzle.cc:139:75: warning: array subscript has type ‘char’ [-Wchar-subscripts]
-../../../tutorial/nomenus.cc: In member function ‘ushort TMyApp::doWork()’:
-../../../tutorial/nomenus.cc:185:1: warning: no return statement in function returning non-void [-Wreturn-type]
 ../../../tutorial/tvedit.cc: In static member function ‘static ushort TVDemo::doEditorDialog(int, ...)’:
 ../../../tutorial/tvedit.cc:238:1: warning: control reaches end of non-void function [-Wreturn-type]
 ../../../tutorial/tvlife.cc: In member function ‘TCommandSet TMyApp::getCommands()’:

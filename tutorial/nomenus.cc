@@ -182,6 +182,8 @@ ushort TMyApp::doWork()
     if (control == cmOK) messageBox("Your order is accepted",
 	mfInformation + mfOKButton);
     else messageBox("You canceled the order", mfError + mfOKButton);
+
+    return 0;
 }
 
 int main()
