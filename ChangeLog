@@ -3,13 +3,15 @@
 - New maintainer (Tomasz Kłoczko). Git repository trasfered from
   https://github.com/itziakos/tvision (previousely owned by
   Ioannis Tziakos <ioannist@enthought.com>)
-- fixed autoconf ncurses library detection
-- fixed all compile errors using g++ 8.0.x
-- added install tvision.pc file to allow easy detect availability
+- Fixed autoconf ncurses library detection
+- Fixed all compile errors using g++ 8.0.x
+- Added install tvision.pc file to allow easy detect availability
   of the tvition library using pkg-config
-- rename lib/ to tvision/ and now hack with adding tvision symlink in lib/
+- Rename lib/ to tvision/ and now hack with adding tvision symlink in lib/
   is no longer needed
-- install tvhc help file compiler in install target
+- Install tvhc help file compiler in install target
+- Change maxViewWidth from 132 to 1024 so now TVision apllications can use
+  full width of some terminals
 
 >>>>>>>> Changes from version 0.7 to 0.8 <<<<<<<<
 

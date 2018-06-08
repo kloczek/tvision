@@ -33,7 +33,7 @@ const int maxCollectionSize = INT_MAX / sizeof(void *);
 /** \var maxViewWidth
  * Sets the maximum width of a view.
  */
-const int maxViewWidth = 132;
+const int maxViewWidth = 1024;
 
 /** \var maxFindStrLen
  * Gives the maximum length for a find string in TEditor applications.
