@@ -30,7 +30,7 @@ __link( RWindow )
 #include <stdio.h>	/* SS: for sprintf(...) */
 #include <stdlib.h>
 #include <ctype.h>
-#include <strstream>
+#include <sstream>
 #include <iomanip>
 #include <time.h>
 #include <unistd.h>

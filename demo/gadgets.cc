@@ -27,7 +27,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include <strstream>
+#include <sstream>
 #include <iomanip>
 #include <time.h>
 
