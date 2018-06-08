@@ -45,7 +45,7 @@
 // TClickTester functions
 //
 
-TClickTester::TClickTester(TRect& r, char *aText) :
+TClickTester::TClickTester(TRect& r, const char *aText) :
     TStaticText(r, aText)
 {
     clicked = 0;

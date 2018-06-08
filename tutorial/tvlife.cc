@@ -70,7 +70,7 @@ class TLifeWindow: public TWindow
 public:
 	static const int minW = 28;
 	static const int minH = 11;
-	TLifeWindow(TRect& bounds, char* str, int num);
+	TLifeWindow(TRect& bounds, const char* str, int num);
 	void sizeLimits(TPoint& min, TPoint& max);
 };
 
@@ -751,7 +751,7 @@ void TLifeInterior::setState(ushort aState, Boolean enable)
 	}*/
 }
 
-TLifeWindow::TLifeWindow(TRect& bounds, char* str, int num):
+TLifeWindow::TLifeWindow(TRect& bounds, const char* str, int num):
 	TWindowInit(&TLifeWindow::initFrame),
 	TWindow(bounds, str, num)
 {

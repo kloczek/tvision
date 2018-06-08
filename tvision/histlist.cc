@@ -38,7 +38,7 @@ void *HistRec::operator new( size_t, HistRec *hr )
 void *HistRec::operator new( size_t )
 {
     abort();
-    return 0;
+    return NULL;
 }
 
 inline HistRec::HistRec( uchar nId, const char *nStr ) :

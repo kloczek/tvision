@@ -72,7 +72,7 @@ void TMyApp::newDialog()
 		/* build a collection of strings */
 
 		#define HOWMANY	20
-		char *names[HOWMANY] =
+		const char *names[HOWMANY] =
 		{
 			"dog", "cat", "bird", "fish",
 			"animal1", "animal2", "animal3", "animal4",
@@ -84,7 +84,7 @@ void TMyApp::newDialog()
 //
 // TStringCollection sorts the strings by default
 //
-		for (int i = 0; i < HOWMANY; i++) tsc.insert(names[i]);
+		for (int i = 0; i < HOWMANY; i++) tsc.insert((void *)names[i]);
 
 		/* add two buttons */
 

@@ -45,7 +45,7 @@ void *TBufListEntry::operator new( size_t sz, size_t extra )
 
 void *TBufListEntry::operator new( size_t )
 {
-    return 0;
+    return NULL;
 }
 
 void TBufListEntry::operator delete( void *b )

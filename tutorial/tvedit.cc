@@ -57,7 +57,7 @@ private:
     void cascade();
     void changeDir();
     void newFile();
-    void openFile(char *fileSpec);
+    void openFile(const char *fileSpec);
     void shell();
     void showClipboard();
     void tile();
@@ -413,7 +413,7 @@ void TVDemo::newFile()
 //opens an existing file, whose file name is passed as a parameter
 //in `fileSpec'
 
-void TVDemo::openFile(char *fileSpec)
+void TVDemo::openFile(const char *fileSpec)
 {
     TFileDialog *d = (TFileDialog *) validView(new TFileDialog(fileSpec,
 	"Open a File", "~N~ame", fdOpenButton, 100));

@@ -1,18 +1,15 @@
-     25 -Wwrite-strings
       8 -Wcpp
       6 -Wint-to-pointer-cast
-      6 -Wdelete-incomplete
       5 -Wformat-overflow=
       2 -Wsized-deallocation
       2 -Wsign-compare
       2 -Wreturn-type
       2 -Wparentheses
       2 -Wnarrowing
+      2 -Wdelete-incomplete
       1 -Wchar-subscripts
 
 ----------------------------------------------------------------
-../../../tvision/TCollection.cc: In member function ‘virtual void TNSCollection::freeItem(void*)’:
-../../../tvision/TCollection.cc:155:12: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
 ../../../tvision/TDirListBox.cc: In member function ‘void TDirListBox::showDirs(TDirCollection*)’:
 ../../../tvision/TDirListBox.cc:117:16: warning: ‘sprintf’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
 ../../../tvision/TDirListBox.cc:117:9: note: ‘sprintf’ output between 2 and 4097 bytes into a destination of size 4096
@@ -77,11 +74,6 @@ In file included from /usr/include/c++/8/iosfwd:40,
                  from ../../../tvision/helpbase.cc:19:
 /usr/include/c++/8/bits/postypes.h:192:7: note: candidate 1: ‘std::fpos<_StateT> std::fpos<_StateT>::operator-(std::streamoff) const [with _StateT = __mbstate_t; std::streamoff = long int]’
 ../../../tvision/helpbase.cc:596:30: note: candidate 2: ‘operator-(std::streamoff {aka long int}, int)’ <built-in>
-../../../tvision/histlist.cc: In static member function ‘static void* HistRec::operator new(size_t)’:
-../../../tvision/histlist.cc:41:12: warning: ‘operator new’ must not return NULL unless it is declared ‘throw()’ (or -fcheck-new is in effect)
-../../../tvision/new.cc: In static member function ‘static void* TBufListEntry::operator new(size_t)’:
-../../../tvision/new.cc:48:12: warning: ‘operator new’ must not return NULL unless it is declared ‘throw()’ (or -fcheck-new is in effect)
-../../../tvision/new.cc: At global scope:
 ../../../tvision/new.cc:198:6: warning: the program should also define ‘void operator delete(void*, std::size_t)’ [-Wsized-deallocation]
 ../../../tvision/new.cc:203:6: warning: the program should also define ‘void operator delete [](void*, std::size_t)’ [-Wsized-deallocation]
 ../../../tvision/system.cc: In static member function ‘static void TScreen::moveCursor(int, int)’:
@@ -105,60 +97,20 @@ In file included from /usr/include/c++/8/backward/strstream:50,
 In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../demo/calendar.cc:32:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
-In file included from ../../../demo/fileview.cc:37:
-../../../demo/fileview.h: In member function ‘virtual void TLineCollection::freeItem(void*)’:
-../../../demo/fileview.h:30:46: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
 In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../demo/gadgets.cc:30:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
 In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../demo/mousedlg.cc:35:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
-../../../demo/mousedlg.cc: In constructor ‘TMouseDialog::TMouseDialog()’:
-../../../demo/mousedlg.cc:116:61: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../demo/puzzle.cc:33:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
 ../../../demo/puzzle.cc: In member function ‘virtual void TPuzzleView::draw()’:
 ../../../demo/puzzle.cc:139:75: warning: array subscript has type ‘char’ [-Wchar-subscripts]
-In file included from ../../../demo/tvdemo1.cc:35:
-../../../demo/fileview.h: In member function ‘virtual void TLineCollection::freeItem(void*)’:
-../../../demo/fileview.h:30:46: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
-../../../demo/tvdemo2.cc: In member function ‘virtual void TVDemo::handleEvent(TEvent&)’:
-../../../demo/tvdemo2.cc:89:29: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-In file included from ../../../demo/tvdemo3.cc:40:
-../../../demo/fileview.h: In member function ‘virtual void TLineCollection::freeItem(void*)’:
-../../../demo/fileview.h:30:46: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
-../../../tutorial/tvguid05.cc: In member function ‘virtual void TInterior::draw()’:
-../../../tutorial/tvguid05.cc:74:18: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc: In member function ‘void TMyApp::newDialog()’:
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-../../../tutorial/listbox.cc:82:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/nomenus.cc: In member function ‘ushort TMyApp::doWork()’:
 ../../../tutorial/nomenus.cc:185:1: warning: no return statement in function returning non-void [-Wreturn-type]
-../../../tutorial/tvedit.cc: In member function ‘virtual void TVDemo::handleEvent(TEvent&)’:
-../../../tutorial/tvedit.cc:291:14: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/tvedit.cc: In static member function ‘static ushort TVDemo::doEditorDialog(int, ...)’:
 ../../../tutorial/tvedit.cc:238:1: warning: control reaches end of non-void function [-Wreturn-type]
-../../../tutorial/tvlife.cc: In member function ‘void TMyApp::createLifeWindow()’:
-../../../tutorial/tvlife.cc:798:51: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
 ../../../tutorial/tvlife.cc: In member function ‘TCommandSet TMyApp::getCommands()’:
 ../../../tutorial/tvlife.cc:812:20: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
