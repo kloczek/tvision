@@ -4,7 +4,6 @@ EXTRA_DIST	= \
 	Doxyfile \
 	example.gif.in \
 	index.html.in \
-	texinfo.tex \
 	tvision.info \
 	tvision.texi
 
