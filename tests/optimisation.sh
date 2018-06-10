@@ -3,6 +3,9 @@
 if [ -e ../Makefile ]; then
 	make -C .. distclean
 fi
+if [ ! -e ../configure ]; then
+	(cd ..; ./bootstrap.sh)
+fi
 
 timestamp="$(date +%F-%T)"
 
@@ -24,17 +27,16 @@ all_targets="O2 O2_lto Os Os_lto max_opt"
 
 rm -rf $all_targets {demo,background,listbox,load,nomenus,splash,tvedit,tvguid*,tvlife,validator,tvhc,libtvision.so.0.0*}
 for i in $all_targets; do
-	echo $i
 	mkdir $i
 	cd $i
-	echo "configure $i"
+	echo "$i configure"
 	eval LDFLAGS="$(echo \$LDFLAGS_${i})"
 	eval CXXFLAGS="$(echo \$CXXFLAGS_${i})"
 	LDFLAGS="$LDFLAGS" \
 	CXXFLAGS="$CXXFLAGS" \
 	AR="gcc-ar" RANLIB="gcc-ranlib" NM="gcc-nm" \
 	../../configure --quiet --enable-maintainer-mode
-	echo "make $i"
+	echo "$i make"
 	make -j10 >/dev/null 2>&1
 	echo "------------------------------------------------------" >> ../optimisation.log
 	echo LDFLAGS=\""$LDFLAGS"\" >> ../optimisation.log

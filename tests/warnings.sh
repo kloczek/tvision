@@ -3,6 +3,9 @@
 if [ -e ../Makefile ]; then
 	make -C .. distclean
 fi
+if [ ! -e ../configure ]; then
+	(cd ..; ./bootstrap.sh)
+fi
 
 rm -rf warnings
 mkdir warnings
@@ -18,4 +21,4 @@ grep -- -W warnings.err | sed 's/.*\[//; s/\]//' | sort | uniq -c | sort -nr > w
 echo >> warnings.log
 echo "----------------------------------------------------------------" >> warnings.log
 cat warnings.err >> warnings.log
-rm -rf warnings warnings.err
+rm -rf warnings.err
