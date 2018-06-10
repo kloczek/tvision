@@ -5,7 +5,6 @@ aclocal.m4
 ar-lib
 autom4te.cache/
 compile
-config.guess
 config.*
 configure
 depcomp
@@ -16,16 +15,17 @@ m4/
 missing
 stamp-h1
 .libs/
-*.pc
-*.tar.xz
+.deps/
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-*.Plo
-*.Po
+# files to ignore
+*~
+*.a
+*.info
+*.pc
+*.tar.*
+*.tex
+
+# executables
 demo/demo
 tutorial/background
 tutorial/listbox
@@ -56,22 +56,3 @@ tvhc/tvhc
 # Precompiled Headers
 *.gch
 *.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
