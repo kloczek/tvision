@@ -43,7 +43,7 @@ void *TBufListEntry::operator new( size_t sz, size_t extra )
     return malloc( sz + extra*sizeof( unsigned ) );
 }
 
-void *TBufListEntry::operator new( size_t )
+void *TBufListEntry::operator new( size_t ) throw()
 {
     return NULL;
 }

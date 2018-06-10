@@ -56,7 +56,7 @@ private:
      * the allocation is returned; otherwise, abort() is called. Operator
      * new() is a friend function of TBufListEntry.
      */
-    void *operator new( size_t sz );
+    void *operator new( size_t sz ) throw();
     /**
      * Frees the allocation block from the heap. If the safety pool is
      * exhausted, @ref TVMemMgr::resizeSafetyPool is called.
