@@ -209,7 +209,7 @@ void TProgram::handleEvent( TEvent& event )
             if(canMoveFocus())      //<--- Check valid first.
             {
                 if( message(deskTop, evBroadcast, cmSelectWindowNum,
-                  (void *)(c - '0')) != 0 )
+                  (void *)(ptrdiff_t)(c - '0')) != 0 )
                     clearEvent( event );
             }
             else

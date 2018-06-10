@@ -1,4 +1,3 @@
-      6 -Wint-to-pointer-cast
       5 -Wformat-overflow=
       5 -Wcpp
       2 -Wsized-deallocation
@@ -39,8 +38,6 @@ In file included from /usr/include/c++/8/iosfwd:40,
                  from ../../../tvision/TMemo.cc:18:
 /usr/include/c++/8/bits/postypes.h:178:7: note: candidate 1: ‘std::fpos<_StateT> std::fpos<_StateT>::operator+(std::streamoff) const [with _StateT = __mbstate_t; std::streamoff = long int]’
 ../../../tvision/TMemo.cc:89:32: note: candidate 2: ‘operator+(std::streamoff {aka long int}, uint {aka unsigned int})’ <built-in>
-../../../tvision/TProgram.cc: In member function ‘virtual void TProgram::handleEvent(TEvent&)’:
-../../../tvision/TProgram.cc:212:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
 ../../../tvision/TResourceFile.cc: In member function ‘void TResourceFile::flush()’:
 ../../../tvision/TResourceFile.cc:136:63: warning: ISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
 In file included from /usr/include/c++/8/iosfwd:40,
@@ -56,13 +53,6 @@ In file included from /usr/include/c++/8/iosfwd:40,
 ../../../tvision/TStringCollection.cc:31:12: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
 ../../../tvision/asm.cc: In member function ‘void TView::writeViewRec1(short int, short int, TView*, int)’:
 ../../../tvision/asm.cc:748:22: warning: suggest parentheses around arithmetic in operand of ‘|’ [-Wparentheses]
-../../../tvision/colorsel.cc: In member function ‘void TColorSelector::colorChanged()’:
-../../../tvision/colorsel.cc:138:47: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
-../../../tvision/colorsel.cc: In member function ‘virtual void TColorDisplay::setColor(uchar*)’:
-../../../tvision/colorsel.cc:373:61: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
-../../../tvision/colorsel.cc: In member function ‘virtual void TColorItemList::focusItem(short int)’:
-../../../tvision/colorsel.cc:637:57: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
-../../../tvision/colorsel.cc:642:74: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
 ../../../tvision/helpbase.cc: In destructor ‘virtual THelpFile::~THelpFile()’:
 ../../../tvision/helpbase.cc:596:30: warning: ISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
 In file included from /usr/include/c++/8/iosfwd:40,
@@ -89,8 +79,6 @@ In file included from ../../../tvhc/tvhc.cc:90:
 In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../demo/ascii.cc:35:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
-../../../demo/ascii.cc: In member function ‘void TTable::charFocused()’:
-../../../demo/ascii.cc:104:41: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
 In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../demo/calc.cc:35:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
