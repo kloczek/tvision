@@ -1954,7 +1954,7 @@ public:
     /**
      * Calls TView constructor TView(bounds), then sets @ref growMode to
      * @ref gfGrowHiX | @ref gfGrowHiY and sets @ref eventMask to
-     * @reg eventMask | @ref evBroadcast, so TFrame objects default to
+     * @ref eventMask | @ref evBroadcast, so TFrame objects default to
      * handling broadcast events.
      * `bounds' is the bounding rectangle of the frame.
      */

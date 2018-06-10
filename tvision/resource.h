@@ -261,7 +261,7 @@ public:
     ~TResourceFile();
     /**
      * Calls index->getCount() to return the number of resource items stored
-     * in the associated @reg TResourceCollection.
+     * in the associated @ref TResourceCollection.
      * @see index
      */
     short count();
