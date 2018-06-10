@@ -105,7 +105,7 @@ public:
      *
      * By default, input lines with validators give the validator the first
      * chance to respond to @ref TInputLine::dataSize(),
-     * @ref TInputLine::getData(), and @TInputLine::setData() by calling the
+     * @ref TInputLine::getData(), and @ref TInputLine::setData() by calling the
      * validator's transfer() method.
      *
      * If transfer() returns anything other than 0, it indicates to the input
