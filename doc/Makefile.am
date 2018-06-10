@@ -1,11 +1,10 @@
-#info_TEXINFOS = tvision.info
+
+info_TEXINFOS 	= tvision.texi
 
 EXTRA_DIST	= \
 	Doxyfile \
 	example.gif.in \
-	index.html.in \
-	tvision.info \
-	tvision.texi
+	index.html.in
 
 SRCS = app.h buffers.h colorsel.h dialogs.h drawbuf.h editors.h \
 	help.h helpbase.h menus.h msgbox.h objects.h outline.h resource.h \

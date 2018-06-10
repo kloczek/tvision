@@ -45,6 +45,8 @@ the TVision library.
 %{_libdir}/lib*.so
 %exclude %{_libdir}/lib*.la
 %{_libdir}/pkgconfig/*.pc
+%{_infodir}/*info*
+%exclude %{_infodir}/dir
 
 %changelog
 * Thu Jun 07 2018 Tomasz Kłoczko <kloczek@fedoraproject.org> 0.8.0-1
