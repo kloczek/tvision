@@ -809,7 +809,7 @@ TCommandSet TMyApp::getCommands()
 	wc += cmRandom;
 	wc += cmStartStop;
 	wc += cmTile;
-	for (int i = 0; i < NPATS; i++)	//scan pattern commands
+	for (int i = 0; i < (int)NPATS; i++)	//scan pattern commands
 	{
 		wc += cmPat01 + i;	//add pattern commands
 	}

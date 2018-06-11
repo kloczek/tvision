@@ -178,7 +178,7 @@ void TFileList::readDirectory( const char *aWildCard )
 #else
 	if (glob(path, 0, NULL, &gl) == 0)
 #endif
-	for (int i = 0; i < gl.gl_pathc; i++)
+	for (int i = 0; i < (int)gl.gl_pathc; i++)
 	{
 		/* is this a regular file ? */
 
