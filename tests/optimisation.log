@@ -3,7 +3,7 @@ LDFLAGS="-Wl,--as-needed"
 CXXFLAGS="-O2"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
-  84891	   4784	    424	  90099	  15ff3	demo
+  90611	   5128	    424	  96163	  177a3	demo
    8752	   1180	      4	   9936	   26d0	background
   13721	   1748	     16	  15485	   3c7d	listbox
   25509	   2372	     16	  27897	   6cf9	load
@@ -42,7 +42,7 @@ LDFLAGS="-O2 -Wl,--as-needed -flto -fuse-linker-plugin"
 CXXFLAGS="-O2 -flto"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
-  76403	   4492	    432	  81327	  13daf	demo
+  81952	   4868	    432	  87252	  154d4	demo
    8215	   1196	      4	   9415	   24c7	background
   14419	   1836	     16	  16271	   3f8f	listbox
   23447	   2372	     16	  25835	   64eb	load
@@ -81,7 +81,7 @@ LDFLAGS="-Wl,--as-needed"
 CXXFLAGS="-Os"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
-  73393	   4608	    424	  78425	  13259	demo
+  74052	   4624	    424	  79100	  134fc	demo
    8620	   1180	      4	   9804	   264c	background
   16328	   2596	     16	  18940	   49fc	listbox
   21618	   1900	     16	  23534	   5bee	load
@@ -120,7 +120,7 @@ LDFLAGS="-Os -Wl,--as-needed -flto -fuse-linker-plugin"
 CXXFLAGS="-Os -flto"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
-  66161	   4084	    432	  70677	  11415	demo
+  66820	   4100	    432	  71352	  116b8	demo
    8070	   1180	      4	   9254	   2426	background
   13293	   1828	     16	  15137	   3b21	listbox
   20153	   1900	     16	  22069	   5635	load
@@ -159,7 +159,7 @@ LDFLAGS="-Os -Wl,--as-needed -flto -fuse-linker-plugin"
 CXXFLAGS="-Os -flto -fno-exceptions -fno-rtti"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
-  59824	   3428	    432	  63684	   f8c4	demo
+  60336	   3444	    432	  64212	   fad4	demo
    7419	    940	      4	   8363	   20ab	background
   12174	   1556	     16	  13746	   35b2	listbox
   18653	   1532	     16	  20201	   4ee9	load
