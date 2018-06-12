@@ -148,7 +148,7 @@ void TCalendarView::draw()
 
     std::ostrstream s1( str, sizeof str);
     s1 << std::setw(9) << monthNames[month] << " " << std::setw(4) << year
-       << " " << (char) 30 << "  " << (char) 31 << " " << std::ends;
+       << " " << (char) 032 << "  " << (char) 033 << " " << std::ends;
 
     buf.moveStr(0, str, color);
     writeLine(0, 0, 22, 1, buf);
