@@ -32,8 +32,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include <sstream>
-#include <iomanip>
 
 #include "mousedlg.h"
 

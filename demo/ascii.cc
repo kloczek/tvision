@@ -32,8 +32,6 @@ __link( RWindow )
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include <sstream>
-#include <iomanip>
 
 #include "ascii.h"
 
@@ -207,22 +205,14 @@ void TReport::draw()
 {
     TDrawBuffer buf;
     char        color = getColor(6);
-//    char        str[80];
-    std::stringstream	statusStr;
+    char        str[80];
 
-    statusStr
-      << "  Char: " << (char ) ((asciiChar == 0) ? 0x20 : asciiChar)
-      << " Decimal: " << std::setw(3) << (int) asciiChar
-      << " Hex " << std::hex << setiosflags(std::ios::uppercase)
-      << std::setw(2) << (int) asciiChar << "     " << std::ends;
+    snprintf(str, sizeof(str), "  Char: %c Decimal: %3d Hex: %2X  ",
+		(asciiChar==0)?(char)0x20:(char)asciiChar,
+		(int)asciiChar,
+		(int)asciiChar);
 
-//    snprintf(str, sizeof(str), "  Char: %c Decimal: %3d Hex: %2X  ",
-//		(asciiChar==0)?(char)0x20:(char)asciiChar,
-//		(int)asciiChar,
-//		(int)asciiChar);
-
-//    buf.moveStr(0, str, color);
-    buf.moveStr(0, statusStr.str().c_str(), color);
+    buf.moveStr(0, str, color);
     writeLine(0, 0, 32, 1, buf);
 }
 

@@ -29,8 +29,6 @@ __link( RWindow )
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include <sstream>
-#include <iomanip>
 #include <time.h>
 
 #include "calendar.h"
@@ -146,11 +144,8 @@ void TCalendarView::draw()
 
     buf.moveChar(0, ' ', color, 22);
 
-    std::stringstream s1;
-    s1 << std::setw(9) << monthNames[month] << " " << std::setw(4) << year
-       << " " << (char) 032 << "  " << (char) 033 << " " << std::ends;
-    buf.moveStr(0, s1.str().c_str(), color);
-//    sprintf(str, "%9s %4d \032  \033 ", monthNames[month], year);
+    buf.moveStr(0, str, color);
+    sprintf(str, "%9s %4d \032  \033 ", monthNames[month], year);
     buf.moveStr(0, str, color);
     writeLine(0, 0, 22, 1, buf);
 
@@ -167,16 +162,12 @@ void TCalendarView::draw()
                 buf.moveStr((short)(j*3), "   ", color);
             else
                 {
-		std::stringstream s2;
-		s2 << std::setw(2) << (int) current << std::ends;
-//		sprintf(str, "%2d", (int)current);
+		sprintf(str, "%2d", (int)current);
                 if(year == curYear && month == curMonth && current ==
 			(int)curDay)
-		    buf.moveStr((short)(j*3), s2.str().c_str(), boldColor);
-//		    buf.moveStr((short)(j*3), str, boldColor);
+		    buf.moveStr((short)(j*3), str, boldColor);
                 else
-		    buf.moveStr((short)(j*3), s2.str().c_str(), color);
-//		    buf.moveStr((short)(j*3), str, color);
+		    buf.moveStr((short)(j*3), str, color);
                 }
             current++;
             }

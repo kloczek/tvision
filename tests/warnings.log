@@ -75,6 +75,6 @@ In file included from ../../../tvhc/tvhc.cc:90:
 ../../../tvhc/tvhc.cc: In function ‘void skipWhite(char*, int&)’:
 ../../../tvhc/tvhc.cc:384:35: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
 ../../../demo/puzzle.cc: In member function ‘virtual void TPuzzleView::draw()’:
-../../../demo/puzzle.cc:139:75: warning: array subscript has type ‘char’ [-Wchar-subscripts]
+../../../demo/puzzle.cc:137:75: warning: array subscript has type ‘char’ [-Wchar-subscripts]
 ../../../tutorial/tvedit.cc: In static member function ‘static ushort TVDemo::doEditorDialog(int, ...)’:
 ../../../tutorial/tvedit.cc:238:1: warning: control reaches end of non-void function [-Wreturn-type]
