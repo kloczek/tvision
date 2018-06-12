@@ -3,8 +3,8 @@
       2 -Wparentheses
       2 -Wnarrowing
       2 -Wdelete-incomplete
-      2 -Wcpp
       1 -Wreturn-type
+      1 -Wcpp
       1 -Wchar-subscripts
 
 ----------------------------------------------------------------
@@ -22,9 +22,6 @@
 ../../../tvision/TFileList.cc:213:11: note: ‘sprintf’ output between 1 and 4351 bytes into a destination of size 4096
 ../../../tvision/TFileList.cc:229:17: warning: ‘..’ directive writing 2 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
 ../../../tvision/TFileList.cc:229:10: note: ‘sprintf’ output between 3 and 4098 bytes into a destination of size 4096
-In file included from /usr/include/c++/8/backward/strstream:50,
-                 from ../../../tvision/TIndicator.cc:21:
-/usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
 ../../../tvision/TMemo.cc: In member function ‘virtual void* TMemo::read(ipstream&)’:
 ../../../tvision/TMemo.cc:89:32: warning: ISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
 In file included from /usr/include/c++/8/iosfwd:40,

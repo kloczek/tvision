@@ -18,7 +18,6 @@
 #include <tv.h>
 
 #include <string.h>
-#include <strstream>
 
 #define cpIndicator "\x02\x03"
 
@@ -48,12 +47,8 @@ void TIndicator::draw()
     b.moveChar( 0, frame, color, size.x );
     if( modified )
         b.putChar( 0, 15 );
-    std::ostrstream os( s, 15 );
 
-    os << ' ' << (location.y+1)
-       << ':' << (location.x+1) << ' ' << std::ends;
-
-    b.moveCStr( 8-int(strchr(s, ':')-s), s, color);
+    sprintf(s, " %d:%d ",location. y+1, location.x+1);
     writeBuf(0, 0, size.x, 1, b);
 }
 
