@@ -18,6 +18,7 @@
 #include <tv.h>
 
 #include <string.h>
+#include <stdio.h>
 
 #define cpIndicator "\x02\x03"
 
