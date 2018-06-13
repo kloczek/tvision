@@ -22,17 +22,6 @@
 ../../../tvision/TFileList.cc:213:11: note: ‘sprintf’ output between 1 and 4351 bytes into a destination of size 4096
 ../../../tvision/TFileList.cc:229:17: warning: ‘..’ directive writing 2 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
 ../../../tvision/TFileList.cc:229:10: note: ‘sprintf’ output between 3 and 4098 bytes into a destination of size 4096
-../../../tvision/TMemo.cc: In member function ‘virtual void* TMemo::read(ipstream&)’:
-../../../tvision/TMemo.cc:89:32: warning: ISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
-In file included from /usr/include/c++/8/iosfwd:40,
-                 from /usr/include/c++/8/ios:38,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
-                 from ../../../tvision/tobjstrm.h:414,
-                 from ../../../tvision/tv.h:635,
-                 from ../../../tvision/TMemo.cc:18:
-/usr/include/c++/8/bits/postypes.h:178:7: note: candidate 1: ‘std::fpos<_StateT> std::fpos<_StateT>::operator+(std::streamoff) const [with _StateT = __mbstate_t; std::streamoff = long int]’
-../../../tvision/TMemo.cc:89:32: note: candidate 2: ‘operator+(std::streamoff {aka long int}, uint {aka unsigned int})’ <built-in>
 ../../../tvision/TResourceFile.cc: In member function ‘void TResourceFile::flush()’:
 ../../../tvision/TResourceFile.cc:136:63: warning: ISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
 In file included from /usr/include/c++/8/iosfwd:40,

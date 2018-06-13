@@ -70,7 +70,7 @@ void TMemo::handleEvent( TEvent& event )
 void TMemo::write( opstream& os )
 {
     TEditor::write( os );
-    os << (uint) bufLen;	//fixed
+    os << (uint) bufLen;
     os.writeBytes( buffer, curPtr );
     os.writeBytes( buffer + gapLen, bufLen - curPtr );
 }
@@ -78,7 +78,7 @@ void TMemo::write( opstream& os )
 void *TMemo::read( ipstream& is )
 {
     TEditor::read( is );
-    uint length;		//fixed
+    long int length;
     is >> length;
     if( isValid )
         {
