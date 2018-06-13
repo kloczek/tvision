@@ -1,12 +1,18 @@
 
 Known bugs and things to do
 ---------------------------
-- add tvhc(1) man page
+- Bug: in tvedit edit window TIndicartor is not displayed
 
-- seems like all tvision code isn't well formated. Ater finish fixing all
+- Bug: problems with wrong colors palette
+
+- Bug: TBacground displays wrong character (#)
+
+- Add tvhc(1) man page
+
+- Seems like all tvision code isn't well formated. Ater finish fixing all
   compile waring indent whole code (probably using indent)
 
-- integrate tvision/myendian.h into tvision/system.h
+- Integrate tvision/myendian.h into tvision/system.h
 
 - Fix textview.cc, textview.h and TTerminal::prevLines() in `asm.cc'.
 
