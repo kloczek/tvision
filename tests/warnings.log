@@ -2,7 +2,6 @@
       2 -Wsized-deallocation
       2 -Wparentheses
       2 -Wdelete-incomplete
-      1 -Wreturn-type
       1 -Wcpp
 
 ----------------------------------------------------------------
@@ -44,5 +43,3 @@ In file included from ../../../tvhc/tvhc.cc:90:
 ../../../tvhc/tvhc.h:30:1: warning: ‘typedef’ was ignored in this declaration
 ../../../tvhc/tvhc.cc: In function ‘void skipWhite(char*, int&)’:
 ../../../tvhc/tvhc.cc:384:35: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
-../../../tutorial/tvedit.cc: In static member function ‘static ushort TVDemo::doEditorDialog(int, ...)’:
-../../../tutorial/tvedit.cc:238:1: warning: control reaches end of non-void function [-Wreturn-type]

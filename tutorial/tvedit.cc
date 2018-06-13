@@ -230,10 +230,14 @@ ushort TVDemo::doEditorDialog(int dialog, ...)
     case edReplace:
 	return doExecute(createReplaceDialog(), info);
     case edReplacePrompt:
+	{
     	va_start(ap, dialog);
 	TPoint *cursor = va_arg(ap, TPoint *);
 	va_end(ap);
 	return doReplacePrompt(*cursor);
+	}
+    default:
+	return cmCancel;
     }
 }
 
