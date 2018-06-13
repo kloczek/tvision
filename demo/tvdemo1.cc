@@ -42,11 +42,7 @@
 
 /* SS: changed */
 
-//#ifdef __DPMI32__
 #define HELP_FILENAME "DEMOHELP.H32"
-//#else
-//#define HELP_FILENAME "DEMOHELP.H16"
-//#endif
 
 //
 // main: create an application object.  Constructor takes care of all
