@@ -9,7 +9,7 @@
   of the tvition library using pkg-config
 - Rename lib/ to tvision/ and now hack with adding tvision symlink in lib/
   is no longer needed
-- Install tvhc help file compiler in install target
+- Install tvhc help file compiler
 - Change maxViewWidth from 132 to 1024 so now TVision apllications can use
   full width of some terminals
 
