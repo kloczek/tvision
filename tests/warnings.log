@@ -1,11 +1,9 @@
       5 -Wformat-overflow=
       2 -Wsized-deallocation
       2 -Wparentheses
-      2 -Wnarrowing
       2 -Wdelete-incomplete
       1 -Wreturn-type
       1 -Wcpp
-      1 -Wchar-subscripts
 
 ----------------------------------------------------------------
 ../../../tvision/TDirListBox.cc: In member function ‘void TDirListBox::showDirs(TDirCollection*)’:
@@ -39,9 +37,6 @@ In file included from /usr/include/c++/8/iosfwd:40,
 ../../../tvision/helpbase.cc:596:30: note: candidate 2: ‘operator-(std::streamoff {aka long int}, int)’ <built-in>
 ../../../tvision/new.cc:198:6: warning: the program should also define ‘void operator delete(void*, std::size_t)’ [-Wsized-deallocation]
 ../../../tvision/new.cc:203:6: warning: the program should also define ‘void operator delete [](void*, std::size_t)’ [-Wsized-deallocation]
-../../../tvision/system.cc: In static member function ‘static void TScreen::moveCursor(int, int)’:
-../../../tvision/system.cc:2225:33: warning: narrowing conversion of ‘x’ from ‘int’ to ‘unsigned char’ inside { } [-Wnarrowing]
-../../../tvision/system.cc:2225:33: warning: narrowing conversion of ‘y’ from ‘int’ to ‘unsigned char’ inside { } [-Wnarrowing]
 In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../tvhc/tvhc.cc:97:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
@@ -49,7 +44,5 @@ In file included from ../../../tvhc/tvhc.cc:90:
 ../../../tvhc/tvhc.h:30:1: warning: ‘typedef’ was ignored in this declaration
 ../../../tvhc/tvhc.cc: In function ‘void skipWhite(char*, int&)’:
 ../../../tvhc/tvhc.cc:384:35: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
-../../../demo/puzzle.cc: In member function ‘virtual void TPuzzleView::draw()’:
-../../../demo/puzzle.cc:137:75: warning: array subscript has type ‘char’ [-Wchar-subscripts]
 ../../../tutorial/tvedit.cc: In static member function ‘static ushort TVDemo::doEditorDialog(int, ...)’:
 ../../../tutorial/tvedit.cc:238:1: warning: control reaches end of non-void function [-Wreturn-type]
