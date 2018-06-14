@@ -42,7 +42,7 @@
 
 /* SS: changed */
 
-#define HELP_FILENAME "DEMOHELP.H32"
+#define HELP_FILENAME "demohelp.hlp"
 
 //
 // main: create an application object.  Constructor takes care of all
