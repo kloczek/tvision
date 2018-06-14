@@ -1,24 +1,118 @@
-      5 -Wformat-overflow=
+     10 -Wunused-result
+      6 -Wformat-overflow=
       2 -Wsized-deallocation
       2 -Wparentheses
       2 -Wdelete-incomplete
+      1 -Wstrict-aliasing
+      1 -Wrestrict
       1 -Wcpp
 
 ----------------------------------------------------------------
+../../../tvision/TDirCollection.cc: In function ‘void getCurDir(char*)’:
+../../../tvision/TDirCollection.cc:74:8: warning: ignoring return value of ‘char* getcwd(char*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
 ../../../tvision/TDirListBox.cc: In member function ‘void TDirListBox::showDirs(TDirCollection*)’:
-../../../tvision/TDirListBox.cc:117:16: warning: ‘sprintf’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
-../../../tvision/TDirListBox.cc:117:9: note: ‘sprintf’ output between 2 and 4097 bytes into a destination of size 4096
+../../../tvision/TDirListBox.cc:117:16: warning: ‘__builtin___sprintf_chk’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+In file included from /usr/include/stdio.h:861,
+                 from /usr/include/c++/8/cstdio:42,
+                 from /usr/include/c++/8/ext/string_conversions.h:43,
+                 from /usr/include/c++/8/bits/basic_string.h:6361,
+                 from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/bits/locale_classes.h:40,
+                 from /usr/include/c++/8/bits/ios_base.h:41,
+                 from /usr/include/c++/8/ios:42,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from ../../../tvision/tobjstrm.h:414,
+                 from ../../../tvision/tv.h:635,
+                 from ../../../tvision/TDirListBox.cc:18:
+/usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 2 and 4097 bytes into a destination of size 4096
 ../../../tvision/TDirListBox.cc:129:18: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
-../../../tvision/TDirListBox.cc:129:11: note: ‘sprintf’ output between 1 and 4351 bytes into a destination of size 4096
+In file included from /usr/include/stdio.h:861,
+                 from /usr/include/c++/8/cstdio:42,
+                 from /usr/include/c++/8/ext/string_conversions.h:43,
+                 from /usr/include/c++/8/bits/basic_string.h:6361,
+                 from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/bits/locale_classes.h:40,
+                 from /usr/include/c++/8/bits/ios_base.h:41,
+                 from /usr/include/c++/8/ios:42,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from ../../../tvision/tobjstrm.h:414,
+                 from ../../../tvision/tv.h:635,
+                 from ../../../tvision/TDirListBox.cc:18:
+/usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 1 and 4351 bytes into a destination of size 4096
+../../../tvision/TFileList.cc: In member function ‘void DirSearchRec::readFf_blk(const char*, stat&)’:
+../../../tvision/TFileList.cc:131:11: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 ../../../tvision/TFileList.cc: In static member function ‘static void* DirSearchRec::operator new(size_t)’:
 ../../../tvision/TFileList.cc:143:16: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
 ../../../tvision/TFileList.cc: In member function ‘void TFileList::readDirectory(const char*)’:
-../../../tvision/TFileList.cc:201:16: warning: ‘sprintf’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
-../../../tvision/TFileList.cc:201:9: note: ‘sprintf’ output between 2 and 4097 bytes into a destination of size 4096
+../../../tvision/TFileList.cc:201:16: warning: ‘__builtin___sprintf_chk’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+In file included from /usr/include/stdio.h:861,
+                 from /usr/include/c++/8/cstdio:42,
+                 from /usr/include/c++/8/ext/string_conversions.h:43,
+                 from /usr/include/c++/8/bits/basic_string.h:6361,
+                 from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/bits/locale_classes.h:40,
+                 from /usr/include/c++/8/bits/ios_base.h:41,
+                 from /usr/include/c++/8/ios:42,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from ../../../tvision/tobjstrm.h:414,
+                 from ../../../tvision/tv.h:635,
+                 from ../../../tvision/TFileList.cc:20:
+/usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 2 and 4097 bytes into a destination of size 4096
 ../../../tvision/TFileList.cc:213:18: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
-../../../tvision/TFileList.cc:213:11: note: ‘sprintf’ output between 1 and 4351 bytes into a destination of size 4096
+In file included from /usr/include/stdio.h:861,
+                 from /usr/include/c++/8/cstdio:42,
+                 from /usr/include/c++/8/ext/string_conversions.h:43,
+                 from /usr/include/c++/8/bits/basic_string.h:6361,
+                 from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/bits/locale_classes.h:40,
+                 from /usr/include/c++/8/bits/ios_base.h:41,
+                 from /usr/include/c++/8/ios:42,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from ../../../tvision/tobjstrm.h:414,
+                 from ../../../tvision/tv.h:635,
+                 from ../../../tvision/TFileList.cc:20:
+/usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 1 and 4351 bytes into a destination of size 4096
 ../../../tvision/TFileList.cc:229:17: warning: ‘..’ directive writing 2 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
-../../../tvision/TFileList.cc:229:10: note: ‘sprintf’ output between 3 and 4098 bytes into a destination of size 4096
+In file included from /usr/include/stdio.h:861,
+                 from /usr/include/c++/8/cstdio:42,
+                 from /usr/include/c++/8/ext/string_conversions.h:43,
+                 from /usr/include/c++/8/bits/basic_string.h:6361,
+                 from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/bits/locale_classes.h:40,
+                 from /usr/include/c++/8/bits/ios_base.h:41,
+                 from /usr/include/c++/8/ios:42,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from ../../../tvision/tobjstrm.h:414,
+                 from ../../../tvision/tv.h:635,
+                 from ../../../tvision/TFileList.cc:20:
+/usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 3 and 4098 bytes into a destination of size 4096
+../../../tvision/TIndicator.cc: In member function ‘virtual void TIndicator::draw()’:
+../../../tvision/TIndicator.cc:52:16: warning: ‘%d’ directive writing between 1 and 11 bytes into a region of size between 2 and 12 [-Wformat-overflow=]
+../../../tvision/TIndicator.cc:52:16: note: directive argument in the range [-2147483647, 2147483647]
+In file included from /usr/include/stdio.h:861,
+                 from /usr/include/c++/8/cstdio:42,
+                 from /usr/include/c++/8/ext/string_conversions.h:43,
+                 from /usr/include/c++/8/bits/basic_string.h:6361,
+                 from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/bits/locale_classes.h:40,
+                 from /usr/include/c++/8/bits/ios_base.h:41,
+                 from /usr/include/c++/8/ios:42,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from ../../../tvision/tobjstrm.h:414,
+                 from ../../../tvision/tv.h:635,
+                 from ../../../tvision/TIndicator.cc:18:
+/usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 6 and 26 bytes into a destination of size 15
+In file included from /usr/include/string.h:494,
+                 from ../../../tvision/TInputLine.cc:23:
+In function ‘char* strcpy(char*, const char*)’,
+    inlined from ‘void TInputLine::deleteSelect()’ at ../../../tvision/TInputLine.cc:157:15:
+/usr/include/bits/string_fortified.h:90:33: warning: ‘char* __builtin_strcpy(char*, const char*)’ accessing 1 byte at offsets [-2147483648, 2147483647] and [-2147483648, 2147483647] may overlap 1 byte at offset -2147483648 [-Wrestrict]
 ../../../tvision/TStringCollection.cc: In member function ‘virtual void TStringCollection::freeItem(void*)’:
 ../../../tvision/TStringCollection.cc:31:12: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
 ../../../tvision/asm.cc: In member function ‘void TView::writeViewRec1(short int, short int, TView*, int)’:
@@ -36,6 +130,20 @@ In file included from /usr/include/c++/8/iosfwd:40,
 ../../../tvision/helpbase.cc:596:30: note: candidate 2: ‘operator-(std::streamoff {aka long int}, int)’ <built-in>
 ../../../tvision/new.cc:198:6: warning: the program should also define ‘void operator delete(void*, std::size_t)’ [-Wsized-deallocation]
 ../../../tvision/new.cc:203:6: warning: the program should also define ‘void operator delete [](void*, std::size_t)’ [-Wsized-deallocation]
+../../../tvision/system.cc: In function ‘void vcsInit()’:
+../../../tvision/system.cc:1323:10: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc: In static member function ‘static void TScreen::drawMouse(int)’:
+../../../tvision/system.cc:2158:9: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc: In static member function ‘static void TScreen::moveCursor(int, int)’:
+../../../tvision/system.cc:2205:8: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc: In static member function ‘static void TScreen::writeRow(int, ushort*, int)’:
+../../../tvision/system.cc:2250:9: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc:2252:13: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc: In function ‘void fexpand(char*)’:
+../../../tvision/system.cc:2339:8: warning: ignoring return value of ‘char* getcwd(char*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc:2340:7: warning: ignoring return value of ‘int chdir(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc:2341:8: warning: ignoring return value of ‘char* getcwd(char*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc:2342:7: warning: ignoring return value of ‘int chdir(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
 In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../tvhc/tvhc.cc:97:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]

@@ -11,7 +11,7 @@ rm -rf warnings
 mkdir warnings
 cd warnings
 LDFLAGS="-Wl,--as-needed -flto -fuse-linker-plugin" \
-CXXFLAGS="-Wall -Wextra -fno-diagnostics-show-caret" \
+CXXFLAGS="-Wall -Wextra -fno-diagnostics-show-caret -Os -Wp,-D_FORTIFY_SOURCE=2" \
 AR="gcc-ar" RANLIB="gcc-ranlib" NM="gcc-nm" \
 ../../configure --quiet --enable-maintainer-mode
 echo make
