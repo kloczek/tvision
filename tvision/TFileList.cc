@@ -140,7 +140,7 @@ void *DirSearchRec::operator new( size_t sz )
     void *temp = ::operator new( sz );
     if( TVMemMgr::safetyPoolExhausted() )
         {
-        delete temp;
+        delete (char *)temp;
         temp = 0;
         }
     return temp;

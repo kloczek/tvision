@@ -28,7 +28,7 @@ int TStringCollection::compare( void *key1, void *key2 )
 
 void TStringCollection::freeItem( void* item )
 {
-    delete item;
+    delete[] (char *)item;
 }
 
 TStreamable *TStringCollection::build()

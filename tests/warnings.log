@@ -2,7 +2,6 @@
       6 -Wformat-overflow=
       2 -Wsized-deallocation
       2 -Wparentheses
-      2 -Wdelete-incomplete
       1 -Wstrict-aliasing
       1 -Wrestrict
       1 -Wcpp
@@ -43,8 +42,6 @@ In file included from /usr/include/stdio.h:861,
 /usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 1 and 4351 bytes into a destination of size 4096
 ../../../tvision/TFileList.cc: In member function ‘void DirSearchRec::readFf_blk(const char*, stat&)’:
 ../../../tvision/TFileList.cc:131:11: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-../../../tvision/TFileList.cc: In static member function ‘static void* DirSearchRec::operator new(size_t)’:
-../../../tvision/TFileList.cc:143:16: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
 ../../../tvision/TFileList.cc: In member function ‘void TFileList::readDirectory(const char*)’:
 ../../../tvision/TFileList.cc:201:16: warning: ‘__builtin___sprintf_chk’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
 In file included from /usr/include/stdio.h:861,
@@ -113,8 +110,6 @@ In file included from /usr/include/string.h:494,
 In function ‘char* strcpy(char*, const char*)’,
     inlined from ‘void TInputLine::deleteSelect()’ at ../../../tvision/TInputLine.cc:157:15:
 /usr/include/bits/string_fortified.h:90:33: warning: ‘char* __builtin_strcpy(char*, const char*)’ accessing 1 byte at offsets [-2147483648, 2147483647] and [-2147483648, 2147483647] may overlap 1 byte at offset -2147483648 [-Wrestrict]
-../../../tvision/TStringCollection.cc: In member function ‘virtual void TStringCollection::freeItem(void*)’:
-../../../tvision/TStringCollection.cc:31:12: warning: deleting ‘void*’ is undefined [-Wdelete-incomplete]
 ../../../tvision/asm.cc: In member function ‘void TView::writeViewRec1(short int, short int, TView*, int)’:
 ../../../tvision/asm.cc:748:22: warning: suggest parentheses around arithmetic in operand of ‘|’ [-Wparentheses]
 ../../../tvision/helpbase.cc: In destructor ‘virtual THelpFile::~THelpFile()’:
