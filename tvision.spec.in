@@ -4,8 +4,11 @@ Version:	0.8.0
 Release:	1%{dist}
 License:	BSD
 URL:		http://github.com/kloczek/tvision/
-Source0:	tvision-%{version}.tar.gz
+Source0:	tvision-%{version}.tar.xz
+BuildRequires:	gcc-c++
+BuildRequires:	gpm-devel
 BuildRequires:	libstdc++-devel
+BuildRequires:	ncurses-devel
 
 %description 
 This is the shared library for programs using the TVision library.
