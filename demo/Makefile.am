@@ -28,7 +28,14 @@ demo_SOURCES	= \
 EXTRA_DIST	= \
 	demohelp.txt
 
+CLEANFILES	= \
+	demohelp.h \
+	demohelp.hlp
+
 $(top_srcdir)/demo/tvdemo1.cc: demohelp.h
 
 demohelp.h: $(top_srcdir)/demo/demohelp.txt
+	$(top_builddir)/tvhc/tvhc $(top_srcdir)/demo/demohelp.txt demohelp.hlp demohelp.h
+
+demohelp.hlp: $(top_srcdir)/demo/demohelp.txt
 	$(top_builddir)/tvhc/tvhc $(top_srcdir)/demo/demohelp.txt demohelp.hlp demohelp.h
