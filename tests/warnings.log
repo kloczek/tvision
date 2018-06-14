@@ -147,7 +147,5 @@ In file included from /usr/include/c++/8/iosfwd:40,
 In file included from /usr/include/c++/8/backward/strstream:50,
                  from ../../../tvhc/tvhc.cc:97:
 /usr/include/c++/8/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:30:1: warning: ‘typedef’ was ignored in this declaration
 ../../../tvhc/tvhc.cc: In function ‘void skipWhite(char*, int&)’:
 ../../../tvhc/tvhc.cc:384:35: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]

@@ -27,7 +27,7 @@ const int MAXSTRSIZE=256;
 const char commandChar[] = ".";
 const int bufferSize = 4096;
 
-typedef enum State { undefined, wrapping, notWrapping };
+typedef enum State { undefined, wrapping, notWrapping } _State;
 
 class TProtectedStream : public std::fstream
 {
