@@ -26,4 +26,9 @@ demo_SOURCES	= \
 	tvdemo.h
 
 EXTRA_DIST	= \
-	DEMOHELP.H32
+	demohelp.txt
+
+$(top_srcdir)/demo/tvdemo1.cc: demohelp.h
+
+demohelp.h: $(top_srcdir)/demo/demohelp.txt
+	$(top_builddir)/tvhc/tvhc $(top_srcdir)/demo/demohelp.txt demohelp.hlp demohelp.h
