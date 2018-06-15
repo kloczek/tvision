@@ -94,7 +94,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <fstream>
-#include <strstream>
+#include <sstream>
 #include <errno.h>
 
 //======================= File Management ===============================//
@@ -854,7 +854,7 @@ void readTopic( std::fstream& textFile, THelpFile& helpFile )
 void doWriteSymbol(void *p, void *p1)
 {
     int numBlanks, i;
-    std::ostrstream os(line, MAXSTRSIZE);
+    std::stringstream os;
 
     TProtectedStream *symbFile = (TProtectedStream *)p1;
     if (((TReference *)p)->resolved )
@@ -863,14 +863,14 @@ void doWriteSymbol(void *p, void *p1)
         numBlanks = 20 - strlen((char *)((TReference *)p)->topic);
         for (i = 0; i < numBlanks; ++i)
             os << ' ';
-        os << " = " << ((TReference *)p)->val.value << ","<< std::ends;
+        os << " = " << ((TReference *)p)->val.value << ",";
         *symbFile << os.str() << "\n";
         }
     else
         {
         os << "Unresolved forward reference \""
-           << ((TReference *)p)->topic << "\"" << std::ends;
-        warning(os.str());
+           << ((TReference *)p)->topic << "\"";
+        warning(os.str().c_str());
         }
 }
 
