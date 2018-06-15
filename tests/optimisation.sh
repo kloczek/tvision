@@ -37,7 +37,7 @@ for i in $all_targets; do
 	AR="gcc-ar" RANLIB="gcc-ranlib" NM="gcc-nm" \
 	../../configure --quiet --enable-maintainer-mode
 	echo "$i make"
-	make -j10 >/dev/null 2>&1
+	make -j20 >/dev/null 2>&1
 	echo "------------------------------------------------------" >> ../optimisation.log
 	echo LDFLAGS=\""$LDFLAGS"\" >> ../optimisation.log
 	echo CXXFLAGS=\""$CXXFLAGS"\" >> ../optimisation.log
