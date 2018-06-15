@@ -12,6 +12,8 @@
 - Install tvhc help file compiler
 - Change maxViewWidth from 132 to 1024 so now TVision apllications can use
   full width of some terminals
+- TVision no longer needs stream class to operate on strings (replaced by
+  sprintf()/snprintf() based code)
 
 >>>>>>>> Changes from version 0.7 to 0.8 <<<<<<<<
 

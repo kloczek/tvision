@@ -139,4 +139,4 @@ In file included from /usr/include/c++/8/iosfwd:40,
 ../../../tvision/system.cc:2181:8: warning: ignoring return value of ‘char* getcwd(char*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
 ../../../tvision/system.cc:2182:7: warning: ignoring return value of ‘int chdir(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
 ../../../tvhc/tvhc.cc: In function ‘void skipWhite(char*, int&)’:
-../../../tvhc/tvhc.cc:384:35: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+../../../tvhc/tvhc.cc:383:35: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
