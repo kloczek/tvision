@@ -1,3 +1,19 @@
 Basic Installation
 ==================
 
+To build tvision from source code you need to have installed:
+
+- autoconf
+- automake
+- gcc, g++
+- glibc and libstdc++ development resources
+- gzip
+- xz
+
+To build rpm package:
+
+./boostrap.sh
+./configure
+make dist
+rpmbuild -ta tvision-<version>.tar.xz
+
