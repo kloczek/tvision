@@ -1,6 +1,8 @@
 
 Known bugs and things to do
 ---------------------------
+- Add by default UTF-8 and probably remove 8bit characters only support
+
 - Bug: in tvedit edit window TIndicartor is not displayed
 
 - Bug: problems with wrong colors palette
