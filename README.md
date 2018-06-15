@@ -52,7 +52,6 @@ Miscellaneous options:
 
   --enable-russian        enable Russian character set (now obsolete)
   --disable-acs           disable alternate character set
-  --disable-8bit          disable 8 bit output
   --disable-linux-gpm     disable Linux GPM mouse support
   --disable-linux-vcs     disable Linux VCS support
   --disable-freebsd-mouse disable FreeBSD mouse support

@@ -63,15 +63,6 @@ AC_ARG_ENABLE(acs,
 	[AC_MSG_RESULT(no)]
 )
 
-AC_MSG_CHECKING(if the 8 bit output should be disabled)
-AC_ARG_ENABLE(8bit,
-	[  --disable-8bit          disable 8 bit output],
-	[AC_MSG_RESULT(yes)
-	AC_DEFINE(DISABLE_8BIT_CHARS, 1, [the 8 bit output])
-	],
-	[AC_MSG_RESULT(no)]
-)
-
 case $host_os in
 	linux*)
 AC_MSG_CHECKING(if the Linux GPM mouse support should be disabled)
