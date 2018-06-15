@@ -8,5 +8,4 @@ tvhc_SOURCES	= \
 	tvhc.h
 
 EXTRA_DIST = \
-	DEMOHELP.TXT \
 	README
