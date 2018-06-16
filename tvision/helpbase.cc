@@ -593,7 +593,7 @@ THelpFile::~THelpFile(void)
 //
     std::streampos sp=stream->tellp();
     stream->seekg(0, std::ios::end);
-    size = stream->tellg() - 8;
+    size = (long)stream->tellg() - 8;
     stream->seekp(sp);
     *stream << magic;
     *stream << size;

@@ -108,17 +108,6 @@ In file included from /usr/include/string.h:494,
 In function ‘char* strcpy(char*, const char*)’,
     inlined from ‘void TInputLine::deleteSelect()’ at ../../../tvision/TInputLine.cc:157:15:
 /usr/include/bits/string_fortified.h:90:33: warning: ‘char* __builtin_strcpy(char*, const char*)’ accessing 1 byte at offsets [-2147483648, 2147483647] and [-2147483648, 2147483647] may overlap 1 byte at offset -2147483648 [-Wrestrict]
-../../../tvision/helpbase.cc: In destructor ‘virtual THelpFile::~THelpFile()’:
-../../../tvision/helpbase.cc:596:30: warning: ISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
-In file included from /usr/include/c++/8/iosfwd:40,
-                 from /usr/include/c++/8/ios:38,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
-                 from ../../../tvision/tobjstrm.h:414,
-                 from ../../../tvision/tv.h:635,
-                 from ../../../tvision/helpbase.cc:19:
-/usr/include/c++/8/bits/postypes.h:192:7: note: candidate 1: ‘std::fpos<_StateT> std::fpos<_StateT>::operator-(std::streamoff) const [with _StateT = __mbstate_t; std::streamoff = long int]’
-../../../tvision/helpbase.cc:596:30: note: candidate 2: ‘operator-(std::streamoff {aka long int}, int)’ <built-in>
 ../../../tvision/new.cc:198:6: warning: the program should also define ‘void operator delete(void*, std::size_t)’ [-Wsized-deallocation]
 ../../../tvision/new.cc:203:6: warning: the program should also define ‘void operator delete [](void*, std::size_t)’ [-Wsized-deallocation]
 ../../../tvision/system.cc: In function ‘void vcsInit()’:
