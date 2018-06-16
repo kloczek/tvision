@@ -141,17 +141,9 @@ void TDrawBuffer::moveCStr( ushort indent, const char *str, ushort attrs)
 
 void TDrawBuffer::moveStr( ushort indent, const char *str, ushort attr )
 {
-    register ushort *dest = &data[indent];
-    uchar c;
-
-    if (attr != 0)
-        for (;(c=*str) != 0; ++str, ++dest)
-            {
-		*dest = ((attr & 0xff) << 8) | c;
-            }
-        else
-            while (*str)
-                *(uchar *)dest++ = *str++;
+    attr <<= 8;
+    while ( indent < (sizeof(data)/sizeof((data)[0])) && *str != '\0' )
+      data[indent++] = (unsigned char)(*str++) + attr;
 }
 
 /*------------------------------------------------------------------------*/
