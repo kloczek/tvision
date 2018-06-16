@@ -8,6 +8,7 @@ addons:
       - libtool
       - libncurses-dev
       - libgpm-dev
+      - texinfo
       - ccache
 cache:
   - ccache
