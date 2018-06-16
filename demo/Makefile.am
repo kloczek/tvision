@@ -32,9 +32,9 @@ CLEANFILES	= \
 	demohelp.h \
 	demohelp.hlp
 
-$(top_srcdir)/demo/tvdemo1.cc: demohelp.h
-$(top_srcdir)/demo/tvdemo2.cc: demohelp.h
-$(top_srcdir)/demo/tvdemo3.cc: demohelp.h
+$(srcdir)/tvdemo1.cc: demohelp.h
+$(srcdir)/tvdemo2.cc: demohelp.h
+$(srcdir)/tvdemo3.cc: demohelp.h
 
 demohelp.h: $(top_srcdir)/demo/demohelp.txt $(top_builddir)/tvhc/tvhc
 	$(top_builddir)/tvhc/tvhc $(top_srcdir)/demo/demohelp.txt demohelp.hlp demohelp.h
