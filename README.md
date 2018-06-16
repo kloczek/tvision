@@ -1,5 +1,8 @@
 # TVision - Turbo Vision
 
+[![License](http://img.shields.io/badge/license-BSD-brightgreen.svg)](https://github.com/kloczek/tvision/COPYRIGHT)
+[![Build Status](https://travis-ci.org/kloczek/tvision.svg?branch=master)](https://travis-ci.org/kloczek/tvision)
+
 ## Table of Contents
 
 - [Description](#description)
