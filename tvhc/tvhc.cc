@@ -327,8 +327,7 @@ void recordReference( char *topic, opstream& s )
         fixUp =  new TFixUp;
         fixUp->pos = s.tellp();
         i = -1;
-//      s << i;
-	s << (typeof(ref->val.value))i;		// SC
+        s << i;
         fixUp->next = ref->val.fixUpList;
         ref->val.fixUpList = fixUp;
         }
@@ -338,13 +337,10 @@ void doFixUps( TFixUp *p, ushort value, fpstream& s )
 {
     long pos;
 
-//  for(pos = s.tellg(); (p != 0); p = p->next)
-    for(pos = s.tellp(); (p != 0); p = p->next)	// SC
+    for(pos = s.tellg(); (p != 0); p = p->next)
         {
         s.seekp(p->pos);
-//      s << value;
-	TReference *ref;			// SC
-	s << (typeof(ref->val.value))value;	//
+	s << value;
         }
     s.seekp(pos);
 }
