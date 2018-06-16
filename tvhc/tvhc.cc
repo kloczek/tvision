@@ -376,7 +376,7 @@ void resolveReference( char *topic, ushort value, fpstream& s )
 
 void skipWhite( char *line,int& i )
 {
-    while (i <= (int)strlen(line) && (line[i] == ' ') || (line[i] == 8))
+    while (i <= (int)strlen(line) && ((line[i] == ' ') || (line[i] == 8)))
         ++i;
 }
 

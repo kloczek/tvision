@@ -745,7 +745,7 @@ void TView::writeViewRec1(short x1, short x2, TView* p, int shadowCounter ) {
 		ushort *src= staticVars1.buf + (x1 - staticVars2.offset);
 		while (l--)
 		{
-			ushort d = *src++ & 0xff | (shadowAttr << 8);
+			ushort d = (*src++ & 0xff) | (shadowAttr << 8);
 
 			/* SS: writes a character on the screen */
 

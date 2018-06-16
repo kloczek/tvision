@@ -1,7 +1,6 @@
      10 -Wunused-result
       6 -Wformat-overflow=
       2 -Wsized-deallocation
-      2 -Wparentheses
       1 -Wstrict-aliasing
       1 -Wrestrict
 
@@ -109,8 +108,6 @@ In file included from /usr/include/string.h:494,
 In function ‘char* strcpy(char*, const char*)’,
     inlined from ‘void TInputLine::deleteSelect()’ at ../../../tvision/TInputLine.cc:157:15:
 /usr/include/bits/string_fortified.h:90:33: warning: ‘char* __builtin_strcpy(char*, const char*)’ accessing 1 byte at offsets [-2147483648, 2147483647] and [-2147483648, 2147483647] may overlap 1 byte at offset -2147483648 [-Wrestrict]
-../../../tvision/asm.cc: In member function ‘void TView::writeViewRec1(short int, short int, TView*, int)’:
-../../../tvision/asm.cc:748:22: warning: suggest parentheses around arithmetic in operand of ‘|’ [-Wparentheses]
 ../../../tvision/helpbase.cc: In destructor ‘virtual THelpFile::~THelpFile()’:
 ../../../tvision/helpbase.cc:596:30: warning: ISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
 In file included from /usr/include/c++/8/iosfwd:40,
@@ -138,5 +135,3 @@ In file included from /usr/include/c++/8/iosfwd:40,
 ../../../tvision/system.cc:2180:7: warning: ignoring return value of ‘int chdir(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
 ../../../tvision/system.cc:2181:8: warning: ignoring return value of ‘char* getcwd(char*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
 ../../../tvision/system.cc:2182:7: warning: ignoring return value of ‘int chdir(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
-../../../tvhc/tvhc.cc: In function ‘void skipWhite(char*, int&)’:
-../../../tvhc/tvhc.cc:383:35: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
