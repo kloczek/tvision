@@ -114,7 +114,7 @@ public:
      * validator to transfer data, you need to override its transfer() method.
      *
      * transfer()'s first two parameters are the associated input line's text
-     * string and the @ref getData() or @ref setData() data record.
+     * string and the @ref getData or @ref setData data record.
      * Depending on the value of `flag', transfer() can set `s' from `buffer'
      * or read the data from `s' into `buffer'. The return value is always the
      * number of bytes transferred.

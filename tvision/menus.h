@@ -669,6 +669,9 @@ inline opstream& operator << ( opstream& os, TMenuBox* cl )
  */
 class TMenuPopup : public TMenuBox
 {
+    /**
+     * TMenuPopup
+     */
     TMenuPopup(TRect&, TMenu*);
     virtual void handleEvent(TEvent&);
 public:

@@ -20,40 +20,140 @@ const ushort
 
 //  Standard command codes
 
+    /** \var cmValid
+     * Undocumented.
+     */
     cmValid         = 0,
+
+    /** \var cmQuit
+     * Undocumented.
+     */
     cmQuit          = 1,
+
+    /** \var cmError
+     * Undocumented.
+     */
     cmError         = 2,
+
+    /** \var cmMenu
+     * Undocumented.
+     */
     cmMenu          = 3,
+
+    /** \var cmClose
+     * Undocumented.
+     */
     cmClose         = 4,
+
+    /** \var cmZoom
+     * Undocumented.
+     */
     cmZoom          = 5,
+
+    /** \var cmResize
+     * Undocumented.
+     */
     cmResize        = 6,
+
+    /** \var cmNext
+     * Undocumented.
+     */
     cmNext          = 7,
+
+    /** \var cmPrev
+     * Undocumented.
+     */
     cmPrev          = 8,
+
+    /** \var cmHelp
+     * Undocumented.
+     */
     cmHelp          = 9,
 
 //  TDialog standard commands
 
+    /** \var cmOK
+     * Undocumented.
+     */
     cmOK            = 10,
+
+    /** \var cmCancel
+     * Undocumented.
+     */
     cmCancel        = 11,
+
+    /** \var cmYes
+     * Undocumented.
+     */
     cmYes           = 12,
+
+    /** \var cmNo
+     * Undocumented.
+     */
     cmNo            = 13,
+
+    /** \var cmDefault
+     * Undocumented.
+     */
     cmDefault       = 14,
 
 // Standard application commands
 
+    /** \var cmNew
+     * Undocumented.
+     */
     cmNew           = 30,
+
+    /** \var cmOpen
+     * Undocumented.
+     */
     cmOpen          = 31,
+
+    /** \var cmSave
+     * Undocumented.
+     */
     cmSave          = 32,
+
+    /** \var cmSaveAs
+     * Undocumented.
+     */
     cmSaveAs        = 33,
+
+    /** \var cmSaveAll
+     * Undocumented.
+     */
     cmSaveAll       = 34,
+
+    /** \var cmChDir
+     * Undocumented.
+     */
     cmChDir         = 35,
+
+    /** \var cmDosShell
+     * Undocumented.
+     */
     cmDosShell      = 36,
+
+    /** \var cmCloseAll
+     * Undocumented.
+     */
     cmCloseAll      = 37,
 
     // SS: some new internal commands.
 
+    /** \var cmSysRepaint
+     * Undocumented.
+     */
     cmSysRepaint    = 38,
+
+    /** \var cmSysResize
+     * Undocumented.
+     */
     cmSysResize     = 39,
+
+    /** \var cmSysWakeup
+     * Undocumented.
+     */
     cmSysWakeup     = 40,
 
 //  TView State masks
@@ -476,12 +576,39 @@ const ushort
 
 //  TView inhibit flags
 
+    /** \var noMenuBar
+     * Undocumented.
+     */
     noMenuBar       = 0x0001,
+
+    /** \var noDeskTop
+     * Undocumented.
+     */
     noDeskTop       = 0x0002,
+
+    /** \var noStatusLine
+     * Undocumented.
+     */
     noStatusLine    = 0x0004,
+
+    /** \var noBackground
+     * Undocumented.
+     */
     noBackground    = 0x0008,
+
+    /** \var noFrame
+     * Undocumented.
+     */
     noFrame         = 0x0010,
+
+    /** \var noViewer
+     * Undocumented.
+     */
     noViewer        = 0x0020,
+
+    /** \var noHistory
+     * Undocumented.
+     */
     noHistory       = 0x0040,
 
 // TWindow number constants
@@ -515,31 +642,79 @@ const ushort
 
 //  Application command codes
 
+    /** \var cmCut
+     * Undocumented.
+     */
     cmCut           = 20,
+
+    /** \var cmCopy
+     * Undocumented.
+     */
     cmCopy          = 21,
+
+    /** \var cmPaste
+     * Undocumented
+     */
     cmPaste         = 22,
+
+    /** \var cmUndo
+     * Undocumented.
+     */
     cmUndo          = 23,
+
+    /** \var cmClear
+     * Undocumented.
+     */
     cmClear         = 24,
+
+    /** \var cmTile
+     * Undocumented.
+     */
     cmTile          = 25,
+
+    /** \var cmCascade
+     * Undocumented.
+     */
     cmCascade       = 26,
 
 // Standard messages
 
+    /** \var cmReceivedFocus
+     * Undocumented.
+     */
     cmReceivedFocus     = 50,
+    /** \var cmReleasedFocus
+     * Undocumented.
+     */
     cmReleasedFocus     = 51,
+    /** \var cmCommandSetChanged
+     * Undocumented.
+     */
     cmCommandSetChanged = 52,
 
 // TScrollBar messages
 
+    /** \var cmScrollBarChanged
+     * Undocumented.
+     */
     cmScrollBarChanged  = 53,
+    /** \va cmScrollBarClicked
+     * Undocumented.
+     */
     cmScrollBarClicked  = 54,
 
 // TWindow select messages
 
+    /** \var cmSelectWindowNum
+     * Undocumented.
+     */
     cmSelectWindowNum   = 55,
 
 //  TListViewer messages
 
+    /** \var cmListItemSelected
+     * Undocumented.
+     */
     cmListItemSelected  = 56,
 
 //  Event masks
@@ -932,7 +1107,7 @@ public:
      * changeBounds() is called by various TView member functions, but should
      * never be called directly.
      *
-     * changeBounds() first calls @ref setBounds(bounds) and then calls
+     * changeBounds() first calls @ref setBounds "setBounds(bounds)" and then calls
      * @ref drawView().
      */
     virtual void changeBounds( const TRect& bounds );
@@ -1066,7 +1241,7 @@ public:
     /**
      * Calls owner->clip.intersect(r) to set the area that needs drawing.
      * Then, all the subviews from the next view to the given `lastView' are
-     * drawn using @ref drawSubViews(). Finally, owner->clip is reset to
+     * drawn using @ref drawSubViews "drawSubViews()". Finally, owner->clip is reset to
      * owner->getExtent().
      * @see TGroup::clip
      * @see TRect::intersect
@@ -1359,7 +1534,7 @@ public:
      *     TView::handleEvent(event);
      *     switch (event.what)
      *     {
-     *     case @ref evMouseDown:
+     *     case @ref evMouseDown "evMouseDown":
      *         do
      *         {
      *             makeLocal(event.where, mouse);
@@ -1840,6 +2015,7 @@ private:
      */
     int exposedRec1(short int, short int, class TView *);
     /**
+
      * Undocumented.
      */
     int exposedRec2(short int, short int, class TView *);
