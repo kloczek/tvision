@@ -100,6 +100,7 @@ AC_OUTPUT([
 	tvhc/Makefile
 	demo/Makefile
 	tutorial/Makefile
+	doc/Doxyfile
 	doc/Makefile
 	tvision.pc
 	tvision.spec
