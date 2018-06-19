@@ -2,7 +2,7 @@
 info_TEXINFOS 	= tvision.texi
 
 EXTRA_DIST	= \
-	Doxyfile \
+	Doxyfile.in \
 	example.gif.in \
 	index.html.in
 
