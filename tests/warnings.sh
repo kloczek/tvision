@@ -22,3 +22,4 @@ echo >> warnings.log
 echo "----------------------------------------------------------------" >> warnings.log
 cat warnings.err >> warnings.log
 rm -rf warnings.err
+(cd warnings/doc; doxygen 2>&1) | sed "s,$(cd ..; pwd),," >doxygen.log
