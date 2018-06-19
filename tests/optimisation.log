@@ -29,7 +29,7 @@ CXXFLAGS="-O2"
   30768	  16652	     16	  47436	   b94c	tvlife
   19972	   1908	      4	  21884	   557c	validator
   26948	   2056	   5432	  34436	   8684	tvhc
- 552003	  47448	  20904	 620355	  97743	libtvision.so.0.0.8
+ 551987	  47448	  20904	 620339	  97733	libtvision.so.0.0.8
 
 
 
@@ -43,7 +43,7 @@ CXXFLAGS="-O2 -flto"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
   74753	   4444	    432	  79629	  1370d	demo
-   8215	   1196	      4	   9415	   24c7	background
+   8215	   1196	      8	   9419	   24cb	background
   14419	   1836	     16	  16271	   3f8f	listbox
   23447	   2372	     16	  25835	   64eb	load
   16878	   2780	     48	  19706	   4cfa	nomenus
@@ -121,7 +121,7 @@ CXXFLAGS="-Os -flto"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
   64501	   4012	    432	  68945	  10d51	demo
-   8070	   1180	      4	   9254	   2426	background
+   8070	   1180	      8	   9258	   242a	background
   13293	   1828	     16	  15137	   3b21	listbox
   20153	   1900	     16	  22069	   5635	load
   16383	   2804	     48	  19235	   4b23	nomenus
@@ -160,7 +160,7 @@ CXXFLAGS="-Os -flto -fno-exceptions -fno-rtti"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
   58322	   3356	    432	  62110	   f29e	demo
-   7419	    940	      4	   8363	   20ab	background
+   7419	    940	      8	   8367	   20af	background
   12174	   1556	     16	  13746	   35b2	listbox
   18653	   1532	     16	  20201	   4ee9	load
   15048	   2436	     48	  17532	   447c	nomenus
@@ -185,7 +185,7 @@ CXXFLAGS="-Os -flto -fno-exceptions -fno-rtti"
   23198	  16284	     16	  39498	   9a4a	tvlife
   14619	   1572	      4	  16195	   3f43	validator
   17027	   1136	   5360	  23523	   5be3	tvhc
- 427612	  40328	  20672	 488612	  774a4	libtvision.so.0.0.8
+ 427612	  40344	  20672	 488628	  774b4	libtvision.so.0.0.8
 
 
 
