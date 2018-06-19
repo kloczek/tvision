@@ -7,8 +7,6 @@ Known bugs and things to do
 
 - Bug: problems with wrong colors palette
 
-- Bug: TBacground displays wrong character (#)
-
 - Add tvhc(1) man page
 
 - Seems like all tvision code isn't well formated. Ater finish fixing all

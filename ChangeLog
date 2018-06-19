@@ -14,6 +14,7 @@
   full width of some terminals
 - TVision no longer needs stream class to operate on strings (replaced by
   sprintf()/snprintf() based code)
+- Fixed issue with wrong character used un defaultBkgrnd
 
 >>>>>>>> Changes from version 0.7 to 0.8 <<<<<<<<
 

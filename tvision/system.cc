@@ -1125,7 +1125,6 @@ static void vcsInit()
 			TDirListBox::middleDir =   " \x83\x84";
 			TDirListBox::lastDir   =   " \x80\x84";
 			TDirListBox::graphics = "\x80\x83\x84";
-			TDeskTop::defaultBkgrnd = '\xB1';
 			TListViewer::separatorChar = '\xB3';
 			TOutlineViewer::graphChars = "\x20\xB3\x83\x80\x84"
 				"\x84+\x84";

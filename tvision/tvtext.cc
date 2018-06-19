@@ -231,7 +231,7 @@ const char * const TFileInfoPane::months[] =
     "Jul","Aug","Sep","Oct","Nov","Dec"
     };
 
-char TDeskTop::defaultBkgrnd = '\xB0';
+char TDeskTop::defaultBkgrnd = '\xB1';
 
 char TListViewer::separatorChar = '\xB3';
 const char* TOutlineViewer::graphChars = "\x20\xB3\xC3\xC0\xC4\xC4+\xC4";
