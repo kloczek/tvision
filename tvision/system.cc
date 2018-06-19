@@ -337,24 +337,6 @@ static unsigned pcToAscii[256] =
 	/*
 	 * Added as a plug for compatibility with the old applications.
 	 */
-#ifdef ENABLE_RUSSIAN_CHARSET
-	32,
-	225, 226, 247, 231, 228, 229, 246, 250, 233,
-	234, 235, 236, 237, 238, 239, 240, 242, 243,
-	244, 245, 230, 232, 227, 254, 251, 253, 223,
-	249, 248, 252, 224, 241, 193, 194, 215, 199,
-	196, 197, 214, 218, 201, 202, 203, 204, 205,
-	206, 207, 208, 177, 177, 178, 179, 180, 181,
-	182, 183, 184, 185, 186, 187, 188, 189, 190,
-	191, 192, 193, 194, 195, 196, 197, 198, 199,
-	200, 201, 202, 203, 204, 205, 206, 207, 208,
-	209, 210, 211, 212, 213, 214, 215, 216, 217,
-	218, 219, 220, 221, 222, 223, 210, 211, 212,
-	213, 198, 200, 195, 222, 219, 221, 223, 217,
-	216, 220, 192, 209, 160, 161, 162, 163 ,164,
-	165, 166, 167, 168, 169, 170, 171, 172 ,173,
-	174, 174
-#else
 	32,
 	128, 129, 130, 131, 132, 133, 134, 135,
 	136, 137, 138, 139, 140, 141, 142, 143,
@@ -372,7 +354,6 @@ static unsigned pcToAscii[256] =
 	232, 233, 234, 235, 236, 237, 238, 239,
 	240, 241, 242, 243, 244, 245, 246, 247,
 	248, 249, 250, 251, 252, 253, 254, 255
-#endif
 };
 
 /* this array stores the corresponding ncurses attribute for each TV color */
@@ -1136,12 +1117,7 @@ static void vcsInit()
 		}
 		else
 		{
-#ifdef ENABLE_RUSSIAN_CHARSET
-			LOG("wrong Russian character set");
-			TFrame::closeIcon = "[~\x04~]";
-#else
 			LOG("using IBM PC character set");
-#endif
 		}
 
 		/*
@@ -1409,9 +1385,6 @@ static void startcurses()
 		 * And here is the one more plug that was written for the
 		 * backward compatibility.
 		 */
-#ifdef ENABLE_RUSSIAN_CHARSET
-		pcToAscii[176] = ACS_CKBOARD;	/* 176 */
-#else
 		pcToAscii[16] = ACS_RARROW;	/* 16 */
 		pcToAscii[17] = ACS_LARROW;	/* 17 */
 		pcToAscii[25] = ACS_DARROW;	/* 25 */
@@ -1425,7 +1398,6 @@ static void startcurses()
 		pcToAscii[174] = ACS_LARROW;	/* 174 */
 		pcToAscii[175] = ACS_RARROW;	/* 175 */
 		pcToAscii[176] = ACS_BOARD;	/* 176 */
-#endif
 		pcToAscii[177] = ACS_CKBOARD;	/* 177 */
 		pcToAscii[178] = ACS_CKBOARD;	/* 178 */
 		pcToAscii[179] = ACS_VLINE;	/* 179 */

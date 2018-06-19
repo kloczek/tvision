@@ -15,6 +15,7 @@
 - TVision no longer needs stream class to operate on strings (replaced by
   sprintf()/snprintf() based code)
 - Fixed issue with wrong character used un defaultBkgrnd
+- Removed Russian character set support
 
 >>>>>>>> Changes from version 0.7 to 0.8 <<<<<<<<
 

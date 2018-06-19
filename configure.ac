@@ -43,17 +43,6 @@ LIBS=""
 dnl Checks for library functions.
 AC_CHECK_LIB(gpm, Gpm_Close)
 
-
-dnl Various enable/disable checks.
-AC_MSG_CHECKING(if the Russian character set should be enabled (now obsolete))
-AC_ARG_ENABLE(russian,
-	[  --enable-russian        enable Russian character set (now obsolete)],
-	[AC_MSG_RESULT(yes)
-	AC_DEFINE(ENABLE_RUSSIAN_CHARSET, 1, [the Russian character set])
-	],
-	[AC_MSG_RESULT(no)]
-)
-
 AC_MSG_CHECKING(if the alternate character set should be disabled)
 AC_ARG_ENABLE(acs,
 	[  --disable-acs           disable alternate character set],
