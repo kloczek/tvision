@@ -272,48 +272,6 @@ static keym_t keym[] =
 	{ KEY_F(45), 0, 0, kbAltF9 }, { KEY_F(46), 0, 0, kbAltF10 }
 };
 
-static unsigned char cyrillicTable[128] =
-{
-	192, 193, 194, 195, 196, 197, 198, 199, /* 0x80 - 0x87 */
-	200, 201, 202, 203, 204, 205 ,206, 207, /* 0x88 - 0x8f */
-	208, 209, 210, 211, 212, 213, 214, 215, /* 0x90 - 0x97 */
-	216, 217, 218, 219, 220, 221, 222, 223, /* 0x98 - 0x9f */
-	240, 241, 242, 243, 244, 245, 246, 247, /* 0xa0 - 0xa7 */
-	248, 249, 250, 251, 252, 253, 254, 255, /* 0xa8 - 0xaf */
-	176, 177, 178, 179, 180, 181, 182, 183, /* 0xb0 - 0xb7 */
-	184, 185, 186, 187, 188, 189, 190, 191, /* 0xb8 - 0xbf */
-	238, 160, 161, 230, 164, 165, 228, 163,	/* 0xc0 - 0xc7 */
-	229, 168, 169, 170, 171, 172, 173, 174,	/* 0xc8 - 0xcf */
-	175, 239, 224, 225, 226, 227, 166, 162,	/* 0xd0 - 0xd7 */
-	236, 235, 167, 232, 237, 233, 231, 234,	/* 0xd8 - 0xdf */
-	158, 128, 129, 150, 132, 133, 148, 131,	/* 0xe0 - 0xe7 */
-	149, 136, 137, 138, 139, 140, 141, 142,	/* 0xe8 - 0xef */
-	143, 159, 144, 145, 146, 147, 134, 130,	/* 0xf0 - 0xf7 */
-	156, 155, 135, 152, 157, 153, 151, 154	/* 0xf8 - 0xff */
-};
-
-/* lookup table for LATIN1 to CP437 enconding */
-
-static unsigned char latinTable[128] =
-{
-	199, 252, 233, 226, 228, 224, 229, 231, /* 0x80 - 0x87 */
-	234, 235, 232, 239, 238, 236, 196, 197, /* 0x88 - 0x8f */
-	201, 230, 198, 244, 247, 242, 251, 183, /* 0x90 - 0x97 */
-	225, 214, 220, 243, 250, 209, 158, 159, /* 0x98 - 0x9f */
-	255, 173, 155, 156, 177, 157, 188, 186, /* 0xa0 - 0xa7 */
-	191, 169, 166, 174, 170, 237, 189, 187, /* 0xa8 - 0xaf */
-	176, 241, 253, 179, 180, 181, 182, 249, /* 0xb0 - 0xb7 */
-	184, 185, 167, 175, 172, 171, 190, 168, /* 0xb8 - 0xbf */
-	192, 193, 194, 195, 142, 143, 146, 128, /* 0xc0 - 0xc7 */
-	200, 144, 202, 203, 204, 205, 206, 207, /* 0xc8 - 0xcf */
-	208, 165, 210, 211, 212, 213, 153, 215, /* 0xd0 - 0xd7 */
-	216, 217, 218, 219, 154, 221, 222, 223, /* 0xd8 - 0xdf */
-	133, 160, 131, 227, 132, 134, 145, 135, /* 0xe0 - 0xe7 */
-	138, 130, 136, 137, 141, 161, 140, 139, /* 0xe8 - 0xef */
-	240, 164, 149, 162, 147, 245, 148, 246, /* 0xf0 - 0xf7 */
-	248, 151, 163, 150, 129, 178, 254, 152, /* 0xf8 - 0xff */
-};
-
 /* lookup table to translate characters from pc set to standard ascii */
 
 static unsigned pcToAscii[256] =
@@ -1066,59 +1024,7 @@ static void vcsInit()
 	if (strstr(env, "novcs") != NULL) LOG("vcs support disabled");
 	else
 	{
-		if (strstr(env, "cyrillic") != NULL)
-		{
-			/*
-			 * The cyrillic support was at half overwritten. I did
-			 * the following:
-			 *
-			 * - the translation table was changed to strictly
-			 *   convert koi8 to cp866;
-			 * - the following pseudographic symbols was changed
-			 *   to fit the koi8 table;
-			 * - the pcToAscii table was changed to fit the koi8
-			 *   table when "cyrillic" enabled.
-			 */
-			LOG("using cyrillic character set");
-			vcsMap = cyrillicTable;
-			TMenuBox::frameChars = " \x9A\x84\xBF  \x80\x84\x99"
-				"  \xB3 \xB3  \x83\x84\xB4 ";
-			memcpy(TFrame::frameChars,
-				"   \x80 \xB3\x9A\x83 \x99\x84\x81\xBF\xB4"
-				"\x82\x85   \x88 \xBA\x89\x87 \xBC\x8D\x8F"
-				"\xBB\xB6\x91 ", 33);
-			TFrame::closeIcon = "[~\x04~]";
-			TFrame::dragIcon = "~\x84\x99~";
-			TIndicator::dragFrame = '\x8D';
-			TIndicator::normalFrame = '\x84';
-			THistory::icon = "\x9E~\x19~\x9D";
-			TColorSelector::icon = '\x9B';
-			TStatusLine::hintSeparator = "\xB3 ";
-			TScrollChars vc = {'\x1E', '\x1F',
-					   '\xB1', '\x9B', '\xB2'};
-			memcpy(TScrollBar::vChars, vc, sizeof(vc));
-			TScrollChars hc = {'\x11', '\x10',
-					   '\xB1', '\x9B', '\xB2'};
-			memcpy(TScrollBar::hChars, hc, sizeof(hc));
-			TButton::shadows = "\x9D\x9B\x9F";
-			TDirListBox::pathDir   = "\x80\x84\x82";
-			TDirListBox::firstDir  =   "\x90\x82\x84";
-			TDirListBox::middleDir =   " \x83\x84";
-			TDirListBox::lastDir   =   " \x80\x84";
-			TDirListBox::graphics = "\x80\x83\x84";
-			TListViewer::separatorChar = '\xB3';
-			TOutlineViewer::graphChars = "\x20\xB3\x83\x80\x84"
-				"\x84+\x84";
-		}
-		else if (strstr(env, "latin") != NULL)
-		{
-			LOG("using latin character set");
-			vcsMap = latinTable;
-		}
-		else
-		{
-			LOG("using IBM PC character set");
-		}
+		LOG("using IBM PC character set");
 
 		/*
 		 * This approach was suggested by:
@@ -1294,170 +1200,87 @@ static void startcurses()
 	/* if possible we should use curses semigraphical characters */
 
 #ifndef DISABLE_ACS
-	if (strstr(env, "cyrillic") != NULL)
-	{
-		/*
-		 * The pcToAscii table was changed to fit the koi8 table that
-		 * differs from the IBM table.
-		 */
-		pcToAscii[4] = ACS_DIAMOND;	/* 4 */
-		pcToAscii[16] = ACS_RARROW;	/* 16 */
-		pcToAscii[17] = ACS_LARROW;	/* 17 */
-		pcToAscii[24] = ACS_UARROW;	/* 24 */
-		pcToAscii[25] = ACS_DARROW;	/* 25 */
-		pcToAscii[26] = ACS_RARROW;	/* 26 */
-		pcToAscii[27] = ACS_LARROW;	/* 27 */
-		pcToAscii[28] = ACS_LLCORNER;	/* 28 */
-		pcToAscii[30] = ACS_UARROW;	/* 30 */
-		pcToAscii[31] = ACS_DARROW;	/* 31 */
-	#ifdef ACS_STERLING
-		pcToAscii[166] = ACS_STERLING;	/* 156 */
-	#endif
-		pcToAscii[176] = ACS_BOARD;	/* 176 */
-		pcToAscii[177] = ACS_CKBOARD;	/* 177 */
-		pcToAscii[178] = ACS_CKBOARD;	/* 178 */
-		pcToAscii[179] = ACS_VLINE;	/* 179 */
-		pcToAscii[180] = ACS_RTEE;	/* 180 */
-		pcToAscii[181] = ACS_RTEE;	/* 181 */
-		pcToAscii[182] = ACS_RTEE;	/* 182 */
-		pcToAscii[183] = ACS_URCORNER;	/* 183 */
-		pcToAscii[184] = ACS_URCORNER;	/* 184 */
-		pcToAscii[185] = ACS_RTEE;	/* 185 */
-		pcToAscii[186] = ACS_VLINE;	/* 186 */
-		pcToAscii[187] = ACS_URCORNER;	/* 187 */
-		pcToAscii[188] = ACS_LRCORNER;	/* 188 */
-		pcToAscii[189] = ACS_LRCORNER;	/* 189 */
-		pcToAscii[190] = ACS_LRCORNER;	/* 190 */
-		pcToAscii[191] = ACS_URCORNER;	/* 191 */
-		pcToAscii[128] = ACS_LLCORNER;	/* 192 */
-		pcToAscii[129] = ACS_BTEE;	/* 193 */
-		pcToAscii[130] = ACS_TTEE;	/* 194 */
-		pcToAscii[131] = ACS_LTEE;	/* 195 */
-		pcToAscii[132] = ACS_HLINE;	/* 196 */
-		pcToAscii[133] = ACS_PLUS;	/* 197 */
-		pcToAscii[134] = ACS_LTEE;	/* 198 */
-		pcToAscii[135] = ACS_LTEE;	/* 199 */
-		pcToAscii[136] = ACS_LLCORNER;	/* 200 */
-		pcToAscii[137] = ACS_ULCORNER;	/* 201 */
-		pcToAscii[138] = ACS_BTEE;	/* 202 */
-		pcToAscii[139] = ACS_TTEE;	/* 203 */
-		pcToAscii[140] = ACS_LTEE;	/* 204 */
-		pcToAscii[141] = ACS_HLINE;	/* 205 */
-		pcToAscii[142] = ACS_PLUS;	/* 206 */
-		pcToAscii[143] = ACS_BTEE;	/* 207 */
-		pcToAscii[144] = ACS_BTEE;	/* 208 */
-		pcToAscii[145] = ACS_TTEE;	/* 209 */
-		pcToAscii[146] = ACS_TTEE;	/* 210 */
-		pcToAscii[147] = ACS_LLCORNER;	/* 211 */
-		pcToAscii[148] = ACS_LLCORNER;	/* 212 */
-		pcToAscii[149] = ACS_ULCORNER;	/* 213 */
-		pcToAscii[150] = ACS_ULCORNER;	/* 214 */
-		pcToAscii[151] = ACS_PLUS;	/* 215 */
-		pcToAscii[152] = ACS_PLUS;	/* 216 */
-		pcToAscii[153] = ACS_LRCORNER;	/* 217 */
-		pcToAscii[154] = ACS_ULCORNER;	/* 218 */
-		pcToAscii[155] = ACS_BLOCK;	/* 219 */
-		pcToAscii[156] = ACS_BLOCK;	/* 220 */
-		pcToAscii[157] = ACS_BLOCK;	/* 221 */
-		pcToAscii[158] = ACS_BLOCK;	/* 222 */
-		pcToAscii[159] = ACS_BLOCK;	/* 223 */
-	#ifdef ACS_PI
-		pcToAscii[164] = ACS_PI;	/* 227 */
-	#endif
-		pcToAscii[161] = ACS_PLMINUS;	/* 241 */
-	#ifdef ACS_GEQUAL
-		pcToAscii[162] = ACS_GEQUAL;	/* 242 */
-	#endif
-	#ifdef ACS_LEQUAL
-		pcToAscii[163] = ACS_LEQUAL;	/* 243 */
-	#endif
-		pcToAscii[167] = ACS_DEGREE;	/* 248 */
-		pcToAscii[255] = ACS_BULLET;	/* 254 */
-	}
-	else
-	{
-		pcToAscii[4] = ACS_DIAMOND;	/* 4 */
-		pcToAscii[24] = ACS_UARROW;	/* 24 */
-		pcToAscii[26] = ACS_RARROW;	/* 26 */
-		pcToAscii[27] = ACS_LARROW;	/* 27 */
-		pcToAscii[28] = ACS_LLCORNER;	/* 28 */
-		/*
-		 * And here is the one more plug that was written for the
-		 * backward compatibility.
-		 */
-		pcToAscii[16] = ACS_RARROW;	/* 16 */
-		pcToAscii[17] = ACS_LARROW;	/* 17 */
-		pcToAscii[25] = ACS_DARROW;	/* 25 */
-		pcToAscii[30] = ACS_UARROW;	/* 30 */
-		pcToAscii[31] = ACS_DARROW;	/* 31 */
-	#ifdef ACS_STERLING
-		pcToAscii[156] = ACS_STERLING;	/* 156 */
-	#endif
-		pcToAscii[169] = ACS_ULCORNER;	/* 169 */
-		pcToAscii[170] = ACS_URCORNER;	/* 170 */
-		pcToAscii[174] = ACS_LARROW;	/* 174 */
-		pcToAscii[175] = ACS_RARROW;	/* 175 */
-		pcToAscii[176] = ACS_BOARD;	/* 176 */
-		pcToAscii[177] = ACS_CKBOARD;	/* 177 */
-		pcToAscii[178] = ACS_CKBOARD;	/* 178 */
-		pcToAscii[179] = ACS_VLINE;	/* 179 */
-		pcToAscii[180] = ACS_RTEE;	/* 180 */
-		pcToAscii[181] = ACS_RTEE;	/* 181 */
-		pcToAscii[182] = ACS_RTEE;	/* 182 */
-		pcToAscii[183] = ACS_URCORNER;	/* 183 */
-		pcToAscii[184] = ACS_URCORNER;	/* 184 */
-		pcToAscii[185] = ACS_RTEE;	/* 185 */
-		pcToAscii[186] = ACS_VLINE;	/* 186 */
-		pcToAscii[187] = ACS_URCORNER;	/* 187 */
-		pcToAscii[188] = ACS_LRCORNER;	/* 188 */
-		pcToAscii[189] = ACS_LRCORNER;	/* 189 */
-		pcToAscii[190] = ACS_LRCORNER;	/* 190 */
-		pcToAscii[191] = ACS_URCORNER;	/* 191 */
-		pcToAscii[192] = ACS_LLCORNER;	/* 192 */
-		pcToAscii[193] = ACS_BTEE;	/* 193 */
-		pcToAscii[194] = ACS_TTEE;	/* 194 */
-		pcToAscii[195] = ACS_LTEE;	/* 195 */
-		pcToAscii[196] = ACS_HLINE;	/* 196 */
-		pcToAscii[197] = ACS_PLUS;	/* 197 */
-		pcToAscii[198] = ACS_LTEE;	/* 198 */
-		pcToAscii[199] = ACS_LTEE;	/* 199 */
-		pcToAscii[200] = ACS_LLCORNER;	/* 200 */
-		pcToAscii[201] = ACS_ULCORNER;	/* 201 */
-		pcToAscii[202] = ACS_BTEE;	/* 202 */
-		pcToAscii[203] = ACS_TTEE;	/* 203 */
-		pcToAscii[204] = ACS_LTEE;	/* 204 */
-		pcToAscii[205] = ACS_HLINE;	/* 205 */
-		pcToAscii[206] = ACS_PLUS;	/* 206 */
-		pcToAscii[207] = ACS_BTEE;	/* 207 */
-		pcToAscii[208] = ACS_BTEE;	/* 208 */
-		pcToAscii[209] = ACS_TTEE;	/* 209 */
-		pcToAscii[210] = ACS_TTEE;	/* 210 */
-		pcToAscii[211] = ACS_LLCORNER;	/* 211 */
-		pcToAscii[212] = ACS_LLCORNER;	/* 212 */
-		pcToAscii[213] = ACS_ULCORNER;	/* 213 */
-		pcToAscii[214] = ACS_ULCORNER;	/* 214 */
-		pcToAscii[215] = ACS_PLUS;	/* 215 */
-		pcToAscii[216] = ACS_PLUS;	/* 216 */
-		pcToAscii[217] = ACS_LRCORNER;	/* 217 */
-		pcToAscii[218] = ACS_ULCORNER;	/* 218 */
-		pcToAscii[219] = ACS_BLOCK;	/* 219 */
-		pcToAscii[220] = ACS_BLOCK;	/* 220 */
-		pcToAscii[221] = ACS_BLOCK;	/* 221 */
-		pcToAscii[222] = ACS_BLOCK;	/* 222 */
-		pcToAscii[223] = ACS_BLOCK;	/* 223 */
-	#ifdef ACS_PI
-		pcToAscii[245] = ACS_PI;	/* 227 */
-	#endif
-		pcToAscii[241] = ACS_PLMINUS;	/* 241 */
-	#ifdef ACS_GEQUAL
-		pcToAscii[242] = ACS_GEQUAL;	/* 242 */
-	#endif
-	#ifdef ACS_LEQUAL
-		pcToAscii[243] = ACS_LEQUAL;	/* 243 */
-	#endif
-		pcToAscii[248] = ACS_DEGREE;	/* 248 */
-		pcToAscii[254] = ACS_BULLET;	/* 254 */
-	}
+	pcToAscii[4] = ACS_DIAMOND;	/* 4 */
+	pcToAscii[24] = ACS_UARROW;	/* 24 */
+	pcToAscii[26] = ACS_RARROW;	/* 26 */
+	pcToAscii[27] = ACS_LARROW;	/* 27 */
+	pcToAscii[28] = ACS_LLCORNER;	/* 28 */
+	/*
+	 * And here is the one more plug that was written for the
+	 * backward compatibility.
+	 */
+	pcToAscii[16] = ACS_RARROW;	/* 16 */
+	pcToAscii[17] = ACS_LARROW;	/* 17 */
+	pcToAscii[25] = ACS_DARROW;	/* 25 */
+	pcToAscii[30] = ACS_UARROW;	/* 30 */
+	pcToAscii[31] = ACS_DARROW;	/* 31 */
+#ifdef ACS_STERLING
+	pcToAscii[156] = ACS_STERLING;	/* 156 */
+#endif
+	pcToAscii[169] = ACS_ULCORNER;	/* 169 */
+	pcToAscii[170] = ACS_URCORNER;	/* 170 */
+	pcToAscii[174] = ACS_LARROW;	/* 174 */
+	pcToAscii[175] = ACS_RARROW;	/* 175 */
+	pcToAscii[176] = ACS_BOARD;	/* 176 */
+	pcToAscii[177] = ACS_CKBOARD;	/* 177 */
+	pcToAscii[178] = ACS_CKBOARD;	/* 178 */
+	pcToAscii[179] = ACS_VLINE;	/* 179 */
+	pcToAscii[180] = ACS_RTEE;	/* 180 */
+	pcToAscii[181] = ACS_RTEE;	/* 181 */
+	pcToAscii[182] = ACS_RTEE;	/* 182 */
+	pcToAscii[183] = ACS_URCORNER;	/* 183 */
+	pcToAscii[184] = ACS_URCORNER;	/* 184 */
+	pcToAscii[185] = ACS_RTEE;	/* 185 */
+	pcToAscii[186] = ACS_VLINE;	/* 186 */
+	pcToAscii[187] = ACS_URCORNER;	/* 187 */
+	pcToAscii[188] = ACS_LRCORNER;	/* 188 */
+	pcToAscii[189] = ACS_LRCORNER;	/* 189 */
+	pcToAscii[190] = ACS_LRCORNER;	/* 190 */
+	pcToAscii[191] = ACS_URCORNER;	/* 191 */
+	pcToAscii[192] = ACS_LLCORNER;	/* 192 */
+	pcToAscii[193] = ACS_BTEE;	/* 193 */
+	pcToAscii[194] = ACS_TTEE;	/* 194 */
+	pcToAscii[195] = ACS_LTEE;	/* 195 */
+	pcToAscii[196] = ACS_HLINE;	/* 196 */
+	pcToAscii[197] = ACS_PLUS;	/* 197 */
+	pcToAscii[198] = ACS_LTEE;	/* 198 */
+	pcToAscii[199] = ACS_LTEE;	/* 199 */
+	pcToAscii[200] = ACS_LLCORNER;	/* 200 */
+	pcToAscii[201] = ACS_ULCORNER;	/* 201 */
+	pcToAscii[202] = ACS_BTEE;	/* 202 */
+	pcToAscii[203] = ACS_TTEE;	/* 203 */
+	pcToAscii[204] = ACS_LTEE;	/* 204 */
+	pcToAscii[205] = ACS_HLINE;	/* 205 */
+	pcToAscii[206] = ACS_PLUS;	/* 206 */
+	pcToAscii[207] = ACS_BTEE;	/* 207 */
+	pcToAscii[208] = ACS_BTEE;	/* 208 */
+	pcToAscii[209] = ACS_TTEE;	/* 209 */
+	pcToAscii[210] = ACS_TTEE;	/* 210 */
+	pcToAscii[211] = ACS_LLCORNER;	/* 211 */
+	pcToAscii[212] = ACS_LLCORNER;	/* 212 */
+	pcToAscii[213] = ACS_ULCORNER;	/* 213 */
+	pcToAscii[214] = ACS_ULCORNER;	/* 214 */
+	pcToAscii[215] = ACS_PLUS;	/* 215 */
+	pcToAscii[216] = ACS_PLUS;	/* 216 */
+	pcToAscii[217] = ACS_LRCORNER;	/* 217 */
+	pcToAscii[218] = ACS_ULCORNER;	/* 218 */
+	pcToAscii[219] = ACS_BLOCK;	/* 219 */
+	pcToAscii[220] = ACS_BLOCK;	/* 220 */
+	pcToAscii[221] = ACS_BLOCK;	/* 221 */
+	pcToAscii[222] = ACS_BLOCK;	/* 222 */
+	pcToAscii[223] = ACS_BLOCK;	/* 223 */
+#ifdef ACS_PI
+	pcToAscii[245] = ACS_PI;	/* 227 */
+#endif
+	pcToAscii[241] = ACS_PLMINUS;	/* 241 */
+#ifdef ACS_GEQUAL
+	pcToAscii[242] = ACS_GEQUAL;	/* 242 */
+#endif
+#ifdef ACS_LEQUAL
+	pcToAscii[243] = ACS_LEQUAL;	/* 243 */
+#endif
+	pcToAscii[248] = ACS_DEGREE;	/* 248 */
+	pcToAscii[254] = ACS_BULLET;	/* 254 */
 #endif
 }
 

@@ -29,7 +29,7 @@ CXXFLAGS="-O2"
   30768	  16652	     16	  47436	   b94c	tvlife
   19972	   1908	      4	  21884	   557c	validator
   26948	   2056	   5432	  34436	   8684	tvhc
- 551987	  47448	  20904	 620339	  97733	libtvision.so.0.0.8
+ 550387	  47184	  20904	 618475	  96feb	libtvision.so.0.0.8
 
 
 
@@ -48,7 +48,7 @@ CXXFLAGS="-O2 -flto"
   23447	   2372	     16	  25835	   64eb	load
   16878	   2780	     48	  19706	   4cfa	nomenus
   10219	   1260	      4	  11483	   2cdb	splash
-  23655	   1796	     48	  25499	   639b	tvedit
+  23655	   1796	     40	  25491	   6393	tvedit
    8116	   1196	      4	   9316	   2464	tvguid01
    8838	   1220	      4	  10062	   274e	tvguid02
   10449	   1252	      4	  11705	   2db9	tvguid03
@@ -68,7 +68,7 @@ CXXFLAGS="-O2 -flto"
   28321	  16660	     16	  44997	   afc5	tvlife
   16910	   1940	      4	  18854	   49a6	validator
   21935	   2008	   5360	  29303	   7277	tvhc
- 528802	  43992	  20648	 593442	  90e22	libtvision.so.0.0.8
+ 527262	  43696	  20648	 591606	  906f6	libtvision.so.0.0.8
 
 
 
@@ -107,7 +107,7 @@ CXXFLAGS="-Os"
   27257	  16652	     16	  43925	   ab95	tvlife
   17525	   1932	      4	  19461	   4c05	validator
   24238	   2528	   5432	  32198	   7dc6	tvhc
- 503972	  47904	  20904	 572780	  8bd6c	libtvision.so.0.0.8
+ 502748	  47640	  20904	 571292	  8b79c	libtvision.so.0.0.8
 
 
 
@@ -126,7 +126,7 @@ CXXFLAGS="-Os -flto"
   20153	   1900	     16	  22069	   5635	load
   16383	   2804	     48	  19235	   4b23	nomenus
    9807	   1244	      4	  11055	   2b2f	splash
-  20759	   1796	     48	  22603	   584b	tvedit
+  20759	   1796	     40	  22595	   5843	tvedit
    7987	   1180	      4	   9171	   23d3	tvguid01
    8586	   1204	      4	   9794	   2642	tvguid02
    9953	   1236	      4	  11193	   2bb9	tvguid03
@@ -146,7 +146,7 @@ CXXFLAGS="-Os -flto"
   25548	  16652	     16	  42216	   a4e8	tvlife
   16271	   1892	      4	  18167	   46f7	validator
   18892	   1696	   5360	  25948	   655c	tvhc
- 468206	  43976	  20672	 532854	  82176	libtvision.so.0.0.8
+ 466966	  43696	  20672	 531334	  81b86	libtvision.so.0.0.8
 
 
 
@@ -165,7 +165,7 @@ CXXFLAGS="-Os -flto -fno-exceptions -fno-rtti"
   18653	   1532	     16	  20201	   4ee9	load
   15048	   2436	     48	  17532	   447c	nomenus
    8918	   1004	      4	   9926	   26c6	splash
-  18513	   1540	     48	  20101	   4e85	tvedit
+  18513	   1540	     40	  20093	   4e7d	tvedit
    7336	    940	      4	   8280	   2058	tvguid01
    7874	    964	      4	   8842	   228a	tvguid02
    8997	    996	      4	   9997	   270d	tvguid03
@@ -185,7 +185,7 @@ CXXFLAGS="-Os -flto -fno-exceptions -fno-rtti"
   23198	  16284	     16	  39498	   9a4a	tvlife
   14619	   1572	      4	  16195	   3f43	validator
   17027	   1136	   5360	  23523	   5be3	tvhc
- 427612	  40344	  20672	 488628	  774b4	libtvision.so.0.0.8
+ 426420	  40032	  20672	 487124	  76ed4	libtvision.so.0.0.8
 
 
 
