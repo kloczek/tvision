@@ -1197,17 +1197,13 @@ static void startcurses()
 
 #ifndef DISABLE_ACS
 	pcToAscii[4] = ACS_DIAMOND;	/* 4 */
+	pcToAscii[16] = ACS_RARROW;	/* 16 */
+	pcToAscii[17] = ACS_LARROW;	/* 17 */
 	pcToAscii[24] = ACS_UARROW;	/* 24 */
+	pcToAscii[25] = ACS_DARROW;	/* 25 */
 	pcToAscii[26] = ACS_RARROW;	/* 26 */
 	pcToAscii[27] = ACS_LARROW;	/* 27 */
 	pcToAscii[28] = ACS_LLCORNER;	/* 28 */
-	/*
-	 * And here is the one more plug that was written for the
-	 * backward compatibility.
-	 */
-	pcToAscii[16] = ACS_RARROW;	/* 16 */
-	pcToAscii[17] = ACS_LARROW;	/* 17 */
-	pcToAscii[25] = ACS_DARROW;	/* 25 */
 	pcToAscii[30] = ACS_UARROW;	/* 30 */
 	pcToAscii[31] = ACS_DARROW;	/* 31 */
 #ifdef ACS_STERLING
