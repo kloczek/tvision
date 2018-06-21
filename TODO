@@ -1,6 +1,10 @@
 
 Known bugs and things to do
 ---------------------------
+- Add mapping mouse scoll ecents
+
+- Bug: screen does not update on mouse drag and drop
+
 - Add by default UTF-8 and probably remove 8bit characters only support
 
 - Bug: in tvedit edit window TIndicartor is not displayed
