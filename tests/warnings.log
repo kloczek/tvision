@@ -113,14 +113,14 @@ In function ‘char* strcpy(char*, const char*)’,
 ../../../tvision/system.cc: In function ‘void vcsInit()’:
 ../../../tvision/system.cc:1040:10: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
 ../../../tvision/system.cc: In static member function ‘static void TScreen::drawMouse(int)’:
-../../../tvision/system.cc:1788:9: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc:1784:9: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
 ../../../tvision/system.cc: In static member function ‘static void TScreen::moveCursor(int, int)’:
-../../../tvision/system.cc:1835:8: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc:1831:8: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
 ../../../tvision/system.cc: In static member function ‘static void TScreen::writeRow(int, ushort*, int)’:
-../../../tvision/system.cc:1880:9: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
-../../../tvision/system.cc:1882:13: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc:1876:9: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc:1878:13: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
 ../../../tvision/system.cc: In function ‘void fexpand(char*)’:
-../../../tvision/system.cc:1969:8: warning: ignoring return value of ‘char* getcwd(char*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
-../../../tvision/system.cc:1970:7: warning: ignoring return value of ‘int chdir(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
-../../../tvision/system.cc:1971:8: warning: ignoring return value of ‘char* getcwd(char*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
-../../../tvision/system.cc:1972:7: warning: ignoring return value of ‘int chdir(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc:1965:8: warning: ignoring return value of ‘char* getcwd(char*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc:1966:7: warning: ignoring return value of ‘int chdir(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc:1967:8: warning: ignoring return value of ‘char* getcwd(char*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc:1968:7: warning: ignoring return value of ‘int chdir(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
