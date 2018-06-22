@@ -16,6 +16,8 @@
   sprintf()/snprintf() based code)
 - Fixed issue with wrong character used un defaultBkgrnd
 - Removed Russian character set support
+- remove use tvision/myendian.h (with full UTF8 support TVision will be
+  big/little endian independent)
 
 >>>>>>>> Changes from version 0.7 to 0.8 <<<<<<<<
 

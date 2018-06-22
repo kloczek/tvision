@@ -182,8 +182,6 @@ struct MouseEventType
     uchar buttons;
 };
 
-#include <myendian.h>
-
 /**
  * This structure stores information about a key.
  * @see KeyDownEvent
@@ -192,7 +190,6 @@ struct MouseEventType
  */
 struct CharScanType
 {
-#if (BYTE_ORDER == LITTLE_ENDIAN)
     /**
      * This is the character code.
      *
@@ -208,18 +205,6 @@ struct CharScanType
      * value is zero if the key is an ASCII character.
      */
     uchar scanCode;
-#elif (BYTE_ORDER == BIG_ENDIAN)
-    /**
-     * @internal
-     */
-    uchar scanCode;
-    /**
-     * @internal
-     */
-    uchar charCode;
-#else
-    #error architecture not supported by this library
-#endif
 };
 
 /**

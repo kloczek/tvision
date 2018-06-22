@@ -88,7 +88,6 @@ pkginclude_HEADERS = \
 	help.h \
 	menus.h \
 	msgbox.h \
-	myendian.h \
 	objects.h \
 	outline.h \
 	resource.h \

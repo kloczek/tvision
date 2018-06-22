@@ -110,17 +110,8 @@ protected:
     ushort data[maxViewWidth];
 };
 
-#include <myendian.h>
-
-#if (BYTE_ORDER == LITTLE_ENDIAN)
-	#define loByte(w)    (((uchar *)&w)[0])
-	#define hiByte(w)    (((uchar *)&w)[1])
-#elif (BYTE_ORDER == BIG_ENDIAN)
-	#define loByte(w)    (((uchar *)&w)[1])
-	#define hiByte(w)    (((uchar *)&w)[0])
-#else
-	#error architecture not supported by this library
-#endif
+#define loByte(w)    (((uchar *)&w)[0])
+#define hiByte(w)    (((uchar *)&w)[1])
 
 inline void TDrawBuffer::putAttribute( ushort indent, ushort attr )
 {
