@@ -235,9 +235,9 @@ In file included from ../../../tvision/tv.h:671,
 ../../../tvision/TWindow.cc: In member function ‘virtual void TWindow::handleEvent(TEvent&)’:
 ../../../tvision/TWindow.cc:100:16: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TWindow.cc:140:20: warning: switch missing default case [-Wswitch-default]
-../../../tvision/asm.cc:74:5: warning: no previous declaration for ‘int countLines(void*, size_t)’ [-Wmissing-declarations]
-../../../tvision/asm.cc:85:8: warning: no previous declaration for ‘size_t scan(const void*, size_t, const char*)’ [-Wmissing-declarations]
-../../../tvision/asm.cc:128:8: warning: no previous declaration for ‘size_t iScan(const void*, size_t, const char*)’ [-Wmissing-declarations]
+../../../tvision/asm.cc:67:5: warning: no previous declaration for ‘int countLines(void*, size_t)’ [-Wmissing-declarations]
+../../../tvision/asm.cc:78:8: warning: no previous declaration for ‘size_t scan(const void*, size_t, const char*)’ [-Wmissing-declarations]
+../../../tvision/asm.cc:121:8: warning: no previous declaration for ‘size_t iScan(const void*, size_t, const char*)’ [-Wmissing-declarations]
 ../../../tvision/colorsel.cc: In member function ‘virtual void TColorDisplay::handleEvent(TEvent&)’:
 ../../../tvision/colorsel.cc:354:15: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/helpbase.cc:375:9: warning: no previous declaration for ‘Boolean isBlank(char)’ [-Wmissing-declarations]
@@ -291,14 +291,14 @@ In file included from ../../../tvision/tv.h:628,
 ../../../tvision/stddlg.cc:264:15: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
 ../../../tvision/stddlg.cc:268:15: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
 ../../../tvision/system.cc: In function ‘void sigHandler(int)’:
-../../../tvision/system.cc:1350:9: warning: switch missing default case [-Wswitch-default]
+../../../tvision/system.cc:1280:9: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/system.cc: In static member function ‘static void TScreen::drawMouse(int)’:
-../../../tvision/system.cc:1802:22: warning: switch missing default case [-Wswitch-default]
+../../../tvision/system.cc:1687:22: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/system.cc: In function ‘void fexpand(char*)’:
-../../../tvision/system.cc:1965:8: warning: ignoring return value of ‘char* getcwd(char*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
-../../../tvision/system.cc:1966:7: warning: ignoring return value of ‘int chdir(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
-../../../tvision/system.cc:1967:8: warning: ignoring return value of ‘char* getcwd(char*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
-../../../tvision/system.cc:1968:7: warning: ignoring return value of ‘int chdir(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc:1803:8: warning: ignoring return value of ‘char* getcwd(char*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc:1804:7: warning: ignoring return value of ‘int chdir(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc:1805:8: warning: ignoring return value of ‘char* getcwd(char*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+../../../tvision/system.cc:1806:7: warning: ignoring return value of ‘int chdir(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
 In file included from ../../../tvision/tv.h:679,
                  from ../../../tvision/help.h:30,
                  from ../../../tvision/tvtext.cc:44:

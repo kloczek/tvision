@@ -38,10 +38,6 @@
 #include <curses.h>
 #endif
 
-#ifdef ENABLE_VCS
-extern int vcsFd;		/* virtual console system descriptor */
-#endif
-
 /*
  * SS: this code is used to refresh the screen only if strictly necessary.
  * Date: Mon Jun 23 10:26:09 MET DST 1997
@@ -50,9 +46,6 @@ static int lockRefresh = 0;
 
 inline void doRefresh(TView *p)
 {
-#ifdef ENABLE_VCS
-	if (vcsFd >= 0) return;		/* refresh is not necessary */
-#endif
 	if (lockRefresh != 0) return;	/* we can't do any refresh */
 	if (p->owner != NULL &&
 		p->owner->lockFlag) return;	/* the owner is locked */

@@ -62,16 +62,6 @@ AC_ARG_ENABLE(linux-gpm,
 	AC_DEFINE(ENABLE_GPM, 1, [Linux GPM mouse support])]
 )
 
-AC_MSG_CHECKING(if the Linux VCS support should be disabled)
-AC_ARG_ENABLE(linux-vcs,
-	[  --disable-linux-vcs     disable Linux VCS support],
-	[AC_MSG_RESULT(yes)],
-	[AC_MSG_RESULT(no)
-	AC_DEFINE(ENABLE_VCS, 1, [Linux VCS support])
-	]
-)
-	;;
-	freebsd*)
 AC_MSG_CHECKING(if the FreeBSD mouse support should be disabled)
 AC_ARG_ENABLE(freebsd-mouse,
 	[  --disable-freebsd-mouse disable FreeBSD mouse support],

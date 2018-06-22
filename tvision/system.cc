@@ -370,11 +370,6 @@ static int msUseArrow;		/* use arrow pointer */
 static int msFd;		/* mouse file descriptor */
 #endif
 
-#ifdef ENABLE_VCS
-int vcsFd;			/* virtual console system descriptor */
-unsigned char *vcsMap;		/* define which character table to use */
-#endif
-
 /*
  * GENERAL FUNCTIONS
  */
@@ -1005,65 +1000,6 @@ static void msHandle()
 #endif
 
 /*
- * VCS FUNCTIONS
- */
-
-/*
- * Initializes the vcs.
- */
-
-#ifdef ENABLE_VCS
-static void vcsInit()
-{
-	vcsFd = -1;
-	vcsMap = NULL;			/* default is no character mapping */
-	if (strstr(env, "novcs") != NULL) LOG("vcs support disabled");
-	else
-	{
-		LOG("using IBM PC character set");
-
-		/*
-		 * This approach was suggested by:
-		 * Martynas Kunigelis <algikun@santaka.sc-uni.ktu.lt>
-		 * Date: Mon, 20 Jan 1997 15:55:14 +0000 (EET)
-		 */
-		FILE *statfile;
-		char path[PATH_MAX];
-
-		if ((statfile = fopen("/proc/self/stat", "r")) != NULL)
-		{
-			int dev;
-
-			/* TTYs have 4 as major number */
-			/* virtual consoles have minor numbers <= 63 */
-
-			fscanf(statfile, "%*d %*s %*c %*d %*d %*d %d", &dev);
-			if ((dev & 0xff00) == 0x0400 && (dev & 0xff) <= 63)
-			{
-				LOG("virtual console detected");
-				sprintf(path, "/dev/vcsa%d", dev & 0xff);
-				if ((vcsFd = open(path, O_WRONLY)) < 0)
-				{
-					LOG("unable to open " << path <<
-						", running in stdout mode");
-				}
-			}
-			fclose(statfile);
-		}
-	}
-}
-
-/*
- * Closes the vcs device.
- */
-
-static void vcsClose()
-{
-	if (vcsFd >= 0) close(vcsFd);
-}
-#endif
-
-/*
  * OTHER LOCAL FUNCTIONS
  */
 
@@ -1073,14 +1009,11 @@ static void vcsClose()
 
 static void selectPalette()
 {
-#ifdef ENABLE_VCS
-	if (vcsFd >= 0) TScreen::screenMode = TScreen::smCO80;
+	if (has_colors())
+		TScreen::screenMode = TScreen::smCO80;
 	else
-#endif
-	{
-		if (has_colors()) TScreen::screenMode = TScreen::smCO80;
-		else TScreen::screenMode = TScreen::smMono;
-	}
+		TScreen::screenMode = TScreen::smMono;
+
 	/*
 	 * This sets the standard attribute mapping to have 16 foreground
 	 * colors and 8 background colors.
@@ -1327,9 +1260,6 @@ static void freeResources()
 	gpmClose();
 #endif
 	stopcurses();
-#ifdef ENABLE_VCS
-	vcsClose();
-#endif
 #ifdef ENABLE_FBSDM
 	fbsdmClose();
 #endif
@@ -1486,9 +1416,6 @@ TScreen::TScreen()
 
 #ifdef ENABLE_FBSDM
 	fbsdmInit();
-#endif
-#ifdef ENABLE_VCS
-	vcsInit();
 #endif
 	/*
 	 * We have to call startcurses() before the gpmInit(), otherwise we
@@ -1682,25 +1609,8 @@ void TScreen::getEvent(TEvent &event)
 
 void TScreen::makeBeep()
 {
-#ifdef ENABLE_VCS
-	/*
-	 * We can't call refresh() when using VCS, otherwise it will clear the
-	 * screen.
-	 */
-	if (vcsFd >= 0)
-	{
-		/*
-		 * high word = clock ticks
-		 * low word = counter value (1193180 / frequency)
-		 */
-		ioctl(STDIN_FILENO, KDMKTONE, 0x005004a9);
-	}
-	else
-#endif
-	{
-		beep();
-		refresh();
-	}
+	beep();
+	refresh();
 }
 
 /*
@@ -1727,15 +1637,8 @@ void TScreen::drawCursor(int show)
 	if (show) moveCursor(curX, curY);
 	else moveCursor(screenWidth - 1, screenHeight - 1);
 #ifdef NCURSES_VERSION
-#ifdef ENABLE_VCS
-	if (vcsFd < 0)
-	{
-#endif
 		if (show) curs_set(1);	/* cursor normal */
 		else curs_set(0);	/* cursor invisible */
-#ifdef ENABLE_VCS
-	}
-#endif
 #endif
 }
 
@@ -1767,24 +1670,6 @@ void TScreen::drawMouse(int show)
 #endif
 		int addr = screenWidth * msWhere.y + msWhere.x;
 		ushort cell = screenBuffer[addr];
-#ifdef ENABLE_VCS
-		if (vcsFd >= 0)		/* use vcs */
-		{
-			if (show) cell ^= 0x7f00;
-
-			/* map IBM PC character set to another code page ? */
-
-			if (vcsMap != NULL)
-			{
-				if ((cell & 0x00ff) >= 0x80)
-					cell = (cell & 0xff00) |
-					vcsMap[(cell & 0x00ff) - 0x80];
-			}
-			lseek(vcsFd, addr * sizeof(ushort) + 4, SEEK_SET);
-			write(vcsFd, &cell, sizeof(ushort));
-		}
-		else			/* standard out */
-#endif
 		{
 			int code = cell & 0xff;
 			int color = (cell & 0xff00) >> 8;
@@ -1822,20 +1707,8 @@ void TScreen::drawMouse(int show)
 
 void TScreen::moveCursor(int x, int y)
 {
-#ifdef ENABLE_VCS
-	if (vcsFd >= 0)		/* use vcs */
-	{
-		int where[2] = {x, y};
-
-		lseek(vcsFd, 2, SEEK_SET);
-		write(vcsFd, where, sizeof(where));
-	}
-	else			/* standard out */
-#endif
-	{
-		move(y, x);
-		refresh();	/* this is necessary */
-	}
+	move(y, x);
+	refresh();	/* this is necessary */
 	curX = x;
 	curY = y;
 }
@@ -1846,56 +1719,21 @@ void TScreen::moveCursor(int x, int y)
 
 void TScreen::writeRow(int dst, ushort *src, int len)
 {
-#ifdef ENABLE_VCS
-	if (vcsFd >= 0)		/* use vcs */
+	int x = dst % TScreen::screenWidth;
+	int y = dst / TScreen::screenWidth;
+
+	move(y, x);
+	while (len-- > 0)
 	{
-		lseek(vcsFd, dst * sizeof(ushort) + 4, SEEK_SET);
+		int code = *src & 0xff;		/* character code */
+		int color = (*src & 0xff00) >> 8; /* color code */
 
-		/* map IBM PC character set to another code page ? */
-
-		if (vcsMap != NULL)
-		{
-			int i = len;
-			ushort buf[maxViewWidth];
-			ushort *from = src;
-			ushort *to = buf;
-
-			while (i-- > 0)
-			{
-				/* extract character and attribute pair */
-
-				ushort pair = *from++;
-
-				/* map the character */
-
-				if ((pair & 0x00ff) >= 0x80)
-					pair = (pair & 0xff00) |
-					vcsMap[(pair & 0x00ff) - 0x80];
-				*to++ = pair;
-			}
-			write(vcsFd, buf, len * sizeof(ushort));
-		}
-		else write(vcsFd, src, len * sizeof(ushort));
+		attrset(attributeMap[color]);
+		addch(pcToAscii[code]);
+		src++;
 	}
-	else			/* standard out */
-#endif
-	{
-		int x = dst % TScreen::screenWidth;
-		int y = dst / TScreen::screenWidth;
-
-		move(y, x);
-		while (len-- > 0)
-		{
-			int code = *src & 0xff;		/* character code */
-			int color = (*src & 0xff00) >> 8; /* color code */
-
-			attrset(attributeMap[color]);
-			addch(pcToAscii[code]);
-			src++;
-		}
-		move(curY, curX);
-		/* refresh(); */	/* not really necessary */
-	}
+	move(curY, curX);
+	/* refresh(); */	/* not really necessary */
 }
 
 /*

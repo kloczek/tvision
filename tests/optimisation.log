@@ -29,7 +29,7 @@ CXXFLAGS="-O2"
   30696	  16652	     16	  47364	   b904	tvlife
   19900	   1908	      4	  21812	   5534	validator
   26876	   2056	   5432	  34364	   863c	tvhc
- 550315	  47184	  20904	 618403	  96fa3	libtvision.so.0.0.8
+ 549613	  47136	  20904	 617653	  96cb5	libtvision.so.0.0.8
 
 
 
@@ -68,7 +68,7 @@ CXXFLAGS="-O2 -flto"
   28249	  16660	     16	  44925	   af7d	tvlife
   16838	   1940	      4	  18782	   495e	validator
   21863	   2008	   5360	  29231	   722f	tvhc
- 527190	  43696	  20648	 591534	  906ae	libtvision.so.0.0.8
+ 526500	  43648	  20680	 590828	  903ec	libtvision.so.0.0.8
 
 
 
@@ -107,7 +107,7 @@ CXXFLAGS="-Os"
   27185	  16652	     16	  43853	   ab4d	tvlife
   17453	   1932	      4	  19389	   4bbd	validator
   24166	   2528	   5432	  32126	   7d7e	tvhc
- 502676	  47640	  20904	 571220	  8b754	libtvision.so.0.0.8
+ 502334	  47592	  20904	 570830	  8b5ce	libtvision.so.0.0.8
 
 
 
@@ -146,7 +146,7 @@ CXXFLAGS="-Os -flto"
   25476	  16652	     16	  42144	   a4a0	tvlife
   16199	   1892	      4	  18095	   46af	validator
   18820	   1696	   5360	  25876	   6514	tvhc
- 466894	  43696	  20672	 531262	  81b3e	libtvision.so.0.0.8
+ 466552	  43648	  20704	 530904	  819d8	libtvision.so.0.0.8
 
 
 
@@ -185,7 +185,7 @@ CXXFLAGS="-Os -flto -fno-exceptions -fno-rtti"
   23126	  16284	     16	  39426	   9a02	tvlife
   14547	   1572	      4	  16123	   3efb	validator
   16955	   1136	   5360	  23451	   5b9b	tvhc
- 426348	  40032	  20672	 487052	  76e8c	libtvision.so.0.0.8
+ 425974	  39984	  20704	 486662	  76d06	libtvision.so.0.0.8
 
 
 
