@@ -110,7 +110,7 @@ ushort defEditorDialog( int, ... );
 
 ushort scanKeyMap( const void *keyMap, ushort keyCode )
 {
-    register ushort *kM = (ushort *)keyMap;
+    ushort *kM = (ushort *)keyMap;
     uchar codeLow = keyCode & 0xff;
     uchar codeHi  = keyCode >> 8;
 

@@ -89,9 +89,9 @@ size_t scan( const void *block, size_t size, const char *str )
   long	patternHash	= 0;
   long	testHash	= 0;
 
-  register const char*  testP= (const char*)block;
-  register const char*  patP = str;
-  register long   x = 1;
+  const char*  testP= (const char*)block;
+  const char*  patP = str;
+  long   x = 1;
   int             i = patternLength-1;
   while(i--) x =  (x<<5)%q;
 
@@ -132,9 +132,9 @@ size_t iScan( const void *block, size_t size, const char *str )
   long	patternHash	= 0;
   long	testHash	= 0;
 
-  register const char*  testP= (const char*)block;
-  register const char*  patP = str;
-  register long   x = 1;
+  const char*  testP= (const char*)block;
+  const char*  patP = str;
+  long   x = 1;
   int             i = patternLength-1;
   while(i--) x =  (x<<5)%q;
 

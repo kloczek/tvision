@@ -35,8 +35,8 @@ void TDrawBuffer::moveBuf( ushort indent, const void *source,
                            ushort attr, ushort count )
 
 {
-    register ushort *dest = &data[indent];
-    register uchar *s = (uchar *)source;
+    ushort *dest = &data[indent];
+    uchar *s = (uchar *)source;
 
     if (attr != 0)
         for (; count; --count, ++s, ++dest)
@@ -68,7 +68,7 @@ void TDrawBuffer::moveBuf( ushort indent, const void *source,
 
 void TDrawBuffer::moveChar( ushort indent, char c, ushort attr, ushort count )
 {
-    register ushort *dest = &data[indent];
+    ushort *dest = &data[indent];
 
     if (attr != 0)
         for (; count; --count, ++dest)
@@ -102,7 +102,7 @@ void TDrawBuffer::moveChar( ushort indent, char c, ushort attr, ushort count )
 
 void TDrawBuffer::moveCStr( ushort indent, const char *str, ushort attrs)
 {
-    register ushort *dest = &data[indent];
+    ushort *dest = &data[indent];
     int toggle;
     uchar c, curAttr;
 
