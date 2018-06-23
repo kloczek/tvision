@@ -116,7 +116,7 @@ void TVDemo::handleEvent(TEvent &event)
         case cmSaveCmd:             //  Save current desktop
                 saveDesktop();
                 break;
- 
+
         case cmRestoreCmd:          //  Restore saved desktop
                 retrieveDesktop();
                 break;

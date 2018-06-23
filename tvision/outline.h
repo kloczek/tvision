@@ -294,7 +294,7 @@ public:
      * Name     Description
      *
      * cur      A pointer to the node being checked.
-     * 
+     *
      * level    The level of the node (how many nodes are above it),
      *          zero-based. This can be used to a call to either
      *          @ref getGraph() or @ref createGraph().

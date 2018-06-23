@@ -57,7 +57,7 @@ void TVDemo::mouse()
             mouseCage->getData(&(TEventQueue::mouseReverse));
         }
     destroy( mouseCage );
-   
+
 }
 
 
@@ -139,7 +139,7 @@ void TVDemo::idle()
         enableCommand(cmTile);
         enableCommand(cmCascade);
         }
-    else 
+    else
         {
         disableCommand(cmTile);
         disableCommand(cmCascade);
@@ -156,7 +156,7 @@ static void closeView(TView *p, void *p1)
 }
 
 //
-// loadDesktop() function 
+// loadDesktop() function
 //
 
 void TVDemo::loadDesktop(fpstream &s)
@@ -164,7 +164,7 @@ void TVDemo::loadDesktop(fpstream &s)
     TView  *p;
 
     if (deskTop->valid(cmClose))
-        { 
+        {
         deskTop->forEach(::closeView, 0);  // Clear the desktop
         do {
            s >> p;

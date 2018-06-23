@@ -333,7 +333,7 @@ inline opstream& operator << ( opstream& os, TRect* r )
  * the ability to write and read collections to and from streams.
  *
  * A collection is a more general concept than the traditional array, set, or
- * list.      
+ * list.
  *
  * TCollection objects size themselves dynamically at run time and offer a
  * base for more specialized derived classes such as @ref TSortedCollection,

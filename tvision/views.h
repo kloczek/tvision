@@ -2144,7 +2144,7 @@ public:
      * Active windows are drawn with a double-lined frame and any icons;
      * inactive windows are drawn with a single-lined frame and no icons.
      * @see TView::draw
-     */ 
+     */
     virtual void draw();
     /**
      * Returns a reference to the default frame palette string.
@@ -3326,7 +3326,7 @@ public:
      *
      * Otherwise, each subview is told to draw itself using a call to
      * @ref TGroup::redraw().
-     */ 
+     */
     virtual void draw();
     /**
      * Redraws the group's subviews in Z-order. TGroup::redraw() differs from

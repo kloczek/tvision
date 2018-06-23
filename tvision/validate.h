@@ -168,7 +168,7 @@ public:
      * @ref TPXPictureValidator to indicate that it could not interpret the
      * picture string passed to it. If you create your own validator objects,
      * you can define error codes and pass them in the status field.
-     * 
+     *
      * <pre>
      * Constant Value Meaning
      *

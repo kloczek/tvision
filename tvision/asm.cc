@@ -73,7 +73,7 @@ int countLines( void *buf, size_t count )
   };
   return anzahl;
 }
-  
+
 // These Routines are taken from Rogue Wave Tools++
 size_t scan( const void *block, size_t size, const char *str )
 {
@@ -197,7 +197,7 @@ void TEditor::formatLine( void *DrawBuf, uint LinePtr,
                                         buffer[p] + ((Color & 0xFF) << 8);
         p++;
     }
-    } else 
+    } else
         p += gapLen;
 
     while (p - gapLen - LinePtr <= Width)
@@ -238,7 +238,7 @@ void TEditor::formatLine( void *DrawBuf, uint LinePtr,
   if (p >= curPtr)
   {
     p += gapLen;
-  
+
     while ((p < bufSize) && (buffer[p] != '\n') && (i <= Width))
     {
       curColor = (p>=selStart && p<selEnd) ? (Color & 0xFF00) :
@@ -302,8 +302,8 @@ uint TEditor::lineEnd( uint p )
 
         if (curPtr == bufLen)
             return bufLen;
- 
- 
+
+
     }
     else
     {
@@ -320,7 +320,7 @@ uint TEditor::lineEnd( uint p )
             p++;
 
     return p;
- 
+
 }
 
 uint TEditor::lineStart( uint p )
@@ -640,17 +640,17 @@ void TView::resetCursor() {
           p=p->owner;
           continue;
         };
-        if ((p->state & sfVisible) 
-            && cur.x>=p->origin.x 
+        if ((p->state & sfVisible)
+            && cur.x>=p->origin.x
             && cur.x<p->size.x+p->origin.x
-            && cur.y>=p->origin.y 
+            && cur.y>=p->origin.y
             && cur.y<p->size.y+p->origin.y) {
           break; // Cursor wird verdeckt.
         };
         goto label1;
       };
     };
-  } 
+  }
   // no cursor, please.
   TScreen::drawCursor(0);
 }
@@ -686,7 +686,7 @@ ushort TTerminal::prevLines(ushort pos, ushort lines ) {
 
   if (lines)
     return queBack;
-  else 
+  else
     bufInc(pos);
 
   return pos;
@@ -712,7 +712,7 @@ void TView::writeViewRec1(short x1, short x2, TView* p, int shadowCounter ) {
       // printit!
       if (p->owner->buffer) {
 
-/* 
+/*
  * SS: now we should remove the mouse pointer from the screen.  This is
  * not necessary because we have a copy of the screen.
  *
@@ -809,7 +809,7 @@ if (p->owner->buffer == TScreen::screenBuffer) TScreen::drawMouse(1);
     };
 
   }; // while
-      
+
 }
 
 void TView::writeViewRec2( short x1, short x2, TView* p, int shadowCounter ) {

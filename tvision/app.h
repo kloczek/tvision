@@ -188,7 +188,7 @@ public:
      * then inserted into the desk top.
      * @see TDeskInit:TDeskInit
      * @see TGroup::TGroup
-     *      
+     *
      * @ref growMode is set to @ref gfGrowHiX | @ref gfGrowHiY.
      */
     TDeskTop( const TRect& bounds );
@@ -588,7 +588,7 @@ public:
      *
      * getEvent() first checks if @ref TProgram::putEvent() has generated a
      * pending event. If so, getEvent() returns that event. If there is no
-     * pending event, getEvent() calls @ref TScreen::getEvent(). 
+     * pending event, getEvent() calls @ref TScreen::getEvent().
      *
      * If both calls return @ref evNothing, indicating that no user input is
      * available, getEvent() calls @ref TProgram::idle() to allow "background"

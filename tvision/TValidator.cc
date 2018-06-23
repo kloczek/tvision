@@ -232,7 +232,7 @@ void TPXPictureValidator::toGroupEnd(int& i, int termCh)
 Boolean TPXPictureValidator::skipToComma(int termCh)
 {
       do {
-          toGroupEnd(index, termCh); 
+          toGroupEnd(index, termCh);
       } while (! ( (index == termCh) || (pic[index] == ',')));
 
       if (pic[index] == ',')
@@ -240,7 +240,7 @@ Boolean TPXPictureValidator::skipToComma(int termCh)
       return Boolean(index < termCh);
 }
 
-// Calclate the end of a group 
+// Calclate the end of a group
 int TPXPictureValidator::calcTerm(int termCh)
 {
       int k = index;
@@ -317,7 +317,7 @@ TPicResult TPXPictureValidator::group(char* input, int inTerm)
       index++;
       rslt = process(input, termCh - 1);
 
-      if (! isIncomplete(rslt))  
+      if (! isIncomplete(rslt))
           index = termCh;
 
       return rslt;
@@ -335,7 +335,7 @@ TPicResult TPXPictureValidator::checkComplete(TPicResult rslt, int termCh)
         while (status)
           switch (pic[j])
           {
-          case '[': 
+          case '[':
              toGroupEnd(j, termCh);
              break;
           case  '*':
@@ -372,37 +372,37 @@ TPicResult TPXPictureValidator::scan(char* input, int termCh)
         ch = input[jndex];
         switch (pic[index])
     {
-        case  '#': 
-        if (! isNumber(ch)) 
+        case  '#':
+        if (! isNumber(ch))
             return prError;
-        else 
+        else
             consume(ch, input);
         break;
-        case  '?': 
+        case  '?':
         if (! isLetter(ch))
             return prError;
-        else 
+        else
             consume(ch, input);
         break;
-        case  '&': 
+        case  '&':
         if (! isLetter(ch))
             return prError;
-                else 
+                else
             consume(toupper(ch), input);
         break;
-        case  '!': 
+        case  '!':
         consume(toupper(ch), input);
         break;
         case  '@':
         consume(ch, input);
         break;
         case  '*':
-    
+
               rslt = iteration(input,termCh);
               if (! isComplete(rslt))
                   return rslt;
 
-              if (rslt == prError) 
+              if (rslt == prError)
               rslt = prAmbiguous;
           break;
 
@@ -414,7 +414,7 @@ TPicResult TPXPictureValidator::scan(char* input, int termCh)
 
           break;
         case '[':
-            
+
               rslt = group(input, termCh);
               if (isIncomplete(rslt))
               return rslt;
@@ -434,7 +434,7 @@ TPicResult TPXPictureValidator::scan(char* input, int termCh)
 #else
             if (ch == ' ')
              ch = pic[index];
-            else 
+            else
             return rScan;
 #endif
           consume(pic[index], input);
@@ -770,7 +770,7 @@ void* TStringLookupValidator::read( ipstream& is )
   return this;
 }
 
-TStringLookupValidator::TStringLookupValidator( StreamableInit s) : 
+TStringLookupValidator::TStringLookupValidator( StreamableInit s) :
         TLookupValidator(s)
 {
 }

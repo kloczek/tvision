@@ -49,7 +49,7 @@ int cmFileOpen    = 1001,   // Returned from TFileDialog when Open pressed
 #define FA_DIREC	0x02
 #define FA_RDONLY	0x04
 
-/** \struct ftime 
+/** \struct ftime
  * Stores date and time information about a specified file.
  * @short Stores date and time information about a specified file
  */
@@ -259,7 +259,7 @@ public:
      * This iterator scans the collection from last item to first. It returns
      * a pointer to the first item (that is, the nearest the end) in the
      * collection for which the `Test' function returns True.
-     */  
+     */
     TSearchRec *lastThat( ccTestFunc Test, void *arg );
 private:
     virtual void freeItem( void *item )
@@ -787,7 +787,7 @@ public:
      * fdOpenButton    0x0002 Put an Open button in the dialog
      *
      * fdReplaceButton 0x0004 Put a Replace button in the dialog
-     * 
+     *
      * fdClearButton   0x0008 Put a Clear button in the dialog
      *
      * fdHelpButton    0x0010 Put a Help button in the dialog
@@ -1449,8 +1449,8 @@ protected:
      *
      * Used to recover the view from a stream.
      */
-    TChDirDialog( StreamableInit ) : 
-        TWindowInit( TChDirDialog::initFrame ), 
+    TChDirDialog( StreamableInit ) :
+        TWindowInit( TChDirDialog::initFrame ),
         TDialog( streamableInit ) {}
     /**
      * Used to store the view in a stream.

@@ -57,7 +57,7 @@ public:
      * to ensure the proper setting of related data members when destroy is
      * called. Does nothing.
      * @see destroy
-     */ 
+     */
     virtual void shutDown();
 private:
 };

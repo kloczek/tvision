@@ -19,7 +19,7 @@ class THeapView;
 class TClockView;
 class fpstream;
 
-class TVDemo : public TApplication 
+class TVDemo : public TApplication
 {
 
 public:

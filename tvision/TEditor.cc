@@ -365,7 +365,7 @@ void TEditor::draw()
     drawLines( 0, size.y, drawPtr );
 }
 
-/*Added again as a such a plug for backward compatibility with an old 
+/*Added again as a such a plug for backward compatibility with an old
 application*/
 #ifdef __RUSSIAN_LETTERS
 static unsigned KoiTable[128] =
@@ -397,7 +397,7 @@ void TEditor::drawLines( int y, uint count, uint linePtr )
         ushort b[maxLineLength * 4];
         formatLine( b, linePtr, delta.x+size.x, color );
 
-/*Added again as a such a plug for backward compatibility with an old 
+/*Added again as a such a plug for backward compatibility with an old
 application*/
 #ifdef __RUSSIAN_LETTERS
        ushort *p = &b[delta.x];
