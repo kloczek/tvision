@@ -1,7 +1,7 @@
 
 Known bugs and things to do
 ---------------------------
-- Add mapping mouse scoll ecents
+- Add mapping mouse scoll events
 
 - Bug: screen does not update on mouse drag and drop
 

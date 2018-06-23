@@ -14,7 +14,7 @@
   full width of some terminals
 - TVision no longer needs stream class to operate on strings (replaced by
   sprintf()/snprintf() based code)
-- Fixed issue with wrong character used un defaultBkgrnd
+- Fixed issue with wrong character used in defaultBkgrnd
 - Removed Russian character set support
 - Removed use tvision/myendian.h (with full UTF8 support TVision will be
   big/little endian independent)
