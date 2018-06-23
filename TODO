@@ -61,7 +61,4 @@ Known bugs and things to do
 
   can detect an memory allocation error, but not file open error.
 
-- `make dist' gives problems with the recursive link `lib/tvision' when
-  compressing.
-
 <end>
