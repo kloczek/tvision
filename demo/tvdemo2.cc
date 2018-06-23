@@ -93,7 +93,7 @@ void TVDemo::handleEvent(TEvent &event)
                 changeDir();
                 break;
 
-            case cmSuspendCmd:          //  Shell
+            case cmSuspend:             //  Shell
                 suspend();
                 break;
 

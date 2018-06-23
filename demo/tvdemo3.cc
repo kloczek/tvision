@@ -194,7 +194,7 @@ TMenuBar *TVDemo::initMenuBar(TRect r)
         *new TMenuItem( "~O~pen...", cmOpenCmd, kbF3, hcFOpen, "F3" ) +
         *new TMenuItem( "~C~hange Dir...", cmChDirCmd, kbNoKey, hcFChangeDir ) +
          newLine() +
-        *new TMenuItem( "~S~uspend", cmSuspendCmd, kbNoKey, hcSuspend ) +
+        *new TMenuItem( "~S~uspend", cmSuspend, kbNoKey, hcSuspend ) +
         *new TMenuItem( "E~x~it", cmQuit, kbAltX, hcFExit, "Alt-X" );
 
     TSubMenu& sub3 =
