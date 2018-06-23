@@ -99,6 +99,7 @@ pkginclude_HEADERS = \
 	ttypes.h \
 	tvconfig.h \
 	tv.h \
+	tv_api_compat.h \
 	tvobjs.h \
 	util.h \
 	validate.h \
