@@ -1,5 +1,5 @@
    4108 -Wold-style-cast
-   3528 -Wreserved-id-macro
+   3191 -Wreserved-id-macro
    1497 -Wpadded
    1199 -Wzero-as-null-pointer-constant
     355 -Wunused-macros
@@ -46,15 +46,6 @@
 ../../../tvision/TApplication.cc:13:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TApplication.cc:12:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TApplication.cc:14:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/TApplication.cc:20:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TApplication.cc:20:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TApplication.cc:20:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TApplication.cc:20:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -150,15 +141,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TBackground.cc:14:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TBackground.cc:13:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TBackground.cc:16:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TBackground.cc:16:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TBackground.cc:16:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TBackground.cc:16:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -236,15 +218,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TButton.cc:17:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TButton.cc:15:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TButton.cc:13:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/TButton.cc:19:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TButton.cc:19:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TButton.cc:19:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TButton.cc:19:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -362,15 +335,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TChDirDialog.cc:25:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TChDirDialog.cc:22:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TChDirDialog.cc:14:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/TChDirDialog.cc:27:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TChDirDialog.cc:27:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TChDirDialog.cc:27:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TChDirDialog.cc:27:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -570,15 +534,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:80:7: warning: 'TStreamable' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 In file included from ../../../tvision/TCheckBoxes.cc:13:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TCheckBoxes.cc:13:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TCheckBoxes.cc:13:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TCheckBoxes.cc:13:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -655,17 +610,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TCluster.cc:16:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TCluster.cc:14:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TCluster.cc:22:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TCluster.cc:22:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TCluster.cc:22:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TCluster.cc:22:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TCluster.cc:22:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -804,15 +750,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TCollection.cc:13:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TCollection.cc:12:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TCollection.cc:16:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TCollection.cc:16:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TCollection.cc:16:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TCollection.cc:16:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -870,15 +807,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:80:7: warning: 'TStreamable' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 In file included from ../../../tvision/TCommandSet.cc:13:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TCommandSet.cc:13:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TCommandSet.cc:13:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TCommandSet.cc:13:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -910,15 +838,6 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/TDeskTop.cc:17:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TDeskTop.cc:13:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TDeskTop.cc:14:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/TDeskTop.cc:19:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TDeskTop.cc:19:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TDeskTop.cc:19:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TDeskTop.cc:19:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -1041,17 +960,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 In file included from ../../../tvision/TDialog.cc:15:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TDialog.cc:15:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TDialog.cc:15:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TDialog.cc:15:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TDialog.cc:15:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -1152,15 +1062,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TDirCollection.cc:14:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TDirCollection.cc:13:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TDirCollection.cc:16:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TDirCollection.cc:16:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TDirCollection.cc:16:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TDirCollection.cc:16:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -1228,15 +1129,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:80:7: warning: 'TStreamable' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 ../../../tvision/TDirListBox.cc:16:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/TDirListBox.cc:18:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TDirListBox.cc:18:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TDirListBox.cc:18:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TDirListBox.cc:18:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -1404,17 +1296,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TEditor.cc:21:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TEditor.cc:20:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TEditor.cc:22:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TEditor.cc:22:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TEditor.cc:22:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TEditor.cc:22:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TEditor.cc:22:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -1564,15 +1447,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TEditWindow.cc:16:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TEditWindow.cc:14:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TEditWindow.cc:24:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TEditWindow.cc:24:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TEditWindow.cc:24:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TEditWindow.cc:24:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -1710,15 +1584,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TEditWindow.cc:115:18: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/TFileCollection.cc:13:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TFileCollection.cc:14:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TFileCollection.cc:14:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TFileCollection.cc:14:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TFileCollection.cc:14:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -1796,15 +1661,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TFileDialog.cc:24:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TFileDialog.cc:23:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TFileDialog.cc:14:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/TFileDialog.cc:25:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TFileDialog.cc:25:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TFileDialog.cc:25:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TFileDialog.cc:25:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -2052,15 +1908,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TFileEditor.cc:13:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TFileEditor.cc:14:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TFileEditor.cc:19:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TFileEditor.cc:19:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TFileEditor.cc:19:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TFileEditor.cc:19:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -2175,17 +2022,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TFileList.cc:16:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TFileList.cc:15:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TFileList.cc:20:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TFileList.cc:20:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TFileList.cc:20:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TFileList.cc:20:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TFileList.cc:20:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -2374,15 +2212,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TFrame.cc:16:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TFrame.cc:13:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TFrame.cc:18:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TFrame.cc:18:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TFrame.cc:18:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TFrame.cc:18:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -2510,15 +2339,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TGroup.cc:17:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TGroup.cc:14:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TGroup.cc:15:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/TGroup.cc:20:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TGroup.cc:20:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TGroup.cc:20:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TGroup.cc:20:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -2687,17 +2507,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/THistory.cc:18:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/THistory.cc:14:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/THistory.cc:20:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/THistory.cc:20:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/THistory.cc:20:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/THistory.cc:20:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/THistory.cc:20:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -2811,17 +2622,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 In file included from ../../../tvision/THistoryViewer.cc:16:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/THistoryViewer.cc:16:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/THistoryViewer.cc:16:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/THistoryViewer.cc:16:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/THistoryViewer.cc:16:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -2917,15 +2719,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 In file included from ../../../tvision/THistoryWindow.cc:14:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/THistoryWindow.cc:14:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/THistoryWindow.cc:14:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/THistoryWindow.cc:14:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -3019,15 +2812,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TIndicator.cc:15:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TIndicator.cc:13:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TIndicator.cc:18:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TIndicator.cc:18:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TIndicator.cc:18:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TIndicator.cc:18:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -3120,17 +2904,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TInputLine.cc:18:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TInputLine.cc:15:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TInputLine.cc:20:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TInputLine.cc:20:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TInputLine.cc:20:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TInputLine.cc:20:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TInputLine.cc:20:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -3278,15 +3053,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TLabel.cc:16:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TLabel.cc:14:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TLabel.cc:19:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TLabel.cc:19:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TLabel.cc:19:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TLabel.cc:19:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -3386,15 +3152,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/TListBox.cc:16:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TListBox.cc:15:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/TListBox.cc:17:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TListBox.cc:17:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TListBox.cc:17:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TListBox.cc:17:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -3499,17 +3256,8 @@ In file included from ../../../tvision/tv.h:647:
 ../../../tvision/TListViewer.cc:16:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TListViewer.cc:15:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TListViewer.cc:21:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TListViewer.cc:21:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TListViewer.cc:21:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TListViewer.cc:21:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TListViewer.cc:21:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -3643,17 +3391,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TMemo.cc:16:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TMemo.cc:13:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TMemo.cc:18:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TMemo.cc:18:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TMemo.cc:18:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TMemo.cc:18:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TMemo.cc:18:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -3756,15 +3495,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TMenuBar.cc:15:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TMenuBar.cc:13:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TMenuBar.cc:18:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TMenuBar.cc:18:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TMenuBar.cc:18:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TMenuBar.cc:18:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -3862,15 +3592,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
-In file included from ../../../tvision/TMenuBox.cc:16:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TMenuBox.cc:16:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TMenuBox.cc:16:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TMenuBox.cc:16:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -3977,15 +3698,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 In file included from ../../../tvision/TMenuPopup.cc:17:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TMenuPopup.cc:17:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TMenuPopup.cc:17:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TMenuPopup.cc:17:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -4091,17 +3803,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TMenuView.cc:14:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TMenuView.cc:16:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TMenuView.cc:22:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TMenuView.cc:22:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TMenuView.cc:22:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TMenuView.cc:22:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TMenuView.cc:22:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -4281,15 +3984,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TMenuView.cc:583:18: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/TMenuView.cc:584:15: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 In file included from ../../../tvision/TMultiCheckBoxes.cc:13:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TMultiCheckBoxes.cc:13:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TMultiCheckBoxes.cc:13:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TMultiCheckBoxes.cc:13:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -4377,15 +4071,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TMultiCheckBoxes.cc:100:14: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/TObject.cc:12:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TObject.cc:13:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TObject.cc:13:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TObject.cc:13:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TObject.cc:13:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -4415,17 +4100,8 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/TOutline.cc:13:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TOutline.cc:16:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TOutline.cc:18:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TOutline.cc:18:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TOutline.cc:18:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TOutline.cc:18:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TOutline.cc:18:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -4559,15 +4235,6 @@ In file included from ../../../tvision/tv.h:695:
 ../../../tvision/outline.h:33:7: warning: 'TNode' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 ../../../tvision/outline.h:33:7: warning: 'TNode' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 In file included from ../../../tvision/TParamText.cc:13:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TParamText.cc:13:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TParamText.cc:13:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TParamText.cc:13:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -4644,15 +4311,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TParamText.cc:28:5: warning: 'delete' applied to a pointer that was allocated with 'new[]'; did you mean 'delete[]'? [-Wmismatched-new-delete]
 ../../../tvision/TParamText.cc:21:10: note: allocated with 'new[]' here
 In file included from ../../../tvision/TPoint.cc:13:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TPoint.cc:13:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TPoint.cc:13:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TPoint.cc:13:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -4685,17 +4343,8 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/TProgram.cc:14:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TProgram.cc:18:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TProgram.cc:28:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TProgram.cc:28:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TProgram.cc:28:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TProgram.cc:28:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TProgram.cc:28:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -4882,15 +4531,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 In file included from ../../../tvision/TRadioButtons.cc:13:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TRadioButtons.cc:13:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TRadioButtons.cc:13:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TRadioButtons.cc:13:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -4967,15 +4607,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 In file included from ../../../tvision/TResourceCollection.cc:14:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TResourceCollection.cc:14:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TResourceCollection.cc:14:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TResourceCollection.cc:14:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -5049,15 +4680,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:80:7: warning: 'TStreamable' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 ../../../tvision/TResourceFile.cc:16:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TResourceFile.cc:15:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/TResourceFile.cc:18:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TResourceFile.cc:18:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TResourceFile.cc:18:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TResourceFile.cc:18:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -5167,17 +4789,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TScrollBar.cc:14:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TScrollBar.cc:15:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TScrollBar.cc:20:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TScrollBar.cc:20:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TScrollBar.cc:20:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TScrollBar.cc:20:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TScrollBar.cc:20:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -5270,15 +4883,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/TScroller.cc:17:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TScroller.cc:16:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/TScroller.cc:18:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TScroller.cc:18:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TScroller.cc:18:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TScroller.cc:18:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -5373,15 +4977,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TSortedCollection.cc:13:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TSortedCollection.cc:12:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TSortedCollection.cc:16:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TSortedCollection.cc:16:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TSortedCollection.cc:16:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TSortedCollection.cc:16:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -5433,15 +5028,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TStaticText.cc:15:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TStaticText.cc:14:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TStaticText.cc:13:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/TStaticText.cc:16:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TStaticText.cc:16:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TStaticText.cc:16:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TStaticText.cc:16:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -5520,15 +5106,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TStatusLine.cc:18:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TStatusLine.cc:17:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TStatusLine.cc:15:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/TStatusLine.cc:19:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TStatusLine.cc:19:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TStatusLine.cc:19:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TStatusLine.cc:19:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -5646,15 +5223,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TStringCollection.cc:14:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TStringCollection.cc:13:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TStringCollection.cc:15:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TStringCollection.cc:15:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TStringCollection.cc:15:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TStringCollection.cc:15:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -5717,15 +5285,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TStrListMaker.cc:16:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TStrListMaker.cc:15:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TStrListMaker.cc:13:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/TStrListMaker.cc:17:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TStrListMaker.cc:17:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TStrListMaker.cc:17:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TStrListMaker.cc:17:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -5796,15 +5355,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TValidator.cc:14:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TValidator.cc:18:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TValidator.cc:13:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/TValidator.cc:20:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TValidator.cc:20:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TValidator.cc:20:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TValidator.cc:20:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -5951,17 +5501,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TView.cc:14:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TView.cc:15:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TView.cc:21:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TView.cc:21:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TView.cc:21:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TView.cc:21:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TView.cc:21:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -6090,17 +5631,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/TWindow.cc:15:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TWindow.cc:17:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/TWindow.cc:21:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TWindow.cc:21:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TWindow.cc:21:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TWindow.cc:21:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TWindow.cc:21:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -6235,15 +5767,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/allnames.cc:52:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/allnames.cc:39:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/allnames.cc:55:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/allnames.cc:70:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/allnames.cc:70:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/allnames.cc:70:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/allnames.cc:70:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -6663,15 +6186,6 @@ In file included from ../../../tvision/tv.h:695:
 ../../../tvision/asm.cc:20:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/asm.cc:21:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/asm.cc:25:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/asm.cc:25:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/asm.cc:25:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/asm.cc:25:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -6864,17 +6378,8 @@ In file included from ../../../tvision/tv.h:687:
 ../../../tvision/colorsel.cc:28:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/colorsel.cc:22:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/colorsel.cc:31:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/colorsel.cc:31:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/colorsel.cc:31:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/colorsel.cc:31:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/colorsel.cc:31:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -7152,17 +6657,8 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/colorsel.cc:903:11: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/colorsel.cc:913:18: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 In file included from ../../../tvision/drivers.cc:14:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/drivers.cc:14:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/drivers.cc:14:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/drivers.cc:14:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/drivers.cc:14:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -7209,15 +6705,6 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/drivers.cc:119:26: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
 ../../../tvision/drivers.cc:146:24: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drivers.cc:192:25: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tvision/editstat.cc:14:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/editstat.cc:14:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/editstat.cc:14:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/editstat.cc:14:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -7288,15 +6775,6 @@ In file included from ../../../tvision/tv.h:691:
 ../../../tvision/helpbase.cc:15:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/helpbase.cc:16:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/helpbase.cc:13:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/helpbase.cc:19:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/helpbase.cc:19:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/helpbase.cc:19:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/helpbase.cc:19:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -7444,17 +6922,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/help.cc:21:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/help.cc:25:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/help.cc:26:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/help.cc:26:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/help.cc:26:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/help.cc:26:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/help.cc:26:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -7530,10 +6999,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/help.cc:26:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/help.cc:29:
-../../../tvision/help.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/help.cc:26:
-In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../tvision/help.cc:29:
 In file included from ../../../tvision/help.h:30:
@@ -7611,15 +7076,6 @@ In file included from ../../../tvision/help.cc:26:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:80:7: warning: 'TStreamable' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 In file included from ../../../tvision/histlist.cc:12:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/histlist.cc:12:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/histlist.cc:12:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/histlist.cc:12:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -7676,17 +7132,8 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/histlist.cc:195:6: warning: no previous prototype for function 'initHistory' [-Wmissing-prototypes]
 ../../../tvision/histlist.cc:201:6: warning: no previous prototype for function 'doneHistory' [-Wmissing-prototypes]
 In file included from ../../../tvision/menu.cc:17:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/menu.cc:17:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/menu.cc:17:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/menu.cc:17:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/menu.cc:17:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -7751,15 +7198,6 @@ In file included from ../../../tvision/tv.h:683:
 ../../../tvision/misc.cc:18:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/misc.cc:16:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/misc.cc:19:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/misc.cc:20:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/misc.cc:20:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/misc.cc:20:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/misc.cc:20:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -7846,15 +7284,6 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/msgbox.cc:15:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/msgbox.cc:16:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/msgbox.cc:13:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/msgbox.cc:22:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/msgbox.cc:22:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/msgbox.cc:22:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/msgbox.cc:22:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -7994,15 +7423,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/msgbox.cc:156:18: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
 ../../../tvision/msgbox.cc:160:23: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
 In file included from ../../../tvision/new.cc:17:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/new.cc:17:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/new.cc:17:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/new.cc:17:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -8066,15 +7486,6 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/new.cc:203:6: warning: function previously declared with an explicit exception specification redeclared with an implicit exception specification [-Wimplicit-exception-spec-mismatch]
 /usr/bin/../lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/new:126:6: note: previous declaration is here
 In file included from ../../../tvision/palette.cc:13:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/palette.cc:13:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/palette.cc:13:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/palette.cc:13:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -8129,15 +7540,6 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/sall.cc:31:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/sall.cc:42:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/sall.cc:62:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/sall.cc:71:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/sall.cc:71:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/sall.cc:71:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/sall.cc:71:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -9155,17 +8557,8 @@ In file included from ../../../tvision/tv.h:695:
 ../../../tvision/stddlg.cc:17:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/stddlg.cc:19:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/stddlg.cc:22:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/stddlg.cc:22:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/stddlg.cc:22:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/stddlg.cc:22:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/stddlg.cc:22:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -9370,17 +8763,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/system.cc:35:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/system.cc:36:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/system.cc:48:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/system.cc:48:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/system.cc:48:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/system.cc:48:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/system.cc:48:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -9664,15 +9048,6 @@ In file included from ../../../tvision/tv.h:695:
 ../../../tvision/outline.h:33:7: warning: 'TNode' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 ../../../tvision/textview.cc:12:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/textview.cc:15:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/textview.cc:15:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/textview.cc:15:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/textview.cc:15:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -9780,15 +9155,6 @@ In file included from ../../../tvision/tv.h:687:
 ../../../tvision/tobjstrm.cc:17:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/tobjstrm.cc:15:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/tobjstrm.cc:16:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tvision/tobjstrm.cc:25:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/tobjstrm.cc:25:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/tobjstrm.cc:25:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/tobjstrm.cc:25:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -9921,17 +9287,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tvtext.cc:38:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/tvtext.cc:41:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/tvtext.cc:43:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/tvtext.cc:43:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/tvtext.cc:43:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/tvtext.cc:43:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/tvtext.cc:43:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -10261,8 +9618,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 In file included from ../../../tvision/tvtext.cc:44:
-../../../tvision/help.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/tvtext.cc:44:
 In file included from ../../../tvision/help.h:30:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -10303,15 +9658,6 @@ In file included from ../../../tvision/tvtext.cc:43:
 In file included from ../../../tvision/tv.h:695:
 ../../../tvision/outline.h:33:7: warning: 'TNode' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 ../../../tvision/outline.h:33:7: warning: 'TNode' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
-In file included from ../../../tvhc/tvhc.cc:88:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvhc/tvhc.cc:88:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvhc/tvhc.cc:88:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvhc/tvhc.cc:88:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -10355,10 +9701,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvhc/tvhc.cc:88:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:14:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvhc/tvhc.cc:88:
-In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../tvhc/tvhc.cc:90:
 In file included from ../../../tvhc/tvhc.h:20:
@@ -10560,17 +9902,8 @@ In file included from ../../../tvhc/tvhc.cc:90:
 ../../../demo/ascii.cc:25:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/ascii.cc:23:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../demo/ascii.cc:28:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/ascii.cc:28:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/ascii.cc:28:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/ascii.cc:28:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../demo/ascii.cc:28:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -10643,7 +9976,6 @@ In file included from ../../../tvision/tv.h:675:
 ../../../demo/ascii.cc:30:1: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:53:29: note: expanded from macro '__link'
 In file included from ../../../demo/ascii.cc:36:
-../../../demo/ascii.h:15:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../demo/ascii.h:27:57: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/ascii.h:51:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:53:20: warning: use of old-style cast [-Wold-style-cast]
@@ -10733,17 +10065,8 @@ In file included from ../../../tvision/tv.h:659:
 ../../../demo/calc.cc:24:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/calc.cc:22:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../demo/calc.cc:27:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/calc.cc:27:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/calc.cc:27:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -10834,7 +10157,6 @@ In file included from ../../../tvision/tv.h:675:
 ../../../demo/calc.cc:30:1: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:53:29: note: expanded from macro '__link'
 In file included from ../../../demo/calc.cc:36:
-../../../demo/calc.h:15:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../demo/calc.h:33:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/calc.h:52:61: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/calc.h:70:20: warning: use of old-style cast [-Wold-style-cast]
@@ -10934,17 +10256,8 @@ In file included from ../../../demo/calc.cc:36:
 ../../../demo/calendar.cc:22:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/calendar.cc:20:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../demo/calendar.cc:25:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/calendar.cc:25:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/calendar.cc:25:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/calendar.cc:25:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../demo/calendar.cc:25:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -11017,7 +10330,6 @@ In file included from ../../../tvision/tv.h:675:
 ../../../demo/calendar.cc:27:1: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:53:29: note: expanded from macro '__link'
 In file included from ../../../demo/calendar.cc:34:
-../../../demo/calendar.h:15:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../demo/calendar.h:23:64: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/calendar.h:47:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.h:49:20: warning: use of old-style cast [-Wold-style-cast]
@@ -11118,17 +10430,8 @@ In file included from ../../../tvision/tv.h:659:
 ../../../demo/fileview.cc:21:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/fileview.cc:20:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../demo/fileview.cc:25:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/fileview.cc:25:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/fileview.cc:25:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/fileview.cc:25:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../demo/fileview.cc:25:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -11220,8 +10523,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../demo/fileview.cc:27:1: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:53:29: note: expanded from macro '__link'
 In file included from ../../../demo/fileview.cc:37:
-../../../demo/fileview.h:15:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/fileview.cc:37:
 In file included from ../../../demo/fileview.h:20:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -11308,15 +10609,6 @@ In file included from ../../../demo/fileview.cc:37:
 ../../../demo/fileview.h:77:7: warning: 'TFileWindow' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 ../../../demo/gadgets.cc:24:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../demo/gadgets.cc:25:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/gadgets.cc:25:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/gadgets.cc:25:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/gadgets.cc:25:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -11364,8 +10656,6 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../demo/gadgets.cc:32:
-../../../demo/gadgets.h:15:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/gadgets.cc:32:
 In file included from ../../../demo/gadgets.h:20:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -11409,15 +10699,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../demo/mousedlg.cc:19:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/mousedlg.cc:22:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/mousedlg.cc:21:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../demo/mousedlg.cc:30:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/mousedlg.cc:30:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/mousedlg.cc:30:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../demo/mousedlg.cc:30:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -11582,17 +10863,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../demo/puzzle.cc:22:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/puzzle.cc:20:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../demo/puzzle.cc:25:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/puzzle.cc:25:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/puzzle.cc:25:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/puzzle.cc:25:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../demo/puzzle.cc:25:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -11665,7 +10937,6 @@ In file included from ../../../tvision/tv.h:675:
 ../../../demo/puzzle.cc:27:1: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:53:29: note: expanded from macro '__link'
 In file included from ../../../demo/puzzle.cc:36:
-../../../demo/puzzle.h:15:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../demo/puzzle.h:23:62: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/puzzle.h:54:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/puzzle.h:56:20: warning: use of old-style cast [-Wold-style-cast]
@@ -11744,17 +11015,8 @@ In file included from ../../../tvision/tv.h:659:
 ../../../demo/tvdemo1.cc:17:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/tvdemo1.cc:18:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../demo/tvdemo1.cc:31:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo1.cc:31:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo1.cc:31:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo1.cc:31:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../demo/tvdemo1.cc:31:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -11851,13 +11113,9 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../demo/tvdemo1.cc:34:
-../../../demo/gadgets.h:15:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo1.cc:34:
 In file included from ../../../demo/gadgets.h:20:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo1.cc:35:
-../../../demo/fileview.h:15:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../demo/tvdemo1.cc:35:
 In file included from ../../../demo/fileview.h:20:
 In file included from ../../../tvision/tv.h:635:
@@ -11883,7 +11141,6 @@ In file included from ../../../demo/tvdemo1.cc:35:
 ../../../demo/fileview.h:34:50: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../demo/fileview.h:53:66: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../demo/tvdemo1.cc:36:
-../../../demo/puzzle.h:15:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../demo/puzzle.h:23:62: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/puzzle.h:54:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/puzzle.h:56:20: warning: use of old-style cast [-Wold-style-cast]
@@ -11894,8 +11151,6 @@ In file included from ../../../demo/tvdemo1.cc:36:
 ../../../demo/puzzle.h:95:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/puzzle.h:98:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/puzzle.h:100:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo1.cc:38:
-../../../tvision/help.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../demo/tvdemo1.cc:38:
 In file included from ../../../tvision/help.h:30:
 In file included from ../../../tvision/tv.h:635:
@@ -11987,15 +11242,6 @@ In file included from ../../../demo/tvdemo1.cc:35:
 ../../../demo/tvdemo2.cc:22:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/tvdemo2.cc:18:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/tvdemo2.cc:26:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../demo/tvdemo2.cc:32:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo2.cc:32:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo2.cc:32:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../demo/tvdemo2.cc:32:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -12111,7 +11357,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../demo/tvdemo2.cc:37:
-../../../demo/ascii.h:15:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../demo/ascii.h:27:57: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/ascii.h:51:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:53:20: warning: use of old-style cast [-Wold-style-cast]
@@ -12128,7 +11373,6 @@ In file included from ../../../demo/tvdemo2.cc:37:
 ../../../demo/ascii.h:135:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:137:20: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo2.cc:38:
-../../../demo/calendar.h:15:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../demo/calendar.h:23:64: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/calendar.h:47:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.h:49:20: warning: use of old-style cast [-Wold-style-cast]
@@ -12140,7 +11384,6 @@ In file included from ../../../demo/tvdemo2.cc:38:
 ../../../demo/calendar.h:91:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.h:93:20: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo2.cc:39:
-../../../demo/calc.h:15:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../demo/calc.h:33:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/calc.h:52:61: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/calc.h:70:20: warning: use of old-style cast [-Wold-style-cast]
@@ -12208,17 +11451,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../demo/tvdemo3.cc:17:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/tvdemo3.cc:24:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../demo/tvdemo3.cc:33:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo3.cc:33:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo3.cc:33:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo3.cc:33:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../demo/tvdemo3.cc:33:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -12348,13 +11582,9 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../demo/tvdemo3.cc:37:
-../../../demo/gadgets.h:15:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo3.cc:37:
 In file included from ../../../demo/gadgets.h:20:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo3.cc:40:
-../../../demo/fileview.h:15:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../demo/tvdemo3.cc:40:
 In file included from ../../../demo/fileview.h:20:
 In file included from ../../../tvision/tv.h:635:
@@ -12379,8 +11609,6 @@ In file included from ../../../demo/tvdemo3.cc:40:
 ../../../demo/fileview.h:30:48: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/fileview.h:34:50: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../demo/fileview.h:53:66: warning: extra ';' after member function definition [-Wextra-semi]
-In file included from ../../../demo/tvdemo3.cc:42:
-../../../tvision/help.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../demo/tvdemo3.cc:42:
 In file included from ../../../tvision/help.h:30:
 In file included from ../../../tvision/tv.h:635:
@@ -12447,15 +11675,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:80:7: warning: 'TStreamable' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 In file included from ../../../demo/tvdemo3.cc:40:
 ../../../demo/fileview.h:24:7: warning: 'TLineCollection' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
-In file included from ../../../tutorial/tvguid01.cc:10:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid01.cc:10:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid01.cc:10:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/tvguid01.cc:10:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -12546,17 +11765,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tutorial/tvguid02.cc:11:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/tvguid02.cc:16:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid02.cc:16:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid02.cc:16:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid02.cc:16:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/tvguid02.cc:16:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -12671,17 +11881,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/tvguid03.cc:14:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid03.cc:11:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/tvguid03.cc:19:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid03.cc:19:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid03.cc:19:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid03.cc:19:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/tvguid03.cc:19:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -12823,17 +12024,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/tvguid04.cc:20:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid04.cc:17:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/tvguid04.cc:26:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid04.cc:26:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid04.cc:26:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid04.cc:26:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/tvguid04.cc:26:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -12986,17 +12178,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/tvguid05.cc:21:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid05.cc:18:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/tvguid05.cc:28:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid05.cc:28:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid05.cc:28:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid05.cc:28:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/tvguid05.cc:28:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13150,17 +12333,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/tvguid06.cc:29:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid06.cc:26:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/tvguid06.cc:36:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid06.cc:36:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid06.cc:36:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid06.cc:36:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/tvguid06.cc:36:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13320,17 +12494,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/tvguid07.cc:29:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid07.cc:26:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/tvguid07.cc:36:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid07.cc:36:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid07.cc:36:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid07.cc:36:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/tvguid07.cc:36:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13493,17 +12658,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/tvguid08.cc:30:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid08.cc:27:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/tvguid08.cc:39:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid08.cc:39:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid08.cc:39:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid08.cc:39:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/tvguid08.cc:39:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13680,17 +12836,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/tvguid09.cc:30:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid09.cc:27:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/tvguid09.cc:40:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid09.cc:40:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid09.cc:40:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid09.cc:40:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/tvguid09.cc:40:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13875,17 +13022,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/tvguid10.cc:30:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid10.cc:27:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/tvguid10.cc:40:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid10.cc:40:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid10.cc:40:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid10.cc:40:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/tvguid10.cc:40:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -14070,17 +13208,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/tvguid11.cc:36:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid11.cc:27:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/tvguid11.cc:40:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid11.cc:40:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid11.cc:40:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid11.cc:40:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/tvguid11.cc:40:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -14268,17 +13397,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/tvguid12.cc:36:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid12.cc:27:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/tvguid12.cc:40:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid12.cc:40:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid12.cc:40:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid12.cc:40:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/tvguid12.cc:40:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -14466,17 +13586,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/tvguid13.cc:36:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid13.cc:27:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/tvguid13.cc:41:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid13.cc:41:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid13.cc:41:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid13.cc:41:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/tvguid13.cc:41:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -14673,17 +13784,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/tvguid14.cc:36:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid14.cc:27:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/tvguid14.cc:45:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid14.cc:45:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid14.cc:45:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid14.cc:45:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/tvguid14.cc:45:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -14912,17 +14014,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/tvguid15.cc:36:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid15.cc:27:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/tvguid15.cc:47:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid15.cc:47:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid15.cc:47:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid15.cc:47:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/tvguid15.cc:47:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -15163,17 +14256,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/tvguid16.cc:36:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid16.cc:27:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/tvguid16.cc:47:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid16.cc:47:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid16.cc:47:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid16.cc:47:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/tvguid16.cc:47:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -15408,15 +14492,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 In file included from ../../../tutorial/background.cc:10:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/background.cc:10:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/background.cc:10:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/background.cc:10:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -15519,17 +14594,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/listbox.cc:12:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/listbox.cc:22:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/listbox.cc:28:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/listbox.cc:28:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/listbox.cc:28:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/listbox.cc:28:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/listbox.cc:28:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -15745,17 +14811,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tutorial/load.cc:11:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/load.cc:19:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/load.cc:19:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/load.cc:19:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/load.cc:19:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/load.cc:19:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -15945,15 +15002,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/nomenus.cc:18:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/nomenus.cc:19:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/nomenus.cc:23:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/nomenus.cc:23:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/nomenus.cc:23:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/nomenus.cc:23:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -16139,17 +15187,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/nomenus.cc:82:7: warning: 'TMyApp' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 ../../../tutorial/splash.cc:13:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/splash.cc:17:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/splash.cc:17:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/splash.cc:17:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/splash.cc:17:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/splash.cc:17:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -16310,17 +15349,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/tvedit.cc:14:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvedit.cc:25:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/tvedit.cc:35:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvedit.cc:35:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvedit.cc:35:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvedit.cc:35:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/tvedit.cc:35:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -16578,17 +15608,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/tvlife.cc:18:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvlife.cc:24:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/tvlife.cc:27:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvlife.cc:27:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvlife.cc:27:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvlife.cc:27:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/tvlife.cc:27:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -16798,17 +15819,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tutorial/validator.cc:17:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/validator.cc:22:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/validator.cc:24:
-In file included from ../../../tvision/tv.h:617:
-../../../tvision/tvconfig.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/validator.cc:24:
-In file included from ../../../tvision/tv.h:618:
-../../../tvision/ttypes.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/validator.cc:24:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/validator.cc:24:
-In file included from ../../../tvision/tv.h:628:
-../../../tvision/util.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/validator.cc:24:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]

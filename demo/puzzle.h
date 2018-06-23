@@ -11,8 +11,8 @@
  *
  */
 
-#if !defined( __PUZZLE_H )
-#define __PUZZLE_H
+#if !defined( TV_INC_PUZZLE_H )
+#define TV_INC_PUZZLE_H
 
 class TPuzzleView : public TView
 {
@@ -100,4 +100,4 @@ inline opstream& operator << ( opstream& os, TPuzzleWindow* cl )
     { return os << (TStreamable *) cl; }
 
 
-#endif      // __PUZZLE_H
+#endif      // TV_INC_PUZZLE_H

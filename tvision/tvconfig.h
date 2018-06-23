@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if !defined( __CONFIG_H )
-#define __CONFIG_H
+#if !defined( TV_INC_CONFIG_H )
+#define TV_INC_CONFIG_H
 
 #include <limits.h>
 
@@ -47,4 +47,4 @@ const int maxFindStrLen = 80;
  */
 const int maxReplaceStrLen = 80;
 
-#endif  // __CONFIG_H
+#endif  // TV_INC_CONFIG_H

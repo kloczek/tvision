@@ -11,8 +11,8 @@
  *
  */
 
-#if !defined( __FILEVIEW_H )
-#define __FILEVIEW_H
+#if !defined( TV_INC_FILEVIEW_H )
+#define TV_INC_FILEVIEW_H
 
 #define Uses_TCollection
 #define Uses_TScroller

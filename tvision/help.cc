@@ -25,13 +25,13 @@
 #define Uses_TPalette
 #include <tv.h>
 
-#if !defined( __HELP_H )
+#if !defined( TV_INC_HELP_H )
 #include "help.h"
-#endif  // __HELP_H
+#endif  // TV_INC_HELP_H
 
-#if !defined( __UTIL_H )
+#if !defined( TV_INC_UTIL_H )
 #include "util.h"
-#endif  // __UTIL_H
+#endif  // TV_INC_UTIL_H
 
 #include <ctype.h>
 #include <limits.h>

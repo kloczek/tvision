@@ -11,8 +11,8 @@
  *
  */
 
-#if !defined( __CALENDAR_H )
-#define __CALENDAR_H
+#if !defined( TV_INC_CALENDAR_H )
+#define TV_INC_CALENDAR_H
 
 class TCalendarView : public TView
 {
@@ -93,4 +93,4 @@ inline opstream& operator << ( opstream& os, TCalendarWindow* cl )
     { return os << (TStreamable *) cl; }
 
 
-#endif      // __CALENDAR_H
+#endif      // TV_INC_CALENDAR_H

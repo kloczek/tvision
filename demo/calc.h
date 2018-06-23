@@ -11,8 +11,8 @@
  *
  */
 
-#if !defined( __CALC_H )
-#define __CALC_H
+#if !defined( TV_INC_CALC_H )
+#define TV_INC_CALC_H
 
 #include <math.h>
 #include <stdlib.h>
@@ -116,4 +116,4 @@ inline opstream& operator << ( opstream& os, TCalculator* cl )
     { return os << (TStreamable *) cl; }
 
 
-#endif      // __CALC_H
+#endif      // TV_INC_CALC_H

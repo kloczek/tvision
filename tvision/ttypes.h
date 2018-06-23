@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if !defined( __TTYPES_H )
-#define __TTYPES_H
+#if !defined( TV_INC_TTYPES_H )
+#define TV_INC_TTYPES_H
 
 /** \file ttypes.h
  * ttypes.h
@@ -97,4 +97,4 @@ const int ccNotFound = -1;
  */
 extern const uchar specialChars[];
 
-#endif  // __TTYPES_H
+#endif  // TV_INC_TTYPES_H

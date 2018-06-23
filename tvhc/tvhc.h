@@ -10,8 +10,8 @@
  * Modified by Sergey Clushin <serg@lamport.ru>, <Clushin@deol.ru>
  */
 
-#if !defined( __TVHC_H )
-#define __TVHC_H
+#if !defined( TV_INC_TVHC_H )
+#define TV_INC_TVHC_H
 
 #define Uses_fstream
 #define Uses_TSortedCollection
@@ -123,4 +123,4 @@ char line[MAXSTRSIZE] = "";
 Boolean lineInBuffer = False;
 int lineCount = 0;
 
-#endif  // __TVHC_H
+#endif  // TV_INC_TVHC_H

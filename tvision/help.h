@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if !defined( __HELP_H )
-#define __HELP_H
+#if !defined( TV_INC_HELP_H )
+#define TV_INC_HELP_H
 
 /** \file help.h
  * help.h
@@ -114,4 +114,4 @@ extern void notAssigned( opstream& s, int value );
  */
 extern TCrossRefHandler crossRefHandler;
 
-#endif  // __HELP_H
+#endif  // TV_INC_HELP_H

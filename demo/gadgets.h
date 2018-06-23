@@ -11,8 +11,8 @@
  *
  */
 
-#if !defined( __GADGETS_H )
-#define __GADGETS_H
+#if !defined( TV_INC_GADGETS_H )
+#define TV_INC_GADGETS_H
 
 #define Uses_TEvent
 #define Uses_TRect
@@ -54,4 +54,4 @@ private:
 
 };
 
-#endif      // __GADGETS_H
+#endif      // TV_INC_GADGETS_H

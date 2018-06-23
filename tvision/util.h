@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if !defined( __UTIL_H )
-#define __UTIL_H
+#if !defined( TV_INC_UTIL_H )
+#define TV_INC_UTIL_H
 
 /** \file util.h
  * util.h
@@ -214,4 +214,4 @@ void expandPath(const char *path, char *dir, char *file);
  */
 long int filelength(int fd);
 
-#endif  // __UTIL_H
+#endif  // TV_INC_UTIL_H

@@ -11,8 +11,8 @@
  *
  */
 
-#if !defined( __ASCII_H )
-#define __ASCII_H
+#if !defined( TV_INC_ASCII_H )
+#define TV_INC_ASCII_H
 
 const int cmAsciiTableCmdBase = 910;
 const int cmCharFocused       =   0;
@@ -137,4 +137,4 @@ inline opstream& operator << ( opstream& os, TAsciiChart* cl )
     { return os << (TStreamable *) cl; }
 
 
-#endif      // __ASCII_H
+#endif      // TV_INC_ASCII_H
