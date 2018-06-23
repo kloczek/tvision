@@ -121,7 +121,6 @@
 /tvision/validate.h:28 warning: Member voTransfer (variable) of file validate.h is not documented.
 /tvision/validate.h:29 warning: Member voReserved (variable) of file validate.h is not documented.
 /tvision/views.h:26 warning: Member cmValid (variable) of file views.h is not documented.
-/tvision/views.h:701 warning: Found unknown command `\va'
 /tvision/app.h:933 warning: unable to resolve reference to `initHistory()' for \ref command
 /tvision/dialogs.h:207 warning: Member name (variable) of class TDialog is not documented.
 /tvision/dialogs.h:920 warning: unable to resolve reference to `TRadioButton::draw()' for \ref command

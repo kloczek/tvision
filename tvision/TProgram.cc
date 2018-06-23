@@ -206,7 +206,7 @@ void TProgram::handleEvent( TEvent& event )
         if( c >= '1' && c <= '9' )
             {
 #ifndef __UNPATCHED
-            if(canMoveFocus())      //<--- Check valid first.
+            if(canMoveFocus())      // Check valid first.
             {
                 if( message(deskTop, evBroadcast, cmSelectWindowNum,
                   (void *)(ptrdiff_t)(c - '0')) != 0 )

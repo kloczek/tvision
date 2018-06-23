@@ -329,7 +329,7 @@ public:
      *
      * Here are some advanced pictures, which show the power of TPXPictureValidator;
      * these examples come from an old Pascal FAQ written by Berend de Boer,
-     * <berend@beard.nest.nl>.
+     * <berend\@beard.nest.nl>.
      *
      * <pre>
      * Name           Value                Description

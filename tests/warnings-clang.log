@@ -5,8 +5,8 @@
     355 -Wunused-macros
     313 -Wconversion
     231 -Wsign-conversion
-    217 -Wdocumentation-unknown-command
     140 -Wextra-semi
+    106 -Wdocumentation-unknown-command
     106 -Wabstract-vbase-init
     102 -Wmissing-variable-declarations
      98 -Wnon-virtual-dtor
@@ -16,7 +16,6 @@
      59 -Wweak-vtables
      52 -Wshorten-64-to-32
      36 -Wexit-time-destructors
-     35 -Wdocumentation
      29 -Woverloaded-virtual
      27 -Wcast-qual
      22 -Wshadow
@@ -96,7 +95,6 @@ In file included from ../../../tvision/TApplication.cc:20:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -125,7 +123,6 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../tvision/TApplication.cc:20:
 In file included from ../../../tvision/tv.h:699:
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -197,7 +194,6 @@ In file included from ../../../tvision/TBackground.cc:16:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:2071:20: warning: use of old-style cast [-Wold-style-cast]
@@ -287,7 +283,6 @@ In file included from ../../../tvision/TButton.cc:19:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -422,7 +417,6 @@ In file included from ../../../tvision/TChDirDialog.cc:27:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -620,7 +614,6 @@ In file included from ../../../tvision/TCheckBoxes.cc:13:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:2071:20: warning: use of old-style cast [-Wold-style-cast]
@@ -729,7 +722,6 @@ In file included from ../../../tvision/TCluster.cc:22:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -855,11 +847,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/TCollection.cc:16:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TCollection.cc:16:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tvision/TCollection.cc:16:
-In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/TCollection.cc:22:12: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/TCollection.cc:32:12: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -915,7 +902,6 @@ In file included from ../../../tvision/TCommandSet.cc:13:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../tvision/TCommandSet.cc:13:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -971,7 +957,6 @@ In file included from ../../../tvision/TDeskTop.cc:19:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -1105,7 +1090,6 @@ In file included from ../../../tvision/TDialog.cc:15:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -1211,11 +1195,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/TDirCollection.cc:16:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TDirCollection.cc:16:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tvision/TDirCollection.cc:16:
-In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:936:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/stddlg.h:984:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -1301,7 +1280,6 @@ In file included from ../../../tvision/TDirListBox.cc:18:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -1474,7 +1452,6 @@ In file included from ../../../tvision/TEditor.cc:22:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -1633,7 +1610,6 @@ In file included from ../../../tvision/TEditWindow.cc:24:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -1782,11 +1758,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/TFileCollection.cc:14:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TFileCollection.cc:14:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tvision/TFileCollection.cc:14:
-In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:42:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/stddlg.h:187:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -1885,7 +1856,6 @@ In file included from ../../../tvision/TFileDialog.cc:25:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -2128,7 +2098,6 @@ In file included from ../../../tvision/TFileEditor.cc:19:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -2167,7 +2136,6 @@ In file included from ../../../tvision/tv.h:691:
 In file included from ../../../tvision/TFileEditor.cc:19:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/TFileEditor.cc:45:22: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 In file included from ../../../tvision/TFileEditor.cc:19:
@@ -2269,7 +2237,6 @@ In file included from ../../../tvision/TFileList.cc:20:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -2453,7 +2420,6 @@ In file included from ../../../tvision/TFrame.cc:18:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -2592,7 +2558,6 @@ In file included from ../../../tvision/TGroup.cc:20:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -2771,7 +2736,6 @@ In file included from ../../../tvision/THistory.cc:20:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -2895,7 +2859,6 @@ In file included from ../../../tvision/THistoryViewer.cc:16:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -2999,7 +2962,6 @@ In file included from ../../../tvision/THistoryWindow.cc:14:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:2071:20: warning: use of old-style cast [-Wold-style-cast]
@@ -3102,7 +3064,6 @@ In file included from ../../../tvision/TIndicator.cc:18:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -3208,7 +3169,6 @@ In file included from ../../../tvision/TInputLine.cc:20:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -3294,7 +3254,6 @@ In file included from ../../../tvision/tv.h:647:
 ../../../tvision/TInputLine.cc:374:77: warning: implicit conversion changes signedness: 'uchar' (aka 'unsigned char') to 'char' [-Wsign-conversion]
 ../../../tvision/TInputLine.cc:388:29: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
 ../../../tvision/TInputLine.cc:333:34: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
-../../../tvision/TInputLine.cc:423:35: warning: not a Doxygen trailing comment [-Wdocumentation]
 ../../../tvision/TInputLine.cc:418:27: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
 ../../../tvision/TInputLine.cc:432:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/TInputLine.cc:451:20: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -3365,7 +3324,6 @@ In file included from ../../../tvision/TLabel.cc:19:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -3479,7 +3437,6 @@ In file included from ../../../tvision/TListBox.cc:17:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -3591,7 +3548,6 @@ In file included from ../../../tvision/TListViewer.cc:21:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -3735,7 +3691,6 @@ In file included from ../../../tvision/TMemo.cc:18:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -3846,7 +3801,6 @@ In file included from ../../../tvision/TMenuBar.cc:18:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:2071:20: warning: use of old-style cast [-Wold-style-cast]
@@ -3954,7 +3908,6 @@ In file included from ../../../tvision/TMenuBox.cc:16:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:2071:20: warning: use of old-style cast [-Wold-style-cast]
@@ -4070,7 +4023,6 @@ In file included from ../../../tvision/TMenuPopup.cc:17:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -4188,7 +4140,6 @@ In file included from ../../../tvision/TMenuView.cc:22:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -4374,7 +4325,6 @@ In file included from ../../../tvision/TMultiCheckBoxes.cc:13:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:2071:20: warning: use of old-style cast [-Wold-style-cast]
@@ -4461,11 +4411,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/TObject.cc:13:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TObject.cc:13:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tvision/TObject.cc:13:
-In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/TOutline.cc:13:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TOutline.cc:16:9: warning: macro is not used [-Wunused-macros]
@@ -4518,7 +4463,6 @@ In file included from ../../../tvision/TOutline.cc:18:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -4659,7 +4603,6 @@ In file included from ../../../tvision/TParamText.cc:13:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:2071:20: warning: use of old-style cast [-Wold-style-cast]
@@ -4738,11 +4681,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/TPoint.cc:13:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TPoint.cc:13:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tvision/TPoint.cc:13:
-In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/TProgram.cc:14:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TProgram.cc:18:9: warning: macro is not used [-Wunused-macros]
@@ -4798,7 +4736,6 @@ In file included from ../../../tvision/TProgram.cc:28:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -4875,7 +4812,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/TProgram.cc:32:38: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 In file included from ../../../tvision/TProgram.cc:28:
@@ -4922,7 +4858,6 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/TProgram.cc:189:21: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
 ../../../tvision/TProgram.cc:190:21: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
 ../../../tvision/TProgram.cc:191:21: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
-../../../tvision/TProgram.cc:209:37: warning: not a Doxygen trailing comment [-Wdocumentation]
 ../../../tvision/TProgram.cc:212:27: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/TProgram.cc:212:19: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/TProgram.cc:212:52: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -4991,7 +4926,6 @@ In file included from ../../../tvision/TRadioButtons.cc:13:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:2071:20: warning: use of old-style cast [-Wold-style-cast]
@@ -5096,11 +5030,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/TResourceCollection.cc:14:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TResourceCollection.cc:14:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tvision/TResourceCollection.cc:14:
-In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/TResourceCollection.cc:23:13: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/TResourceCollection.cc:24:12: warning: use of old-style cast [-Wold-style-cast]
@@ -5188,11 +5117,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/TResourceFile.cc:18:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TResourceFile.cc:18:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tvision/TResourceFile.cc:18:
-In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/TResourceFile.cc:35:10: warning: padding struct 'Info_type' with 6 bytes to align 'infoSize' [-Wpadded]
 ../../../tvision/TResourceFile.cc:41:5: warning: padding struct 'THeader' with 6 bytes to align anonymous bit-field [-Wpadded]
@@ -5292,7 +5216,6 @@ In file included from ../../../tvision/TScrollBar.cc:20:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -5394,7 +5317,6 @@ In file included from ../../../tvision/TScroller.cc:18:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -5499,11 +5421,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/TSortedCollection.cc:16:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TSortedCollection.cc:16:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tvision/TSortedCollection.cc:16:
-In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/TSortedCollection.cc:84:11: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../tvision/TSortedCollection.cc:16:
@@ -5561,7 +5478,6 @@ In file included from ../../../tvision/TStaticText.cc:16:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:2071:20: warning: use of old-style cast [-Wold-style-cast]
@@ -5650,7 +5566,6 @@ In file included from ../../../tvision/TStatusLine.cc:19:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -5787,11 +5702,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/TStringCollection.cc:15:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TStringCollection.cc:15:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tvision/TStringCollection.cc:15:
-In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/TStringCollection.cc:26:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/TStringCollection.cc:26:34: warning: use of old-style cast [-Wold-style-cast]
@@ -5858,11 +5768,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/TStrListMaker.cc:17:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TStrListMaker.cc:17:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tvision/TStrListMaker.cc:17:
-In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../tvision/TStrListMaker.cc:17:
 In file included from ../../../tvision/tv.h:655:
@@ -5951,15 +5856,9 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/TValidator.cc:20:
 In file included from ../../../tvision/tv.h:671:
 ../../../tvision/validate.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/TValidator.cc:20:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tvision/TValidator.cc:20:
-In file included from ../../../tvision/tv.h:671:
 ../../../tvision/validate.h:17:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/validate.h:218:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:234:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/validate.h:332:15: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/validate.h:446:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:466:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:471:20: warning: use of old-style cast [-Wold-style-cast]
@@ -6101,7 +6000,6 @@ In file included from ../../../tvision/TView.cc:21:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -6241,7 +6139,6 @@ In file included from ../../../tvision/TWindow.cc:21:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -6413,7 +6310,6 @@ In file included from ../../../tvision/allnames.cc:70:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:2071:20: warning: use of old-style cast [-Wold-style-cast]
@@ -6521,7 +6417,6 @@ In file included from ../../../tvision/tv.h:671:
 ../../../tvision/validate.h:17:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/validate.h:218:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:234:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/validate.h:332:15: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/validate.h:446:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:466:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:471:20: warning: use of old-style cast [-Wold-style-cast]
@@ -6815,7 +6710,6 @@ In file included from ../../../tvision/asm.cc:25:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -7019,7 +6913,6 @@ In file included from ../../../tvision/colorsel.cc:31:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -7303,11 +7196,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/drivers.cc:14:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/drivers.cc:14:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tvision/drivers.cc:14:
-In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/drivers.cc:39:16: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drivers.cc:39:25: warning: cast from 'const void *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
@@ -7366,7 +7254,6 @@ In file included from ../../../tvision/editstat.cc:14:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:2071:20: warning: use of old-style cast [-Wold-style-cast]
@@ -7447,11 +7334,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/helpbase.cc:19:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/helpbase.cc:19:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tvision/helpbase.cc:19:
-In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../tvision/helpbase.cc:22:
 ../../../tvision/helpbase.h:101:36: warning: extra ';' after member function definition [-Wextra-semi]
@@ -7616,7 +7498,6 @@ In file included from ../../../tvision/help.cc:26:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -7764,11 +7645,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/histlist.cc:12:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/histlist.cc:12:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tvision/histlist.cc:12:
-In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/histlist.cc:41:12: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 /usr/lib64/clang/6.0.1/include/stddef.h:100:18: note: expanded from macro 'NULL'
@@ -7837,11 +7713,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/menu.cc:17:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/menu.cc:17:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tvision/menu.cc:17:
-In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../tvision/menu.cc:17:
 In file included from ../../../tvision/tv.h:683:
@@ -7927,7 +7798,6 @@ In file included from ../../../tvision/misc.cc:20:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -8026,7 +7896,6 @@ In file included from ../../../tvision/msgbox.cc:22:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -8095,7 +7964,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/msgbox.cc:28:20: warning: declaration requires a global constructor [-Wglobal-constructors]
 ../../../tvision/msgbox.cc:44:20: warning: declaration requires a global constructor [-Wglobal-constructors]
@@ -8160,9 +8028,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/new.cc:17:
 In file included from ../../../tvision/tv.h:663:
 ../../../tvision/buffers.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/new.cc:17:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../tvision/new.cc:17:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -8233,7 +8098,6 @@ In file included from ../../../tvision/palette.cc:13:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../tvision/palette.cc:13:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -8342,7 +8206,6 @@ In file included from ../../../tvision/sall.cc:71:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:2071:20: warning: use of old-style cast [-Wold-style-cast]
@@ -8450,7 +8313,6 @@ In file included from ../../../tvision/tv.h:671:
 ../../../tvision/validate.h:17:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/validate.h:218:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:234:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/validate.h:332:15: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/validate.h:446:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:466:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:471:20: warning: use of old-style cast [-Wold-style-cast]
@@ -9355,7 +9217,6 @@ In file included from ../../../tvision/stddlg.cc:22:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -9560,7 +9421,6 @@ In file included from ../../../tvision/system.cc:48:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -9848,7 +9708,6 @@ In file included from ../../../tvision/textview.cc:15:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:2071:20: warning: use of old-style cast [-Wold-style-cast]
@@ -9966,11 +9825,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/tobjstrm.cc:25:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvision/tobjstrm.cc:25:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tvision/tobjstrm.cc:25:
-In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../tvision/tobjstrm.cc:25:
 In file included from ../../../tvision/tv.h:635:
@@ -10138,7 +9992,6 @@ In file included from ../../../tvision/tvtext.cc:43:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -10229,7 +10082,6 @@ In file included from ../../../tvision/tv.h:671:
 ../../../tvision/validate.h:17:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/validate.h:218:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:234:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/validate.h:332:15: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/validate.h:446:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:466:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:471:20: warning: use of old-style cast [-Wold-style-cast]
@@ -10407,7 +10259,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 In file included from ../../../tvision/tvtext.cc:44:
 ../../../tvision/help.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -10504,9 +10355,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvhc/tvhc.cc:88:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvhc/tvhc.cc:88:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../tvhc/tvhc.cc:90:
 ../../../tvhc/tvhc.h:14:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvhc/tvhc.cc:88:
@@ -10763,7 +10611,6 @@ In file included from ../../../demo/ascii.cc:28:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -10937,7 +10784,6 @@ In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -11139,7 +10985,6 @@ In file included from ../../../demo/calendar.cc:25:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -11327,7 +11172,6 @@ In file included from ../../../demo/fileview.cc:25:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -11366,7 +11210,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../demo/fileview.cc:26:1: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:53:7: note: expanded from macro '__link'
@@ -11510,7 +11353,6 @@ In file included from ../../../demo/gadgets.cc:25:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:2071:20: warning: use of old-style cast [-Wold-style-cast]
@@ -11615,7 +11457,6 @@ In file included from ../../../demo/mousedlg.cc:30:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -11792,7 +11633,6 @@ In file included from ../../../demo/puzzle.cc:25:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -11961,7 +11801,6 @@ In file included from ../../../demo/tvdemo1.cc:31:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -12008,7 +11847,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -12198,7 +12036,6 @@ In file included from ../../../demo/tvdemo2.cc:32:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -12270,7 +12107,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -12429,7 +12265,6 @@ In file included from ../../../demo/tvdemo3.cc:33:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -12509,7 +12344,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -12662,7 +12496,6 @@ In file included from ../../../tutorial/tvguid01.cc:10:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -12688,7 +12521,6 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../tutorial/tvguid01.cc:10:
 In file included from ../../../tvision/tv.h:699:
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -12765,7 +12597,6 @@ In file included from ../../../tutorial/tvguid02.cc:16:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -12807,7 +12638,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -12892,7 +12722,6 @@ In file included from ../../../tutorial/tvguid03.cc:19:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -12959,7 +12788,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -13046,7 +12874,6 @@ In file included from ../../../tutorial/tvguid04.cc:26:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -13118,7 +12945,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -13211,7 +13037,6 @@ In file included from ../../../tutorial/tvguid05.cc:28:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -13283,7 +13108,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -13377,7 +13201,6 @@ In file included from ../../../tutorial/tvguid06.cc:36:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -13449,7 +13272,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -13549,7 +13371,6 @@ In file included from ../../../tutorial/tvguid07.cc:36:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -13621,7 +13442,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -13724,7 +13544,6 @@ In file included from ../../../tutorial/tvguid08.cc:39:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -13806,7 +13625,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -13913,7 +13731,6 @@ In file included from ../../../tutorial/tvguid09.cc:40:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -14000,7 +13817,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -14110,7 +13926,6 @@ In file included from ../../../tutorial/tvguid10.cc:40:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -14197,7 +14012,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -14307,7 +14121,6 @@ In file included from ../../../tutorial/tvguid11.cc:40:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -14397,7 +14210,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -14507,7 +14319,6 @@ In file included from ../../../tutorial/tvguid12.cc:40:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -14597,7 +14408,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -14707,7 +14517,6 @@ In file included from ../../../tutorial/tvguid13.cc:41:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -14803,7 +14612,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -14916,7 +14724,6 @@ In file included from ../../../tutorial/tvguid14.cc:45:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -15038,7 +14845,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -15157,7 +14963,6 @@ In file included from ../../../tutorial/tvguid15.cc:47:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -15290,7 +15095,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -15410,7 +15214,6 @@ In file included from ../../../tutorial/tvguid16.cc:47:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -15543,7 +15346,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -15654,7 +15456,6 @@ In file included from ../../../tutorial/background.cc:10:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -15688,7 +15489,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -15791,7 +15591,6 @@ In file included from ../../../tutorial/listbox.cc:28:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -15902,7 +15701,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -15998,7 +15796,6 @@ In file included from ../../../tutorial/load.cc:19:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -16083,7 +15880,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -16200,7 +15996,6 @@ In file included from ../../../tutorial/nomenus.cc:23:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -16290,7 +16085,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -16396,7 +16190,6 @@ In file included from ../../../tutorial/splash.cc:17:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -16477,7 +16270,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -16572,7 +16364,6 @@ In file included from ../../../tutorial/tvedit.cc:35:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -16718,7 +16509,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -16839,7 +16629,6 @@ In file included from ../../../tutorial/tvlife.cc:27:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -16935,7 +16724,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
@@ -17061,7 +16849,6 @@ In file included from ../../../tutorial/validator.cc:24:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:701:9: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/views.h:912:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:962:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:965:1: warning: class 'TEvent' was previously declared as a struct [-Wmismatched-tags]
@@ -17122,7 +16909,6 @@ In file included from ../../../tvision/tv.h:671:
 ../../../tvision/validate.h:17:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/validate.h:218:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:234:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/validate.h:332:15: warning: unknown command tag name [-Wdocumentation-unknown-command]
 ../../../tvision/validate.h:446:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:466:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:471:20: warning: use of old-style cast [-Wold-style-cast]
@@ -17194,7 +16980,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/app.h:596:12: warning: empty paragraph passed to '@see' command [-Wdocumentation]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]

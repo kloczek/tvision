@@ -420,8 +420,8 @@ void TInputLine::selectAll( Boolean enable )
         curPos = selEnd = 0;
     firstPos = max( 0, curPos-size.x+2 );
 #ifndef __UNPATCHED
-    anchor = 0;                   //<----- This sets anchor to avoid deselect
-    drawView();                   //       on initial selection
+    anchor = 0;                   // This sets anchor to avoid deselect
+    drawView();                   // on initial selection
 #else
     drawView();
 #endif

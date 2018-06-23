@@ -593,7 +593,7 @@ public:
      * If both calls return @ref evNothing, indicating that no user input is
      * available, getEvent() calls @ref TProgram::idle() to allow "background"
      * tasks to be performed while the application is waiting for user input.
-     * @see @ref TProgram::idle()
+     * @see TProgram::idle()
      *
      * Before returning, getEvent() passes any @ref evKeyDown and
      * @ref evMouseDown events to the @ref statusLine for it to map into

@@ -698,7 +698,7 @@ const ushort
      * Undocumented.
      */
     cmScrollBarChanged  = 53,
-    /** \va cmScrollBarClicked
+    /** \var cmScrollBarClicked
      * Undocumented.
      */
     cmScrollBarClicked  = 54,
