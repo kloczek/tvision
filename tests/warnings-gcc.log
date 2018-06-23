@@ -1,4 +1,4 @@
-     93 -Wmissing-declarations
+     71 -Wmissing-declarations
      37 -Wredundant-decls
      36 -Wswitch-default
      32 -Wshadow
@@ -685,27 +685,5 @@ In file included from ../../../demo/tvdemo3.cc:42:
 In file included from ../../../tvision/help.h:32,
                  from ../../../demo/tvdemo3.cc:42:
 ../../../tvision/helpbase.h:336:13: note: previous declaration of ‘void notAssigned(opstream&, int)’
-../../../tutorial/tvguid06.cc:50:6: warning: no previous declaration for ‘void readFile(const char*)’ [-Wmissing-declarations]
-../../../tutorial/tvguid06.cc:70:6: warning: no previous declaration for ‘void deleteFile()’ [-Wmissing-declarations]
-../../../tutorial/tvguid07.cc:50:6: warning: no previous declaration for ‘void readFile(const char*)’ [-Wmissing-declarations]
-../../../tutorial/tvguid07.cc:70:6: warning: no previous declaration for ‘void deleteFile()’ [-Wmissing-declarations]
-../../../tutorial/tvguid08.cc:53:6: warning: no previous declaration for ‘void readFile(const char*)’ [-Wmissing-declarations]
-../../../tutorial/tvguid08.cc:73:6: warning: no previous declaration for ‘void deleteFile()’ [-Wmissing-declarations]
-../../../tutorial/tvguid09.cc:86:6: warning: no previous declaration for ‘void readFile(const char*)’ [-Wmissing-declarations]
-../../../tutorial/tvguid09.cc:106:6: warning: no previous declaration for ‘void deleteFile()’ [-Wmissing-declarations]
-../../../tutorial/tvguid10.cc:92:6: warning: no previous declaration for ‘void readFile(const char*)’ [-Wmissing-declarations]
-../../../tutorial/tvguid10.cc:112:6: warning: no previous declaration for ‘void deleteFile()’ [-Wmissing-declarations]
-../../../tutorial/tvguid11.cc:99:6: warning: no previous declaration for ‘void readFile(const char*)’ [-Wmissing-declarations]
-../../../tutorial/tvguid11.cc:119:6: warning: no previous declaration for ‘void deleteFile()’ [-Wmissing-declarations]
-../../../tutorial/tvguid12.cc:96:6: warning: no previous declaration for ‘void readFile(const char*)’ [-Wmissing-declarations]
-../../../tutorial/tvguid12.cc:116:6: warning: no previous declaration for ‘void deleteFile()’ [-Wmissing-declarations]
-../../../tutorial/tvguid13.cc:100:6: warning: no previous declaration for ‘void readFile(const char*)’ [-Wmissing-declarations]
-../../../tutorial/tvguid13.cc:120:6: warning: no previous declaration for ‘void deleteFile()’ [-Wmissing-declarations]
-../../../tutorial/tvguid14.cc:102:6: warning: no previous declaration for ‘void readFile(const char*)’ [-Wmissing-declarations]
-../../../tutorial/tvguid14.cc:122:6: warning: no previous declaration for ‘void deleteFile()’ [-Wmissing-declarations]
-../../../tutorial/tvguid15.cc:103:6: warning: no previous declaration for ‘void readFile(const char*)’ [-Wmissing-declarations]
-../../../tutorial/tvguid15.cc:123:6: warning: no previous declaration for ‘void deleteFile()’ [-Wmissing-declarations]
-../../../tutorial/tvguid16.cc:113:6: warning: no previous declaration for ‘void readFile(const char*)’ [-Wmissing-declarations]
-../../../tutorial/tvguid16.cc:133:6: warning: no previous declaration for ‘void deleteFile()’ [-Wmissing-declarations]
 ../../../tutorial/tvlife.cc: In member function ‘virtual void TLifeInterior::handleEvent(TEvent&)’:
 ../../../tutorial/tvlife.cc:587:9: warning: switch missing default case [-Wswitch-default]

@@ -10,9 +10,9 @@
     106 -Wabstract-vbase-init
     102 -Wmissing-variable-declarations
      98 -Wnon-virtual-dtor
-     93 -Wmissing-prototypes
      79 -Wmismatched-tags
      78 -Wglobal-constructors
+     71 -Wmissing-prototypes
      59 -Wweak-vtables
      52 -Wshorten-64-to-32
      36 -Wexit-time-destructors
@@ -12326,16 +12326,16 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tutorial/tvguid05.cc:48:7: warning: 'TDemoWindow' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+../../../tutorial/tvguid06.cc:25:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid06.cc:23:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid06.cc:21:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid06.cc:22:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid06.cc:34:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid06.cc:29:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid06.cc:26:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tutorial/tvguid06.cc:36:
+../../../tutorial/tvguid06.cc:24:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid06.cc:36:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid06.cc:31:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid06.cc:28:9: warning: macro is not used [-Wunused-macros]
+In file included from ../../../tutorial/tvguid06.cc:38:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid06.cc:36:
+In file included from ../../../tutorial/tvguid06.cc:38:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -12343,7 +12343,7 @@ In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:404:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:428:9: warning: initializer for virtual base class 'TNSCollection' of abstract class 'TNSSortedCollection' will never be used [-Wabstract-vbase-init]
 ../../../tvision/tvobjs.h:471:17: note: unimplemented pure virtual method 'compare' in 'TNSSortedCollection'
-In file included from ../../../tutorial/tvguid06.cc:36:
+In file included from ../../../tutorial/tvguid06.cc:38:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:32:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -12354,24 +12354,24 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:412:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:550:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:727:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid06.cc:36:
+In file included from ../../../tutorial/tvguid06.cc:38:
 In file included from ../../../tvision/tv.h:639:
 ../../../tvision/drawbuf.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/drawbuf.h:118:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:114:24: note: expanded from macro 'hiByte'
 ../../../tvision/drawbuf.h:123:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:113:24: note: expanded from macro 'loByte'
-In file included from ../../../tutorial/tvguid06.cc:36:
+In file included from ../../../tutorial/tvguid06.cc:38:
 In file included from ../../../tvision/tv.h:643:
 ../../../tvision/objects.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/objects.h:110:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid06.cc:36:
+In file included from ../../../tutorial/tvguid06.cc:38:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:102:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:397:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:431:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid06.cc:36:
+In file included from ../../../tutorial/tvguid06.cc:38:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -12394,11 +12394,11 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3856:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3862:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3867:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid06.cc:36:
+In file included from ../../../tutorial/tvguid06.cc:38:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tutorial/tvguid06.cc:36:
+In file included from ../../../tutorial/tvguid06.cc:38:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:35:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/menus.h:63:32: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -12435,7 +12435,7 @@ In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:970:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:976:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:981:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid06.cc:36:
+In file included from ../../../tutorial/tvguid06.cc:38:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:123:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:299:34: warning: use of old-style cast [-Wold-style-cast]
@@ -12449,54 +12449,52 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tutorial/tvguid06.cc:43:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid06.cc:47:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid06.cc:48:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid06.cc:50:6: warning: no previous prototype for function 'readFile' [-Wmissing-prototypes]
-../../../tutorial/tvguid06.cc:70:6: warning: no previous prototype for function 'deleteFile' [-Wmissing-prototypes]
-In file included from ../../../tutorial/tvguid06.cc:36:
+../../../tutorial/tvguid06.cc:45:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid06.cc:49:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid06.cc:50:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
+In file included from ../../../tutorial/tvguid06.cc:38:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
 ../../../tvision/views.h:3455:13: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
 ../../../tvision/views.h:3471:12: warning: padding class 'TGroup' with 1 byte to align 'endState' [-Wpadded]
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/tvguid06.cc:120:22: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-In file included from ../../../tutorial/tvguid06.cc:36:
+../../../tutorial/tvguid06.cc:122:22: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+In file included from ../../../tutorial/tvguid06.cc:38:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:699:7: warning: padding size of 'TStatusItem' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/menus.h:797:18: warning: padding class 'TStatusDef' with 4 bytes to align 'items' [-Wpadded]
-In file included from ../../../tutorial/tvguid06.cc:36:
+In file included from ../../../tutorial/tvguid06.cc:38:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
-../../../tutorial/tvguid06.cc:137:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid06.cc:36:
+../../../tutorial/tvguid06.cc:139:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid06.cc:38:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-In file included from ../../../tutorial/tvguid06.cc:36:
+In file included from ../../../tutorial/tvguid06.cc:38:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-In file included from ../../../tutorial/tvguid06.cc:36:
+In file included from ../../../tutorial/tvguid06.cc:38:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/tvguid06.cc:92:7: warning: 'TDemoWindow' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+../../../tutorial/tvguid06.cc:94:7: warning: 'TDemoWindow' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+../../../tutorial/tvguid07.cc:25:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid07.cc:23:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid07.cc:21:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid07.cc:22:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid07.cc:34:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid07.cc:29:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid07.cc:26:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tutorial/tvguid07.cc:36:
+../../../tutorial/tvguid07.cc:24:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid07.cc:36:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid07.cc:31:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid07.cc:28:9: warning: macro is not used [-Wunused-macros]
+In file included from ../../../tutorial/tvguid07.cc:38:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid07.cc:36:
+In file included from ../../../tutorial/tvguid07.cc:38:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -12504,7 +12502,7 @@ In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:404:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:428:9: warning: initializer for virtual base class 'TNSCollection' of abstract class 'TNSSortedCollection' will never be used [-Wabstract-vbase-init]
 ../../../tvision/tvobjs.h:471:17: note: unimplemented pure virtual method 'compare' in 'TNSSortedCollection'
-In file included from ../../../tutorial/tvguid07.cc:36:
+In file included from ../../../tutorial/tvguid07.cc:38:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:32:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -12515,24 +12513,24 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:412:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:550:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:727:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid07.cc:36:
+In file included from ../../../tutorial/tvguid07.cc:38:
 In file included from ../../../tvision/tv.h:639:
 ../../../tvision/drawbuf.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/drawbuf.h:118:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:114:24: note: expanded from macro 'hiByte'
 ../../../tvision/drawbuf.h:123:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:113:24: note: expanded from macro 'loByte'
-In file included from ../../../tutorial/tvguid07.cc:36:
+In file included from ../../../tutorial/tvguid07.cc:38:
 In file included from ../../../tvision/tv.h:643:
 ../../../tvision/objects.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/objects.h:110:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid07.cc:36:
+In file included from ../../../tutorial/tvguid07.cc:38:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:102:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:397:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:431:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid07.cc:36:
+In file included from ../../../tutorial/tvguid07.cc:38:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -12555,11 +12553,11 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3856:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3862:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3867:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid07.cc:36:
+In file included from ../../../tutorial/tvguid07.cc:38:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tutorial/tvguid07.cc:36:
+In file included from ../../../tutorial/tvguid07.cc:38:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:35:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/menus.h:63:32: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -12596,7 +12594,7 @@ In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:970:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:976:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:981:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid07.cc:36:
+In file included from ../../../tutorial/tvguid07.cc:38:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:123:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:299:34: warning: use of old-style cast [-Wold-style-cast]
@@ -12610,57 +12608,55 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tutorial/tvguid07.cc:43:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid07.cc:47:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid07.cc:48:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid07.cc:50:6: warning: no previous prototype for function 'readFile' [-Wmissing-prototypes]
-../../../tutorial/tvguid07.cc:70:6: warning: no previous prototype for function 'deleteFile' [-Wmissing-prototypes]
-In file included from ../../../tutorial/tvguid07.cc:36:
+../../../tutorial/tvguid07.cc:45:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid07.cc:49:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid07.cc:50:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
+In file included from ../../../tutorial/tvguid07.cc:38:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
 ../../../tvision/views.h:3455:13: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
 ../../../tvision/views.h:3471:12: warning: padding class 'TGroup' with 1 byte to align 'endState' [-Wpadded]
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/tvguid07.cc:120:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
-../../../tutorial/tvguid07.cc:125:40: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../tutorial/tvguid07.cc:129:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-../../../tutorial/tvguid07.cc:129:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-In file included from ../../../tutorial/tvguid07.cc:36:
+../../../tutorial/tvguid07.cc:122:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
+../../../tutorial/tvguid07.cc:127:40: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../tutorial/tvguid07.cc:131:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+../../../tutorial/tvguid07.cc:131:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+In file included from ../../../tutorial/tvguid07.cc:38:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:699:7: warning: padding size of 'TStatusItem' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/menus.h:797:18: warning: padding class 'TStatusDef' with 4 bytes to align 'items' [-Wpadded]
-In file included from ../../../tutorial/tvguid07.cc:36:
+In file included from ../../../tutorial/tvguid07.cc:38:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
-../../../tutorial/tvguid07.cc:147:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid07.cc:36:
+../../../tutorial/tvguid07.cc:149:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid07.cc:38:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-In file included from ../../../tutorial/tvguid07.cc:36:
+In file included from ../../../tutorial/tvguid07.cc:38:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-In file included from ../../../tutorial/tvguid07.cc:36:
+In file included from ../../../tutorial/tvguid07.cc:38:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/tvguid07.cc:90:7: warning: 'TDemoWindow' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+../../../tutorial/tvguid07.cc:92:7: warning: 'TDemoWindow' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+../../../tutorial/tvguid08.cc:26:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid08.cc:24:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid08.cc:22:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid08.cc:23:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid08.cc:35:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid08.cc:30:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid08.cc:27:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tutorial/tvguid08.cc:39:
+../../../tutorial/tvguid08.cc:25:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid08.cc:37:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid08.cc:32:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid08.cc:29:9: warning: macro is not used [-Wunused-macros]
+In file included from ../../../tutorial/tvguid08.cc:41:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid08.cc:39:
+In file included from ../../../tutorial/tvguid08.cc:41:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -12668,7 +12664,7 @@ In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:404:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:428:9: warning: initializer for virtual base class 'TNSCollection' of abstract class 'TNSSortedCollection' will never be used [-Wabstract-vbase-init]
 ../../../tvision/tvobjs.h:471:17: note: unimplemented pure virtual method 'compare' in 'TNSSortedCollection'
-In file included from ../../../tutorial/tvguid08.cc:39:
+In file included from ../../../tutorial/tvguid08.cc:41:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:32:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -12679,24 +12675,24 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:412:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:550:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:727:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid08.cc:39:
+In file included from ../../../tutorial/tvguid08.cc:41:
 In file included from ../../../tvision/tv.h:639:
 ../../../tvision/drawbuf.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/drawbuf.h:118:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:114:24: note: expanded from macro 'hiByte'
 ../../../tvision/drawbuf.h:123:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:113:24: note: expanded from macro 'loByte'
-In file included from ../../../tutorial/tvguid08.cc:39:
+In file included from ../../../tutorial/tvguid08.cc:41:
 In file included from ../../../tvision/tv.h:643:
 ../../../tvision/objects.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/objects.h:110:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid08.cc:39:
+In file included from ../../../tutorial/tvguid08.cc:41:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:102:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:397:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:431:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid08.cc:39:
+In file included from ../../../tutorial/tvguid08.cc:41:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -12729,11 +12725,11 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3856:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3862:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3867:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid08.cc:39:
+In file included from ../../../tutorial/tvguid08.cc:41:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tutorial/tvguid08.cc:39:
+In file included from ../../../tutorial/tvguid08.cc:41:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:35:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/menus.h:63:32: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -12770,7 +12766,7 @@ In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:970:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:976:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:981:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid08.cc:39:
+In file included from ../../../tutorial/tvguid08.cc:41:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:123:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:299:34: warning: use of old-style cast [-Wold-style-cast]
@@ -12784,12 +12780,10 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tutorial/tvguid08.cc:46:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid08.cc:50:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid08.cc:51:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid08.cc:53:6: warning: no previous prototype for function 'readFile' [-Wmissing-prototypes]
-../../../tutorial/tvguid08.cc:73:6: warning: no previous prototype for function 'deleteFile' [-Wmissing-prototypes]
-In file included from ../../../tutorial/tvguid08.cc:39:
+../../../tutorial/tvguid08.cc:48:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid08.cc:52:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid08.cc:53:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
+In file included from ../../../tutorial/tvguid08.cc:41:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
@@ -12799,46 +12793,46 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3455:13: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
 ../../../tvision/views.h:3471:12: warning: padding class 'TGroup' with 1 byte to align 'endState' [-Wpadded]
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/tvguid08.cc:129:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
-../../../tutorial/tvguid08.cc:135:27: warning: use of old-style cast [-Wold-style-cast]
-../../../tutorial/tvguid08.cc:139:52: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../tutorial/tvguid08.cc:144:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-../../../tutorial/tvguid08.cc:144:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-In file included from ../../../tutorial/tvguid08.cc:39:
+../../../tutorial/tvguid08.cc:131:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
+../../../tutorial/tvguid08.cc:137:27: warning: use of old-style cast [-Wold-style-cast]
+../../../tutorial/tvguid08.cc:141:52: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../tutorial/tvguid08.cc:146:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+../../../tutorial/tvguid08.cc:146:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+In file included from ../../../tutorial/tvguid08.cc:41:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-In file included from ../../../tutorial/tvguid08.cc:39:
+In file included from ../../../tutorial/tvguid08.cc:41:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:699:7: warning: padding size of 'TStatusItem' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/menus.h:797:18: warning: padding class 'TStatusDef' with 4 bytes to align 'items' [-Wpadded]
-In file included from ../../../tutorial/tvguid08.cc:39:
+In file included from ../../../tutorial/tvguid08.cc:41:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
-../../../tutorial/tvguid08.cc:173:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid08.cc:39:
+../../../tutorial/tvguid08.cc:175:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid08.cc:41:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-In file included from ../../../tutorial/tvguid08.cc:39:
+In file included from ../../../tutorial/tvguid08.cc:41:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/tvguid08.cc:93:7: warning: 'TDemoWindow' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+../../../tutorial/tvguid08.cc:95:7: warning: 'TDemoWindow' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+../../../tutorial/tvguid09.cc:26:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid09.cc:24:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid09.cc:22:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid09.cc:23:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid09.cc:35:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid09.cc:30:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid09.cc:27:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tutorial/tvguid09.cc:40:
+../../../tutorial/tvguid09.cc:25:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid09.cc:37:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid09.cc:32:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid09.cc:29:9: warning: macro is not used [-Wunused-macros]
+In file included from ../../../tutorial/tvguid09.cc:42:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid09.cc:40:
+In file included from ../../../tutorial/tvguid09.cc:42:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -12846,7 +12840,7 @@ In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:404:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:428:9: warning: initializer for virtual base class 'TNSCollection' of abstract class 'TNSSortedCollection' will never be used [-Wabstract-vbase-init]
 ../../../tvision/tvobjs.h:471:17: note: unimplemented pure virtual method 'compare' in 'TNSSortedCollection'
-In file included from ../../../tutorial/tvguid09.cc:40:
+In file included from ../../../tutorial/tvguid09.cc:42:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:32:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -12857,24 +12851,24 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:412:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:550:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:727:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid09.cc:40:
+In file included from ../../../tutorial/tvguid09.cc:42:
 In file included from ../../../tvision/tv.h:639:
 ../../../tvision/drawbuf.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/drawbuf.h:118:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:114:24: note: expanded from macro 'hiByte'
 ../../../tvision/drawbuf.h:123:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:113:24: note: expanded from macro 'loByte'
-In file included from ../../../tutorial/tvguid09.cc:40:
+In file included from ../../../tutorial/tvguid09.cc:42:
 In file included from ../../../tvision/tv.h:643:
 ../../../tvision/objects.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/objects.h:110:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid09.cc:40:
+In file included from ../../../tutorial/tvguid09.cc:42:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:102:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:397:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:431:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid09.cc:40:
+In file included from ../../../tutorial/tvguid09.cc:42:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -12912,11 +12906,11 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3856:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3862:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3867:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid09.cc:40:
+In file included from ../../../tutorial/tvguid09.cc:42:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tutorial/tvguid09.cc:40:
+In file included from ../../../tutorial/tvguid09.cc:42:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:35:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/menus.h:63:32: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -12953,7 +12947,7 @@ In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:970:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:976:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:981:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid09.cc:40:
+In file included from ../../../tutorial/tvguid09.cc:42:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:123:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:299:34: warning: use of old-style cast [-Wold-style-cast]
@@ -12967,12 +12961,10 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tutorial/tvguid09.cc:47:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid09.cc:51:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid09.cc:52:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid09.cc:86:6: warning: no previous prototype for function 'readFile' [-Wmissing-prototypes]
-../../../tutorial/tvguid09.cc:106:6: warning: no previous prototype for function 'deleteFile' [-Wmissing-prototypes]
-In file included from ../../../tutorial/tvguid09.cc:40:
+../../../tutorial/tvguid09.cc:49:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid09.cc:53:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid09.cc:54:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
+In file included from ../../../tutorial/tvguid09.cc:42:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
@@ -12982,49 +12974,49 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3455:13: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
 ../../../tvision/views.h:3471:12: warning: padding class 'TGroup' with 1 byte to align 'endState' [-Wpadded]
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/tvguid09.cc:127:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
-../../../tutorial/tvguid09.cc:130:42: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid09.cc:133:27: warning: use of old-style cast [-Wold-style-cast]
-../../../tutorial/tvguid09.cc:137:52: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../tutorial/tvguid09.cc:142:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-../../../tutorial/tvguid09.cc:142:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-In file included from ../../../tutorial/tvguid09.cc:40:
+../../../tutorial/tvguid09.cc:129:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
+../../../tutorial/tvguid09.cc:132:42: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid09.cc:135:27: warning: use of old-style cast [-Wold-style-cast]
+../../../tutorial/tvguid09.cc:139:52: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../tutorial/tvguid09.cc:144:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+../../../tutorial/tvguid09.cc:144:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+In file included from ../../../tutorial/tvguid09.cc:42:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../tutorial/tvguid09.cc:169:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid09.cc:182:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid09.cc:40:
+../../../tutorial/tvguid09.cc:171:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid09.cc:184:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid09.cc:42:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:699:7: warning: padding size of 'TStatusItem' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/menus.h:797:18: warning: padding class 'TStatusDef' with 4 bytes to align 'items' [-Wpadded]
-In file included from ../../../tutorial/tvguid09.cc:40:
+In file included from ../../../tutorial/tvguid09.cc:42:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
-In file included from ../../../tutorial/tvguid09.cc:40:
+In file included from ../../../tutorial/tvguid09.cc:42:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../tutorial/tvguid09.cc:244:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid09.cc:40:
+../../../tutorial/tvguid09.cc:246:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid09.cc:42:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/tvguid09.cc:76:7: warning: 'TDemoWindow' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+../../../tutorial/tvguid09.cc:78:7: warning: 'TDemoWindow' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+../../../tutorial/tvguid10.cc:26:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid10.cc:24:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid10.cc:22:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid10.cc:23:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid10.cc:35:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid10.cc:30:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid10.cc:27:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tutorial/tvguid10.cc:40:
+../../../tutorial/tvguid10.cc:25:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid10.cc:37:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid10.cc:32:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid10.cc:29:9: warning: macro is not used [-Wunused-macros]
+In file included from ../../../tutorial/tvguid10.cc:42:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid10.cc:40:
+In file included from ../../../tutorial/tvguid10.cc:42:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -13032,7 +13024,7 @@ In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:404:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:428:9: warning: initializer for virtual base class 'TNSCollection' of abstract class 'TNSSortedCollection' will never be used [-Wabstract-vbase-init]
 ../../../tvision/tvobjs.h:471:17: note: unimplemented pure virtual method 'compare' in 'TNSSortedCollection'
-In file included from ../../../tutorial/tvguid10.cc:40:
+In file included from ../../../tutorial/tvguid10.cc:42:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:32:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13043,24 +13035,24 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:412:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:550:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:727:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid10.cc:40:
+In file included from ../../../tutorial/tvguid10.cc:42:
 In file included from ../../../tvision/tv.h:639:
 ../../../tvision/drawbuf.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/drawbuf.h:118:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:114:24: note: expanded from macro 'hiByte'
 ../../../tvision/drawbuf.h:123:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:113:24: note: expanded from macro 'loByte'
-In file included from ../../../tutorial/tvguid10.cc:40:
+In file included from ../../../tutorial/tvguid10.cc:42:
 In file included from ../../../tvision/tv.h:643:
 ../../../tvision/objects.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/objects.h:110:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid10.cc:40:
+In file included from ../../../tutorial/tvguid10.cc:42:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:102:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:397:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:431:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid10.cc:40:
+In file included from ../../../tutorial/tvguid10.cc:42:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13098,11 +13090,11 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3856:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3862:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3867:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid10.cc:40:
+In file included from ../../../tutorial/tvguid10.cc:42:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tutorial/tvguid10.cc:40:
+In file included from ../../../tutorial/tvguid10.cc:42:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:35:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/menus.h:63:32: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -13139,7 +13131,7 @@ In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:970:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:976:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:981:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid10.cc:40:
+In file included from ../../../tutorial/tvguid10.cc:42:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:123:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:299:34: warning: use of old-style cast [-Wold-style-cast]
@@ -13153,12 +13145,10 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tutorial/tvguid10.cc:47:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid10.cc:51:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid10.cc:52:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid10.cc:92:6: warning: no previous prototype for function 'readFile' [-Wmissing-prototypes]
-../../../tutorial/tvguid10.cc:112:6: warning: no previous prototype for function 'deleteFile' [-Wmissing-prototypes]
-In file included from ../../../tutorial/tvguid10.cc:40:
+../../../tutorial/tvguid10.cc:49:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid10.cc:53:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid10.cc:54:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
+In file included from ../../../tutorial/tvguid10.cc:42:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
@@ -13168,49 +13158,49 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3455:13: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
 ../../../tvision/views.h:3471:12: warning: padding class 'TGroup' with 1 byte to align 'endState' [-Wpadded]
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/tvguid10.cc:133:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
-../../../tutorial/tvguid10.cc:136:42: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid10.cc:139:27: warning: use of old-style cast [-Wold-style-cast]
-../../../tutorial/tvguid10.cc:143:52: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../tutorial/tvguid10.cc:148:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-../../../tutorial/tvguid10.cc:148:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-In file included from ../../../tutorial/tvguid10.cc:40:
+../../../tutorial/tvguid10.cc:135:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
+../../../tutorial/tvguid10.cc:138:42: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid10.cc:141:27: warning: use of old-style cast [-Wold-style-cast]
+../../../tutorial/tvguid10.cc:145:52: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../tutorial/tvguid10.cc:150:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+../../../tutorial/tvguid10.cc:150:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+In file included from ../../../tutorial/tvguid10.cc:42:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../tutorial/tvguid10.cc:175:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid10.cc:188:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid10.cc:40:
+../../../tutorial/tvguid10.cc:177:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid10.cc:190:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid10.cc:42:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:699:7: warning: padding size of 'TStatusItem' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/menus.h:797:18: warning: padding class 'TStatusDef' with 4 bytes to align 'items' [-Wpadded]
-In file included from ../../../tutorial/tvguid10.cc:40:
+In file included from ../../../tutorial/tvguid10.cc:42:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
-In file included from ../../../tutorial/tvguid10.cc:40:
+In file included from ../../../tutorial/tvguid10.cc:42:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../tutorial/tvguid10.cc:256:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid10.cc:40:
+../../../tutorial/tvguid10.cc:258:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid10.cc:42:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
+../../../tutorial/tvguid11.cc:26:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid11.cc:24:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid11.cc:22:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid11.cc:23:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid11.cc:35:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid11.cc:30:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid11.cc:36:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid11.cc:27:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tutorial/tvguid11.cc:40:
+../../../tutorial/tvguid11.cc:25:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid11.cc:37:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid11.cc:32:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid11.cc:38:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid11.cc:29:9: warning: macro is not used [-Wunused-macros]
+In file included from ../../../tutorial/tvguid11.cc:42:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid11.cc:40:
+In file included from ../../../tutorial/tvguid11.cc:42:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -13218,7 +13208,7 @@ In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:404:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:428:9: warning: initializer for virtual base class 'TNSCollection' of abstract class 'TNSSortedCollection' will never be used [-Wabstract-vbase-init]
 ../../../tvision/tvobjs.h:471:17: note: unimplemented pure virtual method 'compare' in 'TNSSortedCollection'
-In file included from ../../../tutorial/tvguid11.cc:40:
+In file included from ../../../tutorial/tvguid11.cc:42:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:32:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13229,24 +13219,24 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:412:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:550:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:727:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid11.cc:40:
+In file included from ../../../tutorial/tvguid11.cc:42:
 In file included from ../../../tvision/tv.h:639:
 ../../../tvision/drawbuf.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/drawbuf.h:118:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:114:24: note: expanded from macro 'hiByte'
 ../../../tvision/drawbuf.h:123:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:113:24: note: expanded from macro 'loByte'
-In file included from ../../../tutorial/tvguid11.cc:40:
+In file included from ../../../tutorial/tvguid11.cc:42:
 In file included from ../../../tvision/tv.h:643:
 ../../../tvision/objects.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/objects.h:110:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid11.cc:40:
+In file included from ../../../tutorial/tvguid11.cc:42:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:102:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:397:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:431:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid11.cc:40:
+In file included from ../../../tutorial/tvguid11.cc:42:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13279,7 +13269,7 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3856:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3862:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3867:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid11.cc:40:
+In file included from ../../../tutorial/tvguid11.cc:42:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/dialogs.h:94:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13287,11 +13277,11 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:223:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:229:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:234:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid11.cc:40:
+In file included from ../../../tutorial/tvguid11.cc:42:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tutorial/tvguid11.cc:40:
+In file included from ../../../tutorial/tvguid11.cc:42:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:35:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/menus.h:63:32: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -13328,7 +13318,7 @@ In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:970:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:976:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:981:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid11.cc:40:
+In file included from ../../../tutorial/tvguid11.cc:42:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:123:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:299:34: warning: use of old-style cast [-Wold-style-cast]
@@ -13342,12 +13332,10 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tutorial/tvguid11.cc:52:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid11.cc:56:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid11.cc:57:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid11.cc:99:6: warning: no previous prototype for function 'readFile' [-Wmissing-prototypes]
-../../../tutorial/tvguid11.cc:119:6: warning: no previous prototype for function 'deleteFile' [-Wmissing-prototypes]
-In file included from ../../../tutorial/tvguid11.cc:40:
+../../../tutorial/tvguid11.cc:54:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid11.cc:58:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid11.cc:59:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
+In file included from ../../../tutorial/tvguid11.cc:42:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
@@ -13357,49 +13345,49 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3455:13: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
 ../../../tvision/views.h:3471:12: warning: padding class 'TGroup' with 1 byte to align 'endState' [-Wpadded]
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/tvguid11.cc:140:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
-../../../tutorial/tvguid11.cc:143:42: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid11.cc:146:27: warning: use of old-style cast [-Wold-style-cast]
-../../../tutorial/tvguid11.cc:150:52: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../tutorial/tvguid11.cc:155:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-../../../tutorial/tvguid11.cc:155:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-In file included from ../../../tutorial/tvguid11.cc:40:
+../../../tutorial/tvguid11.cc:142:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
+../../../tutorial/tvguid11.cc:145:42: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid11.cc:148:27: warning: use of old-style cast [-Wold-style-cast]
+../../../tutorial/tvguid11.cc:152:52: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../tutorial/tvguid11.cc:157:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+../../../tutorial/tvguid11.cc:157:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+In file included from ../../../tutorial/tvguid11.cc:42:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../tutorial/tvguid11.cc:182:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid11.cc:195:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid11.cc:40:
+../../../tutorial/tvguid11.cc:184:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid11.cc:197:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid11.cc:42:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:699:7: warning: padding size of 'TStatusItem' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/menus.h:797:18: warning: padding class 'TStatusDef' with 4 bytes to align 'items' [-Wpadded]
-In file included from ../../../tutorial/tvguid11.cc:40:
+In file included from ../../../tutorial/tvguid11.cc:42:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
-In file included from ../../../tutorial/tvguid11.cc:40:
+In file included from ../../../tutorial/tvguid11.cc:42:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../tutorial/tvguid11.cc:267:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid11.cc:40:
+../../../tutorial/tvguid11.cc:269:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid11.cc:42:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
+../../../tutorial/tvguid12.cc:26:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid12.cc:24:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid12.cc:22:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid12.cc:23:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid12.cc:35:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid12.cc:30:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid12.cc:36:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid12.cc:27:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tutorial/tvguid12.cc:40:
+../../../tutorial/tvguid12.cc:25:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid12.cc:37:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid12.cc:32:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid12.cc:38:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid12.cc:29:9: warning: macro is not used [-Wunused-macros]
+In file included from ../../../tutorial/tvguid12.cc:42:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid12.cc:40:
+In file included from ../../../tutorial/tvguid12.cc:42:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -13407,7 +13395,7 @@ In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:404:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:428:9: warning: initializer for virtual base class 'TNSCollection' of abstract class 'TNSSortedCollection' will never be used [-Wabstract-vbase-init]
 ../../../tvision/tvobjs.h:471:17: note: unimplemented pure virtual method 'compare' in 'TNSSortedCollection'
-In file included from ../../../tutorial/tvguid12.cc:40:
+In file included from ../../../tutorial/tvguid12.cc:42:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:32:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13418,24 +13406,24 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:412:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:550:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:727:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid12.cc:40:
+In file included from ../../../tutorial/tvguid12.cc:42:
 In file included from ../../../tvision/tv.h:639:
 ../../../tvision/drawbuf.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/drawbuf.h:118:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:114:24: note: expanded from macro 'hiByte'
 ../../../tvision/drawbuf.h:123:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:113:24: note: expanded from macro 'loByte'
-In file included from ../../../tutorial/tvguid12.cc:40:
+In file included from ../../../tutorial/tvguid12.cc:42:
 In file included from ../../../tvision/tv.h:643:
 ../../../tvision/objects.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/objects.h:110:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid12.cc:40:
+In file included from ../../../tutorial/tvguid12.cc:42:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:102:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:397:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:431:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid12.cc:40:
+In file included from ../../../tutorial/tvguid12.cc:42:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13468,7 +13456,7 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3856:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3862:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3867:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid12.cc:40:
+In file included from ../../../tutorial/tvguid12.cc:42:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/dialogs.h:94:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13476,11 +13464,11 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:223:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:229:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:234:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid12.cc:40:
+In file included from ../../../tutorial/tvguid12.cc:42:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tutorial/tvguid12.cc:40:
+In file included from ../../../tutorial/tvguid12.cc:42:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:35:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/menus.h:63:32: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -13517,7 +13505,7 @@ In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:970:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:976:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:981:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid12.cc:40:
+In file included from ../../../tutorial/tvguid12.cc:42:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:123:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:299:34: warning: use of old-style cast [-Wold-style-cast]
@@ -13531,12 +13519,10 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tutorial/tvguid12.cc:50:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid12.cc:54:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid12.cc:55:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid12.cc:96:6: warning: no previous prototype for function 'readFile' [-Wmissing-prototypes]
-../../../tutorial/tvguid12.cc:116:6: warning: no previous prototype for function 'deleteFile' [-Wmissing-prototypes]
-In file included from ../../../tutorial/tvguid12.cc:40:
+../../../tutorial/tvguid12.cc:52:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid12.cc:56:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid12.cc:57:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
+In file included from ../../../tutorial/tvguid12.cc:42:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
@@ -13546,49 +13532,49 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3455:13: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
 ../../../tvision/views.h:3471:12: warning: padding class 'TGroup' with 1 byte to align 'endState' [-Wpadded]
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/tvguid12.cc:137:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
-../../../tutorial/tvguid12.cc:140:42: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid12.cc:143:27: warning: use of old-style cast [-Wold-style-cast]
-../../../tutorial/tvguid12.cc:147:52: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../tutorial/tvguid12.cc:152:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-../../../tutorial/tvguid12.cc:152:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-In file included from ../../../tutorial/tvguid12.cc:40:
+../../../tutorial/tvguid12.cc:139:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
+../../../tutorial/tvguid12.cc:142:42: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid12.cc:145:27: warning: use of old-style cast [-Wold-style-cast]
+../../../tutorial/tvguid12.cc:149:52: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../tutorial/tvguid12.cc:154:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+../../../tutorial/tvguid12.cc:154:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+In file included from ../../../tutorial/tvguid12.cc:42:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../tutorial/tvguid12.cc:180:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid12.cc:193:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid12.cc:40:
+../../../tutorial/tvguid12.cc:182:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid12.cc:195:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid12.cc:42:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:699:7: warning: padding size of 'TStatusItem' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/menus.h:797:18: warning: padding class 'TStatusDef' with 4 bytes to align 'items' [-Wpadded]
-In file included from ../../../tutorial/tvguid12.cc:40:
+In file included from ../../../tutorial/tvguid12.cc:42:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
-In file included from ../../../tutorial/tvguid12.cc:40:
+In file included from ../../../tutorial/tvguid12.cc:42:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../tutorial/tvguid12.cc:265:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid12.cc:40:
+../../../tutorial/tvguid12.cc:267:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid12.cc:42:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
+../../../tutorial/tvguid13.cc:26:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid13.cc:24:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid13.cc:22:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid13.cc:23:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid13.cc:35:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid13.cc:30:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid13.cc:36:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid13.cc:27:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tutorial/tvguid13.cc:41:
+../../../tutorial/tvguid13.cc:25:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid13.cc:37:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid13.cc:32:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid13.cc:38:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid13.cc:29:9: warning: macro is not used [-Wunused-macros]
+In file included from ../../../tutorial/tvguid13.cc:43:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid13.cc:41:
+In file included from ../../../tutorial/tvguid13.cc:43:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -13596,7 +13582,7 @@ In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:404:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:428:9: warning: initializer for virtual base class 'TNSCollection' of abstract class 'TNSSortedCollection' will never be used [-Wabstract-vbase-init]
 ../../../tvision/tvobjs.h:471:17: note: unimplemented pure virtual method 'compare' in 'TNSSortedCollection'
-In file included from ../../../tutorial/tvguid13.cc:41:
+In file included from ../../../tutorial/tvguid13.cc:43:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:32:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13607,24 +13593,24 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:412:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:550:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:727:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid13.cc:41:
+In file included from ../../../tutorial/tvguid13.cc:43:
 In file included from ../../../tvision/tv.h:639:
 ../../../tvision/drawbuf.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/drawbuf.h:118:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:114:24: note: expanded from macro 'hiByte'
 ../../../tvision/drawbuf.h:123:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:113:24: note: expanded from macro 'loByte'
-In file included from ../../../tutorial/tvguid13.cc:41:
+In file included from ../../../tutorial/tvguid13.cc:43:
 In file included from ../../../tvision/tv.h:643:
 ../../../tvision/objects.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/objects.h:110:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid13.cc:41:
+In file included from ../../../tutorial/tvguid13.cc:43:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:102:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:397:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:431:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid13.cc:41:
+In file included from ../../../tutorial/tvguid13.cc:43:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13657,7 +13643,7 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3856:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3862:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3867:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid13.cc:41:
+In file included from ../../../tutorial/tvguid13.cc:43:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/dialogs.h:94:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13671,11 +13657,11 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:778:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid13.cc:41:
+In file included from ../../../tutorial/tvguid13.cc:43:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tutorial/tvguid13.cc:41:
+In file included from ../../../tutorial/tvguid13.cc:43:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:35:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/menus.h:63:32: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -13712,7 +13698,7 @@ In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:970:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:976:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:981:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid13.cc:41:
+In file included from ../../../tutorial/tvguid13.cc:43:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:123:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:299:34: warning: use of old-style cast [-Wold-style-cast]
@@ -13726,12 +13712,10 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tutorial/tvguid13.cc:53:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid13.cc:57:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid13.cc:58:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid13.cc:100:6: warning: no previous prototype for function 'readFile' [-Wmissing-prototypes]
-../../../tutorial/tvguid13.cc:120:6: warning: no previous prototype for function 'deleteFile' [-Wmissing-prototypes]
-In file included from ../../../tutorial/tvguid13.cc:41:
+../../../tutorial/tvguid13.cc:55:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid13.cc:59:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid13.cc:60:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
+In file included from ../../../tutorial/tvguid13.cc:43:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
@@ -13741,52 +13725,52 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3455:13: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
 ../../../tvision/views.h:3471:12: warning: padding class 'TGroup' with 1 byte to align 'endState' [-Wpadded]
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/tvguid13.cc:141:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
-../../../tutorial/tvguid13.cc:144:42: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid13.cc:147:27: warning: use of old-style cast [-Wold-style-cast]
-../../../tutorial/tvguid13.cc:151:52: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../tutorial/tvguid13.cc:156:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-../../../tutorial/tvguid13.cc:156:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-In file included from ../../../tutorial/tvguid13.cc:41:
+../../../tutorial/tvguid13.cc:143:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
+../../../tutorial/tvguid13.cc:146:42: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid13.cc:149:27: warning: use of old-style cast [-Wold-style-cast]
+../../../tutorial/tvguid13.cc:153:52: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../tutorial/tvguid13.cc:158:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+../../../tutorial/tvguid13.cc:158:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+In file included from ../../../tutorial/tvguid13.cc:43:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../tutorial/tvguid13.cc:184:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid13.cc:197:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid13.cc:41:
+../../../tutorial/tvguid13.cc:186:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid13.cc:199:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid13.cc:43:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:699:7: warning: padding size of 'TStatusItem' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/menus.h:797:18: warning: padding class 'TStatusDef' with 4 bytes to align 'items' [-Wpadded]
-In file included from ../../../tutorial/tvguid13.cc:41:
+In file included from ../../../tutorial/tvguid13.cc:43:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
-In file included from ../../../tutorial/tvguid13.cc:41:
+In file included from ../../../tutorial/tvguid13.cc:43:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../tutorial/tvguid13.cc:269:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid13.cc:41:
+../../../tutorial/tvguid13.cc:271:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid13.cc:43:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:712:13: warning: padding class 'TButton' with 1 byte to align 'amDefault' [-Wpadded]
-In file included from ../../../tutorial/tvguid13.cc:41:
+In file included from ../../../tutorial/tvguid13.cc:43:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
+../../../tutorial/tvguid14.cc:26:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid14.cc:24:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid14.cc:22:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid14.cc:23:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid14.cc:35:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid14.cc:30:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid14.cc:36:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid14.cc:27:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tutorial/tvguid14.cc:45:
+../../../tutorial/tvguid14.cc:25:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid14.cc:37:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid14.cc:32:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid14.cc:38:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid14.cc:29:9: warning: macro is not used [-Wunused-macros]
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid14.cc:45:
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -13794,7 +13778,7 @@ In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:404:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:428:9: warning: initializer for virtual base class 'TNSCollection' of abstract class 'TNSSortedCollection' will never be used [-Wabstract-vbase-init]
 ../../../tvision/tvobjs.h:471:17: note: unimplemented pure virtual method 'compare' in 'TNSSortedCollection'
-In file included from ../../../tutorial/tvguid14.cc:45:
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:32:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13805,24 +13789,24 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:412:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:550:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:727:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid14.cc:45:
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:639:
 ../../../tvision/drawbuf.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/drawbuf.h:118:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:114:24: note: expanded from macro 'hiByte'
 ../../../tvision/drawbuf.h:123:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:113:24: note: expanded from macro 'loByte'
-In file included from ../../../tutorial/tvguid14.cc:45:
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:643:
 ../../../tvision/objects.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/objects.h:110:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid14.cc:45:
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:102:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:397:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:431:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid14.cc:45:
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13855,7 +13839,7 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3856:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3862:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3867:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid14.cc:45:
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/dialogs.h:94:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -13895,11 +13879,11 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:2168:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:2174:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:2179:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid14.cc:45:
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tutorial/tvguid14.cc:45:
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:35:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/menus.h:63:32: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -13936,7 +13920,7 @@ In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:970:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:976:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:981:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid14.cc:45:
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:123:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:299:34: warning: use of old-style cast [-Wold-style-cast]
@@ -13950,12 +13934,10 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tutorial/tvguid14.cc:55:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid14.cc:59:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid14.cc:60:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid14.cc:102:6: warning: no previous prototype for function 'readFile' [-Wmissing-prototypes]
-../../../tutorial/tvguid14.cc:122:6: warning: no previous prototype for function 'deleteFile' [-Wmissing-prototypes]
-In file included from ../../../tutorial/tvguid14.cc:45:
+../../../tutorial/tvguid14.cc:57:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid14.cc:61:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid14.cc:62:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
@@ -13965,58 +13947,58 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3455:13: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
 ../../../tvision/views.h:3471:12: warning: padding class 'TGroup' with 1 byte to align 'endState' [-Wpadded]
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/tvguid14.cc:143:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
-../../../tutorial/tvguid14.cc:146:42: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid14.cc:149:27: warning: use of old-style cast [-Wold-style-cast]
-../../../tutorial/tvguid14.cc:153:52: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../tutorial/tvguid14.cc:158:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-../../../tutorial/tvguid14.cc:158:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-In file included from ../../../tutorial/tvguid14.cc:45:
+../../../tutorial/tvguid14.cc:145:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
+../../../tutorial/tvguid14.cc:148:42: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid14.cc:151:27: warning: use of old-style cast [-Wold-style-cast]
+../../../tutorial/tvguid14.cc:155:52: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../tutorial/tvguid14.cc:160:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+../../../tutorial/tvguid14.cc:160:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../tutorial/tvguid14.cc:186:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid14.cc:199:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid14.cc:45:
+../../../tutorial/tvguid14.cc:188:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid14.cc:201:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:699:7: warning: padding size of 'TStatusItem' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/menus.h:797:18: warning: padding class 'TStatusDef' with 4 bytes to align 'items' [-Wpadded]
-In file included from ../../../tutorial/tvguid14.cc:45:
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
-In file included from ../../../tutorial/tvguid14.cc:45:
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../tutorial/tvguid14.cc:271:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid14.cc:301:40: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid14.cc:45:
+../../../tutorial/tvguid14.cc:273:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid14.cc:303:40: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:1065:24: warning: padding class 'TCluster' with 4 bytes to align 'strings' [-Wpadded]
 ../../../tvision/dialogs.h:2056:7: warning: padding size of 'TLabel' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/tvguid14.cc:310:37: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid14.cc:45:
+../../../tutorial/tvguid14.cc:312:37: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:712:13: warning: padding class 'TButton' with 1 byte to align 'amDefault' [-Wpadded]
-In file included from ../../../tutorial/tvguid14.cc:45:
+In file included from ../../../tutorial/tvguid14.cc:47:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
+../../../tutorial/tvguid15.cc:26:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid15.cc:24:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid15.cc:22:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid15.cc:23:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid15.cc:35:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid15.cc:30:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid15.cc:36:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid15.cc:27:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tutorial/tvguid15.cc:47:
+../../../tutorial/tvguid15.cc:25:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid15.cc:37:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid15.cc:32:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid15.cc:38:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid15.cc:29:9: warning: macro is not used [-Wunused-macros]
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid15.cc:47:
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -14024,7 +14006,7 @@ In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:404:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:428:9: warning: initializer for virtual base class 'TNSCollection' of abstract class 'TNSSortedCollection' will never be used [-Wabstract-vbase-init]
 ../../../tvision/tvobjs.h:471:17: note: unimplemented pure virtual method 'compare' in 'TNSSortedCollection'
-In file included from ../../../tutorial/tvguid15.cc:47:
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:32:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -14035,24 +14017,24 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:412:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:550:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:727:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid15.cc:47:
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:639:
 ../../../tvision/drawbuf.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/drawbuf.h:118:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:114:24: note: expanded from macro 'hiByte'
 ../../../tvision/drawbuf.h:123:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:113:24: note: expanded from macro 'loByte'
-In file included from ../../../tutorial/tvguid15.cc:47:
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:643:
 ../../../tvision/objects.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/objects.h:110:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid15.cc:47:
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:102:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:397:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:431:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid15.cc:47:
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -14090,7 +14072,7 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3856:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3862:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3867:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid15.cc:47:
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/dialogs.h:94:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -14136,11 +14118,11 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:2168:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:2174:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:2179:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid15.cc:47:
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tutorial/tvguid15.cc:47:
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:35:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/menus.h:63:32: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -14177,7 +14159,7 @@ In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:970:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:976:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:981:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid15.cc:47:
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:123:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:299:34: warning: use of old-style cast [-Wold-style-cast]
@@ -14191,12 +14173,10 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tutorial/tvguid15.cc:57:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid15.cc:61:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid15.cc:62:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid15.cc:103:6: warning: no previous prototype for function 'readFile' [-Wmissing-prototypes]
-../../../tutorial/tvguid15.cc:123:6: warning: no previous prototype for function 'deleteFile' [-Wmissing-prototypes]
-In file included from ../../../tutorial/tvguid15.cc:47:
+../../../tutorial/tvguid15.cc:59:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid15.cc:63:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid15.cc:64:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
@@ -14206,59 +14186,59 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3455:13: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
 ../../../tvision/views.h:3471:12: warning: padding class 'TGroup' with 1 byte to align 'endState' [-Wpadded]
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/tvguid15.cc:144:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
-../../../tutorial/tvguid15.cc:147:42: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid15.cc:150:27: warning: use of old-style cast [-Wold-style-cast]
-../../../tutorial/tvguid15.cc:154:52: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../tutorial/tvguid15.cc:159:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-../../../tutorial/tvguid15.cc:159:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-In file included from ../../../tutorial/tvguid15.cc:47:
+../../../tutorial/tvguid15.cc:146:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
+../../../tutorial/tvguid15.cc:149:42: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid15.cc:152:27: warning: use of old-style cast [-Wold-style-cast]
+../../../tutorial/tvguid15.cc:156:52: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../tutorial/tvguid15.cc:161:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+../../../tutorial/tvguid15.cc:161:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../tutorial/tvguid15.cc:187:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid15.cc:200:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid15.cc:47:
+../../../tutorial/tvguid15.cc:189:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid15.cc:202:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:699:7: warning: padding size of 'TStatusItem' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/menus.h:797:18: warning: padding class 'TStatusDef' with 4 bytes to align 'items' [-Wpadded]
-In file included from ../../../tutorial/tvguid15.cc:47:
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
-In file included from ../../../tutorial/tvguid15.cc:47:
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../tutorial/tvguid15.cc:272:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid15.cc:302:40: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid15.cc:47:
+../../../tutorial/tvguid15.cc:274:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid15.cc:304:40: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:1065:24: warning: padding class 'TCluster' with 4 bytes to align 'strings' [-Wpadded]
 ../../../tvision/dialogs.h:2056:7: warning: padding size of 'TLabel' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/tvguid15.cc:311:37: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid15.cc:47:
+../../../tutorial/tvguid15.cc:313:37: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:432:17: warning: padding class 'TInputLine' with 4 bytes to align 'validator' [-Wpadded]
 ../../../tvision/dialogs.h:712:13: warning: padding class 'TButton' with 1 byte to align 'amDefault' [-Wpadded]
-In file included from ../../../tutorial/tvguid15.cc:47:
+In file included from ../../../tutorial/tvguid15.cc:49:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
+../../../tutorial/tvguid16.cc:26:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/tvguid16.cc:24:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid16.cc:22:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid16.cc:23:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid16.cc:35:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid16.cc:30:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid16.cc:36:9: warning: macro is not used [-Wunused-macros]
-../../../tutorial/tvguid16.cc:27:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../tutorial/tvguid16.cc:47:
+../../../tutorial/tvguid16.cc:25:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid16.cc:37:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid16.cc:32:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid16.cc:38:9: warning: macro is not used [-Wunused-macros]
+../../../tutorial/tvguid16.cc:29:9: warning: macro is not used [-Wunused-macros]
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid16.cc:47:
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -14266,7 +14246,7 @@ In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:404:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:428:9: warning: initializer for virtual base class 'TNSCollection' of abstract class 'TNSSortedCollection' will never be used [-Wabstract-vbase-init]
 ../../../tvision/tvobjs.h:471:17: note: unimplemented pure virtual method 'compare' in 'TNSSortedCollection'
-In file included from ../../../tutorial/tvguid16.cc:47:
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:32:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -14277,24 +14257,24 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:412:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:550:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:727:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid16.cc:47:
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:639:
 ../../../tvision/drawbuf.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/drawbuf.h:118:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:114:24: note: expanded from macro 'hiByte'
 ../../../tvision/drawbuf.h:123:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:113:24: note: expanded from macro 'loByte'
-In file included from ../../../tutorial/tvguid16.cc:47:
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:643:
 ../../../tvision/objects.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/objects.h:110:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid16.cc:47:
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:102:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:397:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:431:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tutorial/tvguid16.cc:47:
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -14332,7 +14312,7 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3856:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3862:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3867:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid16.cc:47:
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/dialogs.h:94:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -14378,11 +14358,11 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:2168:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:2174:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:2179:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid16.cc:47:
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tutorial/tvguid16.cc:47:
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:35:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/menus.h:63:32: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -14419,7 +14399,7 @@ In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:970:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:976:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:981:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tutorial/tvguid16.cc:47:
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:123:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:299:34: warning: use of old-style cast [-Wold-style-cast]
@@ -14433,13 +14413,11 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tutorial/tvguid16.cc:60:13: warning: no previous extern declaration for non-static variable 'demoDialogData' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid16.cc:66:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid16.cc:70:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid16.cc:71:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
-../../../tutorial/tvguid16.cc:113:6: warning: no previous prototype for function 'readFile' [-Wmissing-prototypes]
-../../../tutorial/tvguid16.cc:133:6: warning: no previous prototype for function 'deleteFile' [-Wmissing-prototypes]
-In file included from ../../../tutorial/tvguid16.cc:47:
+../../../tutorial/tvguid16.cc:62:13: warning: no previous extern declaration for non-static variable 'demoDialogData' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid16.cc:68:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid16.cc:72:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
+../../../tutorial/tvguid16.cc:73:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
@@ -14449,43 +14427,43 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3455:13: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
 ../../../tvision/views.h:3471:12: warning: padding class 'TGroup' with 1 byte to align 'endState' [-Wpadded]
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/tvguid16.cc:154:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
-../../../tutorial/tvguid16.cc:157:42: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid16.cc:160:27: warning: use of old-style cast [-Wold-style-cast]
-../../../tutorial/tvguid16.cc:164:52: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../tutorial/tvguid16.cc:169:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-../../../tutorial/tvguid16.cc:169:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-In file included from ../../../tutorial/tvguid16.cc:47:
+../../../tutorial/tvguid16.cc:156:41: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
+../../../tutorial/tvguid16.cc:159:42: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid16.cc:162:27: warning: use of old-style cast [-Wold-style-cast]
+../../../tutorial/tvguid16.cc:166:52: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../tutorial/tvguid16.cc:171:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+../../../tutorial/tvguid16.cc:171:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../tutorial/tvguid16.cc:197:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid16.cc:210:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid16.cc:47:
+../../../tutorial/tvguid16.cc:199:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid16.cc:212:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:699:7: warning: padding size of 'TStatusItem' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/menus.h:797:18: warning: padding class 'TStatusDef' with 4 bytes to align 'items' [-Wpadded]
-In file included from ../../../tutorial/tvguid16.cc:47:
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
-In file included from ../../../tutorial/tvguid16.cc:47:
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../tutorial/tvguid16.cc:294:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tutorial/tvguid16.cc:324:40: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid16.cc:47:
+../../../tutorial/tvguid16.cc:296:31: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tutorial/tvguid16.cc:326:40: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:1065:24: warning: padding class 'TCluster' with 4 bytes to align 'strings' [-Wpadded]
 ../../../tvision/dialogs.h:2056:7: warning: padding size of 'TLabel' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/tvguid16.cc:333:37: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tutorial/tvguid16.cc:47:
+../../../tutorial/tvguid16.cc:335:37: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:432:17: warning: padding class 'TInputLine' with 4 bytes to align 'validator' [-Wpadded]
 ../../../tvision/dialogs.h:712:13: warning: padding class 'TButton' with 1 byte to align 'amDefault' [-Wpadded]
-In file included from ../../../tutorial/tvguid16.cc:47:
+In file included from ../../../tutorial/tvguid16.cc:49:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]

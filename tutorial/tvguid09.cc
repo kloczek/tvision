@@ -19,6 +19,8 @@
 #include <string.h>             // for strlen etc
 #include <ctype.h>
 
+#include "tvgui.h"
+
 #define Uses_TEventQueue
 #define Uses_TEvent
 #define Uses_TProgram
