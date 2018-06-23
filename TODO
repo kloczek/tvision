@@ -41,10 +41,6 @@ Known bugs and things to do
 - Javor Dimitrov <java@dobrich-sat.net> reported that TFileEditor does not
   correctly restore original file attributes after saving files.
 
-- "DOS shell" and "Alt-F3" menu items in the demo program are misleading:
-  under Linux the first one doesn't have sense and the second switches to
-  the third system console.
-
 - Javor Dimitrov <java@dobrich-sat.net> gots a problem when he tried to
   detect errors on fpstream. Borland provides some documentation at:
 
