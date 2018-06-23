@@ -148,13 +148,13 @@ The {Open a File:FOFileOpenDBox} dialog box contains:
 File³Change Dir brings up the {Change Directory:FCChDirDBox}
 dialog box, in which you can change the current directory.
 
-.topic FDosShell
- File³DOS Shell Ü
+.topic FSsuspend
+ File³ Suspend Ü
   ßßßßßßßßßßßßßßß
-With the DOS Shell command, you can leave the program temporarily
-to perform a DOS command or run another program.
+With the Suspend command, you can stop the program temporarily
+to perform a command or run another program.
 
-To return to this program, type EXIT at the DOS prompt.
+To return to this program, type "fg" at the shell prompt.
 
 .topic FExit
  File³Exit Ü     (Alt-X)

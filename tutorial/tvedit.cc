@@ -58,7 +58,7 @@ private:
     void changeDir();
     void newFile();
     void openFile(const char *fileSpec);
-    void shell();
+    void suspend();
     void showClipboard();
     void tile();
 public:
@@ -285,8 +285,8 @@ void TVDemo::handleEvent(TEvent &event)
     case cmChDir:
 	changeDir();
 	break;
-    case cmDosShell:
-	shell();
+    case cmSuspend:
+	suspend();
 	break;
     case cmNew:
 	newFile();
@@ -356,7 +356,7 @@ TMenuBar *TVDemo::initMenuBar(TRect r)
     *new TMenuItem("S~a~ve as...", cmSaveAs, kbNoKey, hcNoContext, "") +
     newLine() +
     *new TMenuItem("~C~hange dir...", cmChDir, kbNoKey, hcNoContext, "") +
-    *new TMenuItem("~D~OS shell", cmDosShell, kbNoKey, hcNoContext, "") +
+    *new TMenuItem("~S~suspend", cmSuspend, kbNoKey, hcNoContext, "") +
     *new TMenuItem("E~x~it", cmQuit, kbAltX, hcNoContext, "Alt-X");
 
     TSubMenu& sub3 = *new TSubMenu("~E~dit", 0, hcNoContext) +
@@ -434,7 +434,7 @@ void TVDemo::openFile(const char *fileSpec)
     destroy(d);
 }
 
-void TVDemo::shell()
+void TVDemo::suspend()
 {
     raise(SIGTSTP); //this line simulates a Ctrl-Z
 }

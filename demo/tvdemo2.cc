@@ -42,10 +42,10 @@
 #include <stdlib.h>
 
 //
-//  DOS Shell Command.
+//  Suspend Command.
 //
 
-void TVDemo::shell()
+void TVDemo::suspend()
 {
 	/* SS: this simulates a Ctrl-Z */
 	raise(SIGTSTP);		/* stop the process */
@@ -93,8 +93,8 @@ void TVDemo::handleEvent(TEvent &event)
                 changeDir();
                 break;
 
-            case cmDOS_Cmd:             //  DOS shell
-                shell();
+            case cmSuspendCmd:          //  Shell
+                suspend();
                 break;
 
             case cmTile:             //  Tile current file windows

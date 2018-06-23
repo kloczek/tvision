@@ -44,7 +44,7 @@ private:
     void calculator();                // Calculator
     void openFile( const char *fileSpec );  // File Viewer
     void changeDir();                 // Change directory
-    void shell();                     // DOS shell
+    void suspend();                   // Suspend program
     void tile();                      // Tile windows
     void cascade();                   // Cascade windows
     void mouse();                     // Mouse control dialog box

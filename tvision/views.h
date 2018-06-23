@@ -129,10 +129,10 @@ const ushort
      */
     cmChDir         = 35,
 
-    /** \var cmDosShell
+    /** \var cmSuspend
      * Undocumented.
      */
-    cmDosShell      = 36,
+    cmSuspend       = 36,
 
     /** \var cmCloseAll
      * Undocumented.

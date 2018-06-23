@@ -3,13 +3,13 @@ LDFLAGS="-Wl,--as-needed"
 CXXFLAGS="-O2"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
-  83154	   4736	    424	  88314	  158fa	demo
+  83186	   4736	    424	  88346	  1591a	demo
    8680	   1180	      4	   9864	   2688	background
   13649	   1748	     16	  15413	   3c35	listbox
   25317	   2372	     16	  27705	   6c39	load
   17710	   2764	     24	  20498	   5012	nomenus
   10999	   1244	      4	  12247	   2fd7	splash
-  25176	   1780	     56	  27012	   6984	tvedit
+  25216	   1780	     56	  27052	   69ac	tvedit
    8597	   1180	      4	   9781	   2635	tvguid01
    9343	   1204	      4	  10551	   2937	tvguid02
   10946	   1236	      4	  12186	   2f9a	tvguid03
@@ -42,13 +42,13 @@ LDFLAGS="-O2 -Wl,--as-needed -flto -fuse-linker-plugin"
 CXXFLAGS="-O2 -flto"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
-  74681	   4444	    432	  79557	  136c5	demo
+  74794	   4444	    432	  79670	  13736	demo
    8111	   1196	      8	   9315	   2463	background
   14347	   1836	     16	  16199	   3f47	listbox
   23375	   2372	     16	  25763	   64a3	load
   16806	   2780	     48	  19634	   4cb2	nomenus
   10147	   1260	      4	  11411	   2c93	splash
-  23583	   1796	     40	  25419	   634b	tvedit
+  23688	   1796	     40	  25524	   63b4	tvedit
    8012	   1196	      4	   9212	   23fc	tvguid01
    8766	   1220	      4	   9990	   2706	tvguid02
   10377	   1252	      4	  11633	   2d71	tvguid03
@@ -81,7 +81,7 @@ LDFLAGS="-Wl,--as-needed"
 CXXFLAGS="-Os"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
-  71670	   4536	    424	  76630	  12b56	demo
+  71668	   4536	    424	  76628	  12b54	demo
    8548	   1180	      4	   9732	   2604	background
   16256	   2596	     16	  18868	   49b4	listbox
   21546	   1900	     16	  23462	   5ba6	load
@@ -120,13 +120,13 @@ LDFLAGS="-Os -Wl,--as-needed -flto -fuse-linker-plugin"
 CXXFLAGS="-Os -flto"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
-  64429	   4012	    432	  68873	  10d09	demo
+  64461	   4012	    432	  68905	  10d29	demo
    7966	   1180	      8	   9154	   23c2	background
   13221	   1828	     16	  15065	   3ad9	listbox
   20081	   1900	     16	  21997	   55ed	load
   16311	   2804	     48	  19163	   4adb	nomenus
    9735	   1244	      4	  10983	   2ae7	splash
-  20687	   1796	     40	  22523	   57fb	tvedit
+  20727	   1796	     40	  22563	   5823	tvedit
    7883	   1180	      4	   9067	   236b	tvguid01
    8514	   1204	      4	   9722	   25fa	tvguid02
    9881	   1236	      4	  11121	   2b71	tvguid03
@@ -159,13 +159,13 @@ LDFLAGS="-Os -Wl,--as-needed -flto -fuse-linker-plugin"
 CXXFLAGS="-Os -flto -fno-exceptions -fno-rtti"
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
-  58250	   3356	    432	  62038	   f256	demo
+  58298	   3356	    432	  62086	   f286	demo
    7347	    940	      8	   8295	   2067	background
   12070	   1556	     16	  13642	   354a	listbox
   18581	   1532	     16	  20129	   4ea1	load
   14976	   2436	     48	  17460	   4434	nomenus
    8846	   1004	      4	   9854	   267e	splash
-  18441	   1540	     40	  20021	   4e35	tvedit
+  18481	   1540	     40	  20061	   4e5d	tvedit
    7264	    940	      4	   8208	   2010	tvguid01
    7802	    964	      4	   8770	   2242	tvguid02
    8925	    996	      4	   9925	   26c5	tvguid03

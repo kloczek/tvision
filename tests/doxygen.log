@@ -10,7 +10,7 @@
 /tvision/app.h:403 warning: Member hcSaveAs (variable) of file app.h is not documented.
 /tvision/app.h:404 warning: Member hcSaveAll (variable) of file app.h is not documented.
 /tvision/app.h:405 warning: Member hcChangeDir (variable) of file app.h is not documented.
-/tvision/app.h:406 warning: Member hcDosShell (variable) of file app.h is not documented.
+/tvision/app.h:406 warning: Member hcSuspend (variable) of file app.h is not documented.
 /tvision/app.h:407 warning: Member hcExit (variable) of file app.h is not documented.
 /tvision/app.h:409 warning: Member hcUndo (variable) of file app.h is not documented.
 /tvision/app.h:410 warning: Member hcCut (variable) of file app.h is not documented.

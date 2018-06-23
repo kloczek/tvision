@@ -403,7 +403,7 @@ const unsigned short hcSave         = 0xFF03;
 const unsigned short hcSaveAs       = 0xFF04;
 const unsigned short hcSaveAll      = 0xFF05;
 const unsigned short hcChangeDir    = 0xFF06;
-const unsigned short hcDosShell     = 0xFF07;
+const unsigned short hcSuspend      = 0xFF07;
 const unsigned short hcExit         = 0xFF08;
 
 const unsigned short hcUndo         = 0xFF10;
