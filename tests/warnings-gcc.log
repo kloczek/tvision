@@ -709,3 +709,4 @@ In file included from ../../../tvision/help.h:32,
 ../../../tutorial/tvguid16.cc:133:6: warning: no previous declaration for ‘void deleteFile()’ [-Wmissing-declarations]
 ../../../tutorial/tvlife.cc: In member function ‘virtual void TLifeInterior::handleEvent(TEvent&)’:
 ../../../tutorial/tvlife.cc:587:9: warning: switch missing default case [-Wswitch-default]
+
