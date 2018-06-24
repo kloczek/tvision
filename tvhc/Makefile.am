@@ -8,4 +8,5 @@ tvhc_SOURCES	= \
 	tvhc.h
 
 EXTRA_DIST = \
+	.indent.pro \
 	README

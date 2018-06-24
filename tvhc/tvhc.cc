@@ -98,11 +98,12 @@
 
 //======================= File Management ===============================//
 
-TProtectedStream::TProtectedStream( char *aFileName, std::ios::openmode aMode ) :
-  std::fstream( aFileName, aMode )
+TProtectedStream::TProtectedStream(char *aFileName,
+				   std::ios::openmode aMode):std::
+fstream(aFileName, aMode)
 {
-    strcpy(fileName, aFileName);
-    mode = aMode;
+	strcpy(fileName, aFileName);
+	mode = aMode;
 }
 
 void error(const char *text);
@@ -114,23 +115,21 @@ void error(const char *text);
 //-----------------------------------------------------------------------//
 
 #if 0
-char *replaceExt( char *fileName, char *nExt, Boolean force )
+char *replaceExt(char *fileName, char *nExt, Boolean force)
 {
-    char dir[MAXPATH];
-    char name[MAXFILE];
-    char ext[MAXEXT];
-    char drive[MAXDRIVE];
-    char buffer[MAXPATH];
-    std:: ostrstream os(buffer, MAXPATH);
+	char dir[MAXPATH];
+	char name[MAXFILE];
+	char ext[MAXEXT];
+	char drive[MAXDRIVE];
+	char buffer[MAXPATH];
+	std::ostrstream os(buffer, MAXPATH);
 
-    fnsplit(fileName, drive, dir, name, ext);
-    if (force || (strlen(ext) == 0))
-        {
-        os << dir << name << nExt << ends;
-        return os.str();
-        }
-    else
-        return fileName;
+	fnsplit(fileName, drive, dir, name, ext);
+	if (force || (strlen(ext) == 0)) {
+		os << dir << name << nExt << ends;
+		return os.str();
+	} else
+		return fileName;
 }
 #endif
 
@@ -140,10 +139,10 @@ char *replaceExt( char *fileName, char *nExt, Boolean force )
 
 Boolean fExists(char *fileName)
 {
-    if (access(fileName, R_OK) != 0)
-        return(False);
-    else
-        return(True);
+	if (access(fileName, R_OK) != 0)
+		return (False);
+	else
+		return (True);
 }
 
 //======================== Line Management ==============================//
@@ -151,40 +150,37 @@ Boolean fExists(char *fileName)
 //  Returns the next line out of the stream.                             //
 //-----------------------------------------------------------------------//
 
-char *getLine( std::fstream& s)
+char *getLine(std::fstream & s)
 {
-    if (s.eof())
-        {
-        strcpy(line, "\x1A");
-        return line;
-        }
-    if (!lineInBuffer)
-      {
-        s.getline(line, MAXSTRSIZE, '\n');
+	if (s.eof()) {
+		strcpy(line, "\x1A");
+		return line;
+	}
+	if (!lineInBuffer) {
+		s.getline(line, MAXSTRSIZE, '\n');
 
-        //SS: remove carriage return, if present.  After this simple fix the
-        //program will both handle unix and dos files.
+		//SS: remove carriage return, if present.  After this simple fix the
+		//program will both handle unix and dos files.
 
-	int l;
-	if ((l = strlen(line)) >= 1 && line[l - 1] == '\r')
-	  {
-	    line[l - 1] = '\0';
-	  }
-      }
-    lineInBuffer = False;
-    ++lineCount;
-    return line;
+		int l;
+		if ((l = strlen(line)) >= 1 && line[l - 1] == '\r') {
+			line[l - 1] = '\0';
+		}
+	}
+	lineInBuffer = False;
+	++lineCount;
+	return line;
 }
 
 //----- unGetLine(s) ----------------------------------------------------//
 //  Return given line into the stream.                                   //
 //-----------------------------------------------------------------------//
 
-void unGetLine( char *s )
+void unGetLine(char *s)
 {
-    strcpy(line,s);
-    lineInBuffer = True;
-    --lineCount;
+	strcpy(line, s);
+	lineInBuffer = True;
+	--lineCount;
 }
 
 //========================= Error routines ==============================//
@@ -193,47 +189,45 @@ void unGetLine( char *s )
 //  Used by Error and Warning to print the message.                      //
 //-----------------------------------------------------------------------//
 
-void prntMsg( const char *pref, const char *text )
+void prntMsg(const char *pref, const char *text)
 {
-    if (lineCount > 0)
-      std::cout << pref << ": " << helpName << "("
-             << lineCount << "): " << text << "\n";
-    else
-      std::cout << pref << ": " << helpName << " "
-             << text << "\n";
+	if (lineCount > 0)
+		std::cout << pref << ": " << helpName << "("
+		    << lineCount << "): " << text << "\n";
+	else
+		std::cout << pref << ": " << helpName << " " << text << "\n";
 }
 
 //----- error(text) -----------------------------------------------------//
 //  Used to indicate an error.  Terminates the program                   //
 //-----------------------------------------------------------------------//
 
-void error( const char *text )
+void error(const char *text)
 {
-    prntMsg("Error", text);
-    exit(1);
+	prntMsg("Error", text);
+	exit(1);
 }
 
 //----- warning(text) ---------------------------------------------------//
 //  Used to indicate an warning.                                         //
 //-----------------------------------------------------------------------//
 
-void warning( const char *text )
+void warning(const char *text)
 {
-    prntMsg("Warning", text);
+	prntMsg("Warning", text);
 }
 
 //====================== Topic Reference Management =====================//
 
-void disposeFixUps( TFixUp *&p )
+void disposeFixUps(TFixUp * &p)
 {
-    TFixUp *q;
+	TFixUp *q;
 
-    while (p != 0)
-        {
-        q = p->next;
-        delete p;
-        p = q;
-        }
+	while (p != 0) {
+		q = p->next;
+		delete p;
+		p = q;
+	}
 }
 
 //----- TRefTable -------------------------------------------------------//
@@ -244,57 +238,55 @@ void disposeFixUps( TFixUp *&p )
 //  the value it has is used.                                            //
 //-----------------------------------------------------------------------//
 
-TRefTable::TRefTable( ccIndex aLimit, ccIndex aDelta ) :
-     TSortedCollection( aLimit, aDelta )
+TRefTable::TRefTable(ccIndex aLimit, ccIndex aDelta):
+TSortedCollection(aLimit, aDelta)
 {
 }
 
-int TRefTable::compare( void *key1, void *key2 )
+int TRefTable::compare(void *key1, void *key2)
 {
-    int compValue;
+	int compValue;
 
-
-    compValue = strcmp( (char *)key1, (char *)key2 );
-    if (compValue > 0)
-        return 1;
-    else if (compValue < 0)
-        return (-1);
-    else
-        return(0);
+	compValue = strcmp((char *)key1, (char *)key2);
+	if (compValue > 0)
+		return 1;
+	else if (compValue < 0)
+		return (-1);
+	else
+		return (0);
 }
 
-void TRefTable::freeItem( void *item )
+void TRefTable::freeItem(void *item)
 {
-    TReference *ref;
+	TReference *ref;
 
-    ref = (TReference *) item;
-    if (ref->resolved == False)
-        disposeFixUps(ref->val.fixUpList);
-    delete ref->topic;
-    delete ref;
+	ref = (TReference *) item;
+	if (ref->resolved == False)
+		disposeFixUps(ref->val.fixUpList);
+	delete ref->topic;
+	delete ref;
 }
 
-TReference *TRefTable::getReference( char *topic )
+TReference *TRefTable::getReference(char *topic)
 {
-    TReference *ref;
-    int i;
+	TReference *ref;
+	int i;
 
-    if (search(topic, i))
-        ref = (TReference *) at(i);
-    else
-        {
-        ref =  new TReference;
-        ref->topic =  newStr(topic);
-        ref->resolved = False;
-        ref->val.fixUpList = 0;
-        insert(ref);
-        }
-    return(ref);
+	if (search(topic, i))
+		ref = (TReference *) at(i);
+	else {
+		ref = new TReference;
+		ref->topic = newStr(topic);
+		ref->resolved = False;
+		ref->val.fixUpList = 0;
+		insert(ref);
+	}
+	return (ref);
 }
 
-void* TRefTable::keyOf( void *item )
+void *TRefTable::keyOf(void *item)
 {
-    return(((TReference *)item)->topic);
+	return (((TReference *) item)->topic);
 }
 
 //----- initRefTable ---------------------------------------------------//
@@ -303,8 +295,8 @@ void* TRefTable::keyOf( void *item )
 
 void initRefTable()
 {
-    if (refTable == 0)
-        refTable = new TRefTable(5,5);
+	if (refTable == 0)
+		refTable = new TRefTable(5, 5);
 }
 
 //---- RecordReference -------------------------------------------------//
@@ -312,37 +304,35 @@ void initRefTable()
 //  handles forward references.                                         //
 //----------------------------------------------------------------------//
 
-void recordReference( char *topic, opstream& s )
+void recordReference(char *topic, opstream & s)
 {
-    int i;
-    TReference *ref;
-    TFixUp *fixUp;
+	int i;
+	TReference *ref;
+	TFixUp *fixUp;
 
-    initRefTable();
-    ref = refTable->getReference(topic);
-    if (ref->resolved == True)
-        s << ref->val.value;
-    else
-        {
-        fixUp =  new TFixUp;
-        fixUp->pos = s.tellp();
-        i = -1;
-        s << i;
-        fixUp->next = ref->val.fixUpList;
-        ref->val.fixUpList = fixUp;
-        }
+	initRefTable();
+	ref = refTable->getReference(topic);
+	if (ref->resolved == True)
+		s << ref->val.value;
+	else {
+		fixUp = new TFixUp;
+		fixUp->pos = s.tellp();
+		i = -1;
+		s << i;
+		fixUp->next = ref->val.fixUpList;
+		ref->val.fixUpList = fixUp;
+	}
 }
 
-void doFixUps( TFixUp *p, ushort value, fpstream& s )
+void doFixUps(TFixUp * p, ushort value, fpstream & s)
 {
-    long pos;
+	long pos;
 
-    for(pos = s.tellg(); (p != 0); p = p->next)
-        {
-        s.seekp(p->pos);
-	s << value;
-        }
-    s.seekp(pos);
+	for (pos = s.tellg(); (p != 0); p = p->next) {
+		s.seekp(p->pos);
+		s << value;
+	}
+	s.seekp(pos);
 }
 
 //----- resolveReference -----------------------------------------------//
@@ -350,332 +340,318 @@ void doFixUps( TFixUp *p, ushort value, fpstream& s )
 //  handles forward references.                                         //
 //----------------------------------------------------------------------//
 
-void resolveReference( char *topic, ushort value, fpstream& s )
+void resolveReference(char *topic, ushort value, fpstream & s)
 {
-    TReference *ref;
-    char bufStr[MAXSIZE];
+	TReference *ref;
+	char bufStr[MAXSIZE];
 
-    initRefTable();
-    ref = refTable->getReference(topic);
-    if (ref->resolved )
-        {
-        strcpy(bufStr,"Redefinition of ");
-        strcat(bufStr,ref->topic);
-        error(bufStr);
-        }
-    else
-        {
-        doFixUps(ref->val.fixUpList,value,s);
-        disposeFixUps(ref->val.fixUpList);
-        ref->resolved = True;
-        ref->val.value = value;
-        }
+	initRefTable();
+	ref = refTable->getReference(topic);
+	if (ref->resolved) {
+		strcpy(bufStr, "Redefinition of ");
+		strcat(bufStr, ref->topic);
+		error(bufStr);
+	} else {
+		doFixUps(ref->val.fixUpList, value, s);
+		disposeFixUps(ref->val.fixUpList);
+		ref->resolved = True;
+		ref->val.value = value;
+	}
 }
 
 //======================= Help file parser =============================//
 
-void skipWhite( char *line,int& i )
+void skipWhite(char *line, int &i)
 {
-    while (i <= (int)strlen(line) && ((line[i] == ' ') || (line[i] == 8)))
-        ++i;
+	while (i <= (int)strlen(line) && ((line[i] == ' ') || (line[i] == 8)))
+		++i;
 }
 
-int checkForValidChar( char ch )
+int checkForValidChar(char ch)
 {
-    if (isalnum(ch) || (ch  == '_'))
-        return(0);
-    return(-1);
+	if (isalnum(ch) || (ch == '_'))
+		return (0);
+	return (-1);
 }
 
-
-void skipToNonWord( char *line, int& i )
+void skipToNonWord(char *line, int &i)
 {
-    while (i <= (int)strlen(line) && (!checkForValidChar(line[i])))
-        ++i;
+	while (i <= (int)strlen(line) && (!checkForValidChar(line[i])))
+		++i;
 }
 
 //----- getWord --------------------------------------------------------//
 //   Extract the next word from the given line at offset i.             //
 //----------------------------------------------------------------------//
 
-char *getWord( char *line, int &i )
+char *getWord(char *line, int &i)
 {
-    int j;
-    char *strptr;
-    static char getword[MAXSIZE];	// SS
+	int j;
+	char *strptr;
+	static char getword[MAXSIZE];	// SS
 
-    skipWhite(line,i);
-    j = i;
-    if (j > (int)strlen(line))
-        strcpy(getword,"");
-    else
-        {
-        ++i;
-        if (!checkForValidChar(line[j]))
-            skipToNonWord(line, i);
-        strptr = line + j;
-        strncpy(getword,strptr,i - j);
-        getword[i-j] = '\0';
-        }
-    return getword;
+	skipWhite(line, i);
+	j = i;
+	if (j > (int)strlen(line))
+		strcpy(getword, "");
+	else {
+		++i;
+		if (!checkForValidChar(line[j]))
+			skipToNonWord(line, i);
+		strptr = line + j;
+		strncpy(getword, strptr, i - j);
+		getword[i - j] = '\0';
+	}
+	return getword;
 }
 
 //---- topicDefinition -------------------------------------------------//
 //  Extracts the next topic definition from the given line at i.        //
 //----------------------------------------------------------------------//
 
-TTopicDefinition::TTopicDefinition( char *aTopic, ushort aValue )
+TTopicDefinition::TTopicDefinition(char *aTopic, ushort aValue)
 {
-    topic = newStr(aTopic);
-    value = aValue;
-    next = 0;
+	topic = newStr(aTopic);
+	value = aValue;
+	next = 0;
 }
 
 TTopicDefinition::~TTopicDefinition()
 {
-    delete topic;
-    if (next != 0)
-        delete next;
+	delete topic;
+	if (next != 0)
+		delete next;
 }
 
 int is_numeric(char *str)
 {
-    int i;
+	int i;
 
-    for(i = 0; i < (int)strlen(str); ++i)
-        if (!isdigit(str[i]))
-            return 0;
-    return 1;
+	for (i = 0; i < (int)strlen(str); ++i)
+		if (!isdigit(str[i]))
+			return 0;
+	return 1;
 }
 
-TTopicDefinition *topicDefinition( char *line, int& i )
+TTopicDefinition *topicDefinition(char *line, int &i)
 {
-    int j;
-    char topic[MAXSTRSIZE], w[MAXSTRSIZE], *endptr;
-    static int helpCounter = 2; //1 is hcDragging
+	int j;
+	char topic[MAXSTRSIZE], w[MAXSTRSIZE], *endptr;
+	static int helpCounter = 2;	//1 is hcDragging
 
-    strcpy(topic,getWord(line, i));
-    if (strlen(topic) == 0)
-        {
-        error("Expected topic definition");
-        return(0);
-        }
-    else
-        {
-        j = i;
-        strcpy(w,getWord(line, j));
-        if (strcmp(w,"=") == 0)
-            {
-            i = j;
-            strcpy(w,getWord(line, i));
-            if (!is_numeric(w))
-                error("Expected numeric");
-            else
-                helpCounter = (int) strtol(w, &endptr,10);
-            }
-        else
-            ++helpCounter;
-        return(new TTopicDefinition(topic, helpCounter));
-        }
+	strcpy(topic, getWord(line, i));
+	if (strlen(topic) == 0) {
+		error("Expected topic definition");
+		return (0);
+	} else {
+		j = i;
+		strcpy(w, getWord(line, j));
+		if (strcmp(w, "=") == 0) {
+			i = j;
+			strcpy(w, getWord(line, i));
+			if (!is_numeric(w))
+				error("Expected numeric");
+			else
+				helpCounter = (int)strtol(w, &endptr, 10);
+		} else
+			++helpCounter;
+		return (new TTopicDefinition(topic, helpCounter));
+	}
 }
 
 //---- topicDefinitionList----------------------------------------------//
 //  Extracts a list of topic definitions from the given line at i.      //
 //----------------------------------------------------------------------//
 
-TTopicDefinition *topicDefinitionList( char *line, int &i )
+TTopicDefinition *topicDefinitionList(char *line, int &i)
 {
-    int j;
-    char w[MAXSTRSIZE];
-    TTopicDefinition *topicList, *p;
+	int j;
+	char w[MAXSTRSIZE];
+	TTopicDefinition *topicList, *p;
 
-    j = i;
-    topicList = 0;
-    do  {
-        i = j;
-        p = topicDefinition(line, i);
-        if (p == 0 )
-            {
-            if (topicList != 0)
-                delete topicList;
-            return(0);
-            }
-        p->next = topicList;
-        topicList = p;
-        j = i;
-        strcpy(w,getWord(line, j));
-        } while ( strcmp(w,",") == 0);
-    return(topicList);
+	j = i;
+	topicList = 0;
+	do {
+		i = j;
+		p = topicDefinition(line, i);
+		if (p == 0) {
+			if (topicList != 0)
+				delete topicList;
+			return (0);
+		}
+		p->next = topicList;
+		topicList = p;
+		j = i;
+		strcpy(w, getWord(line, j));
+	} while (strcmp(w, ",") == 0);
+	return (topicList);
 }
 
 //---- topicHeader -----------------------------------------------------//
 //  Parse a Topic header                                                //
 //----------------------------------------------------------------------//
 
-TTopicDefinition *topicHeader( char *line )
+TTopicDefinition *topicHeader(char *line)
 {
-    int i;
-    char w[75];
+	int i;
+	char w[75];
 
-    i = 0;
-    strcpy(w, getWord(line, i));
-    if (strcmp(w, commandChar) != 0)
-        return(0);
-    strcpy(w, getWord(line, i));
-    if (strcasecmp(w, "TOPIC") == 0)
-        return topicDefinitionList(line, i);
-    else
-        {
-        error("TOPIC expected");
-        return(0);
-        }
+	i = 0;
+	strcpy(w, getWord(line, i));
+	if (strcmp(w, commandChar) != 0)
+		return (0);
+	strcpy(w, getWord(line, i));
+	if (strcasecmp(w, "TOPIC") == 0)
+		return topicDefinitionList(line, i);
+	else {
+		error("TOPIC expected");
+		return (0);
+	}
 }
 
-void addToBuffer( char *line, Boolean wrapping )
+void addToBuffer(char *line, Boolean wrapping)
 {
-    uchar *bufptr;
+	uchar *bufptr;
 
-    bufptr = &buffer[ofs];
-    ofs += strlen(line);
-    if( ofs > bufferSize )
-        error("Text too long");
-    strcpy((char *)bufptr, line);
-    bufptr += (strlen(line));
-    if (wrapping == False)
-        *bufptr = '\n';
-    else
-        *bufptr = ' ';
-    ofs++;
+	bufptr = &buffer[ofs];
+	ofs += strlen(line);
+	if (ofs > bufferSize)
+		error("Text too long");
+	strcpy((char *)bufptr, line);
+	bufptr += (strlen(line));
+	if (wrapping == False)
+		*bufptr = '\n';
+	else
+		*bufptr = ' ';
+	ofs++;
 }
 
-
-void addXRef( char *xRef, int offset, uchar length, TCrossRefNode *&xRefs )
+void addXRef(char *xRef, int offset, uchar length, TCrossRefNode * &xRefs)
 {
-    TCrossRefNode *p, *pp, *prev;
+	TCrossRefNode *p, *pp, *prev;
 
-    p =  new TCrossRefNode;
-    p->topic = newStr(xRef);
-    p->offset = offset;
-    p->length = length;
-    p->next = 0;
-    if (xRefs == 0)
-        xRefs = p;
-    else
-        {
-        pp = xRefs;
-        prev = pp;
-        while (pp != 0)
-            {
-            prev = pp;
-            pp = pp->next;
-            }
-        prev->next = p;
-        }
+	p = new TCrossRefNode;
+	p->topic = newStr(xRef);
+	p->offset = offset;
+	p->length = length;
+	p->next = 0;
+	if (xRefs == 0)
+		xRefs = p;
+	else {
+		pp = xRefs;
+		prev = pp;
+		while (pp != 0) {
+			prev = pp;
+			pp = pp->next;
+		}
+		prev->next = p;
+	}
 }
 
-void replaceSpacesWithFF( char *line, int start, uchar length )
+void replaceSpacesWithFF(char *line, int start, uchar length)
 {
-    int i;
+	int i;
 
-    for(i = start; i <= (start + length); ++i)
-        if (line[i] == ' ')
-            line[i] = 0xFF;
+	for (i = start; i <= (start + length); ++i)
+		if (line[i] == ' ')
+			line[i] = 0xFF;
 }
 
 void strdel(char *string, int pos, int len)
 {
-    char tempstr[MAXSTRSIZE];
-    char *strptr;
+	char tempstr[MAXSTRSIZE];
+	char *strptr;
 
-    strncpy(tempstr, string, pos);
-    tempstr[pos] = 0;
-    strptr = string + pos + len;
-    strcat(tempstr, strptr);
-    strcpy(string, tempstr);
+	strncpy(tempstr, string, pos);
+	tempstr[pos] = 0;
+	strptr = string + pos + len;
+	strcat(tempstr, strptr);
+	strcpy(string, tempstr);
 }
 
-void scanForCrossRefs( char *line, int& offset, TCrossRefNode *&xRefs )
+void scanForCrossRefs(char *line, int &offset, TCrossRefNode * &xRefs)
 {
-    int i;
-    char begXRef = '{';
-    char endXRef = '}';
-    char aliasCh = ':';
-    char *begPtr, *endPtr, *aliasPtr, *tempPtr;
-    int begPos, endPos, aliasPos;
-    char xRef[75];
+	int i;
+	char begXRef = '{';
+	char endXRef = '}';
+	char aliasCh = ':';
+	char *begPtr, *endPtr, *aliasPtr, *tempPtr;
+	int begPos, endPos, aliasPos;
+	char xRef[75];
 
-    i = 0;
-    do  {
-        if ((begPtr = strchr(line+i,begXRef)) == 0)
-            i = 0;
-        else
-            {
-            begPos = (int)(begPtr - (line+i));
-            i += begPos + 1;
-//	    if (line[i + 1] == begXRef)
-	    if (line[i] == begXRef)		// S.I. Clushin
-		{
-                strdel(line, i, 1);
-                ++i;
-                }
-            else
-                {
-                if ((endPtr = strchr(line+i,endXRef)) == 0)
-                    {
-                    error("Unterminated topic reference.");
-                    ++i;
-                    }
-                else
-                    {
-                    endPos = (int)(endPtr - (line + i));
-                    aliasPtr = strchr(line+i, aliasCh);
-                    if ((aliasPtr == 0) || (aliasPtr > endPtr))
-                        {
-                        tempPtr = line + i;
-                        strncpy(xRef, tempPtr, endPos);
-                        xRef[endPos] = 0;
-                        addXRef(xRef, (offset + ofs + i), endPos, xRefs);
-                        }
-                    else
-                        {
-                        aliasPos = (int)(aliasPtr - (line + i));
-                        tempPtr = line ;
-                        tempPtr += aliasPos+i+1;
-                        strncpy(xRef, tempPtr, (endPos - aliasPos -1));
-                        xRef[endPos - aliasPos -1] = 0;
-                        addXRef(xRef, (offset + ofs + i), (aliasPos), xRefs);
-                        strdel(line, (i + aliasPos), (endPos - aliasPos));
-                        endPtr = aliasPtr;
-                        endPos = aliasPos;
-                        }
-                    replaceSpacesWithFF(line, i, endPos -1);
-                    strdel(line, i + endPos, 1);
-                    strdel(line, i-1, 1);
-                    i += (endPos - 2);
-                    }
-                }
-            }
+	i = 0;
+	do {
+		if ((begPtr = strchr(line + i, begXRef)) == 0)
+			i = 0;
+		else {
+			begPos = (int)(begPtr - (line + i));
+			i += begPos + 1;
+//                      if (line[i + 1] == begXRef)
+			if (line[i] == begXRef)	// S.I. Clushin
+			{
+				strdel(line, i, 1);
+				++i;
+			} else {
+				if ((endPtr = strchr(line + i, endXRef)) == 0) {
+					error("Unterminated topic reference.");
+					++i;
+				} else {
+					endPos = (int)(endPtr - (line + i));
+					aliasPtr = strchr(line + i, aliasCh);
+					if ((aliasPtr == 0)
+					    || (aliasPtr > endPtr)) {
+						tempPtr = line + i;
+						strncpy(xRef, tempPtr, endPos);
+						xRef[endPos] = 0;
+						addXRef(xRef,
+							(offset + ofs + i),
+							endPos, xRefs);
+					} else {
+						aliasPos =
+						    (int)(aliasPtr -
+							  (line + i));
+						tempPtr = line;
+						tempPtr += aliasPos + i + 1;
+						strncpy(xRef, tempPtr,
+							(endPos - aliasPos -
+							 1));
+						xRef[endPos - aliasPos - 1] = 0;
+						addXRef(xRef,
+							(offset + ofs + i),
+							(aliasPos), xRefs);
+						strdel(line, (i + aliasPos),
+						       (endPos - aliasPos));
+						endPtr = aliasPtr;
+						endPos = aliasPos;
+					}
+					replaceSpacesWithFF(line, i,
+							    endPos - 1);
+					strdel(line, i + endPos, 1);
+					strdel(line, i - 1, 1);
+					i += (endPos - 2);
+				}
+			}
+		}
 
-        } while (i != 0);
+	} while (i != 0);
 }
 
-
-Boolean isEndParagraph( State state )
+Boolean isEndParagraph(State state)
 {
-    int flag;
-    int wrapping = 1;
-    int notWrapping = 2;
+	int flag;
+	int wrapping = 1;
+	int notWrapping = 2;
 
-    flag =
-          ((line[0] == 0) ||
-           (line[0] == commandChar[0]) ||
-       (line[0] == 26) ||
-           ((line[0] ==  ' ') && (state == wrapping)) ||
-           ((line[0] != ' ') && (state == notWrapping)));
-    if (flag)
-        return(True);
-    else
-        return(False);
+	flag =
+	    ((line[0] == 0) ||
+	     (line[0] == commandChar[0]) ||
+	     (line[0] == 26) ||
+	     ((line[0] == ' ') && (state == wrapping)) ||
+	     ((line[0] != ' ') && (state == notWrapping)));
+	if (flag)
+		return (True);
+	else
+		return (False);
 }
 
 //---- readParagraph ----------------------------------------------------//
@@ -684,200 +660,188 @@ Boolean isEndParagraph( State state )
 // references and updates the xRefs variable.                            //
 //-----------------------------------------------------------------------//
 
-TParagraph *readParagraph( std::fstream& textFile, int& offset, TCrossRefNode *&xRefs )
+TParagraph *readParagraph(std::fstream & textFile, int &offset,
+			  TCrossRefNode * &xRefs)
 {
-    State state;
-    Boolean flag;
-    char line[MAXSTRSIZE];
-    TParagraph *p;
+	State state;
+	Boolean flag;
+	char line[MAXSTRSIZE];
+	TParagraph *p;
 
-    ofs = 0;
-    state = undefined;
-    strcpy(line, getLine(textFile));
-    while (strlen(line) == 0)
-        {
-        flag = (state == wrapping)? True: False;
-        addToBuffer(line, flag);
-        strcpy(line, getLine(textFile));
-        }
+	ofs = 0;
+	state = undefined;
+	strcpy(line, getLine(textFile));
+	while (strlen(line) == 0) {
+		flag = (state == wrapping) ? True : False;
+		addToBuffer(line, flag);
+		strcpy(line, getLine(textFile));
+	}
 
-    if (isEndParagraph(state) == True)
-        {
-        unGetLine(line);
-        return(0);
-        }
-    while (isEndParagraph(state) == False)
-        {
-        if (state == undefined )
-    	    {
-            if (line[0] == ' ')
-                state = notWrapping;
-            else
-                state = wrapping;
-            }
-        scanForCrossRefs(line, offset, xRefs);
-        flag = (state == wrapping)? True: False;
-        addToBuffer(line, flag);
-        strcpy(line, getLine(textFile));
-        }
-    unGetLine(line);
-    p = new TParagraph;
-    p->size = ofs;
-    p->wrap = (state == wrapping)? True: False;
-    p->text = new char[ofs];
-    memmove(p->text, buffer, ofs);
-    p->next = 0;
-    offset += ofs;
-    return(p);
+	if (isEndParagraph(state) == True) {
+		unGetLine(line);
+		return (0);
+	}
+	while (isEndParagraph(state) == False) {
+		if (state == undefined) {
+			if (line[0] == ' ')
+				state = notWrapping;
+			else
+				state = wrapping;
+		}
+		scanForCrossRefs(line, offset, xRefs);
+		flag = (state == wrapping) ? True : False;
+		addToBuffer(line, flag);
+		strcpy(line, getLine(textFile));
+	}
+	unGetLine(line);
+	p = new TParagraph;
+	p->size = ofs;
+	p->wrap = (state == wrapping) ? True : False;
+	p->text = new char[ofs];
+	memmove(p->text, buffer, ofs);
+	p->next = 0;
+	offset += ofs;
+	return (p);
 }
 
-void handleCrossRefs( opstream& s, int xRefValue )
+void handleCrossRefs(opstream & s, int xRefValue)
 {
-    TCrossRefNode *p;
+	TCrossRefNode *p;
 
-    for(p = xRefs; (xRefValue > 0) ; --xRefValue)
-        {
-        if (p != 0)
-            p = p->next;
-        }
-    if (p != 0)
-        recordReference((p->topic), s);
+	for (p = xRefs; (xRefValue > 0); --xRefValue) {
+		if (p != 0)
+			p = p->next;
+	}
+	if (p != 0)
+		recordReference((p->topic), s);
 }
 
-void skipBlankLines( std::fstream& s )
+void skipBlankLines(std::fstream & s)
 {
-    char line[256];
+	char line[256];
 
-    line[0] = 0;
-    while (line[0] == 0)
-        strcpy(line,getLine(s));
-    unGetLine(line);
+	line[0] = 0;
+	while (line[0] == 0)
+		strcpy(line, getLine(s));
+	unGetLine(line);
 }
 
 int xRefCount()
 {
-    int i;
-    TCrossRefNode *p;
+	int i;
+	TCrossRefNode *p;
 
-    i = 0;
-    for (p=xRefs; (p != 0); p=p->next)
-        ++i;
-    return(i);
+	i = 0;
+	for (p = xRefs; (p != 0); p = p->next)
+		++i;
+	return (i);
 }
 
-void disposeXRefs( TCrossRefNode  *p )
+void disposeXRefs(TCrossRefNode * p)
 {
-    TCrossRefNode *q;
+	TCrossRefNode *q;
 
-    while (p != 0)
-        {
-        q = p;
-        p = p->next;
-        delete q->topic;
-        delete q;
-        }
+	while (p != 0) {
+		q = p;
+		p = p->next;
+		delete q->topic;
+		delete q;
+	}
 }
 
-void recordTopicDefinitions( TTopicDefinition *p, THelpFile& helpFile )
+void recordTopicDefinitions(TTopicDefinition * p, THelpFile & helpFile)
 {
-    while (p != 0)
-        {
-        resolveReference(p->topic, p->value, *(helpFile.stream));
-        helpFile.recordPositionInIndex(p->value);
-        p = p->next;
-        }
+	while (p != 0) {
+		resolveReference(p->topic, p->value, *(helpFile.stream));
+		helpFile.recordPositionInIndex(p->value);
+		p = p->next;
+	}
 }
 
 //---- readTopic -------------------------------------------------------//
 // Read a topic from the source file and write it to the help file      //
 //----------------------------------------------------------------------//
 
-void readTopic( std::fstream& textFile, THelpFile& helpFile )
+void readTopic(std::fstream & textFile, THelpFile & helpFile)
 {
-    TParagraph *p;
-    THelpTopic *topic;
-    TTopicDefinition *topicDef;
-    int i, j, offset;
-    TCrossRef ref;
-    TCrossRefNode  *refNode;
+	TParagraph *p;
+	THelpTopic *topic;
+	TTopicDefinition *topicDef;
+	int i, j, offset;
+	TCrossRef ref;
+	TCrossRefNode *refNode;
 
-    // Get screen command
-    skipBlankLines(textFile);
-    strcpy(line, getLine(textFile));
+	// Get screen command
+	skipBlankLines(textFile);
+	strcpy(line, getLine(textFile));
 
-    topicDef = topicHeader(line);
+	topicDef = topicHeader(line);
 
-    topic = new THelpTopic;
+	topic = new THelpTopic;
 
-    // read paragraphs
-    xRefs = 0;
-    offset = 0;
-    p = readParagraph(textFile, offset, xRefs);
-    while (p != 0)
-        {
-        topic->addParagraph(p);
-        p = readParagraph(textFile, offset, xRefs);
-        }
+	// read paragraphs
+	xRefs = 0;
+	offset = 0;
+	p = readParagraph(textFile, offset, xRefs);
+	while (p != 0) {
+		topic->addParagraph(p);
+		p = readParagraph(textFile, offset, xRefs);
+	}
 
-    i = xRefCount();
-    topic->setNumCrossRefs(i);
-    refNode = xRefs;
-    for( j = 0; j < i; ++j)
-        {
-        ref.offset = refNode->offset;
-        ref.length = refNode->length;
-        ref.ref = j;
-        topic->setCrossRef(j, ref);
-        refNode = refNode->next;
-        }
+	i = xRefCount();
+	topic->setNumCrossRefs(i);
+	refNode = xRefs;
+	for (j = 0; j < i; ++j) {
+		ref.offset = refNode->offset;
+		ref.length = refNode->length;
+		ref.ref = j;
+		topic->setCrossRef(j, ref);
+		refNode = refNode->next;
+	}
 
-    recordTopicDefinitions(topicDef, helpFile);
+	recordTopicDefinitions(topicDef, helpFile);
 
-    crossRefHandler = handleCrossRefs;
-    helpFile.putTopic(topic);
+	crossRefHandler = handleCrossRefs;
+	helpFile.putTopic(topic);
 
+	if (topic != 0)
+		delete topic;
+	if (topicDef != 0)
+		delete topicDef;
+	disposeXRefs(xRefs);
 
-    if (topic != 0)
-    delete topic;
-    if (topicDef != 0)
-    delete topicDef;
-    disposeXRefs(xRefs);
-
-    skipBlankLines(textFile);
+	skipBlankLines(textFile);
 }
 
 void doWriteSymbol(void *p, void *p1)
 {
-    char str[80];
+	char str[80];
 
-    TProtectedStream *symbFile = (TProtectedStream *)p1;
-    if (((TReference *)p)->resolved )
-        {
-    	    sprintf(str, "  hc%-20s = %d,\n",
-    		    (char *)((TReference *)p)->topic,
-    		    ((TReference *)p)->val.value );
-	    *symbFile << str;
-        }
-    else
-        {
-    	    sprintf(str, "Unresolved forward reference \"%s\"",
-    		    ((TReference *)p)->topic );
-    	    warning(str);
-        }
+	TProtectedStream *symbFile = (TProtectedStream *) p1;
+	if (((TReference *) p)->resolved) {
+		sprintf(str, "  hc%-20s = %d,\n",
+			(char *)((TReference *) p)->topic,
+			((TReference *) p)->val.value);
+		*symbFile << str;
+	} else {
+		sprintf(str, "Unresolved forward reference \"%s\"",
+			((TReference *) p)->topic);
+		warning(str);
+	}
 }
 
 //---- writeSymbFile ---------------------------------------------------//
 // Write the .H file containing all screen titles as constants.         //
 //----------------------------------------------------------------------//
 
-void writeSymbFile( TProtectedStream *symbFile )
+void writeSymbFile(TProtectedStream * symbFile)
 {
-    char header1[] = "const int\n";
+	char header1[] = "const int\n";
 
-    *symbFile << header1;
-    refTable->forEach(doWriteSymbol, symbFile);
-    symbFile->seekp(-2L, std::ios::end);
-    *symbFile << ";\n";
+	*symbFile << header1;
+	refTable->forEach(doWriteSymbol, symbFile);
+	symbFile->seekp(-2L, std::ios::end);
+	*symbFile << ";\n";
 
 }
 
@@ -885,18 +849,17 @@ void writeSymbFile( TProtectedStream *symbFile )
 // Compile the given stream, and output a help file.                    //
 //----------------------------------------------------------------------//
 
-void processText( TProtectedStream& textFile,
-                  fpstream& helpFile,
-                  TProtectedStream& symbFile )
+void processText(TProtectedStream & textFile,
+		 fpstream & helpFile, TProtectedStream & symbFile)
 {
-    THelpFile *helpRez;
+	THelpFile *helpRez;
 
-    helpRez =  new THelpFile(helpFile);
+	helpRez = new THelpFile(helpFile);
 
-    while (!textFile.eof())
-        readTopic(textFile, *helpRez);
-    writeSymbFile(&symbFile);
-    delete helpRez;
+	while (!textFile.eof())
+		readTopic(textFile, *helpRez);
+	writeSymbFile(&symbFile);
+	delete helpRez;
 }
 
 //---- checkOverwrite --------------------------------------------------//
@@ -904,64 +867,61 @@ void processText( TProtectedStream& textFile,
 // it's ok to overwrite it.                                             //
 //----------------------------------------------------------------------//
 
-void checkOverwrite( char *fName )
+void checkOverwrite(char *fName)
 {
-    if (fExists(fName))
-        {
-	  std::cerr << "File already exists: " << fName << ".  Overwrite? (y/n) ";
-	  char ch = ({ char s[MAXSTRSIZE]; std::cin >> s; s[0]; });
-        if( toupper(ch) != 'Y' )
-            exit(1);
-        }
+	if (fExists(fName)) {
+		std::cerr << "File already exists: " << fName <<
+		    ".  Overwrite? (y/n) ";
+		char ch = ({ char s[MAXSTRSIZE]; std::cin >> s; s[0];});
+		if (toupper(ch) != 'Y')
+			exit(1);
+	}
 }
 
 //========================== Program Block ==========================//
 
 int main(int argc, char **argv)
 {
-    char* textName;
-    char* symbName;
-    fpstream* helpStrm;
+	char *textName;
+	char *symbName;
+	fpstream *helpStrm;
 
-    // Banner messages
-    char initialText[] = "Help Compiler  Version 1.0  Copyright (c) 1991"
-                         " Borland International.\n";
-    char helpText[] =
-       "\n  Syntax  TVHC <Help text> <Help file> <Symbol file>\n"
-       "\n"
-       "     Help text   = Help file source\n"
-       "     Help file   = Compiled help file\n"
-       "     Symbol file = An include file containing all the screen names as const's\n";
+	// Banner messages
+	char initialText[] = "Help Compiler Version 1.0 Copyright (c) 1991"
+	    " Borland International.\n";
+	char helpText[] =
+	    "\n  Syntax  TVHC <Help text> <Help file> <Symbol file>\n"
+	    "\n"
+	    "     Help text   = Help file source\n"
+	    "     Help file   = Compiled help file\n"
+	    "     Symbol file = An include file containing all the screen names as const's\n";
 
-    char bufStr[MAXSTRSIZE];
+	char bufStr[MAXSTRSIZE];
 
-    std::cout << initialText;
-    if (argc != 4)
-        {
-	  std::cout << helpText;
-        exit(1);
-        }
+	std::cout << initialText;
+	if (argc != 4) {
+		std::cout << helpText;
+		exit(1);
+	}
+	//  Calculate file names
+	textName = argv[1];
+	if (!fExists(textName)) {
+		strcpy(bufStr, "File ");
+		strcat(bufStr, textName);
+		strcat(bufStr, " not found.");
+		error(bufStr);
+	}
 
-    //  Calculate file names
-    textName = argv[1];
-    if (!fExists(textName))
-        {
-        strcpy(bufStr,"File ");
-        strcat(bufStr,textName);
-        strcat(bufStr," not found.");
-        error(bufStr);
-        }
+	helpName = argv[2];
+	checkOverwrite(helpName);
 
-    helpName = argv[2];
-    checkOverwrite( helpName );
+	symbName = argv[3];
+	checkOverwrite(symbName);
 
-    symbName = argv[3];
-    checkOverwrite( symbName );
+	TProtectedStream textStrm(textName, std::ios::in);
+	TProtectedStream symbStrm(symbName, std::ios::out | std::ios::trunc);
 
-    TProtectedStream textStrm(textName, std::ios::in);
-    TProtectedStream symbStrm(symbName, std::ios::out | std::ios::trunc);
-
-    helpStrm =  new fpstream(helpName, std::ios::out | std::ios::trunc);
-    processText(textStrm, *helpStrm, symbStrm);
-    return 0;
+	helpStrm = new fpstream(helpName, std::ios::out | std::ios::trunc);
+	processText(textStrm, *helpStrm, symbStrm);
+	return 0;
 }

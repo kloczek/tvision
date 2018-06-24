@@ -21,106 +21,101 @@
 
 #include "helpbase.h"
 
-
 const int MAXSIZE = 80;
-const int MAXSTRSIZE=256;
+const int MAXSTRSIZE = 256;
 const char commandChar[] = ".";
 const int bufferSize = 4096;
 
 typedef enum State { undefined, wrapping, notWrapping } _State;
 
-class TProtectedStream : public std::fstream
-{
+class TProtectedStream:public std::fstream {
 
-public:
+      public:
 
-    TProtectedStream( char *aFileName, std::ios::openmode aMode );
+	TProtectedStream(char *aFileName, std::ios::openmode aMode);
 
-private:
+      private:
 
-    char  fileName[MAXSIZE];
-    ushort mode;
+	char fileName[MAXSIZE];
+	ushort mode;
 
 };
 
 // Topic Reference
 
-struct TFixUp
-{
+struct TFixUp {
 
-    long pos;
-    TFixUp *next;
+	long pos;
+	TFixUp *next;
 
 };
 
-union Content
-{
+union Content {
 
 //  ushort value;
-    int value;		// SC: must be the same type as TCrossRef::ref!
-    TFixUp *fixUpList;
+	int value;		// SC: must be the same type as TCrossRef::ref!
+	TFixUp *fixUpList;
 
 };
 
-struct TReference
-{
+struct TReference {
 
-    char *topic;
-    Boolean resolved;
-    Content val;
-
-};
-
-class TRefTable : public TSortedCollection
-{
-
-public:
-
-    TRefTable( ccIndex aLimit, ccIndex aDelta );
-
-    virtual int compare( void *key1,void *key2 );
-    virtual void freeItem( void *item );
-    TReference *getReference( char *topic );
-    virtual void *keyOf( void *item );
-
-private:
-
-    virtual void *readItem( ipstream& ) { return 0; };
-    virtual void writeItem( void *, opstream& ) {};
+	char *topic;
+	Boolean resolved;
+	Content val;
 
 };
 
-struct TCrossRefNode
-{
+class TRefTable:public TSortedCollection {
 
-    char *topic;
-    int offset;
-    uchar length;
-    TCrossRefNode *next;
+      public:
 
-};
+	TRefTable(ccIndex aLimit, ccIndex aDelta);
 
-class TTopicDefinition : public TObject
-{
+	virtual int compare(void *key1, void *key2);
+	virtual void freeItem(void *item);
+	TReference *getReference(char *topic);
+	virtual void *keyOf(void *item);
 
-public:
+      private:
 
-    TTopicDefinition(char *aTopic, ushort aValue);
-    ~TTopicDefinition(void);
-
-    char *topic;
-    ushort value;
-    TTopicDefinition *next;
+	virtual void *readItem(ipstream &) {
+		return 0;
+	};
+	virtual void writeItem(void *, opstream &) {
+	};
 
 };
 
-char* helpName;
+struct TCrossRefNode {
+
+	char *topic;
+	int offset;
+	uchar length;
+	TCrossRefNode *next;
+
+};
+
+class TTopicDefinition:public TObject {
+
+      public:
+
+	TTopicDefinition(char *aTopic, ushort aValue);
+	~TTopicDefinition(void);
+
+	char *topic;
+	ushort value;
+	TTopicDefinition *next;
+
+};
+
+char *helpName;
 uchar buffer[bufferSize];
 int ofs;
 TRefTable *refTable = 0;
-TCrossRefNode  *xRefs;
+TCrossRefNode *xRefs;
 char line[MAXSTRSIZE] = "";
 Boolean lineInBuffer = False;
 int lineCount = 0;
 
-#endif  // TV_INC_TVHC_H
+#endif // TV_INC_TVHC_H
