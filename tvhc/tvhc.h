@@ -114,4 +114,42 @@ char line[MAXSTRSIZE] = "";
 Boolean lineInBuffer = False;
 int lineCount = 0;
 
+Boolean fExists(char *fileName);
+char *getLine(std::fstream & s);
+void unGetLine(char *s);
+void prntMsg(const char *pref, const char *text);
+void warning(const char *text);
+void disposeFixUps(TFixUp * &p);
+void initRefTable();
+void recordReference(char *topic, opstream & s);
+void doFixUps(TFixUp * p, ushort value, fpstream & s);
+void resolveReference(char *topic, ushort value, fpstream & s);
+void skipWhite(char *line, int &i);
+int checkForValidChar(char ch);
+void skipToNonWord(char *line, int &i);
+char *getWord(char *line, int &i);
+int is_numeric(char *str);
+TTopicDefinition *topicDefinition(char *line, int &i);
+TTopicDefinition *topicDefinitionList(char *line, int &i);
+TTopicDefinition *topicHeader(char *line);
+void addToBuffer(char *line, Boolean wrapping);
+void addXRef(char *xRef, int offset, uchar length, TCrossRefNode * &xRefs);
+void replaceSpacesWithFF(char *line, int start, uchar length);
+void strdel(char *string, int pos, int len);
+void scanForCrossRefs(char *line, int &offset, TCrossRefNode * &xRefs);
+Boolean isEndParagraph(State state);
+TParagraph *readParagraph(std::fstream & textFile, int &offset,
+			  TCrossRefNode * &xRefs);
+void handleCrossRefs(opstream & s, int xRefValue);
+void skipBlankLines(std::fstream & s);
+int xRefCount();
+void disposeXRefs(TCrossRefNode * p);
+void recordTopicDefinitions(TTopicDefinition * p, THelpFile & helpFile);
+void doWriteSymbol(void *p, void *p1);
+void readTopic(std::fstream & textFile, THelpFile & helpFile);
+void writeSymbFile(TProtectedStream * symbFile);
+void processText(TProtectedStream & textFile,
+		 fpstream & helpFile, TProtectedStream & symbFile);
+void checkOverwrite(char *fName);
+
 #endif // TV_INC_TVHC_H

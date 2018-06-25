@@ -12,9 +12,9 @@
      98 -Wnon-virtual-dtor
      79 -Wmismatched-tags
      78 -Wglobal-constructors
-     71 -Wmissing-prototypes
      59 -Wweak-vtables
      52 -Wshorten-64-to-32
+     36 -Wmissing-prototypes
      36 -Wexit-time-destructors
      29 -Woverloaded-virtual
      27 -Wcast-qual
@@ -9658,7 +9658,7 @@ In file included from ../../../tvision/tvtext.cc:43:
 In file included from ../../../tvision/tv.h:695:
 ../../../tvision/outline.h:33:7: warning: 'TNode' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 ../../../tvision/outline.h:33:7: warning: 'TNode' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
-In file included from ../../../tvhc/tvhc.cc:88:
+In file included from ../../../tvhc/tvhc.cc:83:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -9666,7 +9666,7 @@ In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:404:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:428:9: warning: initializer for virtual base class 'TNSCollection' of abstract class 'TNSSortedCollection' will never be used [-Wabstract-vbase-init]
 ../../../tvision/tvobjs.h:471:17: note: unimplemented pure virtual method 'compare' in 'TNSSortedCollection'
-In file included from ../../../tvhc/tvhc.cc:88:
+In file included from ../../../tvhc/tvhc.cc:83:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:32:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -9680,7 +9680,7 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:908:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:949:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:1107:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvhc/tvhc.cc:88:
+In file included from ../../../tvhc/tvhc.cc:83:
 In file included from ../../../tvision/tv.h:643:
 ../../../tvision/objects.h:319:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/objects.h:417:20: warning: use of old-style cast [-Wold-style-cast]
@@ -9692,26 +9692,26 @@ In file included from ../../../tvision/tv.h:643:
 ../../../tvision/objects.h:518:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/objects.h:524:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/objects.h:529:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tvhc/tvhc.cc:88:
+In file included from ../../../tvhc/tvhc.cc:83:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvhc/tvhc.cc:88:
+In file included from ../../../tvhc/tvhc.cc:83:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvhc/tvhc.cc:88:
+In file included from ../../../tvhc/tvhc.cc:83:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tvhc/tvhc.cc:90:
-In file included from ../../../tvhc/tvhc.h:20:
+In file included from ../../../tvhc/tvhc.cc:85:
+In file included from ../../../tvhc/tvhc.h:16:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvhc/tvhc.cc:90:
-In file included from ../../../tvhc/tvhc.h:20:
+In file included from ../../../tvhc/tvhc.cc:85:
+In file included from ../../../tvhc/tvhc.h:16:
 In file included from ../../../tvision/tv.h:643:
 ../../../tvision/objects.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../tvhc/tvhc.cc:90:
-In file included from ../../../tvhc/tvhc.h:22:
+In file included from ../../../tvhc/tvhc.cc:85:
+In file included from ../../../tvhc/tvhc.h:18:
 ../../../tvision/helpbase.h:101:36: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/helpbase.h:185:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:190:20: warning: use of old-style cast [-Wold-style-cast]
@@ -9722,181 +9722,146 @@ In file included from ../../../tvhc/tvhc.h:22:
 ../../../tvision/helpbase.h:267:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:273:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:278:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:88:54: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tvhc/tvhc.h:89:51: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tvhc/tvhc.h:88:50: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.h:117:7: warning: no previous extern declaration for non-static variable 'helpName' [-Wmissing-variable-declarations]
-../../../tvhc/tvhc.h:118:7: warning: no previous extern declaration for non-static variable 'buffer' [-Wmissing-variable-declarations]
-../../../tvhc/tvhc.h:119:5: warning: no previous extern declaration for non-static variable 'ofs' [-Wmissing-variable-declarations]
-../../../tvhc/tvhc.h:120:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.h:120:12: warning: no previous extern declaration for non-static variable 'refTable' [-Wmissing-variable-declarations]
-../../../tvhc/tvhc.h:121:17: warning: no previous extern declaration for non-static variable 'xRefs' [-Wmissing-variable-declarations]
-../../../tvhc/tvhc.h:99:20: warning: padding struct 'TCrossRefNode' with 3 bytes to align 'next' [-Wpadded]
-../../../tvhc/tvhc.h:122:6: warning: no previous extern declaration for non-static variable 'line' [-Wmissing-variable-declarations]
-../../../tvhc/tvhc.h:123:9: warning: no previous extern declaration for non-static variable 'lineInBuffer' [-Wmissing-variable-declarations]
-../../../tvhc/tvhc.h:124:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
-../../../tvhc/tvhc.cc:105:12: warning: implicit conversion loses integer precision: 'std::ios::openmode' (aka 'std::_Ios_Openmode') to 'ushort' (aka 'unsigned short') [-Wconversion]
-../../../tvhc/tvhc.cc:141:9: warning: no previous prototype for function 'fExists' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:154:7: warning: no previous prototype for function 'getLine' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:169:11: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
-../../../tvhc/tvhc.cc:183:6: warning: no previous prototype for function 'unGetLine' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:196:6: warning: no previous prototype for function 'prntMsg' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:211:1: warning: function 'error' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
-../../../tvhc/tvhc.cc:220:6: warning: no previous prototype for function 'warning' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:231:17: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:227:6: warning: no previous prototype for function 'disposeFixUps' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:257:25: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:257:39: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:270:11: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:70:13: warning: padding struct 'TReference' with 4 bytes to align 'val' [-Wpadded]
-../../../tvhc/tvhc.cc:283:15: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:289:30: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:297:13: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:306:21: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:304:6: warning: no previous prototype for function 'initRefTable' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:315:6: warning: no previous prototype for function 'recordReference' [-Wmissing-prototypes]
-In file included from ../../../tvhc/tvhc.cc:88:
+In file included from ../../../tvhc/tvhc.cc:85:
+../../../tvhc/tvhc.h:80:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../tvhc/tvhc.h:82:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../tvhc/tvhc.h:79:10: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.h:108:7: warning: no previous extern declaration for non-static variable 'helpName' [-Wmissing-variable-declarations]
+../../../tvhc/tvhc.h:109:7: warning: no previous extern declaration for non-static variable 'buffer' [-Wmissing-variable-declarations]
+../../../tvhc/tvhc.h:110:5: warning: no previous extern declaration for non-static variable 'ofs' [-Wmissing-variable-declarations]
+../../../tvhc/tvhc.h:111:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.h:111:12: warning: no previous extern declaration for non-static variable 'refTable' [-Wmissing-variable-declarations]
+../../../tvhc/tvhc.h:112:16: warning: no previous extern declaration for non-static variable 'xRefs' [-Wmissing-variable-declarations]
+../../../tvhc/tvhc.h:91:17: warning: padding struct 'TCrossRefNode' with 3 bytes to align 'next' [-Wpadded]
+../../../tvhc/tvhc.h:113:6: warning: no previous extern declaration for non-static variable 'line' [-Wmissing-variable-declarations]
+../../../tvhc/tvhc.h:114:9: warning: no previous extern declaration for non-static variable 'lineInBuffer' [-Wmissing-variable-declarations]
+../../../tvhc/tvhc.h:115:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
+../../../tvhc/tvhc.cc:101:9: warning: implicit conversion loses integer precision: 'std::ios::openmode' (aka 'std::_Ios_Openmode') to 'ushort' (aka 'unsigned short') [-Wconversion]
+../../../tvhc/tvhc.cc:161:12: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+../../../tvhc/tvhc.cc:201:1: warning: function 'error' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+../../../tvhc/tvhc.cc:221:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:245:21: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:245:35: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:258:8: warning: use of old-style cast [-Wold-style-cast]
+In file included from ../../../tvhc/tvhc.cc:85:
+../../../tvhc/tvhc.h:61:10: warning: padding struct 'TReference' with 4 bytes to align 'val' [-Wpadded]
+../../../tvhc/tvhc.cc:271:9: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:276:24: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:284:11: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:293:18: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tvhc/tvhc.cc:83:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
-../../../tvhc/tvhc.cc:340:32: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:336:6: warning: no previous prototype for function 'doFixUps' [-Wmissing-prototypes]
-In file included from ../../../tvhc/tvhc.cc:88:
+../../../tvhc/tvhc.cc:326:30: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tvhc/tvhc.cc:83:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:957:7: warning: padding size of 'fpbase' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:919:7: warning: padding size of 'iopstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:1119:7: warning: padding size of 'fpstream' with 4 bytes to alignment boundary [-Wpadded]
-../../../tvhc/tvhc.cc:353:6: warning: no previous prototype for function 'resolveReference' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:377:23: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:122:6: note: previous declaration is here
-../../../tvhc/tvhc.cc:379:17: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:377:6: warning: no previous prototype for function 'skipWhite' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:383:5: warning: no previous prototype for function 'checkForValidChar' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:391:27: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:122:6: note: previous declaration is here
-../../../tvhc/tvhc.cc:393:17: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:391:6: warning: no previous prototype for function 'skipToNonWord' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:401:22: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:122:6: note: previous declaration is here
-../../../tvhc/tvhc.cc:409:13: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:417:34: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../tvhc/tvhc.cc:401:7: warning: no previous prototype for function 'getWord' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:431:12: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:113:23: warning: padding class 'TTopicDefinition' with 6 bytes to align 'next' [-Wpadded]
-../../../tvhc/tvhc.cc:437:17: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:445:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:441:5: warning: no previous prototype for function 'is_numeric' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:451:42: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:122:6: note: previous declaration is here
-../../../tvhc/tvhc.cc:461:15: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:474:31: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:478:44: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
-../../../tvhc/tvhc.cc:451:19: warning: no previous prototype for function 'topicDefinition' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:486:46: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:122:6: note: previous declaration is here
-../../../tvhc/tvhc.cc:493:17: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:497:18: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:499:30: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:501:19: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:486:19: warning: no previous prototype for function 'topicDefinitionList' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:515:38: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:122:6: note: previous declaration is here
-../../../tvhc/tvhc.cc:523:15: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:530:15: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:515:19: warning: no previous prototype for function 'topicHeader' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:534:25: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:122:6: note: previous declaration is here
-../../../tvhc/tvhc.cc:542:12: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:534:6: warning: no previous prototype for function 'addToBuffer' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:552:69: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:121:17: note: previous declaration is here
-../../../tvhc/tvhc.cc:560:15: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:561:18: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:567:22: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:552:6: warning: no previous prototype for function 'addXRef' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:576:33: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:122:6: note: previous declaration is here
-../../../tvhc/tvhc.cc:582:23: warning: implicit conversion changes signedness: 'int' to 'char' [-Wsign-conversion]
-../../../tvhc/tvhc.cc:576:6: warning: no previous prototype for function 'replaceSpacesWithFF' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:590:30: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../tvhc/tvhc.cc:585:6: warning: no previous prototype for function 'strdel' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:597:30: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:122:6: note: previous declaration is here
-../../../tvhc/tvhc.cc:597:65: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:121:17: note: previous declaration is here
-../../../tvhc/tvhc.cc:609:50: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:613:22: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:623:58: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:630:30: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:632:38: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:635:48: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../tvhc/tvhc.cc:637:59: warning: implicit conversion loses integer precision: 'int' to 'uchar' (aka 'unsigned char') [-Wconversion]
-../../../tvhc/tvhc.cc:641:36: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:644:67: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../tvhc/tvhc.cc:646:60: warning: implicit conversion loses integer precision: 'int' to 'uchar' (aka 'unsigned char') [-Wconversion]
-../../../tvhc/tvhc.cc:651:57: warning: implicit conversion loses integer precision: 'int' to 'uchar' (aka 'unsigned char') [-Wconversion]
-../../../tvhc/tvhc.cc:597:6: warning: no previous prototype for function 'scanForCrossRefs' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:663:9: warning: no previous prototype for function 'isEndParagraph' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:687:81: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:121:17: note: previous declaration is here
-../../../tvhc/tvhc.cc:691:10: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:122:6: note: previous declaration is here
-../../../tvhc/tvhc.cc:707:15: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tvhc/tvhc.cc:90:
-In file included from ../../../tvhc/tvhc.h:22:
+../../../tvhc/tvhc.cc:359:22: warning: declaration shadows a variable in the global namespace [-Wshadow]
+../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.cc:361:14: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:372:26: warning: declaration shadows a variable in the global namespace [-Wshadow]
+../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.cc:374:14: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:382:21: warning: declaration shadows a variable in the global namespace [-Wshadow]
+../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.cc:390:10: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:397:30: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../tvhc/tvhc.cc:411:9: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tvhc/tvhc.cc:85:
+../../../tvhc/tvhc.h:104:20: warning: padding class 'TTopicDefinition' with 6 bytes to align 'next' [-Wpadded]
+../../../tvhc/tvhc.cc:417:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:425:18: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:431:41: warning: declaration shadows a variable in the global namespace [-Wshadow]
+../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.cc:440:10: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:450:19: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:453:39: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
+../../../tvhc/tvhc.cc:461:45: warning: declaration shadows a variable in the global namespace [-Wshadow]
+../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.cc:468:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:472:12: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:473:21: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:475:11: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:489:37: warning: declaration shadows a variable in the global namespace [-Wshadow]
+../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.cc:497:10: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:503:10: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:507:24: warning: declaration shadows a variable in the global namespace [-Wshadow]
+../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.cc:515:9: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:524:69: warning: declaration shadows a variable in the global namespace [-Wshadow]
+../../../tvhc/tvhc.h:112:16: note: previous declaration is here
+../../../tvhc/tvhc.cc:532:12: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:533:15: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:538:16: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:546:32: warning: declaration shadows a variable in the global namespace [-Wshadow]
+../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.cc:552:14: warning: implicit conversion changes signedness: 'int' to 'char' [-Wsign-conversion]
+../../../tvhc/tvhc.cc:560:27: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../tvhc/tvhc.cc:567:29: warning: declaration shadows a variable in the global namespace [-Wshadow]
+../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.cc:567:65: warning: declaration shadows a variable in the global namespace [-Wshadow]
+../../../tvhc/tvhc.h:112:16: note: previous declaration is here
+../../../tvhc/tvhc.cc:579:47: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:582:13: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:590:49: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:594:15: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:596:23: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:599:30: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../tvhc/tvhc.cc:603:8: warning: implicit conversion loses integer precision: 'int' to 'uchar' (aka 'unsigned char') [-Wconversion]
+../../../tvhc/tvhc.cc:606:11: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:611:27: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../tvhc/tvhc.cc:616:9: warning: implicit conversion loses integer precision: 'int' to 'uchar' (aka 'unsigned char') [-Wconversion]
+../../../tvhc/tvhc.cc:623:19: warning: implicit conversion loses integer precision: 'int' to 'uchar' (aka 'unsigned char') [-Wconversion]
+../../../tvhc/tvhc.cc:659:23: warning: declaration shadows a variable in the global namespace [-Wshadow]
+../../../tvhc/tvhc.h:112:16: note: previous declaration is here
+../../../tvhc/tvhc.cc:663:7: warning: declaration shadows a variable in the global namespace [-Wshadow]
+../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.cc:677:10: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tvhc/tvhc.cc:85:
+In file included from ../../../tvhc/tvhc.h:18:
 ../../../tvision/helpbase.h:52:11: warning: padding class 'TParagraph' with 2 bytes to align 'text' [-Wpadded]
-../../../tvhc/tvhc.cc:725:15: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
-../../../tvhc/tvhc.cc:727:24: warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-../../../tvhc/tvhc.cc:728:30: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../tvhc/tvhc.cc:729:15: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:687:13: warning: no previous prototype for function 'readParagraph' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:740:18: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:743:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:734:6: warning: no previous prototype for function 'handleCrossRefs' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:749:10: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:122:6: note: previous declaration is here
-../../../tvhc/tvhc.cc:747:6: warning: no previous prototype for function 'skipBlankLines' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:763:25: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:757:5: warning: no previous prototype for function 'xRefCount' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:772:17: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:768:6: warning: no previous prototype for function 'disposeXRefs' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:783:17: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:781:6: warning: no previous prototype for function 'recordTopicDefinitions' [-Wmissing-prototypes]
-In file included from ../../../tvhc/tvhc.cc:90:
-In file included from ../../../tvhc/tvhc.h:22:
+../../../tvhc/tvhc.cc:693:12: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
+../../../tvhc/tvhc.cc:695:21: warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+../../../tvhc/tvhc.cc:696:27: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../tvhc/tvhc.cc:697:12: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:707:12: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:710:11: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:716:7: warning: declaration shadows a variable in the global namespace [-Wshadow]
+../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.cc:730:24: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:739:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:749:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tvhc/tvhc.cc:85:
+In file included from ../../../tvhc/tvhc.h:18:
 ../../../tvision/helpbase.h:326:17: warning: padding class 'THelpFile' with 4 bytes to align 'index' [-Wpadded]
 ../../../tvision/helpbase.h:240:11: warning: padding class 'THelpIndex' with 6 bytes to align 'index' [-Wpadded]
 ../../../tvision/helpbase.h:153:16: warning: padding class 'THelpTopic' with 4 bytes to align 'crossRefs' [-Wpadded]
 ../../../tvision/helpbase.h:166:17: warning: padding class 'THelpTopic' with 4 bytes to align 'lastParagraph' [-Wpadded]
-../../../tvhc/tvhc.cc:813:13: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:816:17: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../tvhc/tvhc.cc:90:
-In file included from ../../../tvhc/tvhc.h:22:
+../../../tvhc/tvhc.cc:778:10: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:781:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../tvhc/tvhc.cc:85:
+In file included from ../../../tvhc/tvhc.h:18:
 ../../../tvision/helpbase.h:61:7: warning: padding size of 'TCrossRef' with 3 bytes to alignment boundary [-Wpadded]
-../../../tvhc/tvhc.cc:840:18: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:842:21: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvhc/tvhc.cc:795:6: warning: no previous prototype for function 'readTopic' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:853:34: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:854:10: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:857:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:857:11: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:858:12: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:864:12: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:849:6: warning: no previous prototype for function 'doWriteSymbol' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:873:6: warning: no previous prototype for function 'writeSymbFile' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:888:6: warning: no previous prototype for function 'processText' [-Wmissing-prototypes]
-../../../tvhc/tvhc.cc:912:15: warning: use of GNU statement expression extension [-Wgnu-statement-expression]
-../../../tvhc/tvhc.cc:907:6: warning: no previous prototype for function 'checkOverwrite' [-Wmissing-prototypes]
-In file included from ../../../tvhc/tvhc.cc:88:
+../../../tvhc/tvhc.cc:802:15: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:804:18: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvhc/tvhc.cc:815:31: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:816:7: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:818:13: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:818:4: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:819:5: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:823:5: warning: use of old-style cast [-Wold-style-cast]
+../../../tvhc/tvhc.cc:870:14: warning: use of GNU statement expression extension [-Wgnu-statement-expression]
+In file included from ../../../tvhc/tvhc.cc:83:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:80:7: warning: 'TStreamable' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:32:7: warning: 'TProtectedStream' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+In file included from ../../../tvhc/tvhc.cc:85:
+../../../tvhc/tvhc.h:27:7: warning: 'TProtectedStream' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 ../../../demo/ascii.cc:26:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/ascii.cc:20:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/ascii.cc:25:9: warning: macro is not used [-Wunused-macros]

@@ -1,6 +1,6 @@
-     71 -Wmissing-declarations
      37 -Wredundant-decls
      36 -Wswitch-default
+     36 -Wmissing-declarations
      32 -Wshadow
       6 -Wformat-overflow=
       5 -Wunused-result
@@ -346,107 +346,60 @@ In file included from ../../../tvision/tvtext.cc:44:
 In file included from ../../../tvision/help.h:32,
                  from ../../../tvision/tvtext.cc:44:
 ../../../tvision/helpbase.h:336:13: note: previous declaration of ‘void notAssigned(opstream&, int)’
-../../../tvhc/tvhc.cc:141:9: warning: no previous declaration for ‘Boolean fExists(char*)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:154:7: warning: no previous declaration for ‘char* getLine(std::fstream&)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:183:6: warning: no previous declaration for ‘void unGetLine(char*)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:196:6: warning: no previous declaration for ‘void prntMsg(const char*, const char*)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:220:6: warning: no previous declaration for ‘void warning(const char*)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:227:6: warning: no previous declaration for ‘void disposeFixUps(TFixUp*&)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:304:6: warning: no previous declaration for ‘void initRefTable()’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:315:6: warning: no previous declaration for ‘void recordReference(char*, opstream&)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:336:6: warning: no previous declaration for ‘void doFixUps(TFixUp*, ushort, fpstream&)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:353:6: warning: no previous declaration for ‘void resolveReference(char*, ushort, fpstream&)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:377:6: warning: no previous declaration for ‘void skipWhite(char*, int&)’ [-Wmissing-declarations]
 ../../../tvhc/tvhc.cc: In function ‘void skipWhite(char*, int&)’:
-../../../tvhc/tvhc.cc:377:35: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:122:6: note: shadowed declaration is here
-../../../tvhc/tvhc.cc: At global scope:
-../../../tvhc/tvhc.cc:383:5: warning: no previous declaration for ‘int checkForValidChar(char)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:391:6: warning: no previous declaration for ‘void skipToNonWord(char*, int&)’ [-Wmissing-declarations]
+../../../tvhc/tvhc.cc:359:34: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
+In file included from ../../../tvhc/tvhc.cc:85:
+../../../tvhc/tvhc.h:113:6: note: shadowed declaration is here
 ../../../tvhc/tvhc.cc: In function ‘void skipToNonWord(char*, int&)’:
-../../../tvhc/tvhc.cc:391:40: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:122:6: note: shadowed declaration is here
-../../../tvhc/tvhc.cc: At global scope:
-../../../tvhc/tvhc.cc:401:7: warning: no previous declaration for ‘char* getWord(char*, int&)’ [-Wmissing-declarations]
+../../../tvhc/tvhc.cc:372:38: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
+In file included from ../../../tvhc/tvhc.cc:85:
+../../../tvhc/tvhc.h:113:6: note: shadowed declaration is here
 ../../../tvhc/tvhc.cc: In function ‘char* getWord(char*, int&)’:
-../../../tvhc/tvhc.cc:401:35: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:122:6: note: shadowed declaration is here
-../../../tvhc/tvhc.cc: At global scope:
-../../../tvhc/tvhc.cc:441:5: warning: no previous declaration for ‘int is_numeric(char*)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:451:19: warning: no previous declaration for ‘TTopicDefinition* topicDefinition(char*, int&)’ [-Wmissing-declarations]
+../../../tvhc/tvhc.cc:382:33: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
+In file included from ../../../tvhc/tvhc.cc:85:
+../../../tvhc/tvhc.h:113:6: note: shadowed declaration is here
 ../../../tvhc/tvhc.cc: In function ‘TTopicDefinition* topicDefinition(char*, int&)’:
-../../../tvhc/tvhc.cc:451:55: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:122:6: note: shadowed declaration is here
-../../../tvhc/tvhc.cc: At global scope:
-../../../tvhc/tvhc.cc:486:19: warning: no previous declaration for ‘TTopicDefinition* topicDefinitionList(char*, int&)’ [-Wmissing-declarations]
+../../../tvhc/tvhc.cc:431:53: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
+In file included from ../../../tvhc/tvhc.cc:85:
+../../../tvhc/tvhc.h:113:6: note: shadowed declaration is here
 ../../../tvhc/tvhc.cc: In function ‘TTopicDefinition* topicDefinitionList(char*, int&)’:
-../../../tvhc/tvhc.cc:486:59: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:122:6: note: shadowed declaration is here
-../../../tvhc/tvhc.cc: At global scope:
-../../../tvhc/tvhc.cc:515:19: warning: no previous declaration for ‘TTopicDefinition* topicHeader(char*)’ [-Wmissing-declarations]
+../../../tvhc/tvhc.cc:461:57: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
+In file included from ../../../tvhc/tvhc.cc:85:
+../../../tvhc/tvhc.h:113:6: note: shadowed declaration is here
 ../../../tvhc/tvhc.cc: In function ‘TTopicDefinition* topicHeader(char*)’:
-../../../tvhc/tvhc.cc:515:43: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:122:6: note: shadowed declaration is here
-../../../tvhc/tvhc.cc: At global scope:
-../../../tvhc/tvhc.cc:534:6: warning: no previous declaration for ‘void addToBuffer(char*, Boolean)’ [-Wmissing-declarations]
+../../../tvhc/tvhc.cc:489:41: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
+In file included from ../../../tvhc/tvhc.cc:85:
+../../../tvhc/tvhc.h:113:6: note: shadowed declaration is here
 ../../../tvhc/tvhc.cc: In function ‘void addToBuffer(char*, Boolean)’:
-../../../tvhc/tvhc.cc:534:48: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:122:6: note: shadowed declaration is here
-../../../tvhc/tvhc.cc: At global scope:
-../../../tvhc/tvhc.cc:552:6: warning: no previous declaration for ‘void addXRef(char*, int, uchar, TCrossRefNode*&)’ [-Wmissing-declarations]
+../../../tvhc/tvhc.cc:507:46: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
+In file included from ../../../tvhc/tvhc.cc:85:
+../../../tvhc/tvhc.h:113:6: note: shadowed declaration is here
 ../../../tvhc/tvhc.cc: In function ‘void addXRef(char*, int, uchar, TCrossRefNode*&)’:
-../../../tvhc/tvhc.cc:552:75: warning: declaration of ‘xRefs’ shadows a global declaration [-Wshadow]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:121:17: note: shadowed declaration is here
-../../../tvhc/tvhc.cc: At global scope:
-../../../tvhc/tvhc.cc:576:6: warning: no previous declaration for ‘void replaceSpacesWithFF(char*, int, uchar)’ [-Wmissing-declarations]
+../../../tvhc/tvhc.cc:524:74: warning: declaration of ‘xRefs’ shadows a global declaration [-Wshadow]
+In file included from ../../../tvhc/tvhc.cc:85:
+../../../tvhc/tvhc.h:112:16: note: shadowed declaration is here
 ../../../tvhc/tvhc.cc: In function ‘void replaceSpacesWithFF(char*, int, uchar)’:
-../../../tvhc/tvhc.cc:576:63: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:122:6: note: shadowed declaration is here
-../../../tvhc/tvhc.cc: At global scope:
-../../../tvhc/tvhc.cc:585:6: warning: no previous declaration for ‘void strdel(char*, int, int)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:597:6: warning: no previous declaration for ‘void scanForCrossRefs(char*, int&, TCrossRefNode*&)’ [-Wmissing-declarations]
+../../../tvhc/tvhc.cc:546:61: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
+In file included from ../../../tvhc/tvhc.cc:85:
+../../../tvhc/tvhc.h:113:6: note: shadowed declaration is here
 ../../../tvhc/tvhc.cc: In function ‘void scanForCrossRefs(char*, int&, TCrossRefNode*&)’:
-../../../tvhc/tvhc.cc:597:71: warning: declaration of ‘xRefs’ shadows a global declaration [-Wshadow]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:121:17: note: shadowed declaration is here
-../../../tvhc/tvhc.cc:597:71: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:122:6: note: shadowed declaration is here
-../../../tvhc/tvhc.cc: At global scope:
-../../../tvhc/tvhc.cc:663:9: warning: no previous declaration for ‘Boolean isEndParagraph(State)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:687:13: warning: no previous declaration for ‘TParagraph* readParagraph(std::fstream&, int&, TCrossRefNode*&)’ [-Wmissing-declarations]
+../../../tvhc/tvhc.cc:567:70: warning: declaration of ‘xRefs’ shadows a global declaration [-Wshadow]
+In file included from ../../../tvhc/tvhc.cc:85:
+../../../tvhc/tvhc.h:112:16: note: shadowed declaration is here
+../../../tvhc/tvhc.cc:567:70: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
+In file included from ../../../tvhc/tvhc.cc:85:
+../../../tvhc/tvhc.h:113:6: note: shadowed declaration is here
 ../../../tvhc/tvhc.cc: In function ‘TParagraph* readParagraph(std::fstream&, int&, TCrossRefNode*&)’:
-../../../tvhc/tvhc.cc:687:87: warning: declaration of ‘xRefs’ shadows a global declaration [-Wshadow]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:121:17: note: shadowed declaration is here
-../../../tvhc/tvhc.cc:691:25: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:122:6: note: shadowed declaration is here
-../../../tvhc/tvhc.cc: At global scope:
-../../../tvhc/tvhc.cc:734:6: warning: no previous declaration for ‘void handleCrossRefs(opstream&, int)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:747:6: warning: no previous declaration for ‘void skipBlankLines(std::fstream&)’ [-Wmissing-declarations]
+../../../tvhc/tvhc.cc:659:28: warning: declaration of ‘xRefs’ shadows a global declaration [-Wshadow]
+In file included from ../../../tvhc/tvhc.cc:85:
+../../../tvhc/tvhc.h:112:16: note: shadowed declaration is here
+../../../tvhc/tvhc.cc:663:22: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
+In file included from ../../../tvhc/tvhc.cc:85:
+../../../tvhc/tvhc.h:113:6: note: shadowed declaration is here
 ../../../tvhc/tvhc.cc: In function ‘void skipBlankLines(std::fstream&)’:
-../../../tvhc/tvhc.cc:749:18: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
-In file included from ../../../tvhc/tvhc.cc:90:
-../../../tvhc/tvhc.h:122:6: note: shadowed declaration is here
-../../../tvhc/tvhc.cc: At global scope:
-../../../tvhc/tvhc.cc:757:5: warning: no previous declaration for ‘int xRefCount()’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:768:6: warning: no previous declaration for ‘void disposeXRefs(TCrossRefNode*)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:781:6: warning: no previous declaration for ‘void recordTopicDefinitions(TTopicDefinition*, THelpFile&)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:795:6: warning: no previous declaration for ‘void readTopic(std::fstream&, THelpFile&)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:849:6: warning: no previous declaration for ‘void doWriteSymbol(void*, void*)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:873:6: warning: no previous declaration for ‘void writeSymbFile(TProtectedStream*)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:888:6: warning: no previous declaration for ‘void processText(TProtectedStream&, fpstream&, TProtectedStream&)’ [-Wmissing-declarations]
-../../../tvhc/tvhc.cc:907:6: warning: no previous declaration for ‘void checkOverwrite(char*)’ [-Wmissing-declarations]
+../../../tvhc/tvhc.cc:716:15: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
+In file included from ../../../tvhc/tvhc.cc:85:
+../../../tvhc/tvhc.h:113:6: note: shadowed declaration is here
 ../../../demo/ascii.cc: In member function ‘virtual void TReport::draw()’:
 ../../../demo/ascii.cc:210:32: warning: format ‘%X’ expects argument of type ‘unsigned int’, but argument 6 has type ‘int’ [-Wformat=]
 ../../../demo/calc.cc: In member function ‘virtual void TCalcDisplay::handleEvent(TEvent&)’:
