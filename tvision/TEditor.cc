@@ -106,8 +106,6 @@ const ushort blockKeys[] =
 
 const ushort *keyMap[] = { firstKeys, quickKeys, blockKeys };
 
-ushort defEditorDialog( int, ... );
-
 ushort scanKeyMap( const void *keyMap, ushort keyCode )
 {
     ushort *kM = (ushort *)keyMap;

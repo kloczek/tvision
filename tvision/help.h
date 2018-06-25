@@ -107,11 +107,6 @@ public:
 /**
  * Undocumented.
  */
-extern void notAssigned( opstream& s, int value );
-
-/**
- * Undocumented.
- */
 extern TCrossRefHandler crossRefHandler;
 
 #endif  // TV_INC_HELP_H

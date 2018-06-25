@@ -31,8 +31,6 @@
 #include <string.h>
 #include <time.h>
 
-void fexpand( char * );
-
 TFileList::TFileList( const TRect& bounds,
                       TScrollBar *aScrollBar) :
     TSortedListBox( bounds, 2, aScrollBar )

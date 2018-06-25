@@ -29,7 +29,6 @@ const
 class TColorItem;
 class TColorGroup;
 
-TColorItem& operator + ( TColorItem& i1, TColorItem& i2 );
 TColorGroup& operator + ( TColorGroup& g, TColorItem& i );
 TColorGroup& operator + ( TColorGroup& g1, TColorGroup& g2 );
 

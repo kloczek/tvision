@@ -28,8 +28,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-void fexpand( char * );
-
 #define cpInfoPane "\x1E"
 
 TFileInputLine::TFileInputLine( const TRect& bounds, short aMaxLen ) :
