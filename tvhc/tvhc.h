@@ -6,10 +6,6 @@
 /*                                                     */
 /*-----------------------------------------------------*/
 
-/*
- * Modified by Sergey Clushin <serg@lamport.ru>, <Clushin@deol.ru>
- */
-
 #if !defined( TV_INC_TVHC_H )
 #define TV_INC_TVHC_H
 

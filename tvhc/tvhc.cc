@@ -6,11 +6,6 @@
 /*                                                                       */
 /*-----------------------------------------------------------------------*/
 
-/*
- * Modified by Sergey Clushin <serg@lamport.ru>, <Clushin@deol.ru>
- * Modified by Sergio Sigala <sergio@sigala.it>
- */
-
 /*===== TVHC ============================================================*/
 /*  Turbo Vision help file compiler documentation.                       */
 /*=======================================================================*/

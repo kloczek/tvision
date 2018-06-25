@@ -75,5 +75,6 @@ See directory `doc' and its subdirectory.  Here is a summary of their contents.
 
 ## History
 
-Sergio Sigala
-sergio@sigala.it
+## Contributors:
+Sergio Sigala <sergio@sigala.it>
+Sergey Clushin <serg@lamport.ru>, <Clushin@deol.ru>
