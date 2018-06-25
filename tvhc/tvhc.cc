@@ -890,11 +890,11 @@ int main(int argc, char **argv)
 	char initialText[] = "Help Compiler Version 1.0 Copyright (c) 1991"
 	    " Borland International.\n";
 	char helpText[] =
-	    "\n  Syntax  TVHC <Help text> <Help file> <Symbol file>\n"
+	    "\nUsage: tvhc <help_text> <help_file> <symbol_file.h>\n"
 	    "\n"
-	    "     Help text   = Help file source\n"
-	    "     Help file   = Compiled help file\n"
-	    "     Symbol file = An include file containing all the screen names as const's\n";
+	    "	help_text	Help file source\n"
+	    "	help_file	Compiled help file\n"
+	    "	symbol_file.h	An include file containing all the screen names as const's\n";
 
 	char bufStr[MAXSTRSIZE];
 
