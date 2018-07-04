@@ -41,10 +41,11 @@ for i in $all_targets; do
 	echo "------------------------------------------------------" >> ../optimisation.log
 	echo LDFLAGS=\""$LDFLAGS"\" >> ../optimisation.log
 	echo CXXFLAGS=\""$CXXFLAGS"\" >> ../optimisation.log
+	echo $(gcc --version| grep GCC) >>../optimisation.log
 	echo "------------------------------------------------------" >> ../optimisation.log
 	cd ..
 	cp $i/*/.libs/{demo,background,listbox,load,nomenus,splash,tvedit,tvguid*,tvlife,validator,tvhc,libtvision.so.0.0*} .
 	size {demo,background,listbox,load,nomenus,splash,tvedit,tvguid*,tvlife,validator,tvhc,libtvision.so.0.0*} >> optimisation.log
-	for i in {1..7}; do echo >> optimisation.log; done
+	for i in {1..6}; do echo >> optimisation.log; done
 	rm -rf {demo,background,listbox,load,nomenus,splash,tvedit,tvguid*,tvlife,validator,tvhc,libtvision.so.0.0*}
 done
