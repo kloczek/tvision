@@ -1,0 +1,9 @@
+-cp1
+-i8
+-kr
+-l80
+-ncs
+-npro
+-sob
+-ss
+-ts8
