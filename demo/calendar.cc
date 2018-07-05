@@ -23,9 +23,6 @@
 #define Uses_TView
 #define Uses_TWindow
 #include <tv.h>
-__link( RView )
-__link( RWindow )
-
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>

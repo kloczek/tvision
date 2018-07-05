@@ -372,20 +372,20 @@ In file included from ../../../tvhc/tvhc.cc:85:
 In file included from ../../../tvhc/tvhc.cc:85:
 ../../../tvhc/tvhc.h:113:6: note: shadowed declaration is here
 ../../../demo/ascii.cc: In member function ‘virtual void TReport::draw()’:
-../../../demo/ascii.cc:210:32: warning: format ‘%X’ expects argument of type ‘unsigned int’, but argument 6 has type ‘int’ [-Wformat=]
+../../../demo/ascii.cc:207:32: warning: format ‘%X’ expects argument of type ‘unsigned int’, but argument 6 has type ‘int’ [-Wformat=]
 ../../../demo/calc.cc: In member function ‘virtual void TCalcDisplay::handleEvent(TEvent&)’:
-../../../demo/calc.cc:109:11: warning: switch missing default case [-Wswitch-default]
+../../../demo/calc.cc:105:11: warning: switch missing default case [-Wswitch-default]
 ../../../demo/calc.cc: In member function ‘void TCalcDisplay::calcKey(unsigned char)’:
-../../../demo/calc.cc:272:33: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
-../../../demo/calc.cc:257:23: warning: switch missing default case [-Wswitch-default]
-../../../demo/calc.cc:202:11: warning: switch missing default case [-Wswitch-default]
-../../../demo/calendar.cc:108:5: warning: no previous declaration for ‘int dayOfWeek(int, int, int)’ [-Wmissing-declarations]
+../../../demo/calc.cc:268:33: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+../../../demo/calc.cc:253:23: warning: switch missing default case [-Wswitch-default]
+../../../demo/calc.cc:198:11: warning: switch missing default case [-Wswitch-default]
+../../../demo/calendar.cc:105:5: warning: no previous declaration for ‘int dayOfWeek(int, int, int)’ [-Wmissing-declarations]
 ../../../demo/calendar.cc: In member function ‘virtual void TCalendarView::draw()’:
-../../../demo/calendar.cc:136:10: warning: declaration of ‘days’ shadows a member of ‘TCalendarView’ [-Wshadow]
-In file included from ../../../demo/calendar.cc:34:
+../../../demo/calendar.cc:133:10: warning: declaration of ‘days’ shadows a member of ‘TCalendarView’ [-Wshadow]
+In file included from ../../../demo/calendar.cc:31:
 ../../../demo/calendar.h:29:14: note: shadowed declaration is here
-../../../demo/calendar.cc:148:18: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘unsigned int’ [-Wformat=]
-In file included from ../../../demo/fileview.cc:37:
+../../../demo/calendar.cc:145:18: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘unsigned int’ [-Wformat=]
+In file included from ../../../demo/fileview.cc:34:
 ../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
 ../../../demo/fileview.h:29:45: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
 In file included from ../../../tvision/tv.h:631,

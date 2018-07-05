@@ -23,9 +23,6 @@
 #define Uses_TDeskTop
 #define Uses_TStreamableClass
 #include <tv.h>
-__link(RScroller)
-__link(RScrollBar)
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

@@ -25,10 +25,6 @@
 #define Uses_TView
 #define Uses_TDialog
 #include <tv.h>
-__link( RView )
-__link( RDialog )
-__link( RButton )
-
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
