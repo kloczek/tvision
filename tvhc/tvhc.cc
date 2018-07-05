@@ -857,22 +857,6 @@ void processText(TProtectedStream & textFile,
 	delete helpRez;
 }
 
-//---- checkOverwrite --------------------------------------------------//
-// Check whether the output file name exists.  If it does, ask whether  //
-// it's ok to overwrite it.                                             //
-//----------------------------------------------------------------------//
-
-void checkOverwrite(char *fName)
-{
-	if (fExists(fName)) {
-		std::cerr << "File already exists: " << fName <<
-		    ".  Overwrite? (y/n) ";
-		char ch = ({ char s[MAXSTRSIZE]; std::cin >> s; s[0];});
-		if (toupper(ch) != 'Y')
-			exit(1);
-	}
-}
-
 //========================== Program Block ==========================//
 
 int main(int argc, char **argv)
@@ -908,10 +892,7 @@ int main(int argc, char **argv)
 	}
 
 	helpName = argv[2];
-	checkOverwrite(helpName);
-
 	symbName = argv[3];
-	checkOverwrite(symbName);
 
 	TProtectedStream textStrm(textName, std::ios::in);
 	TProtectedStream symbStrm(symbName, std::ios::out | std::ios::trunc);

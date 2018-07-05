@@ -36,7 +36,6 @@
       1 -Wvla
       1 -Wunreachable-code
       1 -Wparentheses-equality
-      1 -Wgnu-statement-expression
       1 -Wfloat-equal
       1 -Wconditional-uninitialized
       1 -Wcomma
@@ -9851,7 +9850,6 @@ In file included from ../../../tvhc/tvhc.h:18:
 ../../../tvhc/tvhc.cc:818:4: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvhc/tvhc.cc:819:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvhc/tvhc.cc:823:5: warning: use of old-style cast [-Wold-style-cast]
-../../../tvhc/tvhc.cc:870:14: warning: use of GNU statement expression extension [-Wgnu-statement-expression]
 In file included from ../../../tvhc/tvhc.cc:83:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:80:7: warning: 'TStreamable' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]

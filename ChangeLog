@@ -20,6 +20,7 @@
   big/little endian independent)
 - Removed VCS support. On Linux console TVision works perfectly fine without VCS
 - Renamed cmDosShell to cmSuspend and hcDosShell to hcSuspend
+- tvhc: remove asking to overwrite or not generated sym and help file
 
 >>>>>>>> Changes from version 0.7 to 0.8 <<<<<<<<
 
