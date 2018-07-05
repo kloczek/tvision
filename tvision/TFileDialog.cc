@@ -29,15 +29,6 @@
 #include <stdio.h>
 #include <string.h>
 
-// File dialog flags
-const
-    int ffOpen        = 0x0001,
-    ffSaveAs      = 0x0002;
-
-const
-    int cmOpenDialogOpen    = 100,
-    cmOpenDialogReplace = 101;
-
 TFileDialog::TFileDialog( const char *aWildCard,
                           const char *aTitle,
                           const char *inputName,

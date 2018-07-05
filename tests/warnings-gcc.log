@@ -89,7 +89,7 @@ In file included from ../../../tvision/tv.h:659,
 ../../../tvision/TEditor.cc: In member function ‘virtual void TEditor::setState(ushort, Boolean)’:
 ../../../tvision/TEditor.cc:1012:11: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TFileDialog.cc: In member function ‘virtual Boolean TFileDialog::valid(ushort)’:
-../../../tvision/TFileDialog.cc:258:23: warning: declaration of ‘name’ shadows a previous local [-Wshadow]
+../../../tvision/TFileDialog.cc:249:23: warning: declaration of ‘name’ shadows a previous local [-Wshadow]
 In file included from ../../../tvision/tv.h:675,
                  from ../../../tvision/TFileDialog.cc:25:
 ../../../tvision/stddlg.h:903:31: note: shadowed declaration is here

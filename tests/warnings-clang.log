@@ -23,7 +23,6 @@
       7 -Winvalid-source-encoding
       6 -Wmismatched-new-delete
       5 -Wdisabled-macro-expansion
-      4 -Wunused-const-variable
       3 -Wmissing-noreturn
       3 -Wformat-nonliteral
       2 -Wswitch-enum
@@ -1868,29 +1867,29 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../tvision/TFileDialog.cc:132:12: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TFileDialog.cc:132:20: warning: cast from 'const char *' to 'char *' drops const qualifier [-Wcast-qual]
-../../../tvision/TFileDialog.cc:137:16: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvision/TFileDialog.cc:138:16: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../tvision/TFileDialog.cc:167:38: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TFileDialog.cc:169:39: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TFileDialog.cc:123:12: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TFileDialog.cc:123:20: warning: cast from 'const char *' to 'char *' drops const qualifier [-Wcast-qual]
+../../../tvision/TFileDialog.cc:128:16: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvision/TFileDialog.cc:129:16: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../tvision/TFileDialog.cc:158:38: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TFileDialog.cc:160:39: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../tvision/TFileDialog.cc:25:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../tvision/TFileDialog.cc:221:16: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TFileDialog.cc:221:24: warning: cast from 'const char *' to 'char *' drops const qualifier [-Wcast-qual]
-../../../tvision/TFileDialog.cc:229:10: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TFileDialog.cc:229:40: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TFileDialog.cc:238:18: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TFileDialog.cc:258:10: warning: declaration shadows a static data member of 'TFileDialog' [-Wshadow]
+../../../tvision/TFileDialog.cc:212:16: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TFileDialog.cc:212:24: warning: cast from 'const char *' to 'char *' drops const qualifier [-Wcast-qual]
+../../../tvision/TFileDialog.cc:220:10: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TFileDialog.cc:220:40: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TFileDialog.cc:229:18: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TFileDialog.cc:249:10: warning: declaration shadows a static data member of 'TFileDialog' [-Wshadow]
 ../../../tvision/stddlg.h:903:31: note: previous declaration is here
-../../../tvision/TFileDialog.cc:277:28: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TFileDialog.cc:277:36: warning: cast from 'const char *' to 'char *' drops const qualifier [-Wcast-qual]
-../../../tvision/TFileDialog.cc:289:28: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TFileDialog.cc:289:36: warning: cast from 'const char *' to 'char *' drops const qualifier [-Wcast-qual]
+../../../tvision/TFileDialog.cc:268:28: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TFileDialog.cc:268:36: warning: cast from 'const char *' to 'char *' drops const qualifier [-Wcast-qual]
+../../../tvision/TFileDialog.cc:280:28: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TFileDialog.cc:280:36: warning: cast from 'const char *' to 'char *' drops const qualifier [-Wcast-qual]
 In file included from ../../../tvision/TFileDialog.cc:25:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
@@ -1898,10 +1897,6 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:80:7: warning: 'TStreamable' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
-../../../tvision/TFileDialog.cc:34:9: warning: unused variable 'ffOpen' [-Wunused-const-variable]
-../../../tvision/TFileDialog.cc:35:5: warning: unused variable 'ffSaveAs' [-Wunused-const-variable]
-../../../tvision/TFileDialog.cc:38:9: warning: unused variable 'cmOpenDialogOpen' [-Wunused-const-variable]
-../../../tvision/TFileDialog.cc:39:5: warning: unused variable 'cmOpenDialogReplace' [-Wunused-const-variable]
 ../../../tvision/TFileEditor.cc:18:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TFileEditor.cc:17:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TFileEditor.cc:16:9: warning: macro is not used [-Wunused-macros]
