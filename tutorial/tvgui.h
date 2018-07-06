@@ -6,5 +6,5 @@
 /*                                                         */
 /*---------------------------------------------------------*/
 
-void readFile( const char *fileName );
+void readFile(const char *fileName);
 void deleteFile();

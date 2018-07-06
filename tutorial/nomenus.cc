@@ -18,83 +18,77 @@
 #define Uses_TView
 #define Uses_TWindow
 
-
 #include <cstring>
 #include <tv.h>
 
 //define a custom background
 
-class TMyBackground: public TBackground
-{
-public:
-    TMyBackground(const TRect& bounds);
-    virtual void draw();
+class TMyBackground:public TBackground {
+      public:
+	TMyBackground(const TRect & bounds);
+	virtual void draw();
 };
 
-TMyBackground::TMyBackground(const TRect& bounds):
-    TBackground(bounds, TDeskTop::defaultBkgrnd)
+TMyBackground::TMyBackground(const TRect & bounds):TBackground(bounds,
+							       TDeskTop::
+							       defaultBkgrnd)
 {
 }
 
 void TMyBackground::draw()
 {
-    TDrawBuffer b;
-    int x = 0;
-    static const char s[] = "Background example ";
+	TDrawBuffer b;
+	int x = 0;
+	static const char s[] = "Background example ";
 
-    while (x < size.x)
-    {
-	b.moveStr(x, s, 0x17);
-	x += std::strlen(s);
-    }
-    writeLine(0, 0, size.x, size.y, b);
+	while (x < size.x) {
+		b.moveStr(x, s, 0x17);
+		x += std::strlen(s);
+	}
+	writeLine(0, 0, size.x, size.y, b);
 }
 
 //define a custom desktop, with our custom background
 
-class TMyDeskTop: public TDeskTop
-{
-public:
-    TMyDeskTop(const TRect& bounds);
-    static TBackground *initBackground(TRect);
+class TMyDeskTop:public TDeskTop {
+      public:
+	TMyDeskTop(const TRect & bounds);
+	static TBackground *initBackground(TRect);
 };
 
-TMyDeskTop::TMyDeskTop(const TRect& bounds):
-    TDeskInit(&TMyDeskTop::initBackground),
-    TDeskTop(bounds)
+TMyDeskTop::TMyDeskTop(const TRect & bounds):TDeskInit(&TMyDeskTop::
+						       initBackground),
+TDeskTop(bounds)
 {
 }
 
 TBackground *TMyDeskTop::initBackground(TRect r)
 {
-    return new TMyBackground(r);
+	return new TMyBackground(r);
 }
 
 //our application
 
-struct DialogData
-{
-    ushort checkBoxData;
-    ushort radioButtonData;
-    char inputLineData[128];
+struct DialogData {
+	ushort checkBoxData;
+	ushort radioButtonData;
+	char inputLineData[128];
 };
 
-class TMyApp: public TApplication
-{
-public:
-    TMyApp();
-    ushort doWork();
-    ushort newDialog(DialogData &data);
-    static TDeskTop *initDeskTop(TRect r);
+class TMyApp:public TApplication {
+      public:
+	TMyApp();
+	ushort doWork();
+	ushort newDialog(DialogData & data);
+	static TDeskTop *initDeskTop(TRect r);
 };
 
 //Application constructor. We don't call initStatusLine() and initMenuBar()
 //because we don't want status line or menus in this application.
 
-TMyApp::TMyApp(): TProgInit(
-    0, //&TMyApp::initStatusLine,
-    0, //&TMyApp::initMenuBar,
-    &TMyApp::initDeskTop) //this call is required
+TMyApp::TMyApp():TProgInit(0,	//&TMyApp::initStatusLine,
+	  0,			//&TMyApp::initMenuBar,
+	  &TMyApp::initDeskTop)	//this call is required
 {
 }
 
@@ -106,90 +100,99 @@ TMyApp::TMyApp(): TProgInit(
 
 TDeskTop *TMyApp::initDeskTop(TRect r)
 {
-    //By removing the following two lines we require a full screen desktop.
-    //Since status line and menus are not used in this application, this will
-    //give us two lines of otherwise unused screen space.
+	//By removing the following two lines we require a full screen desktop.
+	//Since status line and menus are not used in this application, this will
+	//give us two lines of otherwise unused screen space.
 
-    //r.a.y++;
-    //r.b.y--;
-    return new TMyDeskTop(r);
+	//r.a.y++;
+	//r.b.y--;
+	return new TMyDeskTop(r);
 }
 
 //executes a dialog
 
-ushort TMyApp::newDialog(DialogData &data)
+ushort TMyApp::newDialog(DialogData & data)
 {
-    TDialog *pd = new TDialog(TRect(20, 6, 60, 19), "Cheese order");
-    if(pd)
-    {
-	TView *b = new TCheckBoxes(TRect(3, 3, 18, 6),
-	    new TSItem("~H~varti",
-	    new TSItem("~T~ilset",
-	    new TSItem("~J~arlsberg", 0)
-	    )));
-	pd->insert(b);
-	pd->insert(new TLabel(TRect(2, 2, 10, 3), "Cheeses", b));
+	TDialog *pd = new TDialog(TRect(20, 6, 60, 19), "Cheese order");
+	if (pd) {
+		TView *b = new TCheckBoxes(TRect(3, 3, 18, 6),
+					   new TSItem("~H~varti",
+						      new TSItem("~T~ilset",
+								 new
+								 TSItem
+								 ("~J~arlsberg",
+								  0)
+						      )));
+		pd->insert(b);
+		pd->insert(new TLabel(TRect(2, 2, 10, 3), "Cheeses", b));
 
-	b = new TRadioButtons(TRect(22, 3, 34, 6),
-	    new TSItem("~S~olid",
-	    new TSItem("~R~unny",
-	    new TSItem("~M~elted", 0)
-	    )));
-	pd->insert(b);
-	pd->insert(new TLabel(TRect(21, 2, 33, 3), "Consistency", b));
+		b = new TRadioButtons(TRect(22, 3, 34, 6),
+				      new TSItem("~S~olid",
+						 new TSItem("~R~unny",
+							    new
+							    TSItem("~M~elted",
+								   0)
+						 )));
+		pd->insert(b);
+		pd->insert(new TLabel(TRect(21, 2, 33, 3), "Consistency", b));
 
-	b = new TInputLine(TRect(3, 8, 37, 9), 128);
-	pd->insert(b);
-	pd->insert(new TLabel(TRect(2, 7, 24, 8), "Delivery Instructions",
-	    b));
+		b = new TInputLine(TRect(3, 8, 37, 9), 128);
+		pd->insert(b);
+		pd->insert(new
+			   TLabel(TRect(2, 7, 24, 8), "Delivery Instructions",
+				  b));
 
-	pd->insert(new TButton(TRect(15, 10, 25, 12), "~O~K", cmOK,
-	    bfDefault));
-	pd->insert(new TButton(TRect(28, 10, 38, 12), "~C~ancel", cmCancel,
-	    bfNormal));
+		pd->insert(new TButton(TRect(15, 10, 25, 12), "~O~K", cmOK,
+				       bfDefault));
+		pd->insert(new
+			   TButton(TRect(28, 10, 38, 12), "~C~ancel", cmCancel,
+				   bfNormal));
 
-	//we set the dialog data
+		//we set the dialog data
 
-	pd->setData(&data);
+		pd->setData(&data);
 
-	ushort control = deskTop->execView(pd);
+		ushort control = deskTop->execView(pd);
 
-	//and read it back when the dialog box is successfully closed
+		//and read it back when the dialog box is successfully closed
 
-	if (control != cmCancel) pd->getData(&data);
+		if (control != cmCancel)
+			pd->getData(&data);
 
-	destroy(pd);
-	return control;
-    }
-    return cmCancel;
+		destroy(pd);
+		return control;
+	}
+	return cmCancel;
 }
 
 //open dialogs here
 
 ushort TMyApp::doWork()
 {
-    messageBox("\003Welcome to the cheese ordering system",
-	mfInformation + mfOKButton);
+	messageBox("\003Welcome to the cheese ordering system",
+		   mfInformation + mfOKButton);
 
-    DialogData data;
+	DialogData data;
 
-    data.checkBoxData = 1;
-    data.radioButtonData = 2;
-    strcpy(data.inputLineData, "By box");
+	data.checkBoxData = 1;
+	data.radioButtonData = 2;
+	strcpy(data.inputLineData, "By box");
 
-    ushort control = newDialog(data);
+	ushort control = newDialog(data);
 
-    if (control == cmOK) messageBox("Your order is accepted",
-	mfInformation + mfOKButton);
-    else messageBox("You canceled the order", mfError + mfOKButton);
+	if (control == cmOK)
+		messageBox("Your order is accepted",
+			   mfInformation + mfOKButton);
+	else
+		messageBox("You canceled the order", mfError + mfOKButton);
 
-    return 0;
+	return 0;
 }
 
 int main()
 {
 	TMyApp myApp;
-	//myApp.run();	//don't call this
+	//myApp.run();  //don't call this
 	myApp.doWork();
 	return 0;
 }

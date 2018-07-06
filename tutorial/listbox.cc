@@ -27,53 +27,46 @@
 
 #include <tv.h>
 
-const int cmNewDialog  = 200;
+const int cmNewDialog = 200;
 
-class TMyApp : public TApplication
-{
-public:
+class TMyApp:public TApplication {
+      public:
 	TMyApp();
-	static TStatusLine *initStatusLine( TRect r );
-	static TMenuBar *initMenuBar( TRect r );
-	virtual void handleEvent( TEvent& event);
+	static TStatusLine *initStatusLine(TRect r);
+	static TMenuBar *initMenuBar(TRect r);
+	virtual void handleEvent(TEvent & event);
 	void newDialog();
 };
 
-TMyApp::TMyApp() :
-    TProgInit( &TMyApp::initStatusLine,
-               &TMyApp::initMenuBar,
-               &TMyApp::initDeskTop
-             )
+TMyApp::TMyApp():
+TProgInit(&TMyApp::initStatusLine, &TMyApp::initMenuBar, &TMyApp::initDeskTop)
 {
 }
 
-struct TDemoDialogData
-{
+struct TDemoDialogData {
 	TListBoxRec tlbr;
 };
 
 void TMyApp::newDialog()
 {
-	TDialog *pd = new TDialog( TRect( 20, 6, 60, 19), "Demo Dialog" );
-	if( pd )
-	{
-		TScrollBar *sb = new TScrollBar( TRect( 21, 2, 22, 11 ) );
-		pd->insert( sb );
+	TDialog *pd = new TDialog(TRect(20, 6, 60, 19), "Demo Dialog");
+	if (pd) {
+		TScrollBar *sb = new TScrollBar(TRect(21, 2, 22, 11));
+		pd->insert(sb);
 
-		TListBox *lb = new TListBox( TRect( 2, 2, 20, 11 ), 2, sb );
+		TListBox *lb = new TListBox(TRect(2, 2, 20, 11), 2, sb);
 //
 // TSortedListBox has some more user-friendly stuff
 //
-//		TListBox *lb = new TSortedListBox( TRect( 2, 2, 20, 11 ), 2,
-//			sb );
+//              TListBox *lb = new TSortedListBox( TRect( 2, 2, 20, 11 ), 2,
+//                      sb );
 //
-		pd->insert( lb );
+		pd->insert(lb);
 
 		/* build a collection of strings */
 
-		#define HOWMANY	20
-		const char *names[HOWMANY] =
-		{
+#define HOWMANY	20
+		const char *names[HOWMANY] = {
 			"dog", "cat", "bird", "fish",
 			"animal1", "animal2", "animal3", "animal4",
 			"animal5", "animal6", "animal7", "animal8",
@@ -84,14 +77,15 @@ void TMyApp::newDialog()
 //
 // TStringCollection sorts the strings by default
 //
-		for (int i = 0; i < HOWMANY; i++) tsc.insert((void *)names[i]);
+		for (int i = 0; i < HOWMANY; i++)
+			tsc.insert((void *)names[i]);
 
 		/* add two buttons */
 
-		pd->insert( new TButton( TRect( 28, 6, 38, 8 ), "~O~K", cmOK,
-			bfDefault ));
-		pd->insert( new TButton( TRect( 28, 10, 38, 12 ), "~C~ancel",
-			cmCancel, bfNormal ));
+		pd->insert(new TButton(TRect(28, 6, 38, 8), "~O~K", cmOK,
+				       bfDefault));
+		pd->insert(new TButton(TRect(28, 10, 38, 12), "~C~ancel",
+				       cmCancel, bfNormal));
 
 		/* now run the dialog */
 
@@ -100,61 +94,68 @@ void TMyApp::newDialog()
 		d.tlbr.items = &tsc;	/* collection address */
 		d.tlbr.selection = 2;	/* default selection */
 
-		pd->setData( &d );
+		pd->setData(&d);
 
-	        ushort control = deskTop->execView( pd );
+		ushort control = deskTop->execView(pd);
 
-		if( control != cmCancel ) pd->getData( &d );
+		if (control != cmCancel)
+			pd->getData(&d);
 
-		if (control == cmOK) messageBox(mfInformation | mfOKButton,
-			"Your selection is %s", tsc.at(d.tlbr.selection));
+		if (control == cmOK)
+			messageBox(mfInformation | mfOKButton,
+				   "Your selection is %s",
+				   tsc.at(d.tlbr.selection));
 	}
-	destroy( pd );
+	destroy(pd);
 }
 
-void TMyApp::handleEvent(TEvent& event)
+void TMyApp::handleEvent(TEvent & event)
 {
-    TApplication::handleEvent(event);
-    if( event.what == evCommand )
-        {
-        switch( event.message.command )
-            {
-            case cmNewDialog:
-		newDialog();
-                break;
-            default:
-                return;
-            }
-        clearEvent( event );            // clear event after handling
-        }
+	TApplication::handleEvent(event);
+	if (event.what == evCommand) {
+		switch (event.message.command) {
+		case cmNewDialog:
+			newDialog();
+			break;
+		default:
+			return;
+		}
+		clearEvent(event);	// clear event after handling
+	}
 }
 
-TMenuBar *TMyApp::initMenuBar( TRect r )
+TMenuBar *TMyApp::initMenuBar(TRect r)
 {
-    r.b.y = r.a.y + 1;    // set bottom line 1 line below top line
-    return new TMenuBar( r,
-        *new TSubMenu( "~F~ile", kbAltF )+
-            *new TMenuItem( "E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X" )+
-        *new TSubMenu( "~W~indow", kbAltW )+
-            *new TMenuItem( "~N~ext", cmNext,     kbF6, hcNoContext, "F6" )+
-            *new TMenuItem( "~Z~oom", cmZoom,     kbF5, hcNoContext, "F5" )+
-            *new TMenuItem( "~D~ialog", cmNewDialog, kbF2, hcNoContext, "F2" )
-        );
+	r.b.y = r.a.y + 1;	// set bottom line 1 line below top line
+	return new TMenuBar(r,
+			    *new TSubMenu("~F~ile", kbAltF) +
+			    *new TMenuItem("E~x~it", cmQuit, cmQuit,
+					   hcNoContext,
+					   "Alt-X") + *new TSubMenu("~W~indow",
+								    kbAltW) +
+			    *new TMenuItem("~N~ext", cmNext, kbF6, hcNoContext,
+					   "F6") + *new TMenuItem("~Z~oom",
+								  cmZoom, kbF5,
+								  hcNoContext,
+								  "F5") +
+			    *new TMenuItem("~D~ialog", cmNewDialog, kbF2,
+					   hcNoContext, "F2")
+	    );
 }
 
-TStatusLine *TMyApp::initStatusLine( TRect r )
+TStatusLine *TMyApp::initStatusLine(TRect r)
 {
-    r.a.y = r.b.y - 1;     // move top to 1 line above bottom
-    return new TStatusLine( r,
-        *new TStatusDef( 0, 0xFFFF ) +
-            *new TStatusItem( 0, kbF10, cmMenu ) +
-            *new TStatusItem( "~Alt-X~ Exit", kbAltX, cmQuit )
-        );
+	r.a.y = r.b.y - 1;	// move top to 1 line above bottom
+	return new TStatusLine(r,
+			       *new TStatusDef(0, 0xFFFF) +
+			       *new TStatusItem(0, kbF10, cmMenu) +
+			       *new TStatusItem("~Alt-X~ Exit", kbAltX, cmQuit)
+	    );
 }
 
 int main()
 {
-    TMyApp myApp;
-    myApp.run();
-    return 0;
+	TMyApp myApp;
+	myApp.run();
+	return 0;
 }

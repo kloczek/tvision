@@ -23,63 +23,59 @@
 
 #include <tv.h>
 
-const int cmOpenDialog	= 100;
+const int cmOpenDialog = 100;
 
-class Demo: public TApplication
-{
-public:
+class Demo:public TApplication {
+      public:
 	Demo();
-	void handleEvent(TEvent &event);
+	void handleEvent(TEvent & event);
 	static TMenuBar *initMenuBar(TRect r);
 };
 
-class MyDialog: public TDialog
-{
-public:
+class MyDialog:public TDialog {
+      public:
 	MyDialog();
 };
 
-Demo::Demo(): TProgInit(&Demo::initStatusLine, &Demo::initMenuBar,
-	&Demo::initDeskTop)
+Demo::Demo():TProgInit(&Demo::initStatusLine, &Demo::initMenuBar,
+	  &Demo::initDeskTop)
 {
 }
 
-void Demo::handleEvent(TEvent &event)
+void Demo::handleEvent(TEvent & event)
 {
-    TApplication::handleEvent(event);
+	TApplication::handleEvent(event);
 
-    if (event.what == evCommand)
-    {
-        switch (event.message.command)
-            {
-            case cmOpenDialog:
-		{
-			MyDialog *d = new MyDialog;
-			executeDialog(d);
+	if (event.what == evCommand) {
+		switch (event.message.command) {
+		case cmOpenDialog:
+			{
+				MyDialog *d = new MyDialog;
+				executeDialog(d);
+			}
+			break;
+		default:
+			return;
 		}
-		break;
-            default:
-                return;
-            }
-        clearEvent (event);
-    }
+		clearEvent(event);
+	}
 }
 
 TMenuBar *Demo::initMenuBar(TRect r)
 {
-    r.b.y =  r.a.y + 1;
+	r.b.y = r.a.y + 1;
 
-    return new TMenuBar(r,
-	*new TSubMenu( "~F~ile", kbAltF, hcNoContext ) +
-	    *new TMenuItem( "~D~ialog...", cmOpenDialog, kbNoKey, hcNoContext) +
-	    newLine() +
-	    *new TMenuItem( "E~x~it...", cmQuit, kbAltX, hcNoContext)
-    );
+	return new TMenuBar(r,
+		*new TSubMenu("~F~ile", kbAltF, hcNoContext) +
+		  *new TMenuItem("~D~ialog...", cmOpenDialog, kbNoKey, hcNoContext) +
+		  newLine() +
+		  *new TMenuItem("E~x~it...", cmQuit, kbAltX, hcNoContext)
+	    );
 }
 
 MyDialog::MyDialog():
-	TWindowInit( &TDialog::initFrame ),
-	TDialog(TRect(0, 0, 42, 16), "TValidator example")
+TWindowInit(&TDialog::initFrame),
+TDialog(TRect(0, 0, 42, 16), "TValidator example")
 {
 	TInputLine *line;
 	TView *obj;
@@ -93,7 +89,7 @@ MyDialog::MyDialog():
 	//input line
 
 	insert(obj = new TInputLine(TRect(23, 3, 27, 4), 3,
-		new TRangeValidator(1, 31)));
+				    new TRangeValidator(1, 31)));
 	insert(new TLabel(TRect(1, 3, 22, 4), "Date style", obj));
 	insert(new TStaticText(TRect(27, 3, 28, 4), "/"));
 
@@ -105,27 +101,29 @@ MyDialog::MyDialog():
 
 	insert(new TStaticText(TRect(32, 3, 33, 4), "/"));
 	insert(new TInputLine(TRect(33, 3, 39, 4), 5,
-		new TRangeValidator(1950, 2050)));
+			      new TRangeValidator(1950, 2050)));
 
 	insert(obj = new TInputLine(TRect(23, 5, 27, 6), 10,
-		new TPXPictureValidator("&&", False)));
+				    new TPXPictureValidator("&&", False)));
 	insert(new TLabel(TRect(1, 5, 22, 6), "Two letters", obj));
 
 	insert(obj = new TInputLine(TRect(23, 7, 40, 8), 20,
-		new TPXPictureValidator("#####-###", True)));
+				    new TPXPictureValidator("#####-###",
+							    True)));
 	insert(new TLabel(TRect(1, 7, 22, 8), "Fixed-length code", obj));
 
 	insert(obj = new TInputLine(TRect(23, 9, 40, 10), 10,
-		new TPXPictureValidator("*#", False)));
+				    new TPXPictureValidator("*#", False)));
 	insert(new TLabel(TRect(1, 9, 22, 10), "Variable-length code", obj));
 
 	insert(obj = new TInputLine(TRect(23, 11, 40, 12), 20,
-		new TPXPictureValidator("##/##/####", True)));
+				    new TPXPictureValidator("##/##/####",
+							    True)));
 	insert(new TLabel(TRect(1, 11, 22, 12), "Another date style", obj));
 
 	insert(new TButton(TRect(1, 13, 11, 15), "O~K~", cmOK, bfDefault));
 	insert(new TButton(TRect(12, 13, 24, 15), "~C~ancel", cmCancel,
-		bfNormal));
+			   bfNormal));
 	selectNext(False);
 }
 

@@ -5,11 +5,6 @@
 /*   Copyright (c) 1991 by Borland International           */
 /*                                                         */
 /*---------------------------------------------------------*/
-/*
- * Modified by Sergio Sigala <sergio@sigala.it>
- */
-
-#include <stdlib.h>               // for random()
 
 #define Uses_TEvent
 #define Uses_TApplication
@@ -25,119 +20,102 @@
 #define Uses_TWindow
 #include <tv.h>
 
-const int cmMyFileOpen = 200; // assign new command values
-const int cmMyNewWin   = 201;
+#include <stdlib.h>		// for random()
 
+const int cmMyFileOpen = 200;	// assign new command values
+const int cmMyNewWin = 201;
 
-class TMyApp : public TApplication
-{
-
-public:
-    TMyApp();
-    static TStatusLine *initStatusLine( TRect r );
-    static TMenuBar *initMenuBar( TRect r );
-    virtual void handleEvent( TEvent& event);
-    void myNewWindow();
+class TMyApp:public TApplication {
+      public:
+	TMyApp();
+	static TStatusLine *initStatusLine(TRect r);
+	static TMenuBar *initMenuBar(TRect r);
+	virtual void handleEvent(TEvent & event);
+	void myNewWindow();
 };
 
+static short winNumber = 0;	// initialize window number
 
-static short winNumber = 0;          // initialize window number
-
-class TDemoWindow : public TWindow   // define a new window class
+class TDemoWindow:public TWindow	// define a new window class
 {
+      public:
+	TDemoWindow(const TRect & r, const char *aTitle, short aNumber);
+	// declare a constructor
 
-public:
-
-   TDemoWindow( const TRect& r, const char *aTitle, short aNumber );
-    // declare a constructor
-
-    //   static TFrame *initFrame( TRect r );
-    // override needed only if you want a nonstandard frame
-    // Here we'll inherit TWindow::initFrame unchanged
-    // so TWindowInit will take &TDemoWindow::initFrame to give
-    // a standard frame
-
+	//   static TFrame *initFrame( TRect r );
+	// override needed only if you want a nonstandard frame
+	// Here we'll inherit TWindow::initFrame unchanged
+	// so TWindowInit will take &TDemoWindow::initFrame to give
+	// a standard frame
 };
 
-
-TMyApp::TMyApp() :
-    TProgInit( &TMyApp::initStatusLine,
-               &TMyApp::initMenuBar,
-               &TMyApp::initDeskTop
-             )
+TMyApp::TMyApp():
+TProgInit(&TMyApp::initStatusLine, &TMyApp::initMenuBar, &TMyApp::initDeskTop)
 {
 }
 
 TStatusLine *TMyApp::initStatusLine(TRect r)
 {
-    r.a.y = r.b.y - 1;     // move top to 1 line above bottom
-    return new TStatusLine( r,
-        *new TStatusDef( 0, 0xFFFF ) +
-        // set range of help contexts
-            *new TStatusItem( 0, kbF10, cmMenu ) +
-            // define an item
-            *new TStatusItem( "~Alt-X~ Exit", kbAltX, cmQuit ) +
-            // define an item
-            *new TStatusItem( "~Alt-F3~ Close", kbAltF3, cmClose )
-            // and another one
-        );
+	r.a.y = r.b.y - 1;	// move top to 1 line above bottom
+	return new TStatusLine(r, *new TStatusDef(0, 0xFFFF) +
+		*new TStatusItem(0, kbF10, cmMenu) +
+		*new TStatusItem("~Alt-X~ Exit", kbAltX, cmQuit) +
+		*new TStatusItem("~Alt-F3~ Close", kbAltF3, cmClose)
+	    );
 }
 
-TMenuBar *TMyApp::initMenuBar( TRect r )
+TMenuBar *TMyApp::initMenuBar(TRect r)
 {
-
-    r.b.y = r.a.y + 1;    // set bottom line 1 line below top line
-    return new TMenuBar( r,
-        *new TSubMenu( "~F~ile", kbAltF )+
-            *new TMenuItem( "~O~pen", cmMyFileOpen, kbF3, hcNoContext, "F3" )+
-            *new TMenuItem( "~N~ew",  cmMyNewWin,   kbF4, hcNoContext, "F4" )+
-            newLine()+
-            *new TMenuItem( "E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X" )+
-        *new TSubMenu( "~W~indow", kbAltW )+
-            *new TMenuItem( "~N~ext", cmNext,     kbF6, hcNoContext, "F6" )+
-            *new TMenuItem( "~Z~oom", cmZoom,     kbF5, hcNoContext, "F5" )
-        );
+	r.b.y = r.a.y + 1;	// set bottom line 1 line below top line
+	return new TMenuBar(r,
+		*new TSubMenu("~F~ile", kbAltF) +
+		  *new TMenuItem("~O~pen", cmMyFileOpen, kbF3, hcNoContext, "F3") +
+		  *new TMenuItem("~N~ew", cmMyNewWin, kbF4, hcNoContext, "F4") +
+		  newLine() +
+		  *new TMenuItem("E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X") +
+		*new TSubMenu("~W~indow", kbAltW) +
+		  *new TMenuItem("~N~ext", cmNext, kbF6, hcNoContext, "F6") +
+		  *new TMenuItem("~Z~oom", cmZoom, kbF5, hcNoContext, "F5")
+	    );
 }
 
-void TMyApp::handleEvent(TEvent& event)
+void TMyApp::handleEvent(TEvent & event)
 {
-    TApplication::handleEvent(event); // act like base!
-    if( event.what == evCommand )
-        {
-        switch( event.message.command )
-            {
-            case cmMyNewWin:       // but respond to additional commands
-                myNewWindow();     // define action for cmMyNewWin
-                break;
-            default:
-                return;
-            }
-        clearEvent( event );       // clear event after handling
-        }
+	TApplication::handleEvent(event);	// act like base!
+	if (event.what == evCommand) {
+		switch (event.message.command) {
+		case cmMyNewWin:	// but respond to additional commands
+			myNewWindow();	// define action for cmMyNewWin command
+			break;
+		default:
+			return;
+		}
+		clearEvent(event);	// clear event after handling
+	}
 }
 
 void TMyApp::myNewWindow()
 {
-    TRect r( 0, 0, 26, 7 );           // set initial size and position
+	TRect r(0, 0, 26, 7);	// set initial size and position
 
-    /* SS: micro change here */
+	/* SS: micro change here */
 
-    //r.move( random(53), random(16) ); // randomly move around screen
-    r.move( random() % 53, random() % 16 ); // randomly move around screen
-    TDemoWindow *window = new TDemoWindow ( r, "Demo Window", ++winNumber);
-    deskTop->insert(window); // put window into desktop and draw it
+	//r.move( random(53), random(16) );	// randomly move around screen
+	r.move(random() % 53, random() % 16);	// randomly move around screen
+	TDemoWindow *window = new TDemoWindow(r, "Demo Window", ++winNumber);
+	deskTop->insert(window);	// put window into desktop and draw it
 }
 
-
-TDemoWindow::TDemoWindow( const TRect& r, const char *aTitle, short aNumber):
-                          TWindowInit( &TDemoWindow::initFrame),
-                          TWindow( r, aTitle, aNumber)
+TDemoWindow::TDemoWindow(const TRect & r, const char *aTitle,
+			 short aNumber):
+TWindowInit(&TDemoWindow::initFrame),
+TWindow(r, aTitle, aNumber)
 {
 }
 
 int main()
 {
-    TMyApp myApp;
-    myApp.run();
-    return 0;
+	TMyApp myApp;
+	myApp.run();
+	return 0;
 }

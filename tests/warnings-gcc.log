@@ -600,4 +600,4 @@ In file included from ../../../tvision/tv.h:683,
                  from ../../../demo/tvdemo3.cc:40:
 ../../../tvision/menus.h:32:13: note: previous declaration of ‘TStatusDef& operator+(TStatusDef&, TStatusDef&)’
 ../../../tutorial/tvlife.cc: In member function ‘virtual void TLifeInterior::handleEvent(TEvent&)’:
-../../../tutorial/tvlife.cc:587:9: warning: switch missing default case [-Wswitch-default]
+../../../tutorial/tvlife.cc:553:9: warning: switch missing default case [-Wswitch-default]

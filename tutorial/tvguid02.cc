@@ -18,40 +18,36 @@
 // tv.h ensures that the correct *.h files are included for each
 // of the above classes and their bases.
 
-class TMyApp : public TApplication
-{
-
-public:
-    TMyApp();
-    static TStatusLine *initStatusLine( TRect r );
-    // new for tvguid02
+class TMyApp:public TApplication {
+      public:
+	TMyApp();
+	static TStatusLine *initStatusLine(TRect r);
+	// new for tvguid02
 };
 
-TMyApp::TMyApp() :
-    TProgInit( &TMyApp::initStatusLine,
-               &TMyApp::initMenuBar,
-               &TMyApp::initDeskTop
-             )
+TMyApp::TMyApp():
+TProgInit(&TMyApp::initStatusLine, &TMyApp::initMenuBar, &TMyApp::initDeskTop)
 {
 }
 
 // new for tvguid02:
 TStatusLine *TMyApp::initStatusLine(TRect r)
 {
-    r.a.y = r.b.y - 1;     // move top to 1 line above bottom
-    return new TStatusLine( r,
-        *new TStatusDef( 0, 0xFFFF ) +
-        // set range of help contexts
-            *new TStatusItem( "~Alt-X~ Exit", kbAltX, cmQuit ) +
-            // define an item
-            *new TStatusItem( "~Alt-F3~ Close", kbAltF3, cmClose )
-            // and another one
-        );
+	r.a.y = r.b.y - 1;	// move top to 1 line above bottom
+	return new TStatusLine(r,
+		// set range of help contexts
+		*new TStatusDef(0, 0xFFFF) +
+		// define an item
+		*new TStatusItem("~Alt-X~ Exit", kbAltX, cmQuit) +
+		// define an item
+		*new TStatusItem("~Alt-F3~ Close", kbAltF3, cmClose)
+		// define an item
+	    );
 }
 
 int main()
 {
-    TMyApp myApp;
-    myApp.run();
-    return 0;
+	TMyApp myApp;
+	myApp.run();
+	return 0;
 }

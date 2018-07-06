@@ -16,19 +16,13 @@
 // for example, #define Uses_TProgram would be redundant here,
 // but harmless.
 
-class TMyApp : public TApplication
-{
-
-public:
+class TMyApp:public TApplication {
+      public:
 	TMyApp();
-
 };
 
-TMyApp::TMyApp() :
-	TProgInit( &TMyApp::initStatusLine,
-		       &TMyApp::initMenuBar,
-		       &TMyApp::initDeskTop
-		     )
+TMyApp::TMyApp():
+TProgInit(&TMyApp::initStatusLine, &TMyApp::initMenuBar, &TMyApp::initDeskTop)
 {
 }
 

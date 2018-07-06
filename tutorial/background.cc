@@ -9,14 +9,13 @@
 
 #include <tv.h>
 
-class Demo: public TApplication
-{
-public:
+class Demo:public TApplication {
+      public:
 	Demo();
 };
 
-Demo::Demo(): TProgInit(&Demo::initStatusLine, &Demo::initMenuBar,
-	&Demo::initDeskTop)
+Demo::Demo():TProgInit(&Demo::initStatusLine, &Demo::initMenuBar,
+	  &Demo::initDeskTop)
 {
 }
 
