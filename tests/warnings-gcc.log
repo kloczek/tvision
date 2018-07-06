@@ -394,11 +394,11 @@ In file included from ../../../tvision/tv.h:631,
 ../../../demo/mousedlg.cc: In member function ‘virtual void TMouseDialog::handleEvent(TEvent&)’:
 ../../../demo/mousedlg.cc:133:11: warning: switch missing default case [-Wswitch-default]
 ../../../demo/puzzle.cc: In member function ‘void TPuzzleView::moveKey(int)’:
-../../../demo/puzzle.cc:188:11: warning: switch missing default case [-Wswitch-default]
+../../../demo/puzzle.cc:184:11: warning: switch missing default case [-Wswitch-default]
 ../../../demo/puzzle.cc: In member function ‘void TPuzzleView::moveTile(TPoint)’:
-../../../demo/puzzle.cc:246:11: warning: switch missing default case [-Wswitch-default]
+../../../demo/puzzle.cc:242:11: warning: switch missing default case [-Wswitch-default]
 ../../../demo/puzzle.cc: In member function ‘void TPuzzleView::scramble()’:
-../../../demo/puzzle.cc:274:15: warning: switch missing default case [-Wswitch-default]
+../../../demo/puzzle.cc:270:15: warning: switch missing default case [-Wswitch-default]
 In file included from ../../../tvision/tv.h:683,
                  from ../../../demo/gadgets.h:20,
                  from ../../../demo/tvdemo1.cc:34:

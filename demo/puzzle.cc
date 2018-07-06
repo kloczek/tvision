@@ -23,8 +23,6 @@
 #define Uses_TView
 #define Uses_TWindow
 #include <tv.h>
-__link( RView )
-__link( RWindow )
 
 #include <string.h>
 #include <stdio.h>	/* SS: for sprintf(...) */
@@ -35,9 +33,7 @@ __link( RWindow )
 
 #include "puzzle.h"
 
-
 #define cpPuzzlePalette "\x06\x07"
-
 
 //
 // TPuzzleView functions & static variables

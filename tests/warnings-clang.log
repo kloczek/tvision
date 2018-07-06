@@ -1,4 +1,4 @@
-   4090 -Wold-style-cast
+   4086 -Wold-style-cast
    3191 -Wreserved-id-macro
    1497 -Wpadded
    1199 -Wzero-as-null-pointer-constant
@@ -10850,15 +10850,7 @@ In file included from ../../../demo/puzzle.cc:25:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-../../../demo/puzzle.cc:26:1: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/tobjstrm.h:53:7: note: expanded from macro '__link'
-../../../demo/puzzle.cc:26:1: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/tobjstrm.h:53:29: note: expanded from macro '__link'
-../../../demo/puzzle.cc:27:1: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/tobjstrm.h:53:7: note: expanded from macro '__link'
-../../../demo/puzzle.cc:27:1: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/tobjstrm.h:53:29: note: expanded from macro '__link'
-In file included from ../../../demo/puzzle.cc:36:
+In file included from ../../../demo/puzzle.cc:34:
 ../../../demo/puzzle.h:23:62: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/puzzle.h:54:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/puzzle.h:56:20: warning: use of old-style cast [-Wold-style-cast]
@@ -10873,7 +10865,7 @@ In file included from ../../../demo/puzzle.cc:25:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
-In file included from ../../../demo/puzzle.cc:36:
+In file included from ../../../demo/puzzle.cc:34:
 ../../../demo/puzzle.h:17:7: warning: padding size of 'TPuzzleView' with 7 bytes to alignment boundary [-Wpadded]
 In file included from ../../../demo/puzzle.cc:25:
 In file included from ../../../tvision/tv.h:659:
@@ -10886,52 +10878,52 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/puzzle.cc:74:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:70:31: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:43: note: expanded from macro '__DELTA'
-../../../demo/puzzle.cc:74:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:70:31: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:29: note: expanded from macro '__DELTA'
-../../../demo/puzzle.cc:74:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:70:31: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:23: note: expanded from macro '__DELTA'
-../../../demo/puzzle.cc:72:18: warning: no previous extern declaration for non-static variable 'RPuzzleView' [-Wmissing-variable-declarations]
-../../../demo/puzzle.cc:72:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+../../../demo/puzzle.cc:68:18: warning: no previous extern declaration for non-static variable 'RPuzzleView' [-Wmissing-variable-declarations]
+../../../demo/puzzle.cc:68:18: warning: declaration requires a global constructor [-Wglobal-constructors]
 In file included from ../../../demo/puzzle.cc:25:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:155:7: warning: padding size of 'TStreamableClass' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/puzzle.cc:95:16: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../demo/puzzle.cc:91:16: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 /usr/lib64/clang/6.0.1/include/stddef.h:100:18: note: expanded from macro 'NULL'
-../../../demo/puzzle.cc:95:11: warning: implicit conversion loses integer precision: 'time_t' (aka 'long') to 'unsigned int' [-Wshorten-64-to-32]
-../../../demo/puzzle.cc:113:39: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
-../../../demo/puzzle.cc:115:20: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
-../../../demo/puzzle.cc:122:30: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/puzzle.cc:124:37: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/puzzle.cc:128:24: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/puzzle.cc:135:30: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.cc:135:30: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/puzzle.cc:135:49: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/puzzle.cc:137:30: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.cc:138:26: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.cc:137:30: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/puzzle.cc:138:20: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/puzzle.cc:147:21: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
+../../../demo/puzzle.cc:91:11: warning: implicit conversion loses integer precision: 'time_t' (aka 'long') to 'unsigned int' [-Wshorten-64-to-32]
+../../../demo/puzzle.cc:109:39: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
+../../../demo/puzzle.cc:111:20: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
+../../../demo/puzzle.cc:118:30: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/puzzle.cc:120:37: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/puzzle.cc:124:24: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/puzzle.cc:131:30: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:131:30: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/puzzle.cc:131:49: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/puzzle.cc:133:30: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:134:26: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:133:30: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/puzzle.cc:134:20: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/puzzle.cc:143:21: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
 In file included from ../../../demo/puzzle.cc:25:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../demo/puzzle.cc:299:13: warning: no previous extern declaration for non-static variable 'solution' [-Wmissing-variable-declarations]
+../../../demo/puzzle.cc:295:13: warning: no previous extern declaration for non-static variable 'solution' [-Wmissing-variable-declarations]
 In file included from ../../../demo/puzzle.cc:25:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../demo/puzzle.cc:344:33: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:340:33: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:43: note: expanded from macro '__DELTA'
-../../../demo/puzzle.cc:344:33: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:340:33: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:29: note: expanded from macro '__DELTA'
-../../../demo/puzzle.cc:344:33: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:340:33: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:23: note: expanded from macro '__DELTA'
-../../../demo/puzzle.cc:342:18: warning: no previous extern declaration for non-static variable 'RPuzzleWindow' [-Wmissing-variable-declarations]
-../../../demo/puzzle.cc:342:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+../../../demo/puzzle.cc:338:18: warning: no previous extern declaration for non-static variable 'RPuzzleWindow' [-Wmissing-variable-declarations]
+../../../demo/puzzle.cc:338:18: warning: declaration requires a global constructor [-Wglobal-constructors]
 ../../../demo/tvdemo1.cc:26:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/tvdemo1.cc:25:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/tvdemo1.cc:17:9: warning: macro is not used [-Wunused-macros]
