@@ -1,11 +1,11 @@
      36 -Wswitch-default
-     36 -Wmissing-declarations
+     35 -Wmissing-declarations
      32 -Wshadow
-     29 -Wredundant-decls
+      9 -Wredundant-decls
       6 -Wformat-overflow=
       5 -Wunused-result
-      5 -Wformat=
       3 -Wsuggest-attribute=format
+      3 -Wformat=
       2 -Wsized-deallocation
       1 -Wstrict-aliasing
       1 -Wrestrict
@@ -371,25 +371,21 @@ In file included from ../../../tvhc/tvhc.cc:85:
 ../../../tvhc/tvhc.cc:716:15: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
 In file included from ../../../tvhc/tvhc.cc:85:
 ../../../tvhc/tvhc.h:113:6: note: shadowed declaration is here
-../../../demo/ascii.cc: In member function ‘virtual void TReport::draw()’:
-../../../demo/ascii.cc:207:32: warning: format ‘%X’ expects argument of type ‘unsigned int’, but argument 6 has type ‘int’ [-Wformat=]
 ../../../demo/calc.cc: In member function ‘virtual void TCalcDisplay::handleEvent(TEvent&)’:
-../../../demo/calc.cc:105:11: warning: switch missing default case [-Wswitch-default]
+../../../demo/calc.cc:104:11: warning: switch missing default case [-Wswitch-default]
 ../../../demo/calc.cc: In member function ‘void TCalcDisplay::calcKey(unsigned char)’:
-../../../demo/calc.cc:268:33: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
-../../../demo/calc.cc:253:23: warning: switch missing default case [-Wswitch-default]
-../../../demo/calc.cc:198:11: warning: switch missing default case [-Wswitch-default]
-../../../demo/calendar.cc:105:5: warning: no previous declaration for ‘int dayOfWeek(int, int, int)’ [-Wmissing-declarations]
+../../../demo/calc.cc:267:33: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+../../../demo/calc.cc:252:23: warning: switch missing default case [-Wswitch-default]
+../../../demo/calc.cc:197:11: warning: switch missing default case [-Wswitch-default]
 ../../../demo/calendar.cc: In member function ‘virtual void TCalendarView::draw()’:
-../../../demo/calendar.cc:133:10: warning: declaration of ‘days’ shadows a member of ‘TCalendarView’ [-Wshadow]
-In file included from ../../../demo/calendar.cc:31:
-../../../demo/calendar.h:29:14: note: shadowed declaration is here
-../../../demo/calendar.cc:145:18: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘unsigned int’ [-Wformat=]
-In file included from ../../../demo/fileview.cc:34:
+../../../demo/calendar.cc:132:10: warning: declaration of ‘days’ shadows a member of ‘TCalendarView’ [-Wshadow]
+In file included from ../../../demo/calendar.cc:32:
+../../../demo/calendar.h:31:14: note: shadowed declaration is here
+In file included from ../../../demo/fileview.cc:36:
 ../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
-../../../demo/fileview.h:29:45: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
+../../../demo/fileview.h:24:45: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
 In file included from ../../../tvision/tv.h:631,
-                 from ../../../demo/fileview.cc:25:
+                 from ../../../demo/fileview.cc:27:
 ../../../tvision/tvobjs.h:385:13: note: shadowed declaration is here
 ../../../demo/mousedlg.cc: In member function ‘virtual void TMouseDialog::handleEvent(TEvent&)’:
 ../../../demo/mousedlg.cc:133:11: warning: switch missing default case [-Wswitch-default]
@@ -400,204 +396,46 @@ In file included from ../../../tvision/tv.h:631,
 ../../../demo/puzzle.cc: In member function ‘void TPuzzleView::scramble()’:
 ../../../demo/puzzle.cc:270:15: warning: switch missing default case [-Wswitch-default]
 In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/gadgets.h:20,
+                 from ../../../tvision/help.h:30,
                  from ../../../demo/tvdemo1.cc:34:
 ../../../tvision/menus.h:20:11: warning: redundant redeclaration of ‘TSubMenu& operator+(TSubMenu&, TMenuItem&)’ in same scope [-Wredundant-decls]
 In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/tvdemo1.cc:31:
+                 from ../../../demo/tvdemo1.cc:33:
 ../../../tvision/menus.h:20:11: note: previous declaration of ‘TSubMenu& operator+(TSubMenu&, TMenuItem&)’
 In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/gadgets.h:20,
+                 from ../../../tvision/help.h:30,
                  from ../../../demo/tvdemo1.cc:34:
 ../../../tvision/menus.h:24:11: warning: redundant redeclaration of ‘TSubMenu& operator+(TSubMenu&, TSubMenu&)’ in same scope [-Wredundant-decls]
 In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/tvdemo1.cc:31:
+                 from ../../../demo/tvdemo1.cc:33:
 ../../../tvision/menus.h:24:11: note: previous declaration of ‘TSubMenu& operator+(TSubMenu&, TSubMenu&)’
 In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/gadgets.h:20,
+                 from ../../../tvision/help.h:30,
                  from ../../../demo/tvdemo1.cc:34:
 ../../../tvision/menus.h:28:13: warning: redundant redeclaration of ‘TStatusDef& operator+(TStatusDef&, TStatusItem&)’ in same scope [-Wredundant-decls]
 In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/tvdemo1.cc:31:
+                 from ../../../demo/tvdemo1.cc:33:
 ../../../tvision/menus.h:28:13: note: previous declaration of ‘TStatusDef& operator+(TStatusDef&, TStatusItem&)’
 In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/gadgets.h:20,
+                 from ../../../tvision/help.h:30,
                  from ../../../demo/tvdemo1.cc:34:
 ../../../tvision/menus.h:32:13: warning: redundant redeclaration of ‘TStatusDef& operator+(TStatusDef&, TStatusDef&)’ in same scope [-Wredundant-decls]
 In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/tvdemo1.cc:31:
+                 from ../../../demo/tvdemo1.cc:33:
 ../../../tvision/menus.h:32:13: note: previous declaration of ‘TStatusDef& operator+(TStatusDef&, TStatusDef&)’
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/fileview.h:20,
-                 from ../../../demo/tvdemo1.cc:35:
-../../../tvision/menus.h:20:11: warning: redundant redeclaration of ‘TSubMenu& operator+(TSubMenu&, TMenuItem&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/gadgets.h:20,
-                 from ../../../demo/tvdemo1.cc:34:
-../../../tvision/menus.h:20:11: note: previous declaration of ‘TSubMenu& operator+(TSubMenu&, TMenuItem&)’
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/fileview.h:20,
-                 from ../../../demo/tvdemo1.cc:35:
-../../../tvision/menus.h:24:11: warning: redundant redeclaration of ‘TSubMenu& operator+(TSubMenu&, TSubMenu&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/gadgets.h:20,
-                 from ../../../demo/tvdemo1.cc:34:
-../../../tvision/menus.h:24:11: note: previous declaration of ‘TSubMenu& operator+(TSubMenu&, TSubMenu&)’
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/fileview.h:20,
-                 from ../../../demo/tvdemo1.cc:35:
-../../../tvision/menus.h:28:13: warning: redundant redeclaration of ‘TStatusDef& operator+(TStatusDef&, TStatusItem&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/gadgets.h:20,
-                 from ../../../demo/tvdemo1.cc:34:
-../../../tvision/menus.h:28:13: note: previous declaration of ‘TStatusDef& operator+(TStatusDef&, TStatusItem&)’
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/fileview.h:20,
-                 from ../../../demo/tvdemo1.cc:35:
-../../../tvision/menus.h:32:13: warning: redundant redeclaration of ‘TStatusDef& operator+(TStatusDef&, TStatusDef&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/gadgets.h:20,
-                 from ../../../demo/tvdemo1.cc:34:
-../../../tvision/menus.h:32:13: note: previous declaration of ‘TStatusDef& operator+(TStatusDef&, TStatusDef&)’
-In file included from ../../../demo/tvdemo1.cc:35:
+In file included from ../../../demo/tvdemo1.cc:41:
 ../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
-../../../demo/fileview.h:29:45: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
+../../../demo/fileview.h:24:45: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
 In file included from ../../../tvision/tv.h:631,
-                 from ../../../demo/tvdemo1.cc:31:
+                 from ../../../demo/tvdemo1.cc:33:
 ../../../tvision/tvobjs.h:385:13: note: shadowed declaration is here
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../tvision/help.h:30,
-                 from ../../../demo/tvdemo1.cc:38:
-../../../tvision/menus.h: At global scope:
-../../../tvision/menus.h:20:11: warning: redundant redeclaration of ‘TSubMenu& operator+(TSubMenu&, TMenuItem&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/fileview.h:20,
-                 from ../../../demo/tvdemo1.cc:35:
-../../../tvision/menus.h:20:11: note: previous declaration of ‘TSubMenu& operator+(TSubMenu&, TMenuItem&)’
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../tvision/help.h:30,
-                 from ../../../demo/tvdemo1.cc:38:
-../../../tvision/menus.h:24:11: warning: redundant redeclaration of ‘TSubMenu& operator+(TSubMenu&, TSubMenu&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/fileview.h:20,
-                 from ../../../demo/tvdemo1.cc:35:
-../../../tvision/menus.h:24:11: note: previous declaration of ‘TSubMenu& operator+(TSubMenu&, TSubMenu&)’
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../tvision/help.h:30,
-                 from ../../../demo/tvdemo1.cc:38:
-../../../tvision/menus.h:28:13: warning: redundant redeclaration of ‘TStatusDef& operator+(TStatusDef&, TStatusItem&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/fileview.h:20,
-                 from ../../../demo/tvdemo1.cc:35:
-../../../tvision/menus.h:28:13: note: previous declaration of ‘TStatusDef& operator+(TStatusDef&, TStatusItem&)’
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../tvision/help.h:30,
-                 from ../../../demo/tvdemo1.cc:38:
-../../../tvision/menus.h:32:13: warning: redundant redeclaration of ‘TStatusDef& operator+(TStatusDef&, TStatusDef&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/fileview.h:20,
-                 from ../../../demo/tvdemo1.cc:35:
-../../../tvision/menus.h:32:13: note: previous declaration of ‘TStatusDef& operator+(TStatusDef&, TStatusDef&)’
 ../../../demo/tvdemo1.cc: In member function ‘virtual void TVDemo::getEvent(TEvent&)’:
-../../../demo/tvdemo1.cc:128:12: warning: switch missing default case [-Wswitch-default]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/gadgets.h:20,
-                 from ../../../demo/tvdemo3.cc:37:
-../../../tvision/menus.h:20:11: warning: redundant redeclaration of ‘TSubMenu& operator+(TSubMenu&, TMenuItem&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/tvdemo3.cc:33:
-../../../tvision/menus.h:20:11: note: previous declaration of ‘TSubMenu& operator+(TSubMenu&, TMenuItem&)’
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/gadgets.h:20,
-                 from ../../../demo/tvdemo3.cc:37:
-../../../tvision/menus.h:24:11: warning: redundant redeclaration of ‘TSubMenu& operator+(TSubMenu&, TSubMenu&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/tvdemo3.cc:33:
-../../../tvision/menus.h:24:11: note: previous declaration of ‘TSubMenu& operator+(TSubMenu&, TSubMenu&)’
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/gadgets.h:20,
-                 from ../../../demo/tvdemo3.cc:37:
-../../../tvision/menus.h:28:13: warning: redundant redeclaration of ‘TStatusDef& operator+(TStatusDef&, TStatusItem&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/tvdemo3.cc:33:
-../../../tvision/menus.h:28:13: note: previous declaration of ‘TStatusDef& operator+(TStatusDef&, TStatusItem&)’
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/gadgets.h:20,
-                 from ../../../demo/tvdemo3.cc:37:
-../../../tvision/menus.h:32:13: warning: redundant redeclaration of ‘TStatusDef& operator+(TStatusDef&, TStatusDef&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/tvdemo3.cc:33:
-../../../tvision/menus.h:32:13: note: previous declaration of ‘TStatusDef& operator+(TStatusDef&, TStatusDef&)’
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/fileview.h:20,
-                 from ../../../demo/tvdemo3.cc:40:
-../../../tvision/menus.h:20:11: warning: redundant redeclaration of ‘TSubMenu& operator+(TSubMenu&, TMenuItem&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/gadgets.h:20,
-                 from ../../../demo/tvdemo3.cc:37:
-../../../tvision/menus.h:20:11: note: previous declaration of ‘TSubMenu& operator+(TSubMenu&, TMenuItem&)’
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/fileview.h:20,
-                 from ../../../demo/tvdemo3.cc:40:
-../../../tvision/menus.h:24:11: warning: redundant redeclaration of ‘TSubMenu& operator+(TSubMenu&, TSubMenu&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/gadgets.h:20,
-                 from ../../../demo/tvdemo3.cc:37:
-../../../tvision/menus.h:24:11: note: previous declaration of ‘TSubMenu& operator+(TSubMenu&, TSubMenu&)’
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/fileview.h:20,
-                 from ../../../demo/tvdemo3.cc:40:
-../../../tvision/menus.h:28:13: warning: redundant redeclaration of ‘TStatusDef& operator+(TStatusDef&, TStatusItem&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/gadgets.h:20,
-                 from ../../../demo/tvdemo3.cc:37:
-../../../tvision/menus.h:28:13: note: previous declaration of ‘TStatusDef& operator+(TStatusDef&, TStatusItem&)’
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/fileview.h:20,
-                 from ../../../demo/tvdemo3.cc:40:
-../../../tvision/menus.h:32:13: warning: redundant redeclaration of ‘TStatusDef& operator+(TStatusDef&, TStatusDef&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/gadgets.h:20,
-                 from ../../../demo/tvdemo3.cc:37:
-../../../tvision/menus.h:32:13: note: previous declaration of ‘TStatusDef& operator+(TStatusDef&, TStatusDef&)’
-In file included from ../../../demo/tvdemo3.cc:40:
+../../../demo/tvdemo1.cc:130:12: warning: switch missing default case [-Wswitch-default]
+In file included from ../../../demo/tvdemo3.cc:42:
 ../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
-../../../demo/fileview.h:29:45: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
+../../../demo/fileview.h:24:45: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
 In file included from ../../../tvision/tv.h:631,
-                 from ../../../demo/tvdemo3.cc:33:
+                 from ../../../demo/tvdemo3.cc:35:
 ../../../tvision/tvobjs.h:385:13: note: shadowed declaration is here
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../tvision/help.h:30,
-                 from ../../../demo/tvdemo3.cc:42:
-../../../tvision/menus.h: At global scope:
-../../../tvision/menus.h:20:11: warning: redundant redeclaration of ‘TSubMenu& operator+(TSubMenu&, TMenuItem&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/fileview.h:20,
-                 from ../../../demo/tvdemo3.cc:40:
-../../../tvision/menus.h:20:11: note: previous declaration of ‘TSubMenu& operator+(TSubMenu&, TMenuItem&)’
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../tvision/help.h:30,
-                 from ../../../demo/tvdemo3.cc:42:
-../../../tvision/menus.h:24:11: warning: redundant redeclaration of ‘TSubMenu& operator+(TSubMenu&, TSubMenu&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/fileview.h:20,
-                 from ../../../demo/tvdemo3.cc:40:
-../../../tvision/menus.h:24:11: note: previous declaration of ‘TSubMenu& operator+(TSubMenu&, TSubMenu&)’
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../tvision/help.h:30,
-                 from ../../../demo/tvdemo3.cc:42:
-../../../tvision/menus.h:28:13: warning: redundant redeclaration of ‘TStatusDef& operator+(TStatusDef&, TStatusItem&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/fileview.h:20,
-                 from ../../../demo/tvdemo3.cc:40:
-../../../tvision/menus.h:28:13: note: previous declaration of ‘TStatusDef& operator+(TStatusDef&, TStatusItem&)’
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../tvision/help.h:30,
-                 from ../../../demo/tvdemo3.cc:42:
-../../../tvision/menus.h:32:13: warning: redundant redeclaration of ‘TStatusDef& operator+(TStatusDef&, TStatusDef&)’ in same scope [-Wredundant-decls]
-In file included from ../../../tvision/tv.h:683,
-                 from ../../../demo/fileview.h:20,
-                 from ../../../demo/tvdemo3.cc:40:
-../../../tvision/menus.h:32:13: note: previous declaration of ‘TStatusDef& operator+(TStatusDef&, TStatusDef&)’
 ../../../tutorial/tvlife.cc: In member function ‘virtual void TLifeInterior::handleEvent(TEvent&)’:
 ../../../tutorial/tvlife.cc:553:9: warning: switch missing default case [-Wswitch-default]

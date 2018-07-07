@@ -27,18 +27,20 @@
 #define Uses_TApplication
 #define Uses_TWindow
 #define Uses_TDeskTop
+#define Uses_TCollection
+#define Uses_TScroller
 
 #include <tv.h>
+#include <help.h>
+
+#include <stdio.h>
+#include <string.h>
 
 #include "tvdemo.h"
 #include "gadgets.h"
 #include "fileview.h"
 #include "puzzle.h"
 #include "demohelp.h"
-#include <help.h>
-
-#include <stdio.h>
-#include <string.h>
 
 /* SS: changed */
 
@@ -156,7 +158,6 @@ void TVDemo::getEvent(TEvent &event)
                 event.what = evNothing;
             break;
         }
-
 }
 
 //

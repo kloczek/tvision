@@ -15,7 +15,6 @@
 #define TV_INC_CALC_H
 
 #include <math.h>
-#include <stdlib.h>
 
 #define DISPLAYLEN  25      // Length (width) of calculator display
 

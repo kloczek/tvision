@@ -26,12 +26,12 @@
 #define Uses_TView
 #define Uses_TWindow
 #include <tv.h>
+
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
 
 #include "ascii.h"
-
 
 //
 // TTable functions
@@ -207,7 +207,7 @@ void TReport::draw()
     snprintf(str, sizeof(str), "  Char: %c Decimal: %3d Hex: %2X  ",
 		(asciiChar==0)?(char)0x20:(char)asciiChar,
 		(int)asciiChar,
-		(int)asciiChar);
+		(unsigned int)asciiChar);
 
     buf.moveStr(0, str, color);
     writeLine(0, 0, 32, 1, buf);

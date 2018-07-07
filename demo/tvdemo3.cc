@@ -29,6 +29,8 @@
 #define Uses_TStaticText
 #define Uses_TDialog
 #define Uses_TEventQueue
+#define Uses_TCollection
+#define Uses_TScroller
 
 #include <tv.h>
 
@@ -38,8 +40,6 @@
 #include "mousedlg.h"
 #include "demohelp.h"
 #include "fileview.h"
-
-#include <help.h>
 
 //
 // Mouse Control Dialog Box function

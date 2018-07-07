@@ -14,11 +14,6 @@
 #if !defined( TV_INC_FILEVIEW_H )
 #define TV_INC_FILEVIEW_H
 
-#define Uses_TCollection
-#define Uses_TScroller
-#define Uses_TWindow
-#include <tv.h>
-
 const int hlChangeDir = cmChangeDir;
 
 class TLineCollection : public TCollection

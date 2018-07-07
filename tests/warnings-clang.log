@@ -1,21 +1,21 @@
-   4086 -Wold-style-cast
-   3191 -Wreserved-id-macro
-   1497 -Wpadded
+   4074 -Wold-style-cast
+   3182 -Wreserved-id-macro
+   1491 -Wpadded
    1199 -Wzero-as-null-pointer-constant
     355 -Wunused-macros
     313 -Wconversion
     231 -Wsign-conversion
-    140 -Wextra-semi
+    138 -Wextra-semi
     106 -Wdocumentation-unknown-command
     106 -Wabstract-vbase-init
     102 -Wmissing-variable-declarations
      98 -Wnon-virtual-dtor
-     79 -Wmismatched-tags
+     78 -Wmismatched-tags
      78 -Wglobal-constructors
      59 -Wweak-vtables
      52 -Wshorten-64-to-32
-     36 -Wmissing-prototypes
      36 -Wexit-time-destructors
+     35 -Wmissing-prototypes
      29 -Woverloaded-virtual
      27 -Wcast-qual
      22 -Wshadow
@@ -9925,7 +9925,7 @@ In file included from ../../../demo/ascii.cc:28:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../demo/ascii.cc:33:
+In file included from ../../../demo/ascii.cc:34:
 ../../../demo/ascii.h:27:57: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/ascii.h:51:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:53:20: warning: use of old-style cast [-Wold-style-cast]
@@ -10094,27 +10094,27 @@ In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../demo/calc.cc:32:
-../../../demo/calc.h:33:63: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calc.h:52:61: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calc.h:70:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:72:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:75:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:77:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:89:13: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calc.h:109:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:111:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:114:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:116:20: warning: use of old-style cast [-Wold-style-cast]
+In file included from ../../../demo/calc.cc:33:
+../../../demo/calc.h:32:63: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/calc.h:51:61: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/calc.h:69:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:71:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:74:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:76:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:88:13: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/calc.h:108:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:110:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:113:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:115:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:48:18: warning: implicit conversion changes signedness: 'char' to 'uchar' (aka 'unsigned char') [-Wsign-conversion]
 ../../../demo/calc.cc:49:18: warning: implicit conversion changes signedness: 'char' to 'uchar' (aka 'unsigned char') [-Wsign-conversion]
-../../../demo/calc.cc:50:18: warning: implicit conversion changes signedness: 'char' to 'uchar' (aka 'unsigned char') [-Wsign-conversion]
 In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
-In file included from ../../../demo/calc.cc:32:
-../../../demo/calc.h:42:11: warning: padding class 'TCalcDisplay' with 4 bytes to align 'number' [-Wpadded]
-../../../demo/calc.h:45:12: warning: padding class 'TCalcDisplay' with 6 bytes to align 'operand' [-Wpadded]
+In file included from ../../../demo/calc.cc:33:
+../../../demo/calc.h:41:11: warning: padding class 'TCalcDisplay' with 4 bytes to align 'number' [-Wpadded]
+../../../demo/calc.h:44:12: warning: padding class 'TCalcDisplay' with 6 bytes to align 'operand' [-Wpadded]
 In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3455:13: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
@@ -10124,71 +10124,71 @@ In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/calc.cc:61:15: warning: implicit conversion changes signedness: 'uchar' (aka 'unsigned char') to 'char' [-Wsign-conversion]
-../../../demo/calc.cc:62:18: warning: implicit conversion changes signedness: 'uchar' (aka 'unsigned char') to 'char' [-Wsign-conversion]
+../../../demo/calc.cc:60:15: warning: implicit conversion changes signedness: 'uchar' (aka 'unsigned char') to 'char' [-Wsign-conversion]
+../../../demo/calc.cc:61:18: warning: implicit conversion changes signedness: 'uchar' (aka 'unsigned char') to 'char' [-Wsign-conversion]
 In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/calc.cc:76:32: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:75:32: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:43: note: expanded from macro '__DELTA'
-../../../demo/calc.cc:76:32: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:75:32: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:29: note: expanded from macro '__DELTA'
-../../../demo/calc.cc:76:32: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:75:32: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:23: note: expanded from macro '__DELTA'
-../../../demo/calc.cc:74:18: warning: no previous extern declaration for non-static variable 'RCalcDisplay' [-Wmissing-variable-declarations]
-../../../demo/calc.cc:74:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+../../../demo/calc.cc:73:18: warning: no previous extern declaration for non-static variable 'RCalcDisplay' [-Wmissing-variable-declarations]
+../../../demo/calc.cc:73:18: warning: declaration requires a global constructor [-Wglobal-constructors]
 In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:155:7: warning: padding size of 'TStreamableClass' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/calc.cc:96:21: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
-../../../demo/calc.cc:114:27: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:95:21: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
+../../../demo/calc.cc:113:27: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:712:13: warning: padding class 'TButton' with 1 byte to align 'amDefault' [-Wpadded]
-../../../demo/calc.cc:114:26: warning: implicit conversion changes signedness: 'const char' to 'unsigned char' [-Wsign-conversion]
+../../../demo/calc.cc:113:26: warning: implicit conversion changes signedness: 'const char' to 'unsigned char' [-Wsign-conversion]
 In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../demo/calc.cc:124:18: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
-../../../demo/calc.cc:128:9: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:128:22: warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-../../../demo/calc.cc:129:33: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:129:26: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calc.cc:129:33: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calc.cc:130:34: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:130:18: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calc.cc:130:27: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calc.cc:131:17: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:131:17: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calc.cc:131:39: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calc.cc:132:21: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:169:23: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
-../../../demo/calc.cc:194:11: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:207:27: warning: implicit conversion changes signedness: 'unsigned char' to 'char' [-Wsign-conversion]
-../../../demo/calc.cc:214:39: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../demo/calc.cc:123:18: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
+../../../demo/calc.cc:127:9: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:127:22: warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+../../../demo/calc.cc:128:33: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:128:26: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calc.cc:128:33: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calc.cc:129:34: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:129:18: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calc.cc:129:27: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calc.cc:130:17: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:130:17: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calc.cc:130:39: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calc.cc:131:21: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:168:23: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+../../../demo/calc.cc:193:11: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:206:27: warning: implicit conversion changes signedness: 'unsigned char' to 'char' [-Wsign-conversion]
+../../../demo/calc.cc:213:39: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 /usr/lib64/clang/6.0.1/include/stddef.h:100:18: note: expanded from macro 'NULL'
-../../../demo/calc.cc:268:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
-../../../demo/calc.cc:276:23: warning: implicit conversion changes signedness: 'unsigned char' to 'char' [-Wsign-conversion]
-../../../demo/calc.cc:226:24: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
-../../../demo/calc.cc:290:13: warning: no previous extern declaration for non-static variable 'keyChar' [-Wmissing-variable-declarations]
+../../../demo/calc.cc:267:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+../../../demo/calc.cc:275:23: warning: implicit conversion changes signedness: 'unsigned char' to 'char' [-Wsign-conversion]
+../../../demo/calc.cc:225:24: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+../../../demo/calc.cc:289:13: warning: no previous extern declaration for non-static variable 'keyChar' [-Wmissing-variable-declarations]
 In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../demo/calc.cc:313:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:312:31: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:43: note: expanded from macro '__DELTA'
-../../../demo/calc.cc:313:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:312:31: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:29: note: expanded from macro '__DELTA'
-../../../demo/calc.cc:313:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:312:31: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:23: note: expanded from macro '__DELTA'
-../../../demo/calc.cc:311:18: warning: no previous extern declaration for non-static variable 'RCalculator' [-Wmissing-variable-declarations]
-../../../demo/calc.cc:311:18: warning: declaration requires a global constructor [-Wglobal-constructors]
-In file included from ../../../demo/calc.cc:32:
-../../../demo/calc.h:80:7: warning: 'TCalculator' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+../../../demo/calc.cc:310:18: warning: no previous extern declaration for non-static variable 'RCalculator' [-Wmissing-variable-declarations]
+../../../demo/calc.cc:310:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+In file included from ../../../demo/calc.cc:33:
+../../../demo/calc.h:79:7: warning: 'TCalculator' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 ../../../demo/calendar.cc:23:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/calendar.cc:17:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/calendar.cc:22:9: warning: macro is not used [-Wunused-macros]
@@ -10259,17 +10259,17 @@ In file included from ../../../demo/calendar.cc:25:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../demo/calendar.cc:31:
-../../../demo/calendar.h:23:64: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calendar.h:47:20: warning: use of old-style cast [-Wold-style-cast]
+In file included from ../../../demo/calendar.cc:32:
+../../../demo/calendar.h:25:64: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/calendar.h:49:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:52:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:51:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.h:54:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:66:12: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calendar.h:86:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:56:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:68:12: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/calendar.h:88:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:91:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:90:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.h:93:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:95:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.cc:34:13: warning: no previous extern declaration for non-static variable 'monthNames' [-Wmissing-variable-declarations]
 In file included from ../../../demo/calendar.cc:25:
 In file included from ../../../tvision/tv.h:659:
@@ -10284,60 +10284,59 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/calendar.cc:76:33: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:75:33: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:43: note: expanded from macro '__DELTA'
-../../../demo/calendar.cc:76:33: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:75:33: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:29: note: expanded from macro '__DELTA'
-../../../demo/calendar.cc:76:33: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:75:33: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:23: note: expanded from macro '__DELTA'
-../../../demo/calendar.cc:74:18: warning: no previous extern declaration for non-static variable 'RCalendarView' [-Wmissing-variable-declarations]
-../../../demo/calendar.cc:74:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+../../../demo/calendar.cc:73:18: warning: no previous extern declaration for non-static variable 'RCalendarView' [-Wmissing-variable-declarations]
+../../../demo/calendar.cc:73:18: warning: declaration requires a global constructor [-Wglobal-constructors]
 In file included from ../../../demo/calendar.cc:25:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:155:7: warning: padding size of 'TStreamableClass' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/calendar.cc:89:20: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../demo/calendar.cc:88:20: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 /usr/lib64/clang/6.0.1/include/stddef.h:100:18: note: expanded from macro 'NULL'
-../../../demo/calendar.cc:92:35: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-../../../demo/calendar.cc:93:36: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-../../../demo/calendar.cc:94:19: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-../../../demo/calendar.cc:119:18: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:119:42: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:125:12: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:105:5: warning: no previous prototype for function 'dayOfWeek' [-Wmissing-prototypes]
-../../../demo/calendar.cc:132:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:132:44: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
-../../../demo/calendar.cc:132:51: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
-../../../demo/calendar.cc:133:10: warning: declaration shadows a field of 'TCalendarView' [-Wshadow]
-../../../demo/calendar.h:29:14: note: previous declaration is here
-../../../demo/calendar.cc:133:17: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:139:13: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
-../../../demo/calendar.cc:140:17: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
-../../../demo/calendar.cc:142:26: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:144:25: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:146:25: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:149:26: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:150:44: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:155:30: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:159:29: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:159:29: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:159:50: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:162:23: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:164:4: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:165:19: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:165:19: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:165:38: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:167:19: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:167:19: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:167:38: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:171:22: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:181:15: warning: use of logical '&&' with constant operand [-Wconstant-logical-operand]
-../../../demo/calendar.cc:181:15: note: use '&' for a bitwise operation
-../../../demo/calendar.cc:181:15: note: remove constant to silence this warning
-../../../demo/calendar.cc:183:53: warning: use of logical '||' with constant operand [-Wconstant-logical-operand]
-../../../demo/calendar.cc:183:53: note: use '|' for a bitwise operation
-../../../demo/calendar.cc:209:19: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:91:35: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+../../../demo/calendar.cc:92:36: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+../../../demo/calendar.cc:93:19: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+../../../demo/calendar.cc:118:18: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:118:42: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:124:12: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:131:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:131:44: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+../../../demo/calendar.cc:131:51: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+../../../demo/calendar.cc:132:10: warning: declaration shadows a field of 'TCalendarView' [-Wshadow]
+../../../demo/calendar.h:31:14: note: previous declaration is here
+../../../demo/calendar.cc:132:17: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:138:13: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
+../../../demo/calendar.cc:139:17: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
+../../../demo/calendar.cc:141:26: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:143:25: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:145:25: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:148:26: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:149:44: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:154:30: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:158:29: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:158:29: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:158:50: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:161:23: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:163:4: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:164:19: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:164:19: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:164:38: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:166:19: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:166:19: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:166:38: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:170:22: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:180:15: warning: use of logical '&&' with constant operand [-Wconstant-logical-operand]
+../../../demo/calendar.cc:180:15: note: use '&' for a bitwise operation
+../../../demo/calendar.cc:180:15: note: remove constant to silence this warning
+../../../demo/calendar.cc:182:53: warning: use of logical '||' with constant operand [-Wconstant-logical-operand]
+../../../demo/calendar.cc:182:53: note: use '|' for a bitwise operation
+../../../demo/calendar.cc:208:19: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:113:24: note: expanded from macro 'loByte'
-../../../demo/calendar.cc:219:24: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:218:24: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:113:24: note: expanded from macro 'loByte'
 In file included from ../../../demo/calendar.cc:25:
 In file included from ../../../tvision/tv.h:647:
@@ -10349,20 +10348,20 @@ In file included from ../../../demo/calendar.cc:25:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../demo/calendar.cc:263:35: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:262:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:43: note: expanded from macro '__DELTA'
-../../../demo/calendar.cc:263:35: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:262:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:29: note: expanded from macro '__DELTA'
-../../../demo/calendar.cc:263:35: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:262:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:23: note: expanded from macro '__DELTA'
-../../../demo/calendar.cc:261:18: warning: no previous extern declaration for non-static variable 'RCalendarWindow' [-Wmissing-variable-declarations]
-../../../demo/calendar.cc:261:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+../../../demo/calendar.cc:260:18: warning: no previous extern declaration for non-static variable 'RCalendarWindow' [-Wmissing-variable-declarations]
+../../../demo/calendar.cc:260:18: warning: declaration requires a global constructor [-Wglobal-constructors]
 ../../../demo/fileview.cc:21:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/fileview.cc:20:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../demo/fileview.cc:25:
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/fileview.cc:25:
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -10370,7 +10369,7 @@ In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:404:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:428:9: warning: initializer for virtual base class 'TNSCollection' of abstract class 'TNSSortedCollection' will never be used [-Wabstract-vbase-init]
 ../../../tvision/tvobjs.h:471:17: note: unimplemented pure virtual method 'compare' in 'TNSSortedCollection'
-In file included from ../../../demo/fileview.cc:25:
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:32:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -10383,25 +10382,30 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:412:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:550:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:727:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/fileview.cc:25:
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:639:
 ../../../tvision/drawbuf.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/drawbuf.h:118:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:114:24: note: expanded from macro 'hiByte'
 ../../../tvision/drawbuf.h:123:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:113:24: note: expanded from macro 'loByte'
-In file included from ../../../demo/fileview.cc:25:
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:643:
 ../../../tvision/objects.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/objects.h:110:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/fileview.cc:25:
+../../../tvision/objects.h:319:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
+../../../tvision/objects.h:417:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/objects.h:422:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/objects.h:428:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/objects.h:433:20: warning: use of old-style cast [-Wold-style-cast]
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:102:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/fileview.cc:25:
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:651:
 ../../../tvision/msgbox.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/fileview.cc:25:
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -10424,16 +10428,21 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3530:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3536:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3541:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/fileview.cc:25:
+../../../tvision/views.h:3546:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
+../../../tvision/views.h:3851:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/views.h:3856:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/views.h:3862:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/views.h:3867:20: warning: use of old-style cast [-Wold-style-cast]
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/fileview.cc:25:
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:123:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/fileview.cc:25:
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../demo/fileview.cc:25:
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:299:34: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:299:20: warning: use of old-style cast [-Wold-style-cast]
@@ -10444,91 +10453,70 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:394:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../demo/fileview.cc:34:
-In file included from ../../../demo/fileview.h:20:
-In file included from ../../../tvision/tv.h:635:
-../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/fileview.cc:34:
-In file included from ../../../demo/fileview.h:20:
-In file included from ../../../tvision/tv.h:643:
-../../../tvision/objects.h:319:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/objects.h:417:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/objects.h:422:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/objects.h:428:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/objects.h:433:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/fileview.cc:34:
-In file included from ../../../demo/fileview.h:20:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:3546:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:3851:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/views.h:3856:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/views.h:3862:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/views.h:3867:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/fileview.cc:34:
-../../../demo/fileview.h:30:48: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.h:34:50: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../demo/fileview.h:53:66: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/fileview.cc:47:16: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../demo/fileview.cc:25:
+In file included from ../../../demo/fileview.cc:36:
+../../../demo/fileview.h:25:48: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.h:29:50: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../demo/fileview.h:48:66: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/fileview.cc:48:16: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
 ../../../tvision/views.h:2651:13: warning: padding class 'TScroller' with 3 bytes to align 'drawFlag' [-Wpadded]
-In file included from ../../../demo/fileview.cc:34:
-../../../demo/fileview.h:39:7: warning: padding size of 'TFileViewer' with 4 bytes to alignment boundary [-Wpadded]
-In file included from ../../../demo/fileview.cc:25:
+In file included from ../../../demo/fileview.cc:36:
+../../../demo/fileview.h:34:7: warning: padding size of 'TFileViewer' with 4 bytes to alignment boundary [-Wpadded]
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3455:13: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
 ../../../tvision/views.h:3471:12: warning: padding class 'TGroup' with 1 byte to align 'endState' [-Wpadded]
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/fileview.cc:65:32: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.cc:65:32: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/fileview.cc:70:17: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.cc:71:22: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../demo/fileview.cc:71:27: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.cc:75:45: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../demo/fileview.cc:76:21: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.cc:81:25: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.cc:114:37: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
-../../../demo/fileview.cc:140:16: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../demo/fileview.cc:25:
+../../../demo/fileview.cc:66:32: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.cc:66:32: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/fileview.cc:71:17: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.cc:72:22: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../demo/fileview.cc:72:27: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.cc:76:45: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../demo/fileview.cc:77:21: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.cc:82:25: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.cc:115:37: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+../../../demo/fileview.cc:141:16: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/fileview.cc:160:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.cc:161:31: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:43: note: expanded from macro '__DELTA'
-../../../demo/fileview.cc:160:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.cc:161:31: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:29: note: expanded from macro '__DELTA'
-../../../demo/fileview.cc:160:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.cc:161:31: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:23: note: expanded from macro '__DELTA'
-../../../demo/fileview.cc:158:18: warning: no previous extern declaration for non-static variable 'RFileView' [-Wmissing-variable-declarations]
-../../../demo/fileview.cc:158:18: warning: declaration requires a global constructor [-Wglobal-constructors]
-In file included from ../../../demo/fileview.cc:25:
+../../../demo/fileview.cc:159:18: warning: no previous extern declaration for non-static variable 'RFileView' [-Wmissing-variable-declarations]
+../../../demo/fileview.cc:159:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:155:7: warning: padding size of 'TStreamableClass' with 4 bytes to alignment boundary [-Wpadded]
-In file included from ../../../demo/fileview.cc:34:
-In file included from ../../../demo/fileview.h:20:
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-In file included from ../../../demo/fileview.cc:25:
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
-In file included from ../../../demo/fileview.cc:25:
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:80:7: warning: 'TStreamable' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
-In file included from ../../../demo/fileview.cc:34:
-../../../demo/fileview.h:24:7: warning: 'TLineCollection' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
-In file included from ../../../demo/fileview.cc:25:
+In file included from ../../../demo/fileview.cc:36:
+../../../demo/fileview.h:19:7: warning: 'TLineCollection' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-In file included from ../../../demo/fileview.cc:34:
-../../../demo/fileview.h:77:7: warning: 'TFileWindow' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+In file included from ../../../demo/fileview.cc:36:
+../../../demo/fileview.h:72:7: warning: 'TFileWindow' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 ../../../demo/gadgets.cc:24:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../demo/gadgets.cc:25:
 In file included from ../../../tvision/tv.h:631:
@@ -10577,16 +10565,8 @@ In file included from ../../../demo/gadgets.cc:25:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../demo/gadgets.cc:32:
-In file included from ../../../demo/gadgets.h:20:
-In file included from ../../../tvision/tv.h:635:
-../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/gadgets.cc:32:
-In file included from ../../../demo/gadgets.h:20:
-In file included from ../../../tvision/tv.h:647:
-../../../tvision/system.h:102:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/system.h:334:1: warning: 'TEvent' defined as a struct here but previously declared as a class [-Wmismatched-tags]
-../../../tvision/views.h:965:1: note: did you mean struct here?
+In file included from ../../../demo/gadgets.cc:25:
+In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
 ../../../demo/gadgets.cc:53:14: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
@@ -10596,7 +10576,7 @@ In file included from ../../../tvision/tv.h:647:
 ../../../demo/gadgets.cc:56:29: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
 ../../../demo/gadgets.cc:57:21: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/gadgets.cc:32:
-../../../demo/gadgets.h:41:7: warning: padding size of 'TClockView' with 6 bytes to alignment boundary [-Wpadded]
+../../../demo/gadgets.h:35:7: warning: padding size of 'TClockView' with 6 bytes to alignment boundary [-Wpadded]
 ../../../demo/gadgets.cc:96:14: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
 ../../../demo/gadgets.cc:98:29: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/gadgets.cc:98:26: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
@@ -10604,13 +10584,6 @@ In file included from ../../../demo/gadgets.cc:32:
 ../../../demo/gadgets.cc:99:29: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
 ../../../demo/gadgets.cc:100:21: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/gadgets.cc:106:21: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../demo/gadgets.cc:32:
-In file included from ../../../demo/gadgets.h:20:
-In file included from ../../../tvision/tv.h:647:
-../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
-../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
-../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 In file included from ../../../demo/gadgets.cc:25:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
@@ -10928,10 +10901,10 @@ In file included from ../../../tvision/tv.h:659:
 ../../../demo/tvdemo1.cc:25:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/tvdemo1.cc:17:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/tvdemo1.cc:18:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../demo/tvdemo1.cc:31:
+In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo1.cc:31:
+In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -10939,7 +10912,7 @@ In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:404:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:428:9: warning: initializer for virtual base class 'TNSCollection' of abstract class 'TNSSortedCollection' will never be used [-Wabstract-vbase-init]
 ../../../tvision/tvobjs.h:471:17: note: unimplemented pure virtual method 'compare' in 'TNSSortedCollection'
-In file included from ../../../demo/tvdemo1.cc:31:
+In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:32:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -10953,27 +10926,32 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:908:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:949:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:1107:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo1.cc:31:
+In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:639:
 ../../../tvision/drawbuf.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/drawbuf.h:118:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:114:24: note: expanded from macro 'hiByte'
 ../../../tvision/drawbuf.h:123:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:113:24: note: expanded from macro 'loByte'
-In file included from ../../../demo/tvdemo1.cc:31:
+In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:643:
 ../../../tvision/objects.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/objects.h:110:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo1.cc:31:
+../../../tvision/objects.h:319:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
+../../../tvision/objects.h:417:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/objects.h:422:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/objects.h:428:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/objects.h:433:20: warning: use of old-style cast [-Wold-style-cast]
+In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:102:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:397:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:431:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo1.cc:31:
+In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:651:
 ../../../tvision/msgbox.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo1.cc:31:
+In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -10986,6 +10964,11 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:2076:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:2082:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:2087:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/views.h:2536:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
+../../../tvision/views.h:2709:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/views.h:2714:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/views.h:2720:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/views.h:2725:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:2975:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:3525:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3530:20: warning: use of old-style cast [-Wold-style-cast]
@@ -10996,11 +10979,11 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3856:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3862:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3867:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo1.cc:31:
+In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../demo/tvdemo1.cc:31:
+In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:688:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/menus.h:708:39: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -11012,7 +10995,7 @@ In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:970:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:976:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:981:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo1.cc:31:
+In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:123:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:299:34: warning: use of old-style cast [-Wold-style-cast]
@@ -11027,49 +11010,10 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../demo/tvdemo1.cc:34:
-In file included from ../../../demo/gadgets.h:20:
-In file included from ../../../tvision/tv.h:635:
-../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo1.cc:35:
-In file included from ../../../demo/fileview.h:20:
-In file included from ../../../tvision/tv.h:635:
-../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo1.cc:35:
-In file included from ../../../demo/fileview.h:20:
-In file included from ../../../tvision/tv.h:643:
-../../../tvision/objects.h:319:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/objects.h:417:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/objects.h:422:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/objects.h:428:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/objects.h:433:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo1.cc:35:
-In file included from ../../../demo/fileview.h:20:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:2536:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:2709:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/views.h:2714:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/views.h:2720:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/views.h:2725:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo1.cc:35:
-../../../demo/fileview.h:30:48: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.h:34:50: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../demo/fileview.h:53:66: warning: extra ';' after member function definition [-Wextra-semi]
-In file included from ../../../demo/tvdemo1.cc:36:
-../../../demo/puzzle.h:23:62: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/puzzle.h:54:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:56:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:59:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:61:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:73:12: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/puzzle.h:93:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:95:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:98:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:100:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo1.cc:38:
 In file included from ../../../tvision/help.h:30:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo1.cc:38:
+In file included from ../../../demo/tvdemo1.cc:34:
 In file included from ../../../tvision/help.h:30:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:2272:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -11077,7 +11021,7 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:2512:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:2518:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:2523:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo1.cc:38:
+In file included from ../../../demo/tvdemo1.cc:34:
 In file included from ../../../tvision/help.h:32:
 ../../../tvision/helpbase.h:101:36: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/helpbase.h:185:20: warning: use of old-style cast [-Wold-style-cast]
@@ -11089,31 +11033,46 @@ In file included from ../../../tvision/help.h:32:
 ../../../tvision/helpbase.h:267:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:273:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:278:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo1.cc:31:
+In file included from ../../../demo/tvdemo1.cc:41:
+../../../demo/fileview.h:25:48: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.h:29:50: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../demo/fileview.h:48:66: warning: extra ';' after member function definition [-Wextra-semi]
+In file included from ../../../demo/tvdemo1.cc:42:
+../../../demo/puzzle.h:23:62: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/puzzle.h:54:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:56:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:59:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:61:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:73:12: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/puzzle.h:93:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:95:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:98:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:100:20: warning: use of old-style cast [-Wold-style-cast]
+In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
 ../../../tvision/views.h:3455:13: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
 ../../../tvision/views.h:3471:12: warning: padding class 'TGroup' with 1 byte to align 'endState' [-Wpadded]
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
-In file included from ../../../demo/tvdemo1.cc:33:
+In file included from ../../../demo/tvdemo1.cc:39:
 ../../../demo/tvdemo.h:37:16: warning: padding class 'TVDemo' with 4 bytes to align 'heap' [-Wpadded]
-In file included from ../../../demo/tvdemo1.cc:31:
+In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:699:7: warning: padding size of 'TStatusItem' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/menus.h:797:18: warning: padding class 'TStatusDef' with 4 bytes to align 'items' [-Wpadded]
-In file included from ../../../demo/tvdemo1.cc:31:
+In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
-In file included from ../../../demo/tvdemo1.cc:34:
-../../../demo/gadgets.h:41:7: warning: padding size of 'TClockView' with 6 bytes to alignment boundary [-Wpadded]
-In file included from ../../../demo/tvdemo1.cc:31:
+In file included from ../../../demo/tvdemo1.cc:40:
+../../../demo/gadgets.h:35:7: warning: padding size of 'TClockView' with 6 bytes to alignment boundary [-Wpadded]
+In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../demo/tvdemo1.cc:107:22: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../demo/tvdemo1.cc:95:15: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
-In file included from ../../../demo/tvdemo1.cc:31:
+../../../demo/tvdemo1.cc:109:22: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../demo/tvdemo1.cc:97:15: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:957:7: warning: padding size of 'fpbase' with 4 bytes to alignment boundary [-Wpadded]
@@ -11122,33 +11081,33 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:919:7: warning: padding size of 'iopstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:1119:7: warning: padding size of 'fpstream' with 4 bytes to alignment boundary [-Wpadded]
-In file included from ../../../demo/tvdemo1.cc:38:
+In file included from ../../../demo/tvdemo1.cc:34:
 In file included from ../../../tvision/help.h:32:
 ../../../tvision/helpbase.h:326:17: warning: padding class 'THelpFile' with 4 bytes to align 'index' [-Wpadded]
-../../../demo/tvdemo1.cc:144:41: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../demo/tvdemo1.cc:31:
+../../../demo/tvdemo1.cc:146:41: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-In file included from ../../../demo/tvdemo1.cc:38:
+In file included from ../../../demo/tvdemo1.cc:34:
 In file included from ../../../tvision/help.h:32:
 ../../../tvision/helpbase.h:240:11: warning: padding class 'THelpIndex' with 6 bytes to align 'index' [-Wpadded]
-../../../demo/tvdemo1.cc:174:27: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../demo/tvdemo1.cc:175:27: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../demo/tvdemo1.cc:176:27: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../demo/tvdemo1.cc:177:27: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../demo/tvdemo1.cc:191:27: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/tvdemo1.cc:193:16: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../demo/tvdemo1.cc:213:41: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../demo/tvdemo1.cc:178:27: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../demo/tvdemo1.cc:192:27: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/tvdemo1.cc:194:16: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../demo/tvdemo1.cc:214:41: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 /usr/lib64/clang/6.0.1/include/stddef.h:100:18: note: expanded from macro 'NULL'
-../../../demo/tvdemo1.cc:259:18: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo1.cc:31:
+../../../demo/tvdemo1.cc:260:18: warning: use of old-style cast [-Wold-style-cast]
+In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:80:7: warning: 'TStreamable' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
-In file included from ../../../demo/tvdemo1.cc:35:
-../../../demo/fileview.h:24:7: warning: 'TLineCollection' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+In file included from ../../../demo/tvdemo1.cc:41:
+../../../demo/fileview.h:19:7: warning: 'TLineCollection' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 ../../../demo/tvdemo2.cc:30:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/tvdemo2.cc:21:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/tvdemo2.cc:23:9: warning: macro is not used [-Wunused-macros]
@@ -11270,7 +11229,7 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
-In file included from ../../../demo/tvdemo2.cc:37:
+In file included from ../../../demo/tvdemo2.cc:40:
 ../../../demo/ascii.h:27:57: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/ascii.h:51:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:53:20: warning: use of old-style cast [-Wold-style-cast]
@@ -11286,29 +11245,29 @@ In file included from ../../../demo/tvdemo2.cc:37:
 ../../../demo/ascii.h:132:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:135:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:137:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo2.cc:38:
-../../../demo/calendar.h:23:64: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calendar.h:47:20: warning: use of old-style cast [-Wold-style-cast]
+In file included from ../../../demo/tvdemo2.cc:41:
+../../../demo/calendar.h:25:64: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/calendar.h:49:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:52:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:51:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.h:54:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:66:12: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calendar.h:86:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:56:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:68:12: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/calendar.h:88:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:91:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:90:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.h:93:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo2.cc:39:
-../../../demo/calc.h:33:63: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calc.h:52:61: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calc.h:70:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:72:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:75:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:77:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:89:13: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calc.h:109:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:111:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:114:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:116:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:95:20: warning: use of old-style cast [-Wold-style-cast]
+In file included from ../../../demo/tvdemo2.cc:42:
+../../../demo/calc.h:32:63: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/calc.h:51:61: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/calc.h:69:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:71:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:74:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:76:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:88:13: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/calc.h:108:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:110:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:113:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:115:20: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo2.cc:32:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -11319,7 +11278,7 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../demo/tvdemo2.cc:32:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
-In file included from ../../../demo/tvdemo2.cc:34:
+In file included from ../../../demo/tvdemo2.cc:37:
 ../../../demo/tvdemo.h:37:16: warning: padding class 'TVDemo' with 4 bytes to align 'heap' [-Wpadded]
 In file included from ../../../demo/tvdemo2.cc:32:
 In file included from ../../../tvision/tv.h:647:
@@ -11350,8 +11309,8 @@ In file included from ../../../tvision/tv.h:679:
 ../../../demo/tvdemo2.cc:341:40: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/tvdemo2.cc:341:51: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../demo/tvdemo2.cc:343:27: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../demo/tvdemo2.cc:39:
-../../../demo/calc.h:80:7: warning: 'TCalculator' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+In file included from ../../../demo/tvdemo2.cc:42:
+../../../demo/calc.h:79:7: warning: 'TCalculator' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 In file included from ../../../demo/tvdemo2.cc:32:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
@@ -11364,10 +11323,10 @@ In file included from ../../../tvision/tv.h:635:
 ../../../demo/tvdemo3.cc:30:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/tvdemo3.cc:17:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/tvdemo3.cc:24:9: warning: macro is not used [-Wunused-macros]
-In file included from ../../../demo/tvdemo3.cc:33:
+In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:625:
 ../../../tvision/tkeys.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo3.cc:33:
+In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:67:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -11375,7 +11334,7 @@ In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:404:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tvobjs.h:428:9: warning: initializer for virtual base class 'TNSCollection' of abstract class 'TNSSortedCollection' will never be used [-Wabstract-vbase-init]
 ../../../tvision/tvobjs.h:471:17: note: unimplemented pure virtual method 'compare' in 'TNSSortedCollection'
-In file included from ../../../demo/tvdemo3.cc:33:
+In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:32:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -11389,27 +11348,32 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:908:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:949:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/tobjstrm.h:1107:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo3.cc:33:
+In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:639:
 ../../../tvision/drawbuf.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/drawbuf.h:118:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:114:24: note: expanded from macro 'hiByte'
 ../../../tvision/drawbuf.h:123:5: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:113:24: note: expanded from macro 'loByte'
-In file included from ../../../demo/tvdemo3.cc:33:
+In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:643:
 ../../../tvision/objects.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/objects.h:110:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo3.cc:33:
+../../../tvision/objects.h:319:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
+../../../tvision/objects.h:417:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/objects.h:422:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/objects.h:428:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/objects.h:433:20: warning: use of old-style cast [-Wold-style-cast]
+In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:102:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:397:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/system.h:431:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo3.cc:33:
+In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:651:
 ../../../tvision/msgbox.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo3.cc:33:
+In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:745:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -11422,6 +11386,11 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:2076:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:2082:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:2087:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/views.h:2536:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
+../../../tvision/views.h:2709:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/views.h:2714:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/views.h:2720:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/views.h:2725:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:2975:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/views.h:3525:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3530:20: warning: use of old-style cast [-Wold-style-cast]
@@ -11432,7 +11401,7 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3856:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3862:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/views.h:3867:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo3.cc:33:
+In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/dialogs.h:94:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -11445,7 +11414,7 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:1888:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:1894:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:1899:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo3.cc:33:
+In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:724:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -11454,7 +11423,7 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:919:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/stddlg.h:925:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/stddlg.h:930:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo3.cc:33:
+In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:35:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/menus.h:63:32: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -11481,7 +11450,7 @@ In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:528:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:534:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:539:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo3.cc:33:
+In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:123:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:299:34: warning: use of old-style cast [-Wold-style-cast]
@@ -11495,59 +11464,11 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:582:59: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../tvision/app.h:882:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
-In file included from ../../../demo/tvdemo3.cc:37:
-In file included from ../../../demo/gadgets.h:20:
-In file included from ../../../tvision/tv.h:635:
-../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo3.cc:40:
-In file included from ../../../demo/fileview.h:20:
-In file included from ../../../tvision/tv.h:635:
-../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo3.cc:40:
-In file included from ../../../demo/fileview.h:20:
-In file included from ../../../tvision/tv.h:643:
-../../../tvision/objects.h:319:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/objects.h:417:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/objects.h:422:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/objects.h:428:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/objects.h:433:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo3.cc:40:
-In file included from ../../../demo/fileview.h:20:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:2536:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:2709:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/views.h:2714:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/views.h:2720:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/views.h:2725:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo3.cc:40:
-../../../demo/fileview.h:30:48: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.h:34:50: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-../../../demo/fileview.h:53:66: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../demo/tvdemo3.cc:42:
-In file included from ../../../tvision/help.h:30:
-In file included from ../../../tvision/tv.h:635:
-../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-In file included from ../../../demo/tvdemo3.cc:42:
-In file included from ../../../tvision/help.h:30:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:2272:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/views.h:2507:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/views.h:2512:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/views.h:2518:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/views.h:2523:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo3.cc:42:
-In file included from ../../../tvision/help.h:32:
-../../../tvision/helpbase.h:101:36: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tvision/helpbase.h:185:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/helpbase.h:190:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/helpbase.h:196:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/helpbase.h:201:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/helpbase.h:220:36: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tvision/helpbase.h:262:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/helpbase.h:267:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/helpbase.h:273:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/helpbase.h:278:20: warning: use of old-style cast [-Wold-style-cast]
-In file included from ../../../demo/tvdemo3.cc:33:
+../../../demo/fileview.h:25:48: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.h:29:50: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+../../../demo/fileview.h:48:66: warning: extra ';' after member function definition [-Wextra-semi]
+In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
@@ -11558,18 +11479,13 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
 ../../../demo/tvdemo3.cc:50:31: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/tvdemo3.cc:52:22: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../demo/tvdemo3.cc:33:
+In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
-In file included from ../../../demo/tvdemo3.cc:35:
-../../../demo/tvdemo.h:37:16: warning: padding class 'TVDemo' with 4 bytes to align 'heap' [-Wpadded]
 In file included from ../../../demo/tvdemo3.cc:37:
-../../../demo/gadgets.h:41:7: warning: padding size of 'TClockView' with 6 bytes to alignment boundary [-Wpadded]
-In file included from ../../../demo/tvdemo3.cc:42:
-In file included from ../../../tvision/help.h:30:
-In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:2431:9: warning: padding class 'TScrollBar' with 3 bytes to align 'minVal' [-Wpadded]
-../../../tvision/views.h:2287:7: warning: padding size of 'TScrollBar' with 4 bytes to alignment boundary [-Wpadded]
+../../../demo/tvdemo.h:37:16: warning: padding class 'TVDemo' with 4 bytes to align 'heap' [-Wpadded]
+In file included from ../../../demo/tvdemo3.cc:39:
+../../../demo/gadgets.h:35:7: warning: padding size of 'TClockView' with 6 bytes to alignment boundary [-Wpadded]
 ../../../demo/tvdemo3.cc:70:21: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/tvdemo3.cc:73:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../demo/tvdemo3.cc:79:18: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
@@ -11577,7 +11493,7 @@ In file included from ../../../tvision/tv.h:659:
 ../../../demo/tvdemo3.cc:137:46: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../demo/tvdemo3.cc:168:39: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
 ../../../demo/tvdemo3.cc:173:24: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
-In file included from ../../../demo/tvdemo3.cc:33:
+In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:957:7: warning: padding size of 'fpbase' with 4 bytes to alignment boundary [-Wpadded]
@@ -11587,8 +11503,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:919:7: warning: padding size of 'iopstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:1119:7: warning: padding size of 'fpstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:80:7: warning: 'TStreamable' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
-In file included from ../../../demo/tvdemo3.cc:40:
-../../../demo/fileview.h:24:7: warning: 'TLineCollection' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+In file included from ../../../demo/tvdemo3.cc:42:
+../../../demo/fileview.h:19:7: warning: 'TLineCollection' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 In file included from ../../../tutorial/tvguid01.cc:10:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]

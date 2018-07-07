@@ -25,15 +25,14 @@
 #define Uses_TView
 #define Uses_TDialog
 #include <tv.h>
+
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
 
 #include "calc.h"
 
-
 #define cpCalcPalette   "\x13"
-
 
 //
 // TCalcDisplay functions

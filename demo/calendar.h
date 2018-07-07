@@ -14,6 +14,8 @@
 #if !defined( TV_INC_CALENDAR_H )
 #define TV_INC_CALENDAR_H
 
+int dayOfWeek(int day, int month, int year);
+
 class TCalendarView : public TView
 {
 

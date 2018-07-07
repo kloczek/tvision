@@ -22,17 +22,18 @@
 #define Uses_TProgram
 #define Uses_TDeskTop
 #define Uses_TStreamableClass
+#define Uses_TCollection
+#define Uses_TWindow
 #include <tv.h>
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-
 #include <fstream>
 
 #include "tvcmds.h"
 #include "fileview.h"
-
 
 const char * const TFileViewer::name = "TFileViewer";
 

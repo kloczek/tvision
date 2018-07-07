@@ -31,15 +31,15 @@
 
 #include <tv.h>
 
+#include <signal.h>
+#include <stdlib.h>
+
 #include "tvdemo.h"
 #include "tvcmds.h"
 #include "demohelp.h"
 #include "ascii.h"
 #include "calendar.h"
 #include "calc.h"
-
-#include <signal.h>
-#include <stdlib.h>
 
 //
 //  Suspend Command.

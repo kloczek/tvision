@@ -23,13 +23,13 @@
 #define Uses_TView
 #define Uses_TWindow
 #include <tv.h>
+
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
 #include <time.h>
 
 #include "calendar.h"
-
 
 const char *monthNames[] = {
     "",
@@ -41,7 +41,6 @@ const char *monthNames[] = {
 static unsigned char daysInMonth[] = {
     0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
 };
-
 
 //
 // TCalendarView functions
@@ -142,7 +141,7 @@ void TCalendarView::draw()
     buf.moveChar(0, ' ', color, 22);
 
     buf.moveStr(0, str, color);
-    sprintf(str, "%9s %4d \032  \033 ", monthNames[month], year);
+    sprintf(str, "%9s %4u \032  \033 ", monthNames[month], year);
     buf.moveStr(0, str, color);
     writeLine(0, 0, 22, 1, buf);
 
@@ -159,7 +158,7 @@ void TCalendarView::draw()
                 buf.moveStr((short)(j*3), "   ", color);
             else
                 {
-		sprintf(str, "%2d", (int)current);
+		sprintf(str, "%2i", (int)current);
                 if(year == curYear && month == curMonth && current ==
 			(int)curDay)
 		    buf.moveStr((short)(j*3), str, boldColor);
