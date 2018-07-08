@@ -187,8 +187,8 @@ typedef ushort (*TEditorDialog)( int, ... );
  */
 ushort defEditorDialog( int dialog, ... );
 
-#if defined( Uses_TIndicator ) && !defined( __TIndicator )
-#define __TIndicator
+#if defined( Uses_TIndicator ) && !defined( TV_TIndicator )
+#define TV_TIndicator
 
 class TRect;
 
@@ -289,8 +289,8 @@ inline opstream& operator << ( opstream& os, TIndicator* cl )
 #endif  // Uses_TIndicator
 
 
-#if defined( Uses_TEditor ) && !defined( __TEditor )
-#define __TEditor
+#if defined( Uses_TEditor ) && !defined( TV_TEditor )
+#define TV_TEditor
 
 class TRect;
 class TScrollBar;
@@ -1057,8 +1057,8 @@ inline opstream& operator << ( opstream& os, TEditor* cl )
 
 #endif  // Uses_TEditor
 
-#if defined( Uses_TMemo ) && !defined( __TMemo )
-#define __TMemo
+#if defined( Uses_TMemo ) && !defined( TV_TMemo )
+#define TV_TMemo
 
 class TEvent;
 
@@ -1167,8 +1167,8 @@ inline opstream& operator << ( opstream& os, TMemo* cl )
 #endif  // Uses_TMemo
 
 
-#if defined( Uses_TFileEditor ) && !defined( __TFileEditor )
-#define __TFileEditor
+#if defined( Uses_TFileEditor ) && !defined( TV_TFileEditor )
+#define TV_TFileEditor
 
 #include <limits.h>
 
@@ -1349,8 +1349,8 @@ inline opstream& operator << ( opstream& os, TFileEditor* cl )
 #endif  // Uses_TFileEditor
 
 
-#if defined( Uses_TEditWindow ) && !defined( __TEditWindow )
-#define __TEditWindow
+#if defined( Uses_TEditWindow ) && !defined( TV_TEditWindow )
+#define TV_TEditWindow
 
 class TFileEditor;
 
@@ -1458,8 +1458,8 @@ inline opstream& operator << ( opstream& os, TEditWindow* cl )
 #endif  // Uses_TEditWindow
 
 
-#if defined( Uses_TFindDialogRec ) && !defined( __TFindDialogRec )
-#define __TFindDialogRec
+#if defined( Uses_TFindDialogRec ) && !defined( TV_TFindDialogRec )
+#define TV_TFindDialogRec
 
 #include <string.h>
 
@@ -1493,8 +1493,8 @@ struct TFindDialogRec
 
 #endif  // Uses_TFindDialogRec
 
-#if defined( Uses_TReplaceDialogRec ) && !defined( __TReplaceDialogRec )
-#define __TReplaceDialogRec
+#if defined( Uses_TReplaceDialogRec ) && !defined( TV_TReplaceDialogRec )
+#define TV_TReplaceDialogRec
 
 #include <string.h>
 

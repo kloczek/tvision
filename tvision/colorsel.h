@@ -32,8 +32,8 @@ class TColorGroup;
 TColorGroup& operator + ( TColorGroup& g, TColorItem& i );
 TColorGroup& operator + ( TColorGroup& g1, TColorGroup& g2 );
 
-#if defined( Uses_TColorItem ) && !defined( __TColorItem )
-#define __TColorItem
+#if defined( Uses_TColorItem ) && !defined( TV_TColorItem )
+#define TV_TColorItem
 
 class TColorGroup;
 
@@ -94,8 +94,8 @@ public:
 
 #endif  // Uses_TColorItem
 
-#if defined( Uses_TColorGroup ) && !defined( __TColorGroup )
-#define __TColorGroup
+#if defined( Uses_TColorGroup ) && !defined( TV_TColorGroup )
+#define TV_TColorGroup
 
 class TColorItem;
 
@@ -185,8 +185,8 @@ public:
 
 #endif  // Uses_TColorGroup
 
-#if defined( Uses_TColorSelector ) && !defined( __TColorSelector )
-#define __TColorSelector
+#if defined( Uses_TColorSelector ) && !defined( TV_TColorSelector )
+#define TV_TColorSelector
 
 class TRect;
 class TEvent;
@@ -319,8 +319,8 @@ inline opstream& operator << ( opstream& os, TColorSelector* cl )
 #endif  // Uses_TColorSelector
 
 
-#if defined( Uses_TMonoSelector ) && !defined( __TMonoSelector )
-#define __TMonoSelector
+#if defined( Uses_TMonoSelector ) && !defined( TV_TMonoSelector )
+#define TV_TMonoSelector
 
 class TRect;
 class TEvent;
@@ -431,8 +431,8 @@ inline opstream& operator << ( opstream& os, TMonoSelector* cl )
 
 #endif  // Uses_TMonoSelector
 
-#if defined( Uses_TColorDisplay ) && !defined( __TColorDisplay )
-#define __TColorDisplay
+#if defined( Uses_TColorDisplay ) && !defined( TV_TColorDisplay )
+#define TV_TColorDisplay
 
 class TRect;
 class TEvent;
@@ -552,8 +552,8 @@ inline opstream& operator << ( opstream& os, TColorDisplay* cl )
 #endif  // Uses_TColorDisplay
 
 
-#if defined( Uses_TColorGroupList ) && !defined( __TColorGroupList )
-#define __TColorGroupList
+#if defined( Uses_TColorGroupList ) && !defined( TV_TColorGroupList )
+#define TV_TColorGroupList
 
 class TRect;
 class TScrollBar;
@@ -686,8 +686,8 @@ inline opstream& operator << ( opstream& os, TColorGroupList* cl )
 #endif  // Uses_TColorGroupList
 
 
-#if defined( Uses_TColorItemList ) && !defined( __TColorItemList )
-#define __TColorItemList
+#if defined( Uses_TColorItemList ) && !defined( TV_TColorItemList )
+#define TV_TColorItemList
 
 class TRect;
 class TScrollBar;
@@ -795,8 +795,8 @@ inline opstream& operator << ( opstream& os, TColorItemList* cl )
 #endif  // Uses_TColorItemList
 
 
-#if defined( Uses_TColorDialog ) && !defined( __TColorDialog )
-#define __TColorDialog
+#if defined( Uses_TColorDialog ) && !defined( TV_TColorDialog )
+#define TV_TColorDialog
 
 class TColorGroup;
 class TEvent;

@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if defined( Uses_TDrawBuffer ) && !defined( __TDrawBuffer )
-#define __TDrawBuffer
+#if defined( Uses_TDrawBuffer ) && !defined( TV_TDrawBuffer )
+#define TV_TDrawBuffer
 
 /** \file drawbuf.h
  * drawbuf.h

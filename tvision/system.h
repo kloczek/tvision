@@ -98,8 +98,8 @@ const int meDoubleClick = 0x02;
 
 #endif  // __EVENT_CODES
 
-#if defined( Uses_TEvent ) && !defined( __TEvent )
-#define __TEvent
+#if defined( Uses_TEvent ) && !defined( TV_TEvent )
+#define TV_TEvent
 
 /**
  * Stores mouse events.
@@ -393,8 +393,8 @@ struct TEvent
 
 #endif  // Uses_TEvent
 
-#if defined( Uses_TEventQueue ) && !defined( __TEventQueue )
-#define __TEventQueue
+#if defined( Uses_TEventQueue ) && !defined( TV_TEventQueue )
+#define TV_TEventQueue
 
 /**
  * Stores some information about mouse.
@@ -427,8 +427,8 @@ public:
 
 #endif  // Uses_TEventQueue
 
-#if defined( Uses_TScreen ) && !defined( __TScreen )
-#define __TScreen
+#if defined( Uses_TScreen ) && !defined( TV_TScreen )
+#define TV_TScreen
 
 /**
  * TDisplay provides low-level video functions for its derived class TScreen.

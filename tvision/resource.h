@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if defined( Uses_TStringCollection ) && !defined( __TStringCollection )
-#define __TStringCollection
+#if defined( Uses_TStringCollection ) && !defined( TV_TStringCollection )
+#define TV_TStringCollection
 
 /** \file resource.h
  * resource.h
@@ -108,8 +108,8 @@ inline opstream& operator << ( opstream& os, TStringCollection* cl )
 
 #endif  // Uses_TStringCollection
 
-#if defined( Uses_TResourceItem ) && !defined( __TResourceItem )
-#define __TResourceItem
+#if defined( Uses_TResourceItem ) && !defined( TV_TResourceItem )
+#define TV_TResourceItem
 
 /**
  * Internal structure use by @ref TResourceCollection and @ref TResourceFile.
@@ -133,8 +133,8 @@ struct TResourceItem
 
 #endif  // Uses_TResourceItem
 
-#if defined( Uses_TResourceCollection ) && !defined( __TResourceCollection )
-#define __TResourceCollection
+#if defined( Uses_TResourceCollection ) && !defined( TV_TResourceCollection )
+#define TV_TResourceCollection
 
 /**
  * TResourceCollection is a derivative of @ref TStringCollection, which makes
@@ -224,8 +224,8 @@ inline opstream& operator << ( opstream& os, TResourceCollection* cl )
 
 #endif  // Uses_TResourceCollection
 
-#if defined( Uses_TResourceFile ) && !defined( __TResourceFile )
-#define __TResourceFile
+#if defined( Uses_TResourceFile ) && !defined( TV_TResourceFile )
+#define TV_TResourceFile
 
 class TResourceCollection;
 class fpstream;
@@ -333,8 +333,8 @@ protected:
 
 #endif  // Uses_TResourceFile
 
-#if defined( Uses_TStrIndexRec ) && !defined( __TStrIndexRec )
-#define __TStrIndexRec
+#if defined( Uses_TStrIndexRec ) && !defined( TV_TStrIndexRec )
+#define TV_TStrIndexRec
 
 /**
  * Internal class used by @ref TStringList and @ref TStrListMaker.
@@ -363,8 +363,8 @@ public:
 
 #endif  // Uses_TStrIndexRec
 
-#if defined( Uses_TStringList ) && !defined( __TStringList )
-#define __TStringList
+#if defined( Uses_TStringList ) && !defined( TV_TStringList )
+#define TV_TStringList
 
 class TStrIndexRec;
 
@@ -454,8 +454,8 @@ inline opstream& operator << ( opstream& os, TStringList* cl )
 #endif  // Uses_TStringList
 
 
-#if defined( Uses_TStrListMaker ) && !defined( __TStrListMaker )
-#define __TStrListMaker
+#if defined( Uses_TStrListMaker ) && !defined( TV_TStrListMaker )
+#define TV_TStrListMaker
 
 /**
  * TStrListMaker is a simple object type used to create string lists for use

@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if defined( Uses_TBackground ) && !defined( __TBackground )
-#define __TBackground
+#if defined( Uses_TBackground ) && !defined( TV_TBackground )
+#define TV_TBackground
 
 /** \file app.h
  * app.h
@@ -119,8 +119,8 @@ inline opstream& operator << ( opstream& os, TBackground* cl )
 #endif  // Uses_TBackground
 
 
-#if defined( Uses_TDeskTop )  && !defined( __TDeskTop )
-#define __TDeskTop
+#if defined( Uses_TDeskTop )  && !defined( TV_TDeskTop )
+#define TV_TDeskTop
 
 class TBackground;
 class TRect;
@@ -390,8 +390,8 @@ inline opstream& operator << ( opstream& os, TDeskTop* cl )
     "\x07\x0F\x07\x70\x70\x07\x0F\x70"    // help colors
 #endif
 
-#if defined( Uses_TProgram ) && !defined( __TProgram )
-#define __TProgram
+#if defined( Uses_TProgram ) && !defined( TV_TProgram )
+#define TV_TProgram
 
 // Standard application help contexts
 
@@ -878,8 +878,8 @@ private:
 
 #endif
 
-#if defined( Uses_TApplication ) && !defined( __TApplication )
-#define __TApplication
+#if defined( Uses_TApplication ) && !defined( TV_TApplication )
+#define TV_TApplication
 
 /**
  * The mother of all applications.

@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if defined( Uses_TOutlineViewer ) && !defined( __TOutlineViewer )
-#define __TOutlineViewer
+#if defined( Uses_TOutlineViewer ) && !defined( TV_TOutlineViewer )
+#define TV_TOutlineViewer
 
 /** \file outline.h
  * outline.h
@@ -363,8 +363,8 @@ inline TOutlineViewer::TOutlineViewer( StreamableInit s) :
 
 #endif // Uses_TOutlineViewer
 
-#if defined( Uses_TOutline ) && !defined( __TOutline )
-#define __TOutline
+#if defined( Uses_TOutline ) && !defined( TV_TOutline )
+#define TV_TOutline
 
 /* ------------------------------------------------------------------------*/
 /*      class TOutline                                                     */

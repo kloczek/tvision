@@ -90,8 +90,8 @@ const int
 /*       32 = Reserved                                                    */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TDialog ) && !defined( __TDialog )
-#define __TDialog
+#if defined( Uses_TDialog ) && !defined( TV_TDialog )
+#define TV_TDialog
 
 #define  cpGrayDialog \
     "\x20\x21\x22\x23\x24\x25\x26\x27\x28\x29\x2A\x2B\x2C\x2D\x2E\x2F"\
@@ -245,8 +245,8 @@ inline opstream& operator << ( opstream& os, TDialog* cl )
 /*        4 = Arrows                                                      */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TInputLine ) && !defined( __TInputLine )
-#define __TInputLine
+#if defined( Uses_TInputLine ) && !defined( TV_TInputLine )
+#define TV_TInputLine
 
 class TRect;
 class TEvent;
@@ -506,8 +506,8 @@ inline opstream& operator << ( opstream& os, TInputLine* cl )
 /*        8 = Shadow                                                      */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TButton ) && !defined( __TButton )
-#define __TButton
+#if defined( Uses_TButton ) && !defined( TV_TButton )
+#define TV_TButton
 
 class TRect;
 class TEvent;
@@ -780,8 +780,8 @@ inline opstream& operator << ( opstream& os, TButton* cl )
 #endif  // Uses_TButton
 
 
-#if defined( Uses_TSItem ) && !defined( __TSItem )
-#define __TSItem
+#if defined( Uses_TSItem ) && !defined( TV_TSItem )
+#define TV_TSItem
 
 /**
  * TSItem is a simple, non-view class providing a singly-linked list of
@@ -825,8 +825,8 @@ public:
 /*        5 = Disabled text                                               */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TCluster ) && !defined( __TCluster )
-#define __TCluster
+#if defined( Uses_TCluster ) && !defined( TV_TCluster )
+#define TV_TCluster
 
 class TRect;
 class TSItem;
@@ -1148,8 +1148,8 @@ inline opstream& operator << ( opstream& os, TCluster* cl )
 /* ---------------------------------------------------------------------- */
 
 
-#if defined( Uses_TRadioButtons ) && !defined( __TRadioButtons )
-#define __TRadioButtons
+#if defined( Uses_TRadioButtons ) && !defined( TV_TRadioButtons )
+#define TV_TRadioButtons
 
 class TRect;
 class TSItem;
@@ -1307,8 +1307,8 @@ inline TRadioButtons::TRadioButtons( const TRect& bounds, TSItem *aStrings ) :
 /*        4 = Selected shortcut                                           */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TCheckBoxes ) && !defined( __TCheckBoxes )
-#define __TCheckBoxes
+#if defined( Uses_TCheckBoxes ) && !defined( TV_TCheckBoxes )
+#define TV_TCheckBoxes
 
 class TRect;
 class TSItem;
@@ -1438,8 +1438,8 @@ inline TCheckBoxes::TCheckBoxes( const TRect& bounds, TSItem *aStrings) :
 #endif  // Uses_TCheckBoxes
 
 
-#if defined( Uses_TMultiCheckBoxes ) && !defined( __TMultiCheckBoxes )
-#define __TMultiCheckBoxes
+#if defined( Uses_TMultiCheckBoxes ) && !defined( TV_TMultiCheckBoxes )
+#define TV_TMultiCheckBoxes
 
 const unsigned short cfOneBit       = 0x0101,
                      cfTwoBits      = 0x0203,
@@ -1604,8 +1604,8 @@ inline opstream& operator << ( opstream& os, TMultiCheckBoxes* cl )
 #endif
 
 
-#if defined( Uses_TListBox ) && !defined( __TListBox )
-#define __TListBox
+#if defined( Uses_TListBox ) && !defined( TV_TListBox )
+#define TV_TListBox
 
 class TRect;
 class TScrollBar;
@@ -1787,8 +1787,8 @@ inline TCollection *TListBox::list()
 /*        1 = Text                                                        */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TStaticText ) && !defined( __TStaticText )
-#define __TStaticText
+#if defined( Uses_TStaticText ) && !defined( TV_TStaticText )
+#define TV_TStaticText
 
 class TRect;
 
@@ -1908,8 +1908,8 @@ inline opstream& operator << ( opstream& os, TStaticText* cl )
 /*        1 = Text                                                        */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TParamText ) && !defined( __TParamText )
-#define __TParamText
+#if defined( Uses_TParamText ) && !defined( TV_TParamText )
+#define TV_TParamText
 
 class TRect;
 
@@ -2027,8 +2027,8 @@ inline opstream& operator << ( opstream& os, TParamText* cl )
 /*        4 = Selected shortcut                                           */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TLabel ) && !defined( __TLabel )
-#define __TLabel
+#if defined( Uses_TLabel ) && !defined( TV_TLabel )
+#define TV_TLabel
 
 class TRect;
 class TEvent;
@@ -2192,8 +2192,8 @@ inline opstream& operator << ( opstream& os, TLabel* cl )
 /*        5 = Divider                                                     */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_THistoryViewer ) && !defined( __THistoryViewer )
-#define __THistoryViewer
+#if defined( Uses_THistoryViewer ) && !defined( TV_THistoryViewer )
+#define TV_THistoryViewer
 
 class TRect;
 class TScrollBar;
@@ -2261,8 +2261,8 @@ protected:
 
 #endif  // Uses_THistoryViewer
 
-#if defined( Uses_THistoryWindow ) && !defined( __THistoryWindow )
-#define __THistoryWindow
+#if defined( Uses_THistoryWindow ) && !defined( TV_THistoryWindow )
+#define TV_THistoryWindow
 
 class TListViewer;
 class TRect;
@@ -2378,8 +2378,8 @@ protected:
 
 #endif  // Uses_THistoryWindow
 
-#if defined( Uses_THistory ) && !defined( __THistory )
-#define __THistory
+#if defined( Uses_THistory ) && !defined( TV_THistory )
+#define TV_THistory
 
 class TRect;
 class TInputLine;

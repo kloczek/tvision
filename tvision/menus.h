@@ -31,8 +31,8 @@ TStatusDef& operator + ( TStatusDef& s1, TStatusItem& s2 );
  */
 TStatusDef& operator + ( TStatusDef& s1, TStatusDef& s2 );
 
-#if defined( Uses_TMenuItem ) && !defined( __TMenuItem )
-#define __TMenuItem
+#if defined( Uses_TMenuItem ) && !defined( TV_TMenuItem )
+#define TV_TMenuItem
 
 /** \file menus.h
  * menus.h
@@ -147,8 +147,8 @@ inline TMenuItem &newLine()
 
 #endif  // Uses_TMenuItem
 
-#if defined( Uses_TSubMenu ) && !defined( __TSubMenu )
-#define __TSubMenu
+#if defined( Uses_TSubMenu ) && !defined( TV_TSubMenu )
+#define TV_TSubMenu
 
 /**
  * TSubMenu is a class used to differentiate between different types of
@@ -173,8 +173,8 @@ public:
 
 #endif  // Uses_TSubMenu
 
-#if defined( Uses_TMenu ) && !defined( __TMenu )
-#define __TMenu
+#if defined( Uses_TMenu ) && !defined( TV_TMenu )
+#define TV_TMenu
 
 /**
  * TMenu serves as a "wrapper" for the various other menu classes, such as
@@ -232,8 +232,8 @@ public:
 /*        6 = Shortcut selection                                          */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TMenuView ) && !defined( __TMenuView )
-#define __TMenuView
+#if defined( Uses_TMenuView ) && !defined( TV_TMenuView )
+#define TV_TMenuView
 
 class TRect;
 class TMenu;
@@ -430,8 +430,8 @@ inline TMenuView::TMenuView( const TRect& bounds ) :
 /*        6 = Shortcut selection                                          */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TMenuBar ) && !defined( __TMenuBar )
-#define __TMenuBar
+#if defined( Uses_TMenuBar ) && !defined( TV_TMenuBar )
+#define TV_TMenuBar
 
 class TRect;
 class TMenu;
@@ -552,8 +552,8 @@ inline opstream& operator << ( opstream& os, TMenuBar* cl )
 /*        6 = Shortcut selection                                          */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TMenuBox ) && !defined( __TMenuBox )
-#define __TMenuBox
+#if defined( Uses_TMenuBox ) && !defined( TV_TMenuBox )
+#define TV_TMenuBox
 
 class TRect;
 class TMenu;
@@ -648,8 +648,8 @@ inline opstream& operator << ( opstream& os, TMenuBox* cl )
 #endif  // Uses_TMenuBox
 
 
-#if defined( Uses_TMenuPopup ) && !defined( __TMenuPopup )
-#define __TMenuPopup
+#if defined( Uses_TMenuPopup ) && !defined( TV_TMenuPopup )
+#define TV_TMenuPopup
 
 /* ---------------------------------------------------------------------- */
 /*      class TMenuPopup                                                  */
@@ -684,8 +684,8 @@ public:
 
 
 
-#if defined( Uses_TStatusItem ) && !defined( __TStatusItem )
-#define __TStatusItem
+#if defined( Uses_TStatusItem ) && !defined( TV_TStatusItem )
+#define TV_TStatusItem
 
 /**
  * A TStatusItem object is not a view but represents a component (status item)
@@ -752,8 +752,8 @@ inline TStatusItem::~TStatusItem()
 
 #endif  // Uses_TStatusItem
 
-#if defined( Uses_TStatusDef ) && !defined( __TStatusDef )
-#define __TStatusDef
+#if defined( Uses_TStatusDef ) && !defined( TV_TStatusDef )
+#define TV_TStatusDef
 
 /**
  * A TStatusDef object represents a status line definition used by a
@@ -823,8 +823,8 @@ inline TStatusDef::TStatusDef( ushort aMin,
 /*        6 = Shortcut selection                                          */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TStatusLine ) && !defined( __TStatusLine )
-#define __TStatusLine
+#if defined( Uses_TStatusLine ) && !defined( TV_TStatusLine )
+#define TV_TStatusLine
 
 class TRect;
 class TEvent;

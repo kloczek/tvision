@@ -741,8 +741,8 @@ const ushort
 
 #endif  // __COMMAND_CODES
 
-#if defined( Uses_TCommandSet ) && !defined( __TCommandSet )
-#define __TCommandSet
+#if defined( Uses_TCommandSet ) && !defined( TV_TCommandSet )
+#define TV_TCommandSet
 
 /**
  * TCommandSet is a non-view class for handling command sets.
@@ -908,8 +908,8 @@ inline int TCommandSet::mask( int cmd )
 
 #endif  // Uses_TCommandSet
 
-#if defined( Uses_TPalette ) && !defined( __TPalette )
-#define __TPalette
+#if defined( Uses_TPalette ) && !defined( TV_TPalette )
+#define TV_TPalette
 
 /**
  * TPalette is a simple class used to create and manipulate palette arrays.
@@ -958,8 +958,8 @@ public:
 
 #endif  // Uses_TPalette
 
-#if defined( Uses_TView ) && !defined( __TView )
-#define __TView
+#if defined( Uses_TView ) && !defined( TV_TView )
+#define TV_TView
 
 class TRect;
 class TEvent;
@@ -2111,8 +2111,8 @@ inline void TView::writeLine( short x, short y, short w, short h,
 /*        5 = Icons                                                       */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TFrame ) && !defined( __TFrame )
-#define __TFrame
+#if defined( Uses_TFrame ) && !defined( TV_TFrame )
+#define TV_TFrame
 
 class TRect;
 class TEvent;
@@ -2268,8 +2268,8 @@ inline opstream& operator << ( opstream& os, TFrame* cl )
 /*        3 = Indicator                                                   */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TScrollBar ) && !defined( __TScrollBar )
-#define __TScrollBar
+#if defined( Uses_TScrollBar ) && !defined( TV_TScrollBar )
+#define TV_TScrollBar
 
 class TRect;
 class TEvent;
@@ -2532,8 +2532,8 @@ inline opstream& operator << ( opstream& os, TScrollBar* cl )
 /*      2 = Selected text                                                 */
 /* ---------------------------------------------------------------------- */
 
-#if defined( Uses_TScroller ) && !defined( __TScroller )
-#define __TScroller
+#if defined( Uses_TScroller ) && !defined( TV_TScroller )
+#define TV_TScroller
 
 class TRect;
 class TScrollBar;
@@ -2726,8 +2726,8 @@ inline opstream& operator << ( opstream& os, TScroller* cl )
 
 #endif  // Uses_TScroller
 
-#if defined( Uses_TListViewer ) && !defined( __TListViewer )
-#define __TListViewer
+#if defined( Uses_TListViewer ) && !defined( TV_TListViewer )
+#define TV_TListViewer
 
 class TRect;
 class TScrollBar;
@@ -2971,8 +2971,8 @@ inline opstream& operator << ( opstream& os, TListViewer* cl )
 
 #endif  // Uses_TListViewer
 
-#if defined( Uses_TGroup ) && !defined( __TGroup )
-#define __TGroup
+#if defined( Uses_TGroup ) && !defined( TV_TGroup )
+#define TV_TGroup
 
 class TView;
 
@@ -3542,8 +3542,8 @@ inline opstream& operator << ( opstream& os, TGroup* cl )
 
 #endif  // Uses_TGroup
 
-#if defined( Uses_TWindow ) && !defined( __TWindow )
-#define __TWindow
+#if defined( Uses_TWindow ) && !defined( TV_TWindow )
+#define TV_TWindow
 
 #define cpBlueWindow "\x08\x09\x0A\x0B\x0C\x0D\x0E\x0F"
 #define cpCyanWindow "\x10\x11\x12\x13\x14\x15\x16\x17"

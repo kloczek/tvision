@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if defined( Uses_TPoint ) && !defined( __TPoint )
-#define __TPoint
+#if defined( Uses_TPoint ) && !defined( TV_TPoint )
+#define TV_TPoint
 
 /** \file objects.h
  * objects.h
@@ -106,8 +106,8 @@ inline opstream& operator << ( opstream& os, TPoint* p )
 
 #endif  // Uses_TPoint
 
-#if defined( Uses_TRect ) && !defined( __TRect )
-#define __TRect
+#if defined( Uses_TRect ) && !defined( TV_TRect )
+#define TV_TRect
 
 /**
  * A screen rectangular area.
@@ -315,8 +315,8 @@ inline opstream& operator << ( opstream& os, TRect* r )
 
 #endif  // Uses_TRect
 
-#if defined( Uses_TCollection ) && !defined( __TCollection )
-#define __TCollection
+#if defined( Uses_TCollection ) && !defined( TV_TCollection )
+#define TV_TCollection
 
 /**
  * TCollection implements a streamable collection of arbitrary items,
@@ -434,8 +434,8 @@ inline opstream& operator << ( opstream& os, TCollection* cl )
 
 #endif  // Uses_TCollection
 
-#if defined( Uses_TSortedCollection ) && !defined( __TSortedCollection )
-#define __TSortedCollection
+#if defined( Uses_TSortedCollection ) && !defined( TV_TSortedCollection )
+#define TV_TSortedCollection
 
 /**
  * The abstract class TSortedCollection is a specialized derivative of both

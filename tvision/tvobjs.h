@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if defined( Uses_TObject ) && !defined( __TObject )
-#define __TObject
+#if defined( Uses_TObject ) && !defined( TV_TObject )
+#define TV_TObject
 
 /** \file tvobjs.h
  * tvobjs.h
@@ -71,8 +71,8 @@ inline void TObject::destroy( TObject *o )
 
 #endif  // Uses_TObject
 
-#if defined( Uses_TNSCollection ) && !defined( __TNSCollection )
-#define __TNSCollection
+#if defined( Uses_TNSCollection ) && !defined( TV_TNSCollection )
+#define TV_TNSCollection
 
 /**
  * TNSCollection implements a nonstreamable collection of items. It provides
@@ -400,8 +400,8 @@ private:
 
 #endif  // Uses_TNSCollection
 
-#if defined( Uses_TNSSortedCollection ) && !defined( __TNSSortedCollection )
-#define __TNSSortedCollection
+#if defined( Uses_TNSSortedCollection ) && !defined( TV_TNSSortedCollection )
+#define TV_TNSSortedCollection
 
 /**
  * The abstract class TNSSortedCollection is a specialized derivative of

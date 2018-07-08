@@ -52,8 +52,8 @@ struct fLink
   static fLink force ## s =     \
     { (fLink *)&force ## s, (TStreamableClass *)&s };
 
-#if defined( Uses_TStreamable ) && !defined( __TStreamable )
-#define __TStreamable
+#if defined( Uses_TStreamable ) && !defined( TV_TStreamable )
+#define TV_TStreamable
 
 /**
  * Gives the streamable property to a class.
@@ -124,8 +124,8 @@ protected:
 /*                                                                         */
 /* ------------------------------------------------------------------------*/
 
-#if defined( Uses_TStreamableClass ) && !defined( __TStreamableClass )
-#define __TStreamableClass
+#if defined( Uses_TStreamableClass ) && !defined( TV_TStreamableClass )
+#define TV_TStreamableClass
 
 #include <limits.h>
 
@@ -203,8 +203,8 @@ private:
 /*                                                                         */
 /* ------------------------------------------------------------------------*/
 
-#if defined( Uses_TStreamableTypes ) && !defined( __TStreamableTypes )
-#define __TStreamableTypes
+#if defined( Uses_TStreamableTypes ) && !defined( TV_TStreamableTypes )
+#define TV_TStreamableTypes
 
 /**
  * TStreamableTypes, derived privately from @ref TNSSortedCollection,
@@ -274,8 +274,8 @@ private:
 /*                                                                         */
 /* ------------------------------------------------------------------------*/
 
-#if defined( Uses_TPWrittenObjects ) && !defined( __TPWrittenObjects )
-#define __TPWrittenObjects
+#if defined( Uses_TPWrittenObjects ) && !defined( TV_TPWrittenObjects )
+#define TV_TPWrittenObjects
 
 /**
  * TPWrittenObjects maintains a database of all objects that have been written
@@ -362,8 +362,8 @@ private:
 /*                                                                         */
 /* ------------------------------------------------------------------------*/
 
-#if defined( Uses_TPReadObjects ) && !defined( __TPReadObjects )
-#define __TPReadObjects
+#if defined( Uses_TPReadObjects ) && !defined( TV_TPReadObjects )
+#define TV_TPReadObjects
 
 /**
  * TPReadObjects maintains a database of all objects that have been read from

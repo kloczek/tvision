@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if defined(Uses_TValidator) && !defined(__TValidator)
-#define __TValidator
+#if defined(Uses_TValidator) && !defined(TV_TValidator)
+#define TV_TValidator
 
 // TValidator Status constants
 
@@ -230,8 +230,8 @@ public:
 #endif
 
 
-#if defined(Uses_TPXPictureValidator) && !defined(__TPXPictureValidator)
-#define __TPXPictureValidator
+#if defined(Uses_TPXPictureValidator) && !defined(TV_TPXPictureValidator)
+#define TV_TPXPictureValidator
 
 // TPXPictureValidator result type
 
@@ -484,8 +484,8 @@ inline opstream& operator << ( opstream& os, TValidator* v )
 #endif
 
 
-#if defined(Uses_TFilterValidator) && !defined(__TFilterValidator)
-#define __TFilterValidator
+#if defined(Uses_TFilterValidator) && !defined(TV_TFilterValidator)
+#define TV_TFilterValidator
 
 // TFilterValidator
 
@@ -592,8 +592,8 @@ inline opstream& operator << ( opstream& os, TFilterValidator* v )
 #endif
 
 
-#if defined(Uses_TRangeValidator) && !defined(__TRangeValidator)
-#define __TRangeValidator
+#if defined(Uses_TRangeValidator) && !defined(TV_TRangeValidator)
+#define TV_TRangeValidator
 
 // TRangeValidator
 
@@ -732,8 +732,8 @@ inline opstream& operator << ( opstream& os, TRangeValidator* v )
 
 #endif
 
-#if defined(Uses_TLookupValidator) && !defined(__TLookupValidator)
-#define __TLookupValidator
+#if defined(Uses_TLookupValidator) && !defined(TV_TLookupValidator)
+#define TV_TLookupValidator
 
 // TLookupValidator
 
@@ -819,8 +819,8 @@ inline opstream& operator << ( opstream& os, TLookupValidator* v )
 #endif
 
 
-#if defined(Uses_TStringLookupValidator) && !defined(__TStringLookupValidator)
-#define __TStringLookupValidator
+#if defined(Uses_TStringLookupValidator) && !defined(TV_TStringLookupValidator)
+#define TV_TStringLookupValidator
 
 // TStringLookupValidator
 

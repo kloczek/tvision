@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if defined( Uses_TVMemMgr ) && !defined( __TVMemMgr )
-#define __TVMemMgr
+#if defined( Uses_TVMemMgr ) && !defined( TV_TVMemMgr )
+#define TV_TVMemMgr
 
 /** \file buffers.h
  * buffers.h

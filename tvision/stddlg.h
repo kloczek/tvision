@@ -38,8 +38,8 @@ int cmFileOpen    = 1001,   // Returned from TFileDialog when Open pressed
 
 #endif  // __FILE_CMDS
 
-#if defined( Uses_TSearchRec ) && !defined( __TSearchRec )
-#define __TSearchRec
+#if defined( Uses_TSearchRec ) && !defined( TV_TSearchRec )
+#define TV_TSearchRec
 
 #include <limits.h>
 
@@ -107,8 +107,8 @@ struct TSearchRec
 
 #endif  // Uses_TSearchRec
 
-#if defined( Uses_TFileInputLine ) && !defined( __TFileInputLine )
-#define __TFileInputLine
+#if defined( Uses_TFileInputLine ) && !defined( TV_TFileInputLine )
+#define TV_TFileInputLine
 
 class TRect;
 class TEvent;
@@ -183,8 +183,8 @@ inline opstream& operator << ( opstream& os, TFileInputLine* cl )
 
 #endif  // Uses_TFileInputLine
 
-#if defined( Uses_TFileCollection ) && !defined( __TFileCollection )
-#define __TFileCollection
+#if defined( Uses_TFileCollection ) && !defined( TV_TFileCollection )
+#define TV_TFileCollection
 
 class TSearchRec;
 
@@ -345,8 +345,8 @@ inline TSearchRec *TFileCollection::lastThat( ccTestFunc func, void *arg )
 #endif  // Uses_TFileCollection
 
 
-#if defined( Uses_TSortedListBox ) && !defined( __TSortedListBox )
-#define __TSortedListBox
+#if defined( Uses_TSortedListBox ) && !defined( TV_TSortedListBox )
+#define TV_TSortedListBox
 
 class TRect;
 class TScrollBar;
@@ -464,8 +464,8 @@ inline TSortedCollection *TSortedListBox::list()
 
 #endif  // Uses_TSortedListBox
 
-#if defined( Uses_TFileList ) && !defined( __TFileList )
-#define __TFileList
+#if defined( Uses_TFileList ) && !defined( TV_TFileList )
+#define TV_TFileList
 
 class TRect;
 class TScrollBar;
@@ -619,8 +619,8 @@ inline TFileCollection *TFileList::list()
 #endif  // Uses_TFileList
 
 
-#if defined( Uses_TFileInfoPane ) && !defined( __TFileInfoPane )
-#define __TFileInfoPane
+#if defined( Uses_TFileInfoPane ) && !defined( TV_TFileInfoPane )
+#define TV_TFileInfoPane
 
 class TRect;
 class TEvent;
@@ -720,8 +720,8 @@ inline opstream& operator << ( opstream& os, TFileInfoPane* cl )
 
 #endif  // Uses_TFileInfoPane
 
-#if defined( Uses_TFileDialog ) && !defined( __TFileDialog )
-#define __TFileDialog
+#if defined( Uses_TFileDialog ) && !defined( TV_TFileDialog )
+#define TV_TFileDialog
 
 const
     int fdOKButton  = 0x0001,      // Put an OK button in the dialog
@@ -932,8 +932,8 @@ inline opstream& operator << ( opstream& os, TFileDialog* cl )
 #endif  // Uses_TFileDialog
 
 
-#if defined( Uses_TDirEntry ) && !defined( __TDirEntry )
-#define __TDirEntry
+#if defined( Uses_TDirEntry ) && !defined( TV_TDirEntry )
+#define TV_TDirEntry
 
 /**
  * TDirEntry is a simple class providing directory paths and descriptions.
@@ -980,8 +980,8 @@ inline TDirEntry::~TDirEntry()
 
 #endif  // Uses_TDirEntry
 
-#if defined( Uses_TDirCollection ) && !defined( __TDirCollection )
-#define __TDirCollection
+#if defined( Uses_TDirCollection ) && !defined( TV_TDirCollection )
+#define TV_TDirCollection
 
 class TDirEntry;
 
@@ -1140,8 +1140,8 @@ inline TDirEntry *TDirCollection::lastThat( ccTestFunc func, void *arg )
 #endif  // Uses_TDirCollection
 
 
-#if defined( Uses_TDirListBox ) && !defined( __TDirListBox )
-#define __TDirListBox
+#if defined( Uses_TDirListBox ) && !defined( TV_TDirListBox )
+#define TV_TDirListBox
 
 class TRect;
 class TScrollBar;
@@ -1280,8 +1280,8 @@ inline TDirCollection *TDirListBox::list()
 
 #endif  // Uses_TDirListBox
 
-#if defined( Uses_TChDirDialog ) && !defined( __TChDirDialog )
-#define __TChDirDialog
+#if defined( Uses_TChDirDialog ) && !defined( TV_TChDirDialog )
+#define TV_TChDirDialog
 
 const
     int cdNormal = 0x0000, // Option to use dialog immediately

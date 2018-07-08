@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if defined( Uses_TTextDevice ) && !defined( __TTextDevice )
-#define __TTextDevice
+#if defined( Uses_TTextDevice ) && !defined( TV_TTextDevice )
+#define TV_TTextDevice
 
 /** \file textview.h
  * textview.h
@@ -56,8 +56,8 @@ public:
 
 #endif  // Uses_TTextDevice
 
-#if defined( Uses_TTerminal ) && !defined( __TTerminal )
-#define __TTerminal
+#if defined( Uses_TTerminal ) && !defined( TV_TTerminal )
+#define TV_TTerminal
 
 class TRect;
 class TScrollBar;
