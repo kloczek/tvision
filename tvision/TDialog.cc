@@ -57,14 +57,14 @@ void TDialog::handleEvent(TEvent& event)
                 case kbEsc:
                     event.what = evCommand;
                     event.message.command = cmCancel;
-                    event.message.infoPtr = 0;
+                    event.message.infoPtr = nullptr;
                     putEvent(event);
                     clearEvent(event);
                     break;
                 case kbEnter:
                     event.what = evBroadcast;
                     event.message.command = cmDefault;
-                    event.message.infoPtr = 0;
+                    event.message.infoPtr = nullptr;
                     putEvent(event);
                     clearEvent(event);
                     break;
@@ -105,7 +105,7 @@ TStreamable *TDialog::build()
 }
 
 TDialog::TDialog( StreamableInit ) :
-    TWindowInit( 0 ),
+    TWindowInit( nullptr ),
     TWindow( streamableInit )
 {
 }

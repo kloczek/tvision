@@ -125,8 +125,8 @@ TFileDialog::~TFileDialog()
 
 void TFileDialog::shutDown()
 {
-    fileName = 0;
-    fileList = 0;
+    fileName = nullptr;
+    fileList = nullptr;
     TDialog::shutDown();
 }
 

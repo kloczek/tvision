@@ -33,7 +33,7 @@ TLabel::TLabel( const TRect& bounds, const char *aText, TView* aLink) :
 
 void TLabel::shutDown()
 {
-    link = 0;
+    link = nullptr;
     TStaticText::shutDown();
 }
 
@@ -55,7 +55,7 @@ void TLabel::draw()
         }
 
     b.moveChar( 0, ' ', color, size.x );
-    if( text != 0 )
+    if( text != nullptr )
         b.moveCStr( 1, text, color );
     if( showMarkers )
         b.putChar( 0, specialChars[scOff] );

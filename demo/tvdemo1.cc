@@ -106,11 +106,10 @@ TVDemo::TVDemo( int argc, char **argv ) :
         else
             {
             w = validView( new TFileWindow( fileSpec ) );
-            if( w != 0 )
+            if( w != nullptr )
                 deskTop->insert(w);
             }
         }
-
 }
 
 
@@ -143,7 +142,7 @@ void TVDemo::getEvent(TEvent &event)
                 else
                     {
                     w = new THelpWindow(hFile, getHelpCtx());
-                    if (validView(w) != 0)
+                    if (validView(w) != nullptr)
                         {
                         execView(w);
                         destroy( w );
@@ -172,10 +171,10 @@ TStatusLine *TVDemo::initStatusLine( TRect r )
       *new TStatusDef( 0, 50 ) +
         *new TStatusItem( "~F1~ Help", kbF1, cmHelp ) +
         *new TStatusItem( "~Alt-X~ Exit", kbAltX, cmQuit ) +
-        *new TStatusItem( 0, kbAltF3, cmClose ) +
-        *new TStatusItem( 0, kbF10, cmMenu ) +
-        *new TStatusItem( 0, kbF5, cmZoom ) +
-        *new TStatusItem( 0, kbCtrlF5, cmResize ) +
+        *new TStatusItem( nullptr, kbAltF3, cmClose ) +
+        *new TStatusItem( nullptr, kbF10, cmMenu ) +
+        *new TStatusItem( nullptr, kbF5, cmZoom ) +
+        *new TStatusItem( nullptr, kbCtrlF5, cmResize ) +
       *new TStatusDef( 50, 0xffff ) +
         *new TStatusItem( "Howdy", kbF1, cmHelp )
         )
@@ -191,7 +190,7 @@ void TVDemo::puzzle()
 {
     TPuzzleWindow *puzz = (TPuzzleWindow *) validView(new TPuzzleWindow);
 
-    if(puzz != 0)
+    if(puzz != nullptr)
         {
         puzz->helpCtx = hcPuzzle;
         deskTop->insert(puzz);
@@ -211,7 +210,7 @@ void TVDemo::retrieveDesktop()
 
 //    if (findfirst("TVDEMO.DST", &ffblk, 0))
 	FILE *fp;
-	if ((fp = fopen("TVDEMO.DST", "r")) == NULL)
+	if ((fp = fopen("TVDEMO.DST", "r")) == nullptr)
         messageBox("Could not find desktop file", mfOKButton | mfError);
         else
         {

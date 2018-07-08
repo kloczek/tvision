@@ -514,7 +514,7 @@ protected:
      * Writes to the output stream `os'.
      */
     virtual void write( opstream& os );
-    virtual void *read( ipstream& ) { return 0; }
+    virtual void *read( ipstream& ) { return nullptr; }
 public:
     /**
      * Called to create an object in certain stream-reading situations.

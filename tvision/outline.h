@@ -71,7 +71,7 @@ public:
 };
 
 inline TNode::TNode(char* aText) :
-    next(0), text(newStr(aText)), childList(0), expanded(True)
+    next(nullptr), text(newStr(aText)), childList(nullptr), expanded(True)
 {
 }
 

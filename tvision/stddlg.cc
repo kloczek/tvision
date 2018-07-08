@@ -136,7 +136,7 @@ void TSortedListBox::handleEvent(TEvent& event)
             else if( (event.keyDown.charScan.charCode == '.') )
                 {
                 char *loc = strchr( curString, '.' );
-                if( loc == 0 )
+                if( loc == nullptr )
                     searchPos = -1;
                 else
                     searchPos = short(loc - curString);

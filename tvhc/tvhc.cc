@@ -218,7 +218,7 @@ void disposeFixUps(TFixUp * &p)
 {
 	TFixUp *q;
 
-	while (p != 0) {
+	while (p != nullptr ) {
 		q = p->next;
 		delete p;
 		p = q;
@@ -273,7 +273,7 @@ TReference *TRefTable::getReference(char *topic)
 		ref = new TReference;
 		ref->topic = newStr(topic);
 		ref->resolved = False;
-		ref->val.fixUpList = 0;
+		ref->val.fixUpList = nullptr;
 		insert(ref);
 	}
 	return (ref);
@@ -290,7 +290,7 @@ void *TRefTable::keyOf(void *item)
 
 void initRefTable()
 {
-	if (refTable == 0)
+	if (refTable == nullptr)
 		refTable = new TRefTable(5, 5);
 }
 
@@ -323,7 +323,7 @@ void doFixUps(TFixUp * p, ushort value, fpstream & s)
 {
 	long pos;
 
-	for (pos = s.tellg(); (p != 0); p = p->next) {
+	for (pos = s.tellg(); (p != nullptr); p = p->next) {
 		s.seekp(p->pos);
 		s << value;
 	}
@@ -408,13 +408,13 @@ TTopicDefinition::TTopicDefinition(char *aTopic, ushort aValue)
 {
 	topic = newStr(aTopic);
 	value = aValue;
-	next = 0;
+	next = nullptr;
 }
 
 TTopicDefinition::~TTopicDefinition()
 {
 	delete topic;
-	if (next != 0)
+	if (next != nullptr)
 		delete next;
 }
 
@@ -437,7 +437,7 @@ TTopicDefinition *topicDefinition(char *line, int &i)
 	strcpy(topic, getWord(line, i));
 	if (strlen(topic) == 0) {
 		error("Expected topic definition");
-		return (0);
+		return nullptr;
 	} else {
 		j = i;
 		strcpy(w, getWord(line, j));
@@ -465,14 +465,14 @@ TTopicDefinition *topicDefinitionList(char *line, int &i)
 	TTopicDefinition *topicList, *p;
 
 	j = i;
-	topicList = 0;
+	topicList = nullptr;
 	do {
 		i = j;
 		p = topicDefinition(line, i);
-		if (p == 0) {
-			if (topicList != 0)
+		if (p == nullptr) {
+			if (topicList != nullptr)
 				delete topicList;
-			return (0);
+			return nullptr;
 		}
 		p->next = topicList;
 		topicList = p;
@@ -494,13 +494,13 @@ TTopicDefinition *topicHeader(char *line)
 	i = 0;
 	strcpy(w, getWord(line, i));
 	if (strcmp(w, commandChar) != 0)
-		return (0);
+		return nullptr;
 	strcpy(w, getWord(line, i));
 	if (strcasecmp(w, "TOPIC") == 0)
 		return topicDefinitionList(line, i);
 	else {
 		error("TOPIC expected");
-		return (0);
+		return nullptr;
 	}
 }
 
@@ -529,13 +529,13 @@ void addXRef(char *xRef, int offset, uchar length, TCrossRefNode * &xRefs)
 	p->topic = newStr(xRef);
 	p->offset = offset;
 	p->length = length;
-	p->next = 0;
-	if (xRefs == 0)
+	p->next = nullptr;
+	if (xRefs == nullptr)
 		xRefs = p;
 	else {
 		pp = xRefs;
 		prev = pp;
-		while (pp != 0) {
+		while (pp != nullptr) {
 			prev = pp;
 			pp = pp->next;
 		}
@@ -576,7 +576,7 @@ void scanForCrossRefs(char *line, int &offset, TCrossRefNode * &xRefs)
 
 	i = 0;
 	do {
-		if ((begPtr = strchr(line + i, begXRef)) == 0)
+		if ((begPtr = strchr(line + i, begXRef)) == nullptr)
 			i = 0;
 		else {
 			begPos = (int)(begPtr - (line + i));
@@ -587,13 +587,13 @@ void scanForCrossRefs(char *line, int &offset, TCrossRefNode * &xRefs)
 				strdel(line, i, 1);
 				++i;
 			} else {
-				if ((endPtr = strchr(line + i, endXRef)) == 0) {
+				if ((endPtr = strchr(line + i, endXRef)) == nullptr) {
 					error("Unterminated topic reference.");
 					++i;
 				} else {
 					endPos = (int)(endPtr - (line + i));
 					aliasPtr = strchr(line + i, aliasCh);
-					if ((aliasPtr == 0)
+					if ((aliasPtr == nullptr)
 					    || (aliasPtr > endPtr)) {
 						tempPtr = line + i;
 						strncpy(xRef, tempPtr, endPos);
@@ -674,7 +674,7 @@ TParagraph *readParagraph(std::fstream & textFile, int &offset,
 
 	if (isEndParagraph(state) == True) {
 		unGetLine(line);
-		return (0);
+		return nullptr;
 	}
 	while (isEndParagraph(state) == False) {
 		if (state == undefined) {
@@ -694,7 +694,7 @@ TParagraph *readParagraph(std::fstream & textFile, int &offset,
 	p->wrap = (state == wrapping) ? True : False;
 	p->text = new char[ofs];
 	memmove(p->text, buffer, ofs);
-	p->next = 0;
+	p->next = nullptr;
 	offset += ofs;
 	return (p);
 }
@@ -704,10 +704,10 @@ void handleCrossRefs(opstream & s, int xRefValue)
 	TCrossRefNode *p;
 
 	for (p = xRefs; (xRefValue > 0); --xRefValue) {
-		if (p != 0)
+		if (p != nullptr)
 			p = p->next;
 	}
-	if (p != 0)
+	if (p != nullptr)
 		recordReference((p->topic), s);
 }
 
@@ -727,7 +727,7 @@ int xRefCount()
 	TCrossRefNode *p;
 
 	i = 0;
-	for (p = xRefs; (p != 0); p = p->next)
+	for (p = xRefs; (p != nullptr); p = p->next)
 		++i;
 	return (i);
 }
@@ -736,7 +736,7 @@ void disposeXRefs(TCrossRefNode * p)
 {
 	TCrossRefNode *q;
 
-	while (p != 0) {
+	while (p != nullptr) {
 		q = p;
 		p = p->next;
 		delete q->topic;
@@ -746,7 +746,7 @@ void disposeXRefs(TCrossRefNode * p)
 
 void recordTopicDefinitions(TTopicDefinition * p, THelpFile & helpFile)
 {
-	while (p != 0) {
+	while (p != nullptr) {
 		resolveReference(p->topic, p->value, *(helpFile.stream));
 		helpFile.recordPositionInIndex(p->value);
 		p = p->next;
@@ -775,10 +775,10 @@ void readTopic(std::fstream & textFile, THelpFile & helpFile)
 	topic = new THelpTopic;
 
 	// read paragraphs
-	xRefs = 0;
+	xRefs = nullptr;
 	offset = 0;
 	p = readParagraph(textFile, offset, xRefs);
-	while (p != 0) {
+	while (p != nullptr) {
 		topic->addParagraph(p);
 		p = readParagraph(textFile, offset, xRefs);
 	}
@@ -799,9 +799,9 @@ void readTopic(std::fstream & textFile, THelpFile & helpFile)
 	crossRefHandler = handleCrossRefs;
 	helpFile.putTopic(topic);
 
-	if (topic != 0)
+	if (topic != nullptr)
 		delete topic;
-	if (topicDef != 0)
+	if (topicDef != nullptr)
 		delete topicDef;
 	disposeXRefs(xRefs);
 

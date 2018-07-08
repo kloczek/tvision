@@ -135,7 +135,7 @@ void TButton::drawState(Boolean down)
             i =  1;
             }
 
-        if( y == T && title != 0 )
+        if( y == T && title != nullptr )
             drawTitle( b, s, i, cButton, down );
 
         if( showMarkers && !down )
@@ -281,7 +281,7 @@ void TButton::setState( ushort aState, Boolean enable )
 
 void TButton::press()
 {
-    message( owner, evBroadcast, cmRecordHistory, 0 );
+    message( owner, evBroadcast, cmRecordHistory, nullptr );
     if( (flags & bfBroadcast) != 0 )
         message( owner, evBroadcast, command, this );
     else

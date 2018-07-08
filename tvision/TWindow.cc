@@ -45,8 +45,8 @@ TWindow::TWindow( const TRect& bounds,
     options |= ofSelectable | ofTopSelect;
     growMode = gfGrowAll | gfGrowRel;
 
-    if( createFrame != 0 &&
-        (frame = createFrame( getExtent() )) != 0
+    if( createFrame != nullptr &&
+        (frame = createFrame( getExtent() )) != nullptr
       )
         insert( frame );
 }
@@ -60,14 +60,14 @@ void TWindow::close()
 {
     if( valid( cmClose ) )
     {
-        frame = 0;  // so we don't try to use the frame after it's been deleted
+        frame = nullptr;  // so we don't try to use the frame after it's been deleted
         destroy( this );
     }
 }
 
 void TWindow::shutDown()
 {
-    frame = 0;
+    frame = nullptr;
     TGroup::shutDown();
 }
 
@@ -111,7 +111,7 @@ void TWindow::handleEvent( TEvent& event )
                 break;
             case  cmClose:
                 if( (flags & wfClose) != 0 &&
-                    ( event.message.infoPtr == 0 || event.message.infoPtr == this )
+                    ( event.message.infoPtr == nullptr || event.message.infoPtr == this )
                   )
                     {
 		    clearEvent(event);
@@ -128,7 +128,7 @@ void TWindow::handleEvent( TEvent& event )
                 break;
             case  cmZoom:
                 if( (flags & wfZoom) != 0 &&
-                    (event.message.infoPtr == 0 || event.message.infoPtr == this)
+                    (event.message.infoPtr == nullptr || event.message.infoPtr == this)
                   )
                     {
                     zoom();
@@ -175,7 +175,7 @@ void TWindow::setState( ushort aState, Boolean enable )
     if( (aState & sfSelected) != 0 )
         {
         setState(sfActive, enable);
-        if( frame != 0 )
+        if( frame != nullptr )
             frame->setState(sfActive,enable);
         windowCommands += cmNext;
         windowCommands += cmPrev;
@@ -252,7 +252,7 @@ TStreamable *TWindow::build()
 }
 
 TWindow::TWindow( StreamableInit ) :
-    TWindowInit( 0 /*streamableInit*/ ),
+    TWindowInit( nullptr /*streamableInit*/ ),
     TGroup( streamableInit )
 {
 }

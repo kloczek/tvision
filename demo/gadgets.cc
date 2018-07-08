@@ -103,7 +103,7 @@ void TClockView::draw()
 
 void TClockView::update()
 {
-    time_t t = time(0);
+    time_t t = time(nullptr);
     char *date = ctime(&t);
 
     date[19] = '\0';

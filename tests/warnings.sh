@@ -12,7 +12,7 @@ mkdir warnings
 cd warnings
 
 LDFLAGS="-Wl,--as-needed -flto -fuse-linker-plugin" \
-CXXFLAGS="-O -Weverything -fno-caret-diagnostics" \
+CXXFLAGS="-O -Weverything -Wno-c++98-compat -fno-caret-diagnostics" \
 AR="gcc-ar" RANLIB="gcc-ranlib" NM="gcc-nm" \
 CXX=clang++ \
 ../../configure --quiet --enable-maintainer-mode

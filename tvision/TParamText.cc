@@ -17,7 +17,7 @@
 #include <string.h>
 
 TParamText::TParamText( const TRect& bounds ) :
-    TStaticText(bounds, 0 ),
+    TStaticText(bounds, nullptr ),
     str( new char [256] )
 {
     str[0] = EOS;
@@ -30,7 +30,7 @@ TParamText::~TParamText()
 
 void TParamText::getText( char *s )
 {
-    if( str != 0 )
+    if( str != nullptr )
         strcpy( s, str );
     else
         *s = EOS;
@@ -38,7 +38,7 @@ void TParamText::getText( char *s )
 
 int TParamText::getTextLen()
 {
-    return (str != 0) ? strlen( str ) : 0;
+    return (str != nullptr) ? strlen( str ) : 0;
 }
 
 void TParamText::setText( char *fmt, ... )

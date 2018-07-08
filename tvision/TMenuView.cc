@@ -40,8 +40,8 @@ TMenuItem::TMenuItem(   const char *aName,
     disabled = Boolean(!TView::commandEnabled(command));
     keyCode = aKeyCode;
     helpCtx = aHelpCtx;
-    if( p == 0 )
-        param = 0;
+    if( p == nullptr )
+        param = nullptr;
     else
         param = newStr( p );
     next = aNext;
@@ -74,7 +74,7 @@ TMenuItem::~TMenuItem()
 
 TMenu::~TMenu()
 {
-    while( items != 0 )
+    while( items != nullptr )
         {
         TMenuItem *temp = items;
         items = items->next;
@@ -85,7 +85,7 @@ TMenu::~TMenu()
 void TMenuView::trackMouse( TEvent& e, Boolean& mouseActive )
 {
     TPoint mouse = makeLocal( e.mouse.where );
-    for( current = menu->items; current != 0; current = current->next )
+    for( current = menu->items; current != nullptr; current = current->next )
         {
         TRect r = getItemRect( current );
         if( r.contains(mouse) )
@@ -98,7 +98,7 @@ void TMenuView::trackMouse( TEvent& e, Boolean& mouseActive )
 
 void TMenuView::nextItem()
 {
-    if( (current = current->next) == 0 )
+    if( (current = current->next) == nullptr )
         current = menu->items;
 }
 
@@ -107,7 +107,7 @@ void TMenuView::prevItem()
     TMenuItem *p;
 
     if( (p = current) == menu->items)
-        p = 0;
+        p = nullptr;
 
     do  {
         nextItem();
@@ -116,7 +116,7 @@ void TMenuView::prevItem()
 
 void TMenuView::trackKey( Boolean findNext )
 {
-    if( current == 0 )
+    if( current == nullptr )
         return;
 
     do  {
@@ -124,12 +124,12 @@ void TMenuView::trackKey( Boolean findNext )
             nextItem();
         else
             prevItem();
-        } while( current->name == 0 );
+        } while( current->name == nullptr );
 }
 
 Boolean TMenuView::mouseInOwner( TEvent& e )
 {
-    if( parentMenu == 0 || parentMenu->size.y != 1 )
+    if( parentMenu == nullptr || parentMenu->size.y != 1 )
         return False;
     else
         {
@@ -142,16 +142,16 @@ Boolean TMenuView::mouseInOwner( TEvent& e )
 Boolean TMenuView::mouseInMenus( TEvent& e )
 {
     TMenuView *p =  parentMenu;
-    while( p != 0 && !p->mouseInView(e.mouse.where) )
+    while( p != nullptr && !p->mouseInView(e.mouse.where) )
         p = p->parentMenu;
 
-    return Boolean( p != 0 );
+    return Boolean( p != nullptr );
 }
 
 TMenuView *TMenuView::topMenu()
 {
     TMenuView *p = this;
-    while( p->parentMenu != 0 )
+    while( p->parentMenu != nullptr )
         p = p->parentMenu;
     return p;
 }
@@ -164,7 +164,7 @@ ushort TMenuView::execute()
     menuAction action;
     char   ch;
     ushort result = 0;
-    TMenuItem *itemShown = 0;
+    TMenuItem *itemShown = nullptr;
     TMenuItem *p;
     TMenuView *target;
     TRect  r;
@@ -192,14 +192,14 @@ ushort TMenuView::execute()
                 trackMouse(e, mouseActive);
                 if( mouseInOwner(e) )
                     current = menu->deflt;
-                else if( current != 0 && current->name != 0 )
+                else if( current != nullptr && current->name != nullptr )
                     action = doSelect;
                 else if (mouseActive)
                     action = doReturn;
         else
             {
             current = menu->deflt;
-            if (current == 0)
+            if (current == nullptr)
                 current = menu->items;
             action = doNothing;
             }
@@ -225,7 +225,7 @@ ushort TMenuView::execute()
                         break;
                     case  kbLeft:
                     case  kbRight:
-                        if( parentMenu == 0 )
+                        if( parentMenu == nullptr )
                             trackKey(Boolean(ctrlToArrow(e.keyDown.keyCode) == kbRight));
                         else
                             action =  doReturn;
@@ -246,7 +246,7 @@ ushort TMenuView::execute()
                         break;
                     case  kbEsc:
                         action = doReturn;
-                        if( parentMenu == 0 || parentMenu->size.y != 1 )
+                        if( parentMenu == nullptr || parentMenu->size.y != 1 )
                             clearEvent(e);
                         break;
                     default:
@@ -257,10 +257,10 @@ ushort TMenuView::execute()
                         else
                             target = topMenu();
                         p = target->findItem(ch);
-                        if( p == 0 )
+                        if( p == nullptr )
                             {
                             p = topMenu()->hotKey(e.keyDown.keyCode);
-                            if( p != 0 && commandEnabled(p->command) )
+                            if( p != nullptr && commandEnabled(p->command) )
                                 {
                                 result = p->command;
                                 action = doReturn;
@@ -282,7 +282,7 @@ ushort TMenuView::execute()
                 if( e.message.command == cmMenu )
                     {
                     autoSelect = False;
-                    if (parentMenu != 0 )
+                    if (parentMenu != nullptr )
                         action = doReturn;
                     }
                 else
@@ -297,8 +297,8 @@ ushort TMenuView::execute()
             }
 
         if( (action == doSelect || (action == doNothing && autoSelect)) &&
-            current != 0 &&
-            current->name != 0 )
+            current != nullptr &&
+            current->name != nullptr )
             {
                 if( current->command == 0 )
                     {
@@ -328,12 +328,12 @@ ushort TMenuView::execute()
         } while( action != doReturn );
 
     if( e.what != evNothing &&
-        (parentMenu != 0 || e.what == evCommand))
+        (parentMenu != nullptr || e.what == evCommand))
             putEvent(e);
-    if( current != 0 )
+    if( current != nullptr )
         {
         menu->deflt = current;
-        current = 0;
+        current = nullptr;
         drawView();
         }
     return result;
@@ -343,17 +343,17 @@ TMenuItem *TMenuView::findItem( char ch )
 {
     ch = toupper(ch);
     TMenuItem *p = menu->items;
-    while( p != 0 )
+    while( p != nullptr )
         {
-        if( p->name != 0 && !p->disabled )
+        if( p->name != nullptr && !p->disabled )
             {
             char *loc = strchr( (char *) p->name, '~' );
-            if( loc != 0 && (uchar)ch == toupper( loc[1] ) )
+            if( loc != nullptr && (uchar)ch == toupper( loc[1] ) )
                 return p;
             }
         p =  p->next;
         }
-    return 0;
+    return nullptr;
 }
 
 TRect TMenuView::getItemRect( TMenuItem * )
@@ -365,14 +365,14 @@ ushort TMenuView::getHelpCtx()
 {
     TMenuView *c = this;
 
-    while( c != 0 &&
-                (c->current == 0 ||
+    while( c != nullptr &&
+                (c->current == nullptr ||
                  c->current->helpCtx == hcNoContext ||
-                 c->current->name == 0 )
+                 c->current->name == nullptr )
          )
         c = c->parentMenu;
 
-    if( c != 0 )
+    if( c != nullptr )
         return c->current->helpCtx;
     else
         return hcNoContext;
@@ -387,11 +387,11 @@ TPalette& TMenuView::getPalette() const
 Boolean TMenuView::updateMenu( TMenu *menu )
 {
     Boolean res = False;
-    if( menu != 0 )
+    if( menu != nullptr )
         {
-        for( TMenuItem *p = menu->items; p != 0; p = p->next )
+        for( TMenuItem *p = menu->items; p != nullptr; p = p->next )
             {
-            if( p->name != 0 )
+            if( p->name != nullptr )
         	{
                 if( p->command == 0 )
                     {
@@ -420,7 +420,7 @@ void TMenuView::do_a_select( TEvent& event )
     if( event.message.command != 0 && commandEnabled(event.message.command) )
         {
         event.what = evCommand;
-        event.message.infoPtr = 0;
+        event.message.infoPtr = nullptr;
         putEvent(event);
         }
     clearEvent(event);
@@ -428,23 +428,23 @@ void TMenuView::do_a_select( TEvent& event )
 
 void TMenuView::handleEvent( TEvent& event )
 {
-    if( menu != 0 )
+    if( menu != nullptr )
         switch (event.what)
             {
             case  evMouseDown:
                 do_a_select(event);
                 break;
             case  evKeyDown:
-                if( findItem(getAltChar(event.keyDown.keyCode)) != 0 )
+                if( findItem(getAltChar(event.keyDown.keyCode)) != nullptr )
                     do_a_select(event);
                 else
                     {
                     TMenuItem *p = hotKey(event.keyDown.keyCode);
-                    if( p != 0 && commandEnabled(p->command))
+                    if( p != nullptr && commandEnabled(p->command))
                         {
                         event.what = evCommand;
                         event.message.command = p->command;
-                        event.message.infoPtr = 0;
+                        event.message.infoPtr = nullptr;
                         putEvent(event);
                         clearEvent(event);
                         }
@@ -468,14 +468,14 @@ void TMenuView::handleEvent( TEvent& event )
 TMenuItem *TMenuView::findHotKey( TMenuItem *p, ushort keyCode )
 {
 
-    while( p != 0 )
+    while( p != nullptr )
         {
-        if( p->name != 0 )
+        if( p->name != nullptr )
             {
             if( p->command == 0 )
                 {
                 TMenuItem *T;
-                if( (T = findHotKey( p->subMenu->items, keyCode )) != 0 )
+                if( (T = findHotKey( p->subMenu->items, keyCode )) != nullptr )
                     return T;
                 }
             else if( !p->disabled &&
@@ -486,7 +486,7 @@ TMenuItem *TMenuView::findHotKey( TMenuItem *p, ushort keyCode )
             }
         p =  p->next;
         }
-    return 0;
+    return nullptr;
 }
 
 TMenuItem *TMenuView::hotKey( ushort keyCode )
@@ -508,15 +508,15 @@ void TMenuView::writeMenu( opstream& os, TMenu *menu )
 {
     uchar tok = 0xFF;
 
-    assert( menu != 0 );
+    assert( menu != nullptr );
 
-    for( TMenuItem *item = menu->items; item != 0; item = item->next )
+    for( TMenuItem *item = menu->items; item != nullptr; item = item->next )
         {
         os << tok;
         os.writeString( item->name );
         os << item->command << (int)(item->disabled)
            << item->keyCode << item->helpCtx;
-        if( item->name != 0 )
+        if( item->name != nullptr )
             {
             if( item->command == 0 )
                 writeMenu( os, item->subMenu );
@@ -554,7 +554,7 @@ TMenu *TMenuView::readMenu( ipstream& is )
 
 	/* SS: this line gave problems with egcs-1.0.3 */
 
-        item = new TMenuItem( (char *)0, 0, (TMenu *)0 );
+        item = new TMenuItem( nullptr, 0, nullptr );
         *last = item;
         last = &(item->next);
         item->name = is.readString();
@@ -562,7 +562,7 @@ TMenu *TMenuView::readMenu( ipstream& is )
         is >> item->command >> temp
            >> item->keyCode >> item->helpCtx;
         item->disabled = Boolean( temp );
-        if( item->name != 0 )
+        if( item->name != nullptr )
             {
             if( item->command == 0 )
                 item->subMenu = readMenu( is );
@@ -571,7 +571,7 @@ TMenu *TMenuView::readMenu( ipstream& is )
             }
         is >> tok;
         }
-    *last = 0;
+    *last = nullptr;
     menu->deflt = menu->items;
     return menu;
 }
@@ -580,8 +580,8 @@ void *TMenuView::read( ipstream& is )
 {
     TView::read( is );
     menu = readMenu( is );
-    parentMenu = 0;
-    current = 0;
+    parentMenu = nullptr;
+    current = nullptr;
     return this;
 }
 

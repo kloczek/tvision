@@ -32,7 +32,7 @@
 
 #include <string.h>
 
-static TColorIndex* colorIndexes = 0;
+static TColorIndex* colorIndexes = nullptr;
 
 TColorItem::TColorItem( const char *nm, uchar idx, TColorItem *nxt )
 {
@@ -61,7 +61,7 @@ TColorGroup::~TColorGroup()
 TColorItem& operator + ( TColorItem& i1, TColorItem& i2 )
 {
     TColorItem *cur = &i1;
-    while( cur->next != 0 )
+    while( cur->next != nullptr )
         cur = cur->next;
     cur->next = &i2;
     return i1;
@@ -70,15 +70,15 @@ TColorItem& operator + ( TColorItem& i1, TColorItem& i2 )
 TColorGroup& operator + ( TColorGroup& g, TColorItem& i )
 {
     TColorGroup *grp = &g;
-    while( grp->next != 0 )
+    while( grp->next != nullptr )
         grp = grp->next;
 
-    if( grp->items == 0 )
+    if( grp->items == nullptr )
         grp->items = &i;
     else
         {
         TColorItem *cur = grp->items;
-        while( cur->next != 0 )
+        while( cur->next != nullptr )
             cur = cur->next;
         cur->next = &i;
         }
@@ -88,7 +88,7 @@ TColorGroup& operator + ( TColorGroup& g, TColorItem& i )
 TColorGroup& operator + ( TColorGroup& g1, TColorGroup& g2 )
 {
     TColorGroup *cur = &g1;
-    while( cur->next != 0 )
+    while( cur->next != nullptr )
         cur = cur->next;
     cur->next = &g2;
     return g1;
@@ -260,7 +260,7 @@ TMonoSelector::TMonoSelector( const TRect& bounds ) :
     TCluster( bounds, new TSItem( normal,
                       new TSItem( highlight,
                       new TSItem( underline,
-                      new TSItem( inverse,  0 )))))
+                      new TSItem( inverse, nullptr )))))
 {
     eventMask |= evBroadcast;
 }
@@ -324,7 +324,7 @@ TMonoSelector::TMonoSelector( StreamableInit ) : TCluster( streamableInit )
 
 TColorDisplay::TColorDisplay( const TRect& bounds, const char *aText ) :
     TView( bounds ),
-    color( 0 ),
+    color( nullptr ),
     text( newStr( aText ) )
 {
   eventMask |= evBroadcast;
@@ -386,7 +386,7 @@ void *TColorDisplay::read( ipstream& is )
 {
     TView::read( is );
     text = is.readString();
-    color = 0;
+    color = nullptr;
     return this;
 }
 
@@ -405,11 +405,11 @@ TColorGroupList::TColorGroupList( const TRect& bounds,
                                   TScrollBar *aScrollBar,
                                   TColorGroup *aGroups
                                 ) :
-    TListViewer( bounds, 1, 0, aScrollBar ),
+    TListViewer( bounds, 1, nullptr, aScrollBar ),
     groups( aGroups )
 {
     int i = 0;
-    while( aGroups != 0 )
+    while( aGroups != nullptr )
         {
         aGroups = aGroups->next;
         i++;
@@ -419,7 +419,7 @@ TColorGroupList::TColorGroupList( const TRect& bounds,
 
 static void freeItems( TColorItem *curItem )
 {
-    while( curItem != 0 )
+    while( curItem != nullptr )
         {
         TColorItem *p = curItem;
         curItem = curItem->next;
@@ -429,7 +429,7 @@ static void freeItems( TColorItem *curItem )
 
 static void freeGroups( TColorGroup *curGroup )
 {
-    while( curGroup != 0 )
+    while( curGroup != nullptr )
         {
         TColorGroup *p = curGroup;
         freeItems( curGroup->items );
@@ -468,12 +468,12 @@ void TColorGroupList::writeItems( opstream& os, TColorItem *items )
     int count = 0;
     TColorItem *cur;
 
-    for( cur = items; cur != 0; cur = cur->next )
+    for( cur = items; cur != nullptr; cur = cur->next )
         count++;
 
     os << count;
 
-    for( cur = items; cur != 0; cur = cur->next )
+    for( cur = items; cur != nullptr; cur = cur->next )
         {
         os.writeString( cur->name );
         os << cur->index;
@@ -486,12 +486,12 @@ void TColorGroupList::writeGroups( opstream& os, TColorGroup *groups )
     int count = 0;
     TColorGroup *cur;
 
-    for( cur = groups; cur != 0; cur = cur->next )
+    for( cur = groups; cur != nullptr; cur = cur->next )
         count++;
 
     os << count;
 
-    for( cur = groups; cur != 0; cur = cur->next )
+    for( cur = groups; cur != nullptr; cur = cur->next )
         {
         os.writeString( cur->name );
         writeItems( os, cur->items );
@@ -526,7 +526,7 @@ uchar TColorGroupList::getGroupIndex(uchar groupNum)
 
 	/* SS: this makes g++ happy */
 
-	return (uchar) NULL;
+	return 0;
 }
 
 TColorGroup* TColorGroupList::getGroup(uchar groupNum)
@@ -562,7 +562,7 @@ TColorItem *TColorGroupList::readItems( ipstream& is )
 {
     int count;
     is >> count;
-    TColorItem *items = 0;
+    TColorItem *items = nullptr;
     TColorItem **cur = &items;
     while( count-- > 0 )
         {
@@ -573,7 +573,7 @@ TColorItem *TColorGroupList::readItems( ipstream& is )
         delete nm;
         cur = &((*cur)->next);
         }
-    *cur = 0;
+    *cur = nullptr;
     return items;
 }
 
@@ -581,7 +581,7 @@ TColorGroup *TColorGroupList::readGroups( ipstream& is )
 {
     int count;
     is >> count;
-    TColorGroup *groups = 0;
+    TColorGroup *groups = nullptr;
     TColorGroup **cur = &groups;
     while( count-- > 0 )
         {
@@ -591,7 +591,7 @@ TColorGroup *TColorGroupList::readGroups( ipstream& is )
         cur = &((*cur)->next);
         delete nm;
         }
-    *cur = 0;
+    *cur = nullptr;
     return groups;
 }
 
@@ -618,12 +618,12 @@ TColorItemList::TColorItemList( const TRect& bounds,
                                 TScrollBar *aScrollBar,
                                 TColorItem *aItems
                               ) :
-    TListViewer( bounds, 1, 0, aScrollBar ),
+    TListViewer( bounds, 1, nullptr, aScrollBar ),
     items( aItems )
 {
     eventMask |= evBroadcast;
     int i = 0;
-    while( aItems != 0 )
+    while( aItems != nullptr )
         {
         aItems = aItems->next;
         i++;
@@ -664,7 +664,7 @@ void TColorItemList::handleEvent( TEvent& event )
             {
             case cmNewColorItem:
                 curItem = items = g->items;
-                while( curItem != 0 )
+                while( curItem != nullptr )
                     {
                     curItem = curItem->next;
                     i++;
@@ -702,13 +702,13 @@ TColorDialog::TColorDialog( TPalette *aPalette, TColorGroup *aGroups ):
 #endif
 {
     options |= ofCentered;
-    if( aPalette != 0 )
+    if( aPalette != nullptr )
         {
         pal = new TPalette( "", 0 );
         *pal = *aPalette;
         }
     else
-        pal = 0;
+        pal = nullptr;
 
 #if 1 //__UNPATCHED
     TScrollBar *sb = new TScrollBar( TRect( 27, 3, 28, 14 ) );
@@ -792,7 +792,7 @@ TColorDialog::TColorDialog( TPalette *aPalette, TColorGroup *aGroups ):
     selectNext( False );
 #endif
 
-    if( pal != 0 )
+    if( pal != nullptr )
         setData( pal );
 }
 
@@ -854,9 +854,9 @@ void TColorDialog::setIndexes(TColorIndex*& colIdx)
     {
         delete colIdx;
 #ifndef __UNPATCHED
-        colIdx = NULL;      // BUG FIX
+        colIdx = nullptr;      // BUG FIX
 #else
-        colors = NULL;
+        colors = nullptr;
 #endif
     }
     if (!colIdx)
@@ -900,7 +900,7 @@ void *TColorDialog::read( ipstream& is )
     TDialog::read( is );
     is >> display >> groups >> forLabel >> forSel
        >> bakLabel >> bakSel >> monoLabel >> monoSel;
-    pal = 0;
+    pal = nullptr;
     return this;
 }
 
@@ -910,7 +910,7 @@ TStreamable *TColorDialog::build()
 }
 
 TColorDialog::TColorDialog( StreamableInit ) :
-    TWindowInit( 0 /*streamableInit*/ ),
+    TWindowInit( nullptr /*streamableInit*/ ),
     TDialog( streamableInit )
 {
 }

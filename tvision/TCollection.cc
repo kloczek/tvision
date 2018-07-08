@@ -19,7 +19,7 @@
 #include <string.h>
 
 TNSCollection::TNSCollection( ccIndex aLimit, ccIndex aDelta ) :
-    items( 0 ),
+    items( nullptr ),
     count( 0 ),
     limit( 0 ),
     delta( aDelta ),
@@ -29,7 +29,7 @@ TNSCollection::TNSCollection( ccIndex aLimit, ccIndex aDelta ) :
 }
 
 TNSCollection::TNSCollection() :
-    items( 0 ),
+    items( nullptr ),
     count( 0 ),
     limit( 0 ),
     delta( 0 ),
@@ -118,7 +118,7 @@ void *TNSCollection::firstThat( ccTestFunc Test, void *arg )
         if( Test( items[i], arg ) == True )
             return items[i];
         }
-    return 0;
+    return nullptr;
 }
 
 void *TNSCollection::lastThat( ccTestFunc Test, void *arg )
@@ -128,7 +128,7 @@ void *TNSCollection::lastThat( ccTestFunc Test, void *arg )
         if( Test( items[i-1], arg ) == True )
             return items[i-1];
         }
-    return 0;
+    return nullptr;
 }
 
 void TNSCollection::forEach( ccAppFunc action, void *arg )
@@ -179,7 +179,7 @@ void TNSCollection::pack()
     void **last = items + count;
     while( curSrc < last )
         {
-        if( *curSrc != 0 )
+        if( *curSrc != nullptr )
             *curDst++ = *curSrc;
 //        *curSrc++;	/* XXX */
 	curSrc++;	/* XXX */
@@ -196,11 +196,11 @@ void TNSCollection::setLimit(ccIndex aLimit)
         {
         void **aItems;
         if (aLimit == 0 )
-            aItems = 0;
+            aItems = nullptr;
         else
             {
             aItems = new void *[aLimit];
-            if( count != 0 && aItems != 0 && items != 0 )
+            if( count != 0 && aItems != nullptr && items != nullptr )
                 memcpy( aItems, items, count*sizeof(void *) );
             }
         delete items;

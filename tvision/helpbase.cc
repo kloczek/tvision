@@ -66,13 +66,13 @@ TStreamableClass RHelpTopic( THelpTopic::name,
 
 THelpTopic::THelpTopic() : TObject()
 {
-    paragraphs = 0;
+    paragraphs = nullptr;
     numRefs = 0;
-    crossRefs = 0;
+    crossRefs = nullptr;
     width = 0;
     lastOffset = 0;
     lastLine = INT_MAX;
-    lastParagraph = 0;
+    lastParagraph = nullptr;
 };
 
 void THelpTopic::readParagraphs( ipstream& s )
@@ -96,7 +96,7 @@ void THelpTopic::readParagraphs( ipstream& s )
         pp = &((*pp)->next);
         --i;
     }
-    *pp = 0;
+    *pp = nullptr;
 }
 
 void THelpTopic::readCrossRefs( ipstream& s )
@@ -126,7 +126,7 @@ void THelpTopic::disposeParagraphs()
     TParagraph *p, *t;
 
     p = paragraphs;
-    while (p != 0)
+    while (p != nullptr)
         {
         t = p;
         p = p->next;
@@ -141,7 +141,7 @@ THelpTopic::~THelpTopic()
     TCrossRef *crossRefPtr;
 
     disposeParagraphs();
-    if (crossRefs != 0)
+    if (crossRefs != nullptr)
        {
        crossRefPtr = (TCrossRef *)crossRefs;
        delete [] crossRefPtr;
@@ -171,20 +171,20 @@ void THelpTopic::addParagraph( TParagraph *p )
 {
     TParagraph  *pp, *back;
 
-    if (paragraphs == 0)
+    if (paragraphs == nullptr)
         paragraphs = p;
     else
         {
         pp = paragraphs;
         back = pp;
-        while (pp != 0)
+        while (pp != nullptr)
             {
             back = pp;
             pp = pp->next;
             }
         back->next = p;
         }
-    p->next = 0;
+    p->next = nullptr;
 }
 
 void THelpTopic::getCrossRef( int i, TPoint& loc, uchar& length,
@@ -242,7 +242,7 @@ char *THelpTopic::getLine( int line, char *buffer, int buflen )
         lastLine = line;
         }
     buffer[0] = 0;
-    while (p != 0)
+    while (p != nullptr)
     {
         while (offset < p->size)
         {
@@ -277,7 +277,7 @@ int THelpTopic::numLines()
     offset = 0;
     lines = 0;
     p = paragraphs;
-    while (p != 0)
+    while (p != nullptr)
         {
         offset = 0;
         while (offset < p->size)
@@ -336,10 +336,10 @@ void THelpTopic::writeParagraphs( opstream& s )
     int temp;
 
     p = paragraphs;
-    for (i = 0; p != 0; ++i)
+    for (i = 0; p != nullptr; ++i)
         p = p->next;
     s << i;
-    for(p = paragraphs; p != 0; p = p->next)
+    for(p = paragraphs; p != nullptr; p = p->next)
         {
         s << p->size;
         temp = int(p->wrap);
@@ -386,7 +386,7 @@ int scan( char *p, int offset, char c)
 
     temp1 = p + offset;
     temp2 = strchr(temp1, c);
-    if (temp2 == 0)
+    if (temp2 == nullptr)
        return 256;
     else
        {
@@ -470,7 +470,7 @@ void *THelpIndex::read( ipstream& is )
 
     is >> size;
     if (size == 0)
-        index = 0;
+        index = nullptr;
     else
         {
         index =  new long[size];
@@ -502,7 +502,7 @@ THelpIndex::~THelpIndex()
 THelpIndex::THelpIndex(void): TObject ()
 {
     size = 0;
-    index = 0;
+    index = nullptr;
 }
 
 long THelpIndex::position(int i)
@@ -529,7 +529,7 @@ void THelpIndex::add( int i, long val )
         {
         newSize = (i + delta) / delta * delta;
         p = new long[newSize];
-        if (p != 0)
+        if (p != nullptr)
             {
             memmove(p, index, size * sizeof(long));
             memset(p+size, 0xFF, (newSize - size) * sizeof(long));
@@ -606,7 +606,7 @@ THelpFile::~THelpFile(void)
 THelpTopic *THelpFile::getTopic( int i )
 {
     long pos;
-    THelpTopic *topic = 0;
+    THelpTopic *topic = nullptr;
 
     pos = index->position(i);
     if (pos > 0 )
@@ -628,7 +628,7 @@ THelpTopic *THelpFile::invalidTopic()
     para->text = newStr(invalidContext);
     para->size = strlen(invalidContext);
     para->wrap = False;
-    para->next = 0;
+    para->next = nullptr;
     topic->addParagraph(para);
     return topic;
 }

@@ -24,11 +24,11 @@ THistoryWindow::THistoryWindow( const TRect& bounds,
                                 ushort historyId ) :
     TWindowInit( &THistoryWindow::initFrame ),
     THistInit( &THistoryWindow::initViewer ),
-    TWindow( bounds, 0, wnNoNumber)
+    TWindow( bounds, nullptr, wnNoNumber)
 {
     flags = wfClose;
-    if( createListViewer != 0 &&
-        (viewer = createListViewer( getExtent(), this, historyId )) != 0 )
+    if( createListViewer != nullptr &&
+        (viewer = createListViewer( getExtent(), this, historyId )) != nullptr )
         insert( viewer );
 }
 

@@ -109,8 +109,8 @@ void TLoadWindow::handleEvent(TEvent & event)
 
 void TLoadWindow::update()
 {
-	time_t newTime = time(NULL);
-	if (pTime != 0 && oldTime != newTime) {
+	time_t newTime = time(nullptr);
+	if (pTime != nullptr && oldTime != newTime) {
 		oldTime = newTime;
 		pTime->setText(ctime(&oldTime));
 
@@ -119,7 +119,7 @@ void TLoadWindow::update()
 			double v;
 
 			f >> v;
-			if (bar[i] != 0)
+			if (bar[i] != nullptr)
 				bar[i]->setValue((int)(v * 100));
 		}
 	}
@@ -147,7 +147,7 @@ class myApp:public TApplication {
 myApp::myApp():TProgInit(&myApp::initStatusLine, &myApp::initMenuBar,
 	  &myApp::initDeskTop)
 {
-	srand(time(NULL));
+	srand(time(nullptr));
 }
 
 void myApp::cascade()
@@ -179,7 +179,7 @@ void myApp::handleEvent(TEvent & event)
 void myApp::newLoadWindow()
 {
 	TView *w = validView(new TLoadWindow);
-	if (w != 0) {
+	if (w != nullptr) {
 		w->moveTo((int)((double)(size.x - TLoadWindow::minW) *
 				rand() / (RAND_MAX + 1.0)),
 			  (int)((double)(size.y - TLoadWindow::minH) *
@@ -204,14 +204,14 @@ static Boolean isTileable(TView * p, void *)
 void myApp::idle()
 {
 	TApplication::idle();
-	if (deskTop->firstThat(isTileable, 0) != 0) {
+	if (deskTop->firstThat(isTileable, nullptr) != nullptr) {
 		enableCommand(cmTile);
 		enableCommand(cmCascade);
 	} else {
 		disableCommand(cmTile);
 		disableCommand(cmCascade);
 	}
-	message(deskTop, evBroadcast, cmUpdateLoad, 0);
+	message(deskTop, evBroadcast, cmUpdateLoad, nullptr);
 }
 
 TMenuBar *myApp::initMenuBar(TRect r)
@@ -243,18 +243,18 @@ TStatusLine *myApp::initStatusLine(TRect r)
 {
 	r.a.y = r.b.y - 1;
 	return new TStatusLine(r,
-			       *new TStatusDef(0, 50) +
+		*new TStatusDef(0, 50) +
 			       *new TStatusItem("~Alt-X~ Exit", kbAltX,
 						cmQuit) +
 			       *new TStatusItem("~Alt-L~ system load", kbAltL,
-						cmNewLoad) + *new TStatusItem(0,
+						cmNewLoad) + *new TStatusItem(nullptr,
 									      kbAltF3,
 									      cmClose)
-			       + *new TStatusItem(0, kbF10,
-						  cmMenu) + *new TStatusItem(0,
+			       + *new TStatusItem(nullptr, kbF10,
+						  cmMenu) + *new TStatusItem(nullptr,
 									     kbF5,
 									     cmZoom)
-			       + *new TStatusItem(0, kbCtrlF5, cmResize));
+			       + *new TStatusItem(nullptr, kbCtrlF5, cmResize));
 }
 
 int main()

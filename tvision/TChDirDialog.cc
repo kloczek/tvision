@@ -67,10 +67,10 @@ ushort TChDirDialog::dataSize()
 
 void TChDirDialog::shutDown()
 {
-    dirList = 0;
-    dirInput = 0;
-    okButton = 0;
-    chDirButton = 0;
+    dirList = nullptr;
+    dirInput = nullptr;
+    okButton = nullptr;
+    chDirButton = nullptr;
     TDialog::shutDown();
 }
 
@@ -130,12 +130,12 @@ void TChDirDialog::setData( void * )
 
 void TChDirDialog::setUpDialog()
 {
-    if( dirList != 0 )
+    if( dirList != nullptr )
         {
         char curDir[PATH_MAX];
         getCurDir( curDir );
         dirList->newDirectory( curDir );
-        if( dirInput != 0 )
+        if( dirInput != nullptr )
             {
             int len = strlen( curDir );
 	    /* SS: changed */

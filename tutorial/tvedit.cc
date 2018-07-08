@@ -81,8 +81,8 @@ TVDemo::TVDemo():TProgInit(&TVDemo::initStatusLine, &TVDemo::initMenuBar,
 
 	//create a clipboard
 
-	clipWindow = new TEditWindow(deskTop->getExtent(), 0, wnNoNumber);
-	if (clipWindow != 0) {
+	clipWindow = new TEditWindow(deskTop->getExtent(), nullptr, wnNoNumber);
+	if (clipWindow != nullptr) {
 		//remember who is the clipboard; all editor istances will
 		//refer to this one when doing clipboard operations
 
@@ -123,7 +123,7 @@ void TVDemo::changeDir()
 {
 	TView *d = validView(new TChDirDialog(0, cmChangeDir));
 
-	if (d != 0) {
+	if (d != nullptr) {
 		deskTop->execView(d);
 		destroy(d);
 	}
@@ -136,7 +136,7 @@ TDialog *TVDemo::createFindDialog()
 	TInputLine *p;
 	TDialog *d = new TDialog(TRect(0, 0, 38, 12), "Find");
 	if (!d)
-		return 0;
+		return nullptr;
 
 	d->options |= ofCentered;
 
@@ -147,7 +147,7 @@ TDialog *TVDemo::createFindDialog()
 	d->insert(new TCheckBoxes(TRect(3, 5, 35, 7),
 				  new TSItem("~C~ase sensitive",
 					     new TSItem("~W~hole words only",
-							0))));
+							nullptr))));
 
 	d->insert(new TButton(TRect(14, 9, 24, 11), "O~K~", cmOK, bfDefault));
 	d->insert(new
@@ -164,7 +164,7 @@ TDialog *TVDemo::createReplaceDialog()
 	TInputLine *p;
 	TDialog *d = new TDialog(TRect(0, 0, 40, 16), "Replace");
 	if (!d)
-		return 0;
+		return nullptr;
 
 	d->options |= ofCentered;
 
@@ -181,7 +181,8 @@ TDialog *TVDemo::createReplaceDialog()
 				  new TSItem("~W~hole words only",
 				  new TSItem("~P~rompt on replace",
 				  new TSItem("~R~eplace all",
-				  0))))));
+				  nullptr)))))
+				  );
 
 	d->insert(new TButton(TRect(17, 13, 27, 15), "O~K~", cmOK, bfDefault));
 	d->insert(new TButton(TRect(28, 13, 38, 15), "Cancel", cmCancel,
@@ -198,7 +199,7 @@ TDialog *TVDemo::createReplaceDialog()
 ushort TVDemo::doEditorDialog(int dialog, ...)
 {
 	va_list ap;
-	void *info = 0;
+	void *info = nullptr;
 
 	va_start(ap, dialog);	//initializes the variable argument list
 	info = va_arg(ap, void *);	//get first parameter (if any)
@@ -328,7 +329,7 @@ static Boolean isTileable(TView * p, void *)
 void TVDemo::idle()
 {
 	TApplication::idle();
-	if (deskTop->firstThat(isTileable, 0) != 0) {
+	if (deskTop->firstThat(isTileable, nullptr) != nullptr) {
 		enableCommand(cmTile);
 		enableCommand(cmCascade);
 	} else {
@@ -426,9 +427,9 @@ TStatusLine *TVDemo::initStatusLine(TRect r)
 
 void TVDemo::newFile()
 {
-	TView *w = validView(new TEditWindow(deskTop->getExtent(), 0,
+	TView *w = validView(new TEditWindow(deskTop->getExtent(), nullptr,
 					     wnNoNumber));
-	if (w != 0)
+	if (w != nullptr)
 		deskTop->insert(w);
 }
 
@@ -443,13 +444,13 @@ void TVDemo::openFile(const char *fileSpec)
 								   fdOpenButton,
 								   100));
 
-	if (d != 0 && deskTop->execView(d) != cmCancel) {
+	if (d != nullptr && deskTop->execView(d) != cmCancel) {
 		char fileName[PATH_MAX];
 
 		d->getFileName(fileName);
 		TView *w = validView(new TEditWindow(deskTop->getExtent(),
 						     fileName, wnNoNumber));
-		if (w != 0)
+		if (w != nullptr)
 			deskTop->insert(w);
 	}
 	destroy(d);
@@ -466,7 +467,7 @@ void TVDemo::suspend()
 
 void TVDemo::showClipboard()
 {
-	if (clipWindow != 0) {
+	if (clipWindow != nullptr) {
 		clipWindow->select();
 		clipWindow->show();
 	}

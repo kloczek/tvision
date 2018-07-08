@@ -28,7 +28,7 @@ char hotKey( const char *s )
 {
     char *p;
 
-    if( (p = strchr( (char *) s, '~' )) != 0 )
+    if( (p = strchr( (char *) s, '~' )) != nullptr )
         return toupper(p[1]);
     else
         return 0;
@@ -79,7 +79,7 @@ ushort TInputLine::dataSize()
     ushort dSize = 0;
 
     if (validator)
-        dSize = validator->transfer(data, NULL, vtDataSize);
+        dSize = validator->transfer(data, nullptr, vtDataSize);
     if (dSize == 0)
         dSize = maxLen + 1;
     return dSize;
@@ -117,7 +117,7 @@ void TInputLine::draw()
 
 void TInputLine::getData( void *rec )
 {
-    if ((validator == 0) || (validator->transfer(data, rec, vtGetData) == 0))
+    if ((validator == nullptr) || (validator->transfer(data, rec, vtGetData) == 0))
         memcpy( rec, data, dataSize() );
 }
 
@@ -429,7 +429,7 @@ void TInputLine::selectAll( Boolean enable )
 
 void TInputLine::setData( void *rec )
 {
-    if ((validator == 0) || (validator->transfer(data,rec,vtSetData)==0))
+    if ((validator == nullptr) || (validator->transfer(data,rec,vtSetData)==0))
         {
         memcpy( data, rec, dataSize()-1 );
         data[dataSize()-1] = EOS;
@@ -448,7 +448,7 @@ void TInputLine::setState( ushort aState, Boolean enable )
 
 void TInputLine::setValidator( TValidator* aValid )
 {
-    if (validator!=0)
+    if (validator!=nullptr)
       destroy(validator);
 
     validator = aValid;

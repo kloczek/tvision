@@ -25,8 +25,8 @@
 
 void *message( TView *receiver, ushort what, ushort command, void *infoPtr)
 {
-    if( receiver == 0 )
-        return 0;
+    if( receiver == nullptr )
+        return nullptr;
 
     TEvent event;
     event.what = what;
@@ -36,7 +36,7 @@ void *message( TView *receiver, ushort what, ushort command, void *infoPtr)
     if( event.what == evNothing )
         return event.message.infoPtr;
     else
-        return 0;
+        return nullptr;
 }
 
 Boolean lowMemory()
@@ -48,8 +48,8 @@ Boolean lowMemory()
 
 char *newStr( const char *s )
 {
-    if( s == 0 )
-        return 0;
+    if( s == nullptr )
+        return nullptr;
     char *temp = new char[ strlen(s)+1 ];
     strcpy( temp, s );
     return temp;
@@ -68,22 +68,22 @@ TView *TGroup::at( short index )
 TView *TGroup::firstThat( Boolean (*func)(TView *, void *), void *args )
 {
     TView *temp = last;
-    if( temp == 0 )
-        return 0;
+    if( temp == nullptr )
+        return nullptr;
 
     do  {
         temp = temp->next;
         if( func( temp, args ) == True )
             return temp;
         } while( temp != last );
-    return 0;
+    return nullptr;
 }
 
 void TGroup::forEach( void (*func)(TView*, void *), void *args )
 {
     TView *term = last;
     TView *temp = last;
-    if( temp == 0 )
+    if( temp == nullptr )
         return;
 
     TView *next = temp->next;
@@ -97,7 +97,7 @@ void TGroup::forEach( void (*func)(TView*, void *), void *args )
 
 short TGroup::indexOf( TView *p )
 {
-    if( last == 0 )
+    if( last == nullptr )
         return 0;
 
     short index = 0;
@@ -130,7 +130,7 @@ uchar TView::mapColor( uchar color )
                 return errorAttr;
             }
         cur = cur->owner;
-        } while( cur != 0 );
+        } while( cur != nullptr );
     return color;
 }
 

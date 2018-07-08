@@ -139,7 +139,7 @@ void *DirSearchRec::operator new( size_t sz )
     if( TVMemMgr::safetyPoolExhausted() )
         {
         delete (char *)temp;
-        temp = 0;
+        temp = nullptr;
         }
     return temp;
 }
@@ -149,7 +149,7 @@ void TFileList::readDirectory( const char *aWildCard )
 	/* SS: changed */
 
 	DIR *dp;
-	DirSearchRec *p = NULL;
+	DirSearchRec *p = nullptr;
 	char dir[PATH_MAX];
 	char file[PATH_MAX];
 	char path[PATH_MAX];
@@ -172,9 +172,9 @@ void TFileList::readDirectory( const char *aWildCard )
 	 * Date: 18 Jan 1997 22:52:12 +0000
 	 */
 #ifdef GLOB_PERIOD
-	if (glob(path, GLOB_PERIOD, NULL, &gl) == 0)
+	if (glob(path, GLOB_PERIOD, nullptr, &gl) == 0)
 #else
-	if (glob(path, 0, NULL, &gl) == 0)
+	if (glob(path, 0, nullptr, &gl) == 0)
 #endif
 	for (int i = 0; i < (int)gl.gl_pathc; i++)
 	{
@@ -182,11 +182,11 @@ void TFileList::readDirectory( const char *aWildCard )
 
 		if (stat(gl.gl_pathv[i], &s) == 0 && S_ISREG(s.st_mode))
 		{
-			if ((p = new DirSearchRec) == NULL) break;
+			if ((p = new DirSearchRec) == nullptr) break;
 
 			/* strip directory part */
 
-			if ((np = strrchr(gl.gl_pathv[i], '/')) != NULL) np++;
+			if ((np = strrchr(gl.gl_pathv[i], '/')) != nullptr) np++;
 			else np = gl.gl_pathv[i];
 			p->readFf_blk(np, s);
 			fileList->insert( p );
@@ -197,9 +197,9 @@ void TFileList::readDirectory( const char *aWildCard )
 	/* now read all directory names */
 
 	sprintf(path, "%s.", dir);
-	if ((dp = opendir(path)) != NULL)
+	if ((dp = opendir(path)) != nullptr)
 	{
-		while ((de = readdir(dp)) != NULL)
+		while ((de = readdir(dp)) != nullptr)
 		{
 			/* we don't want these directories */
 
@@ -211,7 +211,7 @@ void TFileList::readDirectory( const char *aWildCard )
 			sprintf(path, "%s%s", dir, de->d_name);
 			if (stat(path, &s) == 0 && S_ISDIR(s.st_mode))
 			{
-				if ((p = new DirSearchRec) == NULL) break;
+				if ((p = new DirSearchRec) == nullptr) break;
 				p->readFf_blk(de->d_name, s);
 				fileList->insert( p );
 			}
@@ -222,7 +222,7 @@ void TFileList::readDirectory( const char *aWildCard )
     if( strlen( dir ) > 1 )
         {
         p = new DirSearchRec;
-        if( p != 0 )
+        if( p != nullptr )
             {
 		sprintf(path, "%s..", dir);
 		if (stat(path, &s) == 0) p->readFf_blk("..", s);
@@ -237,7 +237,7 @@ void TFileList::readDirectory( const char *aWildCard )
             }
         }
 
-    if( p == 0 )
+    if( p == nullptr )
         messageBox( tooManyFiles, mfOKButton | mfWarning );
     newList(fileList);
     if( list()->getCount() > 0 )

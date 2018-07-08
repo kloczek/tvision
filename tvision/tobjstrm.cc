@@ -67,7 +67,7 @@ const TStreamableClass *TStreamableTypes::lookup( const char *name )
     if( search( (void *)name, loc ) )
         return (TStreamableClass *)at( loc );
     else
-        return 0;
+        return nullptr;
 }
 
 void *TStreamableTypes::keyOf( void *d )
@@ -161,7 +161,7 @@ pstream::~pstream()
 
 void pstream::initTypes()
 {
-    if( types == 0 )
+    if( types == nullptr )
         types = new TStreamableTypes;
 }
 
@@ -202,7 +202,7 @@ void pstream::registerType( TStreamableClass *ts )
 
 pstream::operator void *() const
 {
-    return fail() ? 0 : (void *)this;
+    return fail() ? nullptr : (void *)this;
 }
 
 int pstream::operator! () const
@@ -290,10 +290,10 @@ char *ipstream::readString()
 {
     uchar len = readByte();
     if( len == nullStringLen )
-        return 0;
+        return nullptr;
     char *buf = new char[len+1];
-    if( buf == 0 )
-        return 0;
+    if( buf == nullptr )
+        return nullptr;
     readBytes( buf, len );
     buf[len] = EOS;
     return buf;
@@ -301,11 +301,11 @@ char *ipstream::readString()
 
 char *ipstream::readString( char *buf, unsigned maxLen )
 {
-    assert( buf != 0 );
+    assert( buf != nullptr );
 
     uchar len = readByte();
     if( len > maxLen-1 )
-        return 0;
+        return nullptr;
     readBytes( buf, len );
     buf[len] = EOS;
     return buf;
@@ -405,19 +405,19 @@ ipstream& operator >> ( ipstream& ps, void *&t )
     switch( ch )
         {
         case pstream::ptNull:
-            t = 0;
+            t = nullptr;
             break;
         case pstream::ptIndexed:
             {
             P_id_type index = ps.readWord();
             t = (void *)ps.find( index );
-            assert( t != 0 );
+            assert( t != nullptr );
             break;
             }
         case pstream::ptObject:
             {
             const TStreamableClass *pc = ps.readPrefix();
-            t = ps.readData( pc, 0 );
+            t = ps.readData( pc, nullptr );
             ps.readSuffix();
             break;
             }
@@ -446,7 +446,7 @@ const TStreamableClass *ipstream::readPrefix()
 
 void *ipstream::readData( const TStreamableClass *c, TStreamable *mem )
 {
-    if( mem == 0 )
+    if( mem == nullptr )
         mem = c->build();
 
     registerObject( (char *)mem - c->delta );   // register the actual address
@@ -541,7 +541,7 @@ void opstream::writeWord( ushort sh )
 
 void opstream::writeString( const char *str )
 {
-    if( str == 0 )
+    if( str == nullptr )
         {
         writeByte( nullStringLen );
         return;
@@ -649,7 +649,7 @@ opstream& operator << ( opstream& ps, TStreamable& t )
 opstream& operator << ( opstream& ps, TStreamable *t )
 {
     P_id_type index;
-    if( t == 0 )
+    if( t == nullptr )
         ps.writeByte( pstream::ptNull );
     else if( (index = ps.find( t )) != P_id_notFound )
         {
@@ -672,7 +672,7 @@ void opstream::writePrefix( const TStreamable& t )
 
 void opstream::writeData( TStreamable& t )
 {
-    if( types->lookup( t.streamableName() ) == 0 )
+    if( types->lookup( t.streamableName() ) == nullptr )
         error( peNotRegistered, t );
     else
         {

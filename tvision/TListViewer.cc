@@ -38,7 +38,7 @@ TListViewer::TListViewer( const TRect& bounds,
 
     options |= ofFirstClick | ofSelectable;
     eventMask |= evBroadcast;
-    if( aVScrollBar != 0 )
+    if( aVScrollBar != nullptr )
         {
         if( numCols == 1 )
             {
@@ -53,7 +53,7 @@ TListViewer::TListViewer( const TRect& bounds,
         aVScrollBar->setStep( pgStep, arStep );
         }
 
-    if( aHScrollBar != 0 )
+    if( aHScrollBar != nullptr )
         aHScrollBar->setStep( size.x / numCols, 1 );
 
     hScrollBar = aHScrollBar;
@@ -63,13 +63,13 @@ TListViewer::TListViewer( const TRect& bounds,
 void TListViewer::changeBounds( const TRect& bounds )
 {
     TView::changeBounds( bounds );
-    if( hScrollBar != 0 )
+    if( hScrollBar != nullptr )
         hScrollBar->setStep( size.x / numCols, hScrollBar->arStep);
 #ifndef __UNPATCHED
-    if( vScrollBar != 0 )
+    if( vScrollBar != nullptr )
         vScrollBar->setStep( size.y, vScrollBar->arStep);
 #else
-    if( vScrollBar != 0 )
+    if( vScrollBar != nullptr )
         vScrollBar->setStep( size.y, hScrollBar->arStep);
 #endif
 }
@@ -94,7 +94,7 @@ void TListViewer::draw()
         selectedColor = getColor(4);
         }
 
-    if( hScrollBar != 0 )
+    if( hScrollBar != nullptr )
         indent = hScrollBar->value;
     else
         indent = 0;
@@ -152,7 +152,7 @@ void TListViewer::draw()
 void TListViewer::focusItem( short item )
 {
     focused = item;
-    if( vScrollBar != 0 )
+    if( vScrollBar != nullptr )
         vScrollBar->setValue( item );
     else
         drawView();
@@ -372,7 +372,7 @@ void TListViewer::setRange( short aRange )
     if( focused > aRange )
         focused = 0;
 #endif
-    if( vScrollBar != 0 )
+    if( vScrollBar != nullptr )
         vScrollBar->setParams( focused, 0, aRange - 1, vScrollBar->pgStep,
                                vScrollBar->arStep );
     else
@@ -384,14 +384,14 @@ void TListViewer::setState( ushort aState, Boolean enable )
     TView::setState( aState, enable );
     if( (aState & (sfSelected | sfActive | sfVisible)) != 0 )
         {
-        if( hScrollBar != 0 )
+        if( hScrollBar != nullptr )
             {
             if( getState(sfActive) && getState(sfVisible))
                 hScrollBar->show();
             else
                 hScrollBar->hide();
     	    }
-        if( vScrollBar != 0 )
+        if( vScrollBar != nullptr )
     	    {
             if( getState(sfActive) && getState(sfVisible))
                 vScrollBar->show();
@@ -404,8 +404,8 @@ void TListViewer::setState( ushort aState, Boolean enable )
 
 void TListViewer::shutDown()
 {
-     hScrollBar = 0;
-     vScrollBar = 0;
+     hScrollBar = nullptr;
+     vScrollBar = nullptr;
      TView::shutDown();
 }
 

@@ -32,13 +32,13 @@ TDeskTop::TDeskTop( const TRect& bounds ) :
     growMode = gfGrowHiX | gfGrowHiY;
     tileColumnsFirst = False;
 
-    if( createBackground != 0 && (background = createBackground( getExtent() )) != 0 )
+    if( createBackground != nullptr && (background = createBackground( getExtent() )) != nullptr )
         insert( background );
 }
 
 void TDeskTop::shutDown()
 {
-    background = 0;
+    background = nullptr;
     TGroup::shutDown();
 }
 
@@ -75,7 +75,7 @@ void TDeskTop::cascade( const TRect &r )
 {
     TPoint min, max;
     cascadeNum = 0;
-    forEach( doCount, 0 );
+    forEach( doCount, nullptr );
     if( cascadeNum > 0 )
         {
         lastView->sizeLimits( min, max );
@@ -219,7 +219,7 @@ void doTile( TView* p, void *lR )
 void TDeskTop::tile( const TRect& r )
 {
     numTileable =  0;
-    forEach( doCountTileable, 0 );
+    forEach( doCountTileable, nullptr );
     if( numTileable > 0 )
         {
         mostEqualDivisors( numTileable, numCols, numRows, Boolean( !tileColumnsFirst ));
@@ -249,7 +249,7 @@ TStreamable *TDeskTop::build()
 }
 
 TDeskTop::TDeskTop( StreamableInit ) :
-    TDeskInit( 0 /*streamableInit*/ ),
+    TDeskInit( nullptr /*streamableInit*/ ),
     TGroup( streamableInit )
 {
     tileColumnsFirst = False;

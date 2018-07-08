@@ -49,7 +49,7 @@ void TVDemo::mouse()
 {
     TMouseDialog *mouseCage = (TMouseDialog *) validView( new TMouseDialog() );
 
-    if (mouseCage != 0)
+    if (mouseCage != nullptr)
         {
         mouseCage->helpCtx = hcOMMouseDBox;
         mouseCage->setData(&(TEventQueue::mouseReverse));
@@ -70,13 +70,13 @@ void TVDemo::openFile( const char *fileSpec )
     TFileDialog *d= (TFileDialog *)validView(
     new TFileDialog(fileSpec, "Open a File", "~N~ame", fdOpenButton, 100 ));
 
-    if( d != 0 && deskTop->execView( d ) != cmCancel )
+    if( d != nullptr && deskTop->execView( d ) != cmCancel )
         {
         char fileName[PATH_MAX];
         d->getFileName( fileName );
         d->helpCtx = hcFOFileOpenDBox;
         TView *w= validView( new TFileWindow( fileName ) );
-        if( w != 0 )
+        if( w != nullptr )
             deskTop->insert(w);
     }
     destroy( d );
@@ -134,7 +134,7 @@ void TVDemo::idle()
     TProgram::idle();
     clock->update();
     heap->update();
-    if (deskTop->firstThat(isTileable, 0) != 0 )
+    if (deskTop->firstThat(isTileable, nullptr) != nullptr )
         {
         enableCommand(cmTile);
         enableCommand(cmCascade);
@@ -165,12 +165,12 @@ void TVDemo::loadDesktop(fpstream &s)
 
     if (deskTop->valid(cmClose))
         {
-        deskTop->forEach(::closeView, 0);  // Clear the desktop
+        deskTop->forEach(::closeView, nullptr);  // Clear the desktop
         do {
            s >> p;
            deskTop->insertBefore(validView(p), deskTop->last);
            }
-           while (p != 0);
+           while (p != nullptr);
         }
 }
 

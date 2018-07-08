@@ -88,7 +88,7 @@ void TDirListBox::showDirs( TDirCollection *dirs )
 	memset(buf, ' ', sizeof(buf));
 	strcpy(name, pathDir);
 	len = strlen(pathDir);
-	while((end = strchr(curDir, '/' )) != NULL)
+	while((end = strchr(curDir, '/' )) != nullptr)
 	{
 		/* special case: root directory */
 
@@ -115,9 +115,9 @@ void TDirListBox::showDirs( TDirCollection *dirs )
 	struct stat s;
 
 	sprintf(path, "%s.", dir);
-	if ((dp = opendir(path)) != NULL)
+	if ((dp = opendir(path)) != nullptr)
 	{
-		while ((de = readdir(dp)) != NULL)
+		while ((de = readdir(dp)) != nullptr)
 		{
 			/* we don't want these directories */
 
@@ -152,10 +152,10 @@ void TDirListBox::showDirs( TDirCollection *dirs )
 
     char *p = dirs->at(dirs->getCount()-1)->text();
     char *i = strchr( p, graphics[0] );
-    if( i == 0 )
+    if( i == nullptr )
         {
         i = strchr( p, graphics[1] );
-        if( i != 0 )
+        if( i != nullptr )
             *i = graphics[0];
         }
     else

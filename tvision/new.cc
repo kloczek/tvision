@@ -16,25 +16,25 @@
 #define Uses_TVMemMgr
 #include <tv.h>
 
-TBufListEntry * TBufListEntry::bufList = 0;
+TBufListEntry * TBufListEntry::bufList = nullptr;
 
 TBufListEntry::TBufListEntry( void*& o ) : owner( o )
 {
     next = bufList;
-    prev = 0;
+    prev = nullptr;
     bufList = this;
-    if( next != 0 )
+    if( next != nullptr )
         next->prev = this;
 }
 
 TBufListEntry::~TBufListEntry()
 {
-    owner = 0;
-    if( prev == 0 )
+    owner = nullptr;
+    if( prev == nullptr )
         bufList = next;
     else
         prev->next = next;
-    if( next != 0 )
+    if( next != nullptr )
         next->prev = prev;
 }
 
@@ -45,7 +45,7 @@ void *TBufListEntry::operator new( size_t sz, size_t extra )
 
 void *TBufListEntry::operator new( size_t )
 {
-    return NULL;
+    return nullptr;
 }
 
 void TBufListEntry::operator delete( void *b )
@@ -55,7 +55,7 @@ void TBufListEntry::operator delete( void *b )
 
 Boolean TBufListEntry::freeHead()
 {
-    if( bufList == 0 )
+    if( bufList == nullptr )
         return False;
     else
         {
@@ -64,7 +64,7 @@ Boolean TBufListEntry::freeHead()
         }
 }
 
-void * TVMemMgr::safetyPool = 0;
+void * TVMemMgr::safetyPool = nullptr;
 size_t TVMemMgr::safetyPoolSize = 0;
 int TVMemMgr::inited = 0;
 
@@ -81,7 +81,7 @@ void TVMemMgr::resizeSafetyPool( size_t sz )
     inited = 1;
     free( safetyPool );
     if( sz == 0 )
-        safetyPool = 0;
+        safetyPool = nullptr;
     else
         safetyPool = malloc( sz );
     safetyPoolSize = sz;
@@ -89,18 +89,18 @@ void TVMemMgr::resizeSafetyPool( size_t sz )
 
 int TVMemMgr::safetyPoolExhausted()
 {
-    return inited && (safetyPool == 0);
+    return inited && (safetyPool == nullptr);
 }
 
 void TVMemMgr::allocateDiscardable( void *&adr, size_t sz )
 {
     if( safetyPoolExhausted() )
-        adr = 0;
+        adr = nullptr;
     else
         {
         TBufListEntry *newEntry = new( sz ) TBufListEntry( adr );
-        if( newEntry == 0 )
-            adr = 0;
+        if( newEntry == nullptr )
+            adr = nullptr;
         else
             adr = (char *)newEntry + sizeof(TBufListEntry);
         }
@@ -143,9 +143,9 @@ void * allocBlock( size_t sz )
         sz = 1;
 
     void *temp = malloc( sz );
-    while( temp == 0 && TBufListEntry::freeHead() == True )
+    while( temp == nullptr && TBufListEntry::freeHead() == True )
         temp = malloc( sz );
-    if( temp == 0 )
+    if( temp == nullptr )
 	{
         if( TVMemMgr::safetyPoolExhausted() )
             abort();
@@ -153,7 +153,7 @@ void * allocBlock( size_t sz )
             {
             TVMemMgr::resizeSafetyPool( 0 );
             temp = malloc( sz );
-            if( temp == 0 )
+            if( temp == nullptr )
                 abort();
             }
         }
@@ -184,7 +184,7 @@ static void check( void *blk )
 static void deleteBlock( void *blk )
 {
     assert( heapcheck() >= 0 );
-    if( blk == 0 )
+    if( blk == nullptr )
         return;
     void *tmp = (char *)blk - BLK_SIZE;
 #if !defined( NDEBUG )

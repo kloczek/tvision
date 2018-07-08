@@ -26,7 +26,7 @@ public:
 
 private:
 
-    virtual void *readItem( ipstream& ) { return 0; }
+    virtual void *readItem( ipstream& ) { return nullptr; }
     virtual void writeItem( void *, opstream& ) {}
 
 };

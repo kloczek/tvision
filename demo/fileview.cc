@@ -45,7 +45,7 @@ TFileViewer::TFileViewer( const TRect& bounds,
 {
     growMode = gfGrowHiX | gfGrowHiY;
     isValid = True;
-    fileName = 0;
+    fileName = nullptr;
     readFile( aFileName );
 }
 
@@ -69,7 +69,7 @@ void TFileViewer::draw()
             {
             char s[maxLineLength+1];
             p = (char *)( fileLines->at(delta.y+i) );
-            if( p == 0 || (int)strlen(p) < delta.x )
+            if( p == nullptr || (int)strlen(p) < delta.x )
                 s[0] = EOS;
             else
             {
@@ -138,7 +138,7 @@ void *TFileViewer::read(ipstream& is)
 
     TScroller::read(is);
     fName = is.readString();
-    fileName = 0;
+    fileName = nullptr;
     readFile(fName);
     delete fName;
     return this;

@@ -96,7 +96,7 @@ TPalette& TStaticText::getPalette() const
 
 void TStaticText::getText( char *s )
 {
-    if( text == 0 )
+    if( text == nullptr )
         *s = EOS;
     else
     {

@@ -73,10 +73,10 @@ void TFrame::draw()
         b.putChar( width-i, ((TWindow *)owner)->number + '0' );
         }
 
-    if( owner != 0 )
+    if( owner != nullptr )
         {
         const char *title = ((TWindow *)owner)->getTitle(l);
-        if( title != 0 )
+        if( title != nullptr )
             {
             l = min( cstrlen(title), width - 10 );
             l = max( l, 0 );

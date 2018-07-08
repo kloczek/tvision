@@ -167,7 +167,7 @@ void TVDemo::asciiTable()
 {
     TAsciiChart *chart = (TAsciiChart *) validView(new TAsciiChart);
 
-    if(chart != 0)
+    if(chart != nullptr)
     {
         chart->helpCtx = hcAsciiTable;
         deskTop->insert(chart);
@@ -183,7 +183,7 @@ void TVDemo::calendar()
 {
     TCalendarWindow *cal = (TCalendarWindow *) validView(new TCalendarWindow);
 
-    if(cal != 0)
+    if(cal != nullptr)
     {
         cal->helpCtx = hcCalendar;
         deskTop->insert( cal );
@@ -199,7 +199,7 @@ void TVDemo::calculator()
 {
     TCalculator *calc = (TCalculator *) validView(new TCalculator);
 
-    if(calc != 0)
+    if(calc != nullptr)
     {
         calc->helpCtx = hcCalculator;
         deskTop->insert(calc);
@@ -224,7 +224,7 @@ void TVDemo::changeDir()
 {
     TView *d = validView( new TChDirDialog( 0, cmChangeDir ) );
 
-    if( d != 0 )
+    if( d != nullptr )
         {
         d->helpCtx = hcFCChDirDBox;
         deskTop->execView( d );
@@ -338,9 +338,9 @@ void TVDemo::colors()
 
     TColorGroup &group5 = group1 + group2 + group3 + group4;
 
-    TColorDialog *c = new TColorDialog((TPalette*)0, &group5 );
+    TColorDialog *c = new TColorDialog((TPalette*)nullptr, &group5 );
 
-    if( validView( c ) != 0 )
+    if( validView( c ) != nullptr )
     {
         c->helpCtx = hcOCColorsDBox;  // set context help constant
         c->setData(&getPalette());

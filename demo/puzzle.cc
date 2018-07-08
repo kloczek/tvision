@@ -88,7 +88,7 @@ static char map[15] =
 
 TPuzzleView::TPuzzleView(TRect& r) : TView(r)
 {
-    srand(time(NULL));
+    srand(time(nullptr));
     options |= ofSelectable;
     memset( board, ' ', sizeof(board) );
 

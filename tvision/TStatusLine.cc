@@ -34,7 +34,7 @@ TStatusLine::TStatusLine( const TRect& bounds, TStatusDef& aDefs ) :
 
 void TStatusLine::disposeItems( TStatusItem *item )
 {
-    while( item != 0 )
+    while( item != nullptr )
         {
         TStatusItem *T = item;
         item = item->next;
@@ -44,7 +44,7 @@ void TStatusLine::disposeItems( TStatusItem *item )
 
 TStatusLine::~TStatusLine(void)
 {
-    while( defs != 0 )
+    while( defs != nullptr )
         {
         TStatusDef *T = defs;
         defs = defs->next;
@@ -55,7 +55,7 @@ TStatusLine::~TStatusLine(void)
 
 void TStatusLine::draw()
 {
-    drawSelect( 0 );
+    drawSelect( nullptr );
 }
 
 void TStatusLine::drawSelect( TStatusItem *selected )
@@ -72,9 +72,9 @@ void TStatusLine::drawSelect( TStatusItem *selected )
     TStatusItem *T =  items;
     ushort i = 0;
 
-    while( T != 0 )
+    while( T != nullptr )
         {
-        if( T->text != 0 )
+        if( T->text != nullptr )
             {
             ushort l = cstrlen( T->text );
             if( i + l < size.x )
@@ -117,9 +117,9 @@ void TStatusLine::drawSelect( TStatusItem *selected )
 void TStatusLine::findItems()
 {
     TStatusDef *p = defs;
-    while( p != 0 && ( helpCtx < p->min || helpCtx > p->max ) )
+    while( p != nullptr && ( helpCtx < p->min || helpCtx > p->max ) )
         p = p->next;
-    items = ( p == 0 ) ? 0 : p->items;
+    items = ( p == nullptr ) ? nullptr : p->items;
 }
 
 TPalette& TStatusLine::getPalette() const
@@ -131,14 +131,14 @@ TPalette& TStatusLine::getPalette() const
 TStatusItem *TStatusLine::itemMouseIsIn( TPoint mouse )
 {
     if( mouse.y !=  0 )
-        return 0;
+        return nullptr;
 
     ushort i;
     TStatusItem *T;
 
-    for( i = 0, T = items; T != 0; T = T->next)
+    for( i = 0, T = items; T != nullptr; T = T->next)
         {
-        if( T->text != 0 )
+        if( T->text != nullptr )
             {
             ushort k = i + cstrlen(T->text) + 2;
             if( mouse.x >= i && mouse. x < k )
@@ -146,7 +146,7 @@ TStatusItem *TStatusLine::itemMouseIsIn( TPoint mouse )
             i = k;
             }
         }
-    return 0;
+    return nullptr;
 }
 
 void TStatusLine::handleEvent( TEvent& event )
@@ -157,7 +157,7 @@ void TStatusLine::handleEvent( TEvent& event )
         {
         case  evMouseDown:
             {
-            TStatusItem *T = 0;
+            TStatusItem *T = nullptr;
 
             do  {
                 TPoint mouse = makeLocal( event.mouse.where );
@@ -165,11 +165,11 @@ void TStatusLine::handleEvent( TEvent& event )
                     drawSelect( T = itemMouseIsIn(mouse) );
                 } while( mouseEvent( event, evMouseMove ) );
 
-            if( T != 0 && commandEnabled(T->command) )
+            if( T != nullptr && commandEnabled(T->command) )
                 {
                 event.what = evCommand;
                 event.message.command = T->command;
-                event.message.infoPtr = 0;
+                event.message.infoPtr = nullptr;
                 putEvent(event);
                 }
             clearEvent(event);
@@ -178,14 +178,14 @@ void TStatusLine::handleEvent( TEvent& event )
             }
         case evKeyDown:
             {
-            for( TStatusItem *T = items; T != 0; T = T->next )
+            for( TStatusItem *T = items; T != nullptr; T = T->next )
                 {
                 if( event.keyDown.keyCode ==  T->keyCode &&
                     commandEnabled(T->command))
                     {
                     event.what = evCommand;
                     event.message.command = T->command;
-                    event.message.infoPtr = 0;
+                    event.message.infoPtr = nullptr;
                     return;
                     }
             }
@@ -206,7 +206,7 @@ const char* TStatusLine::hint( ushort )
 void TStatusLine::update()
 {
     TView *p = TopView();
-    ushort h = ( p != 0 ) ? p->getHelpCtx() : hcNoContext;
+    ushort h = ( p != nullptr ) ? p->getHelpCtx() : hcNoContext;
     if( helpCtx != h )
         {
         helpCtx = h;
@@ -220,10 +220,10 @@ void TStatusLine::update()
 void TStatusLine::writeItems( opstream& os, TStatusItem *ts )
 {
     int count = 0;
-    for( TStatusItem *t = ts; t != 0; t = t->next )
+    for( TStatusItem *t = ts; t != nullptr; t = t->next )
         count++;
     os << count;
-    for( ; ts != 0; ts = ts->next )
+    for( ; ts != nullptr; ts = ts->next )
         {
         os.writeString( ts->text );
         os << ts->keyCode << ts->command;
@@ -233,10 +233,10 @@ void TStatusLine::writeItems( opstream& os, TStatusItem *ts )
 void TStatusLine::writeDefs( opstream& os, TStatusDef *td )
 {
     int count = 0;
-    for( TStatusDef *t = td; t != 0; t = t->next )
+    for( TStatusDef *t = td; t != nullptr; t = t->next )
         count++;
     os << count;
-    for( ; td != 0; td = td->next )
+    for( ; td != nullptr; td = td->next )
         {
         os << td->min << td->max;
         writeItems( os, td->items );
@@ -274,7 +274,7 @@ TStatusItem *TStatusLine::readItems( ipstream& is )
         last = &(cur->next);
         delete t;
         }
-    *last = 0;
+    *last = nullptr;
     return first;
 }
 
@@ -301,7 +301,7 @@ TStatusDef *TStatusLine::readDefs( ipstream& is )
         *last = cur;
         last = &(cur->next);
         }
-    *last = 0;
+    *last = nullptr;
     return first;
 }
 

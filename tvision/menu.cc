@@ -26,15 +26,15 @@ TSubMenu::TSubMenu( const char *nm, ushort key, ushort helpCtx ) :
 TSubMenu& operator + ( TSubMenu& s, TMenuItem& i )
 {
     TSubMenu *sub = &s;
-    while( sub->next != 0 )
+    while( sub->next != nullptr )
         sub = (TSubMenu *)(sub->next);
 
-    if( sub->subMenu == 0 )
+    if( sub->subMenu == nullptr )
         sub->subMenu = new TMenu( i );
     else
         {
         TMenuItem *cur = sub->subMenu->items;
-        while( cur->next != 0 )
+        while( cur->next != nullptr )
             cur = cur->next;
         cur->next = &i;
         }
@@ -44,7 +44,7 @@ TSubMenu& operator + ( TSubMenu& s, TMenuItem& i )
 TSubMenu& operator + ( TSubMenu& s1, TSubMenu& s2 )
 {
     TMenuItem *cur = &s1;
-    while( cur->next != 0 )
+    while( cur->next != nullptr )
         cur = cur->next;
     cur->next = &s2;
     return s1;
@@ -53,14 +53,14 @@ TSubMenu& operator + ( TSubMenu& s1, TSubMenu& s2 )
 TStatusDef& operator + ( TStatusDef& s1, TStatusItem& s2 )
 {
     TStatusDef *def = &s1;
-    while( def->next != 0 )
+    while( def->next != nullptr )
         def = def->next;
-    if( def->items == 0 )
+    if( def->items == nullptr )
         def->items = &s2;
     else
         {
         TStatusItem *cur = def->items;
-        while( cur->next != 0 )
+        while( cur->next != nullptr )
             cur = cur->next;
         cur->next = &s2;
         }
@@ -70,7 +70,7 @@ TStatusDef& operator + ( TStatusDef& s1, TStatusItem& s2 )
 TStatusDef& operator + ( TStatusDef& s1, TStatusDef& s2 )
 {
     TStatusDef *cur = &s1;
-    while( cur->next != 0 )
+    while( cur->next != nullptr )
         cur = cur->next;
     cur->next = &s2;
     return s1;

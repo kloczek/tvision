@@ -279,7 +279,7 @@ public:
      * appropriate feedback to the user.
      * @see TValidator
      */
-    TInputLine( const TRect& bounds, int aMaxLen, TValidator *aValid = 0 );
+    TInputLine( const TRect& bounds, int aMaxLen, TValidator *aValid = nullptr );
     /**
      * Deletes the data memory allocation, then calls TView destructor to
      * destroy the TInputLine object.

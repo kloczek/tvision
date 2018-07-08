@@ -246,6 +246,9 @@ In file included from ../../../tvision/help.cc:29:
 In file included from ../../../tvision/tv.h:659,
                  from ../../../tvision/help.cc:26:
 ../../../tvision/views.h:3807:11: note: shadowed declaration is here
+../../../tvision/histlist.cc: In static member function ‘static void* HistRec::operator new(size_t)’:
+../../../tvision/histlist.cc:41:12: warning: ‘operator new’ must not return NULL unless it is declared ‘throw()’ (or -fcheck-new is in effect)
+../../../tvision/histlist.cc: At global scope:
 ../../../tvision/histlist.cc:97:6: warning: no previous declaration for ‘void advanceStringPointer()’ [-Wmissing-declarations]
 ../../../tvision/histlist.cc:106:6: warning: no previous declaration for ‘void deleteString()’ [-Wmissing-declarations]
 ../../../tvision/histlist.cc:122:6: warning: no previous declaration for ‘void insertString(uchar, const char*)’ [-Wmissing-declarations]
@@ -267,6 +270,9 @@ In file included from ../../../tvision/tv.h:659,
 ../../../tvision/msgbox.cc:102:32: warning: function ‘ushort messageBoxRect(const TRect&, ushort, const char*, ...)’ might be a candidate for ‘gnu_printf’ format attribute [-Wsuggest-attribute=format]
 ../../../tvision/msgbox.cc: In function ‘ushort messageBox(unsigned int, const char*, ...)’:
 ../../../tvision/msgbox.cc:128:32: warning: function ‘ushort messageBox(unsigned int, const char*, ...)’ might be a candidate for ‘gnu_printf’ format attribute [-Wsuggest-attribute=format]
+../../../tvision/new.cc: In static member function ‘static void* TBufListEntry::operator new(size_t)’:
+../../../tvision/new.cc:48:12: warning: ‘operator new’ must not return NULL unless it is declared ‘throw()’ (or -fcheck-new is in effect)
+../../../tvision/new.cc: At global scope:
 ../../../tvision/new.cc:198:6: warning: the program should also define ‘void operator delete(void*, std::size_t)’ [-Wsized-deallocation]
 ../../../tvision/new.cc:203:6: warning: the program should also define ‘void operator delete [](void*, std::size_t)’ [-Wsized-deallocation]
 ../../../tvision/stddlg.cc: In member function ‘virtual void TFileInfoPane::draw()’:
@@ -430,7 +436,7 @@ In file included from ../../../tvision/tv.h:631,
                  from ../../../demo/tvdemo1.cc:33:
 ../../../tvision/tvobjs.h:385:13: note: shadowed declaration is here
 ../../../demo/tvdemo1.cc: In member function ‘virtual void TVDemo::getEvent(TEvent&)’:
-../../../demo/tvdemo1.cc:130:12: warning: switch missing default case [-Wswitch-default]
+../../../demo/tvdemo1.cc:129:12: warning: switch missing default case [-Wswitch-default]
 In file included from ../../../demo/tvdemo3.cc:42:
 ../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
 ../../../demo/fileview.h:24:45: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]

@@ -69,14 +69,14 @@ static TCommandSet initCommands()
 TCommandSet TView::curCommandSet = initCommands();
 
 TView::TView( const TRect& bounds) :
-    next( 0 ),
+    next( nullptr ),
     options( 0 ),
     eventMask( evMouseDown | evKeyDown | evCommand ),
     state( sfVisible ),
     growMode( 0 ),
     dragMode( dmLimitLoY ),
     helpCtx( hcNoContext ),
-    owner( 0 )
+    owner( nullptr )
 {
     setBounds( bounds);
     cursor.x = cursor.y = 0;
@@ -374,7 +374,7 @@ void TView::enableCommand( ushort command )
 
 void TView::endModal( ushort command )
 {
-    if( TopView() != 0 )
+    if( TopView() != nullptr )
         TopView()->endModal(command);
 }
 
@@ -409,7 +409,7 @@ Boolean TView::focus()
             if (result)
         	{
 #ifndef __UNPATCHED
-                if ((owner->current == 0) ||
+                if ((owner->current == nullptr) ||
                      ((owner->current->options & ofValidate) == 0) ||
                      (owner->current->valid(cmReleasedFocus)))
 #else
@@ -429,7 +429,7 @@ Boolean TView::focus()
 TRect TView::getClipRect()
 {
     TRect clip = getBounds();
-    if( owner != 0 )
+    if( owner != nullptr )
         clip.intersect(owner->clip);
     clip.move(-origin.x, -origin.y);
     return clip;
@@ -458,7 +458,7 @@ void TView::getData( void * )
 
 void TView::getEvent( TEvent& event )
 {
-    if( owner != 0 )
+    if( owner != nullptr )
         owner->getEvent(event);
 }
 
@@ -532,14 +532,14 @@ void TView::locate( TRect& bounds )
     if( bounds != r )
         {
         changeBounds( bounds );
-        if( owner != 0 && (state & sfVisible) != 0 )
+        if( owner != nullptr && (state & sfVisible) != 0 )
             {
             if( (state & sfShadow) != 0 )
                 {
                 r.Union(bounds);
                 r.b += shadowSize;
                 }
-            drawUnderRect( r, 0 );
+            drawUnderRect( r, nullptr );
             }
         }
 }
@@ -553,7 +553,7 @@ TPoint TView::makeGlobal( TPoint source )
 {
     TPoint temp = source + origin;
     TView *cur = this;
-    while( cur->owner != 0 )
+    while( cur->owner != nullptr )
         {
         cur = cur->owner;
         temp += cur->origin;
@@ -565,7 +565,7 @@ TPoint TView::makeLocal( TPoint source )
 {
     TPoint temp = source - origin;
     TView* cur = this;
-    while( cur->owner != 0 )
+    while( cur->owner != nullptr )
         {
         cur = cur->owner;
         temp -= cur->origin;
@@ -598,7 +598,7 @@ void TView::moveTo( short x, short y )
 TView *TView::nextView()
 {
     if( this == owner->last )
-        return 0;
+        return nullptr;
     else
         return next;
 }
@@ -619,14 +619,14 @@ TView *TView::prev()
 TView *TView::prevView()
 {
     if( this == owner->first() )
-        return 0;
+        return nullptr;
     else
         return prev();
 }
 
 void TView::putEvent( TEvent& event )
 {
-    if( owner != 0 )
+    if( owner != nullptr )
         owner->putEvent(event);
 }
 
@@ -634,8 +634,8 @@ void TView::putInFrontOf( TView *Target )
 {
     TView *p, *lastView;
 
-    if( owner != 0 && Target != this && Target != nextView() &&
-         ( Target == 0 || Target->owner == owner)
+    if( owner != nullptr && Target != this && Target != nextView() &&
+         ( Target == nullptr || Target->owner == owner)
       )
         {
         if( (state & sfVisible) == 0 )
@@ -647,9 +647,9 @@ void TView::putInFrontOf( TView *Target )
             {
             lastView = nextView();
             p = Target;
-            while( p != 0 && p != this )
+            while( p != nullptr && p != this )
                 p = p->nextView();
-            if( p == 0 )
+            if( p == nullptr )
                 lastView = Target;
             state &= ~sfVisible;
             if( lastView == Target )
@@ -671,7 +671,7 @@ void TView::select()
 	return;
     if( (options & ofTopSelect) != 0 )
         makeFirst();
-    else if( owner != 0 )
+    else if( owner != nullptr )
         owner->setCurrent( this, normalSelect );
 }
 
@@ -714,7 +714,7 @@ void TView::setState( ushort aState, Boolean enable )
     else
         state &= ~aState;
 
-    if( owner == 0 )
+    if( owner == nullptr )
         return;
 
     switch( aState )
@@ -723,9 +723,9 @@ void TView::setState( ushort aState, Boolean enable )
             if( (owner->state & sfExposed) != 0 )
                 setState( sfExposed, enable );
             if( enable == True )
-                drawShow( 0 );
+                drawShow( nullptr );
             else
-                drawHide( 0 );
+                drawHide( nullptr );
             if( (options & ofSelectable) != 0 )
                 owner->resetCurrent();
             break;
@@ -734,7 +734,7 @@ void TView::setState( ushort aState, Boolean enable )
             drawCursor();
             break;
         case  sfShadow:
-            drawUnderView( True, 0 );
+            drawUnderView( True, nullptr );
             break;
         case  sfFocused:
             resetCursor();
@@ -761,7 +761,7 @@ void TView::showCursor()
 void TView::sizeLimits( TPoint& min, TPoint& max )
 {
     min.x = min.y = 0;
-    if( !(growMode & gfFixed) && owner != 0 )
+    if( !(growMode & gfFixed) && owner != nullptr )
         max = owner->size;
     else
         max.x = max.y = INT_MAX;
@@ -769,12 +769,12 @@ void TView::sizeLimits( TPoint& min, TPoint& max )
 
 TView* TView::TopView()
 {
-    if( TheTopView != 0 )
+    if( TheTopView != nullptr )
         return TheTopView;
     else
         {
         TView* p = this;
-        while( p != 0 && !(p->state & sfModal) )
+        while( p != nullptr && !(p->state & sfModal) )
             p = p->owner;
         return p;
         }
@@ -795,7 +795,7 @@ Boolean TView::containsMouse( TEvent& event )
 void TView::shutDown()
 {
     hide();
-    if( owner != 0 )
+    if( owner != nullptr )
         owner->remove( this );
     TObject::shutDown();
 }
@@ -818,8 +818,8 @@ void *TView::read( ipstream& is )
     is >> origin >> size >> cursor
        >> growMode >> dragMode >> helpCtx
        >> state >> options >> eventMask;
-    owner = 0;
-    next = 0;
+    owner = nullptr;
+    next = nullptr;
     return this;
 }
 

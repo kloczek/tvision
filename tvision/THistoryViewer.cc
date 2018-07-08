@@ -42,7 +42,7 @@ TPalette& THistoryViewer::getPalette() const
 void THistoryViewer::getText( char *dest, short item, short maxChars )
 {
 	const char *str = historyStr( historyId, item );
-	if( str != 0 )
+	if( str != nullptr )
 		{
 		strncpy( dest, str, maxChars );
 		dest[maxChars] = '\0';

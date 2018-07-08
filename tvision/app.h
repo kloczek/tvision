@@ -579,7 +579,7 @@ public:
      * is not valid, otherwise it returns the return value of
      * @ref TGroup::execView().
      */
-    virtual ushort executeDialog(TDialog* pD, void*data = 0);
+    virtual ushort executeDialog(TDialog* pD, void*data = nullptr);
     /**
      * Gets an event.
      *

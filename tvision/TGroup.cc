@@ -19,15 +19,15 @@
 #define Uses_TVMemMgr
 #include <tv.h>
 
-TView *TheTopView = 0;
-TGroup* ownerGroup = 0;
+TView *TheTopView = nullptr;
+TGroup* ownerGroup = nullptr;
 
 TGroup::TGroup( const TRect& bounds ) :
 	TView(bounds),
-	current( 0 ),
-	last( 0 ),
+	current( nullptr ),
+	last( nullptr ),
 	phase( phFocused ),
-	buffer( 0 ),
+	buffer( nullptr ),
 	lockFlag( 0 ),
 	endState( 0 )
 {
@@ -43,7 +43,7 @@ TGroup::~TGroup()
 void TGroup::shutDown()
 {
     TView* p = last;
-    if( p != 0 )
+    if( p != nullptr )
     {
         do {
         p->hide();
@@ -54,10 +54,10 @@ void TGroup::shutDown()
             TView* T = p->prev();
             destroy( p );
             p = T;
-        } while( last != 0 );
+        } while( last != nullptr );
     }
     freeBuffer();
-    current = 0;
+    current = nullptr;
     TView::shutDown();
 }
 
@@ -75,7 +75,7 @@ static void doAwaken (TView* v, void*)
 
 void TGroup::awaken()
 {
-    forEach(doAwaken, 0);
+    forEach(doAwaken, nullptr);
 }
 
 void TGroup::changeBounds( const TRect& bounds )
@@ -121,8 +121,8 @@ void TGroup::remove(TView* p)
         saveState = p->state;
         p->hide();
         removeView(p);
-        p->owner = 0;
-        p->next= 0;
+        p->owner = nullptr;
+        p->next= nullptr;
         if( (saveState & sfVisible) != 0 )
             p->show();
         }
@@ -131,17 +131,17 @@ void TGroup::remove(TView* p)
 
 void TGroup::draw()
 {
-    if( buffer == 0 )
+    if( buffer == nullptr )
         {
         getBuffer();
-        if( buffer != 0 )
+        if( buffer != nullptr )
             {
             lockFlag++;
             redraw();
             lockFlag--;
             }
         }
-    if( buffer != 0 )
+    if( buffer != nullptr )
         writeBuf( 0, 0, size.x, size.y, buffer );
     else
         {
@@ -170,7 +170,7 @@ void TGroup::endModal( ushort command )
 
 void TGroup::eventError( TEvent& event )
 {
-    if (owner != 0 )
+    if (owner != nullptr )
         owner->eventError( event );
 }
 
@@ -191,7 +191,7 @@ ushort TGroup::execute()
 
 ushort TGroup::execView( TView* p )
 {
-    if( p == 0 )
+    if( p == nullptr )
         return cmCancel;
 
     ushort saveOptions = p->options;
@@ -204,10 +204,10 @@ ushort TGroup::execView( TView* p )
     p->options = p->options & ~ofSelectable;
     p->setState(sfModal, True);
     setCurrent(p, enterSelect);
-    if( saveOwner == 0 )
+    if( saveOwner == nullptr )
         insert(p);
     ushort retval = p->execute();
-    if( saveOwner == 0 )
+    if( saveOwner == nullptr )
         remove(p);
     setCurrent(saveCurrent, leaveSelect);
     p->setState(sfModal, False);
@@ -219,8 +219,8 @@ ushort TGroup::execView( TView* p )
 
 TView *TGroup::first()
 {
-    if( last == 0 )
-        return 0;
+    if( last == nullptr )
+        return nullptr;
     else
         return last->next;
 }
@@ -229,7 +229,7 @@ TView* TGroup::findNext(Boolean forwards)
 {
   TView* p, *result;
 
-  result = 0;
+  result = nullptr;
   if (current)
   {
     p = current;
@@ -261,8 +261,8 @@ Boolean TGroup::focusNext(Boolean forwards)
 
 TView *TGroup::firstMatch( ushort aState, ushort aOptions )
 {
-    if( last == 0 )
-        return 0;
+    if( last == nullptr )
+        return nullptr;
 
     TView* temp = last;
     while(1)
@@ -273,30 +273,30 @@ TView *TGroup::firstMatch( ushort aState, ushort aOptions )
 
         temp = temp->next;
         if( temp == last )
-            return 0;
+            return nullptr;
         }
 }
 
 void TGroup::freeBuffer()
 {
-    if( (options & ofBuffered) != 0 && buffer != 0 )
+    if( (options & ofBuffered) != 0 && buffer != nullptr )
         {
 	delete buffer;
-        buffer = 0;
+        buffer = nullptr;
         }
 }
 
 void TGroup::getBuffer()
 {
     if( (state & sfExposed) != 0 )
-        if( (options & ofBuffered) != 0 && (buffer == 0 ))
+        if( (options & ofBuffered) != 0 && (buffer == nullptr ))
 		buffer = new ushort[size.x * size.y];
 }
 
 void TGroup::getData(void *rec)
 {
     ushort i = 0;
-    if (last != 0 )
+    if (last != nullptr )
         {
         TView* v = last;
         do  {
@@ -318,7 +318,7 @@ static void doHandleEvent( TView *p, void *s )
 {
     handleStruct *ptr = (handleStruct *)s;
 
-    if( p == 0 ||
+    if( p == nullptr ||
         ( (p->state & sfDisabled) != 0 &&
           (ptr->event.what & (positionalEvents | focusedEvents)) != 0
         )
@@ -393,7 +393,7 @@ void TGroup::insert( TView* p )
 
 void TGroup::insertBefore( TView *p, TView *Target )
 {
-    if( p != 0 && p->owner == 0 && (Target == 0 || Target->owner == this) )
+    if( p != nullptr && p->owner == nullptr && (Target == nullptr || Target->owner == this) )
         {
         if( (p->options & ofCenterX) != 0 )
             p->origin.x = (size.x - p->size.x)/2;
@@ -412,7 +412,7 @@ void TGroup::insertBefore( TView *p, TView *Target )
 void TGroup::insertView( TView* p, TView* Target )
 {
     p->owner = this;
-    if( Target != 0 )
+    if( Target != nullptr )
         {
         Target = Target->prev();
         p->next = Target->next;
@@ -420,7 +420,7 @@ void TGroup::insertView( TView* p, TView* Target )
         }
     else
         {
-        if( last== 0 )
+        if( last== nullptr )
             p->next = p;
         else
             {
@@ -433,13 +433,13 @@ void TGroup::insertView( TView* p, TView* Target )
 
 void TGroup::lock()
 {
-    if( buffer != 0 || lockFlag != 0 )
+    if( buffer != nullptr || lockFlag != 0 )
         lockFlag++;
 }
 
 void TGroup::redraw()
 {
-    drawSubViews( first(), 0 );
+    drawSubViews( first(), nullptr );
 }
 
 void TGroup::resetCurrent()
@@ -449,13 +449,13 @@ void TGroup::resetCurrent()
 
 void TGroup::resetCursor()
 {
-    if( current != 0 )
+    if( current != nullptr )
         current->resetCursor();
 }
 
 void TGroup::selectNext( Boolean forwards )
 {
-    if( current != 0 )
+    if( current != nullptr )
     {
         TView* p = findNext(forwards);
     if (p) p->select();
@@ -464,13 +464,13 @@ void TGroup::selectNext( Boolean forwards )
 
 void TGroup::selectView( TView* p, Boolean enable )
 {
-    if( p != 0 )
+    if( p != nullptr )
         p->setState( sfSelected, enable );
 }
 
 void TGroup::focusView( TView* p, Boolean enable )
 {
-    if( (state & sfFocused) != 0 && p != 0 )
+    if( (state & sfFocused) != 0 && p != nullptr )
         p->setState( sfFocused, enable );
 }
 
@@ -483,12 +483,12 @@ void TGroup::setCurrent( TView* p, selectMode mode )
         lock();
         focusView( current, False );
         if( mode != enterSelect )
-            if( current != 0 )
+            if( current != nullptr )
                 current->setState( sfSelected, False );
         if( mode != leaveSelect )
-            if( p != 0 )
+            if( p != nullptr )
                 p->setState( sfSelected, True );
-        if( (state & sfFocused) != 0 && p != 0 )
+        if( (state & sfFocused) != 0 && p != nullptr )
             p->setState( sfFocused, True );
         current = p;
         unlock();
@@ -498,7 +498,7 @@ void TGroup::setCurrent( TView* p, selectMode mode )
 void TGroup::setData(void *rec)
 {
     ushort i = 0;
-    if( last!= 0 )
+    if( last!= nullptr )
         {
         TView* v = last;
         do  {
@@ -543,7 +543,7 @@ void TGroup::setState( ushort aState, Boolean enable )
 
     if( (aState & sfFocused) != 0 )
         {
-        if( current != 0 )
+        if( current != nullptr )
             current->setState( sfFocused, enable );
         }
 
@@ -576,13 +576,13 @@ Boolean TGroup::valid( ushort command )
             return True;
     }
 
-    return Boolean( firstThat( isInvalid, &command ) == 0 );
+    return Boolean( firstThat( isInvalid, &command ) == nullptr );
 }
 
 ushort TGroup::getHelpCtx()
 {
     ushort h = hcNoContext;
-    if( current!= 0 )
+    if( current!= nullptr )
         h = current->getHelpCtx();
     if (h == hcNoContext)
         h = TView::getHelpCtx();
@@ -606,7 +606,7 @@ void TGroup::write( opstream& os )
     int count = indexOf( last );
     os << count;
     forEach( doPut, &os );
-    if (current == 0)
+    if (current == nullptr)
        index = 0;
     else
        index = indexOf(current);
@@ -622,10 +622,10 @@ void *TGroup::read( ipstream& is )
     clip = getExtent();
     TGroup *ownerSave = owner;
     owner = this;
-    last = 0;
+    last = nullptr;
     phase = TView::phFocused;
-    current = 0;
-    buffer = 0;
+    current = nullptr;
+    buffer = nullptr;
     lockFlag = 0;
     endState = 0;
     int count;
@@ -634,15 +634,15 @@ void *TGroup::read( ipstream& is )
     for( int i = 0; i < count; i++ )
         {
         is >> tv;
-        if( tv != 0 )
-            insertView( tv, 0 );
+        if( tv != nullptr )
+            insertView( tv, nullptr );
         }
     owner = ownerSave;
     TView *current;
     is >> index;
     current = at(index);
     setCurrent( current, TView::normalSelect );
-    if (ownerGroup == NULL)
+    if (ownerGroup == nullptr)
         awaken();
     return this;
 }

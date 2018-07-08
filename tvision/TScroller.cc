@@ -38,8 +38,8 @@ TScroller::TScroller( const TRect& bounds,
 
 void TScroller::shutDown()
 {
-    hScrollBar = 0;
-    vScrollBar = 0;
+    hScrollBar = nullptr;
+    vScrollBar = nullptr;
     TView::shutDown();
 }
 
@@ -84,12 +84,12 @@ void TScroller::scrollDraw()
 {
     TPoint  d;
 
-    if( hScrollBar != 0 )
+    if( hScrollBar != nullptr )
         d.x = hScrollBar->value;
     else
         d.x = 0;
 
-    if( vScrollBar != 0 )
+    if( vScrollBar != nullptr )
         d.y = vScrollBar->value;
     else
         d.y = 0;
@@ -108,9 +108,9 @@ void TScroller::scrollDraw()
 void TScroller::scrollTo( int x, int y )
 {
     drawLock++;
-    if( hScrollBar != 0 )
+    if( hScrollBar != nullptr )
         hScrollBar->setValue(x);
-    if( vScrollBar != 0 )
+    if( vScrollBar != nullptr )
         vScrollBar->setValue(y);
     drawLock--;
     checkDraw();
@@ -121,14 +121,14 @@ void TScroller::setLimit( int x, int y )
     limit.x = x;
     limit.y = y;
     drawLock++;
-    if( hScrollBar != 0 )
+    if( hScrollBar != nullptr )
         hScrollBar->setParams( hScrollBar->value,
                                0,
                                x - size.x,
                                size.x-1,
                                hScrollBar->arStep
                              );
-    if( vScrollBar != 0 )
+    if( vScrollBar != nullptr )
         vScrollBar->setParams( vScrollBar->value,
                                0,
                                y - size.y,
@@ -141,7 +141,7 @@ void TScroller::setLimit( int x, int y )
 
 void TScroller::showSBar( TScrollBar *sBar )
 {
-    if( sBar != 0 )
+    if( sBar != nullptr )
         {
         if( getState(sfActive | sfSelected) != 0 )
             sBar->show();

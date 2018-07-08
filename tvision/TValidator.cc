@@ -138,7 +138,7 @@ Boolean TPXPictureValidator::isValidInput(char* s, Boolean suppressFill)
 {
   Boolean doFill = Boolean(((options&voFill)!=0) && !suppressFill);
 
-  return Boolean((pic==0) || (picture( (char*)s, doFill) != prError));
+  return Boolean((pic==nullptr) || (picture( (char*)s, doFill) != prError));
 }
 
 Boolean TPXPictureValidator::isValid(const char* s)
@@ -146,7 +146,7 @@ Boolean TPXPictureValidator::isValid(const char* s)
   char str[256];
 
   strcpy(str, s);
-  return Boolean((pic == 0) || (picture(str, False) == prComplete));
+  return Boolean((pic == nullptr) || (picture(str, False) == prComplete));
 }
 
 Boolean isNumber(char ch)
@@ -162,7 +162,7 @@ Boolean isLetter(char ch)
 
 Boolean isSpecial(char ch, const char* special)
 {
-    if (strchr(special, ch) != 0)
+    if (strchr(special, ch) != nullptr)
         return True;
     else
         return False;
@@ -649,7 +649,7 @@ void TFilterValidator::error()
 // TRangeValidator
 
 TRangeValidator::TRangeValidator( long aMin, long aMax ):
-    TFilterValidator( 0 ),
+    TFilterValidator( nullptr ),
     min(aMin),
     max(aMax)
 {
@@ -779,7 +779,7 @@ TStringLookupValidator::TStringLookupValidator( StreamableInit s) :
 
 TStringLookupValidator::~TStringLookupValidator()
 {
-  newStringList(0);
+  newStringList(nullptr);
 }
 
 void TStringLookupValidator::error()
@@ -795,7 +795,7 @@ static Boolean stringMatch(void* a1, void* a2)
 
 Boolean TStringLookupValidator::lookup(const char* s)
 {
-    return Boolean(strings->firstThat(stringMatch,(void*)s) != 0);
+    return Boolean(strings->firstThat(stringMatch,(void*)s) != nullptr);
 }
 
 void TStringLookupValidator::newStringList(TStringCollection* aStrings)

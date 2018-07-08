@@ -85,7 +85,7 @@ TCalendarView::TCalendarView(TRect& r) : TView( r )
     options |= ofSelectable;
     eventMask |= evMouseAuto;
 
-	time_t now = time(NULL);
+	time_t now = time(nullptr);
 	tm *broken = localtime(&now);
 
 	year = curYear = broken->tm_year + 1900;

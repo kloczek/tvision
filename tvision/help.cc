@@ -161,7 +161,7 @@ void THelpViewer::makeSelectVisible( int selected, TPoint& keyPoint,
 
 void THelpViewer::switchToTopic( int keyRef )
 {
-    if (topic != 0)
+    if (topic != nullptr)
         delete topic;
     topic = hFile->getTopic(keyRef);
     topic->setWidth(size.x);

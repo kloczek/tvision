@@ -21,8 +21,8 @@
 TListBox::TListBox( const TRect& bounds,
                     ushort aNumCols,
                     TScrollBar *aScrollBar ) :
-    TListViewer(bounds, aNumCols, 0, aScrollBar),
-    items( 0 )
+    TListViewer(bounds, aNumCols, nullptr, aScrollBar),
+    items( nullptr )
 {
     setRange(0);
 }
@@ -45,7 +45,7 @@ void TListBox::getData( void * rec )
 
 void TListBox::getText( char *dest, short item, short maxChars )
 {
-	if (items != 0 )
+	if (items != nullptr )
 		{
 		strncpy( dest, (const char *)(items->at(item)), maxChars );
 		dest[maxChars] = '\0';
@@ -58,7 +58,7 @@ void TListBox::newList( TCollection *aList )
 {
     destroy( items );
     items = aList;
-    if( aList != 0 )
+    if( aList != nullptr )
         setRange( aList->getCount() );
     else
         setRange(0);

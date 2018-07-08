@@ -38,7 +38,7 @@ void *HistRec::operator new( size_t, HistRec *hr )
 void *HistRec::operator new( size_t )
 {
     abort();
-    return NULL;
+    return nullptr;
 }
 
 inline HistRec::HistRec( uchar nId, const char *nStr ) :
@@ -100,7 +100,7 @@ void advanceStringPointer()
     while( curRec < lastRec && curRec->id != curId )
         curRec = next( curRec );
     if( curRec >= lastRec )
-        curRec = 0;
+        curRec = nullptr;
 }
 
 void deleteString()
@@ -145,7 +145,7 @@ ushort historyCount( uchar id )
     startId( id );
     ushort count =  0;
     advanceStringPointer();
-    while( curRec != 0 )
+    while( curRec != nullptr )
         {
         count++;
         advanceStringPointer();
@@ -159,7 +159,7 @@ void historyAdd( uchar id, const char *str )
         return;
     startId( id );
     advanceStringPointer();
-    while( curRec != 0 )
+    while( curRec != nullptr )
         {
         if( strcmp( str, curRec->str ) == 0 )
             deleteString();
@@ -173,10 +173,10 @@ const char *historyStr( uchar id, int index )
     startId( id );
     for( short i = 0; i <= index; i++ )
         advanceStringPointer();
-    if( curRec != 0 )
+    if( curRec != nullptr )
         return curRec->str;
     else
-        return 0;
+        return nullptr;
 }
 
 void clearHistory()

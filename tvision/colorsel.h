@@ -63,7 +63,7 @@ public:
      *
      * See file `demo/tvdemo2.cc' for an example.
      */
-    TColorItem( const char *nm, uchar idx, TColorItem *nxt = 0 );
+    TColorItem( const char *nm, uchar idx, TColorItem *nxt = nullptr );
     /**
      * Destructor.
      */
@@ -126,7 +126,7 @@ public:
      *
      * See file `demo/tvdemo2.cc' for an example.
      */
-    TColorGroup( const char *nm, TColorItem *itm = 0, TColorGroup *nxt = 0 );
+    TColorGroup( const char *nm, TColorItem *itm = nullptr, TColorGroup *nxt = nullptr );
     /**
      * Destructor.
      */

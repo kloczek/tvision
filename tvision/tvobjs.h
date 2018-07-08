@@ -64,7 +64,7 @@ private:
 
 inline void TObject::destroy( TObject *o )
 {
-    if( o != 0 )
+    if( o != nullptr )
         o->shutDown();
     delete o;
 }

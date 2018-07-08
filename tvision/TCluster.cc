@@ -38,12 +38,12 @@ TCluster::TCluster( const TRect& bounds, TSItem *aStrings ) :
     options |= ofSelectable | ofFirstClick | ofPreProcess | ofPostProcess;
     short i = 0;
     TSItem *p;
-    for( p = aStrings; p != 0; p = p->next )
+    for( p = aStrings; p != nullptr; p = p->next )
         i++;
 
     strings = new TStringCollection( i, 0 );
 
-    while( aStrings != 0 )
+    while( aStrings != nullptr )
         {
         p = aStrings;
         strings->atInsert( strings->getCount(), newStr(aStrings->value) );

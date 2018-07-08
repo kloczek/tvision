@@ -391,7 +391,7 @@ inline int range(int test, int min, int max)
 
 static int kbMapKey(int code, int type, int modifiers)
 {
-	keym_t *best = NULL, *p;
+	keym_t *best = nullptr, *p;
 
 	for (p = keym; p < keym + sizeof(keym) / sizeof(keym_t); p++)
 	{
@@ -403,13 +403,13 @@ static int kbMapKey(int code, int type, int modifiers)
 			 * now get the best keycode we have, modifier keys
 			 * may differ
 			 */
-			if (best == NULL || p->modifiers == modifiers)
+			if (best == nullptr || p->modifiers == modifiers)
 			{
 				best = p;
 			}
 		}
 	}
-	if (best != NULL) return best->out;	/* keycode found */
+	if (best != nullptr) return best->out;	/* keycode found */
 	if (code <= 255) return code;	/* it is an ascii character */
 	return kbNoKey;		/* unknown code */
 }
@@ -456,7 +456,7 @@ static void kbHandle()
 
 	sigprocmask(SIG_BLOCK, &alarmBlock, &normalMask);
 	code = getch();
-	sigprocmask(SIG_SETMASK, &normalMask, NULL);
+	sigprocmask(SIG_SETMASK, &normalMask, nullptr);
 
 #ifdef NCURSES_MOUSE_VERSION
 	if (code == KEY_MOUSE)	/* was it a mouse event ? */
@@ -547,7 +547,7 @@ static void fbsdmInit()
 	msAutoTimer.stop();
 	msDoubleTimer.stop();
 	msFlag = msOldButtons = 0;
-	msUseArrow = strstr(env, "noarrow") == NULL;
+	msUseArrow = strstr(env, "noarrow") == nullptr;
 	if (!msUseArrow) LOG("arrow pointer suppressed");
 	mi.operation = MOUSE_MODE;
 	mi.u.mode.signal = FBSDM_SIGNAL;
@@ -670,7 +670,7 @@ static void gpmInit()
 	msAutoTimer.stop();
 	msFd = -1;
 	msOldButtons = msWhere.x = msWhere.y = 0;
-	if (strstr(env, "nogpm") != NULL) LOG("gpm support disabled");
+	if (strstr(env, "nogpm") != nullptr) LOG("gpm support disabled");
 	else
 	{
 		Gpm_Connect conn;
@@ -690,17 +690,17 @@ static void gpmInit()
 		 * within gpm_fd.
 		 */
 		if (testFd == -2 && mousemask(ALL_MOUSE_EVENTS |
-			REPORT_MOUSE_POSITION, NULL) != 0)
+			REPORT_MOUSE_POSITION, nullptr) != 0)
 		{
 			msFd = testFd;
-			LOG("gpm server " << Gpm_GetServerVersion(NULL));
+			LOG("gpm server " << Gpm_GetServerVersion(nullptr));
 			LOG("gpm will send messages through ncurses");
 		}
 		else if (testFd >= 0)
 		{
 			msFd = testFd;
 			FD_SET(msFd, &TScreen::fdSetRead);
-			LOG("gpm server " << Gpm_GetServerVersion(NULL));
+			LOG("gpm server " << Gpm_GetServerVersion(nullptr));
 			LOG("gpm will send messages directly");
 		}
 		else LOG("no working gpm, running without mouse");
@@ -716,7 +716,7 @@ static void gpmClose()
 	if (msFd != -1)
 	{
 		Gpm_Close();
-		if (msFd == -2) mousemask(0, NULL);
+		if (msFd == -2) mousemask(0, nullptr);
 		else if (msFd >= 0) FD_CLR(msFd, &TScreen::fdSetRead);
 		msFd = -1;
 	}
@@ -728,7 +728,7 @@ static void gpmClose()
 
 static void gpmSuspend()
 {
-	if (msFd == -2) mousemask(0, NULL);
+	if (msFd == -2) mousemask(0, nullptr);
 	else if (msFd >= 0)
 	{
 		Gpm_Connect conn;
@@ -758,7 +758,7 @@ static void gpmSuspend()
 static void gpmResume()
 {
 	if (msFd == -2) mousemask(ALL_MOUSE_EVENTS | REPORT_MOUSE_POSITION,
-		NULL);
+		nullptr);
 	else if (msFd >= 0)
 	{
 		/*
@@ -1300,7 +1300,7 @@ static void sigHandler(int signo)
 		/* re-enable SIGTSTP */
 
 		dfl_handler.sa_handler = sigHandler;
-		sigaction(SIGTSTP, &dfl_handler, NULL);
+		sigaction(SIGTSTP, &dfl_handler, nullptr);
 		break;
 	case SIGINT:
 	case SIGQUIT:
@@ -1311,8 +1311,8 @@ static void sigHandler(int signo)
 		 * Ignore SIGINT and SIGQUIT to avoid recursive calls.
 		 */
 		dfl_handler.sa_handler = SIG_IGN;
-		sigaction(SIGINT, &dfl_handler, NULL);
-		sigaction(SIGQUIT, &dfl_handler, NULL);
+		sigaction(SIGINT, &dfl_handler, nullptr);
+		sigaction(SIGQUIT, &dfl_handler, nullptr);
 
 		/* ask the user what to do */
 
@@ -1326,8 +1326,8 @@ static void sigHandler(int signo)
 		/* re-enable SIGINT and SIGQUIT */
 
 		dfl_handler.sa_handler = sigHandler;
-		sigaction(SIGINT, &dfl_handler, NULL);
-		sigaction(SIGQUIT, &dfl_handler, NULL);
+		sigaction(SIGINT, &dfl_handler, nullptr);
+		sigaction(SIGQUIT, &dfl_handler, nullptr);
 		break;
 	case SIGTSTP:
 		/*
@@ -1339,7 +1339,7 @@ static void sigHandler(int signo)
 		/* use the default handler for SIGTSTP */
 
 		dfl_handler.sa_handler = SIG_DFL;
-		sigaction(SIGTSTP, &dfl_handler, NULL);
+		sigaction(SIGTSTP, &dfl_handler, nullptr);
 		raise(SIGTSTP);		/* stop the process */
 		break;
 	case SIGWINCH:
@@ -1358,14 +1358,14 @@ static void sigHandler(int signo)
 TScreen::TScreen()
 {
 	char *p = getenv("TVLOG");
-	if (p != NULL && *p != '\0')
+	if (p != nullptr && *p != '\0')
 	{
 		xlog.open(p);
 		LOG("using environment variable TVLOG=" << p);
 	}
 	else xlog.open("/dev/null");
 	env[0] = '\0';
-	if ((p = getenv("TVOPT")) != NULL)
+	if ((p = getenv("TVOPT")) != nullptr)
 	{
 		LOG("using environment variable TVOPT=" << p);
 		for (char *d = env; *p != '\0'; p++) *d++ = tolower(*p);
@@ -1435,14 +1435,14 @@ TScreen::TScreen()
 	dfl_handler.sa_flags = SA_RESTART;
 
 #ifdef ENABLE_FBSDM
-	sigaction(FBSDM_SIGNAL, &dfl_handler, NULL);
+	sigaction(FBSDM_SIGNAL, &dfl_handler, nullptr);
 #endif
-	sigaction(SIGALRM, &dfl_handler, NULL);
-	sigaction(SIGCONT, &dfl_handler, NULL);
-	sigaction(SIGINT, &dfl_handler, NULL);
-	sigaction(SIGQUIT, &dfl_handler, NULL);
-	sigaction(SIGTSTP, &dfl_handler, NULL);
-	sigaction(SIGWINCH, &dfl_handler, NULL);
+	sigaction(SIGALRM, &dfl_handler, nullptr);
+	sigaction(SIGCONT, &dfl_handler, nullptr);
+	sigaction(SIGINT, &dfl_handler, nullptr);
+	sigaction(SIGQUIT, &dfl_handler, nullptr);
+	sigaction(SIGTSTP, &dfl_handler, nullptr);
+	sigaction(SIGWINCH, &dfl_handler, nullptr);
 
 	/* generates a SIGALRM signal every DELAY_SIGALRM ms */
 
@@ -1450,7 +1450,7 @@ TScreen::TScreen()
 	timer.it_interval.tv_usec = timer.it_value.tv_usec =
 		DELAY_SIGALRM * 1000;
 	timer.it_interval.tv_sec = timer.it_value.tv_sec = 0;
-	setitimer(ITIMER_REAL, &timer, NULL);
+	setitimer(ITIMER_REAL, &timer, nullptr);
 }
 
 /*
@@ -1576,7 +1576,7 @@ void TScreen::getEvent(TEvent &event)
 		 * descriptors
 		 */
 		if (select(FD_SETSIZE, &fdActualRead, &fdActualWrite,
-			&fdActualExcept, NULL) > 0)
+			&fdActualExcept, nullptr) > 0)
 		{
 			kbReady = FD_ISSET(STDIN_FILENO, &fdActualRead);
 #ifdef ENABLE_GPM
@@ -1778,7 +1778,7 @@ void expandPath(const char *path, char *dir, char *file)
 
 	/* the path is in the form /dir1/dir2/file ? */
 
-	if (tag != NULL)
+	if (tag != nullptr)
 	{
 		strcpy(file, tag + 1);
 		strncpy(dir, path, tag - path + 1);

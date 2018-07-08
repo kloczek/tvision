@@ -30,7 +30,7 @@ TEditWindow::TEditWindow( const TRect& bounds,
                           int aNumber
                         ) :
     TWindowInit( &TEditWindow::initFrame ),
-    TWindow( bounds, 0, aNumber )
+    TWindow( bounds, nullptr, aNumber )
 {
     options |= ofTileable;
 
@@ -79,7 +79,7 @@ void TEditWindow::handleEvent( TEvent& event )
     TWindow::handleEvent(event);
     if( event.what == evBroadcast && event.message.command == cmUpdateTitle )
         {
-        if( frame != 0 )
+        if( frame != nullptr )
             frame->drawView();
         clearEvent(event);
         }
@@ -112,7 +112,7 @@ TStreamable *TEditWindow::build()
 }
 
 TEditWindow::TEditWindow( StreamableInit ) :
-    TWindowInit( 0 /*streamableInit*/ ),
+    TWindowInit( nullptr /*streamableInit*/ ),
     TWindow( streamableInit )
 {
 }

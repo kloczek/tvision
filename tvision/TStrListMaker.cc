@@ -74,7 +74,7 @@ void TStrListMaker::put( ushort key, char *str )
 TStringList::TStringList( StreamableInit ) :
     basePos(0),
     indexSize(0),
-    index(0)
+    index(nullptr)
 {
 }
 #endif

@@ -93,7 +93,7 @@ TStatusLine *TMyApp::initStatusLine(TRect r)
 {
 	r.a.y = r.b.y - 1;	// move top to 1 line above bottom
 	return new TStatusLine(r, *new TStatusDef(0, 0xFFFF) +
-		*new TStatusItem(0, kbF10, cmMenu) +
+		*new TStatusItem(nullptr, kbF10, cmMenu) +
 		*new TStatusItem("~Alt-X~ Exit", kbAltX, cmQuit) +
 		*new TStatusItem("~Alt-F3~ Close", kbAltF3, cmClose)
 	    );
@@ -178,7 +178,7 @@ void TInterior::draw()		// modified for scroller
 		b.moveChar(0, ' ', color, size.x);
 		// fill line buffer with spaces
 		int j = delta.y + i;	// delta is scroller offset
-		if (j < lineCount && lines[j] != 0) {
+		if (j < lineCount && lines[j] != nullptr) {
 			char s[maxLineLength];
 			if (delta.x > (int)strlen(lines[j]))
 				s[0] = EOS;
@@ -216,7 +216,7 @@ TInterior *TDemoWindow::makeInterior(const TRect & bounds, Boolean left)
 	TRect r =
 	    TRect(bounds.b.x - 1, bounds.a.y + 1, bounds.b.x, bounds.b.y - 1);
 	TScrollBar *vScrollBar = new TScrollBar(r);
-	if (vScrollBar == 0) {
+	if (vScrollBar == nullptr) {
 		std::cout << "vScrollbar init error" << std::endl;
 		exit(1);
 	}
@@ -228,7 +228,7 @@ TInterior *TDemoWindow::makeInterior(const TRect & bounds, Boolean left)
 
 	r = TRect(bounds.a.x + 2, bounds.b.y - 1, bounds.b.x - 2, bounds.b.y);
 	TScrollBar *hScrollBar = new TScrollBar(r);
-	if (hScrollBar == 0) {
+	if (hScrollBar == nullptr) {
 		std::cout << "hScrollbar init error" << std::endl;
 		exit(1);
 	}

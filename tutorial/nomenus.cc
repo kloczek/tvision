@@ -86,9 +86,9 @@ class TMyApp:public TApplication {
 //Application constructor. We don't call initStatusLine() and initMenuBar()
 //because we don't want status line or menus in this application.
 
-TMyApp::TMyApp():TProgInit(0,	//&TMyApp::initStatusLine,
-	  0,			//&TMyApp::initMenuBar,
-	  &TMyApp::initDeskTop)	//this call is required
+TMyApp::TMyApp():TProgInit(nullptr,	//&TMyApp::initStatusLine,
+	  nullptr,			//&TMyApp::initMenuBar,
+	  &TMyApp::initDeskTop)		//this call is required
 {
 }
 
@@ -121,7 +121,7 @@ ushort TMyApp::newDialog(DialogData & data)
 								 new
 								 TSItem
 								 ("~J~arlsberg",
-								  0)
+								  nullptr)
 						      )));
 		pd->insert(b);
 		pd->insert(new TLabel(TRect(2, 2, 10, 3), "Cheeses", b));
@@ -131,7 +131,7 @@ ushort TMyApp::newDialog(DialogData & data)
 						 new TSItem("~R~unny",
 							    new
 							    TSItem("~M~elted",
-								   0)
+								   nullptr)
 						 )));
 		pd->insert(b);
 		pd->insert(new TLabel(TRect(21, 2, 33, 3), "Consistency", b));

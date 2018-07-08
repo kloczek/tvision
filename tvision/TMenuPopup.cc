@@ -17,7 +17,7 @@
 #include <tv.h>
 
 TMenuPopup::TMenuPopup(TRect& bounds, TMenu* aMenu) :
-    TMenuBox( bounds, aMenu, 0 )
+    TMenuBox( bounds, aMenu, nullptr )
 {
 }
 
@@ -33,7 +33,7 @@ void TMenuPopup::handleEvent(TEvent& event)
         {
             event.what = evCommand;
             event.message.command = p->command;
-            event.message.infoPtr = NULL;
+            event.message.infoPtr = nullptr;
             putEvent(event);
             clearEvent(event);
         }

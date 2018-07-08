@@ -42,7 +42,7 @@ TFileEditor::TFileEditor( const TRect& bounds,
                         ) :
     TEditor( bounds, aHScrollBar, aVScrollBar, aIndicator, 0 )
 {
-    if( aFileName == 0 )
+    if( aFileName == nullptr )
         fileName[0] = EOS;
     else
         {
@@ -133,7 +133,7 @@ Boolean TFileEditor::saveAs()
     if( editorDialog( edSaveAs, fileName ) != cmCancel )
         {
         fexpand( fileName );
-        message( owner, evBroadcast, cmUpdateTitle, 0 );
+        message( owner, evBroadcast, cmUpdateTitle, nullptr );
         res = saveFile();
         if( isClipboard() == True )
             *fileName = EOS;
@@ -199,8 +199,8 @@ Boolean TFileEditor::setBufSize( uint newSize )
         {
         char *temp = buffer;
         /* Bypass safety pool to allocate buffer, but check for possible
-           NULL return value. */
-        if( (buffer = (char *) malloc( newSize )) == 0 )
+           nullptr return value. */
+        if( (buffer = (char *) malloc( newSize )) == nullptr )
             {
             delete temp;
             return False;

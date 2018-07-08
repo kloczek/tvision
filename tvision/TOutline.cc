@@ -259,8 +259,8 @@ TNode* traverseTree(TOutlineViewer* outLine,
   ushort flags;
   Boolean children;
 
-  if (cur == 0)
-        return 0;
+  if (cur == nullptr)
+        return nullptr;
 
   children = outLine->hasChildren(cur);
 
@@ -296,7 +296,7 @@ TNode* traverseTree(TOutlineViewer* outLine,
         return ret;
     }
   }
-  return 0;
+  return nullptr;
 }
 
 
@@ -643,7 +643,7 @@ TNode* TOutline::getChild(TNode* node, int i)
   TNode *p;
 
   p = node->childList;
-  while ((i != 0) && (p != 0))
+  while ((i != 0) && (p != nullptr))
   {
     i--;
     p = p->next;
@@ -663,7 +663,7 @@ Boolean TOutline::isExpanded(TNode* node)
 
 Boolean TOutline::hasChildren(TNode* node)
 {
-  return Boolean(node->childList != 0);
+  return Boolean(node->childList != nullptr);
 }
 
 #if !defined(NO_STREAMABLE)
@@ -674,7 +674,7 @@ TNode* TOutline::readNode(ipstream& ip)
     uchar more;
     uchar expand;
 
-    TNode* node = new TNode((char*)0);
+    TNode* node = new TNode(nullptr);
 
     ip >> more;
     ip >> expand;
@@ -685,19 +685,19 @@ TNode* TOutline::readNode(ipstream& ip)
     if (nChildren)
         node->childList = readNode(ip);
     else
-        node->childList = 0;
+        node->childList = nullptr;
 
     if (more)
         node->next = readNode(ip);
     else
-        node->next = 0;
+        node->next = nullptr;
 
     return node;
 }
 
 void TOutline::writeNode(TNode* node, opstream& op)
 {
-    uchar more = (node->next != 0) ? 1 : 0;
+    uchar more = (node->next != nullptr) ? 1 : 0;
     uchar expand = (node->expanded) ? 1 : 0;
 
     op << more;
@@ -705,10 +705,10 @@ void TOutline::writeNode(TNode* node, opstream& op)
     op << getNumChildren(node);
     op.writeString(node->text);
 
-    if ( node->childList != 0 )
+    if ( node->childList != nullptr )
         writeNode(node->childList, op);
 
-    if (node->next != 0)
+    if (node->next != nullptr)
         writeNode(node->next, op);
 }
 

@@ -60,8 +60,8 @@ public:
                ushort aCommand,
                ushort aKeyCode,
                ushort aHelpCtx = hcNoContext,
-               const char *p = 0,
-               TMenuItem *aNext = 0
+               const char *p = nullptr,
+               TMenuItem *aNext = nullptr
              );
     /**
      * Creates a pull-down submenu object with the given values. Data member
@@ -71,7 +71,7 @@ public:
                ushort aKeyCode,
                TMenu *aSubMenu,
                ushort aHelpCtx = hcNoContext,
-               TMenuItem *aNext = 0
+               TMenuItem *aNext = nullptr
              );
     /**
      * If @ref param is used, deallocates the space used to store @ref name
@@ -142,7 +142,7 @@ inline void TMenuItem::append( TMenuItem *aNext )
  */
 inline TMenuItem &newLine()
 {
-    return *new TMenuItem( 0, 0, 0, hcNoContext, 0, 0 );
+    return *new TMenuItem( nullptr, 0, 0, hcNoContext, nullptr, nullptr );
 }
 
 #endif  // Uses_TMenuItem
@@ -189,7 +189,7 @@ public:
      * Creates a TMenu object and sets both @ref deflt and @ref items data
      * members to 0.
      */
-    TMenu() : items(0), deflt(0) {};
+    TMenu() : items(nullptr), deflt(nullptr) {};
     /**
      * Creates a TMenu object consisting of `itemList'; sets @ref items and
      * @ref deflt data members to that item.
@@ -252,7 +252,7 @@ public:
     /**
      * Undocumented.
      */
-    TMenuView( const TRect& bounds, TMenu *aMenu, TMenuView *aParent = 0 );
+    TMenuView( const TRect& bounds, TMenu *aMenu, TMenuView *aParent = nullptr );
     /**
      * Calls TView constructor to create a TMenuView object of size `bounds'.
      * @see TView::TView
@@ -405,13 +405,13 @@ inline TMenuView::TMenuView( const TRect& bounds,
     TView(bounds),
     parentMenu( aParent ),
     menu( aMenu ),
-    current( 0 )
+    current( nullptr )
 {
      eventMask |= evBroadcast;
 }
 
 inline TMenuView::TMenuView( const TRect& bounds ) :
-    TView(bounds), parentMenu(0), menu(0), current(0)
+    TView(bounds), parentMenu(nullptr), menu(nullptr), current(nullptr)
 {
      eventMask |= evBroadcast;
 }
@@ -705,7 +705,7 @@ public:
     TStatusItem( const char *aText,
                  ushort key,
                  ushort cmd,
-                 TStatusItem *aNext = 0
+                 TStatusItem *aNext = nullptr
                 );
     /**
      * Undocumented.
@@ -769,8 +769,8 @@ public:
      */
     TStatusDef( ushort aMin,
                 ushort aMax,
-                TStatusItem *someItems = 0,
-                TStatusDef *aNext = 0
+                TStatusItem *someItems = nullptr,
+                TStatusDef *aNext = nullptr
               );
     /**
      * A nonzero @ref next points to the next TStatusDef object in a list of

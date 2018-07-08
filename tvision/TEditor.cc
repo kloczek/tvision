@@ -151,7 +151,7 @@ TEditor::TEditor( const TRect& bounds,
     eventMask = evMouseDown | evKeyDown | evCommand | evBroadcast;
     showCursor();
     initBuffer();
-    if( buffer != 0 )
+    if( buffer != nullptr )
         isValid = True;
     else
     {
@@ -212,7 +212,7 @@ uint TEditor::charPtr( uint p, uint target )
 Boolean TEditor::clipCopy()
 {
     Boolean res = False;
-    if( (clipboard != 0) && (clipboard != this) )
+    if( (clipboard != nullptr) && (clipboard != this) )
         {
         res = clipboard->insertFrom(this);
         selecting = False;
@@ -229,7 +229,7 @@ void TEditor::clipCut()
 
 void TEditor::clipPaste()
 {
-    if( (clipboard != 0) && (clipboard != this) )
+    if( (clipboard != nullptr) && (clipboard != this) )
         insertFrom(clipboard);
 }
 
@@ -292,7 +292,7 @@ void TEditor::deleteRange( uint startPtr,
 
 void TEditor::deleteSelect()
 {
-    insertText( 0, 0, False );
+    insertText( nullptr, 0, False );
 }
 
 void TEditor::doneBuffer()
@@ -341,11 +341,11 @@ void TEditor::doUpdate()
         else
             if( (updateFlags & ufLine) != 0 )
                 drawLines( curPos.y-delta.y, 1, lineStart(curPtr) );
-        if( hScrollBar != 0 )
+        if( hScrollBar != nullptr )
             hScrollBar->setParams(delta.x, 0, limit.x - size.x, size.x / 2, 1);
-        if( vScrollBar != 0 )
+        if( vScrollBar != nullptr )
             vScrollBar->setParams(delta.y, 0, limit.y - size.y, size.y - 1, 1);
-        if( indicator != 0 )
+        if( indicator != nullptr )
             indicator->setValue(curPos, modified);
         if( (state & sfActive) != 0 )
             updateCommands();
@@ -1012,11 +1012,11 @@ void TEditor::setState( ushort aState, Boolean enable )
     switch( aState )
         {
         case sfActive:
-            if( hScrollBar != 0 )
+            if( hScrollBar != nullptr )
                 hScrollBar->setState(sfVisible, enable);
-            if( vScrollBar != 0 )
+            if( vScrollBar != nullptr )
                 vScrollBar->setState(sfVisible, enable);
-            if( indicator != 0 )
+            if( indicator != nullptr )
                 indicator->setState(sfVisible, enable);
             updateCommands();
             break;
@@ -1086,7 +1086,7 @@ void TEditor::updateCommands()
         setCmdState(cmCut, hasSelection());
         setCmdState(cmCopy, hasSelection());
         setCmdState(cmPaste,
-                    Boolean(clipboard != 0 && (clipboard->hasSelection())) );
+                    Boolean(clipboard != nullptr && (clipboard->hasSelection())) );
         }
     setCmdState(cmClear, hasSelection());
     setCmdState(cmFind, True);
@@ -1121,7 +1121,7 @@ void *TEditor::read( ipstream& is )
     lockCount = 0;
     keyState = 0;
     initBuffer();
-    if( buffer != 0 )
+    if( buffer != nullptr )
         isValid = True;
     else
         {

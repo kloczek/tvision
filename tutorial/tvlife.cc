@@ -430,7 +430,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 #define NPATS (sizeof patterns / sizeof patterns[0])
 
 TLifeInterior::TLifeInterior(TRect & bounds):
-TView(bounds), running(0), board(0)
+TView(bounds), running(0), board(nullptr)
 {
 	eventMask = evMouseDown | evKeyDown | evCommand | evBroadcast;
 	growMode = gfGrowHiX | gfGrowHiY;
@@ -442,20 +442,20 @@ TView(bounds), running(0), board(0)
 
 TLifeInterior::~TLifeInterior()
 {
-	if (board != 0)
+	if (board != nullptr)
 		delete[]board;	//release memory
 }
 
 void TLifeInterior::changeBounds(const TRect & bounds)
 {
-	if (board == 0)
+	if (board == nullptr)
 		return;		//exit if no board
 
 	TPoint oldSize = size;	//calculate sizes
 	TPoint newSize = bounds.b - bounds.a;
 
 	uchar *work = new uchar[newSize.x * newSize.y];	//get memory
-	if (work == 0)
+	if (work == nullptr)
 		return;
 
 	//clear board
@@ -481,7 +481,7 @@ void TLifeInterior::changeBounds(const TRect & bounds)
 
 void TLifeInterior::clearBoard()
 {
-	if (board == 0)
+	if (board == nullptr)
 		return;		//exit if no board
 
 	//clear board
@@ -529,7 +529,7 @@ void TLifeInterior::draw()
 
 void TLifeInterior::getPattern(int pat)
 {
-	if (board == 0)
+	if (board == nullptr)
 		return;		//exit if no board
 	clearBoard();
 
@@ -608,11 +608,11 @@ void TLifeInterior::handleMouse(TEvent & event)
 
 void TLifeInterior::iterateBoard()
 {
-	if (board == 0)
+	if (board == nullptr)
 		return;		//exit if no board
 
 	uchar *work = new uchar[size.x * size.y];	//get memory
-	if (work == 0)
+	if (work == nullptr)
 		return;
 
 	//clear board
@@ -680,7 +680,7 @@ inline int range(int test, int min, int max)
 
 void TLifeInterior::randomizeBoard()
 {
-	if (board == 0)
+	if (board == nullptr)
 		return;		//exit if no board
 	clearBoard();
 
@@ -760,7 +760,7 @@ void TMyApp::createLifeWindow()
 	r.grow(-1, -1);
 
 	TView *w = validView(new TLifeWindow(r, "Life", 0));
-	if (w != 0)
+	if (w != nullptr)
 		deskTop->insert(w);
 }
 
@@ -816,11 +816,11 @@ static Boolean isTileable(TView * p, void *)
 void TMyApp::idle()
 {
 	TApplication::idle();
-	if (deskTop->firstThat(isTileable, 0) != 0)
+	if (deskTop->firstThat(isTileable, nullptr) != nullptr)
 		enableCommands(windowCommands);
 	else
 		disableCommands(windowCommands);
-	message(deskTop, evBroadcast, cmUpdate, 0);
+	message(deskTop, evBroadcast, cmUpdate, nullptr);
 }
 
 #define ITEM(name, comm) *new TMenuItem(name, comm, kbNoKey, hcNoContext)
@@ -903,9 +903,9 @@ TStatusLine *TMyApp::initStatusLine(TRect r)
 		*new TStatusItem("One step", kbNoKey,cmOneStep) +
 		*new TStatusItem("Randomize", kbNoKey, cmRandom) +
 		*new TStatusItem("Start/Stop", kbNoKey, cmStartStop) +
-		*new TStatusItem(0, kbF10, cmMenu) +
-		*new TStatusItem(0, kbF5, cmZoom) +
-		*new TStatusItem(0, kbCtrlF5, cmResize));
+		*new TStatusItem(nullptr, kbF10, cmMenu) +
+		*new TStatusItem(nullptr, kbF5, cmZoom) +
+		*new TStatusItem(nullptr, kbCtrlF5, cmResize));
 }
 
 int main()

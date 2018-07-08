@@ -37,7 +37,7 @@ THistory::THistory( const TRect& bounds,
 
 void THistory::shutDown()
 {
-    link = 0;
+    link = nullptr;
     TView::shutDown();
 }
 
@@ -84,7 +84,7 @@ void THistory::handleEvent( TEvent& event )
         r.intersect( p );
         r.b.y--;
         historyWindow = initHistoryWindow( r );
-        if( historyWindow != 0 )
+        if( historyWindow != nullptr )
             {
             c = owner->execView( historyWindow );
             if( c == cmOK )

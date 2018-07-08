@@ -52,13 +52,13 @@ void TMenuBar::draw()
     ushort cNormDisabled =  getColor(0x0202);
     ushort cSelDisabled =  getColor(0x0505);
     b.moveChar( 0, ' ', cNormal, size.x );
-    if( menu != 0 )
+    if( menu != nullptr )
         {
         x = 1;
         p = menu->items;
-        while( p != 0 )
+        while( p != nullptr )
             {
-            if( p->name != 0 )
+            if( p->name != nullptr )
                 {
                 l = cstrlen(p->name);
                 if( x + l < size.x )
@@ -93,7 +93,7 @@ TRect TMenuBar::getItemRect( TMenuItem *item )
     while( True )
         {
         r.a.x = r.b.x;
-        if( p->name != 0 )
+        if( p->name != nullptr )
             r.b.x += cstrlen(p->name) + 2;
         if( p == item )
             return r;

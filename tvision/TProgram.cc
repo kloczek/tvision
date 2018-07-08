@@ -29,10 +29,10 @@
 
 // Public variables
 
-TStatusLine * TProgram::statusLine = 0;
-TMenuBar * TProgram::menuBar = 0;
-TDeskTop * TProgram::deskTop = 0;
-TProgram * TProgram::application = 0;
+TStatusLine * TProgram::statusLine = nullptr;
+TMenuBar * TProgram::menuBar = nullptr;
+TDeskTop * TProgram::deskTop = nullptr;
+TProgram * TProgram::application = nullptr;
 int TProgram::appPalette = apColor;
 TEvent TProgram::pending;
 
@@ -62,18 +62,18 @@ TProgram::TProgram() :
     options = 0;
     buffer = TScreen::screenBuffer;
 
-    if( createDeskTop != 0 &&
-        (deskTop = createDeskTop( getExtent() )) != 0
+    if( createDeskTop != nullptr &&
+        (deskTop = createDeskTop( getExtent() )) != nullptr
       )
         insert(deskTop);
 
-    if( createStatusLine != 0 &&
-        (statusLine = createStatusLine( getExtent() )) != 0
+    if( createStatusLine != nullptr &&
+        (statusLine = createStatusLine( getExtent() )) != nullptr
       )
         insert(statusLine);
 
-    if( createMenuBar != 0 &&
-        (menuBar = createMenuBar( getExtent() )) != 0
+    if( createMenuBar != nullptr &&
+        (menuBar = createMenuBar( getExtent() )) != nullptr
       )
         insert(menuBar);
 
@@ -81,14 +81,14 @@ TProgram::TProgram() :
 
 TProgram::~TProgram()
 {
-    application = 0;
+    application = nullptr;
 }
 
 void TProgram::shutDown()
 {
-    statusLine = 0;
-    menuBar = 0;
-    deskTop = 0;
+    statusLine = nullptr;
+    menuBar = nullptr;
+    deskTop = nullptr;
     TGroup::shutDown();
 #ifndef __UNPATCHED
     TVMemMgr::clearSafetyPool();    // Release the safety pool buffer.
@@ -173,7 +173,7 @@ void TProgram::getEvent(TEvent& event)
 		}
         }
 
-    if( statusLine != 0 )
+    if( statusLine != nullptr )
         {
         if( (event.what & evKeyDown) != 0 ||
             ( (event.what & evMouseDown) != 0 &&
@@ -209,7 +209,7 @@ void TProgram::handleEvent( TEvent& event )
             if(canMoveFocus())      // Check valid first.
             {
                 if( message(deskTop, evBroadcast, cmSelectWindowNum,
-                  (void *)(ptrdiff_t)(c - '0')) != 0 )
+                  (void *)(ptrdiff_t)(c - '0')) != nullptr )
                     clearEvent( event );
             }
             else
@@ -234,12 +234,12 @@ void TProgram::handleEvent( TEvent& event )
 
 void TProgram::idle()
 {
-    if( statusLine != 0 )
+    if( statusLine != nullptr )
         statusLine->update();
 
     if( commandSetChanged == True )
         {
-        message( this, evBroadcast, cmCommandSetChanged, 0 );
+        message( this, evBroadcast, cmCommandSetChanged, nullptr );
         commandSetChanged = False;
         }
 }
@@ -254,7 +254,7 @@ TDeskTop *TProgram::initDeskTop( TRect r )
 TMenuBar *TProgram::initMenuBar( TRect r )
 {
     r.b.y = r.a.y + 1;
-    return new TMenuBar( r, (TMenu *)0 );
+    return new TMenuBar( r, nullptr );
 }
 
 void TProgram::initScreen()
@@ -288,10 +288,10 @@ TStatusLine *TProgram::initStatusLine( TRect r )
     return new TStatusLine( r,
         *new TStatusDef( 0, 0xFFFF ) +
             *new TStatusItem( exitText, kbAltX, cmQuit ) +
-            *new TStatusItem( 0, kbF10, cmMenu ) +
-            *new TStatusItem( 0, kbAltF3, cmClose ) +
-            *new TStatusItem( 0, kbF5, cmZoom ) +
-            *new TStatusItem( 0, kbCtrlF5, cmResize )
+            *new TStatusItem( nullptr, kbF10, cmMenu ) +
+            *new TStatusItem( nullptr, kbAltF3, cmClose ) +
+            *new TStatusItem( nullptr, kbF5, cmZoom ) +
+            *new TStatusItem( nullptr, kbCtrlF5, cmResize )
             );
 }
 
@@ -308,7 +308,7 @@ TWindow* TProgram::insertWindow(TWindow* pWin)
             destroy(pWin);
         }
 
-   return NULL;
+   return nullptr;
 }
 
 
@@ -339,18 +339,18 @@ void TProgram::setScreenMode( ushort )
 
 TView* TProgram::validView(TView* p)
 {
-    if( p == 0 )
-        return 0;
+    if( p == nullptr )
+        return nullptr;
     if( lowMemory() )
         {
         destroy( p );
         outOfMemory();
-        return 0;
+        return nullptr;
         }
     if( !p->valid( cmValid ) )
         {
         destroy( p );
-        return 0;
+        return nullptr;
         }
     return p;
 }

@@ -114,7 +114,7 @@ TMouseDialog::TMouseDialog() :
     insert(new TClickTester(r, "Fast       Medium      Slow"));
 
     r = TRect(3, 6, 30, 7);
-    insert(new TCheckBoxes(r, new TSItem("~R~everse mouse buttons", NULL)));
+    insert(new TCheckBoxes(r, new TSItem("~R~everse mouse buttons", nullptr)));
     oldDelay = TEventQueue::doubleDelay;
 
     r = TRect(9, 9, 19, 11);

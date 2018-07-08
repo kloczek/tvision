@@ -76,7 +76,7 @@ class TRefTable:public TSortedCollection {
       private:
 
 	virtual void *readItem(ipstream &) {
-		return 0;
+		return nullptr;
 	};
 	virtual void writeItem(void *, opstream &) {
 	};
@@ -108,7 +108,7 @@ class TTopicDefinition:public TObject {
 char *helpName;
 uchar buffer[bufferSize];
 int ofs;
-TRefTable *refTable = 0;
+TRefTable *refTable = nullptr;
 TCrossRefNode *xRefs;
 char line[MAXSTRSIZE] = "";
 Boolean lineInBuffer = False;

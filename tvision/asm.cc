@@ -47,7 +47,7 @@ static int lockRefresh = 0;
 inline void doRefresh(TView *p)
 {
 	if (lockRefresh != 0) return;	/* we can't do any refresh */
-	if (p->owner != NULL &&
+	if (p->owner != nullptr &&
 		p->owner->lockFlag) return;	/* the owner is locked */
 	refresh();
 }
@@ -565,7 +565,7 @@ void TGroup::removeView( TView *p ) {
       if (p==cur->next) {
         cur->next=p->next;
         if (last==p) {
-          if (cur->next==p) last=0;
+          if (cur->next==p) last=nullptr;
           else last=cur;
           break;
         };
@@ -612,7 +612,7 @@ void TView::resetCursor() {
       cur.y += p->origin.y;
       p2 =p;
       g=p->owner;
-      if (g==0) {
+      if (g==nullptr) {
         //cursor setzen
 
 	/*
@@ -813,7 +813,7 @@ if (p->owner->buffer == TScreen::screenBuffer) TScreen::drawMouse(1);
 }
 
 void TView::writeViewRec2( short x1, short x2, TView* p, int shadowCounter ) {
-  if (!(p->state & sfVisible) || p->owner==0 ) return;
+  if (!(p->state & sfVisible) || p->owner==nullptr ) return;
 
   StaticVars2 savedStatics = staticVars2;
 

@@ -210,7 +210,7 @@ void TCalcDisplay::calcKey(unsigned char key)
 
         case '.':
             checkFirst();
-            if(strchr(number, '.') == NULL)
+            if(strchr(number, '.') == nullptr)
                 {
                 stub[0] = '.';
                 strcat(number, stub);

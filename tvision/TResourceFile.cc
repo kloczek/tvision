@@ -149,7 +149,7 @@ void *TResourceFile::get( const char *key)
     void *p;
 
     if (! index->search((char *)key, i))
-        return  0;
+        return  nullptr;
     stream->seekg(basePos + ((TResourceItem*)(index->at(i)))->pos, std::ios::beg);
     *stream >> p;
     return p;

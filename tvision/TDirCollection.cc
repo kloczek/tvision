@@ -50,14 +50,14 @@ Boolean validFileName( const char *fileName )
 	 * Patch from: Vasily Egoshin <wasa@nica.marstu.mari.su>
 	 * Date: Thu, 9 Jan 1997 16:36:10 +0300 (MSK)
 	 */
-	if ((f = fopen(fileName, "r")) != NULL)
+	if ((f = fopen(fileName, "r")) != nullptr)
 	{
 		/* the file exists and is readable ===> file name ok */
 
 		fclose(f);
 		return True;
 	}
-	if ((f = fopen(fileName, "w")) != NULL)
+	if ((f = fopen(fileName, "w")) != nullptr)
 	{
 		/* file don't exists but it is writable ===> file name ok */
 
@@ -77,7 +77,7 @@ void getCurDir( char *dir )
 
 Boolean isWild( const char *f )
 {
-    return Boolean( strpbrk( f, "?*" ) != 0 );
+    return Boolean( strpbrk( f, "?*" ) != nullptr );
 }
 
 
