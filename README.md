@@ -44,16 +44,10 @@ More options are available for `configure':
 Linker options:
 
   --enable-shared         build shared libraries [default=yes]
-  --enable-shared=PKGS    only build shared libraries if the current package
-                          appears as an element in the PKGS list
   --enable-static         build static libraries [default=yes]
-  --enable-static=PKGS    only build shared libraries if the current package
-                          appears as an element in the PKGS list
-  --with-gnu-ld           assume the C compiler uses GNU ld [default=no]
 
 Miscellaneous options:
 
-  --enable-russian        enable Russian character set (now obsolete)
   --disable-acs           disable alternate character set
   --disable-linux-gpm     disable Linux GPM mouse support
   --disable-linux-vcs     disable Linux VCS support
@@ -74,7 +68,10 @@ See directory `doc' and its subdirectory.  Here is a summary of their contents.
   manual for the various classes, methods and data members TVision uses.
 
 ## History
+- 2001: version 0.8 by Sergio Sigala
+- 1990: originally was a DOS-based character-mode text user interface (TUI) framework developed by Borland for Pascal, and C++
 
 ## Contributors:
-Sergio Sigala <sergio@sigala.it>
-Sergey Clushin <serg@lamport.ru>, <Clushin@deol.ru>
+- Sergio Sigala <sergio@sigala.it>
+- Sergey Clushin <serg@lamport.ru>, <Clushin@deol.ru>
+
