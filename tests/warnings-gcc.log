@@ -5,7 +5,6 @@
       6 -Wformat-overflow=
       5 -Wunused-result
       3 -Wsuggest-attribute=format
-      3 -Wformat=
       2 -Wsized-deallocation
       1 -Wstrict-aliasing
       1 -Wrestrict
@@ -275,10 +274,6 @@ In file included from ../../../tvision/tv.h:659,
 ../../../tvision/new.cc: At global scope:
 ../../../tvision/new.cc:198:6: warning: the program should also define ‘void operator delete(void*, std::size_t)’ [-Wsized-deallocation]
 ../../../tvision/new.cc:203:6: warning: the program should also define ‘void operator delete [](void*, std::size_t)’ [-Wsized-deallocation]
-../../../tvision/stddlg.cc: In member function ‘virtual void TFileInfoPane::draw()’:
-../../../tvision/stddlg.cc:248:15: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
-../../../tvision/stddlg.cc:262:15: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
-../../../tvision/stddlg.cc:266:15: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
 ../../../tvision/system.cc: In function ‘void sigHandler(int)’:
 ../../../tvision/system.cc:1280:9: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/system.cc: In static member function ‘static void TScreen::drawMouse(int)’:

@@ -245,7 +245,7 @@ void TFileInfoPane::draw()
         time = (ftime *) &file_block.time;
         b.moveStr( 25, months[time->ft_month], color );
 
-	sprintf(buf, "%02d", time->ft_day);
+	sprintf(buf, "%02u", time->ft_day);
         b.moveStr( 29, buf, color );
 
         b.putChar( 31, ',' );
@@ -259,11 +259,11 @@ void TFileInfoPane::draw()
         if( time->ft_hour == 0 )
             time->ft_hour = 12;
 
-	sprintf(buf, "%02d", time->ft_hour);
+	sprintf(buf, "%02u", time->ft_hour);
         b.moveStr( 38, buf, color );
         b.putChar( 40, ':' );
 
-	sprintf(buf, "%02d", time->ft_min);
+	sprintf(buf, "%02u", time->ft_min);
         b.moveStr( 41, buf, color );
 
         if( PM )
