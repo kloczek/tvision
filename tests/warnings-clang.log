@@ -11528,9 +11528,9 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3455:13: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
 ../../../tvision/views.h:3471:12: warning: padding class 'TGroup' with 1 byte to align 'endState' [-Wpadded]
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/nomenus.cc:45:13: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
-../../../tutorial/nomenus.cc:48:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
-../../../tutorial/nomenus.cc:48:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+../../../tutorial/nomenus.cc:44:13: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
+../../../tutorial/nomenus.cc:47:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
+../../../tutorial/nomenus.cc:47:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
 In file included from ../../../tutorial/nomenus.cc:22:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
@@ -11556,8 +11556,8 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
-../../../tutorial/nomenus.cc:53:7: warning: 'TMyDeskTop' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
-../../../tutorial/nomenus.cc:78:7: warning: 'TMyApp' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+../../../tutorial/nomenus.cc:52:7: warning: 'TMyDeskTop' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+../../../tutorial/nomenus.cc:77:7: warning: 'TMyApp' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 ../../../tutorial/splash.cc:13:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/splash.cc:17:
 In file included from ../../../tvision/tv.h:625:

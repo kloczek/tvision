@@ -146,8 +146,8 @@ TDialog *TVDemo::createFindDialog()
 
 	d->insert(new TCheckBoxes(TRect(3, 5, 35, 7),
 				  new TSItem("~C~ase sensitive",
-					     new TSItem("~W~hole words only",
-							nullptr))));
+				  new TSItem("~W~hole words only", nullptr)))
+				  );
 
 	d->insert(new TButton(TRect(14, 9, 24, 11), "O~K~", cmOK, bfDefault));
 	d->insert(new

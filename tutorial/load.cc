@@ -216,25 +216,22 @@ void myApp::idle()
 
 TMenuBar *myApp::initMenuBar(TRect r)
 {
-	TSubMenu & sub1 = *new TSubMenu("~F~ile", 0) +
-	    *new TMenuItem("System ~l~oad", cmNewLoad, kbAltL, hcNoContext,
-			   "Alt-L") + newLine() + *new TMenuItem("E~x~it",
-								 cmQuit, kbAltX,
-								 hcNoContext,
-								 "Alt-X");
+	TSubMenu & sub1 =
+		*new TSubMenu("~F~ile", 0) +
+		  *new TMenuItem("System ~l~oad", cmNewLoad, kbAltL,
+				 hcNoContext, "Alt-L") +
+		  newLine() +
+		  *new TMenuItem("E~x~it", cmQuit, kbAltX,
+				 hcNoContext, "Alt-X");
 	TSubMenu & sub2 =
-	    *new TSubMenu("~W~indows", 0) + *new TMenuItem("~R~esize/move",
-							   cmResize, kbCtrlF5,
-							   hcNoContext,
-							   "Ctrl-F5") +
-	    *new TMenuItem("~Z~oom", cmZoom, kbF5, hcNoContext,
-			   "F5") + *new TMenuItem("~N~ext", cmNext, kbF6,
-						  hcNoContext,
-						  "F6") +
-	    *new TMenuItem("~C~lose", cmClose, kbAltF3, hcNoContext,
-			   "Alt-F3") + *new TMenuItem("~T~ile", cmTile,
-						      kbNoKey) +
-	    *new TMenuItem("C~a~scade", cmCascade, kbNoKey);
+		*new TSubMenu("~W~indows", 0) +
+		  *new TMenuItem("~R~esize/move", cmResize, kbCtrlF5,
+				 hcNoContext, "Ctrl-F5") +
+		  *new TMenuItem("~Z~oom", cmZoom, kbF5, hcNoContext, "F5") +
+		  *new TMenuItem("~N~ext", cmNext, kbF6, hcNoContext, "F6") +
+		  *new TMenuItem("~C~lose", cmClose, kbAltF3, hcNoContext, "Alt-F3") +
+		  *new TMenuItem("~T~ile", cmTile, kbNoKey) +
+		  *new TMenuItem("C~a~scade", cmCascade, kbNoKey);
 	r.b.y = r.a.y + 1;
 	return new TMenuBar(r, sub1 + sub2);
 }
@@ -244,17 +241,12 @@ TStatusLine *myApp::initStatusLine(TRect r)
 	r.a.y = r.b.y - 1;
 	return new TStatusLine(r,
 		*new TStatusDef(0, 50) +
-			       *new TStatusItem("~Alt-X~ Exit", kbAltX,
-						cmQuit) +
-			       *new TStatusItem("~Alt-L~ system load", kbAltL,
-						cmNewLoad) + *new TStatusItem(nullptr,
-									      kbAltF3,
-									      cmClose)
-			       + *new TStatusItem(nullptr, kbF10,
-						  cmMenu) + *new TStatusItem(nullptr,
-									     kbF5,
-									     cmZoom)
-			       + *new TStatusItem(nullptr, kbCtrlF5, cmResize));
+		  *new TStatusItem("~Alt-X~ Exit", kbAltX, cmQuit) +
+		  *new TStatusItem("~Alt-L~ system load", kbAltL, cmNewLoad) +
+		  *new TStatusItem(nullptr, kbAltF3, cmClose) +
+		  *new TStatusItem(nullptr, kbF10, cmMenu) +
+		  *new TStatusItem(nullptr, kbF5, cmZoom) +
+		  *new TStatusItem(nullptr, kbCtrlF5, cmResize));
 }
 
 int main()
