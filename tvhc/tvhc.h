@@ -25,84 +25,65 @@ const int bufferSize = 4096;
 typedef enum State { undefined, wrapping, notWrapping } _State;
 
 class TProtectedStream:public std::fstream {
-
       public:
-
 	TProtectedStream(char *aFileName, std::ios::openmode aMode);
 
       private:
-
 	char fileName[MAXSIZE];
 	ushort mode;
-
 };
 
 // Topic Reference
 
 struct TFixUp {
-
 	long pos;
 	TFixUp *next;
-
 };
 
 union Content {
-
 //  ushort value;
 	int value;		// SC: must be the same type as TCrossRef::ref!
 	TFixUp *fixUpList;
-
 };
 
 struct TReference {
-
 	char *topic;
 	Boolean resolved;
 	Content val;
-
 };
 
 class TRefTable:public TSortedCollection {
-
       public:
-
 	TRefTable(ccIndex aLimit, ccIndex aDelta);
-
 	virtual int compare(void *key1, void *key2);
 	virtual void freeItem(void *item);
+
 	TReference *getReference(char *topic);
 	virtual void *keyOf(void *item);
 
       private:
-
 	virtual void *readItem(ipstream &) {
 		return nullptr;
 	};
 	virtual void writeItem(void *, opstream &) {
 	};
-
 };
 
 struct TCrossRefNode {
-
 	char *topic;
 	int offset;
 	uchar length;
 	TCrossRefNode *next;
-
 };
 
 class TTopicDefinition:public TObject {
-
       public:
-
 	TTopicDefinition(char *aTopic, ushort aValue);
 	~TTopicDefinition(void);
 
 	char *topic;
 	ushort value;
 	TTopicDefinition *next;
-
 };
 
 char *helpName;
