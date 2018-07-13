@@ -35,145 +35,135 @@
 #include "tvcmds.h"
 #include "fileview.h"
 
-const char * const TFileViewer::name = "TFileViewer";
+const char *const TFileViewer::name = "TFileViewer";
 
-TFileViewer::TFileViewer( const TRect& bounds,
-                          TScrollBar *aHScrollBar,
-                          TScrollBar *aVScrollBar,
-                          const char *aFileName) :
-    TScroller( bounds, aHScrollBar, aVScrollBar )
+TFileViewer::TFileViewer(const TRect & bounds,
+			 TScrollBar * aHScrollBar,
+			 TScrollBar * aVScrollBar,
+			 const char *aFileName):TScroller(bounds, aHScrollBar,
+							  aVScrollBar)
 {
-    growMode = gfGrowHiX | gfGrowHiY;
-    isValid = True;
-    fileName = nullptr;
-    readFile( aFileName );
+	growMode = gfGrowHiX | gfGrowHiY;
+	isValid = True;
+	fileName = nullptr;
+	readFile(aFileName);
 }
 
 TFileViewer::~TFileViewer()
 {
-     delete fileName;
-     destroy (fileLines);
+	delete fileName;
+	destroy(fileLines);
 }
 
 void TFileViewer::draw()
 {
-    char *p;
+	char *p;
 
-    ushort c =  getColor(0x0301);
-    for( short i = 0; i < size.y; i++ )
-        {
-        TDrawBuffer b;
-        b.moveChar( 0, ' ', c, (short)size.x );
+	ushort c = getColor(0x0301);
+	for (short i = 0; i < size.y; i++) {
+		TDrawBuffer b;
+		b.moveChar(0, ' ', c, (short)size.x);
 
-        if( delta.y + i < fileLines->getCount() )
-            {
-            char s[maxLineLength+1];
-            p = (char *)( fileLines->at(delta.y+i) );
-            if( p == nullptr || (int)strlen(p) < delta.x )
-                s[0] = EOS;
-            else
-            {
-                strncpy( s, p+delta.x, size.x );
-                if( (int)strlen( p + delta.x ) > size.x )
-                    s[size.x] = EOS;
-                }
-            b.moveStr( 0, s, c );
-            }
-        writeBuf( 0, i, (short)size.x, 1, b );
-        }
+		if (delta.y + i < fileLines->getCount()) {
+			char s[maxLineLength + 1];
+			p = (char *)(fileLines->at(delta.y + i));
+			if (p == nullptr || (int)strlen(p) < delta.x)
+				s[0] = EOS;
+			else {
+				strncpy(s, p + delta.x, size.x);
+				if ((int)strlen(p + delta.x) > size.x)
+					s[size.x] = EOS;
+			}
+			b.moveStr(0, s, c);
+		}
+		writeBuf(0, i, (short)size.x, 1, b);
+	}
 }
 
 void TFileViewer::scrollDraw()
 {
-    TScroller::scrollDraw();
-    draw();
+	TScroller::scrollDraw();
+	draw();
 }
 
-void TFileViewer::readFile( const char *fName )
+void TFileViewer::readFile(const char *fName)
 {
-    delete fileName;
+	delete fileName;
 
-    limit.x = 0;
-    fileName = newStr( fName );
-    fileLines = new TLineCollection(5, 5);
-    std::ifstream fileToView( fName );
-    if( !fileToView )
-        {
-        messageBox( "Invalid drive or directory", mfError | mfOKButton );
-        isValid = False;
-        }
-    else
-        {
-        char line[maxLineLength+1];
-        while( !lowMemory() &&
-               !fileToView.eof() &&
-               fileToView.getline( line, sizeof line )
-             )
-            {
-            char c;
-            fileToView.get(c);      // grab trailing newline
-            limit.x = max( limit.x, strlen( line ) );
-            fileLines->insert( newStr( line ) );
-            }
-        isValid = True;
-        }
-    limit.y = fileLines->getCount();
+	limit.x = 0;
+	fileName = newStr(fName);
+	fileLines = new TLineCollection(5, 5);
+	std::ifstream fileToView(fName);
+	if (!fileToView) {
+		messageBox("Invalid drive or directory", mfError | mfOKButton);
+		isValid = False;
+	} else {
+		char line[maxLineLength + 1];
+		while (!lowMemory() &&
+		       !fileToView.eof() &&
+		       fileToView.getline(line, sizeof line)
+		    ) {
+			char c;
+			fileToView.get(c);	// grab trailing newline
+			limit.x = max(limit.x, strlen(line));
+			fileLines->insert(newStr(line));
+		}
+		isValid = True;
+	}
+	limit.y = fileLines->getCount();
 }
 
-void TFileViewer::setState( ushort aState, Boolean enable )
+void TFileViewer::setState(ushort aState, Boolean enable)
 {
-    TScroller::setState( aState, enable );
-    if( enable && (aState & sfExposed) )
-        setLimit( limit.x, limit.y );
+	TScroller::setState(aState, enable);
+	if (enable && (aState & sfExposed))
+		setLimit(limit.x, limit.y);
 }
 
-Boolean TFileViewer::valid( ushort )
+Boolean TFileViewer::valid(ushort)
 {
-    return isValid;
+	return isValid;
 }
 
-void *TFileViewer::read(ipstream& is)
+void *TFileViewer::read(ipstream & is)
 {
-    char *fName;
+	char *fName;
 
-    TScroller::read(is);
-    fName = is.readString();
-    fileName = nullptr;
-    readFile(fName);
-    delete fName;
-    return this;
+	TScroller::read(is);
+	fName = is.readString();
+	fileName = nullptr;
+	readFile(fName);
+	delete fName;
+	return this;
 }
 
-void TFileViewer::write(opstream& os)
+void TFileViewer::write(opstream & os)
 {
-    TScroller::write(os);
-    os.writeString(fileName);
+	TScroller::write(os);
+	os.writeString(fileName);
 }
 
 TStreamable *TFileViewer::build()
 {
-    return new TFileViewer( streamableInit );
+	return new TFileViewer(streamableInit);
 }
 
-
-TStreamableClass RFileView( TFileViewer::name,
-                            TFileViewer::build,
-                              __DELTA(TFileViewer)
-                          );
-
-
+TStreamableClass RFileView(TFileViewer::name,
+			   TFileViewer::build, __DELTA(TFileViewer)
+    );
 
 static short winNumber = 0;
 
-TFileWindow::TFileWindow( const char *fileName ) :
-    TWindowInit( &TFileWindow::initFrame ),
-    TWindow( TProgram::deskTop->getExtent(), fileName, winNumber++ )
+TFileWindow::TFileWindow(const char *fileName):TWindowInit(&TFileWindow::
+							   initFrame),
+TWindow(TProgram::deskTop->getExtent(), fileName, winNumber++)
 {
-    options |= ofTileable;
-    TRect r( getExtent() );
-    r.grow(-1, -1);
-    insert(new TFileViewer( r,
-                            standardScrollBar(sbHorizontal | sbHandleKeyboard),
-                            standardScrollBar(sbVertical | sbHandleKeyboard),
-                            fileName) );
+	options |= ofTileable;
+	TRect r(getExtent());
+	r.grow(-1, -1);
+	insert(new TFileViewer(r,
+			       standardScrollBar(sbHorizontal |
+						 sbHandleKeyboard),
+			       standardScrollBar(sbVertical | sbHandleKeyboard),
+			       fileName));
 }

@@ -16,66 +16,54 @@
 
 const int hlChangeDir = cmChangeDir;
 
-class TLineCollection : public TCollection
-{
+class TLineCollection:public TCollection {
+      public:
 
-public:
+	TLineCollection(short lim, short delta):TCollection(lim, delta) {
+	} virtual void freeItem(void *p) {
+		delete[](char *)p;
+	}
 
-    TLineCollection(short lim, short delta) : TCollection(lim, delta) {}
-    virtual void  freeItem(void *p) { delete[] (char *)p; }
-
-private:
-
-    virtual void *readItem( ipstream& ) { return nullptr; }
-    virtual void writeItem( void *, opstream& ) {}
-
+      private:
+	virtual void *readItem(ipstream &) {
+		return nullptr;
+	}
+	virtual void writeItem(void *, opstream &) {
+	}
 };
 
-class TFileViewer : public TScroller
-{
+class TFileViewer:public TScroller {
+      public:
+	char *fileName;
+	TCollection *fileLines;
+	Boolean isValid;
+	 TFileViewer(const TRect & bounds,
+		     TScrollBar * aHScrollBar,
+		     TScrollBar * aVScrollBar, const char *aFileName);
+	~TFileViewer();
+	 TFileViewer(StreamableInit):TScroller(streamableInit) {
+	};
+	void draw();
+	void readFile(const char *fName);
+	void setState(ushort aState, Boolean enable);
+	void scrollDraw();
+	Boolean valid(ushort command);
 
-public:
+      private:
+	virtual const char *streamableName() const {
+		return name;
+      } protected:
+	virtual void write(opstream &);
+	virtual void *read(ipstream &);
 
-    char *fileName;
-    TCollection *fileLines;
-    Boolean isValid;
-    TFileViewer( const TRect& bounds,
-                 TScrollBar *aHScrollBar,
-                 TScrollBar *aVScrollBar,
-                 const char *aFileName
-               );
-    ~TFileViewer();
-    TFileViewer( StreamableInit ) : TScroller(streamableInit) { };
-    void draw();
-    void readFile( const char *fName );
-    void setState( ushort aState, Boolean enable );
-    void scrollDraw();
-    Boolean valid( ushort command );
-
-private:
-
-    virtual const char *streamableName() const
-        { return name; }
-
-protected:
-
-    virtual void write( opstream& );
-    virtual void *read( ipstream& );
-
-public:
-
-    static const char * const name;
-    static TStreamable *build();
-
+      public:
+	static const char *const name;
+	static TStreamable *build();
 };
 
-class TFileWindow : public TWindow
-{
-
-public:
-
-    TFileWindow( const char *fileName );
-
+class TFileWindow:public TWindow {
+      public:
+	TFileWindow(const char *fileName);
 };
 
 const int maxLineLength = 256;

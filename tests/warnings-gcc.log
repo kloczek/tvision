@@ -36,7 +36,7 @@ In file included from ../../../tvision/tv.h:675,
                  from ../../../tvision/TDirListBox.cc:18:
 ../../../tvision/stddlg.h:1247:31: note: shadowed declaration is here
 ../../../tvision/TDirListBox.cc:117:16: warning: ‘__builtin___sprintf_chk’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
-In file included from /usr/include/stdio.h:861,
+In file included from /usr/include/stdio.h:873,
                  from /usr/include/c++/8/cstdio:42,
                  from /usr/include/c++/8/ext/string_conversions.h:43,
                  from /usr/include/c++/8/bits/basic_string.h:6364,
@@ -51,7 +51,7 @@ In file included from /usr/include/stdio.h:861,
                  from ../../../tvision/TDirListBox.cc:18:
 /usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 2 and 4097 bytes into a destination of size 4096
 ../../../tvision/TDirListBox.cc:129:18: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
-In file included from /usr/include/stdio.h:861,
+In file included from /usr/include/stdio.h:873,
                  from /usr/include/c++/8/cstdio:42,
                  from /usr/include/c++/8/ext/string_conversions.h:43,
                  from /usr/include/c++/8/bits/basic_string.h:6364,
@@ -98,7 +98,7 @@ In file included from ../../../tvision/tv.h:675,
 ../../../tvision/TFileList.cc:129:11: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 ../../../tvision/TFileList.cc: In member function ‘void TFileList::readDirectory(const char*)’:
 ../../../tvision/TFileList.cc:199:16: warning: ‘__builtin___sprintf_chk’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
-In file included from /usr/include/stdio.h:861,
+In file included from /usr/include/stdio.h:873,
                  from /usr/include/c++/8/cstdio:42,
                  from /usr/include/c++/8/ext/string_conversions.h:43,
                  from /usr/include/c++/8/bits/basic_string.h:6364,
@@ -113,7 +113,7 @@ In file included from /usr/include/stdio.h:861,
                  from ../../../tvision/TFileList.cc:20:
 /usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 2 and 4097 bytes into a destination of size 4096
 ../../../tvision/TFileList.cc:211:18: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
-In file included from /usr/include/stdio.h:861,
+In file included from /usr/include/stdio.h:873,
                  from /usr/include/c++/8/cstdio:42,
                  from /usr/include/c++/8/ext/string_conversions.h:43,
                  from /usr/include/c++/8/bits/basic_string.h:6364,
@@ -128,7 +128,7 @@ In file included from /usr/include/stdio.h:861,
                  from ../../../tvision/TFileList.cc:20:
 /usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 1 and 4351 bytes into a destination of size 4096
 ../../../tvision/TFileList.cc:227:17: warning: ‘..’ directive writing 2 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
-In file included from /usr/include/stdio.h:861,
+In file included from /usr/include/stdio.h:873,
                  from /usr/include/c++/8/cstdio:42,
                  from /usr/include/c++/8/ext/string_conversions.h:43,
                  from /usr/include/c++/8/bits/basic_string.h:6364,
@@ -158,7 +158,7 @@ In file included from ../../../tvision/tv.h:659,
 ../../../tvision/TIndicator.cc: In member function ‘virtual void TIndicator::draw()’:
 ../../../tvision/TIndicator.cc:52:16: warning: ‘%d’ directive writing between 1 and 11 bytes into a region of size between 2 and 12 [-Wformat-overflow=]
 ../../../tvision/TIndicator.cc:52:16: note: directive argument in the range [-2147483647, 2147483647]
-In file included from /usr/include/stdio.h:861,
+In file included from /usr/include/stdio.h:873,
                  from /usr/include/c++/8/cstdio:42,
                  from /usr/include/c++/8/ext/string_conversions.h:43,
                  from /usr/include/c++/8/bits/basic_string.h:6364,
@@ -373,29 +373,29 @@ In file included from ../../../tvhc/tvhc.cc:85:
 In file included from ../../../tvhc/tvhc.cc:85:
 ../../../tvhc/tvhc.h:113:6: note: shadowed declaration is here
 ../../../demo/calc.cc: In member function ‘virtual void TCalcDisplay::handleEvent(TEvent&)’:
-../../../demo/calc.cc:104:11: warning: switch missing default case [-Wswitch-default]
+../../../demo/calc.cc:98:9: warning: switch missing default case [-Wswitch-default]
 ../../../demo/calc.cc: In member function ‘void TCalcDisplay::calcKey(unsigned char)’:
-../../../demo/calc.cc:267:33: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
-../../../demo/calc.cc:252:23: warning: switch missing default case [-Wswitch-default]
-../../../demo/calc.cc:197:11: warning: switch missing default case [-Wswitch-default]
+../../../demo/calc.cc:256:14: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+../../../demo/calc.cc:242:11: warning: switch missing default case [-Wswitch-default]
+../../../demo/calc.cc:179:9: warning: switch missing default case [-Wswitch-default]
 ../../../demo/calendar.cc: In member function ‘virtual void TCalendarView::draw()’:
-../../../demo/calendar.cc:132:10: warning: declaration of ‘days’ shadows a member of ‘TCalendarView’ [-Wshadow]
+../../../demo/calendar.cc:121:7: warning: declaration of ‘days’ shadows a member of ‘TCalendarView’ [-Wshadow]
 In file included from ../../../demo/calendar.cc:32:
-../../../demo/calendar.h:31:14: note: shadowed declaration is here
+../../../demo/calendar.h:28:11: note: shadowed declaration is here
 In file included from ../../../demo/fileview.cc:36:
 ../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
-../../../demo/fileview.h:24:45: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
+../../../demo/fileview.h:22:41: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
 In file included from ../../../tvision/tv.h:631,
                  from ../../../demo/fileview.cc:27:
 ../../../tvision/tvobjs.h:385:13: note: shadowed declaration is here
 ../../../demo/mousedlg.cc: In member function ‘virtual void TMouseDialog::handleEvent(TEvent&)’:
-../../../demo/mousedlg.cc:133:11: warning: switch missing default case [-Wswitch-default]
+../../../demo/mousedlg.cc:124:9: warning: switch missing default case [-Wswitch-default]
 ../../../demo/puzzle.cc: In member function ‘void TPuzzleView::moveKey(int)’:
-../../../demo/puzzle.cc:184:11: warning: switch missing default case [-Wswitch-default]
+../../../demo/puzzle.cc:166:9: warning: switch missing default case [-Wswitch-default]
 ../../../demo/puzzle.cc: In member function ‘void TPuzzleView::moveTile(TPoint)’:
-../../../demo/puzzle.cc:242:11: warning: switch missing default case [-Wswitch-default]
+../../../demo/puzzle.cc:219:9: warning: switch missing default case [-Wswitch-default]
 ../../../demo/puzzle.cc: In member function ‘void TPuzzleView::scramble()’:
-../../../demo/puzzle.cc:270:15: warning: switch missing default case [-Wswitch-default]
+../../../demo/puzzle.cc:245:10: warning: switch missing default case [-Wswitch-default]
 In file included from ../../../tvision/tv.h:683,
                  from ../../../tvision/help.h:30,
                  from ../../../demo/tvdemo1.cc:34:
@@ -426,15 +426,15 @@ In file included from ../../../tvision/tv.h:683,
 ../../../tvision/menus.h:32:13: note: previous declaration of ‘TStatusDef& operator+(TStatusDef&, TStatusDef&)’
 In file included from ../../../demo/tvdemo1.cc:41:
 ../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
-../../../demo/fileview.h:24:45: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
+../../../demo/fileview.h:22:41: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
 In file included from ../../../tvision/tv.h:631,
                  from ../../../demo/tvdemo1.cc:33:
 ../../../tvision/tvobjs.h:385:13: note: shadowed declaration is here
 ../../../demo/tvdemo1.cc: In member function ‘virtual void TVDemo::getEvent(TEvent&)’:
-../../../demo/tvdemo1.cc:129:12: warning: switch missing default case [-Wswitch-default]
+../../../demo/tvdemo1.cc:126:9: warning: switch missing default case [-Wswitch-default]
 In file included from ../../../demo/tvdemo3.cc:42:
 ../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
-../../../demo/fileview.h:24:45: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
+../../../demo/fileview.h:22:41: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
 In file included from ../../../tvision/tv.h:631,
                  from ../../../demo/tvdemo3.cc:35:
 ../../../tvision/tvobjs.h:385:13: note: shadowed declaration is here

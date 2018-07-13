@@ -16,103 +16,106 @@
 
 #include <math.h>
 
-#define DISPLAYLEN  25      // Length (width) of calculator display
+#define DISPLAYLEN  25		// Length (width) of calculator display
 
 enum TCalcState { csFirst = 1, csValid, csError };
 
-const int cmCalcButton  = 200;
+const int cmCalcButton = 200;
 
+class TCalcDisplay:public TView {
+      public:
+	TCalcDisplay(TRect & r);
+	TCalcDisplay(StreamableInit):TView(streamableInit) {
+	};
+	~TCalcDisplay();
+	virtual TPalette & getPalette() const;
+	virtual void handleEvent(TEvent & event);
+	virtual void draw();
 
-class TCalcDisplay : public TView
-{
+      private:
+	TCalcState status;
+	char *number;
+	char sign;
+	char operate;		// since 'operator' is a reserved word.
+	double operand;
 
-public:
+	void calcKey(unsigned char key);
+	void checkFirst();
+	void setDisplay(double r);
+	void clear();
+	void error();
+	inline double getDisplay() {
+		return (atof(number));
+	};
+	virtual const char *streamableName() const {
+		return name;
+	}
+      protected:
+	 virtual void write(opstream &);
+	virtual void *read(ipstream &);
 
-    TCalcDisplay(TRect& r);
-    TCalcDisplay( StreamableInit ) : TView(streamableInit) { };
-    ~TCalcDisplay();
-    virtual TPalette& getPalette() const;
-    virtual void handleEvent(TEvent& event);
-    virtual void draw();
-
-private:
-
-    TCalcState status;
-    char *number;
-    char sign;
-    char operate;           // since 'operator' is a reserved word.
-    double operand;
-
-    void calcKey(unsigned char key);
-    void checkFirst();
-    void setDisplay(double r);
-    void clear();
-    void error();
-    inline double getDisplay() { return( atof( number ) ); };
-
-    virtual const char *streamableName() const
-        { return name; }
-
-protected:
-
-    virtual void write( opstream& );
-    virtual void *read( ipstream& );
-
-public:
-
-    static const char * const name;
-    static TStreamable *build();
-
+      public:
+	static const char *const name;
+	static TStreamable *build();
 };
 
-inline ipstream& operator >> ( ipstream& is, TCalcDisplay& cl )
-    { return is >> (TStreamable&) cl; }
-inline ipstream& operator >> ( ipstream& is, TCalcDisplay*& cl )
-    { return is >> (void *&) cl; }
-
-inline opstream& operator << ( opstream& os, TCalcDisplay& cl )
-    { return os << (TStreamable&) cl; }
-inline opstream& operator << ( opstream& os, TCalcDisplay* cl )
-    { return os << (TStreamable *) cl; }
-
-
-class TCalculator : public TDialog
+inline ipstream & operator >>(ipstream & is, TCalcDisplay & cl)
 {
+	return is >> (TStreamable &) cl;
+}
 
-public:
+inline ipstream & operator >>(ipstream & is, TCalcDisplay * &cl)
+{
+	return is >> (void *&)cl;
+}
 
-    TCalculator();
-    TCalculator( StreamableInit ) :
-        TWindowInit(&TCalculator::initFrame),
-        TDialog(streamableInit)
-         { };
+inline opstream & operator <<(opstream & os, TCalcDisplay & cl)
+{
+	return os << (TStreamable &) cl;
+}
 
-private:
+inline opstream & operator <<(opstream & os, TCalcDisplay * cl)
+{
+	return os << (TStreamable *) cl;
+}
 
-    virtual const char *streamableName() const
-        { return name; }
+class TCalculator:public TDialog {
+      public:
+	TCalculator();
+	TCalculator(StreamableInit):TWindowInit(&TCalculator::initFrame),
+	    TDialog(streamableInit) {
+	};
 
-//protected:
-
-//    virtual void write( opstream& );
-//    virtual void *read( ipstream& );
-
-public:
-
-    static const char * const name;
-    static TStreamable *build();
-
+      private:
+	virtual const char *streamableName() const {
+		return name;
+	}
+      //protected:
+      //      virtual void write( opstream& );
+      //      virtual void *read( ipstream& );
+      public:
+	static const char *const name;
+	static TStreamable *build();
 };
 
-inline ipstream& operator >> ( ipstream& is, TCalculator& cl )
-    { return is >> (TStreamable&) cl; }
-inline ipstream& operator >> ( ipstream& is, TCalculator*& cl )
-    { return is >> (void *&) cl; }
+inline ipstream & operator >>(ipstream & is, TCalculator & cl)
+{
+	return is >> (TStreamable &) cl;
+}
 
-inline opstream& operator << ( opstream& os, TCalculator& cl )
-    { return os << (TStreamable&) cl; }
-inline opstream& operator << ( opstream& os, TCalculator* cl )
-    { return os << (TStreamable *) cl; }
+inline ipstream & operator >>(ipstream & is, TCalculator * &cl)
+{
+	return is >> (void *&)cl;
+}
 
+inline opstream & operator <<(opstream & os, TCalculator & cl)
+{
+	return os << (TStreamable &) cl;
+}
 
-#endif      // TV_INC_CALC_H
+inline opstream & operator <<(opstream & os, TCalculator * cl)
+{
+	return os << (TStreamable *) cl;
+}
+
+#endif // TV_INC_CALC_H

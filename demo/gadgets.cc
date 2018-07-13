@@ -37,36 +37,32 @@
 // ------------- Heap Viewer functions
 //
 
-THeapView::THeapView(TRect& r) : TView( r )
+THeapView::THeapView(TRect & r):TView(r)
 {
-    oldMem = 0;
-    newMem = heapSize();
+	oldMem = 0;
+	newMem = heapSize();
 
 	/* SS: now resizing under X works well */
 	growMode = gfGrowLoX | gfGrowLoY | gfGrowHiX | gfGrowHiY;
 }
 
-
 void THeapView::draw()
 {
-    TDrawBuffer buf;
-    char c = getColor(2);
+	TDrawBuffer buf;
+	char c = getColor(2);
 
-    buf.moveChar(0, ' ', c, (short)size.x);
-    buf.moveStr(0, heapStr, c);
-    writeLine(0, 0, (short)size.x, 1, buf);
+	buf.moveChar(0, ' ', c, (short)size.x);
+	buf.moveStr(0, heapStr, c);
+	writeLine(0, 0, (short)size.x, 1, buf);
 }
-
 
 void THeapView::update()
 {
-    if( (newMem = heapSize()) != oldMem )
-        {
-        oldMem = newMem;
-        drawView();
-        }
+	if ((newMem = heapSize()) != oldMem) {
+		oldMem = newMem;
+		drawView();
+	}
 }
-
 
 long THeapView::heapSize()
 {
@@ -75,43 +71,39 @@ long THeapView::heapSize()
 	return -1;
 }
 
-
 //
 // -------------- Clock Viewer functions
 //
 
-TClockView::TClockView( TRect& r ) : TView( r )
+TClockView::TClockView(TRect & r):TView(r)
 {
-    strcpy(lastTime, "        ");
-    strcpy(curTime, "        ");
+	strcpy(lastTime, "        ");
+	strcpy(curTime, "        ");
 
 	/* SS: now resizing under X works well */
 	growMode = gfGrowLoX | gfGrowHiX;
 }
 
-
 void TClockView::draw()
 {
-    TDrawBuffer buf;
-    char c = getColor(2);
+	TDrawBuffer buf;
+	char c = getColor(2);
 
-    buf.moveChar(0, ' ', c, (short)size.x);
-    buf.moveStr(0, curTime, c);
-    writeLine(0, 0, (short)size.x, 1, buf);
+	buf.moveChar(0, ' ', c, (short)size.x);
+	buf.moveStr(0, curTime, c);
+	writeLine(0, 0, (short)size.x, 1, buf);
 }
-
 
 void TClockView::update()
 {
-    time_t t = time(nullptr);
-    char *date = ctime(&t);
+	time_t t = time(nullptr);
+	char *date = ctime(&t);
 
-    date[19] = '\0';
-    strcpy(curTime, &date[11]);        /* Extract time. */
+	date[19] = '\0';
+	strcpy(curTime, &date[11]);	/* Extract time. */
 
-    if( strcmp(lastTime, curTime) )
-        {
-        drawView();
-        strcpy(lastTime, curTime);
-        }
+	if (strcmp(lastTime, curTime)) {
+		drawView();
+		strcpy(lastTime, curTime);
+	}
 }

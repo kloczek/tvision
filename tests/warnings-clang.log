@@ -7738,21 +7738,21 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../demo/ascii.cc:34:
-../../../demo/ascii.h:27:57: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/ascii.h:51:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:53:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:56:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:58:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:67:58: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/ascii.h:91:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:93:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:96:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:98:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:109:35: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/ascii.h:130:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:132:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:135:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:137:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:24:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/ascii.h:43:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:48:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:53:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:58:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:65:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/ascii.h:84:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:89:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:94:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:99:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:107:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/ascii.h:124:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:129:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:134:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:139:15: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/ascii.cc:28:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -7766,62 +7766,62 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/ascii.cc:64:14: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:58:54: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:43: note: expanded from macro '__DELTA'
-../../../demo/ascii.cc:64:14: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:58:54: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:29: note: expanded from macro '__DELTA'
-../../../demo/ascii.cc:64:14: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:58:54: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:23: note: expanded from macro '__DELTA'
-../../../demo/ascii.cc:62:18: warning: no previous extern declaration for non-static variable 'RTable' [-Wmissing-variable-declarations]
-../../../demo/ascii.cc:62:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+../../../demo/ascii.cc:58:18: warning: no previous extern declaration for non-static variable 'RTable' [-Wmissing-variable-declarations]
+../../../demo/ascii.cc:58:18: warning: declaration requires a global constructor [-Wglobal-constructors]
 In file included from ../../../demo/ascii.cc:28:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:155:7: warning: padding size of 'TStreamableClass' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/ascii.cc:78:25: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
-../../../demo/ascii.cc:82:37: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.cc:82:30: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/ascii.cc:82:37: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/ascii.cc:84:29: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.cc:84:54: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.cc:84:29: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
-../../../demo/ascii.cc:84:47: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/ascii.cc:85:25: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.cc:85:40: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.cc:85:22: warning: implicit conversion changes signedness: 'ushort' (aka 'unsigned short') to 'short' [-Wsign-conversion]
-../../../demo/ascii.cc:99:15: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.cc:99:7: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:70:15: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
+../../../demo/ascii.cc:73:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:73:24: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/ascii.cc:73:31: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/ascii.cc:75:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:76:10: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:75:20: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
+../../../demo/ascii.cc:75:43: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/ascii.cc:77:19: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:77:34: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:77:16: warning: implicit conversion changes signedness: 'ushort' (aka 'unsigned short') to 'short' [-Wsign-conversion]
+../../../demo/ascii.cc:91:11: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:91:3: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/ascii.cc:28:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../demo/ascii.cc:190:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:167:57: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:43: note: expanded from macro '__DELTA'
-../../../demo/ascii.cc:190:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:167:57: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:29: note: expanded from macro '__DELTA'
-../../../demo/ascii.cc:190:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:167:57: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:23: note: expanded from macro '__DELTA'
-../../../demo/ascii.cc:188:18: warning: no previous extern declaration for non-static variable 'RReport' [-Wmissing-variable-declarations]
-../../../demo/ascii.cc:188:18: warning: declaration requires a global constructor [-Wglobal-constructors]
-../../../demo/ascii.cc:204:25: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
-../../../demo/ascii.cc:208:18: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.cc:208:29: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.cc:209:3: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.cc:210:3: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.cc:212:25: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/ascii.cc:167:18: warning: no previous extern declaration for non-static variable 'RReport' [-Wmissing-variable-declarations]
+../../../demo/ascii.cc:167:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+../../../demo/ascii.cc:179:15: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
+../../../demo/ascii.cc:183:23: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:183:36: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:184:4: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:184:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:186:22: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
 In file included from ../../../demo/ascii.cc:28:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../demo/ascii.cc:259:19: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:225:29: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:43: note: expanded from macro '__DELTA'
-../../../demo/ascii.cc:259:19: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:225:29: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:29: note: expanded from macro '__DELTA'
-../../../demo/ascii.cc:259:19: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.cc:225:29: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:23: note: expanded from macro '__DELTA'
-../../../demo/ascii.cc:257:18: warning: no previous extern declaration for non-static variable 'RAsciiChart' [-Wmissing-variable-declarations]
-../../../demo/ascii.cc:257:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+../../../demo/ascii.cc:224:18: warning: no previous extern declaration for non-static variable 'RAsciiChart' [-Wmissing-variable-declarations]
+../../../demo/ascii.cc:224:18: warning: declaration requires a global constructor [-Wglobal-constructors]
 ../../../demo/calc.cc:25:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/calc.cc:18:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/calc.cc:24:9: warning: macro is not used [-Wunused-macros]
@@ -7886,26 +7886,26 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../demo/calc.cc:33:
-../../../demo/calc.h:32:63: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calc.h:51:61: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calc.h:69:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:71:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:74:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:76:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:88:13: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calc.h:108:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:110:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:113:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:115:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:48:18: warning: implicit conversion changes signedness: 'char' to 'uchar' (aka 'unsigned char') [-Wsign-conversion]
-../../../demo/calc.cc:49:18: warning: implicit conversion changes signedness: 'char' to 'uchar' (aka 'unsigned char') [-Wsign-conversion]
+../../../demo/calc.h:29:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/calc.h:49:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/calc.h:64:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:69:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:74:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:79:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:87:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/calc.h:103:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:108:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:113:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:118:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:48:15: warning: implicit conversion changes signedness: 'char' to 'uchar' (aka 'unsigned char') [-Wsign-conversion]
+../../../demo/calc.cc:49:15: warning: implicit conversion changes signedness: 'char' to 'uchar' (aka 'unsigned char') [-Wsign-conversion]
 In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
 In file included from ../../../demo/calc.cc:33:
-../../../demo/calc.h:41:11: warning: padding class 'TCalcDisplay' with 4 bytes to align 'number' [-Wpadded]
-../../../demo/calc.h:44:12: warning: padding class 'TCalcDisplay' with 6 bytes to align 'operand' [-Wpadded]
+../../../demo/calc.h:37:8: warning: padding class 'TCalcDisplay' with 4 bytes to align 'number' [-Wpadded]
+../../../demo/calc.h:40:9: warning: padding class 'TCalcDisplay' with 6 bytes to align 'operand' [-Wpadded]
 In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3455:13: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
@@ -7915,69 +7915,69 @@ In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
+../../../demo/calc.cc:59:12: warning: implicit conversion changes signedness: 'uchar' (aka 'unsigned char') to 'char' [-Wsign-conversion]
 ../../../demo/calc.cc:60:15: warning: implicit conversion changes signedness: 'uchar' (aka 'unsigned char') to 'char' [-Wsign-conversion]
-../../../demo/calc.cc:61:18: warning: implicit conversion changes signedness: 'uchar' (aka 'unsigned char') to 'char' [-Wsign-conversion]
 In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/calc.cc:75:32: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:71:31: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:43: note: expanded from macro '__DELTA'
-../../../demo/calc.cc:75:32: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:71:31: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:29: note: expanded from macro '__DELTA'
-../../../demo/calc.cc:75:32: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:71:31: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:23: note: expanded from macro '__DELTA'
-../../../demo/calc.cc:73:18: warning: no previous extern declaration for non-static variable 'RCalcDisplay' [-Wmissing-variable-declarations]
-../../../demo/calc.cc:73:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+../../../demo/calc.cc:70:18: warning: no previous extern declaration for non-static variable 'RCalcDisplay' [-Wmissing-variable-declarations]
+../../../demo/calc.cc:70:18: warning: declaration requires a global constructor [-Wglobal-constructors]
 In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:155:7: warning: padding size of 'TStreamableClass' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/calc.cc:95:21: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
-../../../demo/calc.cc:113:27: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:90:18: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
+../../../demo/calc.cc:105:13: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:712:13: warning: padding class 'TButton' with 1 byte to align 'amDefault' [-Wpadded]
-../../../demo/calc.cc:113:26: warning: implicit conversion changes signedness: 'const char' to 'unsigned char' [-Wsign-conversion]
+../../../demo/calc.cc:105:12: warning: implicit conversion changes signedness: 'const char' to 'unsigned char' [-Wsign-conversion]
 In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../demo/calc.cc:123:18: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
-../../../demo/calc.cc:127:9: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:127:22: warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-../../../demo/calc.cc:128:33: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:128:26: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calc.cc:128:33: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calc.cc:129:34: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:129:18: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calc.cc:129:27: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calc.cc:130:17: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:130:17: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calc.cc:130:39: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calc.cc:131:21: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:168:23: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
-../../../demo/calc.cc:193:11: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:206:27: warning: implicit conversion changes signedness: 'unsigned char' to 'char' [-Wsign-conversion]
-../../../demo/calc.cc:267:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
-../../../demo/calc.cc:275:23: warning: implicit conversion changes signedness: 'unsigned char' to 'char' [-Wsign-conversion]
-../../../demo/calc.cc:225:24: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
-../../../demo/calc.cc:289:13: warning: no previous extern declaration for non-static variable 'keyChar' [-Wmissing-variable-declarations]
+../../../demo/calc.cc:114:15: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
+../../../demo/calc.cc:118:6: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:118:19: warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+../../../demo/calc.cc:119:30: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:119:23: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calc.cc:119:30: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calc.cc:120:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:120:15: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calc.cc:120:24: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calc.cc:121:14: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:121:14: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calc.cc:121:38: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calc.cc:122:18: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:153:20: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+../../../demo/calc.cc:175:8: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:194:14: warning: implicit conversion changes signedness: 'unsigned char' to 'char' [-Wsign-conversion]
+../../../demo/calc.cc:256:11: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+../../../demo/calc.cc:264:13: warning: implicit conversion changes signedness: 'unsigned char' to 'char' [-Wsign-conversion]
+../../../demo/calc.cc:212:14: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+../../../demo/calc.cc:277:13: warning: no previous extern declaration for non-static variable 'keyChar' [-Wmissing-variable-declarations]
 In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../demo/calc.cc:312:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:296:29: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:43: note: expanded from macro '__DELTA'
-../../../demo/calc.cc:312:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:296:29: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:29: note: expanded from macro '__DELTA'
-../../../demo/calc.cc:312:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:296:29: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:23: note: expanded from macro '__DELTA'
-../../../demo/calc.cc:310:18: warning: no previous extern declaration for non-static variable 'RCalculator' [-Wmissing-variable-declarations]
-../../../demo/calc.cc:310:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+../../../demo/calc.cc:295:18: warning: no previous extern declaration for non-static variable 'RCalculator' [-Wmissing-variable-declarations]
+../../../demo/calc.cc:295:18: warning: declaration requires a global constructor [-Wglobal-constructors]
 In file included from ../../../demo/calc.cc:33:
-../../../demo/calc.h:79:7: warning: 'TCalculator' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+../../../demo/calc.h:82:7: warning: 'TCalculator' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 ../../../demo/calendar.cc:23:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/calendar.cc:17:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/calendar.cc:22:9: warning: macro is not used [-Wunused-macros]
@@ -8030,16 +8030,16 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../demo/calendar.cc:32:
-../../../demo/calendar.h:25:64: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calendar.h:49:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:51:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:54:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:56:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:68:12: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calendar.h:88:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:90:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:93:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:95:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:23:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/calendar.h:44:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:49:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:54:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:59:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:68:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/calendar.h:84:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:89:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:94:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:99:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.cc:34:13: warning: no previous extern declaration for non-static variable 'monthNames' [-Wmissing-variable-declarations]
 In file included from ../../../demo/calendar.cc:25:
 In file included from ../../../tvision/tv.h:659:
@@ -8054,57 +8054,57 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/calendar.cc:75:33: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:69:33: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:43: note: expanded from macro '__DELTA'
-../../../demo/calendar.cc:75:33: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:69:33: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:29: note: expanded from macro '__DELTA'
-../../../demo/calendar.cc:75:33: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:69:33: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:23: note: expanded from macro '__DELTA'
-../../../demo/calendar.cc:73:18: warning: no previous extern declaration for non-static variable 'RCalendarView' [-Wmissing-variable-declarations]
-../../../demo/calendar.cc:73:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+../../../demo/calendar.cc:68:18: warning: no previous extern declaration for non-static variable 'RCalendarView' [-Wmissing-variable-declarations]
+../../../demo/calendar.cc:68:18: warning: declaration requires a global constructor [-Wglobal-constructors]
 In file included from ../../../demo/calendar.cc:25:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:155:7: warning: padding size of 'TStreamableClass' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/calendar.cc:91:35: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-../../../demo/calendar.cc:92:36: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-../../../demo/calendar.cc:93:19: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-../../../demo/calendar.cc:118:18: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:118:42: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:124:12: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:131:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:131:44: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
-../../../demo/calendar.cc:131:51: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
-../../../demo/calendar.cc:132:10: warning: declaration shadows a field of 'TCalendarView' [-Wshadow]
-../../../demo/calendar.h:31:14: note: previous declaration is here
-../../../demo/calendar.cc:132:17: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:138:13: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
-../../../demo/calendar.cc:139:17: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
-../../../demo/calendar.cc:141:26: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:143:25: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:145:25: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:148:26: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:149:44: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:154:30: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:158:29: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:158:29: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:158:50: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:161:23: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:163:4: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:164:19: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:164:19: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:164:38: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:166:19: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:166:19: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:166:38: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calendar.cc:170:22: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.cc:180:15: warning: use of logical '&&' with constant operand [-Wconstant-logical-operand]
-../../../demo/calendar.cc:180:15: note: use '&' for a bitwise operation
-../../../demo/calendar.cc:180:15: note: remove constant to silence this warning
-../../../demo/calendar.cc:182:53: warning: use of logical '||' with constant operand [-Wconstant-logical-operand]
-../../../demo/calendar.cc:182:53: note: use '|' for a bitwise operation
-../../../demo/calendar.cc:208:19: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:84:35: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+../../../demo/calendar.cc:85:36: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+../../../demo/calendar.cc:86:19: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+../../../demo/calendar.cc:108:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:108:39: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:114:10: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:120:17: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:120:41: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+../../../demo/calendar.cc:120:48: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+../../../demo/calendar.cc:121:7: warning: declaration shadows a field of 'TCalendarView' [-Wshadow]
+../../../demo/calendar.h:28:11: note: previous declaration is here
+../../../demo/calendar.cc:121:14: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:127:10: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
+../../../demo/calendar.cc:128:14: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
+../../../demo/calendar.cc:130:23: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:132:22: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:134:22: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:137:23: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:138:41: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:142:24: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:145:17: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:145:17: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:145:40: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:147:25: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:149:23: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:150:18: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:150:18: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:151:11: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:153:18: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:153:18: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:153:39: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calendar.cc:157:16: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:166:12: warning: use of logical '&&' with constant operand [-Wconstant-logical-operand]
+../../../demo/calendar.cc:166:12: note: use '&' for a bitwise operation
+../../../demo/calendar.cc:166:12: note: remove constant to silence this warning
+../../../demo/calendar.cc:167:46: warning: use of logical '||' with constant operand [-Wconstant-logical-operand]
+../../../demo/calendar.cc:167:46: note: use '|' for a bitwise operation
+../../../demo/calendar.cc:185:9: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:113:24: note: expanded from macro 'loByte'
-../../../demo/calendar.cc:218:24: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:192:16: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/drawbuf.h:113:24: note: expanded from macro 'loByte'
 In file included from ../../../demo/calendar.cc:25:
 In file included from ../../../tvision/tv.h:647:
@@ -8116,14 +8116,14 @@ In file included from ../../../demo/calendar.cc:25:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../demo/calendar.cc:262:35: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:229:6: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:43: note: expanded from macro '__DELTA'
-../../../demo/calendar.cc:262:35: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:229:6: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:29: note: expanded from macro '__DELTA'
-../../../demo/calendar.cc:262:35: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.cc:229:6: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:23: note: expanded from macro '__DELTA'
-../../../demo/calendar.cc:260:18: warning: no previous extern declaration for non-static variable 'RCalendarWindow' [-Wmissing-variable-declarations]
-../../../demo/calendar.cc:260:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+../../../demo/calendar.cc:227:18: warning: no previous extern declaration for non-static variable 'RCalendarWindow' [-Wmissing-variable-declarations]
+../../../demo/calendar.cc:227:18: warning: declaration requires a global constructor [-Wglobal-constructors]
 ../../../demo/fileview.cc:21:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/fileview.cc:20:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../demo/fileview.cc:27:
@@ -8196,42 +8196,42 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/fileview.cc:36:
-../../../demo/fileview.h:25:48: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.h:48:66: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/fileview.h:24:11: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.h:45:3: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
 ../../../tvision/views.h:2651:13: warning: padding class 'TScroller' with 3 bytes to align 'drawFlag' [-Wpadded]
 In file included from ../../../demo/fileview.cc:36:
-../../../demo/fileview.h:34:7: warning: padding size of 'TFileViewer' with 4 bytes to alignment boundary [-Wpadded]
+../../../demo/fileview.h:35:7: warning: padding size of 'TFileViewer' with 4 bytes to alignment boundary [-Wpadded]
 In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3455:13: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
 ../../../tvision/views.h:3471:12: warning: padding class 'TGroup' with 1 byte to align 'endState' [-Wpadded]
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/fileview.cc:66:32: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.cc:66:32: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/fileview.cc:71:17: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.cc:72:33: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.cc:76:45: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../demo/fileview.cc:77:21: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.cc:82:25: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.cc:115:37: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+../../../demo/fileview.cc:65:25: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.cc:65:25: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/fileview.cc:69:8: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.cc:70:24: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.cc:73:34: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../demo/fileview.cc:74:9: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.cc:79:18: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.cc:108:27: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
 In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/fileview.cc:161:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.cc:152:27: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:43: note: expanded from macro '__DELTA'
-../../../demo/fileview.cc:161:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.cc:152:27: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:29: note: expanded from macro '__DELTA'
-../../../demo/fileview.cc:161:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.cc:152:27: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:23: note: expanded from macro '__DELTA'
-../../../demo/fileview.cc:159:18: warning: no previous extern declaration for non-static variable 'RFileView' [-Wmissing-variable-declarations]
-../../../demo/fileview.cc:159:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+../../../demo/fileview.cc:151:18: warning: no previous extern declaration for non-static variable 'RFileView' [-Wmissing-variable-declarations]
+../../../demo/fileview.cc:151:18: warning: declaration requires a global constructor [-Wglobal-constructors]
 In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:155:7: warning: padding size of 'TStreamableClass' with 4 bytes to alignment boundary [-Wpadded]
@@ -8254,7 +8254,7 @@ In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 In file included from ../../../demo/fileview.cc:36:
-../../../demo/fileview.h:72:7: warning: 'TFileWindow' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+../../../demo/fileview.h:64:7: warning: 'TFileWindow' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 ../../../demo/gadgets.cc:24:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../demo/gadgets.cc:25:
 In file included from ../../../tvision/tv.h:631:
@@ -8292,20 +8292,20 @@ In file included from ../../../demo/gadgets.cc:25:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
 ../../../tvision/views.h:1974:13: warning: padding class 'TView' with 4 bytes to align 'owner' [-Wpadded]
-../../../demo/gadgets.cc:53:14: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
-../../../demo/gadgets.cc:55:29: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/gadgets.cc:52:11: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
+../../../demo/gadgets.cc:54:26: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/gadgets.cc:54:23: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/gadgets.cc:54:26: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
 ../../../demo/gadgets.cc:55:26: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/gadgets.cc:55:29: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/gadgets.cc:56:29: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/gadgets.cc:57:21: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/gadgets.cc:56:18: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/gadgets.cc:32:
-../../../demo/gadgets.h:35:7: warning: padding size of 'TClockView' with 6 bytes to alignment boundary [-Wpadded]
-../../../demo/gadgets.cc:96:14: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
-../../../demo/gadgets.cc:98:29: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/gadgets.cc:98:26: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/gadgets.cc:98:29: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/gadgets.cc:99:29: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/gadgets.cc:100:21: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/gadgets.h:29:7: warning: padding size of 'TClockView' with 6 bytes to alignment boundary [-Wpadded]
+../../../demo/gadgets.cc:90:11: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
+../../../demo/gadgets.cc:92:26: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/gadgets.cc:92:23: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/gadgets.cc:92:26: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/gadgets.cc:93:26: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/gadgets.cc:94:18: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/gadgets.cc:25:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
@@ -8402,22 +8402,22 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3455:13: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
 ../../../tvision/views.h:3471:12: warning: padding class 'TGroup' with 1 byte to align 'endState' [-Wpadded]
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/mousedlg.cc:55:21: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
-../../../demo/mousedlg.cc:68:23: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/mousedlg.cc:68:23: warning: implicit conversion loses integer precision: 'short' to 'char' [-Wconversion]
+../../../demo/mousedlg.cc:51:18: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
+../../../demo/mousedlg.cc:61:14: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/mousedlg.cc:61:14: warning: implicit conversion loses integer precision: 'short' to 'char' [-Wconversion]
 In file included from ../../../demo/mousedlg.cc:30:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../demo/mousedlg.cc:82:13: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
-../../../demo/mousedlg.cc:84:13: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
-../../../demo/mousedlg.cc:86:29: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/mousedlg.cc:86:26: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/mousedlg.cc:86:29: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/mousedlg.cc:87:26: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/mousedlg.cc:88:21: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/mousedlg.cc:74:7: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
+../../../demo/mousedlg.cc:76:7: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
+../../../demo/mousedlg.cc:78:26: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/mousedlg.cc:78:23: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/mousedlg.cc:78:26: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/mousedlg.cc:79:23: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/mousedlg.cc:80:18: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/mousedlg.cc:30:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:2431:9: warning: padding class 'TScrollBar' with 3 bytes to align 'minVal' [-Wpadded]
@@ -8426,18 +8426,18 @@ In file included from ../../../demo/mousedlg.cc:30:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:2056:7: warning: padding size of 'TLabel' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/dialogs.h:1065:24: warning: padding class 'TCluster' with 4 bytes to align 'strings' [-Wpadded]
-../../../demo/mousedlg.cc:118:16: warning: implicit conversion changes signedness: 'ushort' (aka 'unsigned short') to 'short' [-Wsign-conversion]
+../../../demo/mousedlg.cc:110:13: warning: implicit conversion changes signedness: 'ushort' (aka 'unsigned short') to 'short' [-Wsign-conversion]
 In file included from ../../../demo/mousedlg.cc:30:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:712:13: warning: padding class 'TButton' with 1 byte to align 'amDefault' [-Wpadded]
-../../../demo/mousedlg.cc:126:17: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/mousedlg.cc:118:13: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/mousedlg.cc:30:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../demo/mousedlg.cc:137:44: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/mousedlg.cc:143:44: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/mousedlg.cc:143:44: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/mousedlg.cc:127:31: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/mousedlg.cc:132:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/mousedlg.cc:132:31: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
 In file included from ../../../demo/mousedlg.cc:30:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
@@ -8496,16 +8496,16 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../demo/puzzle.cc:34:
-../../../demo/puzzle.h:23:62: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/puzzle.h:54:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:56:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:59:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:61:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:73:12: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/puzzle.h:93:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:95:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:98:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:100:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:21:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/puzzle.h:48:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:53:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:58:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:63:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:71:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/puzzle.h:87:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:92:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:97:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:102:15: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/puzzle.cc:25:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -8523,50 +8523,50 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:748:7: warning: padding size of 'opstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/puzzle.cc:70:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:65:29: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:43: note: expanded from macro '__DELTA'
-../../../demo/puzzle.cc:70:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:65:29: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:29: note: expanded from macro '__DELTA'
-../../../demo/puzzle.cc:70:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:65:29: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:23: note: expanded from macro '__DELTA'
-../../../demo/puzzle.cc:68:18: warning: no previous extern declaration for non-static variable 'RPuzzleView' [-Wmissing-variable-declarations]
-../../../demo/puzzle.cc:68:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+../../../demo/puzzle.cc:64:18: warning: no previous extern declaration for non-static variable 'RPuzzleView' [-Wmissing-variable-declarations]
+../../../demo/puzzle.cc:64:18: warning: declaration requires a global constructor [-Wglobal-constructors]
 In file included from ../../../demo/puzzle.cc:25:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:155:7: warning: padding size of 'TStreamableClass' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/puzzle.cc:91:11: warning: implicit conversion loses integer precision: 'time_t' (aka 'long') to 'unsigned int' [-Wshorten-64-to-32]
-../../../demo/puzzle.cc:109:39: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
-../../../demo/puzzle.cc:111:20: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
-../../../demo/puzzle.cc:118:30: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/puzzle.cc:120:37: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/puzzle.cc:124:24: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/puzzle.cc:131:30: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.cc:131:30: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/puzzle.cc:131:49: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/puzzle.cc:133:30: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.cc:134:26: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.cc:133:30: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/puzzle.cc:134:20: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/puzzle.cc:143:21: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
+../../../demo/puzzle.cc:82:8: warning: implicit conversion loses integer precision: 'time_t' (aka 'long') to 'unsigned int' [-Wshorten-64-to-32]
+../../../demo/puzzle.cc:99:36: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
+../../../demo/puzzle.cc:101:14: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wconversion]
+../../../demo/puzzle.cc:108:24: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/puzzle.cc:110:28: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/puzzle.cc:113:25: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/puzzle.cc:119:17: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:119:17: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/puzzle.cc:119:38: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/puzzle.cc:121:17: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:122:16: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:121:17: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/puzzle.cc:122:10: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/puzzle.cc:130:18: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
 In file included from ../../../demo/puzzle.cc:25:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
 ../../../tvision/system.h:264:11: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:289:5: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:377:5: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../demo/puzzle.cc:295:13: warning: no previous extern declaration for non-static variable 'solution' [-Wmissing-variable-declarations]
+../../../demo/puzzle.cc:268:13: warning: no previous extern declaration for non-static variable 'solution' [-Wmissing-variable-declarations]
 In file included from ../../../demo/puzzle.cc:25:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../demo/puzzle.cc:340:33: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:307:33: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:43: note: expanded from macro '__DELTA'
-../../../demo/puzzle.cc:340:33: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:307:33: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:29: note: expanded from macro '__DELTA'
-../../../demo/puzzle.cc:340:33: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:307:33: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:147:23: note: expanded from macro '__DELTA'
-../../../demo/puzzle.cc:338:18: warning: no previous extern declaration for non-static variable 'RPuzzleWindow' [-Wmissing-variable-declarations]
-../../../demo/puzzle.cc:338:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+../../../demo/puzzle.cc:306:18: warning: no previous extern declaration for non-static variable 'RPuzzleWindow' [-Wmissing-variable-declarations]
+../../../demo/puzzle.cc:306:18: warning: declaration requires a global constructor [-Wglobal-constructors]
 ../../../demo/tvdemo1.cc:26:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/tvdemo1.cc:25:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/tvdemo1.cc:17:9: warning: macro is not used [-Wunused-macros]
@@ -8673,19 +8673,19 @@ In file included from ../../../tvision/help.h:32:
 ../../../tvision/helpbase.h:273:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:278:20: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo1.cc:41:
-../../../demo/fileview.h:25:48: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.h:48:66: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/fileview.h:24:11: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.h:45:3: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../demo/tvdemo1.cc:42:
-../../../demo/puzzle.h:23:62: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/puzzle.h:54:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:56:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:59:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:61:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:73:12: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/puzzle.h:93:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:95:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:98:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:100:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:21:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/puzzle.h:48:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:53:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:58:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:63:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:71:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/puzzle.h:87:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:92:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:97:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.h:102:15: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -8694,7 +8694,7 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3471:12: warning: padding class 'TGroup' with 1 byte to align 'endState' [-Wpadded]
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
 In file included from ../../../demo/tvdemo1.cc:39:
-../../../demo/tvdemo.h:37:16: warning: padding class 'TVDemo' with 4 bytes to align 'heap' [-Wpadded]
+../../../demo/tvdemo.h:33:14: warning: padding class 'TVDemo' with 4 bytes to align 'heap' [-Wpadded]
 In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:699:7: warning: padding size of 'TStatusItem' with 4 bytes to alignment boundary [-Wpadded]
@@ -8703,12 +8703,12 @@ In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
 In file included from ../../../demo/tvdemo1.cc:40:
-../../../demo/gadgets.h:35:7: warning: padding size of 'TClockView' with 6 bytes to alignment boundary [-Wpadded]
+../../../demo/gadgets.h:29:7: warning: padding size of 'TClockView' with 6 bytes to alignment boundary [-Wpadded]
 In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../demo/tvdemo1.cc:97:15: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+../../../demo/tvdemo1.cc:96:9: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
 In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
@@ -8730,8 +8730,8 @@ In file included from ../../../tvision/tv.h:647:
 In file included from ../../../demo/tvdemo1.cc:34:
 In file included from ../../../tvision/help.h:32:
 ../../../tvision/helpbase.h:240:11: warning: padding class 'THelpIndex' with 6 bytes to align 'index' [-Wpadded]
-../../../demo/tvdemo1.cc:191:27: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/tvdemo1.cc:259:18: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/tvdemo1.cc:183:24: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/tvdemo1.cc:250:16: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:80:7: warning: 'TStreamable' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
@@ -8825,44 +8825,44 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../demo/tvdemo2.cc:40:
-../../../demo/ascii.h:27:57: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/ascii.h:51:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:53:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:56:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:58:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:67:58: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/ascii.h:91:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:93:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:96:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:98:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:109:35: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/ascii.h:130:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:132:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:135:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:137:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:24:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/ascii.h:43:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:48:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:53:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:58:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:65:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/ascii.h:84:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:89:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:94:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:99:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:107:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/ascii.h:124:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:129:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:134:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/ascii.h:139:15: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo2.cc:41:
-../../../demo/calendar.h:25:64: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calendar.h:49:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:51:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:54:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:56:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:68:12: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calendar.h:88:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:90:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:93:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:95:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:23:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/calendar.h:44:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:49:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:54:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:59:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:68:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/calendar.h:84:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:89:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:94:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calendar.h:99:15: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo2.cc:42:
-../../../demo/calc.h:32:63: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calc.h:51:61: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calc.h:69:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:71:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:74:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:76:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:88:13: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calc.h:108:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:110:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:113:20: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:115:20: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:29:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/calc.h:49:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/calc.h:64:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:69:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:74:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:79:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:87:3: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/calc.h:103:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:108:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:113:15: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.h:118:15: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo2.cc:32:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -8874,7 +8874,7 @@ In file included from ../../../demo/tvdemo2.cc:32:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
 In file included from ../../../demo/tvdemo2.cc:37:
-../../../demo/tvdemo.h:37:16: warning: padding class 'TVDemo' with 4 bytes to align 'heap' [-Wpadded]
+../../../demo/tvdemo.h:33:14: warning: padding class 'TVDemo' with 4 bytes to align 'heap' [-Wpadded]
 In file included from ../../../demo/tvdemo2.cc:32:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]
@@ -8888,18 +8888,18 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../demo/tvdemo2.cc:32:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:712:13: warning: padding class 'TButton' with 1 byte to align 'amDefault' [-Wpadded]
-../../../demo/tvdemo2.cc:168:26: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/tvdemo2.cc:184:28: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/tvdemo2.cc:200:25: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/tvdemo2.cc:159:23: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/tvdemo2.cc:174:6: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/tvdemo2.cc:188:22: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo2.cc:32:
 In file included from ../../../tvision/tv.h:679:
 ../../../tvision/colorsel.h:146:17: warning: padding class 'TColorGroup' with 7 bytes to align 'items' [-Wpadded]
 ../../../tvision/colorsel.h:82:17: warning: padding class 'TColorItem' with 7 bytes to align 'next' [-Wpadded]
 ../../../tvision/colorsel.h:133:13: warning: definition of implicit copy assignment operator for 'TColorGroup' is deprecated because it has a user-declared destructor [-Wdeprecated]
-../../../demo/tvdemo2.cc:298:13: note: in implicit copy assignment operator for 'TColorGroup' first required here
-../../../demo/tvdemo2.cc:341:40: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/tvdemo2.cc:273:9: note: in implicit copy assignment operator for 'TColorGroup' first required here
+../../../demo/tvdemo2.cc:311:37: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo2.cc:42:
-../../../demo/calc.h:79:7: warning: 'TCalculator' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+../../../demo/calc.h:82:7: warning: 'TCalculator' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 In file included from ../../../demo/tvdemo2.cc:32:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]
@@ -9012,8 +9012,8 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../demo/tvdemo3.cc:42:
-../../../demo/fileview.h:25:48: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.h:48:66: warning: extra ';' after member function definition [-Wextra-semi]
+../../../demo/fileview.h:24:11: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/fileview.h:45:3: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -9023,15 +9023,15 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3024:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/views.h:3784:11: warning: padding class 'TWindow' with 3 bytes to align 'zoomRect' [-Wpadded]
 ../../../tvision/views.h:3811:13: warning: padding class 'TWindow' with 4 bytes to align 'frame' [-Wpadded]
-../../../demo/tvdemo3.cc:50:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/tvdemo3.cc:51:6: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:261:18: warning: padding class 'TDeskTop' with 4 bytes to align 'background' [-Wpadded]
 In file included from ../../../demo/tvdemo3.cc:37:
-../../../demo/tvdemo.h:37:16: warning: padding class 'TVDemo' with 4 bytes to align 'heap' [-Wpadded]
+../../../demo/tvdemo.h:33:14: warning: padding class 'TVDemo' with 4 bytes to align 'heap' [-Wpadded]
 In file included from ../../../demo/tvdemo3.cc:39:
-../../../demo/gadgets.h:35:7: warning: padding size of 'TClockView' with 6 bytes to alignment boundary [-Wpadded]
-../../../demo/tvdemo3.cc:70:21: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/gadgets.h:29:7: warning: padding size of 'TClockView' with 6 bytes to alignment boundary [-Wpadded]
+../../../demo/tvdemo3.cc:70:6: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:422:7: warning: padding size of 'pstream' with 4 bytes to alignment boundary [-Wpadded]

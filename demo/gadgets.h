@@ -14,38 +14,27 @@
 #if !defined( TV_INC_GADGETS_H )
 #define TV_INC_GADGETS_H
 
-class THeapView : public TView
-{
+class THeapView:public TView {
+      public:
+	THeapView(TRect & r);
+	virtual void update();
+	virtual void draw();
+	virtual long heapSize();
 
-public:
-
-    THeapView( TRect& r );
-    virtual void update();
-    virtual void draw();
-    virtual long heapSize();
-
-private:
-
-    long oldMem, newMem;
-    char heapStr[16];
-
+      private:
+	long oldMem, newMem;
+	char heapStr[16];
 };
 
+class TClockView:public TView {
+      public:
+	TClockView(TRect & r);
+	virtual void draw();
+	virtual void update();
 
-class TClockView : public TView
-{
-
-public:
-
-    TClockView( TRect& r );
-    virtual void draw();
-    virtual void update();
-
-private:
-
-    char lastTime[9];
-    char curTime[9];
-
+      private:
+	char lastTime[9];
+	char curTime[9];
 };
 
-#endif      // TV_INC_GADGETS_H
+#endif // TV_INC_GADGETS_H
