@@ -408,8 +408,8 @@ private:
 /*                                                                         */
 /* ------------------------------------------------------------------------*/
 
-#if defined( Uses_pstream ) && !defined( __pstream )
-#define __pstream
+#if defined( Uses_pstream ) && !defined( TV_pstream )
+#define TV_pstream
 
 #include <iostream>
 
@@ -546,8 +546,8 @@ protected:
 /*                                                                         */
 /* ------------------------------------------------------------------------*/
 
-#if defined( Uses_ipstream ) && !defined( __ipstream )
-#define __ipstream
+#if defined( Uses_ipstream ) && !defined( TV_ipstream )
+#define TV_ipstream
 
 #include <iostream>
 
@@ -723,8 +723,8 @@ private:
 /*                                                                         */
 /* ------------------------------------------------------------------------*/
 
-#if defined( Uses_opstream ) && !defined( __opstream )
-#define __opstream
+#if defined( Uses_opstream ) && !defined( TV_opstream )
+#define TV_opstream
 
 #include <iostream>
 
@@ -904,8 +904,8 @@ private:
 /*                                                                         */
 /* ------------------------------------------------------------------------*/
 
-#if defined( Uses_iopstream ) && !defined( __iopstream )
-#define __iopstream
+#if defined( Uses_iopstream ) && !defined( TV_iopstream )
+#define TV_iopstream
 
 #include <iostream>
 
@@ -945,8 +945,8 @@ protected:
 /*                                                                         */
 /* ------------------------------------------------------------------------*/
 
-#if defined( Uses_fpbase ) && !defined( __fpbase )
-#define __fpbase
+#if defined( Uses_fpbase ) && !defined( TV_fpbase )
+#define TV_fpbase
 
 #include <fstream>
 
@@ -1002,8 +1002,8 @@ private:
 /*                                                                         */
 /* ------------------------------------------------------------------------*/
 
-#if defined( Uses_ifpstream ) && !defined( __ifpstream )
-#define __ifpstream
+#if defined( Uses_ifpstream ) && !defined( TV_ifpstream )
+#define TV_ifpstream
 
 #include <iostream>
 
@@ -1052,8 +1052,8 @@ public:
 /*                                                                         */
 /* ------------------------------------------------------------------------*/
 
-#if defined( Uses_ofpstream ) && !defined( __ofpstream )
-#define __ofpstream
+#if defined( Uses_ofpstream ) && !defined( TV_ofpstream )
+#define TV_ofpstream
 
 #include <iostream>
 
@@ -1103,8 +1103,8 @@ public:
 /*                                                                         */
 /* ------------------------------------------------------------------------*/
 
-#if defined( Uses_fpstream ) && !defined( __fpstream )
-#define __fpstream
+#if defined( Uses_fpstream ) && !defined( TV_fpstream )
+#define TV_fpstream
 
 #include <iostream>
 

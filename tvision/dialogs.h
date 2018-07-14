@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if !defined( __BUTTON_TYPE )
-#define __BUTTON_TYPE
+#if !defined( TV_BUTTON_TYPE )
+#define TV_BUTTON_TYPE
 
 /** \file dialogs.h
  * dialogs.h
@@ -50,7 +50,7 @@ const int
     bfGrabFocus = 0x08,
     cmRecordHistory = 60;
 
-#endif  // __BUTTON_TYPE
+#endif  // TV_BUTTON_TYPE
 
 /* ---------------------------------------------------------------------- */
 /*      class TDialog                                                     */

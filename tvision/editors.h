@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if !defined( __EDIT_COMMAND_CODES )
-#define __EDIT_COMMAND_CODES
+#if !defined( TV_EDIT_COMMAND_CODES )
+#define TV_EDIT_COMMAND_CODES
 
 /** \file editors.h
  * editors.h
@@ -158,7 +158,7 @@ const int
 const
   int maxLineLength = 256;
 
-#endif  // __EDIT_COMMAND_CODES
+#endif  // TV_EDIT_COMMAND_CODES
 
 /** \enum TEditorDialog
  * The TEditorDialog data type is a pointer to function returning ushort

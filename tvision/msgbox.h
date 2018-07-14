@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if defined( Uses_MsgBox ) && !defined( __MsgBox )
-#define __MsgBox
+#if defined( Uses_MsgBox ) && !defined( TV_MsgBox )
+#define TV_MsgBox
 
 /** \file msgbox.h
  * msgbox.h

@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if !defined( __FILE_CMDS )
-#define __FILE_CMDS
+#if !defined( TV_FILE_CMDS )
+#define TV_FILE_CMDS
 
 /** \file stddlg.h
  * stddlg.h
@@ -36,7 +36,7 @@ int cmFileOpen    = 1001,   // Returned from TFileDialog when Open pressed
     cmFileDoubleClicked     // A file was selected in the TFileList
             = 103;
 
-#endif  // __FILE_CMDS
+#endif  // TV_FILE_CMDS
 
 #if defined( Uses_TSearchRec ) && !defined( TV_TSearchRec )
 #define TV_TSearchRec

@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if !defined( __COMMAND_CODES )
-#define __COMMAND_CODES
+#if !defined( TV_COMMAND_CODES )
+#define TV_COMMAND_CODES
 
     /** \file views.h
      * views.h
@@ -739,7 +739,7 @@ const ushort
      */
     focusedEvents       = evKeyboard | evCommand;
 
-#endif  // __COMMAND_CODES
+#endif  // TV_COMMAND_CODES
 
 #if defined( Uses_TCommandSet ) && !defined( TV_TCommandSet )
 #define TV_TCommandSet

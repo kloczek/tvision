@@ -165,8 +165,8 @@ protected:
 
 #endif  // Uses_TTerminal
 
-#if defined( Uses_otstream ) && !defined( __otstream )
-#define __otstream
+#if defined( Uses_otstream ) && !defined( TV_otstream )
+#define TV_otstream
 
 class ostream;
 

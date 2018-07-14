@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if !defined( __TKEYS_H )
-#define __TKEYS_H
+#if !defined( TV_TKEYS_H )
+#define TV_TKEYS_H
 
 /** \file tkeys.h
  * tkeys.h
@@ -505,4 +505,4 @@ const ushort
      */
     kbInsState    = 0x0080;
 
-#endif  // __TKEYS_H
+#endif  // TV_TKEYS_H

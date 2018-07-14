@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if !defined( __EVENT_CODES )
-#define __EVENT_CODES
+#if !defined( TV_EVENT_CODES )
+#define TV_EVENT_CODES
 
 /** \file system.h
  * system.h
@@ -96,7 +96,7 @@ const int mbRightButton = 0x02;
 const int meMouseMoved = 0x01;
 const int meDoubleClick = 0x02;
 
-#endif  // __EVENT_CODES
+#endif  // TV_EVENT_CODES
 
 #if defined( Uses_TEvent ) && !defined( TV_TEvent )
 #define TV_TEvent

@@ -9,8 +9,8 @@
  * Modified by Sergio Sigala <sergio@sigala.it>
  */
 
-#if !defined( __COLOR_COMMAND_CODES )
-#define __COLOR_COMMAND_CODES
+#if !defined( TV_COLOR_COMMAND_CODES )
+#define TV_COLOR_COMMAND_CODES
 
 /** \file colorsel.h
  * colorsel.h
@@ -24,7 +24,7 @@ const
   cmNewColorIndex          = 75,
   cmSaveColorIndex         = 76;
 
-#endif  // __COLOR_COMMAND_CODES
+#endif  // TV_COLOR_COMMAND_CODES
 
 class TColorItem;
 class TColorGroup;
