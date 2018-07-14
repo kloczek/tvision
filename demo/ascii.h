@@ -21,7 +21,7 @@ class TTable:public TView {
       public:
 	TTable(TRect & r);
 	TTable(StreamableInit):TView(streamableInit) {
-	};
+	}
 	virtual void draw();
 	virtual void handleEvent(TEvent & event);
 	void charFocused();
@@ -62,7 +62,7 @@ class TReport:public TView {
       public:
 	TReport(TRect & r);
 	TReport(StreamableInit):TView(streamableInit) {
-	};
+	}
 	virtual void draw();
 	virtual void handleEvent(TEvent & event);
 
@@ -104,7 +104,7 @@ class TAsciiChart:public TWindow {
 	TAsciiChart();
 	TAsciiChart(StreamableInit):TWindowInit(&initFrame),
 	    TWindow(streamableInit) {
-	};
+	}
 	virtual void handleEvent(TEvent & event);
 
       private:

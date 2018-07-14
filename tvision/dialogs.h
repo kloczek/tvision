@@ -728,7 +728,7 @@ protected:
      * This is achieved by calling this constructor with an argument of type
      * @ref StreamableInit.
      */
-    TButton( StreamableInit ): TView( streamableInit ) {};
+    TButton( StreamableInit ): TView( streamableInit ) {}
     /**
      * Used to store the view in a stream.
      *

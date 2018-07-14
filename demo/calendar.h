@@ -20,7 +20,7 @@ class TCalendarView:public TView {
       public:
 	TCalendarView(TRect & r);
 	TCalendarView(StreamableInit):TView(streamableInit) {
-	};
+	}
 	virtual void handleEvent(TEvent & event);
 	virtual void draw();
 
@@ -65,7 +65,7 @@ class TCalendarWindow:public TWindow {
 	TCalendarWindow(StreamableInit):TWindowInit(&TCalendarWindow::
 						    initFrame),
 	    TWindow(streamableInit) {
-	};
+	}
 
       private:
 	virtual const char *streamableName() const {

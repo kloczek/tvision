@@ -965,7 +965,7 @@ public:
      *
      * Simply calls @ref TProgram::getEvent().
      */
-    void getEvent(TEvent& event) { TProgram::getEvent(event); };
+    void getEvent(TEvent& event) { TProgram::getEvent(event); }
 };
 
 #endif

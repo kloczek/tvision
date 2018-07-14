@@ -64,9 +64,9 @@ class TRefTable:public TSortedCollection {
       private:
 	virtual void *readItem(ipstream &) {
 		return nullptr;
-	};
+	}
 	virtual void writeItem(void *, opstream &) {
-	};
+	}
 };
 
 struct TCrossRefNode {

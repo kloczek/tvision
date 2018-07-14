@@ -189,7 +189,7 @@ public:
      * Creates a TMenu object and sets both @ref deflt and @ref items data
      * members to 0.
      */
-    TMenu() : items(nullptr), deflt(nullptr) {};
+    TMenu() : items(nullptr), deflt(nullptr) {}
     /**
      * Creates a TMenu object consisting of `itemList'; sets @ref items and
      * @ref deflt data members to that item.

@@ -26,7 +26,7 @@ class TCalcDisplay:public TView {
       public:
 	TCalcDisplay(TRect & r);
 	TCalcDisplay(StreamableInit):TView(streamableInit) {
-	};
+	}
 	~TCalcDisplay();
 	virtual TPalette & getPalette() const;
 	virtual void handleEvent(TEvent & event);
@@ -46,7 +46,7 @@ class TCalcDisplay:public TView {
 	void error();
 	inline double getDisplay() {
 		return (atof(number));
-	};
+	}
 	virtual const char *streamableName() const {
 		return name;
 	}
@@ -84,7 +84,7 @@ class TCalculator:public TDialog {
 	TCalculator();
 	TCalculator(StreamableInit):TWindowInit(&TCalculator::initFrame),
 	    TDialog(streamableInit) {
-	};
+	}
 
       private:
 	virtual const char *streamableName() const {

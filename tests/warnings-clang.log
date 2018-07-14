@@ -4,7 +4,6 @@
     355 -Wunused-macros
     313 -Wconversion
     231 -Wsign-conversion
-    138 -Wextra-semi
     106 -Wdocumentation-unknown-command
     106 -Wabstract-vbase-init
     102 -Wmissing-variable-declarations
@@ -83,9 +82,6 @@ In file included from ../../../tvision/TApplication.cc:20:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tvision/TApplication.cc:20:
-In file included from ../../../tvision/tv.h:699:
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../tvision/TApplication.cc:20:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -206,7 +202,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/TButton.cc:19:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -332,7 +327,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:479:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:485:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:490:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -522,7 +516,6 @@ In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TCluster.cc:22:
 In file included from ../../../tvision/tv.h:655:
-../../../tvision/resource.h:75:82: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/resource.h:91:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:96:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:102:20: warning: use of old-style cast [-Wold-style-cast]
@@ -951,7 +944,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:223:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:229:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:234:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -1392,7 +1384,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:479:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:485:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:490:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -2322,7 +2313,6 @@ In file included from ../../../tvision/tv.h:667:
 In file included from ../../../tvision/TInputLine.cc:20:
 In file included from ../../../tvision/tv.h:671:
 ../../../tvision/validate.h:17:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-../../../tvision/validate.h:218:63: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../tvision/TInputLine.cc:20:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
@@ -2787,7 +2777,6 @@ In file included from ../../../tvision/TMenuBar.cc:18:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:106:13: warning: padding class 'TMenuItem' with 2 bytes to align 'disabled' [-Wpadded]
 ../../../tvision/menus.h:120:5: warning: padding class 'TMenuItem' with 4 bytes to align anonymous bit-field [-Wpadded]
-../../../tvision/menus.h:192:48: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/menus.h:383:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:388:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:394:20: warning: use of old-style cast [-Wold-style-cast]
@@ -2848,7 +2837,6 @@ In file included from ../../../tvision/TMenuBox.cc:16:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:106:13: warning: padding class 'TMenuItem' with 2 bytes to align 'disabled' [-Wpadded]
 ../../../tvision/menus.h:120:5: warning: padding class 'TMenuItem' with 4 bytes to align anonymous bit-field [-Wpadded]
-../../../tvision/menus.h:192:48: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/menus.h:383:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:388:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:394:20: warning: use of old-style cast [-Wold-style-cast]
@@ -2916,7 +2904,6 @@ In file included from ../../../tvision/TMenuPopup.cc:17:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:106:13: warning: padding class 'TMenuItem' with 2 bytes to align 'disabled' [-Wpadded]
 ../../../tvision/menus.h:120:5: warning: padding class 'TMenuItem' with 4 bytes to align anonymous bit-field [-Wpadded]
-../../../tvision/menus.h:192:48: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/menus.h:383:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:388:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:394:20: warning: use of old-style cast [-Wold-style-cast]
@@ -2991,7 +2978,6 @@ In file included from ../../../tvision/TMenuView.cc:22:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:106:13: warning: padding class 'TMenuItem' with 2 bytes to align 'disabled' [-Wpadded]
 ../../../tvision/menus.h:120:5: warning: padding class 'TMenuItem' with 4 bytes to align anonymous bit-field [-Wpadded]
-../../../tvision/menus.h:192:48: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/menus.h:383:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:388:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:394:20: warning: use of old-style cast [-Wold-style-cast]
@@ -3357,7 +3343,6 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../tvision/TProgram.cc:28:
 In file included from ../../../tvision/tv.h:683:
-../../../tvision/menus.h:192:48: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/menus.h:383:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:388:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/menus.h:394:20: warning: use of old-style cast [-Wold-style-cast]
@@ -3504,12 +3489,10 @@ In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TResourceCollection.cc:14:
 In file included from ../../../tvision/tv.h:655:
-../../../tvision/resource.h:75:82: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/resource.h:91:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:96:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:102:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:107:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/resource.h:157:11: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/resource.h:207:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:212:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:218:20: warning: use of old-style cast [-Wold-style-cast]
@@ -3569,12 +3552,10 @@ In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TResourceFile.cc:18:
 In file included from ../../../tvision/tv.h:655:
-../../../tvision/resource.h:75:82: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/resource.h:91:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:96:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:102:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:107:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/resource.h:157:11: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/resource.h:207:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:212:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:218:20: warning: use of old-style cast [-Wold-style-cast]
@@ -3977,7 +3958,6 @@ In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TStringCollection.cc:15:
 In file included from ../../../tvision/tv.h:655:
-../../../tvision/resource.h:75:82: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/resource.h:91:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:96:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:102:20: warning: use of old-style cast [-Wold-style-cast]
@@ -4091,7 +4071,6 @@ In file included from ../../../tvision/tv.h:651:
 ../../../tvision/msgbox.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/TValidator.cc:20:
 In file included from ../../../tvision/tv.h:655:
-../../../tvision/resource.h:75:82: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/resource.h:91:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:96:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:102:20: warning: use of old-style cast [-Wold-style-cast]
@@ -4102,29 +4081,22 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/TValidator.cc:20:
 In file included from ../../../tvision/tv.h:671:
 ../../../tvision/validate.h:17:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-../../../tvision/validate.h:218:63: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tvision/validate.h:446:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:466:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:471:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:477:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:482:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/validate.h:558:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:574:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:579:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:585:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:590:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/validate.h:699:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:715:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:720:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:726:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:731:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/validate.h:758:26: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tvision/validate.h:794:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:801:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:806:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:812:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:817:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/validate.h:888:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:914:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:919:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:925:20: warning: use of old-style cast [-Wold-style-cast]
@@ -4407,12 +4379,10 @@ In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/allnames.cc:70:
 In file included from ../../../tvision/tv.h:655:
-../../../tvision/resource.h:75:82: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/resource.h:91:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:96:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:102:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:107:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/resource.h:157:11: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/resource.h:207:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:212:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:218:20: warning: use of old-style cast [-Wold-style-cast]
@@ -4463,7 +4433,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:479:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:485:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:490:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -4507,29 +4476,22 @@ In file included from ../../../tvision/tv.h:667:
 In file included from ../../../tvision/allnames.cc:70:
 In file included from ../../../tvision/tv.h:671:
 ../../../tvision/validate.h:17:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-../../../tvision/validate.h:218:63: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tvision/validate.h:446:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:466:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:471:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:477:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:482:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/validate.h:558:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:574:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:579:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:585:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:590:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/validate.h:699:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:715:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:720:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:726:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:731:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/validate.h:758:26: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tvision/validate.h:794:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:801:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:806:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:812:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:817:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/validate.h:888:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:914:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:919:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:925:20: warning: use of old-style cast [-Wold-style-cast]
@@ -4923,7 +4885,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:223:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:229:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:234:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -5197,12 +5158,10 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../tvision/helpbase.cc:22:
-../../../tvision/helpbase.h:101:36: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/helpbase.h:185:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:190:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:196:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:201:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/helpbase.h:220:36: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/helpbase.h:262:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:267:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:273:20: warning: use of old-style cast [-Wold-style-cast]
@@ -5349,12 +5308,10 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/help.cc:29:
 In file included from ../../../tvision/help.h:32:
-../../../tvision/helpbase.h:101:36: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/helpbase.h:185:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:190:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:196:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:201:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/helpbase.h:220:36: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/helpbase.h:262:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:267:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:273:20: warning: use of old-style cast [-Wold-style-cast]
@@ -5489,7 +5446,6 @@ In file included from ../../../tvision/menu.cc:17:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:106:13: warning: padding class 'TMenuItem' with 2 bytes to align 'disabled' [-Wpadded]
 ../../../tvision/menus.h:120:5: warning: padding class 'TMenuItem' with 4 bytes to align anonymous bit-field [-Wpadded]
-../../../tvision/menus.h:192:48: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/menu.cc:30:15: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../tvision/menu.cc:17:
 In file included from ../../../tvision/tv.h:683:
@@ -5606,7 +5562,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:479:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:485:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:490:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -5777,12 +5732,10 @@ In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/sall.cc:71:
 In file included from ../../../tvision/tv.h:655:
-../../../tvision/resource.h:75:82: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/resource.h:91:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:96:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:102:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:107:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/resource.h:157:11: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/resource.h:207:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:212:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:218:20: warning: use of old-style cast [-Wold-style-cast]
@@ -5833,7 +5786,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:479:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:485:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:490:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -5877,29 +5829,22 @@ In file included from ../../../tvision/tv.h:667:
 In file included from ../../../tvision/sall.cc:71:
 In file included from ../../../tvision/tv.h:671:
 ../../../tvision/validate.h:17:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-../../../tvision/validate.h:218:63: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tvision/validate.h:446:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:466:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:471:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:477:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:482:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/validate.h:558:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:574:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:579:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:585:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:590:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/validate.h:699:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:715:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:720:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:726:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:731:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/validate.h:758:26: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tvision/validate.h:794:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:801:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:806:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:812:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:817:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/validate.h:888:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:914:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:919:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:925:20: warning: use of old-style cast [-Wold-style-cast]
@@ -6908,7 +6853,6 @@ In file included from ../../../tvision/tv.h:659:
 In file included from ../../../tvision/system.cc:48:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -7270,7 +7214,6 @@ In file included from ../../../tvision/tv.h:651:
 ../../../tvision/msgbox.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/tvtext.cc:43:
 In file included from ../../../tvision/tv.h:655:
-../../../tvision/resource.h:75:82: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/resource.h:91:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:96:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:102:20: warning: use of old-style cast [-Wold-style-cast]
@@ -7320,7 +7263,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:479:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:485:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:490:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -7348,29 +7290,22 @@ In file included from ../../../tvision/tv.h:667:
 In file included from ../../../tvision/tvtext.cc:43:
 In file included from ../../../tvision/tv.h:671:
 ../../../tvision/validate.h:17:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-../../../tvision/validate.h:218:63: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tvision/validate.h:446:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:466:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:471:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:477:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:482:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/validate.h:558:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:574:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:579:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:585:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:590:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/validate.h:699:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:715:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:720:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:726:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:731:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/validate.h:758:26: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tvision/validate.h:794:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:801:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:806:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:812:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:817:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/validate.h:888:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:914:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:919:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:925:20: warning: use of old-style cast [-Wold-style-cast]
@@ -7500,12 +7435,10 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:1107:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvision/tvtext.cc:44:
 In file included from ../../../tvision/help.h:32:
-../../../tvision/helpbase.h:101:36: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/helpbase.h:185:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:190:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:196:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:201:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/helpbase.h:220:36: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/helpbase.h:262:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:267:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:273:20: warning: use of old-style cast [-Wold-style-cast]
@@ -7573,28 +7506,24 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:50:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tvhc/tvhc.cc:85:
 In file included from ../../../tvhc/tvhc.h:18:
-../../../tvision/helpbase.h:101:36: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/helpbase.h:185:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:190:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:196:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:201:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/helpbase.h:220:36: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/helpbase.h:262:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:267:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:273:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:278:20: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../tvhc/tvhc.cc:85:
-../../../tvhc/tvhc.h:80:3: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tvhc/tvhc.h:82:3: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tvhc/tvhc.h:108:7: warning: no previous extern declaration for non-static variable 'helpName' [-Wmissing-variable-declarations]
-../../../tvhc/tvhc.h:109:7: warning: no previous extern declaration for non-static variable 'buffer' [-Wmissing-variable-declarations]
-../../../tvhc/tvhc.h:110:5: warning: no previous extern declaration for non-static variable 'ofs' [-Wmissing-variable-declarations]
-../../../tvhc/tvhc.h:111:12: warning: no previous extern declaration for non-static variable 'refTable' [-Wmissing-variable-declarations]
-../../../tvhc/tvhc.h:112:16: warning: no previous extern declaration for non-static variable 'xRefs' [-Wmissing-variable-declarations]
-../../../tvhc/tvhc.h:91:17: warning: padding struct 'TCrossRefNode' with 3 bytes to align 'next' [-Wpadded]
-../../../tvhc/tvhc.h:113:6: warning: no previous extern declaration for non-static variable 'line' [-Wmissing-variable-declarations]
-../../../tvhc/tvhc.h:114:9: warning: no previous extern declaration for non-static variable 'lineInBuffer' [-Wmissing-variable-declarations]
-../../../tvhc/tvhc.h:115:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
+../../../tvhc/tvhc.h:89:7: warning: no previous extern declaration for non-static variable 'helpName' [-Wmissing-variable-declarations]
+../../../tvhc/tvhc.h:90:7: warning: no previous extern declaration for non-static variable 'buffer' [-Wmissing-variable-declarations]
+../../../tvhc/tvhc.h:91:5: warning: no previous extern declaration for non-static variable 'ofs' [-Wmissing-variable-declarations]
+../../../tvhc/tvhc.h:92:12: warning: no previous extern declaration for non-static variable 'refTable' [-Wmissing-variable-declarations]
+../../../tvhc/tvhc.h:93:16: warning: no previous extern declaration for non-static variable 'xRefs' [-Wmissing-variable-declarations]
+../../../tvhc/tvhc.h:76:17: warning: padding struct 'TCrossRefNode' with 3 bytes to align 'next' [-Wpadded]
+../../../tvhc/tvhc.h:94:6: warning: no previous extern declaration for non-static variable 'line' [-Wmissing-variable-declarations]
+../../../tvhc/tvhc.h:95:9: warning: no previous extern declaration for non-static variable 'lineInBuffer' [-Wmissing-variable-declarations]
+../../../tvhc/tvhc.h:96:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
 ../../../tvhc/tvhc.cc:101:9: warning: implicit conversion loses integer precision: 'std::ios::openmode' (aka 'std::_Ios_Openmode') to 'ushort' (aka 'unsigned short') [-Wconversion]
 ../../../tvhc/tvhc.cc:161:12: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
 ../../../tvhc/tvhc.cc:201:1: warning: function 'error' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
@@ -7602,7 +7531,7 @@ In file included from ../../../tvhc/tvhc.cc:85:
 ../../../tvhc/tvhc.cc:245:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvhc/tvhc.cc:258:8: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../tvhc/tvhc.cc:85:
-../../../tvhc/tvhc.h:61:10: warning: padding struct 'TReference' with 4 bytes to align 'val' [-Wpadded]
+../../../tvhc/tvhc.h:52:10: warning: padding struct 'TReference' with 4 bytes to align 'val' [-Wpadded]
 ../../../tvhc/tvhc.cc:271:9: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvhc/tvhc.cc:284:11: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../tvhc/tvhc.cc:83:
@@ -7615,39 +7544,39 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:919:7: warning: padding size of 'iopstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:1119:7: warning: padding size of 'fpstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvhc/tvhc.cc:359:22: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.h:94:6: note: previous declaration is here
 ../../../tvhc/tvhc.cc:361:14: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvhc/tvhc.cc:372:26: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.h:94:6: note: previous declaration is here
 ../../../tvhc/tvhc.cc:374:14: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvhc/tvhc.cc:382:21: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.h:94:6: note: previous declaration is here
 ../../../tvhc/tvhc.cc:390:10: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvhc/tvhc.cc:397:30: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
 In file included from ../../../tvhc/tvhc.cc:85:
-../../../tvhc/tvhc.h:104:20: warning: padding class 'TTopicDefinition' with 6 bytes to align 'next' [-Wpadded]
+../../../tvhc/tvhc.h:86:20: warning: padding class 'TTopicDefinition' with 6 bytes to align 'next' [-Wpadded]
 ../../../tvhc/tvhc.cc:425:18: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvhc/tvhc.cc:431:41: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.h:94:6: note: previous declaration is here
 ../../../tvhc/tvhc.cc:450:19: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvhc/tvhc.cc:453:39: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
 ../../../tvhc/tvhc.cc:461:45: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.h:94:6: note: previous declaration is here
 ../../../tvhc/tvhc.cc:489:37: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.h:94:6: note: previous declaration is here
 ../../../tvhc/tvhc.cc:507:24: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.h:94:6: note: previous declaration is here
 ../../../tvhc/tvhc.cc:515:9: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvhc/tvhc.cc:524:69: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:112:16: note: previous declaration is here
+../../../tvhc/tvhc.h:93:16: note: previous declaration is here
 ../../../tvhc/tvhc.cc:546:32: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.h:94:6: note: previous declaration is here
 ../../../tvhc/tvhc.cc:552:14: warning: implicit conversion changes signedness: 'int' to 'char' [-Wsign-conversion]
 ../../../tvhc/tvhc.cc:560:27: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
 ../../../tvhc/tvhc.cc:567:29: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.h:94:6: note: previous declaration is here
 ../../../tvhc/tvhc.cc:567:65: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:112:16: note: previous declaration is here
+../../../tvhc/tvhc.h:93:16: note: previous declaration is here
 ../../../tvhc/tvhc.cc:582:13: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvhc/tvhc.cc:594:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvhc/tvhc.cc:599:30: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
@@ -7657,9 +7586,9 @@ In file included from ../../../tvhc/tvhc.cc:85:
 ../../../tvhc/tvhc.cc:616:9: warning: implicit conversion loses integer precision: 'int' to 'uchar' (aka 'unsigned char') [-Wconversion]
 ../../../tvhc/tvhc.cc:623:19: warning: implicit conversion loses integer precision: 'int' to 'uchar' (aka 'unsigned char') [-Wconversion]
 ../../../tvhc/tvhc.cc:659:23: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:112:16: note: previous declaration is here
+../../../tvhc/tvhc.h:93:16: note: previous declaration is here
 ../../../tvhc/tvhc.cc:663:7: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.h:94:6: note: previous declaration is here
 In file included from ../../../tvhc/tvhc.cc:85:
 In file included from ../../../tvhc/tvhc.h:18:
 ../../../tvision/helpbase.h:52:11: warning: padding class 'TParagraph' with 2 bytes to align 'text' [-Wpadded]
@@ -7667,7 +7596,7 @@ In file included from ../../../tvhc/tvhc.h:18:
 ../../../tvhc/tvhc.cc:695:21: warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
 ../../../tvhc/tvhc.cc:696:27: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
 ../../../tvhc/tvhc.cc:716:7: warning: declaration shadows a variable in the global namespace [-Wshadow]
-../../../tvhc/tvhc.h:113:6: note: previous declaration is here
+../../../tvhc/tvhc.h:94:6: note: previous declaration is here
 In file included from ../../../tvhc/tvhc.cc:85:
 In file included from ../../../tvhc/tvhc.h:18:
 ../../../tvision/helpbase.h:326:17: warning: padding class 'THelpFile' with 4 bytes to align 'index' [-Wpadded]
@@ -7738,17 +7667,14 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../demo/ascii.cc:34:
-../../../demo/ascii.h:24:3: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/ascii.h:43:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:48:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:53:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:58:15: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:65:3: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/ascii.h:84:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:89:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:94:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:99:15: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:107:3: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/ascii.h:124:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:129:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:134:15: warning: use of old-style cast [-Wold-style-cast]
@@ -7876,7 +7802,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:223:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:229:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:234:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -7886,13 +7811,10 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../demo/calc.cc:33:
-../../../demo/calc.h:29:3: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calc.h:49:3: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/calc.h:64:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calc.h:69:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calc.h:74:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calc.h:79:15: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:87:3: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/calc.h:103:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calc.h:108:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calc.h:113:15: warning: use of old-style cast [-Wold-style-cast]
@@ -8030,12 +7952,10 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../demo/calendar.cc:32:
-../../../demo/calendar.h:23:3: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/calendar.h:44:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.h:49:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.h:54:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.h:59:15: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:68:3: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/calendar.h:84:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.h:89:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.h:94:15: warning: use of old-style cast [-Wold-style-cast]
@@ -8197,7 +8117,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/fileview.cc:36:
 ../../../demo/fileview.h:24:11: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.h:45:3: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../demo/fileview.cc:27:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -8366,7 +8285,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:223:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:229:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:234:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -8496,12 +8414,10 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
 In file included from ../../../demo/puzzle.cc:34:
-../../../demo/puzzle.h:21:3: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/puzzle.h:48:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/puzzle.h:53:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/puzzle.h:58:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/puzzle.h:63:15: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:71:3: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/puzzle.h:87:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/puzzle.h:92:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/puzzle.h:97:15: warning: use of old-style cast [-Wold-style-cast]
@@ -8648,7 +8564,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../demo/tvdemo1.cc:34:
 In file included from ../../../tvision/help.h:30:
 In file included from ../../../tvision/tv.h:635:
@@ -8662,26 +8577,21 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:2523:20: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo1.cc:34:
 In file included from ../../../tvision/help.h:32:
-../../../tvision/helpbase.h:101:36: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/helpbase.h:185:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:190:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:196:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:201:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/helpbase.h:220:36: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/helpbase.h:262:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:267:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:273:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.h:278:20: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo1.cc:41:
 ../../../demo/fileview.h:24:11: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.h:45:3: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../demo/tvdemo1.cc:42:
-../../../demo/puzzle.h:21:3: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/puzzle.h:48:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/puzzle.h:53:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/puzzle.h:58:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/puzzle.h:63:15: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/puzzle.h:71:3: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/puzzle.h:87:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/puzzle.h:92:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/puzzle.h:97:15: warning: use of old-style cast [-Wold-style-cast]
@@ -8790,7 +8700,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:223:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:229:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:234:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -8823,42 +8732,33 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../demo/tvdemo2.cc:40:
-../../../demo/ascii.h:24:3: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/ascii.h:43:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:48:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:53:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:58:15: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:65:3: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/ascii.h:84:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:89:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:94:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:99:15: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/ascii.h:107:3: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/ascii.h:124:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:129:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:134:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/ascii.h:139:15: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo2.cc:41:
-../../../demo/calendar.h:23:3: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/calendar.h:44:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.h:49:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.h:54:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.h:59:15: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calendar.h:68:3: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/calendar.h:84:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.h:89:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.h:94:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calendar.h:99:15: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo2.cc:42:
-../../../demo/calc.h:29:3: warning: extra ';' after member function definition [-Wextra-semi]
-../../../demo/calc.h:49:3: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/calc.h:64:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calc.h:69:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calc.h:74:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calc.h:79:15: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.h:87:3: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../demo/calc.h:103:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calc.h:108:15: warning: use of old-style cast [-Wold-style-cast]
 ../../../demo/calc.h:113:15: warning: use of old-style cast [-Wold-style-cast]
@@ -9010,10 +8910,8 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../demo/tvdemo3.cc:42:
 ../../../demo/fileview.h:24:11: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/fileview.h:45:3: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../demo/tvdemo3.cc:35:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -9083,9 +8981,6 @@ In file included from ../../../tutorial/tvguid01.cc:10:
 In file included from ../../../tvision/tv.h:675:
 ../../../tvision/stddlg.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 ../../../tvision/stddlg.h:15:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-In file included from ../../../tutorial/tvguid01.cc:10:
-In file included from ../../../tvision/tv.h:699:
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../tutorial/tvguid01.cc:10:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -9164,7 +9059,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../tutorial/tvguid02.cc:16:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -9261,7 +9155,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../tutorial/tvguid03.cc:19:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -9363,7 +9256,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../tutorial/tvguid04.cc:21:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -9471,7 +9363,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../tutorial/tvguid05.cc:23:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -9580,7 +9471,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tutorial/tvguid06.cc:42:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid06.cc:45:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid06.cc:46:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
@@ -9693,7 +9583,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tutorial/tvguid07.cc:42:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid07.cc:45:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid07.cc:46:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
@@ -9817,7 +9706,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tutorial/tvguid08.cc:45:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid08.cc:48:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid08.cc:49:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
@@ -9949,7 +9837,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tutorial/tvguid09.cc:46:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid09.cc:49:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid09.cc:50:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
@@ -10081,7 +9968,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tutorial/tvguid10.cc:46:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid10.cc:49:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid10.cc:50:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
@@ -10216,7 +10102,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tutorial/tvguid11.cc:51:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid11.cc:54:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid11.cc:55:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
@@ -10351,7 +10236,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tutorial/tvguid12.cc:49:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid12.cc:52:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid12.cc:53:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
@@ -10457,7 +10341,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:223:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:229:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:234:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -10491,7 +10374,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tutorial/tvguid13.cc:52:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid13.cc:55:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid13.cc:56:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
@@ -10600,7 +10482,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:223:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:229:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:234:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -10654,7 +10535,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tutorial/tvguid14.cc:54:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid14.cc:57:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid14.cc:58:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
@@ -10773,7 +10653,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:479:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:485:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:490:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -10827,7 +10706,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tutorial/tvguid15.cc:56:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid15.cc:59:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid15.cc:60:5: warning: no previous extern declaration for non-static variable 'lineCount' [-Wmissing-variable-declarations]
@@ -10947,7 +10825,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:479:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:485:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:490:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -11001,7 +10878,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tutorial/tvguid16.cc:58:13: warning: no previous extern declaration for non-static variable 'demoDialogData' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid16.cc:64:13: warning: no previous extern declaration for non-static variable 'fileToRead' [-Wmissing-variable-declarations]
 ../../../tutorial/tvguid16.cc:67:7: warning: no previous extern declaration for non-static variable 'lines' [-Wmissing-variable-declarations]
@@ -11098,7 +10974,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../tutorial/background.cc:10:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -11164,7 +11039,6 @@ In file included from ../../../tvision/tv.h:651:
 ../../../tvision/msgbox.h:13:9: warning: macro name is a reserved identifier [-Wreserved-id-macro]
 In file included from ../../../tutorial/listbox.cc:28:
 In file included from ../../../tvision/tv.h:655:
-../../../tvision/resource.h:75:82: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/resource.h:91:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:96:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/resource.h:102:20: warning: use of old-style cast [-Wold-style-cast]
@@ -11202,7 +11076,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:223:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:229:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:234:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -11249,7 +11122,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../tutorial/listbox.cc:28:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -11371,7 +11243,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../tutorial/load.cc:19:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -11472,7 +11343,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:479:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:485:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:490:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -11514,7 +11384,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../tutorial/nomenus.cc:22:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -11608,7 +11477,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:223:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:229:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:234:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -11642,7 +11510,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../tutorial/splash.cc:17:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -11735,7 +11602,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:479:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:485:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:490:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -11812,7 +11678,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../tutorial/tvedit.cc:35:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -11906,7 +11771,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:223:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:229:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:234:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -11948,7 +11812,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tutorial/tvlife.cc:439:27: warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
 In file included from ../../../tutorial/tvlife.cc:27:
 In file included from ../../../tvision/tv.h:659:
@@ -12060,7 +11923,6 @@ In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:479:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:485:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:490:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/dialogs.h:731:58: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/dialogs.h:762:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:767:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/dialogs.h:773:20: warning: use of old-style cast [-Wold-style-cast]
@@ -12076,18 +11938,14 @@ In file included from ../../../tvision/tv.h:667:
 In file included from ../../../tutorial/validator.cc:24:
 In file included from ../../../tvision/tv.h:671:
 ../../../tvision/validate.h:17:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
-../../../tvision/validate.h:218:63: warning: extra ';' after member function definition [-Wextra-semi]
-../../../tvision/validate.h:446:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:466:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:471:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:477:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:482:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/validate.h:558:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:574:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:579:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:585:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:590:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/validate.h:699:63: warning: extra ';' after member function definition [-Wextra-semi]
 ../../../tvision/validate.h:715:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:720:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/validate.h:726:20: warning: use of old-style cast [-Wold-style-cast]
@@ -12127,7 +11985,6 @@ In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:310:20: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:35: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/app.h:315:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/app.h:968:64: warning: extra ';' after member function definition [-Wextra-semi]
 In file included from ../../../tutorial/validator.cc:24:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]

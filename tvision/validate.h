@@ -215,7 +215,7 @@ protected:
      */
     virtual void* read( ipstream& is );
 private:
-    virtual const char *streamableName() const  {return name;};
+    virtual const char *streamableName() const  {return name;}
 public:
     /**
      * Called to create an object in certain stream-reading situations.
@@ -443,7 +443,7 @@ private:
     /**
      * Undocumented.
      */
-    virtual const char *streamableName() const  {return name;};
+    virtual const char *streamableName() const  {return name;}
     /**
      * Undocumented.
      */
@@ -555,7 +555,7 @@ private:
     /**
      * Undocumented.
      */
-    virtual const char *streamableName() const  {return name;};
+    virtual const char *streamableName() const  {return name;}
 public:
     /**
      * Called to create an object in certain stream-reading situations.
@@ -696,7 +696,7 @@ private:
     /**
      * Undocumented.
      */
-    virtual const char *streamableName() const  {return name;};
+    virtual const char *streamableName() const  {return name;}
 public:
     /**
      * Called to create an object in certain stream-reading situations.
@@ -755,7 +755,7 @@ public:
     /**
      * Undocumented.
      */
-    TLookupValidator() {};
+    TLookupValidator() {}
     /**
      * Calls @ref lookup() to find the string `s' in the list of valid input
      * items. Returns True if @ref lookup() returns True, meaning
@@ -791,7 +791,7 @@ private:
     /**
      * Undocumented.
      */
-    virtual const char *streamableName() const  {return name;};
+    virtual const char *streamableName() const  {return name;}
 };
 
 /**
@@ -885,7 +885,7 @@ private:
     /**
      * Undocumented.
      */
-    virtual const char *streamableName() const  {return name;};
+    virtual const char *streamableName() const  {return name;}
 public:
     /**
      * Sets the list of valid input strings for the string lookup validator.

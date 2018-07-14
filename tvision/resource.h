@@ -72,7 +72,7 @@ protected:
      * This is achieved by calling this constructor with an argument of type
      * @ref StreamableInit.
      */
-    TStringCollection( StreamableInit ) : TSortedCollection ( streamableInit ) {};
+    TStringCollection( StreamableInit ) : TSortedCollection ( streamableInit ) {}
 public:
     /**
      * Undocumented.
@@ -154,7 +154,7 @@ public:
      * @ref StreamableInit.
      */
     TResourceCollection( StreamableInit) : TStringCollection( streamableInit )
-        {};
+        {}
     /**
      * Creates a resource collection with initial size `aLimit' and the
      * ability to resize by `aDelta'.

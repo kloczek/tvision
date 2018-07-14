@@ -18,7 +18,7 @@ class TPuzzleView:public TView {
       public:
 	TPuzzleView(TRect & r);
 	TPuzzleView(StreamableInit):TView(streamableInit) {
-	};
+	}
 	virtual TPalette & getPalette() const;
 	virtual void handleEvent(TEvent & event);
 	virtual void draw();
@@ -68,7 +68,7 @@ class TPuzzleWindow:public TWindow {
 	TPuzzleWindow();
 	TPuzzleWindow(StreamableInit):TWindowInit(&TPuzzleWindow::initFrame),
 	    TWindow(streamableInit) {
-	};
+	}
 
       private:
 	virtual const char *streamableName() const {

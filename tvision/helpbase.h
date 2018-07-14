@@ -98,7 +98,7 @@ public:
     /**
      * Undocumented.
      */
-    THelpTopic( StreamableInit ) {};
+    THelpTopic( StreamableInit ) {}
     /**
      * Undocumented.
      */
@@ -217,7 +217,7 @@ public:
     /**
      * Undocumented.
      */
-    THelpIndex( StreamableInit ) {};
+    THelpIndex( StreamableInit ) {}
     /**
      * Undocumented.
      */
