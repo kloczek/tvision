@@ -17,12 +17,12 @@
 
 inline const char *getName( void *k )
 {
-    return ((TSearchRec *)k)->name;
+    return static_cast<TSearchRec *>(k)->name;
 }
 
 inline int attr( void *k )
 {
-    return ((TSearchRec *)k)->attr;
+    return static_cast<TSearchRec *>(k)->attr;
 }
 
 int TFileCollection::compare(void *key1, void *key2)
@@ -51,7 +51,7 @@ TStreamable *TFileCollection::build()
 
 void TFileCollection::writeItem( void *obj, opstream& os )
 {
-    TSearchRec *item = (TSearchRec *)obj;
+    TSearchRec *item = static_cast<TSearchRec *>(obj);
     os << item->attr << item->time << item->size;
     os.writeString( item->name );
 }

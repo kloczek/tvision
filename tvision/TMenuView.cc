@@ -348,7 +348,7 @@ TMenuItem *TMenuView::findItem( char ch )
         if( p->name != nullptr && !p->disabled )
             {
             char *loc = strchr( (char *) p->name, '~' );
-            if( loc != nullptr && (uchar)ch == toupper( loc[1] ) )
+            if( loc != nullptr && static_cast<uchar>(ch) == toupper( loc[1] ) )
                 return p;
             }
         p =  p->next;
@@ -514,7 +514,7 @@ void TMenuView::writeMenu( opstream& os, TMenu *menu )
         {
         os << tok;
         os.writeString( item->name );
-        os << item->command << (int)(item->disabled)
+        os << item->command << static_cast<int>(item->disabled)
            << item->keyCode << item->helpCtx;
         if( item->name != nullptr )
             {

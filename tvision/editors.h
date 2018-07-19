@@ -268,7 +268,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TIndicator& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -279,12 +279,12 @@ inline ipstream& operator >> ( ipstream& is, TIndicator*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TIndicator& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TIndicator* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TIndicator
 
@@ -1037,7 +1037,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TEditor& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -1048,12 +1048,12 @@ inline ipstream& operator >> ( ipstream& is, TEditor*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TEditor& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TEditor* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TEditor
 
@@ -1146,7 +1146,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TMemo& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -1157,12 +1157,12 @@ inline ipstream& operator >> ( ipstream& is, TMemo*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TMemo& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TMemo* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TMemo
 
@@ -1328,7 +1328,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TFileEditor& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -1339,12 +1339,12 @@ inline ipstream& operator >> ( ipstream& is, TFileEditor*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TFileEditor& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TFileEditor* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TFileEditor
 
@@ -1437,7 +1437,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TEditWindow& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -1448,12 +1448,12 @@ inline ipstream& operator >> ( ipstream& is, TEditWindow*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TEditWindow& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TEditWindow* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TEditWindow
 

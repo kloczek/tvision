@@ -226,10 +226,10 @@ Boolean TInputLine::checkValid(Boolean noAutoFill)
             }
         else
             {
-            if ((int)strlen(newData) > maxLen)
+            if (static_cast<int>(strlen(newData)) > maxLen)
                 newData[maxLen] = 0;
             strcpy(data,newData);
-            if ((curPos >= oldLen) && ((int)strlen(data) > oldLen))
+            if ((curPos >= oldLen) && (static_cast<int>(strlen(data)) > oldLen))
                 curPos = strlen(data);
             delete newData;
             return True;
@@ -323,7 +323,7 @@ void TInputLine::handleEvent( TEvent& event )
                             curPos--;
                         break;
                     case kbRight:
-                        if( curPos < (int)strlen(data) )
+                        if( curPos < static_cast<int>(strlen(data)) )
                             curPos++;
                         break;
                     case kbHome:
@@ -344,7 +344,7 @@ void TInputLine::handleEvent( TEvent& event )
                         break;
                     case kbDel:
                         if( selStart == selEnd )
-                            if( curPos < (int)strlen(data) )
+                            if( curPos < static_cast<int>(strlen(data)) )
                                 {
                                 selStart = curPos;
                                 selEnd = curPos + 1;
@@ -361,12 +361,12 @@ void TInputLine::handleEvent( TEvent& event )
                             deleteSelect();
                             if( (state & sfCursorIns) != 0 )
                                 /* The following must be a signed comparison! */
-                                if( curPos < (int) strlen(data) )
+                                if( curPos < static_cast<int>(strlen(data)) )
                                     strcpy( data + curPos, data + curPos + 1 );
 
                             if( checkValid(True) )
                                 {
-                                if( (int)strlen(data) < maxLen )
+                                if( static_cast<int>(strlen(data)) < maxLen )
                                     {
                                     if( firstPos > curPos )
                                         firstPos = curPos;

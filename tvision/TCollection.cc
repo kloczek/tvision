@@ -152,7 +152,7 @@ void TNSCollection::freeAll()
 
 void TNSCollection::freeItem( void *item )
 {
-    delete[] (char *)item;
+    delete[] static_cast<char *>(item);
 }
 
 ccIndex TNSCollection::indexOf(void *item)
@@ -162,7 +162,7 @@ ccIndex TNSCollection::indexOf(void *item)
             return i;
 
     error(1,0);
-    return (ccIndex)0;
+    return static_cast<ccIndex>(0);
 }
 
 ccIndex TNSCollection::insert( void *item )

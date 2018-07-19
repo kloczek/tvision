@@ -38,7 +38,7 @@ ushort TListBox::dataSize()
 
 void TListBox::getData( void * rec )
 {
-    TListBoxRec *p = (TListBoxRec *)rec;
+    TListBoxRec *p = static_cast<TListBoxRec *>(rec);
     p->items = items;
     p->selection = focused;
 }
@@ -69,7 +69,7 @@ void TListBox::newList( TCollection *aList )
 
 void TListBox::setData( void *rec )
 {
-    TListBoxRec *p = (TListBoxRec *)rec;
+    TListBoxRec *p = static_cast<TListBoxRec *>(rec);
     newList(p->items);
     focusItem(p->selection);
     drawView();

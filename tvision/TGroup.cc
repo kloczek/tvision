@@ -64,8 +64,8 @@ void TGroup::shutDown()
 void doCalcChange( TView *p, void *d )
 {
     TRect  r;
-    ((TGroup *)p)->calcBounds(r, *(TPoint*)d);
-    ((TGroup *)p)->changeBounds(r);
+    static_cast<TGroup *>(p)->calcBounds(r, *static_cast<TPoint*>(d));
+    static_cast<TGroup *>(p)->changeBounds(r);
 }
 
 static void doAwaken (TView* v, void*)
@@ -103,7 +103,7 @@ void TGroup::changeBounds( const TRect& bounds )
 
 void addSubviewDataSize( TView *p, void *T )
 {
-   *((ushort *)T) += ((TGroup *)p)->dataSize();
+   *static_cast<ushort *>(T) += static_cast<TGroup *>(p)->dataSize();
 }
 
 ushort TGroup::dataSize()
@@ -300,7 +300,7 @@ void TGroup::getData(void *rec)
         {
         TView* v = last;
         do  {
-            v->getData( ((char *)rec) + i );
+            v->getData( static_cast<char *>(rec) + i );
             i += v->dataSize();
             v = v->prev();
             } while( v != last );
@@ -316,7 +316,7 @@ struct handleStruct
 
 static void doHandleEvent( TView *p, void *s )
 {
-    handleStruct *ptr = (handleStruct *)s;
+    handleStruct *ptr = static_cast<handleStruct *>(s);
 
     if( p == nullptr ||
         ( (p->state & sfDisabled) != 0 &&
@@ -344,7 +344,7 @@ static void doHandleEvent( TView *p, void *s )
 
 static Boolean hasMouse( TView *p, void *s )
 {
-    return p->containsMouse( *(TEvent *)s );
+    return p->containsMouse( *static_cast<TEvent *>(s) );
 }
 
 void TGroup::handleEvent( TEvent& event )
@@ -502,7 +502,7 @@ void TGroup::setData(void *rec)
         {
         TView* v = last;
         do  {
-            v->setData( (char *)rec + i );
+            v->setData( static_cast<char *>(rec) + i );
             i += v->dataSize();
             v = v->prev();
             } while (v != last);
@@ -512,7 +512,7 @@ void TGroup::setData(void *rec)
 static void doExpose( TView *p, void *enable )
 {
     if( (p->state & sfVisible) != 0 )
-        p->setState( sfExposed, *(Boolean *)enable );
+        p->setState( sfExposed, *static_cast<Boolean *>(enable) );
 }
 
 struct setBlock
@@ -593,7 +593,7 @@ ushort TGroup::getHelpCtx()
 
 static void doPut( TView *p, void *osp )
 {
-    *(opstream *)osp << p;
+    *static_cast<opstream *>(osp) << p;
 }
 
 void TGroup::write( opstream& os )

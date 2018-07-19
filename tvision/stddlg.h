@@ -163,7 +163,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TFileInputLine& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -174,12 +174,12 @@ inline ipstream& operator >> ( ipstream& is, TFileInputLine*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TFileInputLine& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TFileInputLine* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TFileInputLine
 
@@ -207,7 +207,7 @@ public:
      * in this file collection.
      */
     TSearchRec *at( ccIndex index )
-        { return (TSearchRec *)TSortedCollection::at( index ); }
+        { return static_cast<TSearchRec *>(TSortedCollection::at( index )); }
     /**
      * Returns the index of the given @ref TSearchRec file `item' in this
      * file collection.
@@ -263,7 +263,7 @@ public:
     TSearchRec *lastThat( ccTestFunc Test, void *arg );
 private:
     virtual void freeItem( void *item )
-        { delete (TSearchRec *)item; }
+        { delete static_cast<TSearchRec *>(item); }
     /**
      * Performs a standard file string compare and returns a value depending
      * on the results.
@@ -314,7 +314,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TFileCollection& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -325,21 +325,21 @@ inline ipstream& operator >> ( ipstream& is, TFileCollection*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TFileCollection& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TFileCollection* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 inline TSearchRec *TFileCollection::firstThat( ccTestFunc func, void *arg )
 {
-    return (TSearchRec *)TSortedCollection::firstThat( ccTestFunc(func), arg );
+    return static_cast<TSearchRec *>(TSortedCollection::firstThat( ccTestFunc(func), arg ));
 }
 
 inline TSearchRec *TFileCollection::lastThat( ccTestFunc func, void *arg )
 {
-    return (TSearchRec *)TSortedCollection::lastThat( ccTestFunc(func), arg );
+    return static_cast<TSearchRec *>(TSortedCollection::lastThat( ccTestFunc(func), arg ));
 }
 
 #endif  // Uses_TFileCollection
@@ -439,7 +439,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TSortedListBox& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -450,16 +450,16 @@ inline ipstream& operator >> ( ipstream& is, TSortedListBox*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TSortedListBox& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TSortedListBox* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 inline TSortedCollection *TSortedListBox::list()
 {
-    return (TSortedCollection *)TListBox::list();
+    return static_cast<TSortedCollection *>(TListBox::list());
 }
 
 #endif  // Uses_TSortedListBox
@@ -588,7 +588,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TFileList& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -599,12 +599,12 @@ inline ipstream& operator >> ( ipstream& is, TFileList*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TFileList& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TFileList* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 inline void TFileList::newList( TFileCollection *f )
 {
@@ -613,7 +613,7 @@ inline void TFileList::newList( TFileCollection *f )
 
 inline TFileCollection *TFileList::list()
 {
-    return (TFileCollection *)TSortedListBox::list();
+    return static_cast<TFileCollection *>(TSortedListBox::list());
 }
 
 #endif  // Uses_TFileList
@@ -700,7 +700,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TFileInfoPane& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -711,12 +711,12 @@ inline ipstream& operator >> ( ipstream& is, TFileInfoPane*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TFileInfoPane& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TFileInfoPane* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TFileInfoPane
 
@@ -911,7 +911,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TFileDialog& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -922,12 +922,12 @@ inline ipstream& operator >> ( ipstream& is, TFileDialog*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TFileDialog& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TFileDialog* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TFileDialog
 
@@ -1008,7 +1008,7 @@ public:
      * @see TCollection::at
      */
     TDirEntry *at( ccIndex index )
-        { return (TDirEntry *)TCollection::at( index );}
+        { return static_cast<TDirEntry *>(TCollection::at( index ));}
     /**
      * Returns the index of the given `item' in this directory collection.
      * @see TCollection::indexOf
@@ -1066,7 +1066,7 @@ public:
     TDirEntry *lastThat( ccTestFunc Test, void *arg );
 private:
     virtual void freeItem( void *item )
-        { delete (TDirEntry *)item; }
+        { delete static_cast<TDirEntry *>(item); }
     virtual const char *streamableName() const
         { return name; }
     /**
@@ -1109,7 +1109,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TDirCollection& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -1120,21 +1120,21 @@ inline ipstream& operator >> ( ipstream& is, TDirCollection*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TDirCollection& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TDirCollection* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 inline TDirEntry *TDirCollection::firstThat( ccTestFunc func, void *arg )
 {
-    return (TDirEntry *)TCollection::firstThat( ccTestFunc(func), arg );
+    return static_cast<TDirEntry *>(TCollection::firstThat( ccTestFunc(func), arg ));
 }
 
 inline TDirEntry *TDirCollection::lastThat( ccTestFunc func, void *arg )
 {
-    return (TDirEntry *)TCollection::lastThat( ccTestFunc(func), arg );
+    return static_cast<TDirEntry *>(TCollection::lastThat( ccTestFunc(func), arg ));
 }
 
 #endif  // Uses_TDirCollection
@@ -1255,7 +1255,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TDirListBox& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -1266,12 +1266,12 @@ inline ipstream& operator >> ( ipstream& is, TDirListBox*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TDirListBox& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TDirListBox* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 inline TDirCollection *TDirListBox::list()
 {
@@ -1479,7 +1479,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TChDirDialog& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -1490,11 +1490,11 @@ inline ipstream& operator >> ( ipstream& is, TChDirDialog*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TChDirDialog& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TChDirDialog* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TChDirDialog

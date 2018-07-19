@@ -85,7 +85,7 @@ static TSearchRec sR;
 
 void TFileList::getText( char *dest, short item, short maxChars )
 {
-    TSearchRec *f = (TSearchRec *)(list()->at(item));
+    TSearchRec *f = static_cast<TSearchRec *>(list()->at(item));
 
     strncpy( dest, f->name, maxChars );
     dest[maxChars] = '\0';

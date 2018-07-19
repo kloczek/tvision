@@ -2068,7 +2068,7 @@ protected:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TView& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -2079,12 +2079,12 @@ inline ipstream& operator >> ( ipstream& is, TView*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TView& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TView* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 inline void TView::writeBuf( short x, short y, short w, short h,
                              const TDrawBuffer& b )
@@ -2239,7 +2239,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TFrame& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -2250,12 +2250,12 @@ inline ipstream& operator >> ( ipstream& is, TFrame*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TFrame& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TFrame* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TFrame
 
@@ -2504,7 +2504,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TScrollBar& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -2515,12 +2515,12 @@ inline ipstream& operator >> ( ipstream& is, TScrollBar*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TScrollBar& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TScrollBar* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TScrollBar
 
@@ -2706,7 +2706,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TScroller& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -2717,12 +2717,12 @@ inline ipstream& operator >> ( ipstream& is, TScroller*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TScroller& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TScroller* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TScroller
 
@@ -2951,7 +2951,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TListViewer& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -2962,12 +2962,12 @@ inline ipstream& operator >> ( ipstream& is, TListViewer*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TListViewer& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TListViewer* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TListViewer
 
@@ -3522,7 +3522,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TGroup& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -3533,12 +3533,12 @@ inline ipstream& operator >> ( ipstream& is, TGroup*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TGroup& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TGroup* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TGroup
 
@@ -3848,7 +3848,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TWindow& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -3859,11 +3859,11 @@ inline ipstream& operator >> ( ipstream& is, TWindow*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TWindow& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TWindow* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TWindow

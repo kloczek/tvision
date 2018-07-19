@@ -88,7 +88,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TStringCollection& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -99,12 +99,12 @@ inline ipstream& operator >> ( ipstream& is, TStringCollection*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TStringCollection& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TStringCollection* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TStringCollection
 
@@ -204,7 +204,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TResourceCollection& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -215,12 +215,12 @@ inline ipstream& operator >> ( ipstream& is, TResourceCollection*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TResourceCollection& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TResourceCollection* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TResourceCollection
 
@@ -433,7 +433,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TStringList& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -444,12 +444,12 @@ inline ipstream& operator >> ( ipstream& is, TStringList*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TStringList& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TStringList* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TStringList
 
@@ -526,7 +526,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TStrListMaker& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -537,12 +537,12 @@ inline ipstream& operator >> ( ipstream& is, TStrListMaker*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TStrListMaker& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TStrListMaker* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 
 #endif  // Uses_TStrListMaker

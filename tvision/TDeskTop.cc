@@ -63,7 +63,7 @@ void doCascade( TView* p, void *r )
 {
     if( Tileable( p ) && cascadeNum >= 0 )
         {
-        TRect NR = *(TRect *)r;
+        TRect NR = *static_cast<TRect *>(r);
         NR.a.x += cascadeNum;
         NR.a.y += cascadeNum;
         p->locate( NR );
@@ -131,7 +131,7 @@ short iSqr( short i )
 {
     short res1 = 2;
     short res2 = i/res1;
-    while( abs( (int)(res1 - res2) ) > 1 )
+    while( abs( static_cast<int>(res1 - res2) ) > 1 )
         {
         res1 = (res1 + res2)/2;
         res2 = i/res1;
@@ -210,7 +210,7 @@ void doTile( TView* p, void *lR )
 {
     if( Tileable( p ) )
         {
-        TRect r = calcTileRect( tileNum, *(const TRect *)lR );
+        TRect r = calcTileRect( tileNum, *static_cast<const TRect *>(lR) );
         p->locate(r);
         tileNum--;
         }

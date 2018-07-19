@@ -380,7 +380,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TMenuView& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -391,12 +391,12 @@ inline ipstream& operator >> ( ipstream& is, TMenuView*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TMenuView& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TMenuView* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 inline TMenuView::TMenuView( const TRect& bounds,
                              TMenu *aMenu,
@@ -520,7 +520,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TMenuBar& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -531,12 +531,12 @@ inline ipstream& operator >> ( ipstream& is, TMenuBar*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TMenuBar& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TMenuBar* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TMenuBar
 
@@ -627,7 +627,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TMenuBox& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -638,12 +638,12 @@ inline ipstream& operator >> ( ipstream& is, TMenuBox*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TMenuBox& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TMenuBox* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TMenuBox
 
@@ -962,7 +962,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TStatusLine& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -973,11 +973,11 @@ inline ipstream& operator >> ( ipstream& is, TStatusLine*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TStatusLine& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TStatusLine* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TStatusLine

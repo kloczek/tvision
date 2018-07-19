@@ -414,7 +414,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TCollection& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -425,12 +425,12 @@ inline ipstream& operator >> ( ipstream& is, TCollection*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TCollection& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TCollection* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TCollection
 
@@ -510,7 +510,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TSortedCollection& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -521,11 +521,11 @@ inline ipstream& operator >> ( ipstream& is, TSortedCollection*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TSortedCollection& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TSortedCollection* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TSortedCollection

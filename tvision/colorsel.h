@@ -298,7 +298,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TColorSelector& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -309,12 +309,12 @@ inline ipstream& operator >> ( ipstream& is, TColorSelector*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TColorSelector& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TColorSelector* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TColorSelector
 
@@ -411,7 +411,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TMonoSelector& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -422,12 +422,12 @@ inline ipstream& operator >> ( ipstream& is, TMonoSelector*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TMonoSelector& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TMonoSelector* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TMonoSelector
 
@@ -531,7 +531,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TColorDisplay& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -542,12 +542,12 @@ inline ipstream& operator >> ( ipstream& is, TColorDisplay*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TColorDisplay& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TColorDisplay* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TColorDisplay
 
@@ -665,7 +665,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TColorGroupList& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -676,12 +676,12 @@ inline ipstream& operator >> ( ipstream& is, TColorGroupList*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TColorGroupList& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TColorGroupList* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TColorGroupList
 
@@ -774,7 +774,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TColorItemList& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -785,12 +785,12 @@ inline ipstream& operator >> ( ipstream& is, TColorItemList*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TColorItemList& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TColorItemList* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TColorItemList
 
@@ -977,7 +977,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TColorDialog& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -988,11 +988,11 @@ inline ipstream& operator >> ( ipstream& is, TColorDialog*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TColorDialog& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TColorDialog* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // TColorDialog

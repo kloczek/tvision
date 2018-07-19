@@ -182,7 +182,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, THelpTopic& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -193,12 +193,12 @@ inline ipstream& operator >> ( ipstream& is, THelpTopic*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, THelpTopic& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, THelpTopic* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 
 // THelpIndex
@@ -259,7 +259,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, THelpIndex& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -270,12 +270,12 @@ inline ipstream& operator >> ( ipstream& is, THelpIndex*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, THelpIndex& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, THelpIndex* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 
 // THelpFile

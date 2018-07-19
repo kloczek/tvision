@@ -1105,7 +1105,7 @@ void TEditor::write( opstream& os )
 {
     TView::write( os );
     os << hScrollBar << vScrollBar << indicator
-       << bufSize << (int)canUndo;
+       << bufSize << static_cast<int>(canUndo);
 }
 
 void *TEditor::read( ipstream& is )

@@ -88,7 +88,7 @@ TStreamable *TDirCollection::build()
 
 void TDirCollection::writeItem( void *obj, opstream& os )
 {
-    TDirEntry *item = (TDirEntry *)obj;
+    TDirEntry *item = static_cast<TDirEntry *>(obj);
     os.writeString( item->text() );
     os.writeString( item->dir() );
 }

@@ -215,7 +215,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TDialog& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -226,12 +226,12 @@ inline ipstream& operator >> ( ipstream& is, TDialog*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TDialog& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TDialog* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TDialog
 
@@ -471,7 +471,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TInputLine& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -482,12 +482,12 @@ inline ipstream& operator >> ( ipstream& is, TInputLine*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TInputLine& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TInputLine* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TInputLine
 
@@ -759,7 +759,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TButton& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -770,12 +770,12 @@ inline ipstream& operator >> ( ipstream& is, TButton*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TButton& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TButton* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TButton
 
@@ -1116,7 +1116,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TCluster& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -1127,12 +1127,12 @@ inline ipstream& operator >> ( ipstream& is, TCluster*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TCluster& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TCluster* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TCluster
 
@@ -1271,7 +1271,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TRadioButtons& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -1282,12 +1282,12 @@ inline ipstream& operator >> ( ipstream& is, TRadioButtons*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TRadioButtons& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TRadioButtons* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 inline TRadioButtons::TRadioButtons( const TRect& bounds, TSItem *aStrings ) :
     TCluster( bounds, aStrings )
@@ -1412,7 +1412,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TCheckBoxes& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -1423,12 +1423,12 @@ inline ipstream& operator >> ( ipstream& is, TCheckBoxes*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TCheckBoxes& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TCheckBoxes* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 inline TCheckBoxes::TCheckBoxes( const TRect& bounds, TSItem *aStrings) :
     TCluster( bounds, aStrings )
@@ -1583,7 +1583,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TMultiCheckBoxes& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -1594,12 +1594,12 @@ inline ipstream& operator >> ( ipstream& is, TMultiCheckBoxes*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TMultiCheckBoxes& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TMultiCheckBoxes* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif
 
@@ -1754,7 +1754,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TListBox& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -1765,12 +1765,12 @@ inline ipstream& operator >> ( ipstream& is, TListBox*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TListBox& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TListBox* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 inline TCollection *TListBox::list()
 {
@@ -1880,7 +1880,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TStaticText& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -1891,12 +1891,12 @@ inline ipstream& operator >> ( ipstream& is, TStaticText*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TStaticText& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TStaticText* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TStaticText
 
@@ -1996,7 +1996,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TParamText& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -2007,12 +2007,12 @@ inline ipstream& operator >> ( ipstream& is, TParamText*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TParamText& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TParamText* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TParamText
 
@@ -2160,7 +2160,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TLabel& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -2171,12 +2171,12 @@ inline ipstream& operator >> ( ipstream& is, TLabel*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TLabel& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TLabel* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TLabel
 
@@ -2503,7 +2503,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, THistory& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -2514,11 +2514,11 @@ inline ipstream& operator >> ( ipstream& is, THistory*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, THistory& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, THistory* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_THistory

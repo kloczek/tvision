@@ -98,7 +98,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TBackground& cl )
-    { return is >> (TStreamable&)cl; }
+    { return is >> static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
@@ -109,12 +109,12 @@ inline ipstream& operator >> ( ipstream& is, TBackground*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TBackground& cl )
-    { return os << (TStreamable&)cl; }
+    { return os << static_cast<TStreamable&>(cl); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TBackground* cl )
-    { return os << (TStreamable *)cl; }
+    { return os << static_cast<TStreamable *>(cl); }
 
 #endif  // Uses_TBackground
 
@@ -296,7 +296,7 @@ public:
  * Undocumented.
  */
 inline ipstream& operator >> ( ipstream& is, TDeskTop& cl )
-    { return is >> (TStreamable&)(TGroup&)cl; }
+    { return is >> static_cast<TStreamable&>(static_cast<TGroup&>(cl)); }
 /**
  * Undocumented.
  */
@@ -307,12 +307,12 @@ inline ipstream& operator >> ( ipstream& is, TDeskTop*& cl )
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TDeskTop& cl )
-    { return os << (TStreamable&)(TGroup&)cl; }
+    { return os << static_cast<TStreamable&>(static_cast<TGroup&>(cl)); }
 /**
  * Undocumented.
  */
 inline opstream& operator << ( opstream& os, TDeskTop* cl )
-    { return os << (TStreamable *)(TGroup *)cl; }
+    { return os << static_cast<TStreamable *>(static_cast<TGroup *>(cl)); }
 
 #endif
 

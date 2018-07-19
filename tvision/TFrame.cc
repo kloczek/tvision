@@ -58,15 +58,15 @@ void TFrame::draw()
     width = size.x;
     l = width - 10;
 
-    if( ( ((TWindow *)owner)->flags & (wfClose | wfZoom) ) != 0 )
+    if( (static_cast<TWindow *>(owner)->flags & (wfClose | wfZoom) ) != 0 )
         l -= 6;
     frameLine( b, 0, f, uchar(cFrame) );
-    if( ((TWindow *)owner)->number != wnNoNumber &&
-        ((TWindow *)owner)->number < 10
+    if( static_cast<TWindow *>(owner)->number != wnNoNumber &&
+        static_cast<TWindow *>(owner)->number < 10
       )
         {
         l -= 4;
-        if( ( ((TWindow *)owner)->flags & wfZoom ) != 0 )
+        if( (static_cast<TWindow *>(owner)->flags & wfZoom ) != 0 )
             i = 7;
         else
             i = 3;
@@ -75,7 +75,7 @@ void TFrame::draw()
 
     if( owner != nullptr )
         {
-        const char *title = ((TWindow *)owner)->getTitle(l);
+        const char *title = static_cast<TWindow *>(owner)->getTitle(l);
         if( title != nullptr )
             {
             l = min( cstrlen(title), width - 10 );
@@ -89,9 +89,9 @@ void TFrame::draw()
 
     if( (state & sfActive) != 0 )
         {
-        if( ( ((TWindow *)owner)->flags & wfClose ) != 0 )
+        if( ( static_cast<TWindow *>(owner)->flags & wfClose ) != 0 )
             b.moveCStr( 2, closeIcon, cFrame );
-        if( ( ((TWindow *)owner)->flags & wfZoom ) != 0 )
+        if( ( static_cast<TWindow *>(owner)->flags & wfZoom ) != 0 )
             {
             TPoint minSize, maxSize;
             owner->sizeLimits( minSize, maxSize );
@@ -110,7 +110,7 @@ void TFrame::draw()
         }
     frameLine( b, size.y - 1, f +  6, cFrame );
     if( (state & sfActive) != 0 )
-        if( ( ((TWindow *)owner)->flags & wfGrow ) != 0 )
+        if( ( static_cast<TWindow *>(owner)->flags & wfGrow ) != 0 )
             b.moveCStr( width-2, dragIcon, cFrame );
     writeLine( 0, size.y - 1, size.x, 1, b );
 }
@@ -140,7 +140,7 @@ void TFrame::handleEvent( TEvent& event )
         TPoint mouse = makeLocal( event.mouse.where );
         if( mouse.y == 0 )
             {
-            if( (((TWindow *)owner)->flags & wfClose ) != 0 &&
+            if( (static_cast<TWindow *>(owner)->flags & wfClose ) != 0 &&
                 (state & sfActive) &&
                  mouse.x >= 2 &&
                  mouse.x <= 4
@@ -159,7 +159,7 @@ void TFrame::handleEvent( TEvent& event )
                     }
                 }
             else
-                if( (((TWindow *)owner)->flags & wfZoom) != 0 &&
+                if( (static_cast<TWindow *>(owner)->flags & wfZoom) != 0 &&
                     (state & sfActive) &&
                     ((mouse.x >= size.x - 5 && mouse.x <= size.x - 3) ||
                      (event.mouse.eventFlags & meDoubleClick)
@@ -173,13 +173,13 @@ void TFrame::handleEvent( TEvent& event )
                     clearEvent( event );
                     }
                 else
-                    if( ( ((TWindow *)owner)->flags & wfMove ) != 0 )
+                    if( ( static_cast<TWindow *>(owner)->flags & wfMove ) != 0 )
                         dragWindow( event, dmDragMove );
             }
         else
             if( (mouse.x >= size.x - 2 && mouse.y >= size.y - 1 ) &&
             (state & sfActive))
-                if( ( ((TWindow *)owner)->flags & wfGrow ) != 0 )
+                if( ( static_cast<TWindow *>(owner)->flags & wfGrow ) != 0 )
                     dragWindow( event, dmDragGrow );
         }
 }

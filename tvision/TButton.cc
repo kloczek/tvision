@@ -300,7 +300,7 @@ void TButton::write( opstream& os )
 {
     TView::write( os );
     os.writeString( title );
-    os << command << flags << (int)amDefault;
+    os << command << flags << static_cast<int>(amDefault);
 }
 
 void *TButton::read( ipstream& is )

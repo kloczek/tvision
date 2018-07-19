@@ -37,7 +37,7 @@ ushort TMemo::dataSize()
 
 void TMemo::getData( void *rec )
 {
-    TMemoData *data = (TMemoData *)rec;
+    TMemoData *data = static_cast<TMemoData *>(rec);
 
     data->length = bufLen;
     memcpy(data->buffer, buffer, curPtr);
@@ -47,7 +47,7 @@ void TMemo::getData( void *rec )
 
 void TMemo::setData( void *rec )
 {
-    TMemoData *data = (TMemoData *)rec;
+    TMemoData *data = static_cast<TMemoData *>(rec);
 
     memcpy(&buffer[bufSize - data->length], data->buffer, data->length);
     setBufLen(data->length);
@@ -70,7 +70,7 @@ void TMemo::handleEvent( TEvent& event )
 void TMemo::write( opstream& os )
 {
     TEditor::write( os );
-    os << (uint) bufLen;
+    os << static_cast<uint>(bufLen);
     os.writeBytes( buffer, curPtr );
     os.writeBytes( buffer + gapLen, bufLen - curPtr );
 }

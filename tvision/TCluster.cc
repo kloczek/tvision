@@ -58,7 +58,7 @@ TCluster::TCluster( const TRect& bounds, TSItem *aStrings ) :
 
 TCluster::~TCluster()
 {
-    destroy( (TCollection *)strings );
+    destroy( static_cast<TCollection *>(strings) );
 }
 
 ushort  TCluster::dataSize()
@@ -87,7 +87,7 @@ void TCluster::drawMultiBox( const char *icon, const char* marker)
 	ushort cDis = getColor( 0x0505 );
 	for( i = 0; i <= size.y; i++ )
 	{
-		b.moveChar(0, ' ',(uchar)cNorm, size.x);
+		b.moveChar(0, ' ',static_cast<uchar>(cNorm), size.x);
 		for( j = 0; j <= (strings->getCount()-1)/size.y + 1; j++ )
 		{
 			cur = j * size.y + i;
@@ -108,7 +108,7 @@ void TCluster::drawMultiBox( const char *icon, const char* marker)
 					b.moveCStr( col, icon, color );
 
 					b.putChar(col+2, marker[multiMark(cur)]);
-					b.moveCStr( col+5, (char *)(strings->at(cur)), color );
+					b.moveCStr( col+5, static_cast<char *>(strings->at(cur)), color );
 					if(showMarkers && ((state & sfSelected) != 0) && cur==sel)
 					{
 						b.putChar( col, specialChars[0] );
@@ -125,7 +125,7 @@ void TCluster::drawMultiBox( const char *icon, const char* marker)
 
 void TCluster::getData(void * rec)
 {
-    *(ushort*)rec = value;
+    *static_cast<ushort*>(rec) = value;
     drawView();
 }
 
@@ -265,7 +265,7 @@ void TCluster::handleEvent( TEvent& event )
             default:
                 for( int i = 0; i < strings->getCount(); i++ )
                     {
-                    char c = hotKey( (char *)(strings->at(i)) );
+                    char c = hotKey( static_cast<char *>(strings->at(i)) );
                     if( getAltCode(c) == event.keyDown.keyCode ||
                         ( ( owner->phase == phPostProcess ||
                             (state & sfFocused) != 0
@@ -323,7 +323,7 @@ void TCluster::setButtonState(unsigned long aMask, Boolean enable)
 
 void TCluster::setData(void * rec)
 {
-    value =  *(ushort *)rec;
+    value =  *static_cast<ushort *>(rec);
     drawView();
 }
 
@@ -354,7 +354,7 @@ Boolean TCluster::mark( int )
 
 uchar TCluster::multiMark( int item )
 {
-	return (uchar)(mark(item)==True);
+	return static_cast<uchar>(mark(item))==True;
 }
 
 void TCluster::movedTo( int )
@@ -383,7 +383,7 @@ int TCluster::column( int item )
                 }
 
             if( i < strings->getCount() )
-                l = cstrlen( (char *)(strings->at(i)) );
+                l = cstrlen( static_cast<char *>(strings->at(i)) );
             if( l > width )
                 width = l;
             }
