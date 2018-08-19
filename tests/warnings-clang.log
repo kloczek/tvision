@@ -17,7 +17,7 @@
      29 -Woverloaded-virtual
      27 -Wcast-qual
      22 -Wshadow
-      9 -Wc++98-compat-pedantic
+      9 -Wc++98-compat-extra-semi
       7 -Winvalid-source-encoding
       6 -Wmismatched-new-delete
       5 -Wdisabled-macro-expansion
@@ -2885,7 +2885,7 @@ In file included from ../../../tvision/tv.h:635:
 In file included from ../../../tvision/TValidator.cc:20:
 In file included from ../../../tvision/tv.h:671:
 ../../../tvision/validate.h:401:11: warning: padding class 'TPXPictureValidator' with 4 bytes to align 'pic' [-Wpadded]
-../../../tvision/TValidator.cc:130:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-pedantic]
+../../../tvision/TValidator.cc:130:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
 ../../../tvision/TValidator.cc:141:46: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/TValidator.cc:152:9: warning: no previous prototype for function 'isNumber' [-Wmissing-prototypes]
 ../../../tvision/TValidator.cc:157:9: warning: no previous prototype for function 'isLetter' [-Wmissing-prototypes]
@@ -3261,7 +3261,7 @@ In file included from ../../../tvision/tv.h:691:
 ../../../tvision/asm.cc:78:8: warning: no previous prototype for function 'scan' [-Wmissing-prototypes]
 ../../../tvision/asm.cc:83:20: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
 ../../../tvision/asm.cc:84:23: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
-../../../tvision/asm.cc:119:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-pedantic]
+../../../tvision/asm.cc:119:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
 ../../../tvision/asm.cc:135:23: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/asm.cc:146:11: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/asm.cc:152:16: warning: use of old-style cast [-Wold-style-cast]
@@ -3269,7 +3269,7 @@ In file included from ../../../tvision/tv.h:691:
 ../../../tvision/asm.cc:121:8: warning: no previous prototype for function 'iScan' [-Wmissing-prototypes]
 ../../../tvision/asm.cc:126:20: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
 ../../../tvision/asm.cc:127:23: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
-../../../tvision/asm.cc:161:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-pedantic]
+../../../tvision/asm.cc:161:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
 In file included from ../../../tvision/asm.cc:25:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:1845:12: warning: padding class 'TView' with 2 bytes to align 'origin' [-Wpadded]
@@ -3311,8 +3311,8 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/asm.cc:538:17: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/asm.cc:538:49: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/asm.cc:538:47: warning: implicit conversion loses integer precision: 'int' to 'unsigned short' [-Wconversion]
-../../../tvision/asm.cc:541:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-pedantic]
-../../../tvision/asm.cc:577:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-pedantic]
+../../../tvision/asm.cc:541:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+../../../tvision/asm.cc:577:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
 In file included from ../../../tvision/asm.cc:25:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:2651:13: warning: padding class 'TScroller' with 3 bytes to align 'drawFlag' [-Wpadded]
@@ -3320,7 +3320,7 @@ In file included from ../../../tvision/asm.cc:25:
 In file included from ../../../tvision/tv.h:687:
 ../../../tvision/textview.h:144:11: warning: padding class 'TTerminal' with 6 bytes to align 'buffer' [-Wpadded]
 ../../../tvision/textview.h:70:7: warning: padding size of 'TTerminal' with 2 bytes to alignment boundary [-Wpadded]
-../../../tvision/asm.cc:693:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-pedantic]
+../../../tvision/asm.cc:693:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
 ../../../tvision/asm.cc:733:14: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
 ../../../tvision/asm.cc:741:31: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wconversion]
 ../../../tvision/asm.cc:764:38: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wconversion]
@@ -3602,7 +3602,7 @@ In file included from ../../../tvision/tv.h:635:
 In file included from ../../../tvision/helpbase.cc:19:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:155:7: warning: padding size of 'TStreamableClass' with 4 bytes to alignment boundary [-Wpadded]
-../../../tvision/helpbase.cc:76:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-pedantic]
+../../../tvision/helpbase.cc:76:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
 ../../../tvision/helpbase.cc:92:23: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/helpbase.cc:108:31: warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
 ../../../tvision/helpbase.cc:111:23: warning: use of old-style cast [-Wold-style-cast]
@@ -3927,7 +3927,7 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/new.cc:48:5: warning: 'operator new' should not return a null pointer unless it is declared 'throw()' or 'noexcept' [-Wnew-returns-null]
 ../../../tvision/new.cc:71:10: warning: no previous extern declaration for non-static variable 'memMgr' [-Wmissing-variable-declarations]
 ../../../tvision/new.cc:71:10: warning: declaration requires a global constructor [-Wglobal-constructors]
-../../../tvision/new.cc:77:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-pedantic]
+../../../tvision/new.cc:77:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
 ../../../tvision/new.cc:105:19: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/new.cc:111:30: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/new.cc:111:12: warning: use of old-style cast [-Wold-style-cast]
@@ -4898,7 +4898,7 @@ In file included from ../../../tvision/tv.h:695:
 In file included from ../../../tvision/system.cc:48:
 In file included from ../../../tvision/tv.h:699:
 ../../../tvision/app.h:304:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/system.cc:108:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-pedantic]
+../../../tvision/system.cc:108:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
 In file included from ../../../tvision/system.cc:48:
 In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:114:8: warning: padding size of 'MouseEventType' with 7 bytes to alignment boundary [-Wpadded]

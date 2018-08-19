@@ -1,7 +1,7 @@
 ------------------------------------------------------
 LDFLAGS="-Wl,--as-needed"
 CXXFLAGS="-O2"
-gcc (GCC) 8.1.1 20180712 (Red Hat 8.1.1-5)
+gcc (GCC) 8.2.1 20180801 (Red Hat 8.2.1-2)
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
   83118	   4736	    424	  88278	  158d6	demo
@@ -40,7 +40,7 @@ gcc (GCC) 8.1.1 20180712 (Red Hat 8.1.1-5)
 ------------------------------------------------------
 LDFLAGS="-O2 -Wl,--as-needed -flto -fuse-linker-plugin"
 CXXFLAGS="-O2 -flto"
-gcc (GCC) 8.1.1 20180712 (Red Hat 8.1.1-5)
+gcc (GCC) 8.2.1 20180801 (Red Hat 8.2.1-2)
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
   74701	   4356	    432	  79489	  13681	demo
@@ -79,7 +79,7 @@ gcc (GCC) 8.1.1 20180712 (Red Hat 8.1.1-5)
 ------------------------------------------------------
 LDFLAGS="-Wl,--as-needed"
 CXXFLAGS="-Os"
-gcc (GCC) 8.1.1 20180712 (Red Hat 8.1.1-5)
+gcc (GCC) 8.2.1 20180801 (Red Hat 8.2.1-2)
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
   71640	   4536	    424	  76600	  12b38	demo
@@ -118,7 +118,7 @@ gcc (GCC) 8.1.1 20180712 (Red Hat 8.1.1-5)
 ------------------------------------------------------
 LDFLAGS="-Os -Wl,--as-needed -flto -fuse-linker-plugin"
 CXXFLAGS="-Os -flto"
-gcc (GCC) 8.1.1 20180712 (Red Hat 8.1.1-5)
+gcc (GCC) 8.2.1 20180801 (Red Hat 8.2.1-2)
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
   64418	   3980	    416	  68814	  10cce	demo
@@ -157,7 +157,7 @@ gcc (GCC) 8.1.1 20180712 (Red Hat 8.1.1-5)
 ------------------------------------------------------
 LDFLAGS="-Os -Wl,--as-needed -flto -fuse-linker-plugin"
 CXXFLAGS="-Os -flto -fno-exceptions -fno-rtti"
-gcc (GCC) 8.1.1 20180712 (Red Hat 8.1.1-5)
+gcc (GCC) 8.2.1 20180801 (Red Hat 8.2.1-2)
 ------------------------------------------------------
    text	   data	    bss	    dec	    hex	filename
   58270	   3348	    416	  62034	   f252	demo
