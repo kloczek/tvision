@@ -1,11 +1,12 @@
+     40 -Wshadow
      36 -Wswitch-default
      35 -Wmissing-declarations
-     32 -Wshadow
       9 -Wredundant-decls
       6 -Wformat-overflow=
       5 -Wunused-result
       3 -Wsuggest-attribute=format
       2 -Wsized-deallocation
+      2 -Wdeprecated-copy
       1 -Wstrict-aliasing
       1 -Wrestrict
       1 -Wfloat-equal
@@ -31,36 +32,36 @@
 ../../../tvision/TDirCollection.cc: In function ‘void getCurDir(char*)’:
 ../../../tvision/TDirCollection.cc:74:8: warning: ignoring return value of ‘char* getcwd(char*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
 ../../../tvision/TDirListBox.cc: In member function ‘void TDirListBox::showDirs(TDirCollection*)’:
-../../../tvision/TDirListBox.cc:82:8: warning: declaration of ‘name’ shadows a previous local [-Wshadow]
+../../../tvision/TDirListBox.cc:82:8: warning: declaration of ‘name’ shadows a member of ‘TDirListBox’ [-Wshadow]
 In file included from ../../../tvision/tv.h:675,
                  from ../../../tvision/TDirListBox.cc:18:
 ../../../tvision/stddlg.h:1247:31: note: shadowed declaration is here
-../../../tvision/TDirListBox.cc:117:16: warning: ‘__builtin___sprintf_chk’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
-In file included from /usr/include/stdio.h:873,
-                 from /usr/include/c++/8/cstdio:42,
-                 from /usr/include/c++/8/ext/string_conversions.h:43,
-                 from /usr/include/c++/8/bits/basic_string.h:6391,
-                 from /usr/include/c++/8/string:52,
-                 from /usr/include/c++/8/bits/locale_classes.h:40,
-                 from /usr/include/c++/8/bits/ios_base.h:41,
-                 from /usr/include/c++/8/ios:42,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
+../../../tvision/TDirListBox.cc:117:20: warning: ‘__builtin___sprintf_chk’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+In file included from /usr/include/stdio.h:867,
+                 from /usr/include/c++/9/cstdio:42,
+                 from /usr/include/c++/9/ext/string_conversions.h:43,
+                 from /usr/include/c++/9/bits/basic_string.h:6489,
+                 from /usr/include/c++/9/string:55,
+                 from /usr/include/c++/9/bits/locale_classes.h:40,
+                 from /usr/include/c++/9/bits/ios_base.h:41,
+                 from /usr/include/c++/9/ios:42,
+                 from /usr/include/c++/9/ostream:38,
+                 from /usr/include/c++/9/iostream:39,
                  from ../../../tvision/tobjstrm.h:414,
                  from ../../../tvision/tv.h:635,
                  from ../../../tvision/TDirListBox.cc:18:
 /usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 2 and 4097 bytes into a destination of size 4096
-../../../tvision/TDirListBox.cc:129:18: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
-In file included from /usr/include/stdio.h:873,
-                 from /usr/include/c++/8/cstdio:42,
-                 from /usr/include/c++/8/ext/string_conversions.h:43,
-                 from /usr/include/c++/8/bits/basic_string.h:6391,
-                 from /usr/include/c++/8/string:52,
-                 from /usr/include/c++/8/bits/locale_classes.h:40,
-                 from /usr/include/c++/8/bits/ios_base.h:41,
-                 from /usr/include/c++/8/ios:42,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
+../../../tvision/TDirListBox.cc:129:21: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
+In file included from /usr/include/stdio.h:867,
+                 from /usr/include/c++/9/cstdio:42,
+                 from /usr/include/c++/9/ext/string_conversions.h:43,
+                 from /usr/include/c++/9/bits/basic_string.h:6489,
+                 from /usr/include/c++/9/string:55,
+                 from /usr/include/c++/9/bits/locale_classes.h:40,
+                 from /usr/include/c++/9/bits/ios_base.h:41,
+                 from /usr/include/c++/9/ios:42,
+                 from /usr/include/c++/9/ostream:38,
+                 from /usr/include/c++/9/iostream:39,
                  from ../../../tvision/tobjstrm.h:414,
                  from ../../../tvision/tv.h:635,
                  from ../../../tvision/TDirListBox.cc:18:
@@ -76,7 +77,7 @@ In file included from ../../../tvision/tv.h:659,
 ../../../tvision/views.h:993:10: note: shadowed declaration is here
 ../../../tvision/TEditor.cc:468:11: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TEditor.cc: In member function ‘Boolean TEditor::search(const char*, ushort)’:
-../../../tvision/TEditor.cc:868:59: warning: declaration of ‘findStr’ shadows a previous local [-Wshadow]
+../../../tvision/TEditor.cc:868:59: warning: declaration of ‘findStr’ shadows a member of ‘TEditor’ [-Wshadow]
 In file included from ../../../tvision/tv.h:691,
                  from ../../../tvision/TEditor.cc:22:
 ../../../tvision/editors.h:974:17: note: shadowed declaration is here
@@ -88,7 +89,7 @@ In file included from ../../../tvision/tv.h:659,
 ../../../tvision/TEditor.cc: In member function ‘virtual void TEditor::setState(ushort, Boolean)’:
 ../../../tvision/TEditor.cc:1012:11: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TFileDialog.cc: In member function ‘virtual Boolean TFileDialog::valid(ushort)’:
-../../../tvision/TFileDialog.cc:249:23: warning: declaration of ‘name’ shadows a previous local [-Wshadow]
+../../../tvision/TFileDialog.cc:249:23: warning: declaration of ‘name’ shadows a member of ‘TFileDialog’ [-Wshadow]
 In file included from ../../../tvision/tv.h:675,
                  from ../../../tvision/TFileDialog.cc:25:
 ../../../tvision/stddlg.h:903:31: note: shadowed declaration is here
@@ -97,47 +98,47 @@ In file included from ../../../tvision/tv.h:675,
 ../../../tvision/TFileList.cc: In member function ‘void DirSearchRec::readFf_blk(const char*, stat&)’:
 ../../../tvision/TFileList.cc:129:11: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 ../../../tvision/TFileList.cc: In member function ‘void TFileList::readDirectory(const char*)’:
-../../../tvision/TFileList.cc:199:16: warning: ‘__builtin___sprintf_chk’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
-In file included from /usr/include/stdio.h:873,
-                 from /usr/include/c++/8/cstdio:42,
-                 from /usr/include/c++/8/ext/string_conversions.h:43,
-                 from /usr/include/c++/8/bits/basic_string.h:6391,
-                 from /usr/include/c++/8/string:52,
-                 from /usr/include/c++/8/bits/locale_classes.h:40,
-                 from /usr/include/c++/8/bits/ios_base.h:41,
-                 from /usr/include/c++/8/ios:42,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
+../../../tvision/TFileList.cc:199:20: warning: ‘__builtin___sprintf_chk’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+In file included from /usr/include/stdio.h:867,
+                 from /usr/include/c++/9/cstdio:42,
+                 from /usr/include/c++/9/ext/string_conversions.h:43,
+                 from /usr/include/c++/9/bits/basic_string.h:6489,
+                 from /usr/include/c++/9/string:55,
+                 from /usr/include/c++/9/bits/locale_classes.h:40,
+                 from /usr/include/c++/9/bits/ios_base.h:41,
+                 from /usr/include/c++/9/ios:42,
+                 from /usr/include/c++/9/ostream:38,
+                 from /usr/include/c++/9/iostream:39,
                  from ../../../tvision/tobjstrm.h:414,
                  from ../../../tvision/tv.h:635,
                  from ../../../tvision/TFileList.cc:20:
 /usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 2 and 4097 bytes into a destination of size 4096
-../../../tvision/TFileList.cc:211:18: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
-In file included from /usr/include/stdio.h:873,
-                 from /usr/include/c++/8/cstdio:42,
-                 from /usr/include/c++/8/ext/string_conversions.h:43,
-                 from /usr/include/c++/8/bits/basic_string.h:6391,
-                 from /usr/include/c++/8/string:52,
-                 from /usr/include/c++/8/bits/locale_classes.h:40,
-                 from /usr/include/c++/8/bits/ios_base.h:41,
-                 from /usr/include/c++/8/ios:42,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
+../../../tvision/TFileList.cc:211:21: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
+In file included from /usr/include/stdio.h:867,
+                 from /usr/include/c++/9/cstdio:42,
+                 from /usr/include/c++/9/ext/string_conversions.h:43,
+                 from /usr/include/c++/9/bits/basic_string.h:6489,
+                 from /usr/include/c++/9/string:55,
+                 from /usr/include/c++/9/bits/locale_classes.h:40,
+                 from /usr/include/c++/9/bits/ios_base.h:41,
+                 from /usr/include/c++/9/ios:42,
+                 from /usr/include/c++/9/ostream:38,
+                 from /usr/include/c++/9/iostream:39,
                  from ../../../tvision/tobjstrm.h:414,
                  from ../../../tvision/tv.h:635,
                  from ../../../tvision/TFileList.cc:20:
 /usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 1 and 4351 bytes into a destination of size 4096
-../../../tvision/TFileList.cc:227:17: warning: ‘..’ directive writing 2 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
-In file included from /usr/include/stdio.h:873,
-                 from /usr/include/c++/8/cstdio:42,
-                 from /usr/include/c++/8/ext/string_conversions.h:43,
-                 from /usr/include/c++/8/bits/basic_string.h:6391,
-                 from /usr/include/c++/8/string:52,
-                 from /usr/include/c++/8/bits/locale_classes.h:40,
-                 from /usr/include/c++/8/bits/ios_base.h:41,
-                 from /usr/include/c++/8/ios:42,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
+../../../tvision/TFileList.cc:227:20: warning: ‘..’ directive writing 2 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
+In file included from /usr/include/stdio.h:867,
+                 from /usr/include/c++/9/cstdio:42,
+                 from /usr/include/c++/9/ext/string_conversions.h:43,
+                 from /usr/include/c++/9/bits/basic_string.h:6489,
+                 from /usr/include/c++/9/string:55,
+                 from /usr/include/c++/9/bits/locale_classes.h:40,
+                 from /usr/include/c++/9/bits/ios_base.h:41,
+                 from /usr/include/c++/9/ios:42,
+                 from /usr/include/c++/9/ostream:38,
+                 from /usr/include/c++/9/iostream:39,
                  from ../../../tvision/tobjstrm.h:414,
                  from ../../../tvision/tv.h:635,
                  from ../../../tvision/TFileList.cc:20:
@@ -156,18 +157,18 @@ In file included from ../../../tvision/tv.h:659,
                  from ../../../tvision/THistoryWindow.cc:14:
 ../../../tvision/views.h:3807:11: note: shadowed declaration is here
 ../../../tvision/TIndicator.cc: In member function ‘virtual void TIndicator::draw()’:
-../../../tvision/TIndicator.cc:52:16: warning: ‘%d’ directive writing between 1 and 11 bytes into a region of size between 2 and 12 [-Wformat-overflow=]
+../../../tvision/TIndicator.cc:52:21: warning: ‘%d’ directive writing between 1 and 11 bytes into a region of size between 2 and 12 [-Wformat-overflow=]
 ../../../tvision/TIndicator.cc:52:16: note: directive argument in the range [-2147483647, 2147483647]
-In file included from /usr/include/stdio.h:873,
-                 from /usr/include/c++/8/cstdio:42,
-                 from /usr/include/c++/8/ext/string_conversions.h:43,
-                 from /usr/include/c++/8/bits/basic_string.h:6391,
-                 from /usr/include/c++/8/string:52,
-                 from /usr/include/c++/8/bits/locale_classes.h:40,
-                 from /usr/include/c++/8/bits/ios_base.h:41,
-                 from /usr/include/c++/8/ios:42,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
+In file included from /usr/include/stdio.h:867,
+                 from /usr/include/c++/9/cstdio:42,
+                 from /usr/include/c++/9/ext/string_conversions.h:43,
+                 from /usr/include/c++/9/bits/basic_string.h:6489,
+                 from /usr/include/c++/9/string:55,
+                 from /usr/include/c++/9/bits/locale_classes.h:40,
+                 from /usr/include/c++/9/bits/ios_base.h:41,
+                 from /usr/include/c++/9/ios:42,
+                 from /usr/include/c++/9/ostream:38,
+                 from /usr/include/c++/9/iostream:39,
                  from ../../../tvision/tobjstrm.h:414,
                  from ../../../tvision/tv.h:635,
                  from ../../../tvision/TIndicator.cc:18:
@@ -221,6 +222,16 @@ In file included from ../../../tvision/tv.h:671,
 ../../../tvision/TValidator.cc:528:14: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TView.cc: In member function ‘virtual void TView::dragView(TEvent&, uchar, TRect&, TPoint, TPoint)’:
 ../../../tvision/TView.cc:267:20: warning: switch missing default case [-Wswitch-default]
+../../../tvision/TView.cc: In static member function ‘static void TView::getCommands(TCommandSet&)’:
+../../../tvision/TView.cc:452:16: warning: implicitly-declared ‘constexpr TCommandSet& TCommandSet::operator=(const TCommandSet&)’ is deprecated [-Wdeprecated-copy]
+In file included from ../../../tvision/tv.h:659,
+                 from ../../../tvision/TView.cc:21:
+../../../tvision/views.h:774:5: note: because ‘TCommandSet’ has user-provided ‘TCommandSet::TCommandSet(const TCommandSet&)’
+../../../tvision/TView.cc: In static member function ‘static void TView::setCommands(TCommandSet&)’:
+../../../tvision/TView.cc:696:21: warning: implicitly-declared ‘constexpr TCommandSet& TCommandSet::operator=(const TCommandSet&)’ is deprecated [-Wdeprecated-copy]
+In file included from ../../../tvision/tv.h:659,
+                 from ../../../tvision/TView.cc:21:
+../../../tvision/views.h:774:5: note: because ‘TCommandSet’ has user-provided ‘TCommandSet::TCommandSet(const TCommandSet&)’
 ../../../tvision/TView.cc: In member function ‘virtual void TView::setState(ushort, Boolean)’:
 ../../../tvision/TView.cc:720:11: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TWindow.cc: In member function ‘virtual void TWindow::handleEvent(TEvent&)’:
@@ -257,6 +268,16 @@ In file included from ../../../tvision/tv.h:659,
 ../../../tvision/histlist.cc:201:6: warning: no previous declaration for ‘void doneHistory()’ [-Wmissing-declarations]
 ../../../tvision/menu.cc: In constructor ‘TSubMenu::TSubMenu(const char*, ushort, ushort)’:
 ../../../tvision/menu.cc:21:64: warning: declaration of ‘helpCtx’ shadows a member of ‘TSubMenu’ [-Wshadow]
+In file included from ../../../tvision/tv.h:683,
+                 from ../../../tvision/menu.cc:17:
+../../../tvision/menus.h:119:12: note: shadowed declaration is here
+../../../tvision/menu.cc: In constructor ‘TSubMenu::TSubMenu(const char*, ushort, ushort)’:
+../../../tvision/menu.cc:24:1: warning: declaration of ‘helpCtx’ shadows a member of ‘TSubMenu’ [-Wshadow]
+In file included from ../../../tvision/tv.h:683,
+                 from ../../../tvision/menu.cc:17:
+../../../tvision/menus.h:119:12: note: shadowed declaration is here
+../../../tvision/menu.cc: In constructor ‘TSubMenu::TSubMenu(const char*, ushort, ushort)’:
+../../../tvision/menu.cc:24:1: warning: declaration of ‘helpCtx’ shadows a member of ‘TSubMenu’ [-Wshadow]
 In file included from ../../../tvision/tv.h:683,
                  from ../../../tvision/menu.cc:17:
 ../../../tvision/menus.h:119:12: note: shadowed declaration is here
@@ -388,6 +409,18 @@ In file included from ../../../demo/fileview.cc:36:
 In file included from ../../../tvision/tv.h:631,
                  from ../../../demo/fileview.cc:27:
 ../../../tvision/tvobjs.h:385:13: note: shadowed declaration is here
+In file included from ../../../demo/fileview.cc:36:
+../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
+../../../demo/fileview.h:23:2: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
+In file included from ../../../tvision/tv.h:631,
+                 from ../../../demo/fileview.cc:27:
+../../../tvision/tvobjs.h:385:13: note: shadowed declaration is here
+In file included from ../../../demo/fileview.cc:36:
+../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
+../../../demo/fileview.h:23:2: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
+In file included from ../../../tvision/tv.h:631,
+                 from ../../../demo/fileview.cc:27:
+../../../tvision/tvobjs.h:385:13: note: shadowed declaration is here
 ../../../demo/mousedlg.cc: In member function ‘virtual void TMouseDialog::handleEvent(TEvent&)’:
 ../../../demo/mousedlg.cc:124:9: warning: switch missing default case [-Wswitch-default]
 ../../../demo/puzzle.cc: In member function ‘void TPuzzleView::moveKey(int)’:
@@ -430,11 +463,35 @@ In file included from ../../../demo/tvdemo1.cc:41:
 In file included from ../../../tvision/tv.h:631,
                  from ../../../demo/tvdemo1.cc:33:
 ../../../tvision/tvobjs.h:385:13: note: shadowed declaration is here
+In file included from ../../../demo/tvdemo1.cc:41:
+../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
+../../../demo/fileview.h:23:2: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
+In file included from ../../../tvision/tv.h:631,
+                 from ../../../demo/tvdemo1.cc:33:
+../../../tvision/tvobjs.h:385:13: note: shadowed declaration is here
+In file included from ../../../demo/tvdemo1.cc:41:
+../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
+../../../demo/fileview.h:23:2: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
+In file included from ../../../tvision/tv.h:631,
+                 from ../../../demo/tvdemo1.cc:33:
+../../../tvision/tvobjs.h:385:13: note: shadowed declaration is here
 ../../../demo/tvdemo1.cc: In member function ‘virtual void TVDemo::getEvent(TEvent&)’:
 ../../../demo/tvdemo1.cc:126:9: warning: switch missing default case [-Wswitch-default]
 In file included from ../../../demo/tvdemo3.cc:42:
 ../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
 ../../../demo/fileview.h:22:41: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
+In file included from ../../../tvision/tv.h:631,
+                 from ../../../demo/tvdemo3.cc:35:
+../../../tvision/tvobjs.h:385:13: note: shadowed declaration is here
+In file included from ../../../demo/tvdemo3.cc:42:
+../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
+../../../demo/fileview.h:23:2: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
+In file included from ../../../tvision/tv.h:631,
+                 from ../../../demo/tvdemo3.cc:35:
+../../../tvision/tvobjs.h:385:13: note: shadowed declaration is here
+In file included from ../../../demo/tvdemo3.cc:42:
+../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
+../../../demo/fileview.h:23:2: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
 In file included from ../../../tvision/tv.h:631,
                  from ../../../demo/tvdemo3.cc:35:
 ../../../tvision/tvobjs.h:385:13: note: shadowed declaration is here

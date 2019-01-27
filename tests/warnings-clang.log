@@ -3935,9 +3935,9 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/new.cc:163:12: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/new.cc:189:17: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/new.cc:198:6: warning: function previously declared with an explicit exception specification redeclared with an implicit exception specification [-Wimplicit-exception-spec-mismatch]
-/usr/bin/../lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/new:124:6: note: previous declaration is here
+/usr/bin/../lib/gcc/x86_64-redhat-linux/9/../../../../include/c++/9/new:129:6: note: previous declaration is here
 ../../../tvision/new.cc:203:6: warning: function previously declared with an explicit exception specification redeclared with an implicit exception specification [-Wimplicit-exception-spec-mismatch]
-/usr/bin/../lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/new:126:6: note: previous declaration is here
+/usr/bin/../lib/gcc/x86_64-redhat-linux/9/../../../../include/c++/9/new:131:6: note: previous declaration is here
 In file included from ../../../tvision/palette.cc:13:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:428:9: warning: initializer for virtual base class 'TNSCollection' of abstract class 'TNSSortedCollection' will never be used [-Wabstract-vbase-init]
