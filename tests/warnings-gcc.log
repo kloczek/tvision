@@ -40,7 +40,7 @@ In file included from ../../../tvision/tv.h:675,
 In file included from /usr/include/stdio.h:867,
                  from /usr/include/c++/9/cstdio:42,
                  from /usr/include/c++/9/ext/string_conversions.h:43,
-                 from /usr/include/c++/9/bits/basic_string.h:6489,
+                 from /usr/include/c++/9/bits/basic_string.h:6493,
                  from /usr/include/c++/9/string:55,
                  from /usr/include/c++/9/bits/locale_classes.h:40,
                  from /usr/include/c++/9/bits/ios_base.h:41,
@@ -55,7 +55,7 @@ In file included from /usr/include/stdio.h:867,
 In file included from /usr/include/stdio.h:867,
                  from /usr/include/c++/9/cstdio:42,
                  from /usr/include/c++/9/ext/string_conversions.h:43,
-                 from /usr/include/c++/9/bits/basic_string.h:6489,
+                 from /usr/include/c++/9/bits/basic_string.h:6493,
                  from /usr/include/c++/9/string:55,
                  from /usr/include/c++/9/bits/locale_classes.h:40,
                  from /usr/include/c++/9/bits/ios_base.h:41,
@@ -102,7 +102,7 @@ In file included from ../../../tvision/tv.h:675,
 In file included from /usr/include/stdio.h:867,
                  from /usr/include/c++/9/cstdio:42,
                  from /usr/include/c++/9/ext/string_conversions.h:43,
-                 from /usr/include/c++/9/bits/basic_string.h:6489,
+                 from /usr/include/c++/9/bits/basic_string.h:6493,
                  from /usr/include/c++/9/string:55,
                  from /usr/include/c++/9/bits/locale_classes.h:40,
                  from /usr/include/c++/9/bits/ios_base.h:41,
@@ -117,7 +117,7 @@ In file included from /usr/include/stdio.h:867,
 In file included from /usr/include/stdio.h:867,
                  from /usr/include/c++/9/cstdio:42,
                  from /usr/include/c++/9/ext/string_conversions.h:43,
-                 from /usr/include/c++/9/bits/basic_string.h:6489,
+                 from /usr/include/c++/9/bits/basic_string.h:6493,
                  from /usr/include/c++/9/string:55,
                  from /usr/include/c++/9/bits/locale_classes.h:40,
                  from /usr/include/c++/9/bits/ios_base.h:41,
@@ -132,7 +132,7 @@ In file included from /usr/include/stdio.h:867,
 In file included from /usr/include/stdio.h:867,
                  from /usr/include/c++/9/cstdio:42,
                  from /usr/include/c++/9/ext/string_conversions.h:43,
-                 from /usr/include/c++/9/bits/basic_string.h:6489,
+                 from /usr/include/c++/9/bits/basic_string.h:6493,
                  from /usr/include/c++/9/string:55,
                  from /usr/include/c++/9/bits/locale_classes.h:40,
                  from /usr/include/c++/9/bits/ios_base.h:41,
@@ -162,7 +162,7 @@ In file included from ../../../tvision/tv.h:659,
 In file included from /usr/include/stdio.h:867,
                  from /usr/include/c++/9/cstdio:42,
                  from /usr/include/c++/9/ext/string_conversions.h:43,
-                 from /usr/include/c++/9/bits/basic_string.h:6489,
+                 from /usr/include/c++/9/bits/basic_string.h:6493,
                  from /usr/include/c++/9/string:55,
                  from /usr/include/c++/9/bits/locale_classes.h:40,
                  from /usr/include/c++/9/bits/ios_base.h:41,
@@ -497,3 +497,16 @@ In file included from ../../../tvision/tv.h:631,
 ../../../tvision/tvobjs.h:385:13: note: shadowed declaration is here
 ../../../tutorial/tvlife.cc: In member function ‘virtual void TLifeInterior::handleEvent(TEvent&)’:
 ../../../tutorial/tvlife.cc:553:9: warning: switch missing default case [-Wswitch-default]
+/home/tkloczko/tvision/tvision/missing: line 81: makeinfo: command not found
+WARNING: 'makeinfo' is missing on your system.
+         You should only need it if you modified a '.texi' file, or
+         any other file indirectly affecting the aspect of the manual.
+         You might want to install the Texinfo package:
+         <https://www.gnu.org/software/texinfo/>
+         The spurious makeinfo call might also be the consequence of
+         using a buggy 'make' (AIX, DU, IRIX), in which case you might
+         want to install GNU make:
+         <https://www.gnu.org/software/make/>
+make[2]: *** [Makefile:370: ../../../doc/tvision.info] Error 127
+make[1]: *** [Makefile:471: all-recursive] Error 1
+make: *** [Makefile:378: all] Error 2
