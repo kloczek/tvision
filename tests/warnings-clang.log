@@ -29,7 +29,6 @@
       2 -Wnew-returns-null
       2 -Wimplicit-fallthrough
       2 -Wimplicit-exception-spec-mismatch
-      2 -Wdeprecated
       2 -Wconstant-logical-operand
       2 -Wcast-align
       1 -Wvla-extension
@@ -38,6 +37,8 @@
       1 -Wunreachable-code
       1 -Wparentheses-equality
       1 -Wfloat-equal
+      1 -Wdeprecated-copy-dtor
+      1 -Wdeprecated-copy
       1 -Wconditional-uninitialized
       1 -Wcomma
 
@@ -3248,7 +3249,7 @@ In file included from ../../../tvision/tv.h:647:
 ../../../tvision/TView.cc:443:30: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
 In file included from ../../../tvision/TView.cc:21:
 In file included from ../../../tvision/tv.h:659:
-../../../tvision/views.h:774:5: warning: definition of implicit copy assignment operator for 'TCommandSet' is deprecated because it has a user-declared copy constructor [-Wdeprecated]
+../../../tvision/views.h:774:5: warning: definition of implicit copy assignment operator for 'TCommandSet' is deprecated because it has a user-declared copy constructor [-Wdeprecated-copy]
 ../../../tvision/TView.cc:452:14: note: in implicit copy assignment operator for 'TCommandSet' first required here
 ../../../tvision/TView.cc:480:21: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
 In file included from ../../../tvision/TView.cc:21:
@@ -4348,9 +4349,9 @@ In file included from ../../../tvision/tv.h:675:
 ../../../tvision/new.cc:163:12: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/new.cc:189:17: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/new.cc:198:6: warning: function previously declared with an explicit exception specification redeclared with an implicit exception specification [-Wimplicit-exception-spec-mismatch]
-/usr/bin/../lib/gcc/x86_64-redhat-linux/9/../../../../include/c++/9/new:129:6: note: previous declaration is here
+/usr/bin/../lib/gcc/x86_64-redhat-linux/10/../../../../include/c++/10/new:130:6: note: previous declaration is here
 ../../../tvision/new.cc:203:6: warning: function previously declared with an explicit exception specification redeclared with an implicit exception specification [-Wimplicit-exception-spec-mismatch]
-/usr/bin/../lib/gcc/x86_64-redhat-linux/9/../../../../include/c++/9/new:131:6: note: previous declaration is here
+/usr/bin/../lib/gcc/x86_64-redhat-linux/10/../../../../include/c++/10/new:132:6: note: previous declaration is here
 In file included from ../../../tvision/palette.cc:13:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:428:9: warning: initializer for virtual base class 'TNSCollection' of abstract class 'TNSSortedCollection' will never be used [-Wabstract-vbase-init]
@@ -7028,7 +7029,7 @@ In file included from ../../../demo/tvdemo2.cc:32:
 In file included from ../../../tvision/tv.h:679:
 ../../../tvision/colorsel.h:146:17: warning: padding class 'TColorGroup' with 7 bytes to align 'items' [-Wpadded]
 ../../../tvision/colorsel.h:82:17: warning: padding class 'TColorItem' with 7 bytes to align 'next' [-Wpadded]
-../../../tvision/colorsel.h:133:13: warning: definition of implicit copy assignment operator for 'TColorGroup' is deprecated because it has a user-declared destructor [-Wdeprecated]
+../../../tvision/colorsel.h:133:13: warning: definition of implicit copy assignment operator for 'TColorGroup' is deprecated because it has a user-declared destructor [-Wdeprecated-copy-dtor]
 ../../../demo/tvdemo2.cc:273:9: note: in implicit copy assignment operator for 'TColorGroup' first required here
 ../../../demo/tvdemo2.cc:311:37: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo2.cc:42:
@@ -9706,16 +9707,3 @@ In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:376:7: warning: padding size of 'TPReadObjects' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tvision/tobjstrm.h:571:7: warning: padding size of 'ipstream' with 4 bytes to alignment boundary [-Wpadded]
 ../../../tutorial/validator.cc:35:7: warning: 'MyDialog' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
-/home/tkloczko/tvision/tvision/missing: line 81: makeinfo: command not found
-WARNING: 'makeinfo' is missing on your system.
-         You should only need it if you modified a '.texi' file, or
-         any other file indirectly affecting the aspect of the manual.
-         You might want to install the Texinfo package:
-         <https://www.gnu.org/software/texinfo/>
-         The spurious makeinfo call might also be the consequence of
-         using a buggy 'make' (AIX, DU, IRIX), in which case you might
-         want to install GNU make:
-         <https://www.gnu.org/software/make/>
-make[2]: *** [Makefile:370: ../../../doc/tvision.info] Error 127
-make[1]: *** [Makefile:471: all-recursive] Error 1
-make: *** [Makefile:378: all] Error 2
