@@ -38,7 +38,7 @@ In file included from ../../../tvision/tv.h:675,
                  from ../../../tvision/TDirListBox.cc:18:
 ../../../tvision/stddlg.h:1247:31: note: shadowed declaration is here
 ../../../tvision/TDirListBox.cc:117:20: warning: ‘__builtin___sprintf_chk’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
-In file included from /usr/include/stdio.h:871,
+In file included from /usr/include/stdio.h:866,
                  from /usr/include/c++/10/cstdio:42,
                  from /usr/include/c++/10/ext/string_conversions.h:43,
                  from /usr/include/c++/10/bits/basic_string.h:6535,
@@ -51,9 +51,9 @@ In file included from /usr/include/stdio.h:871,
                  from ../../../tvision/tobjstrm.h:414,
                  from ../../../tvision/tv.h:635,
                  from ../../../tvision/TDirListBox.cc:18:
-/usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 2 and 4097 bytes into a destination of size 4096
+/usr/include/bits/stdio2.h:38:34: note: ‘__builtin___sprintf_chk’ output between 2 and 4097 bytes into a destination of size 4096
 ../../../tvision/TDirListBox.cc:129:21: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
-In file included from /usr/include/stdio.h:871,
+In file included from /usr/include/stdio.h:866,
                  from /usr/include/c++/10/cstdio:42,
                  from /usr/include/c++/10/ext/string_conversions.h:43,
                  from /usr/include/c++/10/bits/basic_string.h:6535,
@@ -66,7 +66,7 @@ In file included from /usr/include/stdio.h:871,
                  from ../../../tvision/tobjstrm.h:414,
                  from ../../../tvision/tv.h:635,
                  from ../../../tvision/TDirListBox.cc:18:
-/usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 1 and 4351 bytes into a destination of size 4096
+/usr/include/bits/stdio2.h:38:34: note: ‘__builtin___sprintf_chk’ output between 1 and 4351 bytes into a destination of size 4096
 ../../../tvision/TEditor.cc:109:8: warning: no previous declaration for ‘ushort scanKeyMap(const void*, ushort)’ [-Wmissing-declarations]
 ../../../tvision/TEditor.cc: In function ‘ushort scanKeyMap(const void*, ushort)’:
 ../../../tvision/TEditor.cc:109:32: warning: declaration of ‘keyMap’ shadows a global declaration [-Wshadow]
@@ -100,7 +100,7 @@ In file included from ../../../tvision/tv.h:675,
 ../../../tvision/TFileList.cc:129:11: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 ../../../tvision/TFileList.cc: In member function ‘void TFileList::readDirectory(const char*)’:
 ../../../tvision/TFileList.cc:199:20: warning: ‘__builtin___sprintf_chk’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
-In file included from /usr/include/stdio.h:871,
+In file included from /usr/include/stdio.h:866,
                  from /usr/include/c++/10/cstdio:42,
                  from /usr/include/c++/10/ext/string_conversions.h:43,
                  from /usr/include/c++/10/bits/basic_string.h:6535,
@@ -113,9 +113,9 @@ In file included from /usr/include/stdio.h:871,
                  from ../../../tvision/tobjstrm.h:414,
                  from ../../../tvision/tv.h:635,
                  from ../../../tvision/TFileList.cc:20:
-/usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 2 and 4097 bytes into a destination of size 4096
+/usr/include/bits/stdio2.h:38:34: note: ‘__builtin___sprintf_chk’ output between 2 and 4097 bytes into a destination of size 4096
 ../../../tvision/TFileList.cc:211:21: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
-In file included from /usr/include/stdio.h:871,
+In file included from /usr/include/stdio.h:866,
                  from /usr/include/c++/10/cstdio:42,
                  from /usr/include/c++/10/ext/string_conversions.h:43,
                  from /usr/include/c++/10/bits/basic_string.h:6535,
@@ -128,9 +128,9 @@ In file included from /usr/include/stdio.h:871,
                  from ../../../tvision/tobjstrm.h:414,
                  from ../../../tvision/tv.h:635,
                  from ../../../tvision/TFileList.cc:20:
-/usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 1 and 4351 bytes into a destination of size 4096
+/usr/include/bits/stdio2.h:38:34: note: ‘__builtin___sprintf_chk’ output between 1 and 4351 bytes into a destination of size 4096
 ../../../tvision/TFileList.cc:227:20: warning: ‘..’ directive writing 2 bytes into a region of size between 1 and 4096 [-Wformat-overflow=]
-In file included from /usr/include/stdio.h:871,
+In file included from /usr/include/stdio.h:866,
                  from /usr/include/c++/10/cstdio:42,
                  from /usr/include/c++/10/ext/string_conversions.h:43,
                  from /usr/include/c++/10/bits/basic_string.h:6535,
@@ -143,7 +143,7 @@ In file included from /usr/include/stdio.h:871,
                  from ../../../tvision/tobjstrm.h:414,
                  from ../../../tvision/tv.h:635,
                  from ../../../tvision/TFileList.cc:20:
-/usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 3 and 4098 bytes into a destination of size 4096
+/usr/include/bits/stdio2.h:38:34: note: ‘__builtin___sprintf_chk’ output between 3 and 4098 bytes into a destination of size 4096
 ../../../tvision/TGroup.cc:64:6: warning: no previous declaration for ‘void doCalcChange(TView*, void*)’ [-Wmissing-declarations]
 ../../../tvision/TGroup.cc:104:6: warning: no previous declaration for ‘void addSubviewDataSize(TView*, void*)’ [-Wmissing-declarations]
 ../../../tvision/TGroup.cc:564:9: warning: no previous declaration for ‘Boolean isInvalid(TView*, void*)’ [-Wmissing-declarations]
@@ -160,7 +160,7 @@ In file included from ../../../tvision/tv.h:659,
 ../../../tvision/TIndicator.cc: In member function ‘virtual void TIndicator::draw()’:
 ../../../tvision/TIndicator.cc:52:21: warning: ‘%d’ directive writing between 1 and 11 bytes into a region of size between 2 and 12 [-Wformat-overflow=]
 ../../../tvision/TIndicator.cc:52:16: note: directive argument in the range [-2147483647, 2147483647]
-In file included from /usr/include/stdio.h:871,
+In file included from /usr/include/stdio.h:866,
                  from /usr/include/c++/10/cstdio:42,
                  from /usr/include/c++/10/ext/string_conversions.h:43,
                  from /usr/include/c++/10/bits/basic_string.h:6535,
@@ -173,10 +173,10 @@ In file included from /usr/include/stdio.h:871,
                  from ../../../tvision/tobjstrm.h:414,
                  from ../../../tvision/tv.h:635,
                  from ../../../tvision/TIndicator.cc:18:
-/usr/include/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 6 and 26 bytes into a destination of size 15
+/usr/include/bits/stdio2.h:38:34: note: ‘__builtin___sprintf_chk’ output between 6 and 26 bytes into a destination of size 15
 ../../../tvision/TInputLine.cc: In member function ‘virtual void TInputLine::handleEvent(TEvent&)’:
 ../../../tvision/TInputLine.cc:256:15: warning: switch missing default case [-Wswitch-default]
-In file included from /usr/include/string.h:495,
+In file included from /usr/include/string.h:519,
                  from ../../../tvision/TInputLine.cc:23:
 In function ‘char* strcpy(char*, const char*)’,
     inlined from ‘void TInputLine::deleteSelect()’ at ../../../tvision/TInputLine.cc:157:15:
