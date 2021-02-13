@@ -1,5 +1,7 @@
 warning: Tag 'TCL_SUBST' at line 248 of file 'Doxyfile' has become obsolete.
          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'COLS_IN_ALPHA_INDEX' at line 1047 of file 'Doxyfile' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
 warning: Tag 'PERL_PATH' at line 2120 of file 'Doxyfile' has become obsolete.
          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
 warning: Tag 'MSCGEN_PATH' at line 2142 of file 'Doxyfile' has become obsolete.
@@ -129,42 +131,42 @@ Using the default: a4!
 /tvision/validate.h:28: warning: Member voTransfer (variable) of file validate.h is not documented.
 /tvision/validate.h:29: warning: Member voReserved (variable) of file validate.h is not documented.
 /tvision/views.h:26: warning: Member cmValid (variable) of file views.h is not documented.
-/tvision/app.h:932: warning: unable to resolve reference to 'initHistory()' for \ref command
-/tvision/dialogs.h:568: warning: found </pre> tag without matching <pre>
+/tvision/app.h:933: warning: unable to resolve reference to 'initHistory()' for \ref command
+/tvision/dialogs.h:567: warning: found </pre> tag without matching <pre>
 /tvision/dialogs.h:207: warning: Member name (variable) of class TDialog is not documented.
-/tvision/dialogs.h:919: warning: unable to resolve reference to 'TRadioButton::draw()' for \ref command
+/tvision/dialogs.h:920: warning: unable to resolve reference to 'TRadioButton::draw()' for \ref command
 /tvision/dialogs.h:207: warning: Member name (variable) of class TDialog is not documented.
 /tvision/dialogs.h:207: warning: Member name (variable) of class TDialog is not documented.
-/tvision/editors.h:483: warning: found </pre> tag without matching <pre>
-/tvision/editors.h:967: warning: found </pre> tag without matching <pre>
-/tvision/system.h:357: warning: found </pre> tag without matching <pre>
+/tvision/editors.h:482: warning: found </pre> tag without matching <pre>
+/tvision/editors.h:966: warning: found </pre> tag without matching <pre>
+/tvision/system.h:356: warning: found </pre> tag without matching <pre>
 /tvision/dialogs.h:207: warning: Member name (variable) of class TDialog is not documented.
-/tvision/views.h:3027: warning: unable to resolve reference to 'TView::TView(bounds)' for \ref command
-/tvision/views.h:3151: warning: explicit link request to 'firstThat' could not be resolved
-/tvision/views.h:3252: warning: unable to resolve reference to 'TGroup::doExpose()' for \ref command
-/tvision/views.h:2765: warning: unable to resolve reference to 'TView::TView(bounds)' for \ref command
+/tvision/views.h:3028: warning: unable to resolve reference to 'TView::TView(bounds)' for \ref command
+/tvision/views.h:3152: warning: explicit link request to 'firstThat' could not be resolved
+/tvision/views.h:3251: warning: unable to resolve reference to 'TGroup::doExpose()' for \ref command
+/tvision/views.h:2766: warning: unable to resolve reference to 'TView::TView(bounds)' for \ref command
 /tvision/menus.h:678: warning: Member name (variable) of class TMenuPopup is not documented.
-/tvision/tvobjs.h:259: warning: explicit link request to 'define' could not be resolved
-/tvision/tvobjs.h:261: warning: explicit link request to 'include' could not be resolved
-/tvision/app.h:865: warning: found </pre> tag without matching <pre>
-/tvision/system.h:583: warning: unable to resolve reference to 'select()' for \ref command
-/tvision/views.h:2355: warning: found </pre> tag without matching <pre>
-/tvision/views.h:2569: warning: unable to resolve reference to 'TView::setbounds()' for \ref command
-/tvision/tobjstrm.h:75: warning: unable to resolve reference to 'streamableName()' for \ref command
-/tvision/tobjstrm.h:162: warning: unable to resolve reference to 'pstream::registerTypes()' for \ref command
-/tvision/tobjstrm.h:180: warning: unable to resolve reference to 'BUILDER' for \ref command
-/tvision/tobjstrm.h:214: warning: unable to resolve reference to 'read()' for \ref command
-/tvision/tobjstrm.h:214: warning: unable to resolve reference to 'write()' for \ref command
-/tvision/menus.h:154: warning: unable to resolve reference to 'TMenuItem:' for \ref command
-/tvision/validate.h:116: warning: unable to resolve reference to 'getData' for \ref command
-/tvision/validate.h:116: warning: unable to resolve reference to 'setData' for \ref command
-/tvision/validate.h:141: warning: unable to resolve reference to 'isValid(s)' for \ref command
-/tvision/views.h:1243: warning: unable to resolve reference to 'drawSubViews' for \ref command
-/tvision/views.h:1909: warning: found </pre> tag without matching <pre>
-/tvision/views.h:1884: warning: found </pre> tag without matching <pre>
-/tvision/views.h:1930: warning: found </pre> tag without matching <pre>
-/tvision/views.h:1753: warning: found </pre> tag without matching <pre>
-/tvision/views.h:1836: warning: found </pre> tag without matching <pre>
-/tvision/views.h:3739: warning: found </pre> tag without matching <pre>
-/tvision/views.h:3776: warning: found </pre> tag without matching <pre>
-/tvision/views.h:3803: warning: found </pre> tag without matching <pre>
+/tvision/tvobjs.h:260: warning: explicit link request to 'define' could not be resolved
+/tvision/tvobjs.h:262: warning: explicit link request to 'include' could not be resolved
+/tvision/app.h:864: warning: found </pre> tag without matching <pre>
+/tvision/system.h:584: warning: unable to resolve reference to 'select()' for \ref command
+/tvision/views.h:2354: warning: found </pre> tag without matching <pre>
+/tvision/views.h:2570: warning: unable to resolve reference to 'TView::setbounds()' for \ref command
+/tvision/tobjstrm.h:76: warning: unable to resolve reference to 'streamableName()' for \ref command
+/tvision/tobjstrm.h:163: warning: unable to resolve reference to 'pstream::registerTypes()' for \ref command
+/tvision/tobjstrm.h:181: warning: unable to resolve reference to 'BUILDER' for \ref command
+/tvision/tobjstrm.h:215: warning: unable to resolve reference to 'read()' for \ref command
+/tvision/tobjstrm.h:215: warning: unable to resolve reference to 'write()' for \ref command
+/tvision/menus.h:155: warning: unable to resolve reference to 'TMenuItem:' for \ref command
+/tvision/validate.h:117: warning: unable to resolve reference to 'getData' for \ref command
+/tvision/validate.h:117: warning: unable to resolve reference to 'setData' for \ref command
+/tvision/validate.h:142: warning: unable to resolve reference to 'isValid(s)' for \ref command
+/tvision/views.h:1244: warning: unable to resolve reference to 'drawSubViews' for \ref command
+/tvision/views.h:1908: warning: found </pre> tag without matching <pre>
+/tvision/views.h:1883: warning: found </pre> tag without matching <pre>
+/tvision/views.h:1929: warning: found </pre> tag without matching <pre>
+/tvision/views.h:1752: warning: found </pre> tag without matching <pre>
+/tvision/views.h:1835: warning: found </pre> tag without matching <pre>
+/tvision/views.h:3738: warning: found </pre> tag without matching <pre>
+/tvision/views.h:3775: warning: found </pre> tag without matching <pre>
+/tvision/views.h:3802: warning: found </pre> tag without matching <pre>
