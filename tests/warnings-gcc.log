@@ -41,7 +41,7 @@ In file included from ../../../tvision/tv.h:675,
 In file included from /usr/include/stdio.h:866,
                  from /usr/include/c++/11/cstdio:42,
                  from /usr/include/c++/11/ext/string_conversions.h:43,
-                 from /usr/include/c++/11/bits/basic_string.h:6595,
+                 from /usr/include/c++/11/bits/basic_string.h:6606,
                  from /usr/include/c++/11/string:55,
                  from /usr/include/c++/11/bits/locale_classes.h:40,
                  from /usr/include/c++/11/bits/ios_base.h:41,
@@ -56,7 +56,7 @@ In file included from /usr/include/stdio.h:866,
 In file included from /usr/include/stdio.h:866,
                  from /usr/include/c++/11/cstdio:42,
                  from /usr/include/c++/11/ext/string_conversions.h:43,
-                 from /usr/include/c++/11/bits/basic_string.h:6595,
+                 from /usr/include/c++/11/bits/basic_string.h:6606,
                  from /usr/include/c++/11/string:55,
                  from /usr/include/c++/11/bits/locale_classes.h:40,
                  from /usr/include/c++/11/bits/ios_base.h:41,
@@ -105,7 +105,7 @@ In file included from ../../../tvision/tv.h:675,
 In file included from /usr/include/stdio.h:866,
                  from /usr/include/c++/11/cstdio:42,
                  from /usr/include/c++/11/ext/string_conversions.h:43,
-                 from /usr/include/c++/11/bits/basic_string.h:6595,
+                 from /usr/include/c++/11/bits/basic_string.h:6606,
                  from /usr/include/c++/11/string:55,
                  from /usr/include/c++/11/bits/locale_classes.h:40,
                  from /usr/include/c++/11/bits/ios_base.h:41,
@@ -120,7 +120,7 @@ In file included from /usr/include/stdio.h:866,
 In file included from /usr/include/stdio.h:866,
                  from /usr/include/c++/11/cstdio:42,
                  from /usr/include/c++/11/ext/string_conversions.h:43,
-                 from /usr/include/c++/11/bits/basic_string.h:6595,
+                 from /usr/include/c++/11/bits/basic_string.h:6606,
                  from /usr/include/c++/11/string:55,
                  from /usr/include/c++/11/bits/locale_classes.h:40,
                  from /usr/include/c++/11/bits/ios_base.h:41,
@@ -135,7 +135,7 @@ In file included from /usr/include/stdio.h:866,
 In file included from /usr/include/stdio.h:866,
                  from /usr/include/c++/11/cstdio:42,
                  from /usr/include/c++/11/ext/string_conversions.h:43,
-                 from /usr/include/c++/11/bits/basic_string.h:6595,
+                 from /usr/include/c++/11/bits/basic_string.h:6606,
                  from /usr/include/c++/11/string:55,
                  from /usr/include/c++/11/bits/locale_classes.h:40,
                  from /usr/include/c++/11/bits/ios_base.h:41,
@@ -165,7 +165,7 @@ In file included from ../../../tvision/tv.h:659,
 In file included from /usr/include/stdio.h:866,
                  from /usr/include/c++/11/cstdio:42,
                  from /usr/include/c++/11/ext/string_conversions.h:43,
-                 from /usr/include/c++/11/bits/basic_string.h:6595,
+                 from /usr/include/c++/11/bits/basic_string.h:6606,
                  from /usr/include/c++/11/string:55,
                  from /usr/include/c++/11/bits/locale_classes.h:40,
                  from /usr/include/c++/11/bits/ios_base.h:41,
@@ -194,7 +194,7 @@ In file included from ../../../tvision/tv.h:683,
 ../../../tvision/TOutline.cc: In member function ‘virtual void TOutlineViewer::handleEvent(TEvent&)’:
 ../../../tvision/TOutline.cc:402:10: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TParamText.cc: In member function ‘virtual void TParamText::setText(char*, ...)’:
-../../../tvision/TParamText.cc:49:28: warning: function ‘virtual void TParamText::setText(char*, ...)’ might be a candidate for ‘gnu_printf’ format attribute [-Wsuggest-attribute=format]
+../../../tvision/TParamText.cc:49:13: warning: function ‘virtual void TParamText::setText(char*, ...)’ might be a candidate for ‘gnu_printf’ format attribute [-Wsuggest-attribute=format]
 ../../../tvision/TProgram.cc: In member function ‘virtual void TProgram::getEvent(TEvent&)’:
 ../../../tvision/TProgram.cc:148:53: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TResourceFile.cc:185:6: warning: no previous declaration for ‘void copyStream(fpstream*, fpstream*, long int)’ [-Wmissing-declarations]
@@ -285,9 +285,9 @@ In file included from ../../../tvision/tv.h:659,
                  from ../../../tvision/misc.cc:20:
 ../../../tvision/views.h:1601:12: note: shadowed declaration is here
 ../../../tvision/msgbox.cc: In function ‘ushort messageBoxRect(const TRect&, ushort, const char*, ...)’:
-../../../tvision/msgbox.cc:102:32: warning: function ‘ushort messageBoxRect(const TRect&, ushort, const char*, ...)’ might be a candidate for ‘gnu_printf’ format attribute [-Wsuggest-attribute=format]
+../../../tvision/msgbox.cc:102:13: warning: function ‘ushort messageBoxRect(const TRect&, ushort, const char*, ...)’ might be a candidate for ‘gnu_printf’ format attribute [-Wsuggest-attribute=format]
 ../../../tvision/msgbox.cc: In function ‘ushort messageBox(unsigned int, const char*, ...)’:
-../../../tvision/msgbox.cc:128:32: warning: function ‘ushort messageBox(unsigned int, const char*, ...)’ might be a candidate for ‘gnu_printf’ format attribute [-Wsuggest-attribute=format]
+../../../tvision/msgbox.cc:128:13: warning: function ‘ushort messageBox(unsigned int, const char*, ...)’ might be a candidate for ‘gnu_printf’ format attribute [-Wsuggest-attribute=format]
 ../../../tvision/new.cc: In static member function ‘static void* TBufListEntry::operator new(size_t)’:
 ../../../tvision/new.cc:48:12: warning: ‘operator new’ must not return NULL unless it is declared ‘throw()’ (or ‘-fcheck-new’ is in effect)
 ../../../tvision/new.cc: At global scope:

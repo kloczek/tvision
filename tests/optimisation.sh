@@ -10,16 +10,16 @@ fi
 timestamp="$(date +%F-%T)"
 
 CXXFLAGS_O2="-O2"
-CXXFLAGS_O2_lto="-O2 -flto"
+CXXFLAGS_O2_lto="-O2 -flto=auto -flto-partition=none"
 CXXFLAGS_Os="-Os"
-CXXFLAGS_Os_lto="-Os -flto"
-CXXFLAGS_max_opt="-Os -flto -fno-exceptions -fno-rtti"
+CXXFLAGS_Os_lto="-Os -flto=auto -flto-partition=none"
+CXXFLAGS_max_opt="-Os -fdata-sections -ffunction-sections -flto=auto -flto-partition=none -fno-exceptions -fno-rtti"
 
 LDFLAGS_O2="-Wl,--as-needed"
-LDFLAGS_O2_lto="-O2 -Wl,--as-needed -flto -fuse-linker-plugin"
+LDFLAGS_O2_lto="-O2 -Wl,--as-needed -flto=auto -flto-partition=none -fuse-linker-plugin"
 LDFLAGS_Os="-Wl,--as-needed"
-LDFLAGS_Os_lto="-Os -Wl,--as-needed -flto -fuse-linker-plugin"
-LDFLAGS_max_opt="-Os -Wl,--as-needed -flto -fuse-linker-plugin"
+LDFLAGS_Os_lto="-Os -Wl,--as-needed -flto=auto -flto-partition=none -fuse-linker-plugin"
+LDFLAGS_max_opt="-Os -Wl,--as-needed -Wl,--gc-sections -flto=auto -flto-partition=none -fuse-linker-plugin"
 
 all_targets="O2 O2_lto Os Os_lto max_opt"
 
