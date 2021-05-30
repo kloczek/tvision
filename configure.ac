@@ -1,5 +1,5 @@
 dnl Process this file with `autoconf' to produce a configure script.
-AC_PREREQ(2.59)
+AC_PREREQ([2.69])
 AC_INIT([tvision],
 	[0.8.0],
 	[https://github.com/kloczek/tvision/issues],
@@ -25,12 +25,13 @@ AC_PROG_CXX
 AC_PROG_CPP
 AM_PROG_AR
 
-AM_ENABLE_SHARED
-AM_DISABLE_STATIC
-AM_PROG_LIBTOOL
+AC_ENABLE_SHARED([])
+AC_DISABLE_STATIC([])
+LT_INIT
 
 dnl Checks for header files.
-AC_STDC_HEADERS
+AC_CHECK_INCLUDES_DEFAULT
+
 AC_CHECK_HEADERS(ncurses.h curses.h gpm.h)
 
 dnl Checks for libraries.
@@ -73,7 +74,7 @@ AC_ARG_ENABLE(freebsd-mouse,
 	;;
 esac
 
-AC_OUTPUT([
+AC_CONFIG_FILES([
 	Makefile
 	tvision/Makefile
 	tvhc/Makefile
@@ -84,3 +85,4 @@ AC_OUTPUT([
 	tvision.pc
 	tvision.spec
 ])
+AC_OUTPUT
