@@ -2,9 +2,25 @@ warning: Tag 'TCL_SUBST' at line 248 of file 'Doxyfile' has become obsolete.
          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
 warning: Tag 'COLS_IN_ALPHA_INDEX' at line 1047 of file 'Doxyfile' has become obsolete.
          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'FORMULA_TRANSPARENT' at line 1472 of file 'Doxyfile' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'LATEX_SOURCE_CODE' at line 1760 of file 'Doxyfile' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'RTF_SOURCE_CODE' at line 1842 of file 'Doxyfile' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOCBOOK_PROGRAMLISTING' at line 1940 of file 'Doxyfile' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
 warning: Tag 'PERL_PATH' at line 2120 of file 'Doxyfile' has become obsolete.
          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'CLASS_DIAGRAMS' at line 2133 of file 'Doxyfile' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
 warning: Tag 'MSCGEN_PATH' at line 2142 of file 'Doxyfile' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOT_FONTNAME' at line 2184 of file 'Doxyfile' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOT_FONTSIZE' at line 2191 of file 'Doxyfile' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOT_TRANSPARENT' at line 2415 of file 'Doxyfile' has become obsolete.
          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
 warning: argument 'a4wide' for option PAPER_TYPE is not a valid enum value
 Using the default: a4!
@@ -142,7 +158,6 @@ Using the default: a4!
 /tvision/system.h:356: warning: found </pre> tag without matching <pre>
 /tvision/dialogs.h:207: warning: Member name (variable) of class TDialog is not documented.
 /tvision/views.h:3028: warning: unable to resolve reference to 'TView::TView(bounds)' for \ref command
-/tvision/views.h:3152: warning: explicit link request to 'firstThat' could not be resolved
 /tvision/views.h:3251: warning: unable to resolve reference to 'TGroup::doExpose()' for \ref command
 /tvision/views.h:2766: warning: unable to resolve reference to 'TView::TView(bounds)' for \ref command
 /tvision/menus.h:678: warning: Member name (variable) of class TMenuPopup is not documented.
