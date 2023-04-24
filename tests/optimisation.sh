@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/sh
 
 if [ -e ../Makefile ]; then
 	make -C .. distclean
