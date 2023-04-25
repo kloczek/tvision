@@ -29,9 +29,6 @@ const
 class TColorItem;
 class TColorGroup;
 
-TColorGroup& operator + ( TColorGroup& g, TColorItem& i );
-TColorGroup& operator + ( TColorGroup& g1, TColorGroup& g2 );
-
 #if defined( Uses_TColorItem ) && !defined( TV_TColorItem )
 #define TV_TColorItem
 
