@@ -13,47 +13,48 @@
 #define Uses_TResourceItem
 #include <tv.h>
 
-TResourceCollection::TResourceCollection( short aLimit, short aDelta) :
-    TStringCollection( aLimit, aDelta)
+TResourceCollection::TResourceCollection(short aLimit,
+					 short aDelta):TStringCollection(aLimit,
+									 aDelta)
 {
 }
 
-void TResourceCollection::freeItem( void* item )
+void TResourceCollection::freeItem(void *item)
 {
-    delete ((TResourceItem*)item)->key;
-    delete (TResourceItem*)item;
+	delete((TResourceItem *) item)->key;
+	delete(TResourceItem *) item;
 }
 
-void* TResourceCollection::keyOf( void* item )
+void *TResourceCollection::keyOf(void *item)
 {
-    return ((TResourceItem *)item)->key;
+	return ((TResourceItem *) item)->key;
 }
 
 #if !defined(NO_STREAMABLE)
 
 TStreamable *TResourceCollection::build()
 {
-    return new TResourceCollection( streamableInit );
+	return new TResourceCollection(streamableInit);
 }
 
-void TResourceCollection::writeItem( void *obj, opstream& os )
+void TResourceCollection::writeItem(void *obj, opstream & os)
 {
 
-   os << ((TResourceItem *)obj)->pos;
-   os << ((TResourceItem *)obj)->size;
-   os.writeString(((TResourceItem *)obj)->key);
+	os << ((TResourceItem *) obj)->pos;
+	os << ((TResourceItem *) obj)->size;
+	os.writeString(((TResourceItem *) obj)->key);
 
 }
 
-void *TResourceCollection::readItem( ipstream& is )
+void *TResourceCollection::readItem(ipstream & is)
 {
-    TResourceItem *obj;
+	TResourceItem *obj;
 
-    obj = new TResourceItem;
-    is >> obj->pos;
-    is >> obj->size;
-    obj->key = is.readString();
-    return (void *)obj;
+	obj = new TResourceItem;
+	is >> obj->pos;
+	is >> obj->size;
+	obj->key = is.readString();
+	return (void *)obj;
 }
 
 #endif

@@ -38,8 +38,8 @@
 const char *const TFileViewer::name = "TFileViewer";
 
 TFileViewer::TFileViewer(const TRect & bounds,
-			 TScrollBar * aHScrollBar,
-			 TScrollBar * aVScrollBar,
+			 TScrollBar *aHScrollBar,
+			 TScrollBar *aVScrollBar,
 			 const char *aFileName):TScroller(bounds, aHScrollBar,
 							  aVScrollBar)
 {
@@ -154,8 +154,8 @@ TStreamableClass RFileView(TFileViewer::name,
 
 static short winNumber = 0;
 
-TFileWindow::TFileWindow(const char *fileName):TWindowInit(&TFileWindow::
-							   initFrame),
+TFileWindow::
+TFileWindow(const char *fileName):TWindowInit(&TFileWindow::initFrame),
 TWindow(TProgram::deskTop->getExtent(), fileName, winNumber++)
 {
 	options |= ofTileable;

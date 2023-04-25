@@ -66,10 +66,11 @@ TMenuBar *Demo::initMenuBar(TRect r)
 	r.b.y = r.a.y + 1;
 
 	return new TMenuBar(r,
-		*new TSubMenu("~F~ile", kbAltF, hcNoContext) +
-		  *new TMenuItem("~D~ialog...", cmOpenDialog, kbNoKey, hcNoContext) +
-		  newLine() +
-		  *new TMenuItem("E~x~it...", cmQuit, kbAltX, hcNoContext)
+			    *new TSubMenu("~F~ile", kbAltF, hcNoContext) +
+			    *new TMenuItem("~D~ialog...", cmOpenDialog, kbNoKey,
+					   hcNoContext) + newLine() +
+			    *new TMenuItem("E~x~it...", cmQuit, kbAltX,
+					   hcNoContext)
 	    );
 }
 

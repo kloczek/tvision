@@ -21,16 +21,16 @@ class TTable:public TView {
       public:
 	TTable(TRect & r);
 	TTable(StreamableInit):TView(streamableInit) {
-	}
-	virtual void draw();
+	} virtual void draw();
 	virtual void handleEvent(TEvent & event);
 	void charFocused();
 
       private:
 	virtual const char *streamableName() const {
 		return name;
-      } protected:
-	virtual void write(opstream &);
+	}
+      protected:
+	 virtual void write(opstream &);
 	virtual void *read(ipstream &);
 
       public:
@@ -43,7 +43,7 @@ inline ipstream & operator >>(ipstream & is, TTable & cl)
 	return is >> (TStreamable &) cl;
 }
 
-inline ipstream & operator >>(ipstream & is, TTable * &cl)
+inline ipstream & operator >>(ipstream & is, TTable *&cl)
 {
 	return is >> (void *&)cl;
 }
@@ -53,7 +53,7 @@ inline opstream & operator <<(opstream & os, TTable & cl)
 	return os << (TStreamable &) cl;
 }
 
-inline opstream & operator <<(opstream & os, TTable * cl)
+inline opstream & operator <<(opstream & os, TTable *cl)
 {
 	return os << (TStreamable *) cl;
 }
@@ -62,16 +62,16 @@ class TReport:public TView {
       public:
 	TReport(TRect & r);
 	TReport(StreamableInit):TView(streamableInit) {
-	}
-	virtual void draw();
+	} virtual void draw();
 	virtual void handleEvent(TEvent & event);
 
       private:
 	long asciiChar;
 	virtual const char *streamableName() const {
 		return name;
-      } protected:
-	virtual void write(opstream &);
+	}
+      protected:
+	 virtual void write(opstream &);
 	virtual void *read(ipstream &);
 
       public:
@@ -84,7 +84,7 @@ inline ipstream & operator >>(ipstream & is, TReport & cl)
 	return is >> (TStreamable &) cl;
 }
 
-inline ipstream & operator >>(ipstream & is, TReport * &cl)
+inline ipstream & operator >>(ipstream & is, TReport *&cl)
 {
 	return is >> (void *&)cl;
 }
@@ -94,7 +94,7 @@ inline opstream & operator <<(opstream & os, TReport & cl)
 	return os << (TStreamable &) cl;
 }
 
-inline opstream & operator <<(opstream & os, TReport * cl)
+inline opstream & operator <<(opstream & os, TReport *cl)
 {
 	return os << (TStreamable *) cl;
 }
@@ -104,14 +104,14 @@ class TAsciiChart:public TWindow {
 	TAsciiChart();
 	TAsciiChart(StreamableInit):TWindowInit(&initFrame),
 	    TWindow(streamableInit) {
-	}
-	virtual void handleEvent(TEvent & event);
+	} virtual void handleEvent(TEvent & event);
 
       private:
 	virtual const char *streamableName() const {
 		return name;
-      } protected:
-	virtual void write(opstream &);
+	}
+      protected:
+	 virtual void write(opstream &);
 	virtual void *read(ipstream &);
 
       public:
@@ -124,7 +124,7 @@ inline ipstream & operator >>(ipstream & is, TAsciiChart & cl)
 	return is >> (TStreamable &) cl;
 }
 
-inline ipstream & operator >>(ipstream & is, TAsciiChart * &cl)
+inline ipstream & operator >>(ipstream & is, TAsciiChart *&cl)
 {
 	return is >> (void *&)cl;
 }
@@ -134,7 +134,7 @@ inline opstream & operator <<(opstream & os, TAsciiChart & cl)
 	return os << (TStreamable &) cl;
 }
 
-inline opstream & operator <<(opstream & os, TAsciiChart * cl)
+inline opstream & operator <<(opstream & os, TAsciiChart *cl)
 {
 	return os << (TStreamable *) cl;
 }

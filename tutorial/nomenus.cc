@@ -29,8 +29,9 @@ class TMyBackground:public TBackground {
 	virtual void draw();
 };
 
-TMyBackground::TMyBackground(const TRect & bounds):
-TBackground(bounds, TDeskTop::defaultBkgrnd)
+TMyBackground::TMyBackground(const TRect & bounds):TBackground(bounds,
+							       TDeskTop::
+							       defaultBkgrnd)
 {
 }
 
@@ -55,8 +56,8 @@ class TMyDeskTop:public TDeskTop {
 	static TBackground *initBackground(TRect);
 };
 
-TMyDeskTop::TMyDeskTop(const TRect & bounds):
-TDeskInit(&TMyDeskTop::initBackground),
+TMyDeskTop::TMyDeskTop(const TRect & bounds):TDeskInit(&TMyDeskTop::
+						       initBackground),
 TDeskTop(bounds)
 {
 }
@@ -85,9 +86,10 @@ class TMyApp:public TApplication {
 //Application constructor. We don't call initStatusLine() and initMenuBar()
 //because we don't want status line or menus in this application.
 
-TMyApp::TMyApp():TProgInit(nullptr,	//&TMyApp::initStatusLine,
-	  nullptr,			//&TMyApp::initMenuBar,
-	  &TMyApp::initDeskTop)		//this call is required
+TMyApp::TMyApp():TProgInit(nullptr,
+				//&TMyApp::initStatusLine,
+	  nullptr,		//&TMyApp::initMenuBar,
+	  &TMyApp::initDeskTop)	//this call is required
 {
 }
 
@@ -115,18 +117,23 @@ ushort TMyApp::newDialog(DialogData & data)
 	TDialog *pd = new TDialog(TRect(20, 6, 60, 19), "Cheese order");
 	if (pd) {
 		TView *b = new TCheckBoxes(TRect(3, 3, 18, 6),
-				new TSItem("~H~varti",
-				new TSItem("~T~ilset",
-				new TSItem("~J~arlsberg", nullptr)))
-				);
+					   new TSItem("~H~varti",
+						      new TSItem("~T~ilset",
+								 new
+								 TSItem
+								 ("~J~arlsberg",
+								  nullptr)))
+		    );
 		pd->insert(b);
 		pd->insert(new TLabel(TRect(2, 2, 10, 3), "Cheeses", b));
 
 		b = new TRadioButtons(TRect(22, 3, 34, 6),
-				new TSItem("~S~olid",
-				new TSItem("~R~unny",
-				new TSItem("~M~elted", nullptr) ))
-				);
+				      new TSItem("~S~olid",
+						 new TSItem("~R~unny",
+							    new
+							    TSItem("~M~elted",
+								   nullptr)))
+		    );
 		pd->insert(b);
 		pd->insert(new TLabel(TRect(21, 2, 33, 3), "Consistency", b));
 

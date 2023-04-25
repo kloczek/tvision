@@ -34,16 +34,15 @@ typedef unsigned P_id_type;
  * Internal structure.
  * @short Internal structure
  */
-struct fLink
-{
+struct fLink {
     /**
      * Undocumented.
      */
-    fLink *f;
+	fLink *f;
     /**
      * Undocumented.
      */
-    class TStreamableClass *t;
+	class TStreamableClass *t;
 };
 #endif
 
@@ -77,11 +76,10 @@ struct fLink
  * @ref read(), and @ref write().
  * @short Gives the streamable property to a class
  */
-class TStreamable
-{
-    friend class opstream;
-    friend class ipstream;
-private:
+class TStreamable {
+	friend class opstream;
+	friend class ipstream;
+      private:
     /**
      * Class TStreamable has no constructor. This function must be overridden
      * (or redeclared as pure virtual) by every derived class. Its purpose is
@@ -92,8 +90,8 @@ private:
      * The name returned must be a unique, 0-terminated string, so the safest
      * strategy is to use the name of the streamable class.
      */
-    virtual const char *streamableName() const = 0;
-protected:
+	 virtual const char *streamableName() const = 0;
+      protected:
     /**
      * This pure virtual function must be overridden (or redeclared as pure
      * virtual) in every derived class. The overriding read() function for
@@ -102,7 +100,7 @@ protected:
      * the base class's read() (if any), then extracting any additional data
      * members for the derived class.
      */
-    virtual void *read( ipstream& is ) = 0;
+	 virtual void *read(ipstream & is) = 0;
     /**
      * This pure virtual function must be overridden (or redeclared as pure
      * virtual) in every derived class. The overriding write() function for
@@ -111,10 +109,10 @@ protected:
      * the base class's write() (if any), then inserting any additional data
      * members for the derived class.
      */
-    virtual void write( opstream& os ) = 0;
+	virtual void write(opstream & os) = 0;
 };
 
-#endif  // Uses_TStreamable
+#endif // Uses_TStreamable
 
 /* ------------------------------------------------------------------------*/
 /*                                                                         */
@@ -152,12 +150,11 @@ typedef TStreamable *(*BUILDER)();
  * @short TStreamableClass is used by TStreamableTypes and pstream in the
  * registration of streamable classes
  */
-class TStreamableClass
-{
-    friend class TStreamableTypes;
-    friend class opstream;
-    friend class ipstream;
-public:
+class TStreamableClass {
+	friend class TStreamableTypes;
+	friend class opstream;
+	friend class ipstream;
+      public:
     /**
      * Creates a TStreamable object with the given name and the given builder
      * function, then calls @ref pstream::registerTypes().
@@ -184,14 +181,14 @@ public:
      * typedef TStreamable *(*BUILDER)();
      * </pre>
      */
-    TStreamableClass( const char *aName, BUILDER aBuild, int aDelta );
-private:
-    const char *name;
-    BUILDER build;
-    int delta;
+	 TStreamableClass(const char *aName, BUILDER aBuild, int aDelta);
+      private:
+	const char *name;
+	BUILDER build;
+	int delta;
 };
 
-#endif  // Uses_TStreamableClass
+#endif // Uses_TStreamableClass
 
 /* ------------------------------------------------------------------------*/
 /*                                                                         */
@@ -218,49 +215,49 @@ private:
  * @short Maintains a database of all registered streamable types used in an
  * application
  */
-class TStreamableTypes : private TNSSortedCollection
-{
-public:
+class TStreamableTypes:private TNSSortedCollection {
+      public:
     /**
      * Calls the base @ref TNSSortedCollection constructor to create a
      * TStreamableTypes collection.
      * @see TNSSortedCollection::TNSSortedCollection
      */
-    TStreamableTypes();
+	TStreamableTypes();
     /**
      * Sets the collection @ref limit to 0 without destroying the collection
      * (since the @ref shouldDelete data member is set to False).
      */
-    ~TStreamableTypes();
+	~TStreamableTypes();
     /**
      * Registers the argument class by inserting `d' in the collection.
      */
-    void registerType( const TStreamableClass *d );
+	void registerType(const TStreamableClass * d);
     /**
      * Returns a pointer to the class in the collection corresponding to the
      * argument `name', or returns 0 if no match.
      */
-    const TStreamableClass *lookup( const char *name );
+	const TStreamableClass *lookup(const char *name);
     /**
      * Undocumented.
      */
-    void *operator new( size_t sz ) { return ::operator new( sz ); }
+	void *operator  new(size_t sz) {
+		return::operator  new(sz);
+	}
+    /**
+     * Undocumented.
+     */ void *operator  new(size_t, void *);
+      private:
     /**
      * Undocumented.
      */
-    void *operator new( size_t, void * );
-private:
+	virtual void *keyOf(void *);
     /**
      * Undocumented.
      */
-    virtual void *keyOf( void * );
-    /**
-     * Undocumented.
-     */
-    int compare( void *, void * );
+	int compare(void *, void *);
 };
 
-#endif  // Uses_TStreamableTypes
+#endif // Uses_TStreamableTypes
 
 /* ------------------------------------------------------------------------*/
 /*                                                                         */
@@ -284,45 +281,46 @@ private:
  * @short Maintains a database of all objects that have been written to the
  * current object stream
  */
-class TPWrittenObjects : public TNSSortedCollection
-{
-    friend class opstream;
-public:
+class TPWrittenObjects:public TNSSortedCollection {
+	friend class opstream;
+      public:
     /**
      * Undocumented.
      */
-    void removeAll() { curId = 0; TNSSortedCollection::freeAll(); }
-private:
+	void removeAll() {
+		curId = 0;
+		TNSSortedCollection::freeAll();
+      } private:
     /**
      * This private constructor creates a non-streamable collection by calling
      * the base @ref TNSSortedCollection constructor. It is accessible only
      * by the member functions and friends.
      */
-    TPWrittenObjects();
+	 TPWrittenObjects();
     /**
      * Sets the collection @ref limit to 0 without destroying the collection.
      */
-    ~TPWrittenObjects();
+	~TPWrittenObjects();
     /**
      * Undocumented.
      */
-    void registerObject( const void *adr );
+	void registerObject(const void *adr);
     /**
      * Undocumented.
      */
-    P_id_type find( const void *adr );
+	P_id_type find(const void *adr);
     /**
      * Undocumented.
      */
-    void *keyOf( void * );
+	void *keyOf(void *);
     /**
      * Undocumented.
      */
-    int compare( void *, void * );
+	int compare(void *, void *);
     /**
      * Undocumented.
      */
-    P_id_type curId;
+	P_id_type curId;
 };
 
 /* ------------------------------------------------------------------------*/
@@ -339,16 +337,15 @@ private:
  * access the private members of TPWObj.
  * @short Used internally by TPWrittenObjects
  */
-class TPWObj
-{
-    friend class TPWrittenObjects;
-private:
-    TPWObj( const void *adr, P_id_type id );
-    const void *address;
-    P_id_type ident;
+class TPWObj {
+	friend class TPWrittenObjects;
+      private:
+	 TPWObj(const void *adr, P_id_type id);
+	const void *address;
+	P_id_type ident;
 };
 
-#endif  // Uses_TPWrittenObjects
+#endif // Uses_TPWrittenObjects
 
 /* ------------------------------------------------------------------------*/
 /*                                                                         */
@@ -373,32 +370,33 @@ private:
  * @short Maintains a database of all objects that have been read from the
  * current object stream
  */
-class TPReadObjects : public TNSCollection
-{
-    friend class ipstream;
-public:
+class TPReadObjects:public TNSCollection {
+	friend class ipstream;
+      public:
     /**
      * Undocumented.
      */
-    void removeAll() { curId = 0; TNSCollection::removeAll(); }
-private:
+	void removeAll() {
+		curId = 0;
+		TNSCollection::removeAll();
+      } private:
     /**
      * This private constructor creates a non-streamable collection by calling
      * the base @ref TNSCollection constructor. It is accessible only by
      * member functions and friends.
      * @see TNSCollection::TNSCollection
      */
-    TPReadObjects();
+	 TPReadObjects();
     /**
      * Sets the collection @ref limit to 0 without destroying the collection.
      */
-    ~TPReadObjects();
-    void registerObject( const void *adr );
-    const void *find( P_id_type id );
-    P_id_type curId;
+	~TPReadObjects();
+	void registerObject(const void *adr);
+	const void *find(P_id_type id);
+	P_id_type curId;
 };
 
-#endif  // Uses_TPReadObjects
+#endif // Uses_TPReadObjects
 
 /* ------------------------------------------------------------------------*/
 /*                                                                         */
@@ -419,72 +417,71 @@ class TStreamableTypes;
  * pstream is the base class for handling streamable objects.
  * @short The base class for handling streamable objects
  */
-class pstream
-{
-    friend class  TStreamableTypes;
-public:
+class pstream {
+	friend class TStreamableTypes;
+      public:
     /**
      * Undocumented.
      */
-    enum StreamableError { peNotRegistered, peInvalidType };
+	enum StreamableError { peNotRegistered, peInvalidType };
     /**
      * Undocumented.
      */
-    enum PointerTypes { ptNull, ptIndexed, ptObject };
+	enum PointerTypes { ptNull, ptIndexed, ptObject };
     /**
      * This form creates a buffered pstream with the given buffer and sets the
      * @ref bp data member to `buf'. The @ref state data member is set to 0.
      */
-    pstream( std::streambuf *buf );
+	 pstream(std::streambuf * buf);
     /**
      * Destroys the pstream object.
      */
-    virtual ~pstream();
+	 virtual ~ pstream();
     /**
      * Returns the current @ref state value.
      */
-    int rdstate() const;
+	int rdstate() const;
     /**
      * Returns nonzero on end of stream.
      */
-    int eof() const;
+	int eof() const;
     /**
      * Returns nonzero if a stream operation fails.
      */
-    int fail() const;
+	int fail() const;
     /**
      * Returns nonzero if an error occurs.
      */
-    int bad() const;
+	int bad() const;
     /**
      * Returns nonzero if no state bits are set (that is, no errors occurred).
      */
-    int good() const;
+	int good() const;
     /**
      * Set the stream @ref state data member to the given value (defaults
      * to 0).
      */
-    void clear( int sState = 0 );
+	void clear(int sState = 0);
     /**
      * Overloads the pointer-to-void cast operator.
      *
      * Returns 0 if operation has failed (that is, @ref fail() returned
      * nonzero); otherwise returns nonzero.
      */
-    operator void *() const;
+	operator  void *() const;
     /**
      * Overloads the NOT operator. Returns the value returned by @ref fail().
      */
-    int operator ! () const;
+	int operator !() const;
     /**
      * Returns the @ref bp pointer to this stream's assigned buffer.
      */
-    std::streambuf * rdbuf() const;
+	 std::streambuf * rdbuf() const;
     /**
      * Creates the associated @ref TStreamableTypes object types. Called by the
      * @ref TStreamableClass constructor.
      */
-    static void initTypes();
+	static void initTypes();
     /**
      * Sets the given error condition, where StreamableError is defined as
      * follows:
@@ -493,7 +490,7 @@ public:
      * enum StreamableError { peNotRegistered, peInvalidType };
      * </pre>
      */
-    void error( StreamableError );
+	void error(StreamableError);
     /**
      * Sets the given error condition, where StreamableError is defined as
      * follows:
@@ -502,41 +499,41 @@ public:
      * enum StreamableError { peNotRegistered, peInvalidType };
      * </pre>
      */
-    void error( StreamableError, const TStreamable& );
+	void error(StreamableError, const TStreamable &);
     /**
      * Undocumented.
      */
-    static void registerType( TStreamableClass *ts );
-protected:
+	static void registerType(TStreamableClass * ts);
+      protected:
     /**
      * This form allocates a default buffer.
      */
-    pstream();
+	 pstream();
     /**
      * Pointer to the stream buffer.
      */
-    std::streambuf *bp;
+	 std::streambuf * bp;
     /**
      * The format state flags, as enumerated in ios. Use @ref rdstate() to
      * access the current state.
      */
-    int state;
+	int state;
     /**
      * Initializes the stream: sets @ref state to 0 and @ref bp to `sbp'.
      */
-    void init( std::streambuf *sbp );
+	void init(std::streambuf * sbp);
     /**
      * Updates the @ref state data member with state |= (b & 0 xFF).
      */
-    void setstate( int b );
+	void setstate(int b);
     /**
      * Pointer to the @ref TStreamableTypes data base of all registered types
      * in this application.
      */
-    static TStreamableTypes * types;
+	static TStreamableTypes *types;
 };
 
-#endif  // Uses_pstream
+#endif // Uses_pstream
 
 /* ------------------------------------------------------------------------*/
 /*                                                                         */
@@ -568,28 +565,27 @@ class TStreamableClass;
  * @short The base class for reading (extracting) streamable objects from
  * streams
  */
-class ipstream : virtual public pstream
-{
-public:
+class ipstream:virtual public pstream {
+      public:
     /**
      * This form creates a buffered ipstream with the given buffer and sets
      * the @ref bp data member to `buf'. The @ref state data member is set
      * to 0.
      */
-    ipstream( std::streambuf *buf );
+	ipstream(std::streambuf * buf);
     /**
      * Destroys the ipstream object.
      */
-    ~ipstream();
+	~ipstream();
     /**
      * Returns the (absolute) current stream position.
      */
-    std::streampos tellg();
+	std::streampos tellg();
     /**
      * This form moves the stream position to the absolute position given by
      * `pos'.
      */
-    ipstream& seekg( std::streampos pos );
+	ipstream & seekg(std::streampos pos);
     /**
      * This form moves to a position relative to the current position by an
      * offset `off' (+ or -) starting at `dir'. Parameter `dir' can be set to:
@@ -602,118 +598,118 @@ public:
      * end (end of stream)
      * </pre>
      */
-    ipstream& seekg( std::streamoff off, std::ios::seekdir dir );
+	ipstream & seekg(std::streamoff off, std::ios::seekdir dir);
     /**
      * Returns the character at the current stream position.
      */
-    uchar readByte();
+	uchar readByte();
     /**
      * Reads `sz' bytes from current stream position, and writes them to
      * the address given in `data'.
      */
-    void readBytes( void *data, size_t sz );
+	void readBytes(void *data, size_t sz);
     /**
      * Returns the word at the current stream position.
      */
-    ushort readWord();
+	ushort readWord();
     /**
      * Returns a string read from the current stream position.
      */
-    char * readString();
+	char *readString();
     /**
      * Returns a string read from the current stream position.
      */
-    char * readString( char *buf, unsigned maxLen );
+	char *readString(char *buf, unsigned maxLen);
     /**
      * Undocumented.
      */
-    friend ipstream& operator >> ( ipstream&, char& );
+	friend ipstream & operator >>(ipstream &, char &);
     /**
      * Undocumented.
      */
-    friend ipstream& operator >> ( ipstream&, signed char& );
+	friend ipstream & operator >>(ipstream &, signed char &);
     /**
      * Undocumented.
      */
-    friend ipstream& operator >> ( ipstream&, unsigned char& );
+	friend ipstream & operator >>(ipstream &, unsigned char &);
     /**
      * Undocumented.
      */
-    friend ipstream& operator >> ( ipstream&, signed short& );
+	friend ipstream & operator >>(ipstream &, signed short &);
     /**
      * Undocumented.
      */
-    friend ipstream& operator >> ( ipstream&, unsigned short& );
+	friend ipstream & operator >>(ipstream &, unsigned short &);
     /**
      * Undocumented.
      */
-    friend ipstream& operator >> ( ipstream&, signed int& );
+	friend ipstream & operator >>(ipstream &, signed int &);
     /**
      * Undocumented.
      */
-    friend ipstream& operator >> ( ipstream&, unsigned int& );
+	friend ipstream & operator >>(ipstream &, unsigned int &);
     /**
      * Undocumented.
      */
-    friend ipstream& operator >> ( ipstream&, signed long& );
+	friend ipstream & operator >>(ipstream &, signed long &);
     /**
      * Undocumented.
      */
-    friend ipstream& operator >> ( ipstream&, unsigned long& );
+	friend ipstream & operator >>(ipstream &, unsigned long &);
     /**
      * Undocumented.
      */
-    friend ipstream& operator >> ( ipstream&, float& );
+	friend ipstream & operator >>(ipstream &, float &);
     /**
      * Undocumented.
      */
-    friend ipstream& operator >> ( ipstream&, double& );
+	friend ipstream & operator >>(ipstream &, double &);
     /**
      * Undocumented.
      */
-    friend ipstream& operator >> ( ipstream&, long double& );
+	friend ipstream & operator >>(ipstream &, long double &);
     /**
      * Undocumented.
      */
-    friend ipstream& operator >> ( ipstream&, TStreamable& );
+	friend ipstream & operator >>(ipstream &, TStreamable &);
     /**
      * Undocumented.
      */
-    friend ipstream& operator >> ( ipstream&, void *& );
-protected:
+	friend ipstream & operator >>(ipstream &, void *&);
+      protected:
     /**
      * This form does nothing.
      */
-    ipstream();
+	 ipstream();
     /**
      * Returns the @ref TStreamableClass object corresponding to the class
      * name stored at the current position.
      */
-    const TStreamableClass * readPrefix();
+	const TStreamableClass *readPrefix();
     /**
      * Invokes the appropriate read function to read from the stream to the
      * object `mem'. If `mem' is 0, the appropriate build function is called
      * first.
      */
-    void * readData( const TStreamableClass *c, TStreamable *mem );
+	void *readData(const TStreamableClass * c, TStreamable * mem);
     /**
      * Reads and checks the final byte of an object's name field.
      */
-    void readSuffix();
+	void readSuffix();
     /**
      * Returns a pointer to the object corresponding to `id'.
      */
-    const void * find( P_id_type id );
+	const void *find(P_id_type id);
     /**
      * Registers the class of the object pointed by `adr'.
      */
-    void registerObject( const void *adr );
-private:
-    TPReadObjects objs;
+	void registerObject(const void *adr);
+      private:
+	 TPReadObjects objs;
 
 };
 
-#endif  // Uses_ipstream
+#endif // Uses_ipstream
 
 /* ------------------------------------------------------------------------*/
 /*                                                                         */
@@ -745,28 +741,27 @@ class TStreamableClass;
  * @short The base class for writing (inserting) streamable objects into
  * streams
  */
-class opstream : virtual public pstream
-{
-public:
+class opstream:virtual public pstream {
+      public:
     /**
      * This form creates a buffered opstream with the given buffer and sets
      * the @ref bp data member to `buf'. The @ref state data member is set
      * to 0.
      */
-    opstream( std::streambuf *buf );
+	opstream(std::streambuf * buf);
     /**
      * Destroys the opstream object.
      */
-    ~opstream();
+	~opstream();
     /**
      * Returns the (absolute) current stream position.
      */
-    std::streampos tellp();
+	std::streampos tellp();
     /**
      * This form moves the stream's current position to the absolute position
      * given by `pos'.
      */
-    opstream& seekp( std::streampos pos );
+	opstream & seekp(std::streampos pos);
     /**
      * This form moves to a position relative to the current position by an
      * offset `off' (+ or -) starting at `dir'. Parameter `dir' can be set to:
@@ -779,88 +774,88 @@ public:
      * end (end of stream)
      * </pre>
      */
-    opstream& seekp( std::streamoff off, std::ios::seekdir dir );
+	opstream & seekp(std::streamoff off, std::ios::seekdir dir);
     /**
      * Flushes the stream.
      */
-    opstream& flush();
+	opstream & flush();
     /**
      * Writes character `ch' to the stream.
      */
-    void writeByte( uchar ch );
+	void writeByte(uchar ch);
     /**
      * Writes `sz' bytes from `data' buffer to the stream.
      */
-    void writeBytes( const void *data, size_t sz );
+	void writeBytes(const void *data, size_t sz);
     /**
      * Writes the word `us' to the stream.
      */
-    void writeWord( ushort us );
+	void writeWord(ushort us);
     /**
      * Writes `str' to the stream (together with a leading length byte).
      */
-    void writeString( const char *str );
+	void writeString(const char *str);
     /**
      * Undocumented.
      */
-    friend opstream& operator << ( opstream&, char );
+	friend opstream & operator <<(opstream &, char);
     /**
      * Undocumented.
      */
-    friend opstream& operator << ( opstream&, signed char );
+	friend opstream & operator <<(opstream &, signed char);
     /**
      * Undocumented.
      */
-    friend opstream& operator << ( opstream&, unsigned char );
+	friend opstream & operator <<(opstream &, unsigned char);
     /**
      * Undocumented.
      */
-    friend opstream& operator << ( opstream&, signed short );
+	friend opstream & operator <<(opstream &, signed short);
     /**
      * Undocumented.
      */
-    friend opstream& operator << ( opstream&, unsigned short );
+	friend opstream & operator <<(opstream &, unsigned short);
     /**
      * Undocumented.
      */
-    friend opstream& operator << ( opstream&, signed int );
+	friend opstream & operator <<(opstream &, signed int);
     /**
      * Undocumented.
      */
-    friend opstream& operator << ( opstream&, unsigned int );
+	friend opstream & operator <<(opstream &, unsigned int);
     /**
      * Undocumented.
      */
-    friend opstream& operator << ( opstream&, signed long );
+	friend opstream & operator <<(opstream &, signed long);
     /**
      * Undocumented.
      */
-    friend opstream& operator << ( opstream&, unsigned long );
+	friend opstream & operator <<(opstream &, unsigned long);
     /**
      * Undocumented.
      */
-    friend opstream& operator << ( opstream&, float );
+	friend opstream & operator <<(opstream &, float);
     /**
      * Undocumented.
      */
-    friend opstream& operator << ( opstream&, double );
+	friend opstream & operator <<(opstream &, double);
     /**
      * Undocumented.
      */
-    friend opstream& operator << ( opstream&, long double );
+	friend opstream & operator <<(opstream &, long double);
     /**
      * Undocumented.
      */
-    friend opstream& operator << ( opstream&, TStreamable& );
+	friend opstream & operator <<(opstream &, TStreamable &);
     /**
      * Undocumented.
      */
-    friend opstream& operator << ( opstream&, TStreamable * );
-protected:
+	friend opstream & operator <<(opstream &, TStreamable *);
+      protected:
     /**
      * This form allocates a default buffer.
      */
-    opstream();
+	 opstream();
     /**
      * Writes the class name prefix to the stream.
      *
@@ -868,12 +863,12 @@ protected:
      * the data written with @ref writeData(). The prefix/suffix is used to
      * ensure type-safe stream I/O.
      */
-    void writePrefix( const TStreamable& );
+	void writePrefix(const TStreamable &);
     /**
      * Writes data to the stream by calling the appropriate class's write
      * member function for the object being written.
      */
-    void writeData( TStreamable& );
+	void writeData(TStreamable &);
     /**
      * Writes the class name suffix to the stream.
      *
@@ -881,20 +876,20 @@ protected:
      * the data written with @ref writeData(). The prefix/suffix is used to
      * ensure type-safe stream I/O.
      */
-    void writeSuffix( const TStreamable& );
+	void writeSuffix(const TStreamable &);
     /**
      * Returns the type ID for the object ad address `adr'.
      */
-    P_id_type find( const void *adr );
+	P_id_type find(const void *adr);
     /**
      * Registers the class of the object ad address `adr'.
      */
-    void registerObject( const void *adr );
-private:
-    TPWrittenObjects *objs;
+	void registerObject(const void *adr);
+      private:
+	 TPWrittenObjects * objs;
 };
 
-#endif  // Uses_opstream
+#endif // Uses_opstream
 
 /* ------------------------------------------------------------------------*/
 /*                                                                         */
@@ -916,26 +911,25 @@ private:
  * @short The base class for simultaneous writing and reading streamable
  * objects to and from streams
  */
-class iopstream : public ipstream, public opstream
-{
-public:
+class iopstream:public ipstream, public opstream {
+      public:
     /**
      * Creates a buffered iopstream with the given buffer and sets the @ref bp
      * data member to `buf'. The @ref state data member is set to 0.
      */
-    iopstream( std::streambuf *buf );
+	iopstream(std::streambuf * buf);
     /**
      * Destroys the iopstream object.
      */
-    ~iopstream();
-protected:
+	~iopstream();
+      protected:
     /**
      * Undocumented.
      */
-    iopstream();
+	iopstream();
 };
 
-#endif  // Uses_iopstream
+#endif // Uses_iopstream
 
 /* ------------------------------------------------------------------------*/
 /*                                                                         */
@@ -954,45 +948,44 @@ protected:
  * fpbase provides the basic operations common to all object file stream I/O.
  * @short Base class for handling streamable objects on file streams
  */
-class fpbase : virtual public pstream
-{
-public:
+class fpbase:virtual public pstream {
+      public:
     /**
      * Creates a buffered fpbase object.
      */
-    fpbase();
+	fpbase();
     /**
      * Creates a buffered fpbase object. You can open a file and attach it to
      * the stream by specifying the `name' and `omode' arguments.
      */
-    fpbase( const char *name, std::ios::openmode omode);
+	fpbase(const char *name, std::ios::openmode omode);
     /**
      * Destroys the fpbase object.
      */
-    ~fpbase();
+	~fpbase();
     /**
      * Opens the named file in and the given mode (app, ate, in, out, binary,
      * trunc, nocreate, noreplace). The opened file is
      * attached to this stream.
      */
-    void open( const char *name, std::ios::openmode omode);
+	void open(const char *name, std::ios::openmode omode);
     /**
      * Closes the stream and associated file.
      */
-    void close();
+	void close();
     /**
      * Allocates a buffer of size `len'.
      */
-    void setbuf( char *buf, std::streamsize len );
+	void setbuf(char *buf, std::streamsize len);
     /**
      * Returns a pointer to the current file buffer.
      */
-    std::filebuf * rdbuf();
-private:
-    std::filebuf buf;
+	 std::filebuf * rdbuf();
+      private:
+	 std::filebuf buf;
 };
 
-#endif  // Uses_fpbase
+#endif // Uses_fpbase
 
 /* ------------------------------------------------------------------------*/
 /*                                                                         */
@@ -1014,35 +1007,34 @@ private:
  * @short Provides the base class for reading (extracting) streamable objects
  * from file streams.
  */
-class ifpstream : public fpbase, public ipstream
-{
-public:
+class ifpstream:public fpbase, public ipstream {
+      public:
     /**
      * Creates a buffered ifpstream object.
      */
-    ifpstream();
+	ifpstream();
     /**
      * Creates a buffered ifpstream object. You can open a file and attach it
      * to the stream by specifying the `name' and `omode' arguments.
      */
-    ifpstream(const char *name, std::ios::openmode omode = std::ios::in);
+	ifpstream(const char *name, std::ios::openmode omode = std::ios::in);
     /**
      * Destroys the ifpstream object.
      */
-    ~ifpstream();
+	~ifpstream();
     /**
      * Returns a pointer to the current file buffer.
      */
-    std::filebuf * rdbuf();
+	 std::filebuf * rdbuf();
     /**
      * Opens the the named file in and the given mode (app, ate, in, out, binary,
      * trunc, nocreate, or noreplace). The opened file is attached to this
      * stream.
      */
-    void open( const char *name, std::ios::openmode omode = std::ios::in);
+	void open(const char *name, std::ios::openmode omode = std::ios::in);
 };
 
-#endif  // Uses_ifpstream
+#endif // Uses_ifpstream
 
 /* ------------------------------------------------------------------------*/
 /*                                                                         */
@@ -1064,35 +1056,34 @@ public:
  * @short Provides the base class for writing (inserting) streamable objects
  * to file streams
  */
-class ofpstream : public fpbase, public opstream
-{
-public:
+class ofpstream:public fpbase, public opstream {
+      public:
     /**
      * Creates a buffered ofpstream object.
      */
-    ofpstream();
+	ofpstream();
     /**
      * Creates a buffered ofpstream object. You can open a file and attach it
      * to the stream by specifying the `name' and `omode' arguments.
      */
-    ofpstream( const char *name, std::ios::openmode omode = std::ios::out);
+	ofpstream(const char *name, std::ios::openmode omode = std::ios::out);
     /**
      * Destroys the ofpstream object.
      */
-    ~ofpstream();
+	~ofpstream();
     /**
      * Returns the current file buffer.
      */
-    std::filebuf * rdbuf();
+	 std::filebuf * rdbuf();
     /**
      * Opens the the named file in and the given mode (app, ate, in, out, binary,
      * trunc, nocreate, or noreplace). The opened file is attached to this
      * stream.
      */
-    void open( const char *name, std::ios::openmode omode = std::ios::out);
+	void open(const char *name, std::ios::openmode omode = std::ios::out);
 };
 
-#endif  // Uses_ofpstream
+#endif // Uses_ofpstream
 
 /* ------------------------------------------------------------------------*/
 /*                                                                         */
@@ -1116,32 +1107,31 @@ public:
  * @short Provides the base class for simultaneous writing and reading
  * streamable objects to bidirectional file streams
  */
-class fpstream : public fpbase, public iopstream
-{
-public:
+class fpstream:public fpbase, public iopstream {
+      public:
     /**
      * Creates a buffered fpstream object.
      */
-    fpstream();
+	fpstream();
     /**
      * Creates a buffered fpstream object. You can open a file and attach it
      * to the stream by specifying the `name'and `omode' arguments.
      */
-    fpstream( const char *name, std::ios::openmode omode);
+	fpstream(const char *name, std::ios::openmode omode);
     /**
      * Destroys the fpstream object.
      */
-    ~fpstream();
+	~fpstream();
     /**
      * Returns the data member bp.
      */
-    std::filebuf * rdbuf();
+	 std::filebuf * rdbuf();
     /**
      * Opens the named file in and the given mode (app, ate, in, out,
      * binary, trunc, nocreate, noreplace) The opened file is attatched
      * to this stream.
      */
-    void open( const char *name, std::ios::openmode omode);
+	void open(const char *name, std::ios::openmode omode);
 };
 
-#endif  // Uses_fpstream
+#endif // Uses_fpstream

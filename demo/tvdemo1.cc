@@ -71,8 +71,9 @@ int main(int argc, char **argv)
 //   box with the appropriate search path.
 //
 
-TVDemo::TVDemo(int argc, char **argv):
-TProgInit(&TVDemo::initStatusLine, &TVDemo::initMenuBar, &TVDemo::initDeskTop)
+TVDemo::TVDemo(int argc, char **argv):TProgInit(&TVDemo::initStatusLine,
+						&TVDemo::initMenuBar,
+						&TVDemo::initDeskTop)
 {
 	TView *w;
 	char fileSpec[128];
@@ -161,15 +162,20 @@ TStatusLine *TVDemo::initStatusLine(TRect r)
 {
 	r.a.y = r.b.y - 1;
 	return (new TStatusLine(r,
-		*new TStatusDef(0, 50) +
-		  *new TStatusItem("~F1~ Help", kbF1, cmHelp) +
-		  *new TStatusItem("~Alt-X~ Exit", kbAltX, cmQuit) +
-		  *new TStatusItem(nullptr, kbAltF3, cmClose) +
-		  *new TStatusItem(nullptr, kbF10, cmMenu) +
-		  *new TStatusItem(nullptr, kbF5, cmZoom) +
-		  *new TStatusItem(nullptr, kbCtrlF5, cmResize) +
-		*new TStatusDef(50, 0xffff) +
-		  *new TStatusItem("Howdy", kbF1, cmHelp)
+				*new TStatusDef(0, 50) +
+				*new TStatusItem("~F1~ Help", kbF1, cmHelp) +
+				*new TStatusItem("~Alt-X~ Exit", kbAltX,
+						 cmQuit) +
+				*new TStatusItem(nullptr, kbAltF3,
+						 cmClose) +
+				*new TStatusItem(nullptr, kbF10,
+						 cmMenu) +
+				*new TStatusItem(nullptr, kbF5,
+						 cmZoom) +
+				*new TStatusItem(nullptr, kbCtrlF5,
+						 cmResize) + *new TStatusDef(50,
+									     0xffff)
+				+ *new TStatusItem("Howdy", kbF1, cmHelp)
 		)
 	    );
 }
@@ -245,7 +251,7 @@ void TVDemo::saveDesktop()
 // writeView() function ( writes a view object to a resource file )
 //
 
-static void writeView(TView * p, void *strm)
+static void writeView(TView *p, void *strm)
 {
 	fpstream *s = (fpstream *) strm;
 	if (p != TProgram::deskTop->last)

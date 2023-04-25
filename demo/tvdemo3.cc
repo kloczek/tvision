@@ -67,9 +67,9 @@ void TVDemo::mouse()
 void TVDemo::openFile(const char *fileSpec)
 {
 	TFileDialog *d =
-	    (TFileDialog *) validView(new
-				      TFileDialog(fileSpec, "Open a File",
-						  "~N~ame", fdOpenButton, 100));
+	    (TFileDialog *) validView(new TFileDialog(fileSpec, "Open a File",
+						      "~N~ame", fdOpenButton,
+						      100));
 
 	if (d != nullptr && deskTop->execView(d) != cmCancel) {
 		char fileName[PATH_MAX];
@@ -116,7 +116,7 @@ TPalette& TVDemo::getPalette() const
 // isTileable() function ( checks a view on desktop is tileable or not )
 //
 
-static Boolean isTileable(TView * p, void *)
+static Boolean isTileable(TView *p, void *)
 {
 	if ((p->options & ofTileable) != 0)
 		return True;
@@ -146,7 +146,7 @@ void TVDemo::idle()
 // closeView() function
 //
 
-static void closeView(TView * p, void *p1)
+static void closeView(TView *p, void *p1)
 {
 	message(p, evCommand, cmClose, p1);
 }
@@ -177,37 +177,42 @@ TMenuBar *TVDemo::initMenuBar(TRect r)
 {
 	TSubMenu & sub1 =
 	    *new TSubMenu("~\360~", 0, hcSystem) +
-	      *new TMenuItem("~A~bout...", cmAboutCmd, kbNoKey, hcSAbout) +
-	      newLine() +
-	      *new TMenuItem("~P~uzzle", cmPuzzleCmd, kbNoKey, hcSPuzzle) +
-	      *new TMenuItem("Ca~l~endar", cmCalendarCmd, kbNoKey, hcSCalendar) +
-	      *new TMenuItem("Ascii ~T~able", cmAsciiCmd, kbNoKey, hcSAsciiTable) +
-	      *new TMenuItem("~C~alculator", cmCalcCmd, kbNoKey, hcCalculator);
+	    *new TMenuItem("~A~bout...", cmAboutCmd, kbNoKey, hcSAbout) +
+	    newLine() +
+	    *new TMenuItem("~P~uzzle", cmPuzzleCmd, kbNoKey, hcSPuzzle) +
+	    *new TMenuItem("Ca~l~endar", cmCalendarCmd, kbNoKey, hcSCalendar) +
+	    *new TMenuItem("Ascii ~T~able", cmAsciiCmd, kbNoKey,
+			   hcSAsciiTable) + *new TMenuItem("~C~alculator",
+							   cmCalcCmd, kbNoKey,
+							   hcCalculator);
 
 	TSubMenu & sub2 =
 	    *new TSubMenu("~F~ile", 0, hcFile) +
-	      *new TMenuItem("~O~pen...", cmOpenCmd, kbF3, hcFOpen, "F3") +
-	      *new TMenuItem("~C~hange Dir...", cmChDirCmd, kbNoKey, hcFChangeDir) +
-	      newLine() +
-	      *new TMenuItem("~S~uspend", cmSuspend, kbNoKey, hcSuspend) +
-	      *new TMenuItem("E~x~it", cmQuit, kbAltX, hcFExit, "Alt-X");
+	    *new TMenuItem("~O~pen...", cmOpenCmd, kbF3, hcFOpen, "F3") +
+	    *new TMenuItem("~C~hange Dir...", cmChDirCmd, kbNoKey,
+			   hcFChangeDir) + newLine() +
+	    *new TMenuItem("~S~uspend", cmSuspend, kbNoKey,
+			   hcSuspend) + *new TMenuItem("E~x~it", cmQuit, kbAltX,
+						       hcFExit, "Alt-X");
 
 	TSubMenu & sub3 =
 	    *new TSubMenu("~W~indows", 0, hcWindows) +
-	      *new TMenuItem("~R~esize/move", cmResize, kbCtrlF5, hcWSizeMove,
-	    		     "Ctrl-F5") +
-	      *new TMenuItem("~Z~oom", cmZoom, kbF5, hcWZoom, "F5") +
-	      *new TMenuItem("~N~ext", cmNext, kbF6, hcWNext, "F6") +
-	      *new TMenuItem("~C~lose", cmClose, kbAltF3, hcWClose, "Alt-F3") +
-	      *new TMenuItem("~T~ile", cmTile, kbNoKey, hcWTile) +
-	      *new TMenuItem("C~a~scade", cmCascade, kbNoKey, hcWCascade);
+	    *new TMenuItem("~R~esize/move", cmResize, kbCtrlF5, hcWSizeMove,
+			   "Ctrl-F5") +
+	    *new TMenuItem("~Z~oom", cmZoom, kbF5, hcWZoom, "F5") +
+	    *new TMenuItem("~N~ext", cmNext, kbF6, hcWNext, "F6") +
+	    *new TMenuItem("~C~lose", cmClose, kbAltF3, hcWClose, "Alt-F3") +
+	    *new TMenuItem("~T~ile", cmTile, kbNoKey, hcWTile) +
+	    *new TMenuItem("C~a~scade", cmCascade, kbNoKey, hcWCascade);
 
 	TSubMenu & sub4 =
 	    *new TSubMenu("~O~ptions", 0, hcOptions) +
-	      *new TMenuItem("~M~ouse...", cmMouseCmd, kbNoKey, hcOMouse) +
-	      *new TMenuItem("~C~olors...", cmColorCmd, kbNoKey, hcOColors) +
-	      *new TMenuItem("~S~ave desktop", cmSaveCmd, kbNoKey, hcOSaveDesktop) +
-	      *new TMenuItem("~R~etrieve desktop", cmRestoreCmd, kbNoKey, hcORestoreDesktop);
+	    *new TMenuItem("~M~ouse...", cmMouseCmd, kbNoKey, hcOMouse) +
+	    *new TMenuItem("~C~olors...", cmColorCmd, kbNoKey, hcOColors) +
+	    *new TMenuItem("~S~ave desktop", cmSaveCmd, kbNoKey,
+			   hcOSaveDesktop) +
+	    *new TMenuItem("~R~etrieve desktop", cmRestoreCmd, kbNoKey,
+			   hcORestoreDesktop);
 
 	r.b.y = r.a.y + 1;
 	return (new TMenuBar(r, sub1 + sub2 + sub3 + sub4));

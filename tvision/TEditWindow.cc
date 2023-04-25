@@ -23,97 +23,94 @@
 #define Uses_ipstream
 #include <tv.h>
 
-const TPoint minEditWinSize = {24, 6};
+const TPoint minEditWinSize = { 24, 6 };
 
-TEditWindow::TEditWindow( const TRect& bounds,
-                          const char *fileName,
-                          int aNumber
-                        ) :
-    TWindowInit( &TEditWindow::initFrame ),
-    TWindow( bounds, nullptr, aNumber )
+TEditWindow::TEditWindow(const TRect & bounds,
+			 const char *fileName,
+			 int aNumber):TWindowInit(&TEditWindow::initFrame),
+TWindow(bounds, nullptr, aNumber)
 {
-    options |= ofTileable;
+	options |= ofTileable;
 
-    TScrollBar *hScrollBar =
-        new TScrollBar( TRect( 18, size.y - 1, size.x - 2, size.y ) );
-    hScrollBar->hide();
-    insert(hScrollBar);
+	TScrollBar *hScrollBar =
+	    new TScrollBar(TRect(18, size.y - 1, size.x - 2, size.y));
+	hScrollBar->hide();
+	insert(hScrollBar);
 
-    TScrollBar *vScrollBar =
-        new TScrollBar( TRect( size.x - 1, 1, size.x, size.y - 1 ) );
-    vScrollBar->hide();
-    insert(vScrollBar);
+	TScrollBar *vScrollBar =
+	    new TScrollBar(TRect(size.x - 1, 1, size.x, size.y - 1));
+	vScrollBar->hide();
+	insert(vScrollBar);
 
-    TIndicator *indicator =
-        new TIndicator( TRect( 2, size.y - 1, 16, size.y ) );
-    indicator->hide();
-    insert(indicator);
+	TIndicator *indicator =
+	    new TIndicator(TRect(2, size.y - 1, 16, size.y));
+	indicator->hide();
+	insert(indicator);
 
-
-    TRect r( getExtent() );
-    r.grow(-1, -1);
-    editor = new TFileEditor( r, hScrollBar, vScrollBar, indicator, fileName );
-    insert(editor);
+	TRect r(getExtent());
+	r.grow(-1, -1);
+	editor =
+	    new TFileEditor(r, hScrollBar, vScrollBar, indicator, fileName);
+	insert(editor);
 }
 
 void TEditWindow::close()
 {
-    if( editor->isClipboard() == True )
-        hide();
-    else
-        TWindow::close();
+	if (editor->isClipboard() == True)
+		hide();
+	else
+		TWindow::close();
 }
 
-const char *TEditWindow::getTitle( short )
+const char *TEditWindow::getTitle(short)
 {
-    if( editor->isClipboard() == True )
-        return clipboardTitle;
-    else if( *(editor->fileName) == EOS )
-        return untitled;
-    else
-        return editor->fileName;
+	if (editor->isClipboard() == True)
+		return clipboardTitle;
+	else if (*(editor->fileName) == EOS)
+		return untitled;
+	else
+		return editor->fileName;
 }
 
-void TEditWindow::handleEvent( TEvent& event )
+void TEditWindow::handleEvent(TEvent & event)
 {
-    TWindow::handleEvent(event);
-    if( event.what == evBroadcast && event.message.command == cmUpdateTitle )
-        {
-        if( frame != nullptr )
-            frame->drawView();
-        clearEvent(event);
-        }
+	TWindow::handleEvent(event);
+	if (event.what == evBroadcast && event.message.command == cmUpdateTitle) {
+		if (frame != nullptr)
+			frame->drawView();
+		clearEvent(event);
+	}
 }
 
-void TEditWindow::sizeLimits( TPoint& min, TPoint& max )
+void TEditWindow::sizeLimits(TPoint & min, TPoint & max)
 {
-    TWindow::sizeLimits(min, max);
-    min = minEditWinSize;
+	TWindow::sizeLimits(min, max);
+	min = minEditWinSize;
 }
 
 #if !defined(NO_STREAMABLE)
 
-void TEditWindow::write( opstream& os )
+void TEditWindow::write(opstream & os)
 {
-    TWindow::write( os );
-    os << editor;
+	TWindow::write(os);
+	os << editor;
 }
 
-void *TEditWindow::read( ipstream& is )
+void *TEditWindow::read(ipstream & is)
 {
-    TWindow::read( is );
-    is >> editor;
-    return this;
+	TWindow::read(is);
+	is >> editor;
+	return this;
 }
 
 TStreamable *TEditWindow::build()
 {
-    return new TEditWindow( streamableInit );
+	return new TEditWindow(streamableInit);
 }
 
-TEditWindow::TEditWindow( StreamableInit ) :
-    TWindowInit( nullptr /*streamableInit*/ ),
-    TWindow( streamableInit )
+TEditWindow::TEditWindow(StreamableInit):
+TWindowInit(nullptr /*streamableInit */ ),
+    TWindow(streamableInit)
 {
 }
 

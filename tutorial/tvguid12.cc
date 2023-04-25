@@ -90,9 +90,11 @@ TStatusLine *TMyApp::initStatusLine(TRect r)
 {
 	r.a.y = r.b.y - 1;	// move top to 1 line above bottom
 	return new TStatusLine(r, *new TStatusDef(0, 0xFFFF) +
-		*new TStatusItem(nullptr, kbF10, cmMenu) +
-		*new TStatusItem("~Alt-X~ Exit", kbAltX, cmQuit) +
-		*new TStatusItem("~Alt-F3~ Close", kbAltF3, cmClose)
+			       *new TStatusItem(nullptr, kbF10, cmMenu) +
+			       *new TStatusItem("~Alt-X~ Exit", kbAltX,
+						cmQuit) +
+			       *new TStatusItem("~Alt-F3~ Close", kbAltF3,
+						cmClose)
 	    );
 }
 
@@ -100,16 +102,29 @@ TMenuBar *TMyApp::initMenuBar(TRect r)
 {
 	r.b.y = r.a.y + 1;	// set bottom line 1 line below top line
 	return new TMenuBar(r,
-		*new TSubMenu("~F~ile", kbAltF) +
-		  *new TMenuItem("~O~pen", cmMyFileOpen, kbF3, hcNoContext, "F3") +
-		  *new TMenuItem("~N~ew", cmMyNewWin, kbF4, hcNoContext, "F4") +
-		  newLine() +
-		  *new TMenuItem("E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X") +
-		*new TSubMenu("~W~indow", kbAltW) +
-		  *new TMenuItem("~N~ext", cmNext, kbF6, hcNoContext, "F6") +
-		  *new TMenuItem("~Z~oom", cmZoom, kbF5, hcNoContext, "F5") +
-		  *new TMenuItem("~D~ialog", cmNewDialog, kbF2, hcNoContext, "F2")
-		  // new dialog menu added here
+			    *new TSubMenu("~F~ile", kbAltF) +
+			    *new TMenuItem("~O~pen", cmMyFileOpen, kbF3,
+					   hcNoContext,
+					   "F3") + *new TMenuItem("~N~ew",
+								  cmMyNewWin,
+								  kbF4,
+								  hcNoContext,
+								  "F4") +
+			    newLine() + *new TMenuItem("E~x~it", cmQuit, cmQuit,
+						       hcNoContext,
+						       "Alt-X") +
+			    *new TSubMenu("~W~indow",
+					  kbAltW) + *new TMenuItem("~N~ext",
+								   cmNext, kbF6,
+								   hcNoContext,
+								   "F6") +
+			    *new TMenuItem("~Z~oom", cmZoom, kbF5, hcNoContext,
+					   "F5") + *new TMenuItem("~D~ialog",
+								  cmNewDialog,
+								  kbF2,
+								  hcNoContext,
+								  "F2")
+			    // new dialog menu added here
 	    );
 }
 
@@ -137,7 +152,7 @@ void TMyApp::newWindow()
 
 	/* SS: micro change here */
 
-	//r.move( random(34), random(11) );	// randomly move around screen
+	//r.move( random(34), random(11) );     // randomly move around screen
 	r.move(random() % 34, random() % 11);	// randomly move around screen
 	TDemoWindow *window = new TDemoWindow(r, "Demo Window", ++winNumber);
 	deskTop->insert(window);	// put window into desktop and draw it
@@ -155,9 +170,9 @@ void TMyApp::newDialog()
 	deskTop->execView(new TDialog(r, "Demo Dialog"));
 }
 
-TInterior::TInterior(const TRect & bounds, TScrollBar * aHScrollBar,
-		     TScrollBar * aVScrollBar):
-TScroller(bounds, aHScrollBar, aVScrollBar)
+TInterior::TInterior(const TRect & bounds, TScrollBar *aHScrollBar,
+		     TScrollBar *aVScrollBar):TScroller(bounds, aHScrollBar,
+							aVScrollBar)
 {
 	options = options | ofFramed;
 	setLimit(maxLineLength, lineCount);
@@ -189,8 +204,7 @@ void TInterior::draw()		// modified for scroller
 
 // modified from tvguid08:
 TDemoWindow::TDemoWindow(const TRect & bounds, const char *aTitle,
-			 short aNumber):
-TWindowInit(&TDemoWindow::initFrame),
+			 short aNumber):TWindowInit(&TDemoWindow::initFrame),
 TWindow(bounds, aTitle, aNumber)
 {
 	TRect lbounds = getExtent();

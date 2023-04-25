@@ -35,13 +35,15 @@ TStatusLine *TMyApp::initStatusLine(TRect r)
 {
 	r.a.y = r.b.y - 1;	// move top to 1 line above bottom
 	return new TStatusLine(r,
-		// set range of help contexts
-		*new TStatusDef(0, 0xFFFF) +
-		// define an item
-		*new TStatusItem("~Alt-X~ Exit", kbAltX, cmQuit) +
-		// define an item
-		*new TStatusItem("~Alt-F3~ Close", kbAltF3, cmClose)
-		// define an item
+			       // set range of help contexts
+			       *new TStatusDef(0, 0xFFFF) +
+			       // define an item
+			       *new TStatusItem("~Alt-X~ Exit", kbAltX,
+						cmQuit) +
+			       // define an item
+			       *new TStatusItem("~Alt-F3~ Close", kbAltF3,
+						cmClose)
+			       // define an item
 	    );
 }
 

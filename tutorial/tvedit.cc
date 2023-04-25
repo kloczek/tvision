@@ -60,7 +60,7 @@ class TVDemo:public TApplication {
 	void showClipboard();
 	void tile();
       public:
-	TVDemo();
+	 TVDemo();
 	static TMenuBar *initMenuBar(TRect r);
 	static TStatusLine *initStatusLine(TRect r);
 	virtual void handleEvent(TEvent & Event);
@@ -146,8 +146,9 @@ TDialog *TVDemo::createFindDialog()
 
 	d->insert(new TCheckBoxes(TRect(3, 5, 35, 7),
 				  new TSItem("~C~ase sensitive",
-				  new TSItem("~W~hole words only", nullptr)))
-				  );
+					     new TSItem("~W~hole words only",
+							nullptr)))
+	    );
 
 	d->insert(new TButton(TRect(14, 9, 24, 11), "O~K~", cmOK, bfDefault));
 	d->insert(new
@@ -178,11 +179,14 @@ TDialog *TVDemo::createReplaceDialog()
 
 	d->insert(new TCheckBoxes(TRect(3, 8, 37, 12),
 				  new TSItem("~C~ase sensitive",
-				  new TSItem("~W~hole words only",
-				  new TSItem("~P~rompt on replace",
-				  new TSItem("~R~eplace all",
-				  nullptr)))))
-				  );
+					     new TSItem("~W~hole words only",
+							new
+							TSItem
+							("~P~rompt on replace",
+							 new
+							 TSItem("~R~eplace all",
+								nullptr)))))
+	    );
 
 	d->insert(new TButton(TRect(17, 13, 27, 15), "O~K~", cmOK, bfDefault));
 	d->insert(new TButton(TRect(28, 13, 38, 15), "Cancel", cmCancel,
@@ -249,7 +253,7 @@ ushort TVDemo::doEditorDialog(int dialog, ...)
 //executes a dialog in modal state; similar to TProgram::execute(), but this
 //version is fully static
 
-ushort TVDemo::doExecute(TDialog * p, void *data)
+ushort TVDemo::doExecute(TDialog *p, void *data)
 {
 	ushort result = cmCancel;
 	if (1)			//validView(p))
@@ -316,7 +320,7 @@ void TVDemo::handleEvent(TEvent & event)
 
 //returns true if and only if the view at address `p' is tileable and visible
 
-static Boolean isTileable(TView * p, void *)
+static Boolean isTileable(TView *p, void *)
 {
 	if ((p->options & ofTileable) != 0 && (p->state & sfVisible) != 0)
 		return True;
@@ -411,15 +415,23 @@ TStatusLine *TVDemo::initStatusLine(TRect r)
 {
 	r.a.y = r.b.y - 1;
 	return new TStatusLine(r,
-	       *new TStatusDef(0, 50) +
-	       *new TStatusItem("~Alt-X~ Exit", kbAltX, cmQuit) +
-	       *new TStatusItem("~F2~ Save", kbF2, cmSave) +
-	       *new TStatusItem("~F3~ Open", kbF3, cmOpen) +
-	       *new TStatusItem("~Alt-F3~ Close", kbAltF3, cmClose) +
-	       *new TStatusItem("~F5~ Zoom", kbF5, cmZoom) +
-	       *new TStatusItem("~F6~ Next", kbF6, cmNext) +
-	       *new TStatusItem("~F10~ Menu", kbF10, cmMenu) +
-	       *new TStatusItem("", kbCtrlF5, cmResize));
+			       *new TStatusDef(0, 50) +
+			       *new TStatusItem("~Alt-X~ Exit", kbAltX,
+						cmQuit) +
+			       *new TStatusItem("~F2~ Save", kbF2,
+						cmSave) +
+			       *new TStatusItem("~F3~ Open", kbF3,
+						cmOpen) +
+			       *new TStatusItem("~Alt-F3~ Close", kbAltF3,
+						cmClose) +
+			       *new TStatusItem("~F5~ Zoom", kbF5,
+						cmZoom) +
+			       *new TStatusItem("~F6~ Next", kbF6,
+						cmNext) +
+			       *new TStatusItem("~F10~ Menu", kbF10,
+						cmMenu) + *new TStatusItem("",
+									   kbCtrlF5,
+									   cmResize));
 }
 
 //Creates a new edit window, with no assigned file name.

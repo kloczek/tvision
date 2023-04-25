@@ -46,7 +46,7 @@ class TLifeInterior:public TView {
 	int running;
 	uchar *board;
       public:
-	TLifeInterior(TRect & bounds);
+	 TLifeInterior(TRect & bounds);
 	~TLifeInterior();
 	void changeBounds(const TRect & bounds);
 	void clearBoard();
@@ -55,8 +55,8 @@ class TLifeInterior:public TView {
 	void handleEvent(TEvent & event);
 	void handleMouse(TEvent & event);
 	void iterateBoard();
-	uchar & map(int x, int y);
-	uchar & map(int x, int y, uchar * work);
+	 uchar & map(int x, int y);
+	 uchar & map(int x, int y, uchar * work);
 	int present(int x, int y);
 	void randomizeBoard();
 	void setState(ushort aState, Boolean enable);
@@ -67,14 +67,14 @@ class TLifeWindow:public TWindow {
       public:
 	static const int minW = 28;
 	static const int minH = 11;
-	TLifeWindow(TRect & bounds, const char *str, int num);
+	 TLifeWindow(TRect & bounds, const char *str, int num);
 	void sizeLimits(TPoint & min, TPoint & max);
 };
 
 class TMyApp:public TApplication {
 	TCommandSet windowCommands;
       public:
-	TMyApp();
+	 TMyApp();
 	static TMenuBar *initMenuBar(TRect r);
 	static TStatusLine *initStatusLine(TRect r);
 	void aboutBox();
@@ -119,7 +119,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 -8, 2, 6, 2,
 	 -7, 3,
 	 -6, 4, -5, 4,
-	 127},
+	 127 },
 	{			/* FIGURE EIGHT */
 	 -3, -3, -2, -3, -1, -3,
 	 -3, -2, -2, -2, -1, -2,
@@ -127,11 +127,11 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 0, 0, 1, 0, 2, 0,
 	 0, 1, 1, 1, 2, 1,
 	 0, 2, 1, 2, 2, 2,
-	 127},
+	 127 },
 	{			/* PULSAR */
 	 -2, -1, -1, -1, 0, -1, 1, -1, 2, -1,
 	 -2, 0, 2, 0,
-	 127},
+	 127 },
 	{			/* BARBER POLE P2 */
 	 -6, -6, -5, -6,
 	 -6, -5, -4, -5,
@@ -141,7 +141,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 2, 3, 4, 3,
 	 5, 4,
 	 4, 5, 5, 5,
-	 127},
+	 127 },
 	{			/* ACHIM P5 */
 	 -6, -6, -5, -6,
 	 -6, -5,
@@ -152,7 +152,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 2, 3, 3, 3,
 	 5, 4,
 	 4, 5, 5, 5,
-	 127},
+	 127 },
 	{			/* HERTZ P4 */
 	 -2, -5, -1, -5,
 	 -2, -4, -1, -4,
@@ -163,7 +163,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 -7, 2, -6, 2, -2, 2, -1, 2, 0, 2, 1, 2, 5, 2, 6, 2,
 	 -2, 4, -1, 4,
 	 -2, 5, -1, 5,
-	 127},
+	 127 },
 	{			/* TUMBLER */
 	 -2, -3, -1, -3, 1, -3, 2, -3,
 	 -2, -2, -1, -2, 1, -2, 2, -2,
@@ -171,7 +171,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 -3, 0, -1, 0, 1, 0, 3, 0,
 	 -3, 1, -1, 1, 1, 1, 3, 1,
 	 -3, 2, -2, 2, 2, 2, 3, 2,
-	 127},
+	 127 },
 	{			/* PULSE1 P4 */
 	 0, -3, 1, -3,
 	 -2, -2, 0, -2,
@@ -179,7 +179,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 -2, 0, 2, 0, 3, 0,
 	 0, 2, 2, 2,
 	 1, 3,
-	 127},
+	 127 },
 	{			/* SHINING FLOWER P5 */
 	 -1, -4, 0, -4,
 	 -2, -3, 1, -3,
@@ -189,7 +189,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 -3, 1, 2, 1,
 	 -2, 2, 1, 2,
 	 -1, 3, 0, 3,
-	 127},
+	 127 },
 	{			/* PULSE2 P6 */
 	 0, -4, 1, -4,
 	 -4, -3, -3, -3, -1, -3,
@@ -198,7 +198,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 2, 0,
 	 1, 2, 2, 2,
 	 1, 3, 2, 3,
-	 127},
+	 127 },
 	{			/* PINWHEEL, CLOCK P4 */
 	 -2, -6, -1, -6,
 	 -2, -5, -1, -5,
@@ -210,10 +210,10 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 -2, 2, -1, 2, 0, 2, 1, 2,
 	 0, 4, 1, 4,
 	 0, 5, 1, 5,
-	 127},
+	 127 },
 	{			/* PENTADECATHOLON */
 	 -5, 0, -4, 0, -3, 0, -2, 0, -1, 0, 0, 0, 1, 0, 2, 0, 3, 0, 4, 0,
-	 127},
+	 127 },
 	{			/* PISTON */
 	 1, -3, 2, -3,
 	 0, -2,
@@ -222,7 +222,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 -1, 1, 9, 1,
 	 0, 2,
 	 1, 3, 2, 3,
-	 127},
+	 127 },
 	{			/* PISTON2 */
 	 -3, -5,
 	 -14, -4, -13, -4, -4, -4, -3, -4, 13, -4, 14, -4,
@@ -232,7 +232,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 -14, 3, -13, 3, -5, 3, -4, 3, 13, 3, 14, 3,
 	 -14, 4, -13, 4, -4, 4, -3, 4, 13, 4, 14, 4,
 	 -3, 5,
-	 127},
+	 127 },
 	{			/* SWITCH ENGINE */
 	 -12, -3, -10, -3,
 	 -13, -2,
@@ -240,7 +240,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 -10, 0, -9, 0, -8, 0,
 	 13, 2, 14, 2,
 	 13, 3,
-	 127},
+	 127 },
 	{			/* GEARS (gear, flywheel, blinker) */
 	 -1, -4,
 	 -1, -3, 1, -3,
@@ -259,7 +259,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 8, 0,
 	 8, 1,
 	 8, 2,
-	 127},
+	 127 },
 	{			/* TURBINE8 */
 	 -4, -4, -3, -4, -2, -4, -1, -4, 0, -4, 1, -4, 3, -4, 4, -4,
 	 -4, -3, -3, -3, -2, -3, -1, -3, 0, -3, 1, -3, 3, -3, 4, -3,
@@ -270,7 +270,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 -4, 2, -3, 2,
 	 -4, 3, -3, 3, -1, 3, 0, 3, 1, 3, 2, 3, 3, 3, 4, 3,
 	 -4, 4, -3, 4, -1, 4, 0, 4, 1, 4, 2, 4, 3, 4, 4, 4,
-	 127},
+	 127 },
 	{			/* P16 */
 	 -3, -6, 1, -6, 2, -6,
 	 -3, -5, 0, -5, 3, -5,
@@ -285,7 +285,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 -3, 4,
 	 -3, 5, 0, 5, 3, 5,
 	 -2, 6, -1, 6, 3, 6,
-	 127},
+	 127 },
 	{			/* PUFFER */
 	 1, -9,
 	 2, -8,
@@ -300,7 +300,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 2, 6,
 	 -2, 7, 2, 7,
 	 -1, 8, 0, 8, 1, 8, 2, 8,
-	 127},
+	 127 },
 	{			/* ESCORT */
 	 3, -8,
 	 4, -7,
@@ -315,7 +315,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 4, 5,
 	 -2, 6, 4, 6,
 	 -1, 7, 0, 7, 1, 7, 2, 7, 3, 7, 4, 7,
-	 127},
+	 127 },
 	{			/* DART SPEED 1/3 */
 	 3, -7,
 	 2, -6, 4, -6,
@@ -332,7 +332,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 1, 5, 2, 5,
 	 2, 6, 4, 6,
 	 3, 7,
-	 127},
+	 127 },
 	{			/* PERIOD 4 SPEED 1/2 */
 	 -3, -5,
 	 -4, -4, -3, -4, -2, -4, -1, -4, 0, -4,
@@ -344,7 +344,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 -5, 3, -4, 3, 0, 3, 1, 3, 3, 3,
 	 -4, 4, -3, 4, -2, 4, -1, 4, 0, 4,
 	 -3, 5,
-	 127},
+	 127 },
 	{			/* ANOTHER PERIOD 4 SPEED 1/2 */
 	 -4, -7, -3, -7, -1, -7, 0, -7, 1, -7, 2, -7, 3, -7, 4, -7,
 	 -5, -6, -4, -6, -3, -6, -2, -6, 5, -6,
@@ -361,7 +361,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 -6, 5, -5, 5,
 	 -5, 6, -4, 6, -3, 6, -2, 6, 5, 6,
 	 -4, 7, -3, 7, -1, 7, 0, 7, 1, 7, 2, 7, 3, 7, 4, 7,
-	 127},
+	 127 },
 	{			/* SMALLEST KNOWN PERIOD 3 SPACESHIP SPEED 1/3 */
 	 0, -8,
 	 -1, -7, 1, -7,
@@ -377,7 +377,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 0, 5, 2, 5,
 	 0, 6, 2, 6,
 	 1, 7,
-	 127},
+	 127 },
 	{			/* TURTLE SPEED 1/3 */
 	 -4, -5, -3, -5, -2, -5, 6, -5,
 	 -4, -4, -3, -4, 0, -4, 2, -4, 3, -4, 5, -4, 6, -4,
@@ -389,7 +389,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 -2, 2, -1, 2, 0, 2, 5, 2,
 	 -4, 3, -3, 3, 0, 3, 2, 3, 3, 3, 5, 3, 6, 3,
 	 -4, 4, -3, 4, -2, 4, 6, 4,
-	 127},
+	 127 },
 	{			/* SMALLEST KNOWN PERIOD 5 SPEED 2/5 */
 	 1, -7, 3, -7,
 	 -2, -6, 3, -6,
@@ -403,7 +403,7 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 -3, 5, -2, 5, -1, 5, 4, 5,
 	 -2, 6, 3, 6,
 	 1, 7, 3, 7,
-	 127},
+	 127 },
 	{			/* SYM PUFFER */
 	 1, -4, 2, -4, 3, -4, 4, -4,
 	 0, -3, 4, -3,
@@ -414,17 +414,17 @@ static int patterns[][2 * NUMPTS + 1] = {
 	 4, 2,
 	 0, 3, 4, 3,
 	 1, 4, 2, 4, 3, 4, 4, 4,
-	 127},
+	 127 },
 	{			/* ], NEAR SHIP, PI HEPTOMINO */
 	 -2, -1, -1, -1, 0, -1,
 	 1, 0,
 	 -2, 1, -1, 1, 0, 1,
-	 127},
+	 127 },
 	{			/* R PENTOMINO */
 	 0, -1, 1, -1,
 	 -1, 0, 0, 0,
 	 0, 1,
-	 127}
+	 127 }
 };
 
 #define NPATS (sizeof patterns / sizeof patterns[0])
@@ -657,7 +657,7 @@ uchar & TLifeInterior::map(int x, int y)
 	return board[size.x * y + x];
 }
 
-uchar & TLifeInterior::map(int x, int y, uchar * work)
+uchar & TLifeInterior::map(int x, int y, uchar *work)
 {
 	return work[size.x * y + x];
 }
@@ -805,7 +805,7 @@ void TMyApp::handleEvent(TEvent & event)
 	}
 }
 
-static Boolean isTileable(TView * p, void *)
+static Boolean isTileable(TView *p, void *)
 {
 	if ((p->options & ofTileable) != 0)
 		return True;
@@ -869,8 +869,7 @@ TMenuBar *TMyApp::initMenuBar(TRect r)
 	    ITEM("Pinwheel, Clock P4", cmPat11) +
 	    ITEM("Pentadecatholon", cmPat12) +
 	    ITEM("Piston", cmPat13) +
-	    ITEM("Piston2", cmPat14) +
-	    ITEM("Switch Engine", cmPat15);
+	    ITEM("Piston2", cmPat14) + ITEM("Switch Engine", cmPat15);
 
 	TSubMenu & sub6 = *new TSubMenu("Patterns ~2~", 0) +
 	    ITEM("Gears (Gear, Flywheel, Blinker)", cmPat16) +
@@ -896,16 +895,24 @@ TStatusLine *TMyApp::initStatusLine(TRect r)
 {
 	r.a.y = r.b.y - 1;
 	return new TStatusLine(r,
-		*new TStatusDef(0, 50) +
-		*new TStatusItem("~Alt-X~ Exit", kbAltX, cmQuit) +
-		*new TStatusItem("~F9~ Life Window", kbF9, cmCreate) +
-		*new TStatusItem("~Alt-F3~ Close", kbAltF3, cmClose) +
-		*new TStatusItem("One step", kbNoKey,cmOneStep) +
-		*new TStatusItem("Randomize", kbNoKey, cmRandom) +
-		*new TStatusItem("Start/Stop", kbNoKey, cmStartStop) +
-		*new TStatusItem(nullptr, kbF10, cmMenu) +
-		*new TStatusItem(nullptr, kbF5, cmZoom) +
-		*new TStatusItem(nullptr, kbCtrlF5, cmResize));
+			       *new TStatusDef(0, 50) +
+			       *new TStatusItem("~Alt-X~ Exit", kbAltX,
+						cmQuit) +
+			       *new TStatusItem("~F9~ Life Window", kbF9,
+						cmCreate) +
+			       *new TStatusItem("~Alt-F3~ Close", kbAltF3,
+						cmClose) +
+			       *new TStatusItem("One step", kbNoKey,
+						cmOneStep) +
+			       *new TStatusItem("Randomize", kbNoKey,
+						cmRandom) +
+			       *new TStatusItem("Start/Stop", kbNoKey,
+						cmStartStop) +
+			       *new TStatusItem(nullptr, kbF10,
+						cmMenu) +
+			       *new TStatusItem(nullptr, kbF5,
+						cmZoom) +
+			       *new TStatusItem(nullptr, kbCtrlF5, cmResize));
 }
 
 int main()

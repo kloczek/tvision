@@ -26,8 +26,7 @@ class TCalcDisplay:public TView {
       public:
 	TCalcDisplay(TRect & r);
 	TCalcDisplay(StreamableInit):TView(streamableInit) {
-	}
-	~TCalcDisplay();
+	} ~TCalcDisplay();
 	virtual TPalette & getPalette() const;
 	virtual void handleEvent(TEvent & event);
 	virtual void draw();
@@ -49,8 +48,7 @@ class TCalcDisplay:public TView {
 	}
 	virtual const char *streamableName() const {
 		return name;
-	}
-      protected:
+      } protected:
 	 virtual void write(opstream &);
 	virtual void *read(ipstream &);
 
@@ -64,7 +62,7 @@ inline ipstream & operator >>(ipstream & is, TCalcDisplay & cl)
 	return is >> (TStreamable &) cl;
 }
 
-inline ipstream & operator >>(ipstream & is, TCalcDisplay * &cl)
+inline ipstream & operator >>(ipstream & is, TCalcDisplay *&cl)
 {
 	return is >> (void *&)cl;
 }
@@ -74,7 +72,7 @@ inline opstream & operator <<(opstream & os, TCalcDisplay & cl)
 	return os << (TStreamable &) cl;
 }
 
-inline opstream & operator <<(opstream & os, TCalcDisplay * cl)
+inline opstream & operator <<(opstream & os, TCalcDisplay *cl)
 {
 	return os << (TStreamable *) cl;
 }
@@ -84,17 +82,13 @@ class TCalculator:public TDialog {
 	TCalculator();
 	TCalculator(StreamableInit):TWindowInit(&TCalculator::initFrame),
 	    TDialog(streamableInit) {
-	}
-
-      private:
-	virtual const char *streamableName() const {
+      } private:
+	 virtual const char *streamableName() const {
 		return name;
 	}
-      //protected:
-      //      virtual void write( opstream& );
-      //      virtual void *read( ipstream& );
-      public:
-	static const char *const name;
+      //protected://      virtual void write( opstream& );//      virtual void *read( ipstream& ); public:
+	static const char *const
+	    name;
 	static TStreamable *build();
 };
 
@@ -103,7 +97,7 @@ inline ipstream & operator >>(ipstream & is, TCalculator & cl)
 	return is >> (TStreamable &) cl;
 }
 
-inline ipstream & operator >>(ipstream & is, TCalculator * &cl)
+inline ipstream & operator >>(ipstream & is, TCalculator *&cl)
 {
 	return is >> (void *&)cl;
 }
@@ -113,7 +107,7 @@ inline opstream & operator <<(opstream & os, TCalculator & cl)
 	return os << (TStreamable &) cl;
 }
 
-inline opstream & operator <<(opstream & os, TCalculator * cl)
+inline opstream & operator <<(opstream & os, TCalculator *cl)
 {
 	return os << (TStreamable *) cl;
 }

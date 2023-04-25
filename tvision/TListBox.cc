@@ -18,13 +18,13 @@
 
 #include <string.h>
 
-TListBox::TListBox( const TRect& bounds,
-                    ushort aNumCols,
-                    TScrollBar *aScrollBar ) :
-    TListViewer(bounds, aNumCols, nullptr, aScrollBar),
-    items( nullptr )
+TListBox::TListBox(const TRect & bounds,
+		   ushort aNumCols,
+		   TScrollBar *aScrollBar):TListViewer(bounds, aNumCols,
+						       nullptr, aScrollBar),
+items(nullptr)
 {
-    setRange(0);
+	setRange(0);
 }
 
 TListBox::~TListBox()
@@ -33,69 +33,67 @@ TListBox::~TListBox()
 
 ushort TListBox::dataSize()
 {
-    return sizeof(TListBoxRec);
+	return sizeof(TListBoxRec);
 }
 
-void TListBox::getData( void * rec )
+void TListBox::getData(void *rec)
 {
-    TListBoxRec *p = static_cast<TListBoxRec *>(rec);
-    p->items = items;
-    p->selection = focused;
+	TListBoxRec *p = static_cast < TListBoxRec * >(rec);
+	p->items = items;
+	p->selection = focused;
 }
 
-void TListBox::getText( char *dest, short item, short maxChars )
+void TListBox::getText(char *dest, short item, short maxChars)
 {
-	if (items != nullptr )
-		{
-		strncpy( dest, (const char *)(items->at(item)), maxChars );
+	if (items != nullptr) {
+		strncpy(dest, (const char *)(items->at(item)), maxChars);
 		dest[maxChars] = '\0';
-		}
-    else
-        *dest = EOS;
+	} else
+		*dest = EOS;
 }
 
-void TListBox::newList( TCollection *aList )
+void TListBox::newList(TCollection *aList)
 {
-    destroy( items );
-    items = aList;
-    if( aList != nullptr )
-        setRange( aList->getCount() );
-    else
-        setRange(0);
-    if( range > 0 )
-        focusItem(0);
-    drawView();
+	destroy(items);
+	items = aList;
+	if (aList != nullptr)
+		setRange(aList->getCount());
+	else
+		setRange(0);
+	if (range > 0)
+		focusItem(0);
+	drawView();
 }
 
-void TListBox::setData( void *rec )
+void TListBox::setData(void *rec)
 {
-    TListBoxRec *p = static_cast<TListBoxRec *>(rec);
-    newList(p->items);
-    focusItem(p->selection);
-    drawView();
+	TListBoxRec *p = static_cast < TListBoxRec * >(rec);
+	newList(p->items);
+	focusItem(p->selection);
+	drawView();
 }
 
 #if !defined(NO_STREAMABLE)
 
-void TListBox::write( opstream& os )
+void TListBox::write(opstream & os)
 {
-    TListViewer::write( os );
-    os << items;
+	TListViewer::write(os);
+	os << items;
 }
 
-void *TListBox::read( ipstream& is )
+void *TListBox::read(ipstream & is)
 {
-    TListViewer::read( is );
-    is >> items;
-    return this;
+	TListViewer::read(is);
+	is >> items;
+	return this;
 }
 
 TStreamable *TListBox::build()
 {
-    return new TListBox( streamableInit );
+	return new TListBox(streamableInit);
 }
 
-TListBox::TListBox( StreamableInit ) : TListViewer( streamableInit )
+TListBox::TListBox(StreamableInit):TListViewer(streamableInit)
 {
 }
 

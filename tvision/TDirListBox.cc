@@ -23,28 +23,28 @@
 #include <stdio.h>
 #include <string.h>
 
-TDirListBox::TDirListBox( const TRect& bounds, TScrollBar *aScrollBar ) :
-    TListBox( bounds, 1, aScrollBar ),
-    cur( 0 )
+TDirListBox::TDirListBox(const TRect & bounds,
+			 TScrollBar *aScrollBar):TListBox(bounds, 1,
+							  aScrollBar), cur(0)
 {
-    *dir = EOS;
+	*dir = EOS;
 }
 
 TDirListBox::~TDirListBox()
 {
-   if ( list() )
-      destroy( list() );
+	if (list())
+		destroy(list());
 }
 
-void TDirListBox::getText( char *text, short item, short maxChars )
+void TDirListBox::getText(char *text, short item, short maxChars)
 {
-    strncpy( text, list()->at(item)->text(), maxChars );
-    text[maxChars] = '\0';
+	strncpy(text, list()->at(item)->text(), maxChars);
+	text[maxChars] = '\0';
 }
 
-void TDirListBox::selectItem( short item )
+void TDirListBox::selectItem(short item)
 {
-    message( owner, evCommand, cmChangeDir, list()->at(item) );
+	message(owner, evCommand, cmChangeDir, list()->at(item));
 }
 
 /*
@@ -62,17 +62,17 @@ void TDirListBox::handleEvent( TEvent& event )
 }
 */
 
-Boolean TDirListBox::isSelected( short item )
+Boolean TDirListBox::isSelected(short item)
 {
-    return Boolean( item == cur );
+	return Boolean(item == cur);
 }
 
-void TDirListBox::showDrives( TDirCollection* )
+void TDirListBox::showDrives(TDirCollection *)
 {
 	/* SS: do nothing */
 }
 
-void TDirListBox::showDirs( TDirCollection *dirs )
+void TDirListBox::showDirs(TDirCollection *dirs)
 {
 	/* SS: changed */
 
@@ -88,13 +88,12 @@ void TDirListBox::showDirs( TDirCollection *dirs )
 	memset(buf, ' ', sizeof(buf));
 	strcpy(name, pathDir);
 	len = strlen(pathDir);
-	while((end = strchr(curDir, '/' )) != nullptr)
-	{
+	while ((end = strchr(curDir, '/')) != nullptr) {
 		/* special case: root directory */
 
-		if (end == dir) dirs->insert(new TDirEntry("/", ""));
-		else
-		{
+		if (end == dir)
+			dirs->insert(new TDirEntry("/", ""));
+		else {
 			memcpy(name + len, curDir, end - curDir);
 			name[len + end - curDir] = EOS;
 			*end = EOS;
@@ -115,34 +114,29 @@ void TDirListBox::showDirs( TDirCollection *dirs )
 	struct stat s;
 
 	sprintf(path, "%s.", dir);
-	if ((dp = opendir(path)) != nullptr)
-	{
-		while ((de = readdir(dp)) != nullptr)
-		{
+	if ((dp = opendir(path)) != nullptr) {
+		while ((de = readdir(dp)) != nullptr) {
 			/* we don't want these directories */
 
 			if (strcmp(de->d_name, ".") == 0 ||
-				strcmp(de->d_name, "..") == 0) continue;
+			    strcmp(de->d_name, "..") == 0)
+				continue;
 
 			/* is it a directory ? */
 
 			sprintf(path, "%s%s", dir, de->d_name);
-			if (stat(path, &s) == 0 && S_ISDIR(s.st_mode))
-			{
-				if (isFirst)
-				{
+			if (stat(path, &s) == 0 && S_ISDIR(s.st_mode)) {
+				if (isFirst) {
 					isFirst = False;
 					strcpy(name, firstDir);
 					len = strlen(firstDir);
-				}
-				else
-				{
+				} else {
 					strcpy(name, middleDir);
 					len = strlen(middleDir);
 				}
 				strcpy(name + len, de->d_name);
 				dirs->insert(new TDirEntry(name - indent,
-					path));
+							   path));
 			}
 		}
 		closedir(dp);
@@ -150,40 +144,37 @@ void TDirListBox::showDirs( TDirCollection *dirs )
 
 	/* old code */
 
-    char *p = dirs->at(dirs->getCount()-1)->text();
-    char *i = strchr( p, graphics[0] );
-    if( i == nullptr )
-        {
-        i = strchr( p, graphics[1] );
-        if( i != nullptr )
-            *i = graphics[0];
-        }
-    else
-        {
-        *(i+1) = graphics[2];
-        *(i+2) = graphics[2];
-        }
+	char *p = dirs->at(dirs->getCount() - 1)->text();
+	char *i = strchr(p, graphics[0]);
+	if (i == nullptr) {
+		i = strchr(p, graphics[1]);
+		if (i != nullptr)
+			*i = graphics[0];
+	} else {
+		*(i + 1) = graphics[2];
+		*(i + 2) = graphics[2];
+	}
 }
 
-void TDirListBox::newDirectory( const char *str )
+void TDirListBox::newDirectory(const char *str)
 {
 	/* SS: changed */
 
-	strcpy( dir, str );
-	TDirCollection *dirs = new TDirCollection( 5, 5 );
-	showDirs( dirs );
-	newList( dirs );
-	focusItem( cur );
+	strcpy(dir, str);
+	TDirCollection *dirs = new TDirCollection(5, 5);
+	showDirs(dirs);
+	newList(dirs);
+	focusItem(cur);
 }
 
-void TDirListBox::setState( ushort nState, Boolean enable )
+void TDirListBox::setState(ushort nState, Boolean enable)
 {
-    TListBox::setState( nState, enable );
-    if( (nState & sfFocused) != 0 )
+	TListBox::setState(nState, enable);
+	if ((nState & sfFocused) != 0)
 #ifndef __UNPATCHED
-        message(owner, evCommand, cmDirSelection, (void *)enable);  //!!
+		message(owner, evCommand, cmDirSelection, (void *)enable);	//!!
 #else
-        ((TChDirDialog *)owner)->chDirButton->makeDefault( enable );
+		((TChDirDialog *) owner)->chDirButton->makeDefault(enable);
 #endif
 }
 
@@ -191,7 +182,7 @@ void TDirListBox::setState( ushort nState, Boolean enable )
 
 TStreamable *TDirListBox::build()
 {
-    return new TDirListBox( streamableInit );
+	return new TDirListBox(streamableInit);
 }
 
 #endif

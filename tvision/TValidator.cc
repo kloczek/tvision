@@ -27,22 +27,22 @@
 
 TValidator::TValidator()
 {
-  status = 0;
-  options = 0;
+	status = 0;
+	options = 0;
 }
 
 #if !defined(NO_STREAMABLE)
 
-TValidator::TValidator( StreamableInit )
+TValidator::TValidator(StreamableInit)
 {
 }
 
-void* TValidator::read(ipstream& is)
+void *TValidator::read(ipstream & is)
 {
-  is >> options;
-  status = 0;
+	is >> options;
+	status = 0;
 
-  return this;
+	return this;
 }
 
 #endif
@@ -51,559 +51,556 @@ void TValidator::error()
 {
 }
 
-Boolean TValidator::isValidInput(char*, Boolean)
+Boolean TValidator::isValidInput(char *, Boolean)
 {
-  return True;
+	return True;
 }
 
-Boolean TValidator::isValid(const char*)
+Boolean TValidator::isValid(const char *)
 {
-  return True;
+	return True;
 }
 
 #if !defined(NO_STREAMABLE)
 
-void TValidator::write(opstream& os)
+void TValidator::write(opstream & os)
 {
-    os << options;
+	os << options;
 }
 
 #endif
 
-ushort TValidator::transfer(char*, void*, TVTransfer)
+ushort TValidator::transfer(char *, void *, TVTransfer)
 {
-  return 0;
+	return 0;
 }
 
-Boolean TValidator::validate(const char* s)
+Boolean TValidator::validate(const char *s)
 {
-  if (!isValid(s))
-  {
-    error();
-    return False;
-  }
-  return True;
+	if (!isValid(s)) {
+		error();
+		return False;
+	}
+	return True;
 }
 
 // TPXPictureValidator
 
-TPXPictureValidator::TPXPictureValidator(const char* aPic, Boolean autoFill)
-    : TValidator()
+TPXPictureValidator::TPXPictureValidator(const char *aPic, Boolean autoFill)
+:TValidator()
 {
 
-  char s[1];
+	char s[1];
 
-  pic = newStr(aPic);
-  if ( autoFill )
-       options |= voFill;
-  s[0] = 0;
-  if (picture(s, False) != prEmpty)
-    status = vsSyntax;
+	pic = newStr(aPic);
+	if (autoFill)
+		options |= voFill;
+	s[0] = 0;
+	if (picture(s, False) != prEmpty)
+		status = vsSyntax;
 }
 
 #if !defined(NO_STREAMABLE)
 
-TPXPictureValidator::TPXPictureValidator( StreamableInit s) : TValidator(s)
+TPXPictureValidator::TPXPictureValidator(StreamableInit s):TValidator(s)
 {
 }
 
-void TPXPictureValidator::write(opstream& os)
+void TPXPictureValidator::write(opstream & os)
 {
-  TValidator::write(os);
-  os.writeString(pic);
+	TValidator::write(os);
+	os.writeString(pic);
 }
 
-void* TPXPictureValidator::read( ipstream& is )
+void *TPXPictureValidator::read(ipstream & is)
 {
-  TValidator::read(is);
-  pic = is.readString();
-  index = jndex = 0;
+	TValidator::read(is);
+	pic = is.readString();
+	index = jndex = 0;
 
-  return this;
+	return this;
 }
 
 #endif
 
 TPXPictureValidator::~TPXPictureValidator()
 {
-  delete pic;
+	delete pic;
 };
 
 void TPXPictureValidator::error()
 {
-  messageBox(mfError | mfOKButton, errorMsg, pic);
+	messageBox(mfError | mfOKButton, errorMsg, pic);
 }
 
-Boolean TPXPictureValidator::isValidInput(char* s, Boolean suppressFill)
+Boolean TPXPictureValidator::isValidInput(char *s, Boolean suppressFill)
 {
-  Boolean doFill = Boolean(((options&voFill)!=0) && !suppressFill);
+	Boolean doFill = Boolean(((options & voFill) != 0) && !suppressFill);
 
-  return Boolean((pic==nullptr) || (picture( (char*)s, doFill) != prError));
+	return Boolean((pic == nullptr)
+		       || (picture((char *)s, doFill) != prError));
 }
 
-Boolean TPXPictureValidator::isValid(const char* s)
+Boolean TPXPictureValidator::isValid(const char *s)
 {
-  char str[256];
+	char str[256];
 
-  strcpy(str, s);
-  return Boolean((pic == nullptr) || (picture(str, False) == prComplete));
+	strcpy(str, s);
+	return Boolean((pic == nullptr) || (picture(str, False) == prComplete));
 }
 
 Boolean isNumber(char ch)
 {
-    return Boolean(('0' <= ch) && (ch <= '9'));
+	return Boolean(('0' <= ch) && (ch <= '9'));
 }
 
 Boolean isLetter(char ch)
 {
-    ch &= 0xdf;
-    return Boolean(('A' <= ch) && (ch <= 'Z'));
+	ch &= 0xdf;
+	return Boolean(('A' <= ch) && (ch <= 'Z'));
 }
 
-Boolean isSpecial(char ch, const char* special)
+Boolean isSpecial(char ch, const char *special)
 {
-    if (strchr(special, ch) != nullptr)
-        return True;
-    else
-        return False;
+	if (strchr(special, ch) != nullptr)
+		return True;
+	else
+		return False;
 }
 
 /*
   This helper function will be used for a persistant TInputLine mask.
   It will be moved to TINPUTLI.CPP when needed.
 */
-uchar numChar(char ch, const char* s)
+uchar numChar(char ch, const char *s)
 {
-    int count;
-    uchar n;
+	int count;
+	uchar n;
 
-    for (count = strlen(s), n = 0; count; count--, s++)
-        if (*s == ch)
-            n++;
-    return n;
+	for (count = strlen(s), n = 0; count; count--, s++)
+		if (*s == ch)
+			n++;
+	return n;
 }
 
 Boolean isComplete(TPicResult result)
 {
-  return  Boolean((result == prComplete) || (result == prAmbiguous));
+	return Boolean((result == prComplete) || (result == prAmbiguous));
 }
 
 Boolean isIncomplete(TPicResult result)
 {
-  return Boolean( (result == prIncomplete) || (result == prIncompNoFill) );
+	return Boolean((result == prIncomplete) || (result == prIncompNoFill));
 }
-
 
 // TPXPictureValidator members
 
 // Consume input
-void TPXPictureValidator::consume(char ch, char* input)
+void TPXPictureValidator::consume(char ch, char *input)
 {
-      input[jndex] = ch;
-      index++;
-      jndex++;
+	input[jndex] = ch;
+	index++;
+	jndex++;
 }
 
 // Skip a character or a picture group
 
-void TPXPictureValidator::toGroupEnd(int& i, int termCh)
+void TPXPictureValidator::toGroupEnd(int &i, int termCh)
 {
-    int  brkLevel, brcLevel;
+	int brkLevel, brcLevel;
 
-      brkLevel = 0;
-      brcLevel = 0;
-      do {
-        if (i == termCh)
-            return;
-        else
-          switch (pic[i])
-          {
-          case  '[': brkLevel++; break;
-          case  ']': brkLevel--; break;
-          case  '{': brcLevel++; break;
-          case  '}': brcLevel--; break;
-          case  ';': i++; break;
-          }
-        i++;
-      } while (! ((brkLevel == 0) && (brcLevel == 0)));
+	brkLevel = 0;
+	brcLevel = 0;
+	do {
+		if (i == termCh)
+			return;
+		else
+			switch (pic[i]) {
+			case '[':
+				brkLevel++;
+				break;
+			case ']':
+				brkLevel--;
+				break;
+			case '{':
+				brcLevel++;
+				break;
+			case '}':
+				brcLevel--;
+				break;
+			case ';':
+				i++;
+				break;
+			}
+		i++;
+	} while (!((brkLevel == 0) && (brcLevel == 0)));
 }
 
 // Find the a comma separator
 Boolean TPXPictureValidator::skipToComma(int termCh)
 {
-      do {
-          toGroupEnd(index, termCh);
-      } while (! ( (index == termCh) || (pic[index] == ',')));
+	do {
+		toGroupEnd(index, termCh);
+	} while (!((index == termCh) || (pic[index] == ',')));
 
-      if (pic[index] == ',')
-          index++;
-      return Boolean(index < termCh);
+	if (pic[index] == ',')
+		index++;
+	return Boolean(index < termCh);
 }
 
 // Calclate the end of a group
 int TPXPictureValidator::calcTerm(int termCh)
 {
-      int k = index;
-      toGroupEnd(k, termCh);
-      return k;
+	int k = index;
+	toGroupEnd(k, termCh);
+	return k;
 }
 
 // The next group is repeated X times }
-TPicResult TPXPictureValidator::iteration(char* input, int inTerm)
+TPicResult TPXPictureValidator::iteration(char *input, int inTerm)
 {
-      int itr, k, l;
-      TPicResult rslt;
-      int termCh;
+	int itr, k, l;
+	TPicResult rslt;
+	int termCh;
 
-      itr = 0;
-      rslt = prError;
+	itr = 0;
+	rslt = prError;
 
-      index++;  // Skip '*'
+	index++;		// Skip '*'
 
-      // Retrieve number
+	// Retrieve number
 
-      while (isNumber(pic[index]))
-      {
-        itr = itr * 10 + (pic[index] - '0');
-        index++;
-      }
+	while (isNumber(pic[index])) {
+		itr = itr * 10 + (pic[index] - '0');
+		index++;
+	}
 
-      k = index;
-      termCh = calcTerm(inTerm);
+	k = index;
+	termCh = calcTerm(inTerm);
 
-      // If Itr is 0 allow any number, otherwise enforce the number
-      if (itr != 0)
-      {
-        for (l = 1; l <= itr; l++)
-        {
-          index = k;
-          rslt = process(input,termCh);
-          if ( ! isComplete(rslt))
-      {
-            // Empty means incomplete since all are required
-            if (rslt == prEmpty)
-            rslt = prIncomplete;
+	// If Itr is 0 allow any number, otherwise enforce the number
+	if (itr != 0) {
+		for (l = 1; l <= itr; l++) {
+			index = k;
+			rslt = process(input, termCh);
+			if (!isComplete(rslt)) {
+				// Empty means incomplete since all are required
+				if (rslt == prEmpty)
+					rslt = prIncomplete;
 
-        return rslt;
-      }
-        }
-      }
-      else
-      {
-        do {
-          index = k;
-          rslt = process(input, termCh);
-        } while (rslt == prComplete);
+				return rslt;
+			}
+		}
+	} else {
+		do {
+			index = k;
+			rslt = process(input, termCh);
+		} while (rslt == prComplete);
 
-        if ((rslt == prEmpty) || (rslt == prError))
-        {
-          index++;
-          rslt = prAmbiguous;
-        }
-      }
-      index = termCh;
+		if ((rslt == prEmpty) || (rslt == prError)) {
+			index++;
+			rslt = prAmbiguous;
+		}
+	}
+	index = termCh;
 
-      return rslt;
+	return rslt;
 }
 
 // Process a picture group
-TPicResult TPXPictureValidator::group(char* input, int inTerm)
+TPicResult TPXPictureValidator::group(char *input, int inTerm)
 {
 
-      TPicResult rslt;
-      int termCh;
+	TPicResult rslt;
+	int termCh;
 
-      termCh = calcTerm(inTerm);
-      index++;
-      rslt = process(input, termCh - 1);
+	termCh = calcTerm(inTerm);
+	index++;
+	rslt = process(input, termCh - 1);
 
-      if (! isIncomplete(rslt))
-          index = termCh;
+	if (!isIncomplete(rslt))
+		index = termCh;
 
-      return rslt;
+	return rslt;
 }
-
 
 TPicResult TPXPictureValidator::checkComplete(TPicResult rslt, int termCh)
 {
-    int j = index;
-    Boolean status=True;
+	int j = index;
+	Boolean status = True;
 
-    if (isIncomplete(rslt))
-    {
-        // Skip optional pieces
-        while (status)
-          switch (pic[j])
-          {
-          case '[':
-             toGroupEnd(j, termCh);
-             break;
-          case  '*':
-             if (! isNumber(pic[j + 1]))
-                 j++;
-             toGroupEnd(j, termCh);
-             break;
+	if (isIncomplete(rslt)) {
+		// Skip optional pieces
+		while (status)
+			switch (pic[j]) {
+			case '[':
+				toGroupEnd(j, termCh);
+				break;
+			case '*':
+				if (!isNumber(pic[j + 1]))
+					j++;
+				toGroupEnd(j, termCh);
+				break;
 
-          default:
-              status = False;
-          }
+			default:
+				status = False;
+			}
 
-        if (j == termCh)
-          rslt = prAmbiguous;
-    }
+		if (j == termCh)
+			rslt = prAmbiguous;
+	}
 
-    return rslt;
+	return rslt;
 }
 
-
-TPicResult TPXPictureValidator::scan(char* input, int termCh)
+TPicResult TPXPictureValidator::scan(char *input, int termCh)
 {
-    char ch;
-    TPicResult rslt, rScan;
+	char ch;
+	TPicResult rslt, rScan;
 
-    rScan = prError;
-    rslt = prEmpty;
+	rScan = prError;
+	rslt = prEmpty;
 
-    while ( (index != termCh) && (pic[index] != ','))
-    {
-        if (jndex >= (int)strlen(input))
-        return checkComplete(rslt, termCh);
+	while ((index != termCh) && (pic[index] != ',')) {
+		if (jndex >= (int)strlen(input))
+			return checkComplete(rslt, termCh);
 
-        ch = input[jndex];
-        switch (pic[index])
-    {
-        case  '#':
-        if (! isNumber(ch))
-            return prError;
-        else
-            consume(ch, input);
-        break;
-        case  '?':
-        if (! isLetter(ch))
-            return prError;
-        else
-            consume(ch, input);
-        break;
-        case  '&':
-        if (! isLetter(ch))
-            return prError;
-                else
-            consume(toupper(ch), input);
-        break;
-        case  '!':
-        consume(toupper(ch), input);
-        break;
-        case  '@':
-        consume(ch, input);
-        break;
-        case  '*':
+		ch = input[jndex];
+		switch (pic[index]) {
+		case '#':
+			if (!isNumber(ch))
+				return prError;
+			else
+				consume(ch, input);
+			break;
+		case '?':
+			if (!isLetter(ch))
+				return prError;
+			else
+				consume(ch, input);
+			break;
+		case '&':
+			if (!isLetter(ch))
+				return prError;
+			else
+				consume(toupper(ch), input);
+			break;
+		case '!':
+			consume(toupper(ch), input);
+			break;
+		case '@':
+			consume(ch, input);
+			break;
+		case '*':
 
-              rslt = iteration(input,termCh);
-              if (! isComplete(rslt))
-                  return rslt;
+			rslt = iteration(input, termCh);
+			if (!isComplete(rslt))
+				return rslt;
 
-              if (rslt == prError)
-              rslt = prAmbiguous;
-          break;
+			if (rslt == prError)
+				rslt = prAmbiguous;
+			break;
 
-        case '{':
+		case '{':
 
-              rslt = group(input, termCh);
-              if (! isComplete(rslt))
-              return rslt;
+			rslt = group(input, termCh);
+			if (!isComplete(rslt))
+				return rslt;
 
-          break;
-        case '[':
+			break;
+		case '[':
 
-              rslt = group(input, termCh);
-              if (isIncomplete(rslt))
-              return rslt;
-              if (rslt == prError)
-              rslt = prAmbiguous;
+			rslt = group(input, termCh);
+			if (isIncomplete(rslt))
+				return rslt;
+			if (rslt == prError)
+				rslt = prAmbiguous;
 
-          break;
+			break;
 
-        default:
+		default:
 
-          if (pic[index] == ';')
-          index++;
-          if (toupper(pic[index]) != toupper(ch))
+			if (pic[index] == ';')
+				index++;
+			if (toupper(pic[index]) != toupper(ch))
 #ifndef __UNPATCHED
-	if (ch != ' ')
-	    return rScan;
+				if (ch != ' ')
+					return rScan;
 #else
-            if (ch == ' ')
-             ch = pic[index];
-            else
-            return rScan;
+				if (ch == ' ')
+					ch = pic[index];
+				else
+					return rScan;
 #endif
-          consume(pic[index], input);
-    }
+			consume(pic[index], input);
+		}
 
-        if (rslt == prAmbiguous)
-          rslt = prIncompNoFill;
-        else
-          rslt = prIncomplete;
-    }
+		if (rslt == prAmbiguous)
+			rslt = prIncompNoFill;
+		else
+			rslt = prIncomplete;
+	}
 
-      if (rslt == prIncompNoFill)
-        return prAmbiguous;
-      else
-        return prComplete;
+	if (rslt == prIncompNoFill)
+		return prAmbiguous;
+	else
+		return prComplete;
 }
 
-TPicResult TPXPictureValidator::process(char* input, int termCh)
+TPicResult TPXPictureValidator::process(char *input, int termCh)
 {
 
-   TPicResult rslt, rProcess;
-   Boolean incomp;
-   int oldI, oldJ, incompJ = 0, incompI = 0;
+	TPicResult rslt, rProcess;
+	Boolean incomp;
+	int oldI, oldJ, incompJ = 0, incompI = 0;
 
-   incomp = False;
-   oldI = index;
-   oldJ = jndex;
-   do {
-      rslt = scan(input, termCh);
+	incomp = False;
+	oldI = index;
+	oldJ = jndex;
+	do {
+		rslt = scan(input, termCh);
 
-      // Only accept completes if they make it farther in the input
-      //   stream from the last incomplete
+		// Only accept completes if they make it farther in the input
+		//   stream from the last incomplete
 
-      if ( (rslt == prComplete) && incomp && (jndex < incompJ))
-      {
-        rslt = prIncomplete;
-        jndex = incompJ;
-      }
+		if ((rslt == prComplete) && incomp && (jndex < incompJ)) {
+			rslt = prIncomplete;
+			jndex = incompJ;
+		}
 
-      if ((rslt == prError) || (rslt == prIncomplete))
-      {
-        rProcess = rslt;
+		if ((rslt == prError) || (rslt == prIncomplete)) {
+			rProcess = rslt;
 
-        if (! incomp &&  (rslt == prIncomplete) )
-        {
-          incomp  = True;
-          incompI = index;
-          incompJ = jndex;
-        }
-        index = oldI;
-        jndex = oldJ;
-        if (! skipToComma(termCh))
-        {
-          if ( incomp )
-          {
-            rProcess = prIncomplete;
-            index = incompI;
-            jndex = incompJ;
-          }
-          return rProcess;
-        }
-        oldI = index;
-      }
-   } while (!((rslt != prError) && (rslt != prIncomplete)));
+			if (!incomp && (rslt == prIncomplete)) {
+				incomp = True;
+				incompI = index;
+				incompJ = jndex;
+			}
+			index = oldI;
+			jndex = oldJ;
+			if (!skipToComma(termCh)) {
+				if (incomp) {
+					rProcess = prIncomplete;
+					index = incompI;
+					jndex = incompJ;
+				}
+				return rProcess;
+			}
+			oldI = index;
+		}
+	} while (!((rslt != prError) && (rslt != prIncomplete)));
 
-   if ((rslt == prComplete) && incomp)
-      return prAmbiguous;
-   else
-      return rslt;
+	if ((rslt == prComplete) && incomp)
+		return prAmbiguous;
+	else
+		return rslt;
 }
 
 Boolean TPXPictureValidator::syntaxCheck()
 {
 
-    int i, len;
-    int brkLevel, brcLevel;
+	int i, len;
+	int brkLevel, brcLevel;
 
-    if (!pic || (strlen(pic) == 0))
-        return False;
+	if (!pic || (strlen(pic) == 0))
+		return False;
 
-    if (pic[strlen(pic)-1] == ';')
-        return False;
+	if (pic[strlen(pic) - 1] == ';')
+		return False;
 
-    i = 0;
-    brkLevel = 0;
-    brcLevel = 0;
+	i = 0;
+	brkLevel = 0;
+	brcLevel = 0;
 
-    len = strlen(pic);
-    while (i < len)
-    {
-      switch (pic[i])
-      {
-      case '[': brkLevel++; break;
-      case ']': brkLevel--; break;
-      case '{': brcLevel++; break;
-      case '}': brcLevel--; break;
-      case ';': i++;        break;
-      }
-      i++;
-    }
+	len = strlen(pic);
+	while (i < len) {
+		switch (pic[i]) {
+		case '[':
+			brkLevel++;
+			break;
+		case ']':
+			brkLevel--;
+			break;
+		case '{':
+			brcLevel++;
+			break;
+		case '}':
+			brcLevel--;
+			break;
+		case ';':
+			i++;
+			break;
+		}
+		i++;
+	}
 
-    return Boolean( (brkLevel == 0) && (brcLevel == 0) );
+	return Boolean((brkLevel == 0) && (brcLevel == 0));
 }
 
-TPicResult TPXPictureValidator::picture(char* input, Boolean autoFill)
+TPicResult TPXPictureValidator::picture(char *input, Boolean autoFill)
 {
 
-  Boolean reprocess;
-  TPicResult rslt;
+	Boolean reprocess;
+	TPicResult rslt;
 
-  if (!syntaxCheck())
-      return prSyntax;
+	if (!syntaxCheck())
+		return prSyntax;
 
-  if (!input || strlen(input)==0)
-       return prEmpty;
+	if (!input || strlen(input) == 0)
+		return prEmpty;
 
-  jndex = 0;
-  index = 0;
+	jndex = 0;
+	index = 0;
 
-  rslt = process(input, strlen(pic));
+	rslt = process(input, strlen(pic));
 
-  if ((rslt != prError) && (jndex < (int)strlen(input)))
-    rslt = prError;
+	if ((rslt != prError) && (jndex < (int)strlen(input)))
+		rslt = prError;
 
-  if ((rslt == prIncomplete) && autoFill)
-  {
-    reprocess = False;
+	if ((rslt == prIncomplete) && autoFill) {
+		reprocess = False;
 
 #ifndef __UNPATCHED
-    while ((index < (int)strlen(pic)) && !isSpecial(pic[index],
-	"#?&!@*{}[],"))
+		while ((index < (int)strlen(pic)) && !isSpecial(pic[index],
+								"#?&!@*{}[],"))
 #else
-    while ((index < strlen(pic)) && !isSpecial(pic[index], "#?&!@*{}[]"))
+		while ((index < strlen(pic))
+		       && !isSpecial(pic[index], "#?&!@*{}[]"))
 #endif
-    {
-      if (pic[index] == ';')
-          index++;
-      int end = strlen(input);
-      input[end] = pic[index];
-      input[end+1] = 0;
-      index++;
-      reprocess = True;
-    }
+		{
+			if (pic[index] == ';')
+				index++;
+			int end = strlen(input);
+			input[end] = pic[index];
+			input[end + 1] = 0;
+			index++;
+			reprocess = True;
+		}
 
-    jndex = 0;
-    index = 0;
-    if (reprocess)
-      rslt = process(input, strlen(pic));
-  }
+		jndex = 0;
+		index = 0;
+		if (reprocess)
+			rslt = process(input, strlen(pic));
+	}
 
-  if (rslt == prAmbiguous)
-    return prComplete;
-  else if (rslt == prIncompNoFill)
-    return prIncomplete;
-  else
-    return rslt;
+	if (rslt == prAmbiguous)
+		return prComplete;
+	else if (rslt == prIncompNoFill)
+		return prIncomplete;
+	else
+		return rslt;
 }
-
 
 // TFilterValidator
 
-TFilterValidator::TFilterValidator(const char* aValidChars)
+TFilterValidator::TFilterValidator(const char *aValidChars)
 {
-  validChars = newStr(aValidChars);
+	validChars = newStr(aValidChars);
 }
 
 #if !defined(NO_STREAMABLE)
 
-TFilterValidator::TFilterValidator( StreamableInit s) : TValidator(s)
+TFilterValidator::TFilterValidator(StreamableInit s):TValidator(s)
 {
 }
 
@@ -611,167 +608,162 @@ TFilterValidator::TFilterValidator( StreamableInit s) : TValidator(s)
 
 TFilterValidator::~TFilterValidator()
 {
-    delete validChars;
+	delete validChars;
 }
 
 #if !defined(NO_STREAMABLE)
 
-void TFilterValidator::write(opstream& os)
+void TFilterValidator::write(opstream & os)
 {
-  TValidator::write(os);
-  os.writeString(validChars);
+	TValidator::write(os);
+	os.writeString(validChars);
 }
 
-void* TFilterValidator::read(ipstream& is)
+void *TFilterValidator::read(ipstream & is)
 {
-  TValidator::read(is);
-  validChars = is.readString();
-  return this;
+	TValidator::read(is);
+	validChars = is.readString();
+	return this;
 }
 
 #endif
 
-Boolean TFilterValidator::isValid(const char* s)
+Boolean TFilterValidator::isValid(const char *s)
 {
-  return Boolean(strspn(s, validChars) == strlen(s));
+	return Boolean(strspn(s, validChars) == strlen(s));
 }
 
-Boolean TFilterValidator::isValidInput(char* s, Boolean)
+Boolean TFilterValidator::isValidInput(char *s, Boolean)
 {
-  return Boolean(strspn(s, validChars) == strlen(s));
+	return Boolean(strspn(s, validChars) == strlen(s));
 }
 
 void TFilterValidator::error()
 {
-  messageBox(mfError | mfOKButton, errorMsg );
+	messageBox(mfError | mfOKButton, errorMsg);
 }
 
 // TRangeValidator
 
-TRangeValidator::TRangeValidator( long aMin, long aMax ):
-    TFilterValidator( nullptr ),
-    min(aMin),
-    max(aMax)
+TRangeValidator::TRangeValidator(long aMin,
+				 long aMax):TFilterValidator(nullptr),
+min(aMin), max(aMax)
 {
-    if (aMin >= 0)
-        validChars = newStr( TRangeValidator::validUnsignedChars );
-    else
-        validChars = newStr( TRangeValidator::validSignedChars );
+	if (aMin >= 0)
+		validChars = newStr(TRangeValidator::validUnsignedChars);
+	else
+		validChars = newStr(TRangeValidator::validSignedChars);
 }
 
 #if !defined(NO_STREAMABLE)
 
-TRangeValidator::TRangeValidator( StreamableInit s) : TFilterValidator(s)
+TRangeValidator::TRangeValidator(StreamableInit s):TFilterValidator(s)
 {
 }
 
-void TRangeValidator::write(opstream& os)
+void TRangeValidator::write(opstream & os)
 {
-  TFilterValidator::write( os );
-  os << min << max;
+	TFilterValidator::write(os);
+	os << min << max;
 }
 
-void* TRangeValidator::read( ipstream& is )
+void *TRangeValidator::read(ipstream & is)
 {
-  TFilterValidator::read( is );
-  is >> min >> max;
-  return this;
+	TFilterValidator::read(is);
+	is >> min >> max;
+	return this;
 }
 
 #endif
 
 void TRangeValidator::error()
 {
-  messageBox( mfError | mfOKButton, errorMsg, min,max);
+	messageBox(mfError | mfOKButton, errorMsg, min, max);
 }
 
-
-Boolean TRangeValidator::isValid(const char* s)
+Boolean TRangeValidator::isValid(const char *s)
 {
-  long value;
+	long value;
 
-  if (TFilterValidator::isValid(s))
+	if (TFilterValidator::isValid(s))
 #ifndef __UNPATCHED
-    if (sscanf(s,"%ld", &value) != EOF)
+		if (sscanf(s, "%ld", &value) != EOF)
 #else
-    if (sscanf(s,"%ld", &value) != 0)
+		if (sscanf(s, "%ld", &value) != 0)
 #endif
-        if ((value >= min) && (value <= max))
-            return True;
+			if ((value >= min) && (value <= max))
+				return True;
 
-  return False;
+	return False;
 }
 
-ushort TRangeValidator::transfer(char* s, void* buffer, TVTransfer flag)
+ushort TRangeValidator::transfer(char *s, void *buffer, TVTransfer flag)
 {
-  long value;
+	long value;
 
-  if ((options & voTransfer) != 0)
-  {
-    switch ( flag )
-    {
-    case vtGetData:
-         sscanf(s,"%ld",&value);
-         *(long*)buffer = value;
-         break;
+	if ((options & voTransfer) != 0) {
+		switch (flag) {
+		case vtGetData:
+			sscanf(s, "%ld", &value);
+			*(long *)buffer = value;
+			break;
 
-    case vtSetData:
-       sprintf(s, "%ld", *(long*)buffer);
-       break;
-    default:
-	break;
-    }
-    return sizeof(long);
-  }
-  else
-    return 0;
+		case vtSetData:
+			sprintf(s, "%ld", *(long *)buffer);
+			break;
+		default:
+			break;
+		}
+		return sizeof(long);
+	} else
+		return 0;
 }
 
 // TLookupValidator
 
 #if !defined(NO_STREAMABLE)
 
-TLookupValidator::TLookupValidator( StreamableInit s) : TValidator(s)
+TLookupValidator::TLookupValidator(StreamableInit s):TValidator(s)
 {
 }
 
 #endif
 
-Boolean TLookupValidator::isValid(const char* s)
+Boolean TLookupValidator::isValid(const char *s)
 {
-  return lookup(s);
+	return lookup(s);
 }
 
-Boolean TLookupValidator::lookup(const char*)
+Boolean TLookupValidator::lookup(const char *)
 {
-  return True;
+	return True;
 }
 
 // TStringLookupValidator
 
-TStringLookupValidator::TStringLookupValidator(TStringCollection* aStrings)
+TStringLookupValidator::TStringLookupValidator(TStringCollection *aStrings)
 {
-  strings = aStrings;
+	strings = aStrings;
 }
 
 #if !defined(NO_STREAMABLE)
 
-void TStringLookupValidator::write( opstream& os )
+void TStringLookupValidator::write(opstream & os)
 {
-  TLookupValidator::write( os );
-  os << strings;
+	TLookupValidator::write(os);
+	os << strings;
 }
 
-void* TStringLookupValidator::read( ipstream& is )
+void *TStringLookupValidator::read(ipstream & is)
 {
-  TLookupValidator::read(is);
-  is >> strings;
+	TLookupValidator::read(is);
+	is >> strings;
 
-  return this;
+	return this;
 }
 
-TStringLookupValidator::TStringLookupValidator( StreamableInit s) :
-        TLookupValidator(s)
+TStringLookupValidator::TStringLookupValidator(StreamableInit s):
+TLookupValidator(s)
 {
 }
 
@@ -779,68 +771,66 @@ TStringLookupValidator::TStringLookupValidator( StreamableInit s) :
 
 TStringLookupValidator::~TStringLookupValidator()
 {
-  newStringList(nullptr);
+	newStringList(nullptr);
 }
 
 void TStringLookupValidator::error()
 {
-  messageBox(mfError | mfOKButton, errorMsg);
+	messageBox(mfError | mfOKButton, errorMsg);
 }
 
-static Boolean stringMatch(void* a1, void* a2)
+static Boolean stringMatch(void *a1, void *a2)
 {
-    return Boolean(strcmp((const char*)a1, (const char*)a2) == 0);
+	return Boolean(strcmp((const char *)a1, (const char *)a2) == 0);
 }
 
-
-Boolean TStringLookupValidator::lookup(const char* s)
+Boolean TStringLookupValidator::lookup(const char *s)
 {
-    return Boolean(strings->firstThat(stringMatch,(void*)s) != nullptr);
+	return Boolean(strings->firstThat(stringMatch, (void *)s) != nullptr);
 }
 
-void TStringLookupValidator::newStringList(TStringCollection* aStrings)
+void TStringLookupValidator::newStringList(TStringCollection *aStrings)
 {
-  if (strings)
+	if (strings)
 #ifndef __UNPATCHED
-      destroy (strings);
+		destroy(strings);
 #else
-      delete strings;
+		delete strings;
 #endif
 
-  strings = aStrings;
+	strings = aStrings;
 }
-
 
 #if !defined(NO_STREAMABLE)
 
 TStreamable *TValidator::build()
 {
-    return new TValidator( streamableInit );
+	return new TValidator(streamableInit);
 }
 
 TStreamable *TRangeValidator::build()
 {
-    return new TRangeValidator( streamableInit );
+	return new TRangeValidator(streamableInit);
 }
 
 TStreamable *TFilterValidator::build()
 {
-    return new TFilterValidator( streamableInit );
+	return new TFilterValidator(streamableInit);
 }
 
 TStreamable *TPXPictureValidator::build()
 {
-    return new TPXPictureValidator( streamableInit );
+	return new TPXPictureValidator(streamableInit);
 }
 
 TStreamable *TLookupValidator::build()
 {
-    return new TLookupValidator( streamableInit );
+	return new TLookupValidator(streamableInit);
 }
 
 TStreamable *TStringLookupValidator::build()
 {
-    return new TStringLookupValidator( streamableInit );
+	return new TStringLookupValidator(streamableInit);
 }
 
 #endif

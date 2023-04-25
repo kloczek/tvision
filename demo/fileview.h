@@ -42,8 +42,7 @@ class TFileViewer:public TScroller {
 		     TScrollBar * aVScrollBar, const char *aFileName);
 	~TFileViewer();
 	 TFileViewer(StreamableInit):TScroller(streamableInit) {
-	}
-	void draw();
+	} void draw();
 	void readFile(const char *fName);
 	void setState(ushort aState, Boolean enable);
 	void scrollDraw();
@@ -52,8 +51,9 @@ class TFileViewer:public TScroller {
       private:
 	virtual const char *streamableName() const {
 		return name;
-      } protected:
-	virtual void write(opstream &);
+	}
+      protected:
+	 virtual void write(opstream &);
 	virtual void *read(ipstream &);
 
       public:

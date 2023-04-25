@@ -18,60 +18,59 @@
 
 #include <string.h>
 
-TSubMenu::TSubMenu( const char *nm, ushort key, ushort helpCtx ) :
-    TMenuItem( nm, 0, key, helpCtx )
+TSubMenu::TSubMenu(const char *nm, ushort key, ushort helpCtx):TMenuItem(nm, 0,
+									 key,
+									 helpCtx)
 {
 }
 
-TSubMenu& operator + ( TSubMenu& s, TMenuItem& i )
+TSubMenu & operator +(TSubMenu & s, TMenuItem & i)
 {
-    TSubMenu *sub = &s;
-    while( sub->next != nullptr )
-        sub = (TSubMenu *)(sub->next);
+	TSubMenu *sub = &s;
+	while (sub->next != nullptr)
+		sub = (TSubMenu *) (sub->next);
 
-    if( sub->subMenu == nullptr )
-        sub->subMenu = new TMenu( i );
-    else
-        {
-        TMenuItem *cur = sub->subMenu->items;
-        while( cur->next != nullptr )
-            cur = cur->next;
-        cur->next = &i;
-        }
-    return s;
+	if (sub->subMenu == nullptr)
+		sub->subMenu = new TMenu(i);
+	else {
+		TMenuItem *cur = sub->subMenu->items;
+		while (cur->next != nullptr)
+			cur = cur->next;
+		cur->next = &i;
+	}
+	return s;
 }
 
-TSubMenu& operator + ( TSubMenu& s1, TSubMenu& s2 )
+TSubMenu & operator +(TSubMenu & s1, TSubMenu & s2)
 {
-    TMenuItem *cur = &s1;
-    while( cur->next != nullptr )
-        cur = cur->next;
-    cur->next = &s2;
-    return s1;
+	TMenuItem *cur = &s1;
+	while (cur->next != nullptr)
+		cur = cur->next;
+	cur->next = &s2;
+	return s1;
 }
 
-TStatusDef& operator + ( TStatusDef& s1, TStatusItem& s2 )
+TStatusDef & operator +(TStatusDef & s1, TStatusItem & s2)
 {
-    TStatusDef *def = &s1;
-    while( def->next != nullptr )
-        def = def->next;
-    if( def->items == nullptr )
-        def->items = &s2;
-    else
-        {
-        TStatusItem *cur = def->items;
-        while( cur->next != nullptr )
-            cur = cur->next;
-        cur->next = &s2;
-        }
-    return s1;
+	TStatusDef *def = &s1;
+	while (def->next != nullptr)
+		def = def->next;
+	if (def->items == nullptr)
+		def->items = &s2;
+	else {
+		TStatusItem *cur = def->items;
+		while (cur->next != nullptr)
+			cur = cur->next;
+		cur->next = &s2;
+	}
+	return s1;
 }
 
-TStatusDef& operator + ( TStatusDef& s1, TStatusDef& s2 )
+TStatusDef & operator +(TStatusDef & s1, TStatusDef & s2)
 {
-    TStatusDef *cur = &s1;
-    while( cur->next != nullptr )
-        cur = cur->next;
-    cur->next = &s2;
-    return s1;
+	TStatusDef *cur = &s1;
+	while (cur->next != nullptr)
+		cur = cur->next;
+	cur->next = &s2;
+	return s1;
 }

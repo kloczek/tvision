@@ -46,7 +46,7 @@ TClickTester::TClickTester(TRect & r, const char *aText):TStaticText(r, aText)
 	clicked = 0;
 }
 
-TPalette & TClickTester::getPalette() const
+TPalette & TClickTester::getPalette()const
 {
 	static TPalette palette(cpMousePalette, sizeof(cpMousePalette) - 1);
 	return palette;

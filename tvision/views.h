@@ -17,147 +17,115 @@
      */
 
 const ushort
-
 //  Standard command codes
-
     /** \var cmValid
      * Undocumented.
      */
-    cmValid         = 0,
-
+ cmValid = 0,
     /** \var cmQuit
      * Undocumented.
      */
-    cmQuit          = 1,
-
+    cmQuit = 1,
     /** \var cmError
      * Undocumented.
      */
-    cmError         = 2,
-
+    cmError = 2,
     /** \var cmMenu
      * Undocumented.
      */
-    cmMenu          = 3,
-
+    cmMenu = 3,
     /** \var cmClose
      * Undocumented.
      */
-    cmClose         = 4,
-
+    cmClose = 4,
     /** \var cmZoom
      * Undocumented.
      */
-    cmZoom          = 5,
-
+    cmZoom = 5,
     /** \var cmResize
      * Undocumented.
      */
-    cmResize        = 6,
-
+    cmResize = 6,
     /** \var cmNext
      * Undocumented.
      */
-    cmNext          = 7,
-
+    cmNext = 7,
     /** \var cmPrev
      * Undocumented.
      */
-    cmPrev          = 8,
-
+    cmPrev = 8,
     /** \var cmHelp
      * Undocumented.
      */
-    cmHelp          = 9,
-
+    cmHelp = 9,
 //  TDialog standard commands
-
     /** \var cmOK
      * Undocumented.
      */
-    cmOK            = 10,
-
+    cmOK = 10,
     /** \var cmCancel
      * Undocumented.
      */
-    cmCancel        = 11,
-
+    cmCancel = 11,
     /** \var cmYes
      * Undocumented.
      */
-    cmYes           = 12,
-
+    cmYes = 12,
     /** \var cmNo
      * Undocumented.
      */
-    cmNo            = 13,
-
+    cmNo = 13,
     /** \var cmDefault
      * Undocumented.
      */
-    cmDefault       = 14,
-
+    cmDefault = 14,
 // Standard application commands
-
     /** \var cmNew
      * Undocumented.
      */
-    cmNew           = 30,
-
+    cmNew = 30,
     /** \var cmOpen
      * Undocumented.
      */
-    cmOpen          = 31,
-
+    cmOpen = 31,
     /** \var cmSave
      * Undocumented.
      */
-    cmSave          = 32,
-
+    cmSave = 32,
     /** \var cmSaveAs
      * Undocumented.
      */
-    cmSaveAs        = 33,
-
+    cmSaveAs = 33,
     /** \var cmSaveAll
      * Undocumented.
      */
-    cmSaveAll       = 34,
-
+    cmSaveAll = 34,
     /** \var cmChDir
      * Undocumented.
      */
-    cmChDir         = 35,
-
+    cmChDir = 35,
     /** \var cmSuspend
      * Undocumented.
      */
-    cmSuspend       = 36,
-
+    cmSuspend = 36,
     /** \var cmCloseAll
      * Undocumented.
      */
-    cmCloseAll      = 37,
-
+    cmCloseAll = 37,
     // SS: some new internal commands.
-
     /** \var cmSysRepaint
      * Undocumented.
      */
-    cmSysRepaint    = 38,
-
+    cmSysRepaint = 38,
     /** \var cmSysResize
      * Undocumented.
      */
-    cmSysResize     = 39,
-
+    cmSysResize = 39,
     /** \var cmSysWakeup
      * Undocumented.
      */
-    cmSysWakeup     = 40,
-
+    cmSysWakeup = 40,
 //  TView State masks
-
     /** \var sfVisible
      * Set if the view is visible on its owner. Views are by default
      * sfVisible. Use @ref TView::show() and @ref TView::hide() to modify
@@ -166,36 +134,31 @@ const ushort
      * screen, examine the @ref sfExposed bit or call @ref TView::exposed().
      * @see TView::state
      */
-    sfVisible       = 0x001,
-
+    sfVisible = 0x001,
     /** \var sfCursorVis
      * Set if a view's cursor is visible. Clear is the default. You can
      * use @ref TView::showCursor() and @ref TView::hideCursor() to modify
      * sfCursorVis.
      * @see TView::state
      */
-    sfCursorVis     = 0x002,
-
+    sfCursorVis = 0x002,
     /** \var sfCursorIns
      * Set if the view's cursor is a solid block; clear if the view's cursor
      * is an underline (the default). Use @ref TView::blockCursor() and
      * @ref TView::normalCursor() to modify this bit.
      * @see TView::state
      */
-    sfCursorIns     = 0x004,
-
+    sfCursorIns = 0x004,
     /** \var sfShadow
      * Set if the view has a shadow.
      * @see TView::state
      */
-    sfShadow        = 0x008,
-
+    sfShadow = 0x008,
     /** \var sfActive
      * Set if the view is the active window or a subview in the active window.
      * @see TView::state
      */
-    sfActive        = 0x010,
-
+    sfActive = 0x010,
     /** \var sfSelected
      * Set if the view is the currently selected subview within its owner.
      * Each @ref TGroup object has a @ref TGroup::current data member that
@@ -204,29 +167,25 @@ const ushort
      * @ref TGroup.
      * @see TView::state
      */
-    sfSelected      = 0x020,
-
+    sfSelected = 0x020,
     /** \var sfFocused
      * Set if the view is focused. A view is focused if it is selected and
      * all owners above it are also selected. The last view on the focused
      * chain is the final target of all focused events.
      * @see TView::state
      */
-    sfFocused       = 0x040,
-
+    sfFocused = 0x040,
     /** \var sfDragging
      * Set if the view is being dragged.
      * @see TView::state
      */
-    sfDragging      = 0x080,
-
+    sfDragging = 0x080,
     /** \var sfDisabled
      * Set if the view is disabled. A disabled view will ignore all events
      * sent to it.
      * @see TView::state
      */
-    sfDisabled      = 0x100,
-
+    sfDisabled = 0x100,
     /** \var sfModal
      * Set if the view is modal. There is always exactly one modal view in
      * a running TVision application, usually a @ref TApplication or
@@ -241,15 +200,13 @@ const ushort
      * @ref TGroup::execView().
      * @see TView::state
      */
-    sfModal         = 0x200,
-
+    sfModal = 0x200,
     /** \var sfDefault
      * This is a spare flag, available to specify some user-defined default
      * state.
      * @see TView::state
      */
-    sfDefault       = 0x400,
-
+    sfDefault = 0x400,
     /** \var sfExposed
      * Set if the view is owned directly or indirectly by the application
      * object, and therefore possibly visible on the. @ref TView::exposed()
@@ -258,18 +215,15 @@ const ushort
      * screen.
      * @see TView::state
      */
-    sfExposed       = 0x800,
-
+    sfExposed = 0x800,
 // TView Option masks
-
     /** \var ofSelectable
      * Set if the view should select itself automatically (see
      * @ref sfSelected); for example, by a mouse click in the view, or a Tab
      * in a dialog box.
      * @see TView::options
      */
-    ofSelectable    = 0x001,
-
+    ofSelectable = 0x001,
     /** \var ofTopSelect
      * Set if the view should move in front of all other peer views when
      * selected. When the ofTopSelect bit is set, a call to
@@ -279,8 +233,7 @@ const ushort
      * when selected.
      * @see TView::options
      */
-    ofTopSelect     = 0x002,
-
+    ofTopSelect = 0x002,
     /** \var ofFirstClick
      * If clear, a mouse click that selects a view will have no further
      * effect. If set, such a mouse click is processed as a normal mouse
@@ -289,8 +242,7 @@ const ushort
      * @ref ofSelectable.
      * @see TView::options
      */
-    ofFirstClick    = 0x004,
-
+    ofFirstClick = 0x004,
     /** \var ofFramed
      * Set if the view should have a frame drawn around it. A @ref TWindow
      * and any class derived from @ref TWindow, has a @ref TFrame as its last
@@ -298,24 +250,21 @@ const ushort
      * around any other subviews that have the ofFramed bit set.
      * @see TView::options
      */
-    ofFramed        = 0x008,
-
+    ofFramed = 0x008,
     /** \var ofPreProcess
      * Set if the view should receive focused events before they are sent to
      * the focused view. Otherwise clear. See also @ref sfFocused,
      * @ref ofPostProcess, and @ref TGroup::phase.
      * @see TView::options
      */
-    ofPreProcess    = 0x010,
-
+    ofPreProcess = 0x010,
     /** \var ofPostProcess
      * Set if the view should receive focused events whenever the focused
      * view fails to handle them. Otherwise clear. See also @ref sfFocused,
      * @ref ofPreProcess and @ref TGroup::phase.
      * @see TView::options
      */
-    ofPostProcess   = 0x020,
-
+    ofPostProcess = 0x020,
     /** \var ofBuffered
      * Used for @ref TGroup objects and classes derived from @ref TGroup
      * only. Set if a cache buffer should be allocated if sufficient memory
@@ -326,399 +275,324 @@ const ushort
      * fail, group buffers will be deallocated to make memory available.
      * @see TView::options
      */
-    ofBuffered      = 0x040,
-
+    ofBuffered = 0x040,
     /** \var ofTileable
      * Set if the desktop can tile (or cascade) this view. Usually used
      * only with @ref TWindow objects.
      * @see TView::options
      */
-    ofTileable      = 0x080,
-
+    ofTileable = 0x080,
     /** \var ofCenterX
      * Set if the view should be centered on the x-axis of its owner when
      * inserted in a group using @ref TGroup::insert().
      * @see TView::options
      */
-    ofCenterX       = 0x100,
-
+    ofCenterX = 0x100,
     /** \var ofCenterY
      * Set if the view should be centered on the y-axis of its owner when
      * inserted in a group using @ref TGroup::insert().
      * @see TView::options
      */
-    ofCenterY       = 0x200,
-
+    ofCenterY = 0x200,
     /** \var ofCentered
      * Set if the view should be centered on both axes of its owner when
      * inserted in a group using @ref TGroup::insert().
      * @see TView::options
      */
-    ofCentered      = 0x300,
-
+    ofCentered = 0x300,
     /** \var ofValidate
      * Undocumented.
      * @see TView::options
      */
-    ofValidate      = 0x400,
-
+    ofValidate = 0x400,
 // TView GrowMode masks
-
     /** \var gfGrowLoX
      * If set, the left-hand side of the view will maintain a constant
      * distance from its owner's right-hand side. If not set, the movement
      * indicated won't occur.
      * @see TView::growMode
      */
-    gfGrowLoX       = 0x01,
-
+    gfGrowLoX = 0x01,
     /** \var gfGrowLoY
      * If set, the top of the view will maintain a constant distance from
      * the bottom of its owner.
      * @see TView::growMode
      */
-    gfGrowLoY       = 0x02,
-
+    gfGrowLoY = 0x02,
     /** \var gfGrowHiX
      * If set, the right-hand side of the view will maintain a constant
      * distance from its owner's right side.
      * @see TView::growMode
      */
-    gfGrowHiX       = 0x04,
-
+    gfGrowHiX = 0x04,
     /** \var gfGrowHiY
      * If set, the bottom of the view will maintain a constant distance
      * from the bottom of its owner's.
      * @see TView::growMode
      */
-    gfGrowHiY       = 0x08,
-
+    gfGrowHiY = 0x08,
     /** \var gfGrowAll
      * If set, the view will move with the lower-right corner of its owner.
      * @see TView::growMode
      */
-    gfGrowAll       = 0x0f,
-
+    gfGrowAll = 0x0f,
     /** \var gfGrowRel
      * For use with @ref TWindow objects that are in the desktop. The view
      * will change size relative to the owner's size, maintaining that
      * relative size with respect to the owner even when screen is resized.
      * @see TView::growMode
      */
-    gfGrowRel       = 0x10,
-
+    gfGrowRel = 0x10,
     /** \var gfFixed
      * Undocumented.
      * @see TView::growMode
      */
-    gfFixed         = 0x20,
-
+    gfFixed = 0x20,
 // TView DragMode masks
-
     /** \var dmDragMove
      * Allow the view to move.
      * @see TView::dragMode
      */
-    dmDragMove      = 0x01,
-
+    dmDragMove = 0x01,
     /** \var dmDragGrow
      * Allow the view to change size.
      * @see TView::dragMode
      */
-    dmDragGrow      = 0x02,
-
+    dmDragGrow = 0x02,
     /** \var dmLimitLoX
      * The view's left-hand side cannot move outside limits.
      * @see TView::dragMode
      */
-    dmLimitLoX      = 0x10,
-
+    dmLimitLoX = 0x10,
     /** \var dmLimitLoY
      * The view's top side cannot move outside limits.
      * @see TView::dragMode
      */
-    dmLimitLoY      = 0x20,
-
+    dmLimitLoY = 0x20,
     /** \var dmLimitHiX
      * The view's right-hand side cannot move outside limits.
      * @see TView::dragMode
      */
-    dmLimitHiX      = 0x40,
-
+    dmLimitHiX = 0x40,
     /** \var dmLimitHiY
      * The view's bottom side cannot move outside limits.
      * @see TView::dragMode
      */
-    dmLimitHiY      = 0x80,
-
+    dmLimitHiY = 0x80,
     /** \var dmLimitAll
      * No part of the view can move outside limits.
      * @see TView::dragMode
      */
-    dmLimitAll      = dmLimitLoX | dmLimitLoY | dmLimitHiX | dmLimitHiY,
-
+    dmLimitAll = dmLimitLoX | dmLimitLoY | dmLimitHiX | dmLimitHiY,
 // TView Help context codes
-
     /** \var hcNoContext
      * No context specified.
      * @see TView::helpCtx
      */
-    hcNoContext     = 0,
-
+    hcNoContext = 0,
     /** \var hcDragging
      * Object is being dragged.
      * @see TView::helpCtx
      */
-    hcDragging      = 1,
-
+    hcDragging = 1,
 // TScrollBar part codes
-
     /** \var sbLeftArrow
      * Left arrow of horizontal scroll bar.
      * @see TScrollBar::scrollStep
      */
-    sbLeftArrow     = 0,
-
+    sbLeftArrow = 0,
     /** \var sbRightArrow
      * Right arrow of horizontal scroll bar.
      * @see TScrollBar::scrollStep
      */
-    sbRightArrow    = 1,
-
+    sbRightArrow = 1,
     /** \var sbPageLeft
      * Left paging area of horizontal scroll bar.
      * @see TScrollBar::scrollStep
      */
-    sbPageLeft      = 2,
-
+    sbPageLeft = 2,
     /** \var sbPageRight
      * Right paging area of horizontal scroll bar.
      * @see TScrollBar::scrollStep
      */
-    sbPageRight     = 3,
-
+    sbPageRight = 3,
     /** \var sbUpArrow
      * Top arrow of vertical scroll bar.
      * @see TScrollBar::scrollStep
      */
-    sbUpArrow       = 4,
-
+    sbUpArrow = 4,
     /** \var sbDownArrow
      * Bottom arrow of vertical scroll bar.
      * @see TScrollBar::scrollStep
      */
-    sbDownArrow     = 5,
-
+    sbDownArrow = 5,
     /** \var sbPageUp
      * Upper paging area of vertical scroll bar.
      * @see TScrollBar::scrollStep
      */
-    sbPageUp        = 6,
-
+    sbPageUp = 6,
     /** \var sbPageDown
      * Lower paging area of vertical scroll bar.
      * @see TScrollBar::scrollStep
      */
-    sbPageDown      = 7,
-
+    sbPageDown = 7,
     /** \var sbIndicator
      * Position indicator on scroll bar.
      * @see TScrollBar::scrollStep
      */
-    sbIndicator     = 8,
-
+    sbIndicator = 8,
 // TScrollBar options for TWindow.StandardScrollBar
-
     /** \var sbHorizontal
      * The scroll bar is horizontal.
      * @see TWindow::standardScrollBar
      */
-    sbHorizontal    = 0x000,
-
+    sbHorizontal = 0x000,
     /** \var sbVertical
      * The scroll bar is vertical.
      * @see TWindow::standardScrollBar
      */
-    sbVertical      = 0x001,
-
+    sbVertical = 0x001,
     /** \var sbHandleKeyboard
      * The scroll bar responds to keyboard commands.
      * @see TWindow::standardScrollBar
      */
     sbHandleKeyboard = 0x002,
-
 // TWindow Flags masks
-
     /** \var wfMove
      * Window can be moved.
      * @see TWindow::flags.
      */
-    wfMove          = 0x01,
-
+    wfMove = 0x01,
     /** \var wfGrow
      * Window can be resized and has a grow icon in the lower-right corner.
      * @see TWindow::flags.
      */
-    wfGrow          = 0x02,
-
+    wfGrow = 0x02,
     /** \var wfClose
      * Window frame has a close icon that can be mouse-clicked to close the
      * window.
      * @see TWindow::flags.
      */
-    wfClose         = 0x04,
-
+    wfClose = 0x04,
     /** \var wfZoom
      * Window frame has a zoom icon that can be mouse-clicked.
      * @see TWindow::flags.
      */
-    wfZoom          = 0x08,
-
+    wfZoom = 0x08,
 //  TView inhibit flags
-
     /** \var noMenuBar
      * Undocumented.
      */
-    noMenuBar       = 0x0001,
-
+    noMenuBar = 0x0001,
     /** \var noDeskTop
      * Undocumented.
      */
-    noDeskTop       = 0x0002,
-
+    noDeskTop = 0x0002,
     /** \var noStatusLine
      * Undocumented.
      */
-    noStatusLine    = 0x0004,
-
+    noStatusLine = 0x0004,
     /** \var noBackground
      * Undocumented.
      */
-    noBackground    = 0x0008,
-
+    noBackground = 0x0008,
     /** \var noFrame
      * Undocumented.
      */
-    noFrame         = 0x0010,
-
+    noFrame = 0x0010,
     /** \var noViewer
      * Undocumented.
      */
-    noViewer        = 0x0020,
-
+    noViewer = 0x0020,
     /** \var noHistory
      * Undocumented.
      */
-    noHistory       = 0x0040,
-
+    noHistory = 0x0040,
 // TWindow number constants
-
     /** \var wnNoNumber
      * Use the constant wnNoNumber to indicate that the window is not to be
      * numbered and cannot be selected via the Alt+number key.
      * @see TWindow::TWindow
      */
-    wnNoNumber      = 0,
-
+    wnNoNumber = 0,
 // TWindow palette entries
-
     /** \var wpBlueWindow
      * Window text is yellow on blue.
      * @see TWindow::palette
      */
-    wpBlueWindow    = 0,
-
+    wpBlueWindow = 0,
     /** \var wpCyanWindow
      * Window text is blue on cyan.
      * @see TWindow::palette
      */
-    wpCyanWindow    = 1,
-
+    wpCyanWindow = 1,
     /** \var wpGrayWindow
      * Window text is black on gray.
      * @see TWindow::palette
      */
-    wpGrayWindow    = 2,
-
+    wpGrayWindow = 2,
 //  Application command codes
-
     /** \var cmCut
      * Undocumented.
      */
-    cmCut           = 20,
-
+    cmCut = 20,
     /** \var cmCopy
      * Undocumented.
      */
-    cmCopy          = 21,
-
+    cmCopy = 21,
     /** \var cmPaste
      * Undocumented
      */
-    cmPaste         = 22,
-
+    cmPaste = 22,
     /** \var cmUndo
      * Undocumented.
      */
-    cmUndo          = 23,
-
+    cmUndo = 23,
     /** \var cmClear
      * Undocumented.
      */
-    cmClear         = 24,
-
+    cmClear = 24,
     /** \var cmTile
      * Undocumented.
      */
-    cmTile          = 25,
-
+    cmTile = 25,
     /** \var cmCascade
      * Undocumented.
      */
-    cmCascade       = 26,
-
+    cmCascade = 26,
 // Standard messages
-
     /** \var cmReceivedFocus
      * Undocumented.
      */
-    cmReceivedFocus     = 50,
+    cmReceivedFocus = 50,
     /** \var cmReleasedFocus
      * Undocumented.
      */
-    cmReleasedFocus     = 51,
+    cmReleasedFocus = 51,
     /** \var cmCommandSetChanged
      * Undocumented.
      */
     cmCommandSetChanged = 52,
-
 // TScrollBar messages
-
     /** \var cmScrollBarChanged
      * Undocumented.
      */
-    cmScrollBarChanged  = 53,
+    cmScrollBarChanged = 53,
     /** \var cmScrollBarClicked
      * Undocumented.
      */
-    cmScrollBarClicked  = 54,
-
+    cmScrollBarClicked = 54,
 // TWindow select messages
-
     /** \var cmSelectWindowNum
      * Undocumented.
      */
-    cmSelectWindowNum   = 55,
-
+    cmSelectWindowNum = 55,
 //  TListViewer messages
-
     /** \var cmListItemSelected
      * Undocumented.
      */
-    cmListItemSelected  = 56,
-
+    cmListItemSelected = 56,
 //  Event masks
-
     /** \var positionalEvents
      * Defines the event classes that are positional events.
      * The focusedEvents and positionalEvents masks are used by
@@ -727,8 +601,7 @@ const ushort
      * @ref focusedEvents or positionalEvents, it is treated as a broadcast
      * event.
      */
-    positionalEvents    = evMouse,
-
+    positionalEvents = evMouse,
     /** \var focusedEvents
      * Defines the event classes that are focused events.
      * The focusedEvents and positionalEvents values are used by
@@ -737,9 +610,9 @@ const ushort
      * focusedEvents or @ref positionalEvents, it is treated as a broadcast
      * event.
      */
-    focusedEvents       = evKeyboard | evCommand;
+    focusedEvents = evKeyboard | evCommand;
 
-#endif  // TV_COMMAND_CODES
+#endif // TV_COMMAND_CODES
 
 #if defined( Uses_TCommandSet ) && !defined( TV_TCommandSet )
 #define TV_TCommandSet
@@ -756,157 +629,158 @@ const ushort
  * Only commands in this range may be disabled.
  * @short Implements a non-view class for handling command sets
  */
-class TCommandSet
-{
-public:
+class TCommandSet {
+      public:
     /**
      * Constructor.
      *
      * Creates and clears a command set.
      */
-    TCommandSet();
+	TCommandSet();
     /**
      * Constructor.
      *
      * This form creates a command set and initializes it from the `tc'
      * argument.
      */
-    TCommandSet( const TCommandSet& tc );
+	TCommandSet(const TCommandSet & tc);
     /**
      * Returns True if command `cmd' is in the set.
      */
-    Boolean has( int cmd );
+	Boolean has(int cmd);
     /**
      * Removes command `cmd' from the set.
      */
-    void disableCmd( int cmd );
+	void disableCmd(int cmd);
     /**
      * Adds command `cmd' to the set.
      */
-    void enableCmd( int cmd );
+	void enableCmd(int cmd);
     /**
      * Adds command `cmd' to the set.
      */
-    void operator += ( int cmd );
+	void operator +=(int cmd);
     /**
      * Removes command `cmd' from the set.
      */
-    void operator -= ( int cmd );
+	void operator -=(int cmd);
     /**
      * Removes all commands in set `tc' from this command set.
      */
-    void disableCmd( const TCommandSet& tc );
+	void disableCmd(const TCommandSet & tc);
     /**
      * Adds all commands in set `tc' to this command set.
      */
-    void enableCmd( const TCommandSet& tc );
+	void enableCmd(const TCommandSet & tc);
     /**
      * Adds all commands in set `tc' to this command set.
      */
-    void operator += ( const TCommandSet& tc );
+	void operator +=(const TCommandSet & tc);
     /**
      * Removes all commands in set `tc' from this command set.
      */
-    void operator -= ( const TCommandSet& tc );
+	void operator -=(const TCommandSet & tc);
     /**
      * Returns True if the command set is empty.
      */
-    Boolean isEmpty();
+	Boolean isEmpty();
     /**
      * Calculates the intersection of this set and the `tc' set.
      *
      * The resulting set is the largest set which contains commands present in
      * both sets. Returns a reference to this object.
      */
-    TCommandSet& operator &= ( const TCommandSet& tc);
+	 TCommandSet & operator &=(const TCommandSet & tc);
     /**
      * Calculates the union of this set and the `tc' set.
      *
      * The resulting set is the smallest set which contains commands present
      * in either sets. Returns a reference to this object.
      */
-    TCommandSet& operator |= ( const TCommandSet& tc);
+	 TCommandSet & operator |=(const TCommandSet & tc);
     /**
      * Calculates the intersection of this set and the `tc' set.
      *
      * The resulting set is the largest set which contains commands present in
      * both sets. Returns the resulting set.
      */
-    friend TCommandSet operator & ( const TCommandSet&, const TCommandSet& );
+	friend TCommandSet operator &(const TCommandSet &, const TCommandSet &);
     /**
      * Calculates the union of this set and the `tc' set.
      *
      * The resulting set is the smallest set which contains commands present
      * in either sets. Returns the resulting set.
      */
-    friend TCommandSet operator | ( const TCommandSet&, const TCommandSet& );
+	friend TCommandSet operator |(const TCommandSet &, const TCommandSet &);
     /**
      * Returns 1 if the sets `tc1' and `tc2' are equal.
      *
      * Otherwise returns 0.
      */
-    friend int operator == ( const TCommandSet& tc1, const TCommandSet& tc2 );
+	friend int operator ==(const TCommandSet & tc1,
+			       const TCommandSet & tc2);
     /**
      * Returns 1 if the sets `tc1' and `tc2' are not equal.
      *
      * Otherwise returns 0.
      */
-    friend int operator != ( const TCommandSet& tc1, const TCommandSet& tc2 );
-private:
+	friend int operator !=(const TCommandSet & tc1,
+			       const TCommandSet & tc2);
+      private:
     /**
      * Undocumented.
      */
-    int loc( int );
+	int loc(int);
     /**
      * Undocumented.
      */
-    int mask( int );
+	int mask(int);
     /**
      * Undocumented.
      */
-    static int masks[8];
+	static int masks[8];
     /**
      * Undocumented.
      */
-    uchar cmds[32];
+	uchar cmds[32];
 };
 
-inline void TCommandSet::operator += ( int cmd )
+inline void TCommandSet::operator +=(int cmd)
 {
-    enableCmd( cmd );
+	enableCmd(cmd);
 }
 
-inline void TCommandSet::operator -= ( int cmd )
+inline void TCommandSet::operator -=(int cmd)
 {
-    disableCmd( cmd );
+	disableCmd(cmd);
 }
 
-inline void TCommandSet::operator += ( const TCommandSet& tc )
+inline void TCommandSet::operator +=(const TCommandSet & tc)
 {
-    enableCmd( tc );
+	enableCmd(tc);
 }
 
-inline void TCommandSet::operator -= ( const TCommandSet& tc )
+inline void TCommandSet::operator -=(const TCommandSet & tc)
 {
-    disableCmd( tc );
+	disableCmd(tc);
 }
 
-inline int operator != ( const TCommandSet& tc1, const TCommandSet& tc2 )
+inline int operator !=(const TCommandSet & tc1, const TCommandSet & tc2)
 {
-    return !operator == ( tc1, tc2 );
+	return !operator ==(tc1, tc2);
 }
 
-inline int TCommandSet::loc( int cmd )
+inline int TCommandSet::loc(int cmd)
 {
-    return cmd / 8;
+	return cmd / 8;
 }
 
-inline int TCommandSet::mask( int cmd )
+inline int TCommandSet::mask(int cmd)
 {
-    return masks[ cmd & 0x07 ];
+	return masks[cmd & 0x07];
 }
 
-#endif  // Uses_TCommandSet
+#endif // Uses_TCommandSet
 
 #if defined( Uses_TPalette ) && !defined( TV_TPalette )
 #define TV_TPalette
@@ -924,39 +798,38 @@ inline int TCommandSet::mask( int cmd )
  * frames, buttons, text, and so on.
  * @short Simple class used to create and manipulate palette arrays
  */
-class TPalette
-{
-public:
+class TPalette {
+      public:
     /**
      * Creates a TPalette object with string `d' and length `len'. The private
      * member @ref data is set with `len' in its first byte, following by the
      * array `d'.
      */
-    TPalette( const char *d, ushort len );
+	TPalette(const char *d, ushort len);
     /**
      * Creates a new palette by copying the palette `tp'.
      */
-    TPalette( const TPalette& tp );
+	TPalette(const TPalette & tp);
     /**
      * Destroys the palette.
      */
-    ~TPalette();
+	~TPalette();
     /**
      * The code p = tp; copies the palette `tp' to the palette `p'.
      */
-    TPalette& operator = ( const TPalette& tp );
+	TPalette & operator =(const TPalette & tp);
     /**
      * The subscripting operator returns the character at the index'th
      * position.
      */
-    uchar& operator[]( int index ) const;
+	uchar & operator[] (int index)const;
     /**
      * Undocumented.
      */
-    uchar *data;
+	uchar *data;
 };
 
-#endif  // Uses_TPalette
+#endif // Uses_TPalette
 
 #if defined( Uses_TView ) && !defined( TV_TView )
 #define TV_TView
@@ -979,18 +852,17 @@ class TGroup;
  * applications comes from TView.
  * @short The base of all visible objects
  */
-class TView : public TObject, public TStreamable
-{
-public:
+class TView:public TObject, public TStreamable {
+      public:
     /**
      * @see TGroup::handleEvent
      * @see TGroup::phase
      */
-    enum phaseType { phFocused, phPreProcess, phPostProcess };
+	enum phaseType { phFocused, phPreProcess, phPostProcess };
     /**
      * Used internally by TVision.
      */
-    enum selectMode{ normalSelect, enterSelect, leaveSelect };
+	enum selectMode { normalSelect, enterSelect, leaveSelect };
     /**
      * Creates a TView object with the given `bounds' rectangle. TView
      * constructor calls the TObject constructor and then sets the data
@@ -1012,11 +884,11 @@ public:
      * state       @ref sfVisible
      * </pre>
      */
-    TView( const TRect& bounds );
+	TView(const TRect & bounds);
     /**
      * Hides the view and then, if it has an owner, removes it from the group.
      */
-    ~TView();
+	~TView();
     /**
      * Sets, in the `min' and `max' arguments, the minimum and maximum values
      * that @ref size data member may assume.
@@ -1025,7 +897,7 @@ public:
      * in `max'. If @ref owner data member is 0, `max.x' and `max.y' are both
      * set to INT_MAX.
      */
-    virtual void sizeLimits( TPoint& min, TPoint& max );
+	virtual void sizeLimits(TPoint & min, TPoint & max);
     /**
      * Returns the current value of size, the bounding rectangle of the view
      * in its owner's coordinate system.
@@ -1033,14 +905,14 @@ public:
      * -# `a' is set to @ref origin
      * -# `b' is set to @ref origin + @ref size
      */
-    TRect getBounds();
+	TRect getBounds();
     /**
      * Returns the extent rectangle of the view.
      *
      * -# `a' is set to (0, 0)
      * -# `b' is set to @ref size
      */
-    TRect getExtent();
+	TRect getExtent();
     /**
      * Returns the clipping rectangle: the smallest rectangle which needs
      * to be redrawn in a @ref draw() call.
@@ -1048,13 +920,13 @@ public:
      * For complicated views, draw() can use getClipRect() to improve
      * performance noticeably.
      */
-    TRect getClipRect();
+	TRect getClipRect();
     /**
      * Returns True if the `mouse' argument (given in global coordinates) is
      * within the calling view. Call @ref makeGlobal and @ref makeLocal to
      * convert one point between different coordinate systems.
      */
-    Boolean mouseInView( TPoint mouse );
+	Boolean mouseInView(TPoint mouse);
     /**
      * Returns True if a mouse event occurs inside the calling view, otherwise
      * returns False. Returns True if the view is visible and the mouse
@@ -1064,7 +936,7 @@ public:
      * @see TView::makeGlobal
      * @see TView::makeLocal
      */
-    Boolean containsMouse( TEvent& event );
+	Boolean containsMouse(TEvent & event);
     /**
      * Changes the bounds of the view to those of the `bounds' argument.
      * The view is redrawn in its new location.
@@ -1073,7 +945,7 @@ public:
      * valid, and then calls @ref changeBounds() to change the bounds and
      * redraw the view.
      */
-    void locate( TRect& bounds );
+	void locate(TRect & bounds);
     /**
      * Drags the view in the ways specified by the `mode' argument, that is
      * interpreted like the @ref growMode data member.
@@ -1085,8 +957,8 @@ public:
      * The event leading to the dragging operation is needed in `event' to
      * distinguish mouse dragging from use of the cursor keys.
      */
-    virtual void dragView( TEvent& event, uchar mode,  //  temporary fix
-      TRect& limits, TPoint minSize, TPoint maxSize ); //  for Miller's stuff
+	virtual void dragView(TEvent & event, uchar mode,	//  temporary fix
+			      TRect & limits, TPoint minSize, TPoint maxSize);	//  for Miller's stuff
     /**
      * When a view's owner changes size, the owner repeatedly calls
      * calcBounds() and @ref changeBounds() for all its subviews.
@@ -1098,7 +970,7 @@ public:
      * calcBounds() calculates the new bounds using the flags specified
      * in @ref growMode data member.
      */
-    virtual void calcBounds( TRect& bounds, TPoint delta );
+	virtual void calcBounds(TRect & bounds, TPoint delta);
     /**
      * changeBounds() must change the view's bounds (@ref origin and @ref size
      * data members) to the rectangle given by the `bounds' parameter.
@@ -1110,17 +982,17 @@ public:
      * changeBounds() first calls @ref setBounds "setBounds(bounds)" and then calls
      * @ref drawView().
      */
-    virtual void changeBounds( const TRect& bounds );
+	virtual void changeBounds(const TRect & bounds);
     /**
      * Grows or shrinks the view to the given size using a call to
      * @ref locate().
      */
-    void growTo( short x, short y );
+	void growTo(short x, short y);
     /**
      * Moves the origin to the point (x,y) relative to the owner's view. The
      * view's size is unchanged.
      */
-    void moveTo( short x, short y );
+	void moveTo(short x, short y);
     /**
      * Sets the bounding rectangle of the view to the value given by the
      * `bounds' parameter. The @ref origin data member is set to `bounds.a',
@@ -1131,13 +1003,13 @@ public:
      * within an overridden @ref changeBounds() member function. You should
      * never call setBounds() directly.
      */
-    void setBounds( const TRect& bounds );
+	void setBounds(const TRect & bounds);
     /**
      * getHelpCtx() returns the view's help context. The default getHelpCtx()
      * returns the value in the @ref helpCtx data member, or returns
      * @ref hcDragging if the view is being dragged (see @ref sfDragging).
      */
-    virtual ushort getHelpCtx();
+	virtual ushort getHelpCtx();
     /**
      * Use this member function to check the validity of a view after it has
      * been constructed or at the point in time when a modal state ends (due
@@ -1156,18 +1028,18 @@ public:
      * It is the responsibility of valid() to alert the user in case the view
      * is invalid. The default TView::valid() simply returns True.
      */
-    virtual Boolean valid( ushort command );
+	virtual Boolean valid(ushort command);
     /**
      * Hides the view by calling @ref setState() to clear the @ref sfVisible
      * flag in the @ref state data member.
      */
-    void hide();
+	void hide();
     /**
      * If the view is @ref sfVisible, nothing happens. Otherwise, show()
      * displays the view by calling @ref setState() to set the @ref sfVisible
      * flag in @ref state data member.
      */
-    void show();
+	void show();
     /**
      * Draws the view on the screen.
      *
@@ -1185,7 +1057,7 @@ public:
      *
      * To perform its task, draw() usually uses a @ref TDrawBuffer object.
      */
-    virtual void draw();
+	virtual void draw();
     /**
      * Draws the view on the screen.
      *
@@ -1196,7 +1068,7 @@ public:
      * You should call drawView() (not draw()) whenever you need to redraw a
      * view after making a change that affects its visual appearance.
      */
-    void drawView();
+	void drawView();
     /**
      * Checks if the view is exposed.
      *
@@ -1207,7 +1079,7 @@ public:
      * -# it has the @ref sfVisible bit set in @ref state data member
      * -# its coordinates make it fully or partially visible on the screen.
      */
-    Boolean exposed();
+	Boolean exposed();
     /**
      * Tries to grab the focus.
      *
@@ -1220,24 +1092,24 @@ public:
      * If all the above conditions are True, the focus() method calls
      * @ref select() to get the focus.
      */
-    Boolean focus();
+	Boolean focus();
     /**
      * Hides the cursor by calling @ref setState() to clear the
      * @ref sfCursorVis flag in the @ref state data member.
      */
-    void hideCursor();
+	void hideCursor();
     /**
      * Calls @ref drawCursor() followed by @ref drawUnderView(). The latter
      * redraws all subviews (with shadows if required) until the given
      * `lastView' is reached.
      */
-    void drawHide( TView *lastView );
+	void drawHide(TView * lastView);
     /**
      * Calls @ref drawView(), then if @ref state data member has the
      * @ref sfShadow bit set, @ref drawUnderView() is called to draw the
      * shadow.
      */
-    void drawShow( TView *lastView );
+	void drawShow(TView * lastView);
     /**
      * Calls owner->clip.intersect(r) to set the area that needs drawing.
      * Then, all the subviews from the next view to the given `lastView' are
@@ -1247,14 +1119,14 @@ public:
      * @see TRect::intersect
      * @see TView::getExtent
      */
-    void drawUnderRect( TRect& r, TView *lastView );
+	void drawUnderRect(TRect & r, TView * lastView);
     /**
      * Calls drawUnderRect(r, lastView), where `r' is the calling view's
      * current bounds. If `doShadow' is True, the view's bounds are first
      * increased by shadowSize (see `TView.cc' for more).
      * @see drawUnderRect
      */
-    void drawUnderView( Boolean doShadow, TView *lastView );
+	void drawUnderView(Boolean doShadow, TView * lastView);
     /**
      * dataSize() must be used to return the size of the data read from and
      * written to data records by @ref setData() and @ref getData(). The data
@@ -1264,7 +1136,7 @@ public:
      * TView::dataSize() returns zero to indicate that no data was
      * transferred.
      */
-    virtual ushort dataSize();
+	virtual ushort dataSize();
     /**
      * getData() must copy @ref dataSize() bytes from the view to the data
      * record given by the `rec' pointer. The data record mechanism is
@@ -1273,7 +1145,7 @@ public:
      *
      * The default TView::getData() does nothing.
      */
-    virtual void getData( void *rec );
+	virtual void getData(void *rec);
     /**
      * setData() must copy @ref dataSize() bytes from the data record given by
      * `rec' to the view. The data record mechanism is typically used
@@ -1282,7 +1154,7 @@ public:
      *
      * The default TView::setData() does nothing.
      */
-    virtual void setData( void *rec );
+	virtual void setData(void *rec);
     /**
      * The default awaken() does nothing. When a group is loaded from a
      * stream, the last thing the @ref TGroup::read() function does is call
@@ -1293,52 +1165,52 @@ public:
      * themselves after being read from a stream, you can override awaken()
      * to perform that initialization.
      */
-    virtual void awaken();
+	virtual void awaken();
     /**
      * Sets @ref sfCursorIns in @ref state data member to change the cursor
      * to a solid block. The cursor will only be visible if @ref sfCursorVis
      * is also set (and the view is visible).
      */
-    void blockCursor();
+	void blockCursor();
     /**
      * Clears the @ref sfCursorIns bit in @ref state data member, thereby
      * making the cursor into an underline. If @ref sfCursorVis is set, the
      * new cursor will be displayed.
      */
-    void normalCursor();
+	void normalCursor();
     /**
      * Resets the cursor.
      */
-    virtual void resetCursor();
+	virtual void resetCursor();
     /**
      * Moves the hardware cursor to the point (x, y) using view-relative
      * (local) coordinates. (0, 0) is the top-left corner.
      */
-    void setCursor( int x, int y );
+	void setCursor(int x, int y);
     /**
      * Turns on the hardware cursor by setting the @ref sfCursorVis bit in
      * @ref state data member. Note that the cursor is invisible by default.
      */
-    void showCursor();
+	void showCursor();
     /**
      * If the view is @ref sfFocused, the cursor is reset with a call to
      * @ref resetCursor().
      * @see TView::state
      */
-    void drawCursor();
+	void drawCursor();
     /**
      * Standard member function used in @ref handleEvent() to signal that the
      * view has successfully handled the event.
      *
      * Sets `event.what' to @ref evNothing and `event.message.infoPtr' to this.
      */
-    void clearEvent( TEvent& event );
+	void clearEvent(TEvent & event);
     /**
      * Calls @ref getEvent() and returns True if an event is available. Calls
      * @ref putEvent() to set the event as pending.
      * @see TProgram::pending
      */
-    Boolean eventAvail();
+	Boolean eventAvail();
     /**
      * Returns the next available event in the `event' argument. Returns
      * @ref evNothing if no event is available. By default, it calls the
@@ -1346,7 +1218,7 @@ public:
      * @see TGroup::getEvent
      * @see Program::getEvent
      */
-    virtual void getEvent( TEvent& event );
+	virtual void getEvent(TEvent & event);
     /**
      * handleEvent() is the central member function through which all
      * TVision event handling is implemented. The `what' data member of the
@@ -1370,7 +1242,7 @@ public:
      * then the view selects itself by calling @ref select(). No other events
      * are handled by TView::handleEvent().
      */
-    virtual void handleEvent( TEvent& event );
+	virtual void handleEvent(TEvent & event);
     /**
      * Puts the event given by `event' into the event queue, causing it to be
      * the next event returned by @ref getEvent(). Only one event can be pushed
@@ -1390,7 +1262,7 @@ public:
      * @see TProgram::pending
      * @see TProgram::putEvent
      */
-    virtual void putEvent( TEvent& event );
+	virtual void putEvent(TEvent & event);
     /**
      * Returns True if the given command is currently enabled; otherwise it
      * returns False.
@@ -1399,39 +1271,39 @@ public:
      * enable commands as you wish; when you return to the previous modal
      * state, however, the original command set will be restored.
      */
-    static Boolean commandEnabled( ushort command );
+	static Boolean commandEnabled(ushort command);
     /**
      * Disables the commands specified in the `commands' argument. If the
      * command set is changed by this call, @ref commandSetChanged is set True.
      */
-    static void disableCommands( TCommandSet& commands );
+	static void disableCommands(TCommandSet & commands);
     /**
      * Enables all the commands in the `commands' argument. If the
      * command set is changed by this call, @ref commandSetChanged is set True.
      */
-    static void enableCommands( TCommandSet& commands );
+	static void enableCommands(TCommandSet & commands);
     /**
      * Disables the given command. If the
      * command set is changed by the call, @ref commandSetChanged is set True.
      */
-    static void disableCommand( ushort command );
+	static void disableCommand(ushort command);
     /**
      * Enables the given command. If the
      * command set is changed by this call, @ref commandSetChanged is set True.
      */
-    static void enableCommand( ushort command );
+	static void enableCommand(ushort command);
     /**
      * Returns, in the `commands' argument, the current command set.
      */
-    static void getCommands( TCommandSet& commands );
+	static void getCommands(TCommandSet & commands);
     /**
      * Changes the current command set to the given `commands' argument.
      */
-    static void setCommands( TCommandSet& commands );
+	static void setCommands(TCommandSet & commands);
     /**
      * Undocumented.
      */
-    static void setCmdState( TCommandSet& commands, Boolean enable);
+	static void setCmdState(TCommandSet & commands, Boolean enable);
     /**
      * Calls @ref TopView() to seek the top most modal view. If there is none
      * such (that is, if TopView() returns 0) no further action is taken. If
@@ -1441,7 +1313,7 @@ public:
      * The `command' argument is passed to the @ref TGroup::execView() that
      * created the modal state in the first place.
      */
-    virtual void endModal( ushort command );
+	virtual void endModal(ushort command);
     /**
      * Is called from @ref TGroup::execView() whenever a view becomes modal.
      * If a view is to allow modal execution, it must override execute() to
@@ -1450,13 +1322,13 @@ public:
      *
      * The default TView::execute() simply returns cmCancel.
      */
-    virtual ushort execute();
+	virtual ushort execute();
     /**
      * Maps the palette indices in the low and high bytes of `color' into
      * physical character attributes by tracing through the palette of the
      * view and the palettes of all its owners.
      */
-    ushort getColor( ushort color );
+	ushort getColor(ushort color);
     /**
      * getPalette() must return a string representing the view's palette.
      *
@@ -1468,7 +1340,7 @@ public:
      * performed by this view. getPalette() is almost always overridden in
      * derived classes.
      */
-    virtual TPalette& getPalette() const;
+	virtual TPalette & getPalette() const;
     /**
      * Maps the given color to an offset into the current palette. mapColor()
      * works by calling @ref getPalette() for each owning group in the chain.
@@ -1479,12 +1351,12 @@ public:
      * If `color' is invalid (for example, out of range) for any of the
      * palettes encountered in the chain, mapColor() returns @ref errorAttr.
      */
-    uchar mapColor( uchar );
+	uchar mapColor(uchar);
     /**
      * Returns True if the state given in `aState' is set in the data member
      * @ref state.
      */
-    Boolean getState( ushort aState );
+	Boolean getState(ushort aState);
     /**
      * Selects the view (see @ref sfSelected). If the view's owner is focused,
      * then the view also becomes focused (see @ref sfFocused).
@@ -1494,7 +1366,7 @@ public:
      * member, then the view is moved to the top of its owner's subview list
      * (using a call to @ref makeFirst()).
      */
-    void select();
+	void select();
     /**
      * Sets or clears a state flag in the @ref state data member.
      * The `aState' parameter specifies the state flag to modify, and the
@@ -1510,13 +1382,13 @@ public:
      * are based on state flags. Another common reason to override setState()
      * is to enable or disable commands that are handled by a particular view.
      */
-    virtual void setState( ushort aState, Boolean enable );
+	virtual void setState(ushort aState, Boolean enable);
     /**
      * Returns, in the `event' variable, the next @ref evKeyDown event.
      * It waits, ignoring all other events, until a keyboard event becomes
      * available.
      */
-    void keyEvent( TEvent& event );
+	void keyEvent(TEvent & event);
     /**
      * Sets the next mouse event in the `event' argument.
      * Returns True if this event is in the `mask' argument. Also returns
@@ -1551,12 +1423,12 @@ public:
      * @see TView::makeLocal
      * @see TView::setCursor
      */
-    Boolean mouseEvent( TEvent& event, ushort mask );
+	Boolean mouseEvent(TEvent & event, ushort mask);
     /**
      * Converts the `source' point coordinates from local (view) to global
      * (screen) and returns the result.
      */
-    TPoint makeGlobal( TPoint source );
+	TPoint makeGlobal(TPoint source);
     /**
      * Converts the `source' point coordinates from global (screen) to local
      * (view) and returns the result.
@@ -1569,13 +1441,13 @@ public:
      * mouseLoc = makeLocal(eventWhere);
      * </pre>
      */
-    TPoint makeLocal( TPoint source );
+	TPoint makeLocal(TPoint source);
     /**
      * Returns a pointer to the next subview in the owner's subview list.
      * A 0 is returned if the calling view is the last one in its owner's
      * list.
      */
-    TView *nextView();
+	TView *nextView();
     /**
      * Returns a pointer to the previous subview in the owner's subview list.
      * A 0 is returned if the calling view is the first one in its owner's
@@ -1584,7 +1456,7 @@ public:
      * Note that @ref prev() treats the list as circular, whereas prevView()
      * treats the list linearly.
      */
-    TView *prevView();
+	TView *prevView();
     /**
      * Returns a pointer to the previous subview in the owner's subview list.
      * If the calling view is the first one in its owner's list, prev()
@@ -1593,19 +1465,19 @@ public:
      * Note that @ref prev() treats the list as circular, whereas prevView()
      * treats the list linearly.
      */
-    TView *prev();
+	TView *prev();
     /**
      * Pointer to next peer view in Z-order. If this is the last subview, next
      * points to owner's first subview.
      */
-    TView *next;
+	TView *next;
     /**
      * Moves the view to the top of its owner's subview list. A call to
      * makeFirst() corresponds to putInFrontOf(owner->first()).
      * @see TGroup::first
      * @see TView::putInFrontOf
      */
-    void makeFirst();
+	void makeFirst();
     /**
      * Moves the calling view in front of the `Target' view in the owner's
      * subview list. The call
@@ -1625,31 +1497,32 @@ public:
      * of all other subviews, then the view becomes selected.
      * @see TView::options
      */
-    void putInFrontOf( TView *Target );
+	void putInFrontOf(TView * Target);
     /**
      * Returns a pointer to the current modal view, or 0 if none such.
      */
-    TView *TopView();
+	TView *TopView();
     /**
      * Writes the given buffer to the screen starting at the coordinates
      * (x, y), and filling the region of width `w' and height `h'. Should only
      * be used in @ref draw() member functions.
      * @see TDrawBuffer
      */
-    void writeBuf(  short x, short y, short w, short h, const void* b );
+	void writeBuf(short x, short y, short w, short h, const void *b);
     /**
      * Writes the given buffer to the screen starting at the coordinates
      * (x, y), and filling the region of width `w' and height `h'. Should only
      * be used in @ref draw() member functions.
      * @see TDrawBuffer
      */
-    void writeBuf(  short x, short y, short w, short h, const TDrawBuffer& b );
+	void writeBuf(short x, short y, short w, short h,
+		      const TDrawBuffer & b);
     /**
      * Beginning at the point (x, y), writes `count' copies of the character
      * `c' in the color determined by the color'th entry in the current view's
      * palette. Should only be used in @ref draw() functions.
      */
-    void writeChar( short x, short y, char c, uchar color, short count );
+	void writeChar(short x, short y, char c, uchar color, short count);
     /**
      * Writes the line contained in the buffer `b' to the screen, beginning at
      * the point (x, y) within the rectangle defined by the width `w' and the
@@ -1657,7 +1530,8 @@ public:
      * times. Should only be used in @ref draw() member functions.
      * @see TDrawBuffer
      */
-    void writeLine( short x, short y, short w, short h, const TDrawBuffer& b );
+	void writeLine(short x, short y, short w, short h,
+		       const TDrawBuffer & b);
     /**
      * Writes the line contained in the buffer `b' to the screen, beginning at
      * the point (x, y) within the rectangle defined by the width `w' and the
@@ -1665,17 +1539,17 @@ public:
      * times. Should only be used in @ref draw() member functions.
      * @see TDrawBuffer
      */
-    void writeLine( short x, short y, short w, short h, const void *b );
+	void writeLine(short x, short y, short w, short h, const void *b);
     /**
      * Writes the string `str' with the color attributes of the color'th entry
      * in the view's palette, beginning at the point (x, y). Should only be
      * used in @ref draw() member functions.
      */
-    void writeStr( short x, short y, const char *str, uchar color );
+	void writeStr(short x, short y, const char *str, uchar color);
     /**
      * The size of the view.
      */
-    TPoint size;
+	TPoint size;
     /**
      * The options word flags determine various behaviors of the view. The
      * following mnemonics are used to refer to the bit positions of the
@@ -1751,7 +1625,7 @@ public:
      *                      @ref TGroup::insert().
      * </pre>
      */
-    ushort options;
+	ushort options;
     /**
      * eventMask is a bit mask that determines which event classes will be
      * recognized by the view.
@@ -1761,7 +1635,7 @@ public:
      * to all event classes; conversely, a value of zero causes the view to
      * not react to any events.
      */
-    ushort eventMask;
+	ushort eventMask;
     /**
      * The state of the view is represented by bits set or clear in the state
      * data member. The bits are represented mnemonically by constants as
@@ -1837,12 +1711,12 @@ public:
      * Many TView member functions test and/or alter the state data member by
      * calling @ref getState() and/or @ref setState().
      */
-    ushort state;
+	ushort state;
     /**
      * The (x, y) coordinates, relative to the owner's origin, of the top-left
      * corner of the view.
      */
-    TPoint origin;
+	TPoint origin;
     /**
      * The location of the hardware cursor within the view. The cursor is
      * visible only if the view is focused (@ref sfFocused) and the cursor
@@ -1852,7 +1726,7 @@ public:
      * The shape of the cursor is either an underline or block (determined by
      * @ref sfCursorIns).
      */
-    TPoint cursor;
+	TPoint cursor;
     /**
      * Determines how the view will grow when its owner view is resized.
      * To growMode is assigned one or more of the following growMode masks:
@@ -1890,7 +1764,7 @@ public:
      * growMode = @ref gfGrowLoX | @ref gfGrowLoY;
      * </pre>
      */
-    uchar growMode;
+	uchar growMode;
     /**
      * Determines how the view should behave when mouse-dragged. The dragMode
      * bits are defined as follows:
@@ -1912,7 +1786,7 @@ public:
      * to compose the `mode' argument of @ref TView::dragView() calls when a
      * view is moved or resized.
      */
-    uchar dragMode;
+	uchar dragMode;
     /**
      * The help context of the view. When the view is focused, this data
      * member will represent the help context of the application, unless the
@@ -1936,7 +1810,7 @@ public:
      * Programmers may define their own constants in the range 1,000 to
      * 65,535.
      */
-    ushort helpCtx;
+	ushort helpCtx;
     /**
      * Set to True whenever the view's command set is changed via an enable or
      * disable command call.
@@ -1946,7 +1820,7 @@ public:
      * @see TView::enableCommands
      * @see TView::setCommands
      */
-    static Boolean commandSetChanged;
+	static Boolean commandSetChanged;
 #ifndef GENINC
     /**
      * Holds the set of commands currently enabled for this view. Initially,
@@ -1964,21 +1838,21 @@ public:
      * @see TView::enableCommands
      * @see TView::setCommands
      */
-    static TCommandSet curCommandSet;
+	static TCommandSet curCommandSet;
 #endif
     /**
      * Points to the TGroup object that owns this view. If 0, the view has
      * no owner. The view is displayed within its owner's view and will be
      * clipped by the owner's bounding rectangle.
      */
-    TGroup *owner;
+	TGroup *owner;
     /**
      * Used to indicate whether indicators should be placed around focused
      * controls. @ref TProgram::initScreen() sets showMarkers to True if the
      * video mode is monochrome; otherwise it is False. The value may,
      * however, be set on in color and black and white modes if desired.
      */
-    static Boolean showMarkers;
+	static Boolean showMarkers;
     /**
      * Attribute used to signal an invalid palette selection. For example,
      * @ref mapColor() returns errorAttr if it is called with an invalid color
@@ -1987,118 +1861,126 @@ public:
      * By default, errorAttr is set to 0xCF, which shows as flashing red on
      * white.
      */
-    static uchar errorAttr;
+	static uchar errorAttr;
     /**
      * Used internally by @ref TObject::destroy() to ensure correct
      * destruction of derived and related objects. shutDown() is overridden
      * in many classes to ensure the proper setting of related data members
      * when destroy() is called.
      */
-    virtual void shutDown();
-private:
+	virtual void shutDown();
+      private:
     /**
      * Undocumented.
      */
-    void moveGrow( TPoint p,
-                   TPoint s,
-                   TRect& limits,
-                   TPoint minSize,
-                   TPoint maxSize,
-                   uchar mode
-                 );
+	void moveGrow(TPoint p,
+		      TPoint s,
+		      TRect & limits,
+		      TPoint minSize, TPoint maxSize, uchar mode);
     /**
      * Undocumented.
      */
-    void change( uchar, TPoint delta, TPoint& p, TPoint& s, ulong ctrlState );
+	void change(uchar, TPoint delta, TPoint & p, TPoint & s,
+		    ulong ctrlState);
     /**
      * Undocumented.
      */
-    int exposedRec1(short int, short int, class TView *);
+	int exposedRec1(short int, short int, class TView *);
     /**
 
      * Undocumented.
      */
-    int exposedRec2(short int, short int, class TView *);
+	int exposedRec2(short int, short int, class TView *);
     /**
      * Undocumented.
      */
-    void writeView(short int, short int, short int, const void *);
+	void writeView(short int, short int, short int, const void *);
     /**
      * Undocumented.
      */
-    void writeViewRec1(short int, short int, class TView *, int);
+	void writeViewRec1(short int, short int, class TView *, int);
     /**
      * Undocumented.
      */
-    void writeViewRec2(short int, short int, class TView *, int);
+	void writeViewRec2(short int, short int, class TView *, int);
     /**
      * Undocumented.
      */
-    virtual const char *streamableName() const
-        { return name; }
-protected:
+	virtual const char *streamableName() const {
+		return name;
+      } protected:
     /**
      * Each streamable class needs a "builder" to allocate the correct memory
      * for its objects together with the initialized virtual table pointers.
      * This is achieved by calling this constructor with an argument of type
      * @ref StreamableInit.
      */
-    TView( StreamableInit );
-public:
+	TView(StreamableInit);
+      public:
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
-protected:
+	static TStreamable *build();
+      protected:
     /**
      * Writes to the output stream `os'.
      */
-    virtual void write( opstream& os );
+	virtual void write(opstream & os);
     /**
      * Reads from the input stream `is'.
      */
-    virtual void *read( ipstream& is );
+	virtual void *read(ipstream & is);
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TView& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TView*& cl )
-    { return is >> (void *&)cl; }
-
-/**
- * Undocumented.
- */
-inline opstream& operator << ( opstream& os, TView& cl )
-    { return os << static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline opstream& operator << ( opstream& os, TView* cl )
-    { return os << static_cast<TStreamable *>(cl); }
-
-inline void TView::writeBuf( short x, short y, short w, short h,
-                             const TDrawBuffer& b )
+inline ipstream & operator >>(ipstream & is, TView & cl)
 {
-    writeBuf( x, y, w, h, b.data );
+	return is >> static_cast < TStreamable & >(cl);
 }
 
-inline void TView::writeLine( short x, short y, short w, short h,
-                              const TDrawBuffer& b )
+/**
+ * Undocumented.
+ */
+inline ipstream & operator >>(ipstream & is, TView *&cl)
 {
-    writeLine( x, y, w, h, b.data );
+	return is >> (void *&)cl;
 }
 
-#endif  // Uses_TView
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TView & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
+
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TView *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
+
+inline void TView::writeBuf(short x, short y, short w, short h,
+			    const TDrawBuffer & b)
+{
+	writeBuf(x, y, w, h, b.data);
+}
+
+inline void TView::writeLine(short x, short y, short w, short h,
+			     const TDrawBuffer & b)
+{
+	writeLine(x, y, w, h, b.data);
+}
+
+#endif // Uses_TView
 
 /* ---------------------------------------------------------------------- */
 /*      class TFrame                                                      */
@@ -2124,9 +2006,8 @@ class TDrawBuffer;
  * are added to window objects by default.
  * @short The frame around the windows
  */
-class TFrame : public TView
-{
-public:
+class TFrame:public TView {
+      public:
     /**
      * Calls TView constructor TView(bounds), then sets @ref growMode to
      * @ref gfGrowHiX | @ref gfGrowHiY and sets @ref eventMask to
@@ -2134,7 +2015,7 @@ public:
      * handling broadcast events.
      * `bounds' is the bounding rectangle of the frame.
      */
-    TFrame( const TRect& bounds );
+	TFrame(const TRect & bounds);
     /**
      * Draws the frame with color attributes and icons appropriate to the
      * current state flags: active, inactive, being dragged. Adds zoom, close
@@ -2145,12 +2026,12 @@ public:
      * inactive windows are drawn with a single-lined frame and no icons.
      * @see TView::draw
      */
-    virtual void draw();
+	virtual void draw();
     /**
      * Returns a reference to the default frame palette string.
      * @see TView::getPalette
      */
-    virtual TPalette& getPalette() const;
+	virtual TPalette & getPalette() const;
     /**
      * Calls @ref TView::handleEvent(), then handles mouse events.
      *
@@ -2162,7 +2043,7 @@ public:
      * resize icon moves the lower right corner of the view and therefore
      * changes its size.
      */
-    virtual void handleEvent( TEvent& event );
+	virtual void handleEvent(TEvent & event);
     /**
      * Changes the state of the frame.
      * Calls TView::setState(aState, enable). If the new state is
@@ -2171,50 +2052,50 @@ public:
      * @see TView::setState
      * @see TView::state
      */
-    virtual void setState( ushort aState, Boolean enable );
+	virtual void setState(ushort aState, Boolean enable);
     /**
      * Undocumented.
      */
-    static char frameChars[33];
+	static char frameChars[33];
     /**
      * The character showed in the close box.
      */
-    static const char * closeIcon;
+	static const char *closeIcon;
     /**
      * The character showed in the lower right corner of the screen.
      */
-    static const char * dragIcon;
-private:
+	static const char *dragIcon;
+      private:
     /**
      * Undocumented.
      */
-    void frameLine( TDrawBuffer& frameBuf, short y, short n, uchar color );
+	void frameLine(TDrawBuffer & frameBuf, short y, short n, uchar color);
     /**
      * Undocumented.
      */
-    void dragWindow( TEvent& event, uchar dragMode );
+	void dragWindow(TEvent & event, uchar dragMode);
     /**
      * Undocumented.
      */
-    friend class TDisplay;
+	friend class TDisplay;
     /**
      * Undocumented.
      */
-    static const char initFrame[19];
+	static const char initFrame[19];
     /**
      * Undocumented.
      */
-    static const char * zoomIcon;
+	static const char *zoomIcon;
     /**
      * Undocumented.
      */
-    static const char * unZoomIcon;
+	static const char *unZoomIcon;
     /**
      * Undocumented.
      */
-    virtual const char *streamableName() const
-        { return name; }
-protected:
+	virtual const char *streamableName() const {
+		return name;
+      } protected:
     /**
      * Used to recover the view from a stream.
      * Each streamable class needs a "builder" to allocate the correct memory
@@ -2222,42 +2103,52 @@ protected:
      * This is achieved by calling this constructor with an argument of type
      * @ref StreamableInit.
      */
-    TFrame( StreamableInit );
-public:
+	TFrame(StreamableInit);
+      public:
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
     /**
      * Used to recover the view from a stream.
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TFrame& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TFrame*& cl )
-    { return is >> (void *&)cl; }
+inline ipstream & operator >>(ipstream & is, TFrame & cl)
+{
+	return is >> static_cast < TStreamable & >(cl);
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TFrame& cl )
-    { return os << static_cast<TStreamable&>(cl); }
+inline ipstream & operator >>(ipstream & is, TFrame *&cl)
+{
+	return is >> (void *&)cl;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TFrame* cl )
-    { return os << static_cast<TStreamable *>(cl); }
+inline opstream & operator <<(opstream & os, TFrame & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
 
-#endif  // Uses_TFrame
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TFrame *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
+
+#endif // Uses_TFrame
 
 /* ---------------------------------------------------------------------- */
 /*      class TScrollBar                                                  */
@@ -2284,9 +2175,8 @@ typedef char TScrollChars[5];
 /**
  * @short Implements a scroll bar
  */
-class TScrollBar : public TView
-{
-public:
+class TScrollBar:public TView {
+      public:
     /**
      * Creates and initializes a scroll bar with the given bounds by calling
      * the TView constructor. Sets @ref value, @ref maxVal and @ref minVal to
@@ -2301,16 +2191,16 @@ public:
      * scroll bars have the @ref growMode data member set to @ref gfGrowLoY |
      * @ref gfGrowHiX | @ref gfGrowHiY.
      */
-    TScrollBar( const TRect& bounds );
+	TScrollBar(const TRect & bounds);
     /**
      * Draws the scroll bar depending on the current bounds, value, and
      * palette.
      */
-    virtual void draw();
+	virtual void draw();
     /**
      * Returns the default palette.
      */
-    virtual TPalette& getPalette() const;
+	virtual TPalette & getPalette() const;
     /**
      * Handles scroll bar events by calling @ref TView::handleEvent(). Mouse
      * events are broadcast to the scroll bar's owner, which must handle the
@@ -2321,7 +2211,7 @@ public:
      * adjusted according to the current @ref arStep or @ref pgStep values.
      * The scroll bar indicator is redrawn.
      */
-    virtual void handleEvent( TEvent& event );
+	virtual void handleEvent(TEvent & event);
     /**
      * Is called whenever @ref value data member changes. This virtual member
      * function defaults by sending a cmScrollBarChanged message to the scroll
@@ -2332,7 +2222,7 @@ public:
      * </pre>
      * @see message
      */
-    virtual void scrollDraw();
+	virtual void scrollDraw();
     /**
      * By default, scrollStep() returns a positive or negative step value,
      * depending on the scroll bar part given by `part', and the current
@@ -2359,7 +2249,7 @@ public:
      * Although defined, the sbIndicator constant is never passed to
      * scrollStep().
      */
-    virtual int scrollStep( int part );
+	virtual int scrollStep(int part);
     /**
      * Sets the @ref value, @ref minVal, @ref maxVal, @ref pgStep and
      * @ref arStep with the given argument values. Some adjustments are made
@@ -2368,8 +2258,8 @@ public:
      * The scroll bar is redrawn by calling @ref drawView(). If value is
      * changed, @ref scrollDraw() is also called.
      */
-    void setParams( int aValue, int aMin, int aMax,
-                    int aPgStep, int aArStep );
+	void setParams(int aValue, int aMin, int aMax,
+		       int aPgStep, int aArStep);
     /**
      * Sets the legal range for value by setting @ref minVal and @ref maxVal
      * to the given arguments `aMin' and `aMax'.
@@ -2377,33 +2267,33 @@ public:
      * Calls @ref setParams(), so @ref drawView() and @ref scrollDraw() will
      * be called if the changes require the scroll bar to be redrawn.
      */
-    void setRange( int aMin, int aMax );
+	void setRange(int aMin, int aMax);
     /**
      * Sets @ref pgStep and @ref arStep to the given arguments `aPgStep' and
      * `aArStep'.
      * Calls @ref setParams() with the other arguments set to their current
      * values.
      */
-    void setStep( int aPgStep, int aArStep );
+	void setStep(int aPgStep, int aArStep);
     /**
      * Sets @ref value to `aValue' by calling @ref setParams() with the other
      * arguments set to their current values.
      * Note: @ref drawView() and @ref scrollDraw() will be called if this
      * call changes value.
      */
-    void setValue( int aValue );
+	void setValue(int aValue);
     /**
      * Undocumented.
      */
-    void drawPos( int pos );
+	void drawPos(int pos);
     /**
      * Undocumented.
      */
-    int getPos();
+	int getPos();
     /**
      * Undocumented.
      */
-    int getSize();
+	int getSize();
     /**
      * This variable represents the current position of the scroll bar
      * indicator. This marker moves along the scroll bar strip to indicate the
@@ -2412,7 +2302,7 @@ public:
      *
      * The TScrollBar constructor sets value to zero by default.
      */
-    int value;
+	int value;
     /**
      * TScrollChars is defined as:
      *
@@ -2423,17 +2313,17 @@ public:
      * Variable chars is set with the five basic character patterns used to
      * draw the scroll bar parts.
      */
-    TScrollChars chars;
+	TScrollChars chars;
     /**
      * Variable minVal represents the minimum value for the @ref value data
      * member. The TScrollBar constructor sets minVal to zero by default.
      */
-    int minVal;
+	int minVal;
     /**
      * Variable maxVal represents the maximum value for the @ref value data
      * member. The TScrollBar constructor sets maxVal to zero by default.
      */
-    int maxVal;
+	int maxVal;
     /**
      * Variable pgStep is the amount added or subtracted to the scroll bar's
      * @ref value data member when a mouse click event occurs in any of the
@@ -2445,7 +2335,7 @@ public:
      * pgStep using @ref setParams(), @ref setStep() or
      * @ref TScroller::setLimit().
      */
-    int pgStep;
+	int pgStep;
     /**
      * Variable arStep is the amount added or subtracted to the scroll bar's
      * @ref value data member when an arrow area is clicked (@ref sbLeftArrow,
@@ -2454,75 +2344,85 @@ public:
      *
      * The TScrollBar constructor sets arStep to 1 by default.
      */
-    int arStep;
+	int arStep;
     /**
      * Undocumented.
      */
-    static TScrollChars vChars;
+	static TScrollChars vChars;
     /**
      * Undocumented.
      */
-    static TScrollChars hChars;
-private:
+	static TScrollChars hChars;
+      private:
     /**
      * Undocumented.
      */
-    int getPartCode(void);
+	int getPartCode(void);
     /**
      * Undocumented.
      */
-    virtual const char *streamableName() const
-        { return name; }
-protected:
+	virtual const char *streamableName() const {
+		return name;
+      } protected:
     /**
      * Each streamable class needs a "builder" to allocate the correct memory
      * for its objects together with the initialized virtual table pointers.
      * This is achieved by calling this constructor with an argument of type
      * @ref StreamableInit.
      */
-    TScrollBar( StreamableInit );
+	TScrollBar(StreamableInit);
     /**
      * Writes to the output stream `os'.
      */
-    virtual void write( opstream& os );
+	virtual void write(opstream & os);
     /**
      * Reads from the input stream `is'.
      */
-    virtual void *read( ipstream& is );
-public:
+	virtual void *read(ipstream & is);
+      public:
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TScrollBar& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TScrollBar*& cl )
-    { return is >> (void *&)cl; }
+inline ipstream & operator >>(ipstream & is, TScrollBar & cl)
+{
+	return is >> static_cast < TStreamable & >(cl);
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TScrollBar& cl )
-    { return os << static_cast<TStreamable&>(cl); }
+inline ipstream & operator >>(ipstream & is, TScrollBar *&cl)
+{
+	return is >> (void *&)cl;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TScrollBar* cl )
-    { return os << static_cast<TStreamable *>(cl); }
+inline opstream & operator <<(opstream & os, TScrollBar & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
 
-#endif  // Uses_TScrollBar
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TScrollBar *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
+
+#endif // Uses_TScrollBar
 
 /* ---------------------------------------------------------------------- */
 /*      class TScroller                                                   */
@@ -2552,9 +2452,8 @@ class TEvent;
  * views such as text views.
  * @short Provides a scrolling virtual window onto a larger view
  */
-class TScroller : public TView
-{
-public:
+class TScroller:public TView {
+      public:
     /**
      * Creates and initializes a TScroller object with the given size and
      * scroll bars. Calls @ref TView constructor to set the view's size.
@@ -2562,33 +2461,31 @@ public:
      * `aHScrollBar' should be 0 if you do not want a horizontal scroll bar;
      * `aVScrollBar' should be 0 if you do not want a vertical scroll bar.
      */
-    TScroller( const TRect& bounds,
-               TScrollBar *aHScrollBar,
-               TScrollBar *aVScrollBar
-             );
+	TScroller(const TRect & bounds,
+		  TScrollBar * aHScrollBar, TScrollBar * aVScrollBar);
     /**
      * Changes the scroller's size by calling @ref TView::setbounds(). If
      * necessary, the scroller and scroll bars are then redrawn by calling
      * @ref setLimit() and @ref drawView().
      */
-    virtual void changeBounds( const TRect& bounds );
+	virtual void changeBounds(const TRect & bounds);
     /**
      * Returns the default scroller palette string.
      */
-    virtual TPalette& getPalette() const;
+	virtual TPalette & getPalette() const;
     /**
      * Handles most events by calling @ref TView::handleEvent().
      *
      * Broadcast events such as cmScrollBarChanged from either @ref hScrollBar
      * or @ref vScrollBar result in a call to @ref scrollDraw().
      */
-    virtual void handleEvent( TEvent& event );
+	virtual void handleEvent(TEvent & event);
     /**
      * Checks to see if @ref delta matches the current positions of the scroll
      * bars. If not, @ref delta is set to the correct value and
      * @ref drawView() is called to redraw the scroller.
      */
-    virtual void scrollDraw();
+	virtual void scrollDraw();
     /**
      * Sets the scroll bars to (x,y) by calling hScrollBar->setValue(x) and
      * vScrollBar->setValue(y) and redraws the view by calling @ref drawView().
@@ -2596,12 +2493,12 @@ public:
      * @see TScrollBar::vScrollBar
      * @see TScrollBar::setValue
      */
-    void scrollTo( int x, int y );
+	void scrollTo(int x, int y);
     /**
      * Sets the @ref limit data member and redraws the scrollbars and
      * scroller if necessary.
      */
-    void setLimit( int x, int y );
+	void setLimit(int x, int y);
     /**
      * This member function is called whenever the scroller's state changes.
      * Calls @ref TView::setState() to set or clear the state flags in
@@ -2609,7 +2506,7 @@ public:
      * If the new @ref state is @ref sfSelected and @ref sfActive, setState()
      * displays the scroll bars; otherwise, they are hidden.
      */
-    virtual void setState( ushort aState, Boolean enable );
+	virtual void setState(ushort aState, Boolean enable);
     /**
      * If @ref drawLock is zero and @ref drawFlag is True, @ref drawFlag is set
      * False and @ref drawView() is called.
@@ -2619,14 +2516,14 @@ public:
      * Methods @ref scrollTo() and @ref setLimit() each call checkDraw() so
      * that @ref drawView() is only called if needed.
      */
-    void checkDraw();
+	void checkDraw();
     /**
      * Used internally by @ref TObject::destroy() to ensure correct
      * destruction of derived and related objects. shutDown() is overridden
      * in many classes to ensure the proper setting of related data members
      * when @ref destroy() is called.
      */
-    virtual void shutDown();
+	virtual void shutDown();
     /**
      * Holds the x (horizontal) and y (vertical) components of the scroller's
      * position relative to the virtual view being scrolled.
@@ -2639,92 +2536,102 @@ public:
      * @ref TScrollBar::value data members, and leads to updating of the
      * scroll bar indicators.
      */
-    TPoint delta;
-protected:
+	TPoint delta;
+      protected:
     /**
      * A semaphore used to control the redrawing of scrollers.
      */
-    uchar drawLock;
+	uchar drawLock;
     /**
      * Set True if the scroller has to be redrawn.
      */
-    Boolean drawFlag;
+	Boolean drawFlag;
     /**
      * Points to the horizontal scroll bar object associated with the
      * scroller. If there is no such scroll bar, hScrollBar is 0.
      */
-    TScrollBar *hScrollBar;
+	TScrollBar *hScrollBar;
     /**
      * Points to the vertical scroll bar object associated with the
      * scroller. If there is no such scroll bar, vScrollBar is 0.
      */
-    TScrollBar *vScrollBar;
+	TScrollBar *vScrollBar;
     /**
      * Data members limit.x and limit.y are the maximum allowed values for
      * delta.x and delta.y data members.
      * @see TScroller::delta
      */
-    TPoint limit;
-private:
+	TPoint limit;
+      private:
     /**
      * Undocumented.
      */
-    void showSBar( TScrollBar *sBar );
+	void showSBar(TScrollBar * sBar);
     /**
      * Undocumented.
      */
-    virtual const char *streamableName() const
-        { return name; }
-protected:
+	virtual const char *streamableName() const {
+		return name;
+      } protected:
     /**
      * Each streamable class needs a "builder" to allocate the correct memory
      * for its objects together with the initialized virtual table pointers.
      * This is achieved by calling this constructor with an argument of type
      * @ref StreamableInit.
      */
-    TScroller( StreamableInit );
+	TScroller(StreamableInit);
     /**
      * Writes to the output stream `os'.
      */
-    virtual void write( opstream& os );
+	virtual void write(opstream & os);
     /**
      * Reads from the input stream `is'.
      */
-    virtual void *read( ipstream& is );
-public:
+	virtual void *read(ipstream & is);
+      public:
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TScroller& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TScroller*& cl )
-    { return is >> (void *&)cl; }
+inline ipstream & operator >>(ipstream & is, TScroller & cl)
+{
+	return is >> static_cast < TStreamable & >(cl);
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TScroller& cl )
-    { return os << static_cast<TStreamable&>(cl); }
+inline ipstream & operator >>(ipstream & is, TScroller *&cl)
+{
+	return is >> (void *&)cl;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TScroller* cl )
-    { return os << static_cast<TStreamable *>(cl); }
+inline opstream & operator <<(opstream & os, TScroller & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
 
-#endif  // Uses_TScroller
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TScroller *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
+
+#endif // Uses_TScroller
 
 #if defined( Uses_TListViewer ) && !defined( TV_TListViewer )
 #define TV_TListViewer
@@ -2757,10 +2664,9 @@ class TEvent;
  * @short An abstract class from which you can derive list viewers of various
  * kinds, such as TListBox.
  */
-class TListViewer : public TView
-{
-    static const char * emptyText;
-public:
+class TListViewer:public TView {
+	static const char *emptyText;
+      public:
     /**
      * Creates and initializes a TListViewer object with the given size by
      * first calling @ref TView::TView(bounds).
@@ -2778,11 +2684,9 @@ public:
      * arguments are assigned to the @ref vScrollBar and @ref hScrollBar data
      * members.
      */
-    TListViewer( const TRect& bounds,
-                 ushort aNumCols,
-                 TScrollBar *aHScrollBar,
-                 TScrollBar *aVScrollBar
-               );
+	TListViewer(const TRect & bounds,
+		    ushort aNumCols,
+		    TScrollBar * aHScrollBar, TScrollBar * aVScrollBar);
     /**
      * Changes the size of the TListViewer object by calling
      * TView::changeBounds(bounds). If a horizontal scroll bar has been
@@ -2790,24 +2694,24 @@ public:
      * @ref TScrollBar::setStep().
      * @see TView::changeBounds
      */
-    virtual void changeBounds( const TRect& bounds );
+	virtual void changeBounds(const TRect & bounds);
     /**
      * Draws the TListViewer object with the default palette by repeatedly
      * calling @ref getText() for each visible item. Takes into account the
      * @ref focused and selected items and whether the view is @ref sfActive.
      * @see TView::state
      */
-    virtual void draw();
+	virtual void draw();
     /**
      * Makes the given item focused by setting the @ref focused data member to
      * `item'. Also sets the @ref TScrollBar::value data member of the
      * vertical scroll bar (if any) to `item' and adjusts @ref topItem.
      */
-    virtual void focusItem( short item );
+	virtual void focusItem(short item);
     /**
      * Returns the default TListViewer palette string.
      */
-    virtual TPalette& getPalette() const;
+	virtual TPalette & getPalette() const;
     /**
      * Derived classes must override it with a function that writes a string
      * not exceeding `maxLen' at address `dest', given an item index
@@ -2815,12 +2719,12 @@ public:
      *
      * Note that @ref draw() needs to call getText().
      */
-    virtual void getText( char *dest, short item, short maxLen );
+	virtual void getText(char *dest, short item, short maxLen);
     /**
      * Returns True if the given item is selected (focused), that is, if
      * `item' == @ref focused.
      */
-    virtual Boolean isSelected( short item );
+	virtual Boolean isSelected(short item);
     /**
      * Handles events by first calling TView::handleEvent(event).
      * @see TView::handleEvent
@@ -2835,7 +2739,7 @@ public:
      * Broadcast events from the scroll bars are handled by changing the
      * @ref focused item and redrawing the view as required.
      */
-    virtual void handleEvent( TEvent& event );
+	virtual void handleEvent(TEvent & event);
     /**
      * Selects the item'th element of the list, then broadcasts this fact to
      * the owning group by calling:
@@ -2845,7 +2749,7 @@ public:
      * </pre>
      * @see message
      */
-    virtual void selectItem( short item );
+	virtual void selectItem(short item);
     /**
      * Sets the @ref range data member to `aRange'.
      *
@@ -2856,7 +2760,7 @@ public:
      * If the currently focused item falls outside the new range, the
      * @ref focused data member is set to zero.
      */
-    void setRange( short aRange );
+	void setRange(short aRange);
     /**
      * Calls TView::setState(aState, enable) to change the TListViewer
      * object's state. Depending on the `aState' argument, this can result in
@@ -2868,108 +2772,118 @@ public:
      * scroll bars are redrawn; if `aState' is @ref sfSelected but not
      * @ref sfActive, the scroll bars are hidden.
      */
-    virtual void setState( ushort aState, Boolean enable );
+	virtual void setState(ushort aState, Boolean enable);
     /**
      * Used internally by @ref focusItem(). Makes the given item focused by
      * setting the @ref focused data member to `item'.
      */
-    virtual void focusItemNum( short item );
+	virtual void focusItemNum(short item);
     /**
      * Used internally by @ref TObject::destroy() to ensure correct
      * destruction of derived and related objects. shutDown() is overridden
      * in many classes to ensure the proper setting of related data members
      * when @ref destroy() is called.
      */
-    virtual void shutDown();
+	virtual void shutDown();
     /**
      * Pointer to the horizontal scroll bar associated with this view. If 0,
      * the view does not have such a scroll bar.
      */
-    TScrollBar *hScrollBar;
+	TScrollBar *hScrollBar;
     /**
      * Pointer to the vertical scroll bar associated with this view. If 0,
      * the view does not have such a scroll bar.
      */
-    TScrollBar *vScrollBar;
+	TScrollBar *vScrollBar;
     /**
      * The number of columns in the list control.
      */
-    short numCols;
+	short numCols;
     /**
      * The item number of the top item to be displayed. This value changes
      * during scrolling. Items are numbered from 0 to @ref range - 1. This
      * number depends on the number of columns, the size of the view, and the
      * value of variable @ref range.
      */
-    short topItem;
+	short topItem;
     /**
      * The item number of the focused item. Items are numbered from 0 to
      * @ref range - 1. Initially set to 0, the first item, focused can be
      * changed by mouse click or Spacebar selection.
      */
-    short focused;
+	short focused;
     /**
      * The current total number of items in the list. Items are numbered from
      * 0 to range - 1.
      */
-    short range;
+	short range;
     /**
      * Undocumented.
      */
-    static char separatorChar;
-private:
-    virtual const char *streamableName() const
-        { return name; }
-protected:
+	static char separatorChar;
+      private:
+	virtual const char *streamableName() const {
+		return name;
+      } protected:
     /**
      * Each streamable class needs a "builder" to allocate the correct memory
      * for its objects together with the initialized virtual table pointers.
      * This is achieved by calling this constructor with an argument of type
      * @ref StreamableInit.
      */
-    TListViewer( StreamableInit );
+	TListViewer(StreamableInit);
     /**
      * Writes to the output stream `os'.
      */
-    virtual void write( opstream& os );
+	virtual void write(opstream & os);
     /**
      * Reads from the input stream `is'.
      */
-    virtual void *read( ipstream& is );
-public:
+	virtual void *read(ipstream & is);
+      public:
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TListViewer& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TListViewer*& cl )
-    { return is >> (void *&)cl; }
+inline ipstream & operator >>(ipstream & is, TListViewer & cl)
+{
+	return is >> static_cast < TStreamable & >(cl);
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TListViewer& cl )
-    { return os << static_cast<TStreamable&>(cl); }
+inline ipstream & operator >>(ipstream & is, TListViewer *&cl)
+{
+	return is >> (void *&)cl;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TListViewer* cl )
-    { return os << static_cast<TStreamable *>(cl); }
+inline opstream & operator <<(opstream & os, TListViewer & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
 
-#endif  // Uses_TListViewer
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TListViewer *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
+
+#endif // Uses_TListViewer
 
 #if defined( Uses_TGroup ) && !defined( TV_TGroup )
 #define TV_TGroup
@@ -3021,22 +2935,21 @@ class TView;
  * @short TGroup objects and their derivatives provide the central driving
  * power to TVision
  */
-class TGroup : public TView
-{
-public:
+class TGroup:public TView {
+      public:
     /**
      * Calls @ref TView::TView(bounds), sets @ref ofSelectable and
      * @ref ofBuffered in @ref options and sets @ref eventMask to 0xFFFF. The
      * members @ref last, @ref current, @ref buffer, @ref lockFlag and
      * @ref endState are all set to zero.
      */
-    TGroup( const TRect& bounds );
+	TGroup(const TRect & bounds);
     /**
      * Hides the group using @ref hide(), then disposes of each subview in
      * the group using delete.
      * Finally, the buffer is freed (if one).
      */
-    ~TGroup();
+	~TGroup();
     /**
      * Used internally by @ref TObject::destroy() to ensure correct
      * destruction of derived and related objects.
@@ -3044,7 +2957,7 @@ public:
      * shutDown() is overridden in many classes to ensure the proper setting
      * of related data members when destroy is called.
      */
-    virtual void shutDown();
+	virtual void shutDown();
     /**
      * execView() is the "modal" counterpart of the "modeless" @ref insert()
      * and @ref remove() member functions.
@@ -3070,7 +2983,7 @@ public:
      *
      * If `p' is 0 upon a call to execView(), a value of cmCancel is returned.
      */
-    ushort execView( TView *p );
+	ushort execView(TView * p);
     /**
      * Overrides @ref TView::execute(). execute() is a group's main event
      * loop: it repeatedly gets events using @ref getEvent() and handles
@@ -3080,26 +2993,26 @@ public:
      * call to @ref endModal(). Before returning, however, execute() calls
      * @ref valid() to verify that the modal state can indeed be terminated.
      */
-    virtual ushort execute();
+	virtual ushort execute();
     /**
      * Calls the @ref TView::awaken() methods of each of the group's subviews
      * in Z-order.
      */
-    virtual void awaken();
+	virtual void awaken();
     /**
      * Undocumented.
      */
-    void insertView( TView *p, TView *Target );
+	void insertView(TView * p, TView * Target);
     /**
      * Removes the subview `p' from the group and redraws the other subviews
      * as required. p's owner and next members are set to 0.
      */
-    void remove( TView *p );
+	void remove(TView * p);
     /**
      * Removes the subview `p' from this group. Used internally by
      * @ref remove().
      */
-    void removeView( TView *p );
+	void removeView(TView * p);
     /**
      * Selects (makes current) the first subview in the chain that is
      * @ref sfVisible and @ref ofSelectable. resetCurrent() works by calling
@@ -3115,7 +3028,7 @@ public:
      * enum selectMode { normalSelect, enterSelect, leaveSelect };
      * </pre>
      */
-    void resetCurrent();
+	void resetCurrent();
     /**
      * Parameter `selectMode' is an enumeration defined in TGroup as follows:
      *
@@ -3127,7 +3040,7 @@ public:
      * `p' is made current (that is, selected) by a call to @ref setState().
      * @see resetCurrent
      */
-    void setCurrent( TView *p, selectMode mode );
+	void setCurrent(TView * p, selectMode mode);
     /**
      * If `forwards' is True, selectNext() selects (makes current) the next
      * selectable subview (one with its ofSelectable bit set) in the group's
@@ -3135,7 +3048,7 @@ public:
      * If `forwards' is False, the member function selects the previous
      * selectable subview.
      */
-    void selectNext( Boolean forwards );
+	void selectNext(Boolean forwards);
     /**
      * firstThat() applies a user-supplied @ref Boolean function `func',
      * along with an argument list given by `args' (possibly empty), to each
@@ -3163,11 +3076,11 @@ public:
      * }
      * </pre>
      */
-    TView *firstThat( Boolean (*func)( TView *, void * ), void *args );
+	TView *firstThat(Boolean(*func) (TView *, void *), void *args);
     /**
      * Undocumented.
      */
-    Boolean focusNext(Boolean forwards);
+	Boolean focusNext(Boolean forwards);
     /**
      * forEach() applies an action, given by the function `func', to each
      * subview in the group in Z-order. The `args' argument lets you pass
@@ -3190,7 +3103,7 @@ public:
      * }
      * </pre>
      */
-    void forEach( void (*func)( TView *, void * ), void *args );
+	void forEach(void (*func)(TView *, void *), void *args);
     /**
      * Inserts the view given by `p' in the group's subview list. The new
      * subview is placed on top of all other subviews. If the subview has the
@@ -3204,41 +3117,41 @@ public:
      * selected subview.
      * @see TView::state
      */
-    void insert( TView *p );
+	void insert(TView * p);
     /**
      * Inserts the view given by `p' in front of the view given by `Target'.
      * If `Target' is 0, the view is placed behind all other subviews in the
      * group.
      */
-    void insertBefore( TView *p, TView *Target );
+	void insertBefore(TView * p, TView * Target);
     /**
      * Points to the subview that is currently selected, or is 0 if no
      * subview is selected.
      */
-    TView *current;
+	TView *current;
     /**
      * Returns a pointer to the subview at `index' position in Z-order.
      */
-    TView *at( short index );
+	TView *at(short index);
     /**
      * Returns a pointer to the first subview that matches its state with
      * `aState' and its options with `aOptions'.
      */
-    TView *firstMatch( ushort aState, ushort aOptions );
+	TView *firstMatch(ushort aState, ushort aOptions);
     /**
      * Returns the Z-order position (index) of the subview `p'.
      */
-    short indexOf( TView *p );
+	short indexOf(TView * p);
     /**
      * Returns True if the state and options settings of the view `p' are
      * identical to those of the calling view.
      */
-    Boolean matches( TView *p );
+	Boolean matches(TView * p);
     /**
      * Returns a pointer to the first subview (the one closest to the top in
      * Z-order), or 0 if the group has no subviews.
      */
-    TView *first();
+	TView *first();
     /**
      * Overrides @ref TView::setState(). First calls the inherited
      * TView::setState(), then updates the subviews as follows (see
@@ -3252,7 +3165,7 @@ public:
      *    each subview. Finally, if `enable' is False, @ref freeBuffer() is
      *    called.
      */
-    virtual void setState( ushort aState, Boolean enable );
+	virtual void setState(ushort aState, Boolean enable);
     /**
      * Overrides @ref TView::handleEvent(). A group basically handles events by
      * passing them to the handleEvent() member functions of one or more of
@@ -3284,25 +3197,25 @@ public:
      * @ref evMouseUp, @ref evMouseMove, and @ref evMouseAuto, so
      * TGroup::handleEvent() will never send such events to a standard TView.
      */
-    virtual void handleEvent( TEvent& event );
+	virtual void handleEvent(TEvent & event);
     /**
      * Calls @ref TView::drawView() for each subview starting at `p', until
      * the subview `bottom' is reached.
      */
-    void drawSubViews( TView *p, TView *bottom );
+	void drawSubViews(TView * p, TView * bottom);
     /**
      * Overrides @ref TView::changeBounds(). Changes the group's bounds to
      * `bounds' and then calls @ref calcBounds() followed by
      * @ref TView::changeBounds() for each subview in the group.
      */
-    virtual void changeBounds( const TRect& bounds );
+	virtual void changeBounds(const TRect & bounds);
     /**
      * Overrides @ref TView::dataSize(). Returns total size of group by
      * calling and accumulating dataSize() for each subview.
      * @see TGroup::getData
      * @see TGroup::setData
      */
-    virtual ushort dataSize();
+	virtual ushort dataSize();
     /**
      * Overrides @ref TView::getData(). Calls getData() for each subview in
      * reverse order, incrementing the location given by `rec' by the
@@ -3310,7 +3223,7 @@ public:
      * @see TGroup::dataSize
      * @see TGroup::setData
      */
-    virtual void getData( void *rec );
+	virtual void getData(void *rec);
     /**
      * Overrides @ref TView::setData(). Calls setData() for each subview in
      * reverse Z-order, incrementing the location given by `rec' by the
@@ -3318,7 +3231,7 @@ public:
      * @see TGroup::dataSize
      * @see TGroup::getData
      */
-    virtual void setData( void *rec );
+	virtual void setData(void *rec);
     /**
      * Overrides @ref TView::draw(). If a cache buffer exists (see
      * @ref TGroup::buffer data member), then the buffer is written to the
@@ -3327,13 +3240,13 @@ public:
      * Otherwise, each subview is told to draw itself using a call to
      * @ref TGroup::redraw().
      */
-    virtual void draw();
+	virtual void draw();
     /**
      * Redraws the group's subviews in Z-order. TGroup::redraw() differs from
      * @ref TGroup::draw() in that redraw() will never draw from the cache
      * buffer.
      */
-    void redraw();
+	void redraw();
     /**
      * Locks the group, delaying any screen writes by subviews until the group
      * is unlocked.
@@ -3354,18 +3267,18 @@ public:
      * otherwise, a group may end up in a permanently locked state, causing
      * it to not redraw itself properly when so requested.
      */
-    void lock();
+	void lock();
     /**
      * Unlocks the group by decrementing @ref lockFlag. If @ref lockFlag
      * becomes zero, then the entire group is written to the screen using the
      * image constructed in the cache @ref buffer.
      * @see TGroup::lock
      */
-    void unlock();
+	void unlock();
     /**
      * Undocumented.
      */
-    virtual void resetCursor();
+	virtual void resetCursor();
     /**
      * If this group is the current modal view, endModal() terminates its
      * modal state.
@@ -3375,7 +3288,7 @@ public:
      * result. If this group is not the current modal view, it calls
      * @ref TView::endModal().
      */
-    virtual void endModal( ushort command );
+	virtual void endModal(ushort command);
     /**
      * Is called whenever the modal @ref TGroup::execute() event-handling loop
      * encounters an event that cannot be handled.
@@ -3386,7 +3299,7 @@ public:
      * trigger appropriate action.
      * @see TProgram::eventError
      */
-    virtual void eventError( TEvent& event );
+	virtual void eventError(TEvent & event);
     /**
      * Returns the help context of the current focused view by calling the
      * selected subviews' @ref TView::getHelpCtx() member function.
@@ -3395,7 +3308,7 @@ public:
      * the value of its own @ref helpCtx member, by calling
      * TView::getHelpCtx().
      */
-    virtual ushort getHelpCtx();
+	virtual ushort getHelpCtx();
     /**
      * Overrides @ref TView::valid(). Returns True if all the subview's
      * valid() calls return True. TGroup::valid() is used at the end of the
@@ -3405,12 +3318,12 @@ public:
      * A modal state cannot terminate until all valid() calls return True. A
      * subview can return False if it wants to retain control.
      */
-    virtual Boolean valid( ushort command );
+	virtual Boolean valid(ushort command);
     /**
      * Frees the group's draw buffer (if one exists) by calling delete buffer
      * and setting @ref buffer to 0.
      */
-    void freeBuffer();
+	void freeBuffer();
     /**
      * If the group is @ref sfExposed and @ref ofBuffered, a draw buffer is
      * created. The buffer size will be (size.x * size.y) and the
@@ -3418,19 +3331,19 @@ public:
      * @see TView::options
      * @see TView::state
      */
-    void getBuffer();
+	void getBuffer();
     /**
      * Points to the last subview in the group (the one furthest from the top
      * in Z-order).
      */
-    TView *last;
+	TView *last;
     /**
      * Holds the clip extent of the group, as returned by
      * @ref TView::getExtent() or @ref TView::getClipRect(). The clip extent
      * is defined as the minimum area that needs redrawing when @ref draw() is
      * called.
      */
-    TRect clip;
+	TRect clip;
     /**
      * The current phase of processing for a focused event. Subviews that have
      * the @ref ofPreProcess or @ref ofPostProcess flags set can examine
@@ -3445,14 +3358,14 @@ public:
      * enum phaseType {phFocussed, phPreProcess, phPostProcess};
      * </pre>
      */
-    phaseType phase;
+	phaseType phase;
     /**
      * Points to a buffer used to cache redraw operations, or is 0 if the
      * group has no cache buffer. Cache buffers are created and destroyed
      * automatically, unless the ofBuffered flag is cleared in the group's
      * @ref options member.
      */
-    ushort *buffer;
+	ushort *buffer;
     /**
      * Acts as a semaphore to control buffered group draw operations. lockFlag
      * keeps a count of the number of locks set during a set of nested draw
@@ -3464,83 +3377,93 @@ public:
      * Intensive @ref TGroup::draw() operations should be sandwiched between
      * calls to @ref lock() and @ref unlock() to prevent excessive CPU load.
      */
-    uchar lockFlag;
+	uchar lockFlag;
     /**
      * Holds the state of the group after a call to @ref endModal().
      */
-    ushort endState;
-private:
+	ushort endState;
+      private:
     /**
      * Undocumented.
      */
-    Boolean invalid( TView *p, ushort command );
+	Boolean invalid(TView * p, ushort command);
     /**
      * Undocumented.
      */
-    void focusView( TView *p, Boolean enable );
+	void focusView(TView * p, Boolean enable);
     /**
      * Undocumented.
      */
-    void selectView( TView *p, Boolean enable );
+	void selectView(TView * p, Boolean enable);
     /**
      * Undocumented.
      */
-    TView* findNext(Boolean forwards);
+	TView *findNext(Boolean forwards);
     /**
      * Undocumented.
      */
-    virtual const char *streamableName() const
-        { return name; }
-protected:
+	virtual const char *streamableName() const {
+		return name;
+      } protected:
     /**
      * Each streamable class needs a "builder" to allocate the correct memory
      * for its objects together with the initialized virtual table pointers.
      * This is achieved by calling this constructor with an argument of type
      * @ref StreamableInit.
      */
-    TGroup( StreamableInit );
+	TGroup(StreamableInit);
     /**
      * Writes to the output stream `os'.
      */
-    virtual void write( opstream& os );
+	virtual void write(opstream & os);
     /**
      * Reads from the input stream `is'.
      */
-    virtual void *read( ipstream& is );
-public:
+	virtual void *read(ipstream & is);
+      public:
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TGroup& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TGroup*& cl )
-    { return is >> (void *&)cl; }
+inline ipstream & operator >>(ipstream & is, TGroup & cl)
+{
+	return is >> static_cast < TStreamable & >(cl);
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TGroup& cl )
-    { return os << static_cast<TStreamable&>(cl); }
+inline ipstream & operator >>(ipstream & is, TGroup *&cl)
+{
+	return is >> (void *&)cl;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TGroup* cl )
-    { return os << static_cast<TStreamable *>(cl); }
+inline opstream & operator <<(opstream & os, TGroup & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
 
-#endif  // Uses_TGroup
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TGroup *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
+
+#endif // Uses_TGroup
 
 #if defined( Uses_TWindow ) && !defined( TV_TWindow )
 #define TV_TWindow
@@ -3565,9 +3488,8 @@ class TScrollBar;
  * technique is used for @ref TProgram, @ref THistoryWindow and @ref TDeskTop.
  * @short Virtual base class for TWindow
  */
-class TWindowInit
-{
-public:
+class TWindowInit {
+      public:
     /**
      * This constructor takes a function address argument, usually
      * &TWindow::initFrame.
@@ -3580,14 +3502,14 @@ public:
      * @see TGroup::TGroup
      * @see TWindow::TWindow
      */
-    TWindowInit( TFrame *(*cFrame)( TRect bounds ) );
-protected:
+	TWindowInit(TFrame * (*cFrame) (TRect bounds));
+      protected:
     /**
      * Called by the TWindowInit constructor to create a @ref TFrame object
      * with the given bounds and return a pointer to it. A 0 pointer
      * indicates lack of success in this endeavor.
      */
-    TFrame *(*createFrame)( TRect bounds );
+	TFrame * (*createFrame) (TRect bounds);
 };
 
 /* ---------------------------------------------------------------------- */
@@ -3614,9 +3536,8 @@ protected:
  * @ref TWindowInit.
  * @short Implements a window
  */
-class TWindow: public TGroup, public virtual TWindowInit
-{
-public:
+class TWindow:public TGroup, public virtual TWindowInit {
+      public:
     /**
      * Calls the @ref TGroup constructor to set window bounds to `bounds'.
      * Sets default @ref state to @ref sfShadow. Sets default @ref options to
@@ -3642,30 +3563,27 @@ public:
      * const ushort @ref wnNoNumber = 0;
      * </pre>
      */
-    TWindow( const TRect& bounds,
-             const char *aTitle,
-             short aNumber
-           );
+	TWindow(const TRect & bounds, const char *aTitle, short aNumber);
     /**
      * Deletes title, then disposes of the window and any subviews by calling
      * the parent destructor(s).
      */
-    ~TWindow();
+	~TWindow();
     /**
      * Calls valid(cmClose); if True is returned, the calling window is
      * deleted.
      * @see TGroup::Valid
      */
-    virtual void close();
+	virtual void close();
     /**
      * Returns the palette string given by the palette index in the
      * @ref palette data member.
      */
-    virtual TPalette& getPalette() const;
+	virtual TPalette & getPalette() const;
     /**
      * Returns @ref title data member, the window's title string.
      */
-    virtual const char *getTitle( short maxSize );
+	virtual const char *getTitle(short maxSize);
     /**
      * First calls @ref TGroup::handleEvent(), and then handles events
      * specific to a TWindow as follows:
@@ -3683,7 +3601,7 @@ public:
      *    is handled by selecting the window if the `event.infoInt' data
      *    member is equal to @ref number data member.
      */
-    virtual void handleEvent( TEvent& event );
+	virtual void handleEvent(TEvent & event);
     /**
      * Creates a @ref TFrame object for the window and stores a pointer to the
      * frame in the @ref frame data member. TWindow constructor calls
@@ -3691,7 +3609,7 @@ public:
      * initFrame() to instantiate a user-defined class derived from
      * @ref TFrame instead of the standard @ref TFrame.
      */
-    static TFrame *initFrame( TRect );
+	static TFrame *initFrame(TRect);
     /**
      * First calls TGroup::setState(aState, enable). Then, if `aState' is
      * equal to @ref sfSelected, activates or deactivates the window and all
@@ -3701,7 +3619,7 @@ public:
      * @see TGroup::setState
      * @see TView::state
      */
-    virtual void setState( ushort aState, Boolean enable );
+	virtual void setState(ushort aState, Boolean enable);
     /**
      * Overrides TView::sizeLimits(). First calls TView::sizeLimits(min, max)
      * and then changes `min' to the minimum window size, minWinSize, a
@@ -3712,7 +3630,7 @@ public:
      * derived from TWindow. Any change to minWinSize affects all windows,
      * unless a window's sizeLimits() member function is overridden.
      */
-    virtual void sizeLimits( TPoint& min, TPoint& max );
+	virtual void sizeLimits(TPoint & min, TPoint & max);
     /**
      * Creates, inserts, and returns a pointer to a "standard" scroll bar for
      * the window. "Standard" means the scroll bar fits onto the frame of the
@@ -3737,21 +3655,21 @@ public:
 * @ref sbHandleKeyboard 0x0002 Scroll bar responds to keyboard commands
      * </pre>
      */
-    TScrollBar *standardScrollBar( ushort aOptions );
+	TScrollBar *standardScrollBar(ushort aOptions);
     /**
      * Zooms the calling window. This member function is usually called in
      * response to a cmZoom command (triggered by a click on the zoom icon).
      * zoom() takes into account the relative sizes of the calling window and
      * its owner, and the value of @ref zoomRect.
      */
-    virtual void zoom();
+	virtual void zoom();
     /**
      * Used internally by @ref TObject::destroy() to ensure correct
      * destruction of derived and related objects. shutDown() is overridden
      * in many classes to ensure the proper setting of related data members
      * when @ref destroy() is called.
      */
-    virtual void shutDown();
+	virtual void shutDown();
     /**
      * The flags data member contains a combination of mnemonics constants
      * that define bits. If the bits are set, the window will have the
@@ -3777,17 +3695,17 @@ public:
      * If a particular bit is set, the corresponding property is enabled;
      * otherwise that property is disabled.
      */
-    uchar flags;
+	uchar flags;
     /**
      * The normal, unzoomed boundary of the window.
      */
-    TRect zoomRect;
+	TRect zoomRect;
     /**
      * The number assigned to this window. If number is between 1 and 9,
      * the number will appear in the frame title, and the window can be
      * selected with the Alt-n keys (n = 1 to 9).
      */
-    short number;
+	short number;
     /**
      * Specifies which palette the window is to use: @ref wpBlueWindow,
      * @ref wpCyanWindow or @ref wpGrayWindow. These constants define the
@@ -3804,66 +3722,76 @@ public:
      * By default, the TWindow palette is @ref wpBlueWindow. The default for
      * @ref TDialog objects is @ref wpGrayWindow.
      */
-    short palette;
+	short palette;
     /**
      * Pointer to this window's associated TFrame object.
      */
-    TFrame *frame;
+	TFrame *frame;
     /**
      * A character string giving the (optional) title that appears on the
      * frame.
      */
-    const char *title;
-private:
-    virtual const char *streamableName() const
-        { return name; }
-protected:
+	const char *title;
+      private:
+	virtual const char *streamableName() const {
+		return name;
+      } protected:
     /**
      * Each streamable class needs a "builder" to allocate the correct memory
      * for its objects together with the initialized virtual table pointers.
      * This is achieved by calling this constructor with an argument of type
      * @ref StreamableInit.
      */
-    TWindow( StreamableInit );
+	TWindow(StreamableInit);
     /**
      * Writes to the output stream `os'.
      */
-    virtual void write( opstream& os );
+	virtual void write(opstream & os);
     /**
      * Reads from the input stream `is'.
      */
-    virtual void *read( ipstream& is );
-public:
+	virtual void *read(ipstream & is);
+      public:
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TWindow& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TWindow*& cl )
-    { return is >> (void *&)cl; }
+inline ipstream & operator >>(ipstream & is, TWindow & cl)
+{
+	return is >> static_cast < TStreamable & >(cl);
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TWindow& cl )
-    { return os << static_cast<TStreamable&>(cl); }
+inline ipstream & operator >>(ipstream & is, TWindow *&cl)
+{
+	return is >> (void *&)cl;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TWindow* cl )
-    { return os << static_cast<TStreamable *>(cl); }
+inline opstream & operator <<(opstream & os, TWindow & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
 
-#endif  // Uses_TWindow
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TWindow *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
+
+#endif // Uses_TWindow

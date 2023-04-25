@@ -31,21 +31,18 @@
 /*                                                                        */
 /*------------------------------------------------------------------------*/
 
-void TDrawBuffer::moveBuf( ushort indent, const void *source,
-                           ushort attr, ushort count )
-
+void TDrawBuffer::moveBuf(ushort indent, const void *source,
+			  ushort attr, ushort count)
 {
-    ushort *dest = &data[indent];
-    uchar *s = (uchar *)source;
+	ushort *dest = &data[indent];
+	uchar *s = (uchar *) source;
 
-    if (attr != 0)
-        for (; count; --count, ++s, ++dest)
-        {
-		*dest = *s | ((attr & 0xff) << 8);
-        }
-    else
-        while (count--)
-            *(uchar *)dest++ = *s++;
+	if (attr != 0)
+		for (; count; --count, ++s, ++dest) {
+			*dest = *s | ((attr & 0xff) << 8);
+	} else
+		while (count--)
+			*(uchar *) dest++ = *s++;
 }
 
 /*------------------------------------------------------------------------*/
@@ -66,19 +63,18 @@ void TDrawBuffer::moveBuf( ushort indent, const void *source,
 /*                                                                        */
 /*------------------------------------------------------------------------*/
 
-void TDrawBuffer::moveChar( ushort indent, char c, ushort attr, ushort count )
+void TDrawBuffer::moveChar(ushort indent, char c, ushort attr, ushort count)
 {
-    ushort *dest = &data[indent];
+	ushort *dest = &data[indent];
 
-    if (attr != 0)
-        for (; count; --count, ++dest)
-            {
-		if (c != 0) *dest = (*dest & 0xff00) | c;
-		*dest = (*dest & 0x00ff) | ((attr & 0xff) << 8);
-            }
-    else
-        while (count--)
-            *(uchar *)dest++ = c;
+	if (attr != 0)
+		for (; count; --count, ++dest) {
+			if (c != 0)
+				*dest = (*dest & 0xff00) | c;
+			*dest = (*dest & 0x00ff) | ((attr & 0xff) << 8);
+	} else
+		while (count--)
+			*(uchar *) dest++ = c;
 }
 
 /*------------------------------------------------------------------------*/
@@ -100,26 +96,24 @@ void TDrawBuffer::moveChar( ushort indent, char c, ushort attr, ushort count )
 /*                                                                        */
 /*------------------------------------------------------------------------*/
 
-void TDrawBuffer::moveCStr( ushort indent, const char *str, ushort attrs)
+void TDrawBuffer::moveCStr(ushort indent, const char *str, ushort attrs)
 {
-    ushort *dest = &data[indent];
-    int toggle;
-    uchar c, curAttr;
+	ushort *dest = &data[indent];
+	int toggle;
+	uchar c, curAttr;
 
-    for (curAttr= attrs & 0xff, toggle=1; (c=*str) != 0; str++)
-        {
-        if (c == '~')
-            {
-		if (toggle == 0) curAttr = attrs & 0xff;
-		else curAttr = (attrs & 0xff00) >> 8;
-                toggle = 1-toggle;
-            }
-        else
-            {
-		*dest = (curAttr << 8) | c;
-                dest++;
-            }
-        }
+	for (curAttr = attrs & 0xff, toggle = 1; (c = *str) != 0; str++) {
+		if (c == '~') {
+			if (toggle == 0)
+				curAttr = attrs & 0xff;
+			else
+				curAttr = (attrs & 0xff00) >> 8;
+			toggle = 1 - toggle;
+		} else {
+			*dest = (curAttr << 8) | c;
+			dest++;
+		}
+	}
 }
 
 /*------------------------------------------------------------------------*/
@@ -139,11 +133,11 @@ void TDrawBuffer::moveCStr( ushort indent, const char *str, ushort attrs)
 /*                                                                        */
 /*------------------------------------------------------------------------*/
 
-void TDrawBuffer::moveStr( ushort indent, const char *str, ushort attr )
+void TDrawBuffer::moveStr(ushort indent, const char *str, ushort attr)
 {
-    attr <<= 8;
-    while ( indent < (sizeof(data)/sizeof((data)[0])) && *str != '\0' )
-      data[indent++] = (unsigned char)(*str++) + attr;
+	attr <<= 8;
+	while (indent < (sizeof(data) / sizeof((data)[0])) && *str != '\0')
+		data[indent++] = (unsigned char)(*str++) + attr;
 }
 
 /*------------------------------------------------------------------------*/
@@ -164,35 +158,31 @@ ushort ctrlToArrow(ushort keyCode)
 {
 
 #ifndef __UNPATCHED
-static const uchar ctrlCodes[] =
-		{
-    kbCtrlS, kbCtrlD, kbCtrlE, kbCtrlX, kbCtrlA,
-    kbCtrlF, kbCtrlG, kbCtrlV, kbCtrlR, kbCtrlC, kbCtrlH
-    };
+	static const uchar ctrlCodes[] = {
+		kbCtrlS, kbCtrlD, kbCtrlE, kbCtrlX, kbCtrlA,
+		kbCtrlF, kbCtrlG, kbCtrlV, kbCtrlR, kbCtrlC, kbCtrlH
+	};
 
-static const ushort arrowCodes[] =
-    {
-    kbLeft, kbRight, kbUp, kbDown, kbHome,
-    kbEnd,  kbDel,   kbIns,kbPgUp, kbPgDn, kbBack
-    };
+	static const ushort arrowCodes[] = {
+		kbLeft, kbRight, kbUp, kbDown, kbHome,
+		kbEnd, kbDel, kbIns, kbPgUp, kbPgDn, kbBack
+	};
 #else
-const uchar ctrlCodes[] =
-    {
-    kbCtrlS, kbCtrlD, kbCtrlE, kbCtrlX, kbCtrlA,
-    kbCtrlF, kbCtrlG, kbCtrlV, kbCtrlR, kbCtrlC, kbCtrlH
-    };
+	const uchar ctrlCodes[] = {
+		kbCtrlS, kbCtrlD, kbCtrlE, kbCtrlX, kbCtrlA,
+		kbCtrlF, kbCtrlG, kbCtrlV, kbCtrlR, kbCtrlC, kbCtrlH
+	};
 
-const ushort arrowCodes[] =
-    {
-    kbLeft, kbRight, kbUp, kbDown, kbHome,
-    kbEnd,  kbDel,   kbIns,kbPgUp, kbPgDn, kbBack
-    };
+	const ushort arrowCodes[] = {
+		kbLeft, kbRight, kbUp, kbDown, kbHome,
+		kbEnd, kbDel, kbIns, kbPgUp, kbPgDn, kbBack
+	};
 #endif
 
-    for( int i = 0; i < (int)sizeof(ctrlCodes); i++ )
-        if( (keyCode & 0x00ff) == ctrlCodes[i] )
-            return arrowCodes[i];
-    return keyCode;
+	for (int i = 0; i < (int)sizeof(ctrlCodes); i++)
+		if ((keyCode & 0x00ff) == ctrlCodes[i])
+			return arrowCodes[i];
+	return keyCode;
 }
 
 /*------------------------------------------------------------------------*/
@@ -214,13 +204,12 @@ const ushort arrowCodes[] =
 /*                                                                        */
 /*------------------------------------------------------------------------*/
 
-int cstrlen( const char *s )
+int cstrlen(const char *s)
 {
-    int len = 0;
-    while( *s != EOS )
-        {
-        if( *s++ != '~' )
-            len++;
-        }
-    return len;
+	int len = 0;
+	while (*s != EOS) {
+		if (*s++ != '~')
+			len++;
+	}
+	return len;
 }

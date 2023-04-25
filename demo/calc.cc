@@ -85,7 +85,7 @@ TCalcDisplay::~TCalcDisplay()
 	delete number;
 }
 
-TPalette & TCalcDisplay::getPalette() const
+TPalette & TCalcDisplay::getPalette()const
 {
 	static TPalette palette(cpCalcPalette, sizeof(cpCalcPalette) - 1);
 	return palette;
@@ -295,8 +295,6 @@ TStreamable *TCalculator::build()
 TStreamableClass RCalculator(TCalculator::name,
 			     TCalculator::build, __DELTA(TCalculator)
     );
-
-
 
 TCalculator::TCalculator():
 TWindowInit(&TCalculator::initFrame), TDialog(TRect(5, 3, 29, 18), "Calculator")

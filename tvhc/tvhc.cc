@@ -94,8 +94,9 @@
 //======================= File Management ===============================//
 
 TProtectedStream::TProtectedStream(char *aFileName,
-				   std::ios::openmode aMode):std::
-fstream(aFileName, aMode)
+				   std::ios::
+				   openmode aMode):std::fstream(aFileName,
+								aMode)
 {
 	strcpy(fileName, aFileName);
 	mode = aMode;
@@ -214,11 +215,11 @@ void warning(const char *text)
 
 //====================== Topic Reference Management =====================//
 
-void disposeFixUps(TFixUp * &p)
+void disposeFixUps(TFixUp *&p)
 {
 	TFixUp *q;
 
-	while (p != nullptr ) {
+	while (p != nullptr) {
 		q = p->next;
 		delete p;
 		p = q;
@@ -319,7 +320,7 @@ void recordReference(char *topic, opstream & s)
 	}
 }
 
-void doFixUps(TFixUp * p, ushort value, fpstream & s)
+void doFixUps(TFixUp *p, ushort value, fpstream & s)
 {
 	long pos;
 
@@ -521,7 +522,7 @@ void addToBuffer(char *line, Boolean wrapping)
 	ofs++;
 }
 
-void addXRef(char *xRef, int offset, uchar length, TCrossRefNode * &xRefs)
+void addXRef(char *xRef, int offset, uchar length, TCrossRefNode *&xRefs)
 {
 	TCrossRefNode *p, *pp, *prev;
 
@@ -564,7 +565,7 @@ void strdel(char *string, int pos, int len)
 	strcpy(string, tempstr);
 }
 
-void scanForCrossRefs(char *line, int &offset, TCrossRefNode * &xRefs)
+void scanForCrossRefs(char *line, int &offset, TCrossRefNode *&xRefs)
 {
 	int i;
 	char begXRef = '{';
@@ -587,7 +588,8 @@ void scanForCrossRefs(char *line, int &offset, TCrossRefNode * &xRefs)
 				strdel(line, i, 1);
 				++i;
 			} else {
-				if ((endPtr = strchr(line + i, endXRef)) == nullptr) {
+				if ((endPtr =
+				     strchr(line + i, endXRef)) == nullptr) {
 					error("Unterminated topic reference.");
 					++i;
 				} else {
@@ -656,7 +658,7 @@ Boolean isEndParagraph(State state)
 //-----------------------------------------------------------------------//
 
 TParagraph *readParagraph(std::fstream & textFile, int &offset,
-			  TCrossRefNode * &xRefs)
+			  TCrossRefNode *&xRefs)
 {
 	State state;
 	Boolean flag;
@@ -732,7 +734,7 @@ int xRefCount()
 	return (i);
 }
 
-void disposeXRefs(TCrossRefNode * p)
+void disposeXRefs(TCrossRefNode *p)
 {
 	TCrossRefNode *q;
 
@@ -744,7 +746,7 @@ void disposeXRefs(TCrossRefNode * p)
 	}
 }
 
-void recordTopicDefinitions(TTopicDefinition * p, THelpFile & helpFile)
+void recordTopicDefinitions(TTopicDefinition *p, THelpFile & helpFile)
 {
 	while (p != nullptr) {
 		resolveReference(p->topic, p->value, *(helpFile.stream));
@@ -829,7 +831,7 @@ void doWriteSymbol(void *p, void *p1)
 // Write the .H file containing all screen titles as constants.         //
 //----------------------------------------------------------------------//
 
-void writeSymbFile(TProtectedStream * symbFile)
+void writeSymbFile(TProtectedStream *symbFile)
 {
 	char header1[] = "const int\n";
 

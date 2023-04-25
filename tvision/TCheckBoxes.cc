@@ -14,29 +14,28 @@
 
 void TCheckBoxes::draw()
 {
-    drawMultiBox( button, " X" );
+	drawMultiBox(button, " X");
 }
 
 Boolean TCheckBoxes::mark(int item)
 {
-    return Boolean( (value & (1 <<  item)) != 0 );
+	return Boolean((value & (1 << item)) != 0);
 }
 
 void TCheckBoxes::press(int item)
 {
-    value = value^(1 << item);
+	value = value ^ (1 << item);
 }
 
 #if !defined(NO_STREAMABLE)
 
 TStreamable *TCheckBoxes::build()
 {
-    return new TCheckBoxes( streamableInit );
+	return new TCheckBoxes(streamableInit);
 }
 
-TCheckBoxes::TCheckBoxes( StreamableInit ) : TCluster( streamableInit )
+TCheckBoxes::TCheckBoxes(StreamableInit):TCluster(streamableInit)
 {
 }
-
 
 #endif

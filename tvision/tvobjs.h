@@ -28,16 +28,15 @@
  * @see TView
  * @short The fundamental class
  */
-class TObject
-{
-public:
+class TObject {
+      public:
     /**
      * Destructor.
      *
      * Performs the necessary cleanup and disposal for dynamic objects. Does
      * nothing.
      */
-    virtual ~TObject();
+	virtual ~ TObject();
     /**
      * Destroys the object pointed by `o'.
      *
@@ -48,7 +47,7 @@ public:
      * It calls `o->shutDown()' and after does `delete o'.
      * @see shutDown
      */
-    static void destroy( TObject *o );
+	static void destroy(TObject * o);
     /**
      * Releases TObject resources.
      *
@@ -58,18 +57,18 @@ public:
      * called. Does nothing.
      * @see destroy
      */
-    virtual void shutDown();
-private:
+	virtual void shutDown();
+      private:
 };
 
-inline void TObject::destroy( TObject *o )
+inline void TObject::destroy(TObject *o)
 {
-    if( o != nullptr )
-        o->shutDown();
-    delete o;
+	if (o != nullptr)
+		o->shutDown();
+	delete o;
 }
 
-#endif  // Uses_TObject
+#endif // Uses_TObject
 
 #if defined( Uses_TNSCollection ) && !defined( TV_TNSCollection )
 #define TV_TNSCollection
@@ -86,9 +85,8 @@ inline void TObject::destroy( TObject *o )
  * Note: type ccIndex is defined in file `ttypes.h' as int.
  * @short Handles a non-streamable collection of objects
  */
-class TNSCollection : public TObject
-{
-public:
+class TNSCollection:public TObject {
+      public:
     /**
      * Constructor.
      *
@@ -108,7 +106,7 @@ public:
      * </pre>
      * @see maxCollectionSize
      */
-    TNSCollection( ccIndex aLimit, ccIndex aDelta );
+	TNSCollection(ccIndex aLimit, ccIndex aDelta);
     /**
      * Destructor.
      *
@@ -119,20 +117,20 @@ public:
      * If @ref shouldDelete is False, the destructor sets @ref limit to 0 but
      * does not destroy the collection.
      */
-    ~TNSCollection();
+	~TNSCollection();
     /**
      * Releases all the resources allocated by this class.
      *
      * If class flag @ref shouldDelete is True the function @ref freeAll() is
      * called. This will delete each object of the array.
      */
-    virtual void shutDown();
+	virtual void shutDown();
     /**
      * Returns a pointer to the item indexed by `index' in the collection. If
      * `index' is less than 0 or greater than or equal to count, @ref error()
      * is called with an argument of coIndexError, and 0 is then returned.
      */
-    void *at( ccIndex index );
+	void *at(ccIndex index);
     /**
      * Returns the index of the given item; that is, the converse operation
      * to @ref at(). If the item is not in the collection, @ref indexOf()
@@ -140,13 +138,13 @@ public:
      *
      * The address of the item is passed in the `item' parameter.
      */
-    virtual ccIndex indexOf( void *item );
+	virtual ccIndex indexOf(void *item);
     /**
      * Removes the object at position `index' from the array.
      *
      * Then calls delete on the object.
      */
-    void atFree( ccIndex index );
+	void atFree(ccIndex index);
     /**
      * Removes the object at position `index' from the array.
      *
@@ -157,7 +155,7 @@ public:
      *
      * The item itself is not destroyed.
      */
-    void atRemove( ccIndex index );
+	void atRemove(ccIndex index);
     /**
      * Removes the item given by `item' from the collection.
      *
@@ -166,12 +164,12 @@ public:
      * @see TNSCollection::atRemove
      * @see TNSCollection::indexOf
      */
-    void remove( void *item );
+	void remove(void *item);
     /**
      * Removes all items from the collection by just setting @ref count to 0.
      * @see TNSCollection::count
      */
-    void removeAll();
+	void removeAll();
     /**
      * Removes and destroys the given item.
      *
@@ -180,14 +178,14 @@ public:
      * @see TNSCollection::atRemove
      * @see TNSCollection::indexOf
      */
-    void free( void *item );
+	void free(void *item);
     /**
      * Removes and destroys all items in the collection and sets @ref count
      * to 0.
      *
      * The array is cleared out but not deleted.
      */
-    void freeAll();
+	void freeAll();
     /**
      * Inserts a new object at position `index'.
      *
@@ -204,7 +202,7 @@ public:
      * @ref error() member function is called with an argument of coOverflow
      * and the new item is not inserted.
      */
-    void atInsert( ccIndex index, void *item );
+	void atInsert(ccIndex index, void *item);
     /**
      * Replaces the object at position `index'.
      *
@@ -214,26 +212,26 @@ public:
      *
      * Old object is lost.
      */
-    void atPut( ccIndex index, void *item );
+	void atPut(ccIndex index, void *item);
     /**
      * Inserts `item' into the collection, and adjusts other indexes if
      * necessary. By default, insertions are made at the end of the collection
      * by calling @ref atInsert().
      */
-    virtual ccIndex insert( void *item );
+	virtual ccIndex insert(void *item);
 #ifndef __UNPATCHED
     /**
      * This function is called on error conditions.
      *
      * By default calls function exit() to terminate the program.
      */
-    virtual void error( ccIndex code, ccIndex info );
+	virtual void error(ccIndex code, ccIndex info);
 #else
     /**
      * Called whenever a collection error is encountered. By default, this
      * member function produces a run-time error of (212 - `code').
      */
-    static void error( ccIndex code, ccIndex info );
+	static void error(ccIndex code, ccIndex info);
 #endif
     /**
      * firstThat() applies a @ref Boolean function `Test', along with an
@@ -289,7 +287,7 @@ public:
      * @see TNSCollection::forEach
      * @see TNSCollection::lastThat
      */
-    void *firstThat( ccTestFunc Test, void *arg );
+	void *firstThat(ccTestFunc Test, void *arg);
     /**
      * lastThat() applies the @ref Boolean function `Test', together with
      * the `arg' argument list to each item in the collection, starting at
@@ -302,7 +300,7 @@ public:
      * @see TNSCollection::firstThat
      * @see TNSCollection::forEach
      */
-    void *lastThat( ccTestFunc Test, void *arg );
+	void *lastThat(ccTestFunc Test, void *arg);
     /**
      * The forEach() iterator applies an action, given by the function
      * `action', to each item in the collection. The `arg' pointer can be used
@@ -318,14 +316,14 @@ public:
      * @see TNSCollection::firstThat
      * @see TNSCollection::lastThat
      */
-    void forEach( ccAppFunc action, void *arg );
+	void forEach(ccAppFunc action, void *arg);
     /**
      * Packs the array by removing null pointers from it.
      *
      * Deletes all null pointers in the collection and moves items up to fill
      * any gaps.
      */
-    void pack();
+	void pack();
     /**
      * Expands or shrinks the collection by changing the allocated size to
      * `aLimit'.
@@ -343,37 +341,37 @@ public:
      * array of `aLimit' elements is allocated, the old @ref items array is
      * copied into the new array, and the old array is deleted.
      */
-    virtual void setLimit( ccIndex aLimit );
+	virtual void setLimit(ccIndex aLimit);
     /**
      * Returns the number of items stored in the collection, up to
      * @ref maxCollectionSize.
      */
-    ccIndex getCount()
-        { return count; }
-protected:
+	ccIndex getCount() {
+		return count;
+      } protected:
     /**
      * Constructor.
      *
      * This constructor sets variable @ref shouldDelete to True and variables
      * @ref count, @ref limit and @ref delta to 0.
      */
-    TNSCollection();
+	TNSCollection();
     /**
      * A pointer to an array of generic item pointers.
      * This variable stores the array starting address.
      */
-    void **items;
+	void **items;
     /**
      * This variable stores the number of objects in the array.
      * @see TNSCollection::items
      * @see TNSCollection::limit
      */
-    ccIndex count;
+	ccIndex count;
     /**
      * The currently allocated size (in elements) of the @ref items list.
      * Current size of the array. Greater or equal than @ref count.
      */
-    ccIndex limit;
+	ccIndex limit;
     /**
      * This value is used every time the array must be enlarged. In this case
      * a number of delta pointers will be added to the array.
@@ -382,7 +380,7 @@ protected:
      * whenever it becomes full. If delta is zero, the collection cannot grow
      * beyond the size set by @ref limit.
      */
-    ccIndex delta;
+	ccIndex delta;
     /**
      * If set True (the default), the TNSCollection destructor will call
      * @ref freeAll() before setting @ref limit to 0. All objects will be
@@ -390,15 +388,15 @@ protected:
      *
      * If set False, the destructor simply sets @ref limit to 0.
      */
-    Boolean shouldDelete;
-private:
+	Boolean shouldDelete;
+      private:
     /**
      * Undocumented.
      */
-    virtual void freeItem( void *item );
+	virtual void freeItem(void *item);
 };
 
-#endif  // Uses_TNSCollection
+#endif // Uses_TNSCollection
 
 #if defined( Uses_TNSSortedCollection ) && !defined( TV_TNSSortedCollection )
 #define TV_TNSSortedCollection
@@ -412,9 +410,8 @@ private:
  * @short Handles a non-streamable collection sorted by a key (with or without
  * duplicates)
  */
-class TNSSortedCollection: public virtual TNSCollection
-{
-public:
+class TNSSortedCollection:public virtual TNSCollection {
+      public:
     /**
      * Invokes the TNSCollection constructor to set @ref count, @ref items
      * and @ref limit to 0; calls setLimit(aLimit) to set the collection
@@ -424,17 +421,19 @@ public:
      * Sets @ref duplicates data member to False. If you want to allow
      * duplicate keys, you must set @ref duplicates to True.
      */
-    TNSSortedCollection( ccIndex aLimit, ccIndex aDelta) :
-        TNSCollection( aLimit, aDelta ), duplicates(False)
-            { delta = aDelta; setLimit( aLimit ); }
+	TNSSortedCollection(ccIndex aLimit,
+			    ccIndex aDelta):TNSCollection(aLimit, aDelta),
+	    duplicates(False) {
+		delta = aDelta;
+		setLimit(aLimit);
+	}
     /**
      * Returns True if the item identified by `key' is found in the sorted
      * collection. If the item is found, `index' is set to the found index;
      * otherwise `index' is set to the index where the item would be placed if
      * inserted and False is returned.
-     */
-    virtual Boolean search( void *key, ccIndex& index );
-    virtual ccIndex indexOf( void *item );
+     */ virtual Boolean search(void *key, ccIndex & index);
+	virtual ccIndex indexOf(void *item);
     /**
      * If @ref duplicates data member is False, insert works as follows: if
      * the target item is not found in the sorted collection, it is inserted
@@ -444,7 +443,7 @@ public:
      * If @ref duplicates is True, the item is inserted ahead of any items
      * (if any) with the same key.
      */
-    virtual ccIndex insert( void *item );
+	virtual ccIndex insert(void *item);
     /**
      * Set to True if duplicate indexes are allowed; otherwise set to False.
      * The default is False.
@@ -452,23 +451,24 @@ public:
      * If @ref duplicates data member is True methods @ref search(),
      * @ref insert() and @ref indexOf() work differently.
      */
-    Boolean duplicates;
+	Boolean duplicates;
     /**
      * Undocumented.
      */
-    virtual void *keyOf( void *item );
-protected:
+	virtual void *keyOf(void *item);
+      protected:
     /**
      * Undocumented.
      */
-    TNSSortedCollection() : duplicates(False) {}
-private:
+      TNSSortedCollection():duplicates(False) {
+	}
+      private:
     /**
      * compare() is a pure virtual function that must be overridden in all
      * derived classes. compare() should compare the two key values, and
      * return a result.
      */
-    virtual int compare( void *key1, void *key2 ) = 0;
+	virtual int compare(void *key1, void *key2) = 0;
 };
 
-#endif  // Uses_TNSSortedCollection
+#endif // Uses_TNSSortedCollection

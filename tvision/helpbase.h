@@ -16,7 +16,7 @@
 /**
  * Undocumented.
  */
-const long magicHeader = 0x46484246L; //"FBHF"
+const long magicHeader = 0x46484246L;	//"FBHF"
 
 #define cHelpViewer "\x06\x07\x08"
 #define cHelpWindow "\x80\x81\x82\x83\x84\x85\x86\x87"
@@ -27,29 +27,28 @@ const long magicHeader = 0x46484246L; //"FBHF"
  * Part of the help system.
  * @short Part of the help system
  */
-class TParagraph
-{
-public:
+class TParagraph {
+      public:
     /**
      * Undocumented.
      */
-    TParagraph() {}
+	TParagraph() {
+	}
+    /**
+     * Undocumented.
+     */ TParagraph *next;
     /**
      * Undocumented.
      */
-    TParagraph *next;
+	Boolean wrap;
     /**
      * Undocumented.
      */
-    Boolean wrap;
+	ushort size;
     /**
      * Undocumented.
      */
-    ushort size;
-    /**
-     * Undocumented.
-     */
-    char *text;
+	char *text;
 };
 
 // TCrossRef
@@ -58,148 +57,156 @@ public:
  * Part of the help system.
  * @short Part of the help system
  */
-class TCrossRef
-{
-public:
+class TCrossRef {
+      public:
     /**
      * Undocumented.
      */
-    TCrossRef() {}
+	TCrossRef() {
+	}
+    /**
+     * Undocumented.
+     */ int ref;
     /**
      * Undocumented.
      */
-    int ref;
+	int offset;
     /**
      * Undocumented.
      */
-    int offset;
-    /**
-     * Undocumented.
-     */
-    uchar length;
+	uchar length;
 };
 
 /**
  * Undocumented.
  */
-typedef void (*TCrossRefHandler) ( opstream&, int );
+typedef void (*TCrossRefHandler)(opstream &, int);
 
 /**
  * Part of the help system.
  * @short Part of the help system
  */
-class THelpTopic: public TObject, public TStreamable
-{
-public:
+class THelpTopic:public TObject, public TStreamable {
+      public:
     /**
      * Undocumented.
      */
-    THelpTopic();
+	THelpTopic();
     /**
      * Undocumented.
      */
-    THelpTopic( StreamableInit ) {}
+	THelpTopic(StreamableInit) {
+	}
+    /**
+     * Undocumented.
+     */ virtual ~ THelpTopic();
     /**
      * Undocumented.
      */
-    virtual ~THelpTopic();
+	void addCrossRef(TCrossRef ref);
     /**
      * Undocumented.
      */
-    void addCrossRef( TCrossRef ref );
+	void addParagraph(TParagraph * p);
     /**
      * Undocumented.
      */
-    void addParagraph( TParagraph *p );
+	void getCrossRef(int i, TPoint & loc, uchar & length, int &ref);
     /**
      * Undocumented.
      */
-    void getCrossRef( int i, TPoint& loc, uchar& length, int& ref );
+	char *getLine(int line, char *buffer, int buflen);
     /**
      * Undocumented.
      */
-    char *getLine( int line, char *buffer, int buflen );
+	int getNumCrossRefs();
     /**
      * Undocumented.
      */
-    int getNumCrossRefs();
+	int numLines();
     /**
      * Undocumented.
      */
-    int numLines();
+	void setCrossRef(int i, TCrossRef & ref);
     /**
      * Undocumented.
      */
-    void setCrossRef( int i, TCrossRef& ref );
+	void setNumCrossRefs(int i);
     /**
      * Undocumented.
      */
-    void setNumCrossRefs( int i );
+	void setWidth(int aWidth);
     /**
      * Undocumented.
      */
-    void setWidth( int aWidth );
+	TParagraph *paragraphs;
     /**
      * Undocumented.
      */
-    TParagraph *paragraphs;
+	int numRefs;
     /**
      * Undocumented.
      */
-    int numRefs;
+	TCrossRef *crossRefs;
+      private:
+	char *wrapText(char *text, int size, int &offset, Boolean wrap,
+		       char *lineBuf, int lineBufLen);
+	void readParagraphs(ipstream & s);
+	void readCrossRefs(ipstream & s);
+	void writeParagraphs(opstream & s);
+	void writeCrossRefs(opstream & s);
+	void disposeParagraphs();
+	const char *streamableName() const {
+		return name;
+	} int width;
+	int lastOffset;
+	int lastLine;
+	TParagraph *lastParagraph;
+      protected:
+	virtual void write(opstream & os);
+	virtual void *read(ipstream & is);
+      public:
     /**
      * Undocumented.
      */
-    TCrossRef *crossRefs;
-private:
-    char *wrapText( char *text, int size, int& offset, Boolean wrap, char *lineBuf, int lineBufLen );
-    void readParagraphs( ipstream& s );
-    void readCrossRefs( ipstream& s );
-    void writeParagraphs( opstream& s );
-    void writeCrossRefs( opstream& s );
-    void disposeParagraphs();
-    const char *streamableName() const
-        { return name; }
-    int width;
-    int lastOffset;
-    int lastLine;
-    TParagraph *lastParagraph;
-protected:
-    virtual void write( opstream& os );
-    virtual void *read( ipstream& is );
-public:
+	static const char *const name;
     /**
      * Undocumented.
      */
-    static const char * const name;
-    /**
-     * Undocumented.
-     */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, THelpTopic& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, THelpTopic*& cl )
-    { return is >> (void *&)cl; }
+inline ipstream & operator >>(ipstream & is, THelpTopic & cl)
+{
+	return is >> static_cast < TStreamable & >(cl);
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, THelpTopic& cl )
-    { return os << static_cast<TStreamable&>(cl); }
+inline ipstream & operator >>(ipstream & is, THelpTopic *&cl)
+{
+	return is >> (void *&)cl;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, THelpTopic* cl )
-    { return os << static_cast<TStreamable *>(cl); }
+inline opstream & operator <<(opstream & os, THelpTopic & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
 
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, THelpTopic *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
 
 // THelpIndex
 
@@ -207,76 +214,84 @@ inline opstream& operator << ( opstream& os, THelpTopic* cl )
  * Part of the help system.
  * @short Part of the help system
  */
-class THelpIndex : public TObject, public TStreamable
-{
-public:
+class THelpIndex:public TObject, public TStreamable {
+      public:
     /**
      * Undocumented.
      */
-    THelpIndex();
+	THelpIndex();
     /**
      * Undocumented.
      */
-    THelpIndex( StreamableInit ) {}
+	THelpIndex(StreamableInit) {
+	}
+    /**
+     * Undocumented.
+     */ virtual ~ THelpIndex();
     /**
      * Undocumented.
      */
-    virtual ~THelpIndex();
+	long position(int);
     /**
      * Undocumented.
      */
-    long position( int );
+	void add(int, long);
     /**
      * Undocumented.
      */
-    void add( int, long );
+	ushort size;
     /**
      * Undocumented.
      */
-    ushort size;
+	long *index;
+      private:
+	const char *streamableName() const {
+		return name;
+      } protected:
+	 virtual void write(opstream & os);
+	virtual void *read(ipstream & is);
+      public:
     /**
      * Undocumented.
      */
-    long *index;
-private:
-    const char *streamableName() const
-        { return name; }
-protected:
-    virtual void write( opstream& os );
-    virtual void *read( ipstream& is );
-public:
+	static const char *const name;
     /**
      * Undocumented.
      */
-    static const char * const name;
-    /**
-     * Undocumented.
-     */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, THelpIndex& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, THelpIndex*& cl )
-    { return is >> (void *&)cl; }
+inline ipstream & operator >>(ipstream & is, THelpIndex & cl)
+{
+	return is >> static_cast < TStreamable & >(cl);
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, THelpIndex& cl )
-    { return os << static_cast<TStreamable&>(cl); }
+inline ipstream & operator >>(ipstream & is, THelpIndex *&cl)
+{
+	return is >> (void *&)cl;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, THelpIndex* cl )
-    { return os << static_cast<TStreamable *>(cl); }
+inline opstream & operator <<(opstream & os, THelpIndex & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
 
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, THelpIndex *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
 
 // THelpFile
 
@@ -284,56 +299,55 @@ inline opstream& operator << ( opstream& os, THelpIndex* cl )
  * Part of the help system.
  * @short Part of the help system
  */
-class THelpFile : public TObject
-{
-    static const char * invalidContext;
-public:
+class THelpFile:public TObject {
+	static const char *invalidContext;
+      public:
     /**
      * Undocumented.
      */
-    THelpFile( fpstream& s );
+	 THelpFile(fpstream & s);
     /**
      * Undocumented.
      */
-    virtual ~THelpFile();
+	 virtual ~ THelpFile();
     /**
      * Undocumented.
      */
-    THelpTopic *getTopic( int );
+	THelpTopic *getTopic(int);
     /**
      * Undocumented.
      */
-    THelpTopic *invalidTopic();
+	THelpTopic *invalidTopic();
     /**
      * Undocumented.
      */
-    void recordPositionInIndex( int );
+	void recordPositionInIndex(int);
     /**
      * Undocumented.
      */
-    void putTopic( THelpTopic* );
+	void putTopic(THelpTopic *);
     /**
      * Undocumented.
      */
-    fpstream *stream;
+	fpstream *stream;
     /**
      * Undocumented.
      */
-    Boolean modified;
+	Boolean modified;
     /**
      * Undocumented.
      */
-    THelpIndex *index;
+	THelpIndex *index;
     /**
      * Undocumented.
      */
-    long indexPos;
+	long indexPos;
 };
 
 /**
  * Undocumented.
  */
-extern void notAssigned( opstream& s, int value );
+extern void notAssigned(opstream & s, int value);
 
 /**
  * Undocumented.

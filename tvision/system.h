@@ -28,7 +28,7 @@ const int evMouseDown = 0x0001;
  * Mouse button released.
  * @see TEvent::what
  */
-const int evMouseUp   = 0x0002;
+const int evMouseUp = 0x0002;
 
 /** \var evMouseMove
  * Mouse changed location.
@@ -46,13 +46,13 @@ const int evMouseAuto = 0x0008;
  * Key pressed.
  * @see TEvent::what
  */
-const int evKeyDown   = 0x0010;
+const int evKeyDown = 0x0010;
 
 /** \var evCommand
  * Command event.
  * @see TEvent::what
  */
-const int evCommand   = 0x0100;
+const int evCommand = 0x0100;
 
 /** \var evBroadcast
  * Broadcast event.
@@ -66,29 +66,29 @@ const int evBroadcast = 0x0200;
  * Event already handled.
  * @see TEvent::what
  */
-const int evNothing   = 0x0000;
+const int evNothing = 0x0000;
 
 /** \var evMouse
  * Mouse event.
  * @see TEvent::what
  */
-const int evMouse     = 0x000f;
+const int evMouse = 0x000f;
 
 /** \var evKeyboard
  * Keyboard event.
  * @see TEvent::what
  */
-const int evKeyboard  = 0x0010;
+const int evKeyboard = 0x0010;
 
 /** \var evMessage
  * Message (command, broadcast, or user-defined) event.
  * @see TEvent::what
  */
-const int evMessage   = 0xFF00;
+const int evMessage = 0xFF00;
 
 /* Mouse button state masks */
 
-const int mbLeftButton  = 0x01;
+const int mbLeftButton = 0x01;
 const int mbRightButton = 0x02;
 
 /* Mouse event flags */
@@ -96,7 +96,7 @@ const int mbRightButton = 0x02;
 const int meMouseMoved = 0x01;
 const int meDoubleClick = 0x02;
 
-#endif  // TV_EVENT_CODES
+#endif // TV_EVENT_CODES
 
 #if defined( Uses_TEvent ) && !defined( TV_TEvent )
 #define TV_TEvent
@@ -111,12 +111,11 @@ const int meDoubleClick = 0x02;
  * @see TEventQueue
  * @short Information about mouse events
  */
-struct MouseEventType
-{
+struct MouseEventType {
     /**
      * This is the position where the event happened.
      */
-    TPoint where;
+	TPoint where;
     /**
      * Helps to specify the event.
      *
@@ -131,7 +130,7 @@ struct MouseEventType
      * meDoubleClick 0x02  Set if a button was double clicked
      * </pre>
      */
-    ulong eventFlags;           // Replacement for doubleClick.
+	ulong eventFlags;	// Replacement for doubleClick.
     /**
      * This bitmap variable stores the status of the control keys when the
      * event happened. The following values define keyboard states, and can be
@@ -155,7 +154,7 @@ struct MouseEventType
      * and libraries (gpm, ncurses). Usually only a subset of these flags are
      * detected. See file `system.cc' for details.
      */
-    ulong controlKeyState;
+	ulong controlKeyState;
     /**
      * This variable reports the status of the mouse buttons when the event
      * happened. It's a combination of the following constants:
@@ -179,7 +178,7 @@ struct MouseEventType
      * @ref TEventQueue::mouseReverse to True. See the `demo' program for more
      * information.
      */
-    uchar buttons;
+	uchar buttons;
 };
 
 /**
@@ -188,8 +187,7 @@ struct MouseEventType
  * @see TEvent
  * @short Information about a key
  */
-struct CharScanType
-{
+struct CharScanType {
     /**
      * This is the character code.
      *
@@ -197,14 +195,14 @@ struct CharScanType
      * characters. The value is zero if the key falls in the special key
      * class, like arrows, page up, etc.
      */
-    uchar charCode;
+	uchar charCode;
     /**
      * This is the scan code.
      *
      * Its value is non-zero if the key falls in the special key class. The
      * value is zero if the key is an ASCII character.
      */
-    uchar scanCode;
+	uchar scanCode;
 };
 
 /**
@@ -221,23 +219,22 @@ struct CharScanType
  * @see TEvent
  * @short Information about key presses
  */
-struct KeyDownEvent
-{
-    union //____keyUnion
-    {
-        /**
+struct KeyDownEvent {
+	union			//____keyUnion
+	{
+	/**
          * This is the key code.
          *
          * It is the concatenation of the scan code and the character code.
          * @see CharScanType
          */
-        ushort keyCode;
-        /**
+		ushort keyCode;
+	/**
          * The same as above, but splitted in its two components.
          * @see CharScanType
          */
-        CharScanType charScan;
-    };
+		CharScanType charScan;
+	};
     /**
      * Stores the status of the control keys when the event happened. The
      * following values define keyboard states, and can be used when
@@ -261,7 +258,7 @@ struct KeyDownEvent
      * and libraries (gpm, ncurses). Usually only a subset of these flags are
      * detected. See file `system.cc' for details.
      */
-    ulong controlKeyState;
+	ulong controlKeyState;
 };
 
 /**
@@ -276,8 +273,7 @@ struct KeyDownEvent
  * @see TEvent
  * @short Information about message events
  */
-struct MessageEvent
-{
+struct MessageEvent {
     /**
      * Is the code of the command.
      *
@@ -285,38 +281,38 @@ struct MessageEvent
      * defined in `colorsel.h', `dialogs.h', `editors.h', `outline.h' and
      * `stddlg.h'.
      */
-    ushort command;
-    union //____pointerUnion
-    {
-        /**
+	ushort command;
+	union			//____pointerUnion
+	{
+	/**
          * A generic pointer.
          *
          * I suggest you to pay attention to these fields. Use always the same
          * type in the sender and in the receivers of the message. Otherwise
          * you may experiment portability problems.
          */
-        void *infoPtr;
-        /**
+		void *infoPtr;
+	/**
          * A signed long.
          */
-        long infoLong;
-        /**
+		long infoLong;
+	/**
          * An unsigned short.
          */
-        ushort infoWord;
-        /**
+		ushort infoWord;
+	/**
          * A signed short.
          */
-        short infoInt;
-        /**
+		short infoInt;
+	/**
          * An unsigned byte.
          */
-        uchar infoByte;
-        /**
+		uchar infoByte;
+	/**
          * A signed character.
          */
-        char infoChar;
-    };
+		char infoChar;
+	};
 };
 
 /**
@@ -331,8 +327,7 @@ struct MessageEvent
  * appropriate action.
  * @short Information about events
  */
-struct TEvent
-{
+struct TEvent {
     /**
      * This field reports the event's type. Some mnemonics are defined to
      * indicate types of events to TVision event handlers. The following
@@ -373,25 +368,25 @@ struct TEvent
      * if ((event.what & @ref evMouse) != 0) doMouseEvent();
      * </pre>
      */
-    ushort what;
-    union //____eventUnion
-    {
-        /**
+	ushort what;
+	union			//____eventUnion
+	{
+	/**
          * Undocumented.
          */
-        MouseEventType mouse;
-        /**
+		MouseEventType mouse;
+	/**
          * Undocumented.
          */
-        KeyDownEvent keyDown;
-        /**
+		KeyDownEvent keyDown;
+	/**
          * Undocumented.
          */
-        MessageEvent message;
-    };
+		MessageEvent message;
+	};
 };
 
-#endif  // Uses_TEvent
+#endif // Uses_TEvent
 
 #if defined( Uses_TEventQueue ) && !defined( TV_TEventQueue )
 #define TV_TEventQueue
@@ -407,9 +402,8 @@ struct TEvent
  * @see MouseEventType
  * @short Information about mouse
  */
-class TEventQueue
-{
-public:
+class TEventQueue {
+      public:
     /**
      * In this time interval button presses are recognized as double-click
      * events.
@@ -417,15 +411,15 @@ public:
      * Not used in this port. It is still here only for backward compatibility
      * (the `demo' program uses it). See `system.cc' for details.
      */
-    static ushort doubleDelay;
+	static ushort doubleDelay;
     /**
      * If set to True left and right mouse buttons are swapped. See the `demo'
      * program for more information.
      */
-    static Boolean mouseReverse;
+	static Boolean mouseReverse;
 };
 
-#endif  // Uses_TEventQueue
+#endif // Uses_TEventQueue
 
 #if defined( Uses_TScreen ) && !defined( TV_TScreen )
 #define TV_TScreen
@@ -440,21 +434,19 @@ public:
  * Some old stuff is removed.
  * @short Display information
  */
-class TDisplay
-{
-public:
+class TDisplay {
+      public:
     /**
      * Mnemonics for the video modes used by TDisplay.
      *
      * This port uses smCO80 and smMono only.
      */
-    enum videoModes
-    {
-        smBW80	  = 0x0002,
-        smCO80	  = 0x0003,
-        smMono	  = 0x0007,
-        smFont8x8 = 0x0100
-    };
+	enum videoModes {
+		smBW80 = 0x0002,
+		smCO80 = 0x0003,
+		smMono = 0x0007,
+		smFont8x8 = 0x0100
+	};
 };
 
 #include <sys/types.h>
@@ -471,9 +463,8 @@ public:
  * program.
  * @short The interface to the system
  */
-class TScreen: public TDisplay
-{
-public:
+class TScreen:public TDisplay {
+      public:
     /**
      * Constructor.
      *
@@ -481,27 +472,27 @@ public:
      * screen devices, catches some useful signals and starts an interval
      * timer.
      */
-    TScreen();
+	TScreen();
     /**
      * Destructor.
      *
      * Releases the resources allocated by the constructor.
      */
-    ~TScreen();
+	~TScreen();
     /**
      * Returns the first available event.
      */
-    static void getEvent(TEvent &event);
+	static void getEvent(TEvent & event);
     /**
      * Emits a beep.
      */
-    static void makeBeep();
+	static void makeBeep();
     /**
      * Puts an event in the event queue.
      *
      * Do not use it, use @ref TProgram::putEvent() if you need.
      */
-    static void putEvent(TEvent &event);
+	static void putEvent(TEvent & event);
     /**
      * Recovers the execution of the application.
      *
@@ -509,7 +500,7 @@ public:
      * Called by @ref TApplication::resume(). You should call the latter
      * method.
      */
-    static void resume();
+	static void resume();
     /**
      * Stops the execution of the application.
      *
@@ -517,25 +508,25 @@ public:
      * Called by @ref TApplication::suspend(). You should call the latter
      * method.
      */
-    static void suspend();
+	static void suspend();
     /**
      * Shows or hides the cursor.
      *
      * Flag `show' specifies the operation to perform.
      */
-    static void drawCursor(int show);
+	static void drawCursor(int show);
     /**
      * Shows or hides the mouse pointer.
      *
      * Flag `show' specifies the operation to perform.
      */
-    static void drawMouse(int show);
+	static void drawMouse(int show);
     /**
      * Moves the cursor to another place.
      *
      * Parameters `x' and `y' are 0-based.
      */
-    static void moveCursor(int x, int y);
+	static void moveCursor(int x, int y);
     /**
      * Writes a row of character & attribute pairs on the screen.
      *
@@ -543,7 +534,7 @@ public:
      * buffer and `len' is the size of the buffer expressed as the number
      * of pairs.
      */
-    static void writeRow(int dst, ushort *src, int len);
+	static void writeRow(int dst, ushort * src, int len);
     /**
      * Holds the current screen mode.
      *
@@ -551,25 +542,25 @@ public:
      * @ref TProgram::initScreen().
      * @see TDisplay
      */
-    static ushort screenMode;
+	static ushort screenMode;
     /**
      * Holds the current screen width.
      *
      * It is initialized by the constructor of this class.
      */
-    static uchar screenWidth;
+	static uchar screenWidth;
     /**
      * Holds the current screen height.
      *
      * It is initialized by the constructor of this class.
      */
-    static uchar screenHeight;
+	static uchar screenHeight;
     /**
      * Holds the current screen buffer address.
      *
      * It is initialized by the constructor of this class.
      */
-    static ushort *screenBuffer;
+	static ushort *screenBuffer;
     /**
      * File descriptor set to watch for read operations.
      *
@@ -577,42 +568,42 @@ public:
      * Do not FD_ZERO() it in your program. However, FD_SET() and FD_CLR()
      * are OK.
      */
-    static fd_set fdSetRead;
+	static fd_set fdSetRead;
     /**
      * File descriptor set to watch for write operations.
      *
      * This set is used in @ref select() within getEvent(). It is empty by
      * default and can be used freely.
      */
-    static fd_set fdSetWrite;
+	static fd_set fdSetWrite;
     /**
      * File descriptor set to watch for I/O exceptions.
      *
      * This set is used in select() within @ref getEvent(). It is empty by
      * default and can be used freely.
      */
-    static fd_set fdSetExcept;
+	static fd_set fdSetExcept;
     /**
      * File descriptor set to indicate read() availability.
      *
      * This set is returned by select() within @ref getEvent(). It can be
      * tested to handle operations on files mentioned in @ref fdSetRead.
      */
-    static fd_set fdActualRead;
+	static fd_set fdActualRead;
     /**
      * File descriptor set to indicate write() completion.
      *
      * This set is returned by select() within @ref getEvent(). It can be
      * tested to handle operations on files mentioned in @ref fdSetWrite.
      */
-    static fd_set fdActualWrite;
+	static fd_set fdActualWrite;
     /**
      * File descriptor set to indicate I/O exceptions.
      *
      * This set is returned by select() within @ref getEvent(). It can be
      * tested to handle exceptions on files mentioned in @ref fdSetExcept.
      */
-    static fd_set fdActualExcept;
+	static fd_set fdActualExcept;
 };
 
-#endif  // Uses_TScreen
+#endif // Uses_TScreen

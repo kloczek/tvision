@@ -13,13 +13,13 @@
 #define Uses_TEditorDialog
 #include <tv.h>
 
-ushort defEditorDialog( int, ... )
+ushort defEditorDialog(int, ...)
 {
-    return cmCancel;
+	return cmCancel;
 }
 
 TEditorDialog TEditor::editorDialog = defEditorDialog;
 ushort TEditor::editorFlags = efBackupFiles | efPromptOnReplace;
 char TEditor::findStr[maxFindStrLen] = "";
 char TEditor::replaceStr[maxReplaceStrLen] = "";
-TEditor * TEditor::clipboard = nullptr;
+TEditor *TEditor::clipboard = nullptr;

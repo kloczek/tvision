@@ -88,7 +88,7 @@ void TTable::draw()
 void TTable::charFocused()
 {
 	message(owner, evBroadcast, cmAsciiTableCmdBase + cmCharFocused,
-		(void *)(ptrdiff_t) (cursor.x + 32 * cursor.y));
+		(void *)(ptrdiff_t)(cursor.x + 32 * cursor.y));
 }
 
 void TTable::handleEvent(TEvent & event)

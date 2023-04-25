@@ -19,27 +19,27 @@
 /**
  * Undocumented.
  */
-inline int min( int a, int b )
+inline int min(int a, int b)
 {
-    return (a>b) ? b : a;
+	return (a > b) ? b : a;
 }
 
 /**
  * Undocumented.
  */
-inline int max( int a, int b )
+inline int max(int a, int b)
 {
-    return (a<b) ? b : a;
+	return (a < b) ? b : a;
 }
 
 /**
  * Undocumented.
  */
-void fexpand( char * );
+void fexpand(char *);
 /**
  * Undocumented.
  */
-char hotKey( const char *s );
+char hotKey(const char *s);
 
 /** \fn ctrlToArrow( ushort keyCode )
  * Converts a WordStar-compatible control key code to the corresponding cursor
@@ -63,7 +63,7 @@ char hotKey( const char *s );
  * Ctrl-X    0x18        kbDown
  * </pre>
  */
-ushort ctrlToArrow( ushort keyCode );
+ushort ctrlToArrow(ushort keyCode);
 
 /** \fn getAltChar( ushort keyCode )
  * Returns the character ch for which Alt-ch produces the 2-byte scan code
@@ -71,14 +71,14 @@ ushort ctrlToArrow( ushort keyCode );
  * getAltCode().
  * @see getAltCode
  */
-char getAltChar( ushort keyCode );
+char getAltChar(ushort keyCode);
 
 /** \fn getAltCode( char ch )
  * Returns the 2-byte scan code (key code) corresponding to Alt-ch. This
  * function gives the reverse mapping to getAltChar().
  * @see getAltChar
  */
-ushort getAltCode( char ch );
+ushort getAltCode(char ch);
 
 /** \fn getCtrlChar( ushort keyCode )
  * Returns the character, ch, for which Ctrl+ch produces the 2-byte scan code
@@ -86,14 +86,14 @@ ushort getAltCode( char ch );
  * getCtrlCode().
  * @see getCtrlCode
  */
-char getCtrlChar( ushort keyCode );
+char getCtrlChar(ushort keyCode);
 
 /** \fn getCtrlCode( uchar ch )
  * Returns the 2-byte scan code (keycode) corresponding to Ctrl+ch, where `ch'
  * is the argument. This function gives the reverse mapping to getCtrlChar().
  * @see getCtrlChar
  */
-ushort getCtrlCode( uchar ch );
+ushort getCtrlCode(uchar ch);
 
 /** \fn historyCount( uchar id )
  * Returns the number of strings in the history list corresponding to ID
@@ -105,7 +105,7 @@ ushort getCtrlCode( uchar ch );
  * @see historyAdd
  * @see historyStr
  */
-ushort historyCount( uchar id );
+ushort historyCount(uchar id);
 
 /** \fn historyStr( uchar id, int index )
  * Returns the index'th string in the history list corresponding to ID number
@@ -117,7 +117,7 @@ ushort historyCount( uchar id );
  * @see historyAdd
  * @see historyCount
  */
-const char *historyStr( uchar id, int index );
+const char *historyStr(uchar id, int index);
 
 /** \fn historyAdd( uchar id, const char *str )
  * Adds the string `str' to the history list indicated by `id'.
@@ -128,7 +128,7 @@ const char *historyStr( uchar id, int index );
  * @see historyCount
  * @see historyStr
  */
-void historyAdd( uchar id, const char *str );
+void historyAdd(uchar id, const char *str);
 
 /** \fn cstrlen( const char *s )
  * Returns the length of string `s', where `s' is a control string using tilde
@@ -136,7 +136,7 @@ void historyAdd( uchar id, const char *str );
  * length of the string, as they will not appear on the screen. For example,
  * given the argument "~B~roccoli", cstrlen() returns 8.
  */
-int cstrlen( const char *s );
+int cstrlen(const char *s);
 
 class TView;
 
@@ -164,7 +164,7 @@ class TView;
  * The above message ensures that the appropriate views are redrawn whenever
  * the scroll bar's value changes.
  */
-void *message( TView *receiver, ushort what, ushort command, void *infoPtr );
+void *message(TView * receiver, ushort what, ushort command, void *infoPtr);
 
 /** \fn lowMemory()
  * Calls TVMemMgr::safetyPoolExhausted() to check the state of the safety
@@ -180,28 +180,28 @@ Boolean lowMemory();
  *
  * You can use delete to dispose of such strings.
  */
-char *newStr( const char *s );
+char *newStr(const char *s);
 
 /**
  * Undocumented.
  */
-Boolean isDir( const char *str );
+Boolean isDir(const char *str);
 /**
  * Undocumented.
  */
-Boolean pathValid( const char *path );
+Boolean pathValid(const char *path);
 /**
  * Undocumented.
  */
-Boolean validFileName( const char *fileName );
+Boolean validFileName(const char *fileName);
 /**
  * Undocumented.
  */
-void getCurDir( char *dir );
+void getCurDir(char *dir);
 /**
  * Undocumented.
  */
-Boolean isWild( const char *f );
+Boolean isWild(const char *f);
 
 //from system.cc
 
@@ -214,4 +214,4 @@ void expandPath(const char *path, char *dir, char *file);
  */
 long int filelength(int fd);
 
-#endif  // TV_INC_UTIL_H
+#endif // TV_INC_UTIL_H

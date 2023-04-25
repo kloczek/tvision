@@ -128,12 +128,18 @@ TMenuBar *TMyApp::initMenuBar(TRect r)
 {
 	r.b.y = r.a.y + 1;	// set bottom line 1 line below top line
 	return new TMenuBar(r,
-		*new TSubMenu("~F~ile", kbAltF) +
-		  *new TMenuItem("E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X") +
-		*new TSubMenu("~W~indow", kbAltW) +
-		  *new TMenuItem("~N~ext", cmNext, kbF6, hcNoContext, "F6") +
-		  *new TMenuItem("~Z~oom", cmZoom, kbF5, hcNoContext, "F5") +
-		  *new TMenuItem("~D~ialog", cmNewDialog, kbF2,  hcNoContext, "F2")
+			    *new TSubMenu("~F~ile", kbAltF) +
+			    *new TMenuItem("E~x~it", cmQuit, cmQuit,
+					   hcNoContext,
+					   "Alt-X") + *new TSubMenu("~W~indow",
+								    kbAltW) +
+			    *new TMenuItem("~N~ext", cmNext, kbF6, hcNoContext,
+					   "F6") + *new TMenuItem("~Z~oom",
+								  cmZoom, kbF5,
+								  hcNoContext,
+								  "F5") +
+			    *new TMenuItem("~D~ialog", cmNewDialog, kbF2,
+					   hcNoContext, "F2")
 	    );
 }
 
@@ -141,9 +147,9 @@ TStatusLine *TMyApp::initStatusLine(TRect r)
 {
 	r.a.y = r.b.y - 1;	// move top to 1 line above bottom
 	return new TStatusLine(r,
-		*new TStatusDef(0, 0xFFFF) +
-		  *new TStatusItem(nullptr, kbF10, cmMenu) +
-		  *new TStatusItem("~Alt-X~ Exit", kbAltX, cmQuit)
+			       *new TStatusDef(0, 0xFFFF) +
+			       *new TStatusItem(nullptr, kbF10, cmMenu) +
+			       *new TStatusItem("~Alt-X~ Exit", kbAltX, cmQuit)
 	    );
 }
 

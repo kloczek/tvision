@@ -16,31 +16,27 @@
 #define Uses_TMenuPopup
 #include <tv.h>
 
-TMenuPopup::TMenuPopup(TRect& bounds, TMenu* aMenu) :
-    TMenuBox( bounds, aMenu, nullptr )
+TMenuPopup::TMenuPopup(TRect & bounds, TMenu *aMenu):
+TMenuBox(bounds, aMenu, nullptr)
 {
 }
 
-void TMenuPopup::handleEvent(TEvent& event)
+void TMenuPopup::handleEvent(TEvent & event)
 {
-    switch (event.what)
-    {
-    case evKeyDown:
-        TMenuItem* p = findItem(getCtrlChar(event.keyDown.keyCode));
-        if (!p)
-            p = hotKey(event.keyDown.keyCode);
-        if (p && commandEnabled(p->command))
-        {
-            event.what = evCommand;
-            event.message.command = p->command;
-            event.message.infoPtr = nullptr;
-            putEvent(event);
-            clearEvent(event);
-        }
-        else
-            if (getAltChar(event.keyDown.keyCode))
-                clearEvent(event);
-        break;
-    }
-    TMenuBox::handleEvent(event);
+	switch (event.what) {
+	case evKeyDown:
+		TMenuItem * p = findItem(getCtrlChar(event.keyDown.keyCode));
+		if (!p)
+			p = hotKey(event.keyDown.keyCode);
+		if (p && commandEnabled(p->command)) {
+			event.what = evCommand;
+			event.message.command = p->command;
+			event.message.infoPtr = nullptr;
+			putEvent(event);
+			clearEvent(event);
+		} else if (getAltChar(event.keyDown.keyCode))
+			clearEvent(event);
+		break;
+	}
+	TMenuBox::handleEvent(event);
 }

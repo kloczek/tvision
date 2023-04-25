@@ -23,117 +23,116 @@
 
 /* from MISC.CPP */
 
-void *message( TView *receiver, ushort what, ushort command, void *infoPtr)
+void *message(TView *receiver, ushort what, ushort command, void *infoPtr)
 {
-    if( receiver == nullptr )
-        return nullptr;
+	if (receiver == nullptr)
+		return nullptr;
 
-    TEvent event;
-    event.what = what;
-    event.message.command = command;
-    event.message.infoPtr = infoPtr;
-    receiver->handleEvent( event );
-    if( event.what == evNothing )
-        return event.message.infoPtr;
-    else
-        return nullptr;
+	TEvent event;
+	event.what = what;
+	event.message.command = command;
+	event.message.infoPtr = infoPtr;
+	receiver->handleEvent(event);
+	if (event.what == evNothing)
+		return event.message.infoPtr;
+	else
+		return nullptr;
 }
 
 Boolean lowMemory()
 {
-    return Boolean(TVMemMgr::safetyPoolExhausted());
+	return Boolean(TVMemMgr::safetyPoolExhausted());
 }
 
 /* from NEWSTR.CPP */
 
-char *newStr( const char *s )
+char *newStr(const char *s)
 {
-    if( s == nullptr )
-        return nullptr;
-    char *temp = new char[ strlen(s)+1 ];
-    strcpy( temp, s );
-    return temp;
+	if (s == nullptr)
+		return nullptr;
+	char *temp = new char[strlen(s) + 1];
+	strcpy(temp, s);
+	return temp;
 }
 
 /* from GRP.CPP */
 
-TView *TGroup::at( short index )
+TView *TGroup::at(short index)
 {
-    TView *temp = last;
-    while( index-- > 0 )
-        temp = temp->next;
-    return temp;
+	TView *temp = last;
+	while (index-- > 0)
+		temp = temp->next;
+	return temp;
 }
 
-TView *TGroup::firstThat( Boolean (*func)(TView *, void *), void *args )
+TView *TGroup::firstThat(Boolean(*func) (TView *, void *), void *args)
 {
-    TView *temp = last;
-    if( temp == nullptr )
-        return nullptr;
+	TView *temp = last;
+	if (temp == nullptr)
+		return nullptr;
 
-    do  {
-        temp = temp->next;
-        if( func( temp, args ) == True )
-            return temp;
-        } while( temp != last );
-    return nullptr;
+	do {
+		temp = temp->next;
+		if (func(temp, args) == True)
+			return temp;
+	} while (temp != last);
+	return nullptr;
 }
 
-void TGroup::forEach( void (*func)(TView*, void *), void *args )
+void TGroup::forEach(void (*func)(TView *, void *), void *args)
 {
-    TView *term = last;
-    TView *temp = last;
-    if( temp == nullptr )
-        return;
+	TView *term = last;
+	TView *temp = last;
+	if (temp == nullptr)
+		return;
 
-    TView *next = temp->next;
-    do  {
-        temp = next;
-        next = temp->next;
-        func( temp, args );
-        } while( temp != term );
+	TView *next = temp->next;
+	do {
+		temp = next;
+		next = temp->next;
+		func(temp, args);
+	} while (temp != term);
 
 }
 
-short TGroup::indexOf( TView *p )
+short TGroup::indexOf(TView *p)
 {
-    if( last == nullptr )
-        return 0;
+	if (last == nullptr)
+		return 0;
 
-    short index = 0;
-    TView *temp = last;
-    do  {
-        index++;
-        temp = temp->next;
-        } while( temp != p && temp != last );
-    if( temp != p )
-        return 0;
-    else
-        return index;
+	short index = 0;
+	TView *temp = last;
+	do {
+		index++;
+		temp = temp->next;
+	} while (temp != p && temp != last);
+	if (temp != p)
+		return 0;
+	else
+		return index;
 }
 
 /* from MAPCOLOR.CPP */
 
-uchar TView::mapColor( uchar color )
+uchar TView::mapColor(uchar color)
 {
-    if( color == 0 )
-        return errorAttr;
-    TView *cur = this;
-    do  {
-        TPalette& p = cur->getPalette();
-        if( p[0] != 0 )
-            {
-            if( color > p[0] )
-                return errorAttr;
-            color = p[color];
-            if( color == 0 )
-                return errorAttr;
-            }
-        cur = cur->owner;
-        } while( cur != nullptr );
-    return color;
+	if (color == 0)
+		return errorAttr;
+	TView *cur = this;
+	do {
+		TPalette & p = cur->getPalette();
+		if (p[0] != 0) {
+			if (color > p[0])
+				return errorAttr;
+			color = p[color];
+			if (color == 0)
+				return errorAttr;
+		}
+		cur = cur->owner;
+	} while (cur != nullptr);
+	return color;
 }
 
 /* from STRMSTAT.CPP */
 
-TStreamableTypes * pstream::types;
+TStreamableTypes *pstream::types;

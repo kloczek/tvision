@@ -20,8 +20,7 @@ class TCalendarView:public TView {
       public:
 	TCalendarView(TRect & r);
 	TCalendarView(StreamableInit):TView(streamableInit) {
-	}
-	virtual void handleEvent(TEvent & event);
+	} virtual void handleEvent(TEvent & event);
 	virtual void draw();
 
       private:
@@ -30,8 +29,9 @@ class TCalendarView:public TView {
 
 	virtual const char *streamableName() const {
 		return name;
-      } protected:
-	virtual void write(opstream &);
+	}
+      protected:
+	 virtual void write(opstream &);
 	virtual void *read(ipstream &);
 
       public:
@@ -44,7 +44,7 @@ inline ipstream & operator >>(ipstream & is, TCalendarView & cl)
 	return is >> (TStreamable &) cl;
 }
 
-inline ipstream & operator >>(ipstream & is, TCalendarView * &cl)
+inline ipstream & operator >>(ipstream & is, TCalendarView *&cl)
 {
 	return is >> (void *&)cl;
 }
@@ -54,7 +54,7 @@ inline opstream & operator <<(opstream & os, TCalendarView & cl)
 	return os << (TStreamable &) cl;
 }
 
-inline opstream & operator <<(opstream & os, TCalendarView * cl)
+inline opstream & operator <<(opstream & os, TCalendarView *cl)
 {
 	return os << (TStreamable *) cl;
 }
@@ -62,16 +62,14 @@ inline opstream & operator <<(opstream & os, TCalendarView * cl)
 class TCalendarWindow:public TWindow {
       public:
 	TCalendarWindow();
-	TCalendarWindow(StreamableInit):TWindowInit(&TCalendarWindow::
-						    initFrame),
-	    TWindow(streamableInit) {
-	}
-
-      private:
-	virtual const char *streamableName() const {
+	TCalendarWindow(StreamableInit):TWindowInit
+	    (&TCalendarWindow::initFrame), TWindow(streamableInit) {
+      } private:
+	 virtual const char *streamableName() const {
 		return name;
-      } protected:
-	virtual void write(opstream &);
+	}
+      protected:
+	 virtual void write(opstream &);
 	virtual void *read(ipstream &);
 
       public:
@@ -84,7 +82,7 @@ inline ipstream & operator >>(ipstream & is, TCalendarWindow & cl)
 	return is >> (TStreamable &) cl;
 }
 
-inline ipstream & operator >>(ipstream & is, TCalendarWindow * &cl)
+inline ipstream & operator >>(ipstream & is, TCalendarWindow *&cl)
 {
 	return is >> (void *&)cl;
 }
@@ -94,7 +92,7 @@ inline opstream & operator <<(opstream & os, TCalendarWindow & cl)
 	return os << (TStreamable &) cl;
 }
 
-inline opstream & operator <<(opstream & os, TCalendarWindow * cl)
+inline opstream & operator <<(opstream & os, TCalendarWindow *cl)
 {
 	return os << (TStreamable *) cl;
 }

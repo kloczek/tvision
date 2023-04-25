@@ -12,91 +12,94 @@
 #define Uses_TMultiCheckBoxes
 #include <tv.h>
 
-TMultiCheckBoxes::TMultiCheckBoxes( TRect& bounds, TSItem* aStrings,
-                                    uchar aSelRange, ushort aFlags,
-                                    const char* aStates) :
-    TCluster(bounds, aStrings)
+TMultiCheckBoxes::TMultiCheckBoxes(TRect & bounds, TSItem *aStrings,
+				   uchar aSelRange, ushort aFlags,
+				   const char *aStates):TCluster(bounds,
+								 aStrings)
 {
-    selRange = aSelRange;
-    flags = aFlags;
-    states = newStr(aStates);
+	selRange = aSelRange;
+	flags = aFlags;
+	states = newStr(aStates);
 }
 
 #if !defined(NO_STREAMABLE)
 
-TMultiCheckBoxes::TMultiCheckBoxes( StreamableInit ) :
-    TCluster( streamableInit )
+TMultiCheckBoxes::TMultiCheckBoxes(StreamableInit):
+TCluster(streamableInit)
 {
 }
 
-void* TMultiCheckBoxes::read( ipstream& is )
+void *TMultiCheckBoxes::read(ipstream & is)
 {
-    TCluster::read(is);
-    is >> selRange >> flags;
-    states = is.readString();
+	TCluster::read(is);
+	is >> selRange >> flags;
+	states = is.readString();
 
-    return this;
+	return this;
 }
 
-void TMultiCheckBoxes::write( opstream& os )
+void TMultiCheckBoxes::write(opstream & os)
 {
-    TCluster::write( os );
-    os << selRange << flags;
-    os.writeString(states);
+	TCluster::write(os);
+	os << selRange << flags;
+	os.writeString(states);
 }
 
-TStreamable* TMultiCheckBoxes::build()
+TStreamable *TMultiCheckBoxes::build()
 {
-    return new TMultiCheckBoxes( streamableInit );
+	return new TMultiCheckBoxes(streamableInit);
 }
 
 #endif
 
 TMultiCheckBoxes::~TMultiCheckBoxes()
 {
-    delete states;
+	delete states;
 }
 
 void TMultiCheckBoxes::draw()
 {
-    drawMultiBox(" [ ] ", states);
+	drawMultiBox(" [ ] ", states);
 }
 
 ushort TMultiCheckBoxes::dataSize()
 {
-    return  sizeof(long);
+	return sizeof(long);
 }
 
 uchar TMultiCheckBoxes::multiMark(int item)
 {
-    return (long)((value&((flags&0xff)<<(item*(flags>>8))))>>(item*(flags>>8)));
+	return (long)((value & ((flags & 0xff) << (item * (flags >> 8)))) >>
+		      (item * (flags >> 8)));
 }
 
-void TMultiCheckBoxes::getData(void* p)
+void TMultiCheckBoxes::getData(void *p)
 {
-    *(unsigned long*)p = value;
-    drawView();
+	*(unsigned long *)p = value;
+	drawView();
 }
 
 void TMultiCheckBoxes::press(int item)
 {
-    short curState;
+	short curState;
 
-    int flo = flags & 0xff;
-    int fhi = flags >> 8;
+	int flo = flags & 0xff;
+	int fhi = flags >> 8;
 
-    curState = (long) (value & (flo << (item*fhi))) >> (item*fhi);
+	curState = (long)(value & (flo << (item * fhi))) >> (item * fhi);
 
-    curState--;
+	curState--;
 
-    if ((curState >= selRange) || (curState < 0))
-        curState = selRange - 1;
+	if ((curState >= selRange) || (curState < 0))
+		curState = selRange - 1;
 
-    value = (long)((value & ~(flo << (item*fhi))) | (curState<<(item * fhi)));
+	value =
+	    (long)((value & ~(flo << (item * fhi))) |
+		   (curState << (item * fhi)));
 }
 
-void TMultiCheckBoxes::setData(void* p)
+void TMultiCheckBoxes::setData(void *p)
 {
-    value = *(unsigned long*)p;
-    drawView();
+	value = *(unsigned long *)p;
+	drawView();
 }

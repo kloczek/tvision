@@ -70,312 +70,245 @@
 #define Uses_TWindow
 #include <tv.h>
 
-__link( RButton )
-__link( RCluster )
-__link( RDialog )
-__link( RDirListBox )
-__link( RFileInputLine )
-__link( RFileList )
-__link( RFrame )
-__link( RGroup )
-__link( RInputLine )
-__link( RLabel )
-__link( RListBox )
-__link( RListViewer )
-__link( RSortedListBox )
-__link( RScrollBar )
-__link( RStaticText )
-__link( RStringCollection )
-__link( RView )
-__link( RWindow )
+__link(RButton)
+    __link(RCluster)
+    __link(RDialog)
+    __link(RDirListBox)
+    __link(RFileInputLine)
+    __link(RFileList)
+    __link(RFrame)
+    __link(RGroup)
+    __link(RInputLine)
+    __link(RLabel)
+    __link(RListBox)
+    __link(RListViewer)
+    __link(RSortedListBox)
+    __link(RScrollBar)
+    __link(RStaticText)
+    __link(RStringCollection)
+    __link(RView)
+    __link(RWindow)
+TStreamableClass RBackground(TBackground::name,
+			     TBackground::build, __DELTA(TBackground)
+    );
 
-TStreamableClass RBackground( TBackground::name,
-                              TBackground::build,
-                              __DELTA(TBackground)
-                            );
+TStreamableClass RButton(TButton::name, TButton::build, __DELTA(TButton)
+    );
 
-TStreamableClass RButton( TButton::name,
-                          TButton::build,
-                          __DELTA(TButton)
-                        );
+TStreamableClass RChDirDialog(TChDirDialog::name,
+			      TChDirDialog::build, __DELTA(TChDirDialog)
+    );
 
-TStreamableClass RChDirDialog( TChDirDialog::name,
-                               TChDirDialog::build,
-                               __DELTA(TChDirDialog)
-                             );
+TStreamableClass RCheckBoxes(TCheckBoxes::name,
+			     TCheckBoxes::build, __DELTA(TCheckBoxes)
+    );
 
-TStreamableClass RCheckBoxes( TCheckBoxes::name,
-                              TCheckBoxes::build,
-                              __DELTA(TCheckBoxes)
-                            );
+TStreamableClass RColorSelector(TColorSelector::name,
+				TColorSelector::build, __DELTA(TColorSelector)
+    );
 
-TStreamableClass RColorSelector( TColorSelector::name,
-                                 TColorSelector::build,
-                                 __DELTA(TColorSelector)
-                               );
+TStreamableClass RMonoSelector(TMonoSelector::name,
+			       TMonoSelector::build, __DELTA(TMonoSelector)
+    );
 
-TStreamableClass RMonoSelector( TMonoSelector::name,
-                                TMonoSelector::build,
-                                __DELTA(TMonoSelector)
-                              );
+TStreamableClass RColorDisplay(TColorDisplay::name,
+			       TColorDisplay::build, __DELTA(TColorDisplay)
+    );
 
-TStreamableClass RColorDisplay( TColorDisplay::name,
-                                TColorDisplay::build,
-                                __DELTA(TColorDisplay)
-                              );
+TStreamableClass RColorGroupList(TColorGroupList::name,
+				 TColorGroupList::build,
+				 __DELTA(TColorGroupList)
+    );
 
-TStreamableClass RColorGroupList( TColorGroupList::name,
-                                  TColorGroupList::build,
-                                  __DELTA(TColorGroupList)
-                                );
+TStreamableClass RColorItemList(TColorItemList::name,
+				TColorItemList::build, __DELTA(TColorItemList)
+    );
 
+TStreamableClass RColorDialog(TColorDialog::name,
+			      TColorDialog::build, __DELTA(TColorDialog)
+    );
 
-TStreamableClass RColorItemList( TColorItemList::name,
-                                 TColorItemList::build,
-                                 __DELTA(TColorItemList)
-                               );
+TStreamableClass RCluster(TCluster::name, TCluster::build, __DELTA(TCluster)
+    );
 
-TStreamableClass RColorDialog( TColorDialog::name,
-                               TColorDialog::build,
-                               __DELTA(TColorDialog)
-                             );
+TStreamableClass RDeskTop(TDeskTop::name, TDeskTop::build, __DELTA(TDeskTop)
+    );
 
-TStreamableClass RCluster( TCluster::name,
-                           TCluster::build,
-                           __DELTA(TCluster)
-                         );
+TStreamableClass RDialog(TDialog::name, TDialog::build, __DELTA(TDialog)
+    );
 
-TStreamableClass RDeskTop( TDeskTop::name,
-                           TDeskTop::build,
-                           __DELTA(TDeskTop)
-                         );
+TStreamableClass RDirCollection(TDirCollection::name,
+				TDirCollection::build, __DELTA(TDirCollection)
+    );
 
-TStreamableClass RDialog( TDialog::name,
-                          TDialog::build,
-                          __DELTA(TDialog)
-                        );
+TStreamableClass RDirListBox(TDirListBox::name,
+			     TDirListBox::build, __DELTA(TDirListBox)
+    );
 
-TStreamableClass RDirCollection( TDirCollection::name,
-                                 TDirCollection::build,
-                                 __DELTA(TDirCollection)
-                               );
+TStreamableClass RIndicator(TIndicator::name,
+			    TIndicator::build, __DELTA(TIndicator)
+    );
 
-TStreamableClass RDirListBox( TDirListBox::name,
-                              TDirListBox::build,
-                              __DELTA(TDirListBox)
-                            );
+TStreamableClass REditor(TEditor::name, TEditor::build, __DELTA(TEditor)
+    );
 
-TStreamableClass RIndicator( TIndicator::name,
-                             TIndicator::build,
-                             __DELTA(TIndicator)
-                           );
+TStreamableClass RMemo(TMemo::name, TMemo::build, __DELTA(TMemo)
+    );
 
-TStreamableClass REditor( TEditor::name,
-                          TEditor::build,
-                          __DELTA(TEditor)
-                        );
+TStreamableClass RFileEditor(TFileEditor::name,
+			     TFileEditor::build, __DELTA(TFileEditor)
+    );
 
-TStreamableClass RMemo( TMemo::name,
-                        TMemo::build,
-                        __DELTA(TMemo)
-                      );
+TStreamableClass REditWindow(TEditWindow::name,
+			     TEditWindow::build, __DELTA(TEditWindow)
+    );
 
-TStreamableClass RFileEditor( TFileEditor::name,
-                              TFileEditor::build,
-                              __DELTA(TFileEditor)
-                            );
+TStreamableClass RFileCollection(TFileCollection::name,
+				 TFileCollection::build,
+				 __DELTA(TFileCollection)
+    );
 
-TStreamableClass REditWindow( TEditWindow::name,
-                              TEditWindow::build,
-                              __DELTA(TEditWindow)
-                            );
+TStreamableClass RFileDialog(TFileDialog::name,
+			     TFileDialog::build, __DELTA(TFileDialog)
+    );
 
-TStreamableClass RFileCollection( TFileCollection::name,
-                                  TFileCollection::build,
-                                  __DELTA(TFileCollection)
-                                );
+TStreamableClass RFileList(TFileList::name, TFileList::build, __DELTA(TFileList)
+    );
 
-TStreamableClass RFileDialog( TFileDialog::name,
-                              TFileDialog::build,
-                              __DELTA(TFileDialog)
-                            );
+TStreamableClass RSortedListBox(TSortedListBox::name,
+				TSortedListBox::build, __DELTA(TSortedListBox)
+    );
 
-TStreamableClass RFileList( TFileList::name,
-                            TFileList::build,
-                            __DELTA(TFileList)
-                          );
+TStreamableClass RFileInfoPane(TFileInfoPane::name,
+			       TFileInfoPane::build, __DELTA(TFileInfoPane)
+    );
 
-TStreamableClass RSortedListBox( TSortedListBox::name,
-                                 TSortedListBox::build,
-                                 __DELTA( TSortedListBox )
-                               );
-
-TStreamableClass RFileInfoPane( TFileInfoPane::name,
-                                TFileInfoPane::build,
-                                __DELTA(TFileInfoPane)
-                              );
-
-TFileInputLine::TFileInputLine( StreamableInit ) :
-                TInputLine( streamableInit)
+TFileInputLine::TFileInputLine(StreamableInit):
+TInputLine(streamableInit)
 {
 }
 
 TStreamable *TFileInputLine::build()
 {
-    return new TFileInputLine( streamableInit );
+	return new TFileInputLine(streamableInit);
 }
 
-TStreamableClass RFileInputLine( TFileInputLine::name,
-                                 TFileInputLine::build,
-                                __DELTA(TFileInputLine)
-                               );
+TStreamableClass RFileInputLine(TFileInputLine::name,
+				TFileInputLine::build, __DELTA(TFileInputLine)
+    );
 
-TStreamableClass RFrame( TFrame::name,
-                         TFrame::build,
-                         __DELTA(TFrame)
-                       );
+TStreamableClass RFrame(TFrame::name, TFrame::build, __DELTA(TFrame)
+    );
 
-TStreamableClass RGroup( TGroup::name,
-                         TGroup::build,
-                         __DELTA(TGroup)
-                       );
+TStreamableClass RGroup(TGroup::name, TGroup::build, __DELTA(TGroup)
+    );
 
-TStreamableClass RHistory( THistory::name,
-                           THistory::build,
-                           __DELTA(THistory)
-                         );
+TStreamableClass RHistory(THistory::name, THistory::build, __DELTA(THistory)
+    );
 
-TStreamableClass RInputLine( TInputLine::name,
-                             TInputLine::build,
-                             __DELTA(TInputLine)
-                           );
+TStreamableClass RInputLine(TInputLine::name,
+			    TInputLine::build, __DELTA(TInputLine)
+    );
 
-TStreamableClass RLabel( TLabel::name,
-                         TLabel::build,
-                         __DELTA(TLabel)
-                       );
+TStreamableClass RLabel(TLabel::name, TLabel::build, __DELTA(TLabel)
+    );
 
-TStreamableClass RListBox( TListBox::name,
-                           TListBox::build,
-                           __DELTA(TListBox)
-                         );
+TStreamableClass RListBox(TListBox::name, TListBox::build, __DELTA(TListBox)
+    );
 
-TStreamableClass RListViewer( TListViewer::name,
-                              TListViewer::build,
-                              __DELTA(TListViewer)
-                            );
+TStreamableClass RListViewer(TListViewer::name,
+			     TListViewer::build, __DELTA(TListViewer)
+    );
 
-TStreamableClass RMenuBar( TMenuBar::name,
-                           TMenuBar::build,
-                           __DELTA(TMenuBar)
-                         );
+TStreamableClass RMenuBar(TMenuBar::name, TMenuBar::build, __DELTA(TMenuBar)
+    );
 
-TStreamableClass RMenuBox( TMenuBox::name,
-                           TMenuBox::build,
-                           __DELTA(TMenuBox)
-                         );
+TStreamableClass RMenuBox(TMenuBox::name, TMenuBox::build, __DELTA(TMenuBox)
+    );
 
-TStreamableClass RMenuPopup( TMenuPopup::name,
-                           TMenuPopup::build,
-                           __DELTA(TMenuPopup)
-                         );
+TStreamableClass RMenuPopup(TMenuPopup::name,
+			    TMenuPopup::build, __DELTA(TMenuPopup)
+    );
 
-TStreamableClass RMenuView( TMenuView::name,
-                            TMenuView::build,
-                            __DELTA(TMenuView)
-                          );
+TStreamableClass RMenuView(TMenuView::name, TMenuView::build, __DELTA(TMenuView)
+    );
 
-TStreamableClass RMultiCheckBoxes( TMultiCheckBoxes::name,
-                                   TMultiCheckBoxes::build,
-                                   __DELTA(TMultiCheckBoxes)
-                                 );
+TStreamableClass RMultiCheckBoxes(TMultiCheckBoxes::name,
+				  TMultiCheckBoxes::build,
+				  __DELTA(TMultiCheckBoxes)
+    );
 
-TStreamableClass ROutline( TOutline::name,
-                              TOutline::build,
-                              __DELTA(TOutline)
-                            );
+TStreamableClass ROutline(TOutline::name, TOutline::build, __DELTA(TOutline)
+    );
 
-TStreamableClass RParamText( TParamText::name,
-                              TParamText::build,
-                              __DELTA(TParamText)
-                            );
+TStreamableClass RParamText(TParamText::name,
+			    TParamText::build, __DELTA(TParamText)
+    );
 
-TStreamableClass RRadioButtons( TRadioButtons::name,
-                                TRadioButtons::build,
-                                __DELTA(TRadioButtons)
-                              );
+TStreamableClass RRadioButtons(TRadioButtons::name,
+			       TRadioButtons::build, __DELTA(TRadioButtons)
+    );
 
-TStreamableClass RResourceCollection( TResourceCollection::name,
-                                      TResourceCollection::build,
-                                      __DELTA(TResourceCollection)
-                                    );
+TStreamableClass RResourceCollection(TResourceCollection::name,
+				     TResourceCollection::build,
+				     __DELTA(TResourceCollection)
+    );
 
-TStreamableClass RScrollBar( TScrollBar::name,
-                              TScrollBar::build,
-                              __DELTA(TScrollBar)
-                           );
+TStreamableClass RScrollBar(TScrollBar::name,
+			    TScrollBar::build, __DELTA(TScrollBar)
+    );
 
-TStreamableClass RScroller( TScroller::name,
-                             TScroller::build,
-                             __DELTA(TScroller)
-                          );
+TStreamableClass RScroller(TScroller::name, TScroller::build, __DELTA(TScroller)
+    );
 
-TStreamableClass RStaticText( TStaticText::name,
-                              TStaticText::build,
-                              __DELTA(TStaticText)
-                            );
+TStreamableClass RStaticText(TStaticText::name,
+			     TStaticText::build, __DELTA(TStaticText)
+    );
 
-TStreamableClass RStatusLine( TStatusLine::name,
-                              TStatusLine::build,
-                              __DELTA(TStatusLine)
-                            );
+TStreamableClass RStatusLine(TStatusLine::name,
+			     TStatusLine::build, __DELTA(TStatusLine)
+    );
 
-TStreamableClass RStringCollection( TStringCollection::name,
-                                    TStringCollection::build,
-                                    __DELTA(TStringCollection)
-                                  );
+TStreamableClass RStringCollection(TStringCollection::name,
+				   TStringCollection::build,
+				   __DELTA(TStringCollection)
+    );
 
-TStreamableClass RStringList( TStringList::name,
-                              TStringList::build,
-                              __DELTA(TStringList)
-                            );
+TStreamableClass RStringList(TStringList::name,
+			     TStringList::build, __DELTA(TStringList)
+    );
 
-TStreamableClass RValidator( TValidator::name,
-                         TValidator::build,
-                         __DELTA(TValidator)
-                       );
+TStreamableClass RValidator(TValidator::name,
+			    TValidator::build, __DELTA(TValidator)
+    );
 
-TStreamableClass RFilterValidator( TFilterValidator::name,
-                         TFilterValidator::build,
-                         __DELTA(TFilterValidator)
-                       );
+TStreamableClass RFilterValidator(TFilterValidator::name,
+				  TFilterValidator::build,
+				  __DELTA(TFilterValidator)
+    );
 
-TStreamableClass RRangeValidator( TRangeValidator::name,
-                         TRangeValidator::build,
-                         __DELTA(TRangeValidator)
-                       );
+TStreamableClass RRangeValidator(TRangeValidator::name,
+				 TRangeValidator::build,
+				 __DELTA(TRangeValidator)
+    );
 
-TStreamableClass RPXPictureValidator( TPXPictureValidator::name,
-                         TPXPictureValidator::build,
-                         __DELTA(TPXPictureValidator)
-                       );
+TStreamableClass RPXPictureValidator(TPXPictureValidator::name,
+				     TPXPictureValidator::build,
+				     __DELTA(TPXPictureValidator)
+    );
 
-TStreamableClass RLookupValidator( TLookupValidator::name,
-                         TLookupValidator::build,
-                         __DELTA(TLookupValidator)
-                       );
+TStreamableClass RLookupValidator(TLookupValidator::name,
+				  TLookupValidator::build,
+				  __DELTA(TLookupValidator)
+    );
 
-TStreamableClass RStringLookupValidator( TStringLookupValidator::name,
-                         TStringLookupValidator::build,
-                         __DELTA(TStringLookupValidator)
-                       );
+TStreamableClass RStringLookupValidator(TStringLookupValidator::name,
+					TStringLookupValidator::build,
+					__DELTA(TStringLookupValidator)
+    );
 
-TStreamableClass RView( TView::name,
-                        TView::build,
-                        __DELTA(TView)
-                      );
+TStreamableClass RView(TView::name, TView::build, __DELTA(TView)
+    );
 
-TStreamableClass RWindow( TWindow::name,
-                          TWindow::build,
-                          __DELTA(TWindow)
-                        );
+TStreamableClass RWindow(TWindow::name, TWindow::build, __DELTA(TWindow)
+    );

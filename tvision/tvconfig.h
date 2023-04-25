@@ -47,4 +47,4 @@ const int maxFindStrLen = 80;
  */
 const int maxReplaceStrLen = 80;
 
-#endif  // TV_INC_CONFIG_H
+#endif // TV_INC_CONFIG_H

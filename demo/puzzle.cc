@@ -125,7 +125,7 @@ void TPuzzleView::draw()
 	}
 }
 
-TPalette & TPuzzleView::getPalette() const
+TPalette & TPuzzleView::getPalette()const
 {
 	static TPalette palette(cpPuzzlePalette, sizeof(cpPuzzlePalette) - 1);
 	return palette;

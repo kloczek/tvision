@@ -22,33 +22,31 @@
 void initHistory();
 void doneHistory();
 
-TApplication::TApplication() :
-    TProgInit( &TApplication::initStatusLine,
-                  &TApplication::initMenuBar,
-                  &TApplication::initDeskTop
-                )
+TApplication::TApplication():
+TProgInit(&TApplication::initStatusLine,
+	  &TApplication::initMenuBar, &TApplication::initDeskTop)
 {
-    initHistory();
+	initHistory();
 }
 
 TApplication::~TApplication()
 {
-    doneHistory();
+	doneHistory();
 }
 
 void TApplication::suspend()
 {
-    /* SS: changed */
+	/* SS: changed */
 
-    TScreen::suspend();
+	TScreen::suspend();
 #ifndef __UNPATCHED
-    TVMemMgr::suspend();       // Release discardable memory.
+	TVMemMgr::suspend();	// Release discardable memory.
 #endif
 }
 
 void TApplication::resume()
 {
-    /* SS: changed */
+	/* SS: changed */
 
-    TScreen::resume();
+	TScreen::resume();
 }

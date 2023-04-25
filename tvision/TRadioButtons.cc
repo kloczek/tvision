@@ -14,40 +14,39 @@
 
 void TRadioButtons::draw()
 {
-    drawMultiBox( button, " \x7" );
+	drawMultiBox(button, " \x7");
 }
 
-Boolean TRadioButtons::mark( int item )
+Boolean TRadioButtons::mark(int item)
 {
-    return Boolean( item == (int)value );
+	return Boolean(item == (int)value);
 }
 
-void TRadioButtons::press( int item )
+void TRadioButtons::press(int item)
 {
-    value = item;
+	value = item;
 }
 
-void TRadioButtons::movedTo( int item )
+void TRadioButtons::movedTo(int item)
 {
-    value = item;
+	value = item;
 }
 
-void TRadioButtons::setData( void * rec )
+void TRadioButtons::setData(void *rec)
 {
-    TCluster::setData(rec);
-    sel = (int)value;
+	TCluster::setData(rec);
+	sel = (int)value;
 }
 
 #if !defined(NO_STREAMABLE)
 
 TStreamable *TRadioButtons::build()
 {
-    return new TRadioButtons( streamableInit );
+	return new TRadioButtons(streamableInit);
 }
 
-TRadioButtons::TRadioButtons( StreamableInit ) : TCluster( streamableInit )
+TRadioButtons::TRadioButtons(StreamableInit):TCluster(streamableInit)
 {
 }
-
 
 #endif

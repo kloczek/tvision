@@ -38,9 +38,11 @@ TStatusLine *TMyApp::initStatusLine(TRect r)
 {
 	r.a.y = r.b.y - 1;	// move top to 1 line above bottom
 	return new TStatusLine(r, *new TStatusDef(0, 0xFFFF) +
-		*new TStatusItem(nullptr, kbF10, cmMenu) +
-		*new TStatusItem("~Alt-X~ Exit", kbAltX, cmQuit) +
-		*new TStatusItem("~Alt-F3~ Close", kbAltF3, cmClose)
+			       *new TStatusItem(nullptr, kbF10, cmMenu) +
+			       *new TStatusItem("~Alt-X~ Exit", kbAltX,
+						cmQuit) +
+			       *new TStatusItem("~Alt-F3~ Close", kbAltF3,
+						cmClose)
 	    );
 }
 
@@ -49,14 +51,24 @@ TMenuBar *TMyApp::initMenuBar(TRect r)
 {
 	r.b.y = r.a.y + 1;	// set bottom line 1 line below top line
 	return new TMenuBar(r,
-		*new TSubMenu("~F~ile", kbAltF) +
-		  *new TMenuItem("~O~pen", cmMyFileOpen, kbF3, hcNoContext, "F3") +
-		  *new TMenuItem("~N~ew", cmMyNewWin, kbF4, hcNoContext, "F4") +
-		  newLine() +
-		  *new TMenuItem("E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X") +
-		*new TSubMenu("~W~indow", kbAltW) +
-		  *new TMenuItem("~N~ext", cmNext, kbF6, hcNoContext, "F6") +
-		  *new TMenuItem("~Z~oom", cmZoom, kbF5, hcNoContext, "F5")
+			    *new TSubMenu("~F~ile", kbAltF) +
+			    *new TMenuItem("~O~pen", cmMyFileOpen, kbF3,
+					   hcNoContext,
+					   "F3") + *new TMenuItem("~N~ew",
+								  cmMyNewWin,
+								  kbF4,
+								  hcNoContext,
+								  "F4") +
+			    newLine() + *new TMenuItem("E~x~it", cmQuit, cmQuit,
+						       hcNoContext,
+						       "Alt-X") +
+			    *new TSubMenu("~W~indow",
+					  kbAltW) + *new TMenuItem("~N~ext",
+								   cmNext, kbF6,
+								   hcNoContext,
+								   "F6") +
+			    *new TMenuItem("~Z~oom", cmZoom, kbF5, hcNoContext,
+					   "F5")
 	    );
 }
 

@@ -19,18 +19,14 @@
  */
 
 static const int
-  vsOk     =  0,
-  vsSyntax =  1,      // Error in the syntax of either a TPXPictureValidator
-                      // or a TDBPictureValidator
-
+ vsOk = 0, vsSyntax = 1,	// Error in the syntax of either a TPXPictureValidator
+    // or a TDBPictureValidator
 // Validator option flags
-  voFill     =  0x0001,
-  voTransfer =  0x0002,
-  voReserved =  0x00FC;
+    voFill = 0x0001, voTransfer = 0x0002, voReserved = 0x00FC;
 
 // TVTransfer constants
 
-enum TVTransfer {vtDataSize, vtSetData, vtGetData};
+enum TVTransfer { vtDataSize, vtSetData, vtGetData };
 
 // Abstract TValidator object
 
@@ -42,20 +38,19 @@ enum TVTransfer {vtDataSize, vtSetData, vtGetData};
  * @see TStreamable
  * @short Implements an abstract data validation object
  */
-class TValidator : public TObject, public TStreamable
-{
-public:
+class TValidator:public TObject, public TStreamable {
+      public:
     /**
      * Undocumented.
      */
-    TValidator();
+	TValidator();
     /**
      * This is an abstract method called by @ref validate() when it detects
      * that the user has entered invalid information. By default, error() does
      * nothing, but descendant types can override it to provide feedback to
      * the user.
      */
-    virtual void error();
+	virtual void error();
     /**
      * If an input line has an associated validator object, it calls
      * isValidInput() after processing each keyboard event. This gives
@@ -82,7 +77,7 @@ public:
      * string. By returning False, isValidInput() indicates that the input
      * line should erase the offending characters.
      */
-    virtual Boolean isValidInput(char* s, Boolean suppressFill);
+	virtual Boolean isValidInput(char *s, Boolean suppressFill);
     /**
      * By default, isValid() returns True. Descendant validator types can
      * override isValid() to validate data for a completed input line.
@@ -93,7 +88,7 @@ public:
      * method, which in turn calls @ref isValid() to determine whether the
      * contents of the input line are valid.
      */
-    virtual Boolean isValid(const char* s);
+	virtual Boolean isValid(const char *s);
     /**
      * transfer() allows a validator to take over setting and reading the
      * values of its associated input line, which is mostly useful for
@@ -137,7 +132,7 @@ public:
      * methods to control data transfer when setting or reading the value of
      * the associated input line.
      */
-    virtual ushort transfer(char *s, void* buffer, TVTransfer flag);
+	virtual ushort transfer(char *s, void *buffer, TVTransfer flag);
     /**
      * Returns True if @ref isValid(s) returns True. Otherwise calls
      * @ref error() and returns False. A validator's validate() method is
@@ -151,7 +146,7 @@ public:
      * validate() for all its controls, usually because the user requested to
      * close the dialog box or accept an entry screen.
      */
-    Boolean validate(const char* s);
+	Boolean validate(const char *s);
     /**
      * Indicates the status of the validator object. If status is vsOK, the
      * validator object constructed correctly. Any value other than vsOK
@@ -176,7 +171,7 @@ public:
      * vsSyntax 1     Error in the syntax of a picture validator's picture
      * </pre>
      */
-    ushort status;
+	ushort status;
     /**
      * This is a bitmapped field used to control options for various
      * descendants of TValidator. By default, TValidator constructor clears
@@ -197,46 +192,47 @@ public:
      * voReserved 0x00fc The bits in this mask are reserved by Borland
      * </pre>
      */
-    ushort options;
-protected:
+	ushort options;
+      protected:
     /**
      * Each streamable class needs a "builder" to allocate the correct memory
      * for its objects together with the initialized virtual table pointers.
      * This is achieved by calling this constructor with an argument of type
      * @ref StreamableInit.
      */
-    TValidator( StreamableInit );
+	 TValidator(StreamableInit);
     /**
      * Writes to the output stream `os'.
      */
-    virtual void write( opstream& os );
+	virtual void write(opstream & os);
     /**
      * Reads from the input stream `is'.
      */
-    virtual void* read( ipstream& is );
-private:
-    virtual const char *streamableName() const  {return name;}
-public:
+	virtual void *read(ipstream & is);
+      private:
+	 virtual const char *streamableName() const {
+		return name;
+      } public:
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
 };
 
 #endif
-
 
 #if defined(Uses_TPXPictureValidator) && !defined(TV_TPXPictureValidator)
 #define TV_TPXPictureValidator
 
 // TPXPictureValidator result type
 
-enum TPicResult {prComplete, prIncomplete, prEmpty, prError, prSyntax,
-    prAmbiguous, prIncompNoFill};
+enum TPicResult { prComplete, prIncomplete, prEmpty, prError, prSyntax,
+	prAmbiguous, prIncompNoFill
+};
 
 // TPXPictureValidator
 
@@ -251,10 +247,9 @@ enum TPicResult {prComplete, prIncomplete, prEmpty, prError, prSyntax,
  * @short Compare user input with a picture of a data format to determine the
  * validity of entered data
  */
-class TPXPictureValidator : public TValidator
-{
-    static const char * errorMsg;
-public:
+class TPXPictureValidator:public TValidator {
+	static const char *errorMsg;
+      public:
     /**
      * Constructs a picture validator object by first calling the constructor
      * inherited from TValidator, then allocating a copy of `aPic' on the heap
@@ -262,18 +257,18 @@ public:
      * voFill bit in @ref TValidator::options data member if `autoFill' is
      * True.
      */
-    TPXPictureValidator(const char* aPic, Boolean autoFill);
+	 TPXPictureValidator(const char *aPic, Boolean autoFill);
     /**
      * Disposes of the string pointed to by @ref pic data member, then
      * disposes of the picture validator object by calling the destructor
      * inherited from @ref TValidator.
      */
-    ~TPXPictureValidator();
+	~TPXPictureValidator();
     /**
      * Displays a message box indicating an error in the picture format,
      * displaying the string pointed to by @ref pic data member.
      */
-    virtual void error();
+	virtual void error();
     /**
      * Checks the string passed in `s' against the format picture specified in
      * @ref pic data member and returns True if @ref pic is null or
@@ -288,14 +283,14 @@ public:
      * @ref picture() returns a filled string based on `s', so the image in
      * the input line automatically reflects the format specified in pic.
      */
-    virtual Boolean isValidInput(char* s, Boolean suppressFill);
+	virtual Boolean isValidInput(char *s, Boolean suppressFill);
     /**
      * Compares the string passed in `s' with the format picture specified in
      * @ref pic data member and returns True if @ref pic is null or if
      * @ref picture() returns prComplete for `s', indicating that `s' needs
      * no further input to meet the specified format.
      */
-    virtual Boolean isValid(const char* s);
+	virtual Boolean isValid(const char *s);
     /**
      * Formats the string passed in `input' according to the format specified
      * by the picture string pointed to by @ref pic data member. Returns
@@ -376,113 +371,123 @@ public:
      *
      * [-]#[*#][[.]#[*#]][E[-]#[#]]
      */
-    virtual TPicResult picture(char* input, Boolean autoFill);
-protected:
+	virtual TPicResult picture(char *input, Boolean autoFill);
+      protected:
     /**
      * Each streamable class needs a "builder" to allocate the correct memory
      * for its objects together with the initialized virtual table pointers.
      * This is achieved by calling this constructor with an argument of type
      * @ref StreamableInit.
      */
-    TPXPictureValidator( StreamableInit );
+	 TPXPictureValidator(StreamableInit);
     /**
      * Writes to the output stream `os'.
      */
-    virtual void write( opstream& os );
+	virtual void write(opstream & os);
     /**
      * Reads from the input stream `is'.
      */
-    virtual void* read( ipstream& is );
+	virtual void *read(ipstream & is);
     /**
      * Points to a string containing the picture that specifies the format for
      * data in the associated input line. The constructor sets pic to the
      * string passed as one of its parameters.
      */
-    char* pic;
-private:
+	char *pic;
+      private:
     /**
      * Undocumented.
      */
-    void consume(char ch, char* input);
+	void consume(char ch, char *input);
     /**
      * Undocumented.
      */
-    void toGroupEnd(int& i, int termCh);
+	void toGroupEnd(int &i, int termCh);
     /**
      * Undocumented.
      */
-    Boolean skipToComma(int termCh);
+	Boolean skipToComma(int termCh);
     /**
      * Undocumented.
      */
-    int calcTerm(int);
+	int calcTerm(int);
     /**
      * Undocumented.
      */
-    TPicResult iteration(char* input, int termCh);
+	TPicResult iteration(char *input, int termCh);
     /**
      * Undocumented.
      */
-    TPicResult group(char* input, int termCh);
+	TPicResult group(char *input, int termCh);
     /**
      * Undocumented.
      */
-    TPicResult checkComplete(TPicResult rslt, int termCh);
+	TPicResult checkComplete(TPicResult rslt, int termCh);
     /**
      * Undocumented.
      */
-    TPicResult scan(char* input, int termCh);
+	TPicResult scan(char *input, int termCh);
     /**
      * Undocumented.
      */
-    TPicResult process(char* input, int termCh);
+	TPicResult process(char *input, int termCh);
     /**
      * Undocumented.
      */
-    Boolean syntaxCheck();
+	Boolean syntaxCheck();
     /**
      * Undocumented.
      */
-    virtual const char *streamableName() const  {return name;}
+	virtual const char *streamableName() const {
+		return name;
+	}
     /**
      * Undocumented.
-     */
-    int index, jndex;
-public:
+     */ int index, jndex;
+      public:
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TValidator& v )
-    { return is >> (TStreamable&)v; }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TValidator*& v )
-    { return is >> (void *&)v; }
+inline ipstream & operator >>(ipstream & is, TValidator & v)
+{
+	return is >> (TStreamable &) v;
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TValidator& v )
-    { return os << (TStreamable&)v; }
+inline ipstream & operator >>(ipstream & is, TValidator *&v)
+{
+	return is >> (void *&)v;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TValidator* v )
-    { return os << (TStreamable *)v; }
+inline opstream & operator <<(opstream & os, TValidator & v)
+{
+	return os << (TStreamable &) v;
+}
+
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TValidator *v)
+{
+	return os << (TStreamable *) v;
+}
 
 #endif
-
 
 #if defined(Uses_TFilterValidator) && !defined(TV_TFilterValidator)
 #define TV_TFilterValidator
@@ -499,98 +504,107 @@ inline opstream& operator << ( opstream& os, TValidator* v )
  * input is invalid.
  * @short Check an input field as the user types into it
  */
-class TFilterValidator : public TValidator
-{
-    static const char * errorMsg;
-public:
+class TFilterValidator:public TValidator {
+	static const char *errorMsg;
+      public:
     /**
      * Constructs a filter validator object by first calling the constructor
      * inherited from @ref TValidator, then setting @ref validChars data
      * member to `aValidChars'.
      */
-    TFilterValidator(const char* aValidChars);
+	 TFilterValidator(const char *aValidChars);
     /**
      * Undocumented.
      */
-    ~TFilterValidator();
+	~TFilterValidator();
     /**
      * Undocumented.
      */
-    virtual void error();
+	virtual void error();
     /**
      * Checks each character in the string `s' to make sure it is in the set
      * of allowed characters, @ref validChars. Returns True if all characters
      * in `s' are valid; otherwise returns False.
      */
-    virtual Boolean isValidInput(char* s, Boolean suppressFill);
+	virtual Boolean isValidInput(char *s, Boolean suppressFill);
     /**
      * Checks each character in the string `s' to make sure it is in the set
      * of allowed characters, @ref validChars. Returns True if all characters
      * in `s' are valid; otherwise returns False.
      */
-    virtual Boolean isValid(const char* s);
-protected:
+	virtual Boolean isValid(const char *s);
+      protected:
     /**
      * Each streamable class needs a "builder" to allocate the correct memory
      * for its objects together with the initialized virtual table pointers.
      * This is achieved by calling this constructor with an argument of type
      * @ref StreamableInit.
      */
-    TFilterValidator( StreamableInit );
+	 TFilterValidator(StreamableInit);
     /**
      * Writes to the output stream `os'.
      */
-    virtual void write( opstream& os);
+	virtual void write(opstream & os);
     /**
      * Reads from the input stream `is'.
      */
-    virtual void* read( ipstream& is );
+	virtual void *read(ipstream & is);
     /**
      * Contains the set of all characters the user can type. For example, to
      * allow only numeric digits, set validChars to ['0'..'9']. validChars is
      * set by the `aValidChars' parameter passed to the constructor.
      */
-    char* validChars;
-private:
+	char *validChars;
+      private:
     /**
      * Undocumented.
      */
-    virtual const char *streamableName() const  {return name;}
-public:
+	 virtual const char *streamableName() const {
+		return name;
+      } public:
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TFilterValidator& v )
-    { return is >> (TStreamable&)v; }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TFilterValidator*& v )
-    { return is >> (void *&)v; }
+inline ipstream & operator >>(ipstream & is, TFilterValidator & v)
+{
+	return is >> (TStreamable &) v;
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TFilterValidator& v )
-    { return os << (TStreamable&)v; }
+inline ipstream & operator >>(ipstream & is, TFilterValidator *&v)
+{
+	return is >> (void *&)v;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TFilterValidator* v )
-    { return os << (TStreamable *)v; }
+inline opstream & operator <<(opstream & os, TFilterValidator & v)
+{
+	return os << (TStreamable &) v;
+}
+
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TFilterValidator *v)
+{
+	return os << (TStreamable *) v;
+}
 
 #endif
-
 
 #if defined(Uses_TRangeValidator) && !defined(TV_TRangeValidator)
 #define TV_TRangeValidator
@@ -603,21 +617,20 @@ inline opstream& operator << ( opstream& os, TFilterValidator* v )
  * @short Determines whether the data typed by a user falls within a
  * designated range of integers
  */
-class TRangeValidator : public TFilterValidator
-{
+class TRangeValidator:public TFilterValidator {
     /**
      * Undocumented.
      */
-    static const char * validUnsignedChars;
+	static const char *validUnsignedChars;
     /**
      * Undocumented.
      */
-    static const char * validSignedChars;
+	static const char *validSignedChars;
     /**
      * Undocumented.
      */
-    static const char * errorMsg;
-public:
+	static const char *errorMsg;
+      public:
     /**
      * Constructs a range validator object by first calling the constructor
      * inherited from @ref TFilterValidator, passing a set of characters
@@ -626,12 +639,12 @@ public:
      * Sets @ref min to `aMin' and @ref max to `aMax', establishing the range
      * of acceptable long integer values.
      */
-    TRangeValidator(long aMin, long aMax);
+	 TRangeValidator(long aMin, long aMax);
     /**
      * Displays a message box indicating that the entered value did not fall
      * in the specified range.
      */
-    virtual void error();
+	virtual void error();
     /**
      * Converts the string `s' into an integer number and returns True if the
      * result meets all three of these conditions:
@@ -642,7 +655,7 @@ public:
      *
      * If any of those tests fails, isValid() returns False.
      */
-    virtual Boolean isValid(const char* s);
+	virtual Boolean isValid(const char *s);
     /**
      * Incorporates the three functions @ref TInputLine::dataSize(),
      * @ref TInputLine::getData(), and @ref TInputLine::setData() that a
@@ -667,68 +680,79 @@ public:
      * case the size of a long int.
      * @see TValidator::transfer
      */
-    virtual ushort transfer(char* s, void* buffer, TVTransfer flag);
-protected:
+	virtual ushort transfer(char *s, void *buffer, TVTransfer flag);
+      protected:
     /**
      * min is the lowest valid long integer value for the input line.
      */
-    long min;
+	long min;
     /**
      * max is the highest valid long integer value for the input line.
      */
-    long max;
+	long max;
     /**
      * Each streamable class needs a "builder" to allocate the correct memory
      * for its objects together with the initialized virtual table pointers.
      * This is achieved by calling this constructor with an argument of type
      * @ref StreamableInit.
      */
-    TRangeValidator( StreamableInit );
+	 TRangeValidator(StreamableInit);
     /**
      * Writes to the output stream `os'.
      */
-    virtual void write( opstream& os );
+	virtual void write(opstream & os);
     /**
      * Reads from the input stream `is'.
      */
-    virtual void* read( ipstream& is );
-private:
+	virtual void *read(ipstream & is);
+      private:
     /**
      * Undocumented.
      */
-    virtual const char *streamableName() const  {return name;}
-public:
+	 virtual const char *streamableName() const {
+		return name;
+      } public:
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TRangeValidator& v )
-    { return is >> (TStreamable&)v; }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TRangeValidator*& v )
-    { return is >> (void *&)v; }
+inline ipstream & operator >>(ipstream & is, TRangeValidator & v)
+{
+	return is >> (TStreamable &) v;
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TRangeValidator& v )
-    { return os << (TStreamable&)v; }
+inline ipstream & operator >>(ipstream & is, TRangeValidator *&v)
+{
+	return is >> (void *&)v;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TRangeValidator* v )
-    { return os << (TStreamable *)v; }
+inline opstream & operator <<(opstream & os, TRangeValidator & v)
+{
+	return os << (TStreamable &) v;
+}
+
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TRangeValidator *v)
+{
+	return os << (TStreamable *) v;
+}
 
 #endif
 
@@ -749,19 +773,18 @@ inline opstream& operator << ( opstream& os, TRangeValidator* v )
  * descendant of TLookupValidator is @ref TStringLookupValidator.
  * @short Compares the string typed by a user with a list of acceptable values
  */
-class TLookupValidator : public TValidator
-{
-public:
+class TLookupValidator:public TValidator {
+      public:
     /**
      * Undocumented.
      */
-    TLookupValidator() {}
+	TLookupValidator() {
+	}
     /**
      * Calls @ref lookup() to find the string `s' in the list of valid input
      * items. Returns True if @ref lookup() returns True, meaning
      * @ref lookup() found `s' in its list; otherwise returns False.
-     */
-    virtual Boolean isValid(const char* s);
+     */ virtual Boolean isValid(const char *s);
     /**
      * Searches for the string `s' in the list of valid entries and returns
      * True if it finds `s'; otherwise returns False. TLookupValidator's
@@ -770,54 +793,64 @@ public:
      * Descendant lookup validator types must override lookup() to perform a
      * search based on the actual list of acceptable items.
      */
-    virtual Boolean lookup(const char* s);
+	virtual Boolean lookup(const char *s);
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
     /**
      * Undocumented.
      */
-    static const char * const name;
-protected:
+	static const char *const name;
+      protected:
     /**
      * Each streamable class needs a "builder" to allocate the correct memory
      * for its objects together with the initialized virtual table pointers.
      * This is achieved by calling this constructor with an argument of type
      * @ref StreamableInit.
      */
-    TLookupValidator( StreamableInit );
-private:
+	TLookupValidator(StreamableInit);
+      private:
     /**
      * Undocumented.
      */
-    virtual const char *streamableName() const  {return name;}
-};
+	virtual const char *streamableName() const {
+		return name;
+}};
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TLookupValidator& v )
-    { return is >> (TStreamable&)v; }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TLookupValidator*& v )
-    { return is >> (void *&)v; }
+inline ipstream & operator >>(ipstream & is, TLookupValidator & v)
+{
+	return is >> (TStreamable &) v;
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TLookupValidator& v )
-    { return os << (TStreamable&)v; }
+inline ipstream & operator >>(ipstream & is, TLookupValidator *&v)
+{
+	return is >> (void *&)v;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TLookupValidator* v )
-    { return os << (TStreamable *)v; }
+inline opstream & operator <<(opstream & os, TLookupValidator & v)
+{
+	return os << (TStreamable &) v;
+}
+
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TLookupValidator *v)
+{
+	return os << (TStreamable *) v;
+}
 
 #endif
-
 
 #if defined(Uses_TStringLookupValidator) && !defined(TV_TStringLookupValidator)
 #define TV_TStringLookupValidator
@@ -832,61 +865,61 @@ inline opstream& operator << ( opstream& os, TLookupValidator* v )
  * @short Verifies the data in its associated input line by searching through
  * a collection of valid strings
  */
-class TStringLookupValidator : public TLookupValidator
-{
-    static const char * errorMsg;
-public:
+class TStringLookupValidator:public TLookupValidator {
+	static const char *errorMsg;
+      public:
     /**
      * Constructs a string lookup validator object by first calling the
      * constructor inherited from @ref TLookupValidator, then setting
      * @ref strings data member to `aStrings'.
      */
-    TStringLookupValidator(TStringCollection* aStrings);
+	 TStringLookupValidator(TStringCollection * aStrings);
     /**
      * Disposes of the list of valid strings by calling newStringList(0),
      * then disposes of the string lookup object by calling the destructor
      * inherited from @ref TLookupValidator.
      * @see newStringList
      */
-    ~TStringLookupValidator();
+	~TStringLookupValidator();
     /**
      * Displays a message box indicating that the typed string does not match
      * an entry in the string list.
      */
-    virtual void error();
+	virtual void error();
     /**
      * Returns True if the string passed in `s' matches any of the strings in
      * strings data member. Uses the strcmp() function to determine if `s' is
      * present.
      */
-    virtual Boolean lookup(const char* s);
-protected:
+	virtual Boolean lookup(const char *s);
+      protected:
     /**
      * Each streamable class needs a "builder" to allocate the correct memory
      * for its objects together with the initialized virtual table pointers.
      * This is achieved by calling this constructor with an argument of type
      * @ref StreamableInit.
      */
-    TStringLookupValidator( StreamableInit );
+	 TStringLookupValidator(StreamableInit);
     /**
      * Writes to the output stream `os'.
      */
-    virtual void write( opstream& os );
+	virtual void write(opstream & os);
     /**
      * Reads from the input stream `is'.
      */
-    virtual void* read( ipstream& is );
+	virtual void *read(ipstream & is);
     /**
      * Points to a string collection containing all the valid strings the user
      * can type. If strings data member is 0, all input will be invalid.
      */
-    TStringCollection* strings;
-private:
+	TStringCollection *strings;
+      private:
     /**
      * Undocumented.
      */
-    virtual const char *streamableName() const  {return name;}
-public:
+	 virtual const char *streamableName() const {
+		return name;
+      } public:
     /**
      * Sets the list of valid input strings for the string lookup validator.
      * Disposes of any existing string list, then sets @ref strings data
@@ -895,39 +928,47 @@ public:
      * Passing 0 in `aStrings' disposes of the existing list without assigning
      * a new one.
      */
-    void newStringList(TStringCollection* aStrings);
+	void newStringList(TStringCollection * aStrings);
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
 };
 
+/**
+ * Undocumented.
+ */
+inline ipstream & operator >>(ipstream & is, TStringLookupValidator & v)
+{
+	return is >> (TStreamable &) v;
+}
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TStringLookupValidator& v )
-    { return is >> (TStreamable&)v; }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TStringLookupValidator*& v )
-    { return is >> (void *&)v; }
+inline ipstream & operator >>(ipstream & is, TStringLookupValidator *&v)
+{
+	return is >> (void *&)v;
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TStringLookupValidator& v )
-    { return os << (TStreamable&)v; }
+inline opstream & operator <<(opstream & os, TStringLookupValidator & v)
+{
+	return os << (TStreamable &) v;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TStringLookupValidator* v )
-    { return os << (TStreamable *)v; }
-
+inline opstream & operator <<(opstream & os, TStringLookupValidator *v)
+{
+	return os << (TStreamable *) v;
+}
 
 #endif

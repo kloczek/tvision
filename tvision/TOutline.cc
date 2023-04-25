@@ -19,27 +19,29 @@
 
 #include <string.h>
 
-TOutlineViewer::TOutlineViewer(const TRect& bounds, TScrollBar* aHScrollBar,
-  TScrollBar* aVScrollBar) : TScroller(bounds, aHScrollBar, aVScrollBar)
+TOutlineViewer::TOutlineViewer(const TRect & bounds, TScrollBar *aHScrollBar,
+			       TScrollBar *aVScrollBar):TScroller(bounds,
+								  aHScrollBar,
+								  aVScrollBar)
 {
-  growMode = gfGrowHiX + gfGrowHiY;
-  foc = 0;
+	growMode = gfGrowHiX + gfGrowHiY;
+	foc = 0;
 }
 
 // Called internally to ensure the focus is within range and displayed
 
 void TOutlineViewer::adjustFocus(int newFocus)
 {
-  if (newFocus < 0)
-   newFocus = 0;
-  else if (newFocus >= limit.y)
-   newFocus = limit.y - 1;
-  if (foc != newFocus)
-   focused(newFocus);
-  if (newFocus < delta.y)
-    scrollTo(delta.x, newFocus);
-  else if ((newFocus - size.y) >= delta.y)
-    scrollTo(delta.x, newFocus - size.y + 1);
+	if (newFocus < 0)
+		newFocus = 0;
+	else if (newFocus >= limit.y)
+		newFocus = limit.y - 1;
+	if (foc != newFocus)
+		focused(newFocus);
+	if (newFocus < delta.y)
+		scrollTo(delta.x, newFocus);
+	else if ((newFocus - size.y) >= delta.y)
+		scrollTo(delta.x, newFocus - size.y + 1);
 }
 
 static TDrawBuffer dBuf;
@@ -47,72 +49,69 @@ static int auxPos;
 
 // Called to draw the outline
 
-Boolean drawTree( TOutlineViewer *beingDrawn, TNode* cur, int level,
-                  int position, long lines, ushort flags )
+Boolean drawTree(TOutlineViewer *beingDrawn, TNode *cur, int level,
+		 int position, long lines, ushort flags)
 {
-  ushort  color;
-  char s[256];
-  char* graph;
+	ushort color;
+	char s[256];
+	char *graph;
 
-  if (position >= beingDrawn->delta.y)
-  {
-      if (position >= beingDrawn->delta.y + beingDrawn->size.y)
-        return True;
+	if (position >= beingDrawn->delta.y) {
+		if (position >= beingDrawn->delta.y + beingDrawn->size.y)
+			return True;
 
-      if ((position == beingDrawn->foc) && ((beingDrawn->state & sfFocused)!=0))
-        color = beingDrawn->getColor(0x0202);
-      else if (beingDrawn->isSelected(position))
-        color = beingDrawn->getColor(0x0303);
-      else
-        color = beingDrawn->getColor(0x0401);
-      dBuf.moveChar(0, ' ', color, beingDrawn->size.x);
+		if ((position == beingDrawn->foc)
+		    && ((beingDrawn->state & sfFocused) != 0))
+			color = beingDrawn->getColor(0x0202);
+		else if (beingDrawn->isSelected(position))
+			color = beingDrawn->getColor(0x0303);
+		else
+			color = beingDrawn->getColor(0x0401);
+		dBuf.moveChar(0, ' ', color, beingDrawn->size.x);
 
-      graph = beingDrawn->getGraph(level, lines, flags);
-      strcpy(s, graph);
-      delete graph;
+		graph = beingDrawn->getGraph(level, lines, flags);
+		strcpy(s, graph);
+		delete graph;
 
-      if ( (flags & ovExpanded) == 0)
-      {
-        strcat(s, "~");
-        strcat(s, beingDrawn->getText(cur));
-        strcat(s, "~");
-      }
-      else
-        strcat(s, beingDrawn->getText(cur));
-      if (beingDrawn->delta.x <= (int)strlen(s))
-        dBuf.moveCStr(0, &s[beingDrawn->delta.x], color);
-      else
-        dBuf.moveCStr(0, "", color );
-      beingDrawn->writeLine(0, position-beingDrawn->delta.y,
-                               beingDrawn->size.x, 1, dBuf);
-      auxPos = position;
-  }
+		if ((flags & ovExpanded) == 0) {
+			strcat(s, "~");
+			strcat(s, beingDrawn->getText(cur));
+			strcat(s, "~");
+		} else
+			strcat(s, beingDrawn->getText(cur));
+		if (beingDrawn->delta.x <= (int)strlen(s))
+			dBuf.moveCStr(0, &s[beingDrawn->delta.x], color);
+		else
+			dBuf.moveCStr(0, "", color);
+		beingDrawn->writeLine(0, position - beingDrawn->delta.y,
+				      beingDrawn->size.x, 1, dBuf);
+		auxPos = position;
+	}
 
-  return False;
+	return False;
 }
 
 void TOutlineViewer::draw()
 {
-  ushort nrmColor = getColor(0x0401);
+	ushort nrmColor = getColor(0x0401);
 
-  firstThat(drawTree);
-  dBuf.moveChar(0, ' ', nrmColor, size.x);
-  writeLine(0, auxPos + 1, size.x, size.y - (auxPos - delta.y), dBuf);
+	firstThat(drawTree);
+	dBuf.moveChar(0, ' ', nrmColor, size.x);
+	writeLine(0, auxPos + 1, size.x, size.y - (auxPos - delta.y), dBuf);
 }
 
 // ExpandAll expands the current node and all child nodes
 
-void TOutlineViewer::expandAll(TNode* node)
+void TOutlineViewer::expandAll(TNode *node)
 {
-  int i, n;
+	int i, n;
 
-  if (hasChildren(node))
-  {
-    adjust(node, True);
-    n = getNumChildren(node) - 1;
-    for (i=0; i <= n; i++)
-      expandAll(getChild(node, i));
-  }
+	if (hasChildren(node)) {
+		adjust(node, True);
+		n = getNumChildren(node) - 1;
+		for (i = 0; i <= n; i++)
+			expandAll(getChild(node, i));
+	}
 }
 
 /*Draws a graph string suitable for returning from getGraph.  Level
@@ -161,46 +160,42 @@ void TOutlineViewer::expandAll(TNode* node)
 
 */
 
-char* TOutlineViewer::createGraph(int level, long lines, ushort flags,
- int levWidth, int endWidth,  const char* chars)
+char *TOutlineViewer::createGraph(int level, long lines, ushort flags,
+				  int levWidth, int endWidth, const char *chars)
 {
-  static const int
-    FillerOrBar      = 0,
-    YorL          = 2,
-    StraightOrTee = 4,
-    retracted      = 6;
+	static const int
+	    FillerOrBar = 0, YorL = 2, StraightOrTee = 4, retracted = 6;
 
-  char* graph = new char[level*levWidth+endWidth+1];
-  char* p;
+	char *graph = new char[level * levWidth + endWidth + 1];
+	char *p;
 
-  Boolean expanded = Boolean((flags & ovExpanded) != 0);
-  Boolean children = Boolean((flags & ovChildren) != 0);
-  Boolean last       = Boolean((flags & ovLast)       != 0);
+	Boolean expanded = Boolean((flags & ovExpanded) != 0);
+	Boolean children = Boolean((flags & ovChildren) != 0);
+	Boolean last = Boolean((flags & ovLast) != 0);
 
-  for (p=graph; level > 0; level--, lines >>= 1)
-  {
-    *p++ = (lines & 1) ? chars[FillerOrBar+1]:chars[FillerOrBar];
-    memset(p, chars[FillerOrBar], levWidth-1);
-    p += levWidth-1;
-  }
+	for (p = graph; level > 0; level--, lines >>= 1) {
+		*p++ =
+		    (lines & 1) ? chars[FillerOrBar + 1] : chars[FillerOrBar];
+		memset(p, chars[FillerOrBar], levWidth - 1);
+		p += levWidth - 1;
+	}
 
-  if (--endWidth > 0)
-  {
-    *p++ = last ? chars[YorL+1]:chars[YorL];
-    if (--endWidth > 0)
-    {
-        if (--endWidth > 0)
-        {
-                memset(p, chars[StraightOrTee], endWidth);
-                p += endWidth;
-        }
-        *p++ = children ? chars[StraightOrTee+1]:chars[StraightOrTee];
-    }
-    *p++ = expanded ? chars[retracted+1]:chars[retracted];
-  }
-  *p = 0;
+	if (--endWidth > 0) {
+		*p++ = last ? chars[YorL + 1] : chars[YorL];
+		if (--endWidth > 0) {
+			if (--endWidth > 0) {
+				memset(p, chars[StraightOrTee], endWidth);
+				p += endWidth;
+			}
+			*p++ =
+			    children ? chars[StraightOrTee +
+					     1] : chars[StraightOrTee];
+		}
+		*p++ = expanded ? chars[retracted + 1] : chars[retracted];
+	}
+	*p = 0;
 
-  return graph;
+	return graph;
 }
 
 /*
@@ -227,103 +222,99 @@ char* TOutlineViewer::createGraph(int level, long lines, ushort flags,
     Flags:     Various flags for drawing (see ovXXXX flags).  Can be used
                in a call to getGraph or createGraph.
 */
-TNode* TOutlineViewer::firstThat(
-        Boolean (*test)(TOutlineViewer*, TNode* ,int ,int ,long ,ushort ))
+TNode *TOutlineViewer::
+firstThat(Boolean(*test) (TOutlineViewer *, TNode *, int, int, long, ushort))
 {
-  return iterate(test, True);
+	return iterate(test, True);
 }
 
 // Called whenever Node is receives focus
 
 void TOutlineViewer::focused(int i)
 {
-  foc = i;
+	foc = i;
 }
-
 
 /*
   Internal function used by both FirstThat and ForEach to do the
   actual iteration over the data. See FirstThat for more details }
 */
 
-
-TNode* traverseTree(TOutlineViewer* outLine,
-        Boolean (*action)(TOutlineViewer*, TNode*, int, int, long, ushort),
-        int& position, Boolean& checkResult, TNode* cur, int level,
-        long lines, Boolean lastChild)
+TNode *traverseTree(TOutlineViewer *outLine,
+		    Boolean(*action) (TOutlineViewer *, TNode *, int, int, long,
+				      ushort), int &position,
+		    Boolean & checkResult, TNode *cur, int level, long lines,
+		    Boolean lastChild)
 {
 
-  Boolean result;
-  int j, childCount;
-  TNode* ret;
-  ushort flags;
-  Boolean children;
+	Boolean result;
+	int j, childCount;
+	TNode *ret;
+	ushort flags;
+	Boolean children;
 
-  if (cur == nullptr)
-        return nullptr;
+	if (cur == nullptr)
+		return nullptr;
 
-  children = outLine->hasChildren(cur);
+	children = outLine->hasChildren(cur);
 
-  flags = 0;
-  if (lastChild)
-        flags |= ovLast;
+	flags = 0;
+	if (lastChild)
+		flags |= ovLast;
 
-  if (children && outLine->isExpanded(cur))
-        flags |=  ovChildren;
+	if (children && outLine->isExpanded(cur))
+		flags |= ovChildren;
 
-  if (! children || outLine->isExpanded(cur))
-        flags |= ovExpanded;
+	if (!children || outLine->isExpanded(cur))
+		flags |= ovExpanded;
 
-  position++;
+	position++;
 
-  result = (*action)(outLine, cur, level, position, lines, flags);
-  if (checkResult && result)
-        return cur;
+	result = (*action) (outLine, cur, level, position, lines, flags);
+	if (checkResult && result)
+		return cur;
 
-  if (children && outLine->isExpanded(cur))
-  {
-    childCount = outLine->getNumChildren(cur);
+	if (children && outLine->isExpanded(cur)) {
+		childCount = outLine->getNumChildren(cur);
 
-    if (! lastChild)
-        lines |=  1 << level;
+		if (!lastChild)
+			lines |= 1 << level;
 
-    for (j = 0; j < childCount; j++)
-    {
-       ret = traverseTree(outLine, action, position, checkResult,
-               outLine->getChild(cur, j), level + 1, lines,
-                       Boolean(j == (childCount - 1)));
-       if (ret)
-        return ret;
-    }
-  }
-  return nullptr;
+		for (j = 0; j < childCount; j++) {
+			ret =
+			    traverseTree(outLine, action, position, checkResult,
+					 outLine->getChild(cur, j), level + 1,
+					 lines, Boolean(j == (childCount - 1)));
+			if (ret)
+				return ret;
+		}
+	}
+	return nullptr;
 }
 
-
-TNode* TOutlineViewer::iterate(
-        Boolean (*action)(TOutlineViewer*, TNode*, int, int, long, ushort),
-        Boolean checkResult)
+TNode *TOutlineViewer::
+iterate(Boolean(*action) (TOutlineViewer *, TNode *, int, int, long, ushort),
+	Boolean checkResult)
 {
-  int position = -1;
-  return traverseTree(this, action, position, checkResult,
-                                                  getRoot(), 0, 0, True);
+	int position = -1;
+	return traverseTree(this, action, position, checkResult,
+			    getRoot(), 0, 0, True);
 }
-
 
 // Iterates over all the nodes.     See FirstThat for a more details
 
-TNode* TOutlineViewer::forEach(
-        Boolean (*action)(TOutlineViewer*,TNode*,int,int,long,ushort))
+TNode *TOutlineViewer::
+forEach(Boolean(*action) (TOutlineViewer *, TNode *, int, int, long, ushort))
 {
-  return iterate(action, False);
+	return iterate(action, False);
 }
 
 // Returns the outline palette
 
-TPalette& TOutlineViewer::getPalette() const
+TPalette & TOutlineViewer::getPalette()const
 {
-        static TPalette p(cpOutlineViewer, sizeof(cpOutlineViewer));
-        return p;
+	static TPalette p(cpOutlineViewer, sizeof(cpOutlineViewer));
+	return p;
 }
 
 /*
@@ -333,27 +324,27 @@ TPalette& TOutlineViewer::getPalette() const
   createGraph with the default.
 */
 
-char* TOutlineViewer::getGraph(int level, long lines, ushort flags)
+char *TOutlineViewer::getGraph(int level, long lines, ushort flags)
 {
-  static const int levelWidth = 3,    endWidth   = levelWidth;
+	static const int levelWidth = 3, endWidth = levelWidth;
 
-  return createGraph(level, lines, flags, levelWidth, endWidth, graphChars);
+	return createGraph(level, lines, flags, levelWidth, endWidth,
+			   graphChars);
 }
 
-static Boolean isNode(TOutlineViewer*, TNode*, int, int position, long,
-	ushort)
+static Boolean isNode(TOutlineViewer *, TNode *, int, int position, long,
+		      ushort)
 {
-    return Boolean(auxPos == position);
+	return Boolean(auxPos == position);
 }
-
 
 // Returns a pointer to the node that is to be shown on line i
 
-TNode* TOutlineViewer::getNode(int i)
+TNode *TOutlineViewer::getNode(int i)
 {
-  auxPos = i;
+	auxPos = i;
 
-  return firstThat(isNode);
+	return firstThat(isNode);
 }
 
 /*
@@ -363,157 +354,148 @@ TNode* TOutlineViewer::getNode(int i)
 */
 Boolean TOutlineViewer::isSelected(int i)
 {
-  return (foc == i) ? True:False;
+	return (foc == i) ? True : False;
 }
 
 static long focLines;
 static ushort focFlags;
 static int focLevel;
 
-static Boolean isFocused(TOutlineViewer* focusCheck, TNode*, int level,
-	int position, long lines, ushort flags)
+static Boolean isFocused(TOutlineViewer *focusCheck, TNode *, int level,
+			 int position, long lines, ushort flags)
 {
-      if (position == focusCheck->foc)
-      {
-        focLevel = level;
-        focLines = lines;
-        focFlags = flags;
+	if (position == focusCheck->foc) {
+		focLevel = level;
+		focLines = lines;
+		focFlags = flags;
 
-        return True;
-      }
-      else
-        return False;
+		return True;
+	} else
+		return False;
 }
 
 // Called to handle an event
 
-void TOutlineViewer::handleEvent(TEvent& event)
+void TOutlineViewer::handleEvent(TEvent & event)
 {
-  const int mouseAutoToSkip = 3;
+	const int mouseAutoToSkip = 3;
 
-  TPoint mouse;
-  TNode* cur;
-  int newFocus = 0;
-  int count;
-  char* graph;
-  uchar dragged;
+	TPoint mouse;
+	TNode *cur;
+	int newFocus = 0;
+	int count;
+	char *graph;
+	uchar dragged;
 
-  TScroller::handleEvent(event);
-  switch (event.what)
-  {
-  case evMouseDown:
-        count = 0;
-        dragged = 0;
-        do {
-          if (dragged < 2)
-                dragged++;
-          mouse = makeLocal(event.mouse.where);
-          if (mouseInView(event.mouse.where))
-            newFocus = delta.y + mouse.y;
-          else
-          {
-            if (event.what == evMouseAuto)
-                count++;
-            if (count == mouseAutoToSkip)
-            {
-              count = 0;
-              if (mouse.y < 0)
-                newFocus--;
-              if (mouse.y >= size.y)
-                newFocus++;
-            }
-          }
-          if (foc != newFocus)
-          {
-            adjustFocus(newFocus);
-            drawView();
-          }
+	TScroller::handleEvent(event);
+	switch (event.what) {
+	case evMouseDown:
+		count = 0;
+		dragged = 0;
+		do {
+			if (dragged < 2)
+				dragged++;
+			mouse = makeLocal(event.mouse.where);
+			if (mouseInView(event.mouse.where))
+				newFocus = delta.y + mouse.y;
+			else {
+				if (event.what == evMouseAuto)
+					count++;
+				if (count == mouseAutoToSkip) {
+					count = 0;
+					if (mouse.y < 0)
+						newFocus--;
+					if (mouse.y >= size.y)
+						newFocus++;
+				}
+			}
+			if (foc != newFocus) {
+				adjustFocus(newFocus);
+				drawView();
+			}
 #ifndef __UNPATCHED
-        } while ( !(event.mouse.eventFlags & meDoubleClick) &&
-                  mouseEvent(event, evMouseMove + evMouseAuto));
+		} while (!(event.mouse.eventFlags & meDoubleClick) &&
+			 mouseEvent(event, evMouseMove + evMouseAuto));
 #else
-        } while ( mouseEvent(event, evMouseMove + evMouseAuto) );
+		} while (mouseEvent(event, evMouseMove + evMouseAuto));
 #endif
 
-        if (event.mouse.eventFlags & meDoubleClick)
-                selected(foc);
-        else
-        {
-          if (dragged < 2)
-          {
-            cur = firstThat(isFocused);
-            graph = getGraph(focLevel,focLines,focFlags);
-            if (mouse.x < (int)strlen(graph) )
-            {
-              adjust(cur, ! isExpanded(cur) ? True:False);
-              update();
-              drawView();
-            }
-            delete graph;
-          }
-        }
+		if (event.mouse.eventFlags & meDoubleClick)
+			selected(foc);
+		else {
+			if (dragged < 2) {
+				cur = firstThat(isFocused);
+				graph = getGraph(focLevel, focLines, focFlags);
+				if (mouse.x < (int)strlen(graph)) {
+					adjust(cur,
+					       !isExpanded(cur) ? True : False);
+					update();
+					drawView();
+				}
+				delete graph;
+			}
+		}
 
-        break;
+		break;
 
-    case evKeyboard:
+	case evKeyboard:
 
-        newFocus = foc;
-        switch (ctrlToArrow(event.keyDown.keyCode))
-        {
-        case kbUp:
-        case kbLeft:
-                newFocus--;
-                break;
-        case kbDown:
-        case kbRight:
-                newFocus++;
-                break;
-        case kbPgDn:
-                newFocus += size.y - 1;
-                break;
-    case kbPgUp:
-                newFocus -= size.y - 1;
-                break;
-        case kbHome:
-                newFocus = delta.y;
-                break;
+		newFocus = foc;
+		switch (ctrlToArrow(event.keyDown.keyCode)) {
+		case kbUp:
+		case kbLeft:
+			newFocus--;
+			break;
+		case kbDown:
+		case kbRight:
+			newFocus++;
+			break;
+		case kbPgDn:
+			newFocus += size.y - 1;
+			break;
+		case kbPgUp:
+			newFocus -= size.y - 1;
+			break;
+		case kbHome:
+			newFocus = delta.y;
+			break;
 #ifndef __UNPATCHED
-        case kbEnd:
+		case kbEnd:
 #else
-        casekbEnd:
+		      casekbEnd:
 #endif
-                newFocus = delta.y + size.y - 1;
-                break;
-        case kbCtrlPgUp:
-                newFocus = 0;
-                break;
-        case kbCtrlPgDn:
-                newFocus = limit.y - 1;
-                break;
-        case kbCtrlEnter:
-        case kbEnter:
-                selected(newFocus);
-                break;
-        default:
-                uchar code = event.keyDown.charScan.charCode;
-          switch ( code )
-          {
-          case '-':
-          case '+':
-                adjust(getNode(newFocus), code == '+' ? True:False);
-                break;
-          case '*':
-                expandAll(getNode(newFocus));
-                break;
-          default:
-                return;
-          }
-          update();
-        }
-        clearEvent(event);
-        adjustFocus(newFocus);
-        drawView();
-  }
+			newFocus = delta.y + size.y - 1;
+			break;
+		case kbCtrlPgUp:
+			newFocus = 0;
+			break;
+		case kbCtrlPgDn:
+			newFocus = limit.y - 1;
+			break;
+		case kbCtrlEnter:
+		case kbEnter:
+			selected(newFocus);
+			break;
+		default:
+			uchar code = event.keyDown.charScan.charCode;
+			switch (code) {
+			case '-':
+			case '+':
+				adjust(getNode(newFocus),
+				       code == '+' ? True : False);
+				break;
+			case '*':
+				expandAll(getNode(newFocus));
+				break;
+			default:
+				return;
+			}
+			update();
+		}
+		clearEvent(event);
+		adjustFocus(newFocus);
+		drawView();
+	}
 }
 
 /*
@@ -528,27 +510,27 @@ void TOutlineViewer::selected(int)
 
 void TOutlineViewer::setState(ushort aState, Boolean enable)
 {
-  TScroller::setState(aState, enable);
-  if ( (aState & sfFocused) != 0)
-        drawView();
+	TScroller::setState(aState, enable);
+	if ((aState & sfFocused) != 0)
+		drawView();
 }
 
 static int updateCount;
 static int updateMaxX;
 
-static Boolean countNode(TOutlineViewer* beingCounted, TNode* p, int level,
-	int, long lines, ushort flags)
+static Boolean countNode(TOutlineViewer *beingCounted, TNode *p, int level,
+			 int, long lines, ushort flags)
 {
-    int len;
-    char *graph;
+	int len;
+	char *graph;
 
-    updateCount++;
-    graph = beingCounted->getGraph(level, lines, flags);
-    len = strlen(beingCounted->getText(p)) + strlen(graph);
-    if (updateMaxX < len)
-      updateMaxX = len;
-    delete graph;
-    return False;
+	updateCount++;
+	graph = beingCounted->getGraph(level, lines, flags);
+	len = strlen(beingCounted->getText(p)) + strlen(graph);
+	if (updateMaxX < len)
+		updateMaxX = len;
+	delete graph;
+	return False;
 }
 
 /*
@@ -562,176 +544,173 @@ static Boolean countNode(TOutlineViewer* beingCounted, TNode* p, int level,
 */
 void TOutlineViewer::update()
 {
-  updateCount = 0;
-  updateMaxX = 0;
-  firstThat(countNode);
-  setLimit(updateMaxX, updateCount);
-  adjustFocus(foc);
+	updateCount = 0;
+	updateMaxX = 0;
+	firstThat(countNode);
+	setLimit(updateMaxX, updateCount);
+	adjustFocus(foc);
 }
 
-void TOutlineViewer::disposeNode(TNode* node)
+void TOutlineViewer::disposeNode(TNode *node)
 {
-  if (node)
-  {
-      if (node->childList)
-        disposeNode(node->childList);
-      if (node->next)
-        disposeNode(node->next);
-      delete node;
-  }
+	if (node) {
+		if (node->childList)
+			disposeNode(node->childList);
+		if (node->next)
+			disposeNode(node->next);
+		delete node;
+	}
 }
 
 #if !defined(NO_STREAMABLE)
 
-void* TOutlineViewer::read(ipstream& ip)
+void *TOutlineViewer::read(ipstream & ip)
 {
-    TScroller::read(ip);
-    ip >> foc;
-    return this;
+	TScroller::read(ip);
+	ip >> foc;
+	return this;
 }
 
-void TOutlineViewer::write(opstream& op)
+void TOutlineViewer::write(opstream & op)
 {
-    TScroller::write(op);
-    op << foc;
+	TScroller::write(op);
+	op << foc;
 }
 
 #endif
 
 // TOutline
 
-TOutline::TOutline(const TRect& bounds, TScrollBar* aHScrollBar,
-                        TScrollBar* aVScrollBar,  TNode* aRoot) :
-                TOutlineViewer(bounds,    aHScrollBar, aVScrollBar)
+TOutline::TOutline(const TRect & bounds, TScrollBar *aHScrollBar,
+		   TScrollBar *aVScrollBar, TNode *aRoot):TOutlineViewer(bounds,
+									 aHScrollBar,
+									 aVScrollBar)
 {
-  root = aRoot;
-  update();
+	root = aRoot;
+	update();
 }
 
 TOutline::~TOutline()
 {
-  disposeNode(root);
+	disposeNode(root);
 }
 
-void TOutline::adjust(TNode* node, Boolean expand)
+void TOutline::adjust(TNode *node, Boolean expand)
 {
-  node->expanded = expand;
+	node->expanded = expand;
 }
 
-TNode* TOutline::getRoot()
+TNode *TOutline::getRoot()
 {
-  return root;
+	return root;
 }
 
-int TOutline::getNumChildren(TNode* node)
+int TOutline::getNumChildren(TNode *node)
 {
-  int i;
-  TNode* p;
+	int i;
+	TNode *p;
 
-  p = node->childList;
-  i = 0;
-  while (p)
-  {
-    i++;
-    p = p->next;
-  }
-  return i;
+	p = node->childList;
+	i = 0;
+	while (p) {
+		i++;
+		p = p->next;
+	}
+	return i;
 }
 
-TNode* TOutline::getChild(TNode* node, int i)
+TNode *TOutline::getChild(TNode *node, int i)
 {
-  TNode *p;
+	TNode *p;
 
-  p = node->childList;
-  while ((i != 0) && (p != nullptr))
-  {
-    i--;
-    p = p->next;
-  }
-  return p;
+	p = node->childList;
+	while ((i != 0) && (p != nullptr)) {
+		i--;
+		p = p->next;
+	}
+	return p;
 }
 
-char* TOutline::getText(TNode* node)
+char *TOutline::getText(TNode *node)
 {
-  return node->text;
+	return node->text;
 }
 
-Boolean TOutline::isExpanded(TNode* node)
+Boolean TOutline::isExpanded(TNode *node)
 {
-  return node->expanded;
+	return node->expanded;
 }
 
-Boolean TOutline::hasChildren(TNode* node)
+Boolean TOutline::hasChildren(TNode *node)
 {
-  return Boolean(node->childList != nullptr);
+	return Boolean(node->childList != nullptr);
 }
 
 #if !defined(NO_STREAMABLE)
 
-TNode* TOutline::readNode(ipstream& ip)
+TNode *TOutline::readNode(ipstream & ip)
 {
-    int nChildren;
-    uchar more;
-    uchar expand;
+	int nChildren;
+	uchar more;
+	uchar expand;
 
-    TNode* node = new TNode(nullptr);
+	TNode *node = new TNode(nullptr);
 
-    ip >> more;
-    ip >> expand;
-    ip >> nChildren;
-    node->text = ip.readString();
-    node->expanded = Boolean(expand);
+	ip >> more;
+	ip >> expand;
+	ip >> nChildren;
+	node->text = ip.readString();
+	node->expanded = Boolean(expand);
 
-    if (nChildren)
-        node->childList = readNode(ip);
-    else
-        node->childList = nullptr;
+	if (nChildren)
+		node->childList = readNode(ip);
+	else
+		node->childList = nullptr;
 
-    if (more)
-        node->next = readNode(ip);
-    else
-        node->next = nullptr;
+	if (more)
+		node->next = readNode(ip);
+	else
+		node->next = nullptr;
 
-    return node;
+	return node;
 }
 
-void TOutline::writeNode(TNode* node, opstream& op)
+void TOutline::writeNode(TNode *node, opstream & op)
 {
-    uchar more = (node->next != nullptr) ? 1 : 0;
-    uchar expand = (node->expanded) ? 1 : 0;
+	uchar more = (node->next != nullptr) ? 1 : 0;
+	uchar expand = (node->expanded) ? 1 : 0;
 
-    op << more;
-    op << expand;
-    op << getNumChildren(node);
-    op.writeString(node->text);
+	op << more;
+	op << expand;
+	op << getNumChildren(node);
+	op.writeString(node->text);
 
-    if ( node->childList != nullptr )
-        writeNode(node->childList, op);
+	if (node->childList != nullptr)
+		writeNode(node->childList, op);
 
-    if (node->next != nullptr)
-        writeNode(node->next, op);
+	if (node->next != nullptr)
+		writeNode(node->next, op);
 }
 
-
-void* TOutline::read(ipstream& ip)
+void *TOutline::read(ipstream & ip)
 {
-    TOutlineViewer::read(ip);
+	TOutlineViewer::read(ip);
 
-    root = readNode(ip);
+	root = readNode(ip);
 
-    return this;
+	return this;
 }
 
-void TOutline::write(opstream& op)
+void TOutline::write(opstream & op)
 {
-    TOutlineViewer::write(op);
+	TOutlineViewer::write(op);
 
-    writeNode(root, op);
+	writeNode(root, op);
 }
 
-TStreamable* TOutline::build()
+TStreamable *TOutline::build()
 {
-    return new TOutline( streamableInit );
+	return new TOutline(streamableInit);
 }
 
 #endif

@@ -75,13 +75,13 @@ typedef int ccIndex;
  * Used in iterator functions to provide a test function and argument list to
  * be applied to a range of items in a collection.
  */
-typedef Boolean (*ccTestFunc)( void *item, void *arg );
+typedef Boolean(*ccTestFunc) (void *item, void *arg);
 
 /** \enum ccAppFunc
  * Used in iterator functions to provide an action function and argument list
  * to be applied to a range of items in a collection.
  */
-typedef void (*ccAppFunc)( void *item, void *arg );
+typedef void (*ccAppFunc)(void *item, void *arg);
 
 /** \var ccNotFound
  * The ccIndex value returned by various collection-search functions if the
@@ -97,4 +97,4 @@ const int ccNotFound = -1;
  */
 extern const uchar specialChars[];
 
-#endif  // TV_INC_TTYPES_H
+#endif // TV_INC_TTYPES_H

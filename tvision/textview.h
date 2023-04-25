@@ -32,29 +32,26 @@ class TScrollBar;
  * drivers. TTextDevice uses TScroller's destructor.
  * @short Scrollable TTY-type text viewer/device driver
  */
-class TTextDevice : public TScroller
-{
-public:
+class TTextDevice:public TScroller {
+      public:
     /**
      * Creates a TTextDevice object with the given bounds, horizontal and
      * vertical scroll bars by calling @ref TScroller constructor with the
      * `bounds' and scroller arguments.
      * @see TScroller::TScroller
      */
-    TTextDevice( const TRect& bounds,
-                 TScrollBar *aHScrollBar,
-                 TScrollBar *aVScrollBar
-               );
+	TTextDevice(const TRect & bounds,
+		    TScrollBar * aHScrollBar, TScrollBar * aVScrollBar);
     /**
      * Overrides the corresponding function in class streambuf.
      *
      * This is an internal function that is called whenever a character string
      * is to be inserted into the internal buffer.
      */
-    virtual int do_sputn( const char *s, int count ) = 0;
+	virtual int do_sputn(const char *s, int count) = 0;
 };
 
-#endif  // Uses_TTextDevice
+#endif // Uses_TTextDevice
 
 #if defined( Uses_TTerminal ) && !defined( TV_TTerminal )
 #define TV_TTerminal
@@ -67,9 +64,8 @@ class TScrollBar;
  * writes. The default is a cyclic buffer of 64K bytes.
  * @short Implements a "dumb" terminal with buffered string reads and writes
  */
-class TTerminal: public TTextDevice
-{
-public:
+class TTerminal:public TTextDevice {
+      public:
     /**
      * Creates a TTerminal object with the given bounds, horizontal and
      * vertical scroll bars, and buffer by calling @ref TTextDevice constructor
@@ -81,89 +77,87 @@ public:
      * and @ref queBack are both initialized to 0, indicating an empty buffer.
      * The cursor is shown at the view's origin, (0,0).
      */
-    TTerminal( const TRect& bounds,
-               TScrollBar *aHScrollBar,
-               TScrollBar *aVScrollBar,
-               ushort aBufSize
-             );
+	TTerminal(const TRect & bounds,
+		  TScrollBar * aHScrollBar,
+		  TScrollBar * aVScrollBar, ushort aBufSize);
     /**
      * Deallocates the buffer and calls ~TTextDevice().
      */
-    ~TTerminal();
+	~TTerminal();
     /**
      * Overrides the corresponding function in class streambuf.
      *
      * This is an internal function that is called whenever a character string
      * is to be inserted into the internal buffer.
      */
-    virtual int do_sputn( const char *s, int count );
+	virtual int do_sputn(const char *s, int count);
     /**
      * Used to manipulate a queue offsets with wrap around: increments `val'
      * by 1, then if `val' >= @ref bufSize, `val' is set to zero.
      */
-    void bufInc( ushort& val );
+	void bufInc(ushort & val);
     /**
      * Returns True if the number of bytes given in amount can be inserted
      * into the terminal buffer without having to discard the top line.
      * Otherwise, returns False.
      */
-    Boolean canInsert( ushort amount );
+	Boolean canInsert(ushort amount);
     /**
      * Undocumented.
      */
-    short calcWidth();
+	short calcWidth();
     /**
      * Called whenever the TTerminal scroller needs to be redrawn; for
      * example, when the scroll bars are clicked on, the view is unhidden or
      * resized, the delta values are changed, or when added text forces a
      * scroll.
      */
-    virtual void draw();
+	virtual void draw();
     /**
      * Returns the buffer offset of the start of the line that follows the
      * position given by `pos'.
      */
-    ushort nextLine( ushort pos );
+	ushort nextLine(ushort pos);
     /**
      * Returns the offset of the start of the line that is `lines' lines
      * previous to the position given by `pos'.
      */
-    ushort prevLines( ushort pos, ushort lines );
+	ushort prevLines(ushort pos, ushort lines);
     /**
      * Returns True if @ref queFront is equal to @ref queBack.
      */
-    Boolean queEmpty();
-protected:
+	Boolean queEmpty();
+      protected:
     /**
      * The size of the terminal's buffer in bytes.
      */
-    ushort bufSize;
+	 ushort bufSize;
     /**
      * Pointer to the first byte of the terminal's buffer.
      */
-    char *buffer;
+	char *buffer;
     /**
      * Offset (in bytes) of the first byte stored in the terminal buffer.
      */
-    ushort queFront;
+	ushort queFront;
     /**
      * Offset (in bytes) of the last byte stored in the terminal buffer.
      */
-    ushort queBack;
+	ushort queBack;
     /**
      * Used to manipulate queue offsets with wrap around: if `val' is zero,
      * `val' is set to (bufSize - 1); otherwise, `val' is decremented.
      */
-    void bufDec(ushort& val);
+	void bufDec(ushort & val);
 #ifndef __UNPATCHED
     /**
      * Undocumented.
      */
-    ushort curLineWidth;   // Added horizontal cursor tracking
+	ushort curLineWidth;	// Added horizontal cursor tracking
 #endif
 };
 
-#endif  // Uses_TTerminal
+#endif // Uses_TTerminal
 
 #if defined( Uses_otstream ) && !defined( TV_otstream )
 #define TV_otstream
@@ -176,18 +170,17 @@ class ostream;
 /**
  * Undocumented.
  */
-class TerminalBuf: public std::streambuf
-{
-protected:
+class TerminalBuf:public std::streambuf {
+      protected:
     /**
      * Undocumented.
      */
-    TTerminal *term;
-public:
+	TTerminal * term;
+      public:
     /**
      * Undocumented.
      */
-    TerminalBuf(TTerminal *tt);
+	TerminalBuf(TTerminal * tt);
     /**
      * Overrides the corresponding function in class streambuf.
      *
@@ -199,28 +192,27 @@ public:
      * In TerminalBuf the underlying streambuf has no buffer, so every
      * character results in an overflow() call.
      */
-    virtual int overflow( int c = EOF );
+	virtual int overflow(int c = EOF);
     /**
      * Undocumented.
      */
-    virtual int sync();
+	virtual int sync();
 };
 
 /**
  * Undocumented.
  */
-class otstream : public std::ostream
-{
-protected:
+class otstream:public std::ostream {
+      protected:
     /**
      * Undocumented.
      */
-    TerminalBuf buf;
-public:
+	TerminalBuf buf;
+      public:
     /**
      * Undocumented.
      */
-    otstream( TTerminal *tt );
+	otstream(TTerminal * tt);
 };
 
 #endif

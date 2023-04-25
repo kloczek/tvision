@@ -33,12 +33,11 @@ const int DEFAULT_SAFETY_POOL_SIZE = 4096;
  * class and the global operator new is a friend function.
  * @short Part of the memory manager
  */
-class TBufListEntry
-{
-private:
-    TBufListEntry( void*& );
-    ~TBufListEntry();
-    void *operator new( size_t, size_t );
+class TBufListEntry {
+      private:
+	TBufListEntry(void *&);
+	~TBufListEntry();
+	void *operator  new(size_t, size_t);
     /**
      * Tries to allocate `sz' bytes on the heap. A pointer to the allocation
      * is returned if new() succeeds.
@@ -56,7 +55,7 @@ private:
      * the allocation is returned; otherwise, abort() is called. Operator
      * new() is a friend function of TBufListEntry.
      */
-    void *operator new( size_t sz );
+	void *operator  new(size_t sz);
     /**
      * Frees the allocation block from the heap. If the safety pool is
      * exhausted, @ref TVMemMgr::resizeSafetyPool is called.
@@ -65,15 +64,15 @@ private:
      * pool (usually 4,096 bytes, as defined by constant
      * @ref DEFAULT_SAFETY_POOL_SIZE in file `buffers.h').
      */
-    void operator delete( void * );
-    TBufListEntry *next;
-    TBufListEntry *prev;
-    void*& owner;
-    static TBufListEntry *bufList;
-    static Boolean freeHead();
-    friend class TVMemMgr;
-    friend void *operator new( size_t );
-    friend void * allocBlock( size_t );
+	void operator  delete(void *);
+	TBufListEntry *next;
+	TBufListEntry *prev;
+	void *&owner;
+	static TBufListEntry *bufList;
+	static Boolean freeHead();
+	friend class TVMemMgr;
+	friend void *operator  new(size_t);
+	friend void *allocBlock(size_t);
 };
 
 /**
@@ -85,9 +84,8 @@ private:
  * need for specific programmer action or intervention.
  * @short Part of the memory manager
  */
-class TVMemMgr
-{
-public:
+class TVMemMgr {
+      public:
     /**
      * Constructor.
      *
@@ -101,7 +99,7 @@ public:
      * The latter is currently set to 4,096 (bytes) in `buffers.h'. The
      * constructor also sets inited to 1.
      */
-    TVMemMgr();
+	TVMemMgr();
     /**
      * Resizes the safety pool to `sz' bytes.
      *
@@ -113,17 +111,17 @@ public:
      * If `sz' is 0, both safetyPool and safetyPoolSize private data members
      * are set to 0.
      */
-    static void resizeSafetyPool( size_t sz = DEFAULT_SAFETY_POOL_SIZE );
+	static void resizeSafetyPool(size_t sz = DEFAULT_SAFETY_POOL_SIZE);
     /**
      * Returns 1 (True) if the safety pool is initialized and its allocation
      * is exhausted. Otherwise, returns 0 (False).
      */
-    static int safetyPoolExhausted();
+	static int safetyPoolExhausted();
 #ifndef __UNPATCHED
     /**
      * Undocumented.
      */
-    static void clearSafetyPool();
+	static void clearSafetyPool();
 #endif
     /**
      * For internal use only. Tries to allocate a cache buffer
@@ -134,7 +132,7 @@ public:
      * allocateDiscardable() with `adr' set to the @ref TGroup::buffer data
      * member.
      */
-    static void allocateDiscardable( void *&adr, size_t sz );
+	static void allocateDiscardable(void *&adr, size_t sz);
     /**
      * For internal use only. Frees the buffer allocated at block by an earlier
      * @ref allocateDiscardable() call.
@@ -142,21 +140,21 @@ public:
      * @ref TGroup::freeBuffer() calls freeDiscardable() with block set to the
      * @ref TGroup::buffer data member.
      */
-    static void freeDiscardable( void * );
+	static void freeDiscardable(void *);
 #ifndef __UNPATCHED
     /**
      * Undocumented.
      */
-    static void suspend(void);
+	static void suspend(void);
 #endif
-private:
+      private:
     /**
      * Variable safetyPool points to the safety pool memory allocation.
      *
      * This value is zero if no safety pool has been allocated or if the
      * safety pool is exhausted.
      */
-    static void * safetyPool;
+	static void *safetyPool;
     /**
      * The size in bytes of the current safety pool.
      *
@@ -165,13 +163,13 @@ private:
      * @ref DEFAULT_SAFETY_POOL_SIZE, which is declared in `buffers.h' and is
      * currently set at 4,096 bytes.
      */
-    static size_t safetyPoolSize;
+	static size_t safetyPoolSize;
     /**
      * This data member indicates whether safety pool initialization has been
      * attempted; it is strictly for internal use.
      */
-    static int inited;
-    static int initMemMgr();
+	static int inited;
+	static int initMemMgr();
 };
 
-#endif  // Uses_TVMemMgr
+#endif // Uses_TVMemMgr

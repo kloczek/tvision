@@ -41,11 +41,10 @@
  * line of the picture. Its default size is @ref maxViewWidth = 132 pairs.
  * @short Implements a video buffer
  */
-class TDrawBuffer
-{
-    friend class TFrame;
-    friend class TView;
-public:
+class TDrawBuffer {
+	friend class TFrame;
+	friend class TView;
+      public:
     /**
      * Fills the buffer or part of the buffer with an uniform pattern.
      *
@@ -56,7 +55,7 @@ public:
      * is not written and the old attribute is preserved. `count' is the
      * number of character/attribute pairs to put into the buffer.
      */
-    void moveChar( ushort indent, char c, ushort attr, ushort count );
+	void moveChar(ushort indent, char c, ushort attr, ushort count);
     /**
      * Writes a string in the buffer.
      *
@@ -67,7 +66,7 @@ public:
      * is not written and the old attribute is preserved. The characters in
      * `str' are set in the low bytes of each buffer word.
      */
-    void moveStr( ushort indent, const char *str, ushort attrs );
+	void moveStr(ushort indent, const char *str, ushort attrs);
     /**
      * Writes a string in the buffer.
      *
@@ -78,7 +77,7 @@ public:
      * byte is used, and a `~' in the string toggles between the low byte and
      * the high byte.
      */
-    void moveCStr( ushort indent, const char *str, ushort attrs );
+	void moveCStr(ushort indent, const char *str, ushort attrs);
     /**
      * Writes a text buffer in this video buffer.
      *
@@ -87,14 +86,15 @@ public:
      * attribute to be used for all characters (0 to retain the old
      * attribute). `count' is the number of characters to move.
      */
-    void moveBuf( ushort indent, const void *source, ushort attr, ushort count );
+	void moveBuf(ushort indent, const void *source, ushort attr,
+		     ushort count);
     /**
      * Writes an attribute.
      *
      * `ident' is the character position within the buffer where the attribute
      * is to go. `attr' is the attribute to write.
      */
-    void putAttribute( ushort indent, ushort attr );
+	void putAttribute(ushort indent, ushort attr);
     /**
      * Writes a character.
      *
@@ -102,25 +102,25 @@ public:
      * is to go. `c' is the character to write. This call inserts `c' into the
      * lower byte of the calling buffer.
      */
-    void putChar( ushort indent, ushort c );
-protected:
+	void putChar(ushort indent, ushort c);
+      protected:
     /**
      * Defines the array for this draw buffer.
      */
-    ushort data[maxViewWidth];
+	 ushort data[maxViewWidth];
 };
 
 #define loByte(w)    (((uchar *)&w)[0])
 #define hiByte(w)    (((uchar *)&w)[1])
 
-inline void TDrawBuffer::putAttribute( ushort indent, ushort attr )
+inline void TDrawBuffer::putAttribute(ushort indent, ushort attr)
 {
-    hiByte(data[indent]) = uchar(attr);
+	hiByte(data[indent]) = uchar(attr);
 }
 
-inline void TDrawBuffer::putChar( ushort indent, ushort c )
+inline void TDrawBuffer::putChar(ushort indent, ushort c)
 {
-    loByte(data[indent]) = uchar(c);
+	loByte(data[indent]) = uchar(c);
 }
 
-#endif  // Uses_TDrawBuffer
+#endif // Uses_TDrawBuffer

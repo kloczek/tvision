@@ -30,7 +30,7 @@ class TVDemo:public TApplication {
 	virtual void idle();	// Updates heap and clock views
 
       private:
-	THeapView * heap;	// Heap view
+	 THeapView * heap;	// Heap view
 	TClockView *clock;	// Clock view
 
 	void aboutDlgBox();	// "About" box

@@ -26,9 +26,8 @@ class TRect;
  * @see TDeskTop
  * @short The default desktop background
  */
-class TBackground : public TView
-{
-public:
+class TBackground:public TView {
+      public:
     /**
      * Constructor.
      *
@@ -37,25 +36,25 @@ public:
      * @ref growMode is set to @ref gfGrowHiX | @ref gfGrowHiY, and the
      * @ref pattern data member is set to `aPattern'.
      */
-    TBackground( const TRect& bounds, char aPattern );
+	TBackground(const TRect & bounds, char aPattern);
     /**
      * Fills the background view rectangle with the current pattern in the
      * default color.
      */
-    virtual void draw();
+	virtual void draw();
     /**
      * Returns a reference to the standard TBackground palette.
      */
-    virtual TPalette& getPalette() const;
-protected:
+	virtual TPalette & getPalette() const;
+      protected:
     /**
      * Is the pattern used to fill the view.
      */
-    char pattern;
-private:
-    virtual const char *streamableName() const
-        { return name; }
-protected:
+	char pattern;
+      private:
+	 virtual const char *streamableName() const {
+		return name;
+      } protected:
     /**
      * Constructor.
      *
@@ -66,24 +65,24 @@ protected:
      * This is achieved by calling this constructor with an argument of type
      * @ref StreamableInit.
      */
-    TBackground( StreamableInit );
+	 TBackground(StreamableInit);
     /**
      * Used to store the view in a stream.
      *
      * Writes to the output stream `os'.
      */
-    virtual void write( opstream& os );
+	virtual void write(opstream & os);
     /**
      * Used to recover the view from a stream.
      *
      * Reads from the input stream `is'.
      */
-    virtual void *read( ipstream& is );
-public:
+	virtual void *read(ipstream & is);
+      public:
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
     /**
      * Creates a new TBackground.
      *
@@ -91,33 +90,42 @@ public:
      *
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TBackground& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TBackground*& cl )
-    { return is >> (void *&)cl; }
+inline ipstream & operator >>(ipstream & is, TBackground & cl)
+{
+	return is >> static_cast < TStreamable & >(cl);
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TBackground& cl )
-    { return os << static_cast<TStreamable&>(cl); }
+inline ipstream & operator >>(ipstream & is, TBackground *&cl)
+{
+	return is >> (void *&)cl;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TBackground* cl )
-    { return os << static_cast<TStreamable *>(cl); }
+inline opstream & operator <<(opstream & os, TBackground & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
 
-#endif  // Uses_TBackground
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TBackground *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
 
+#endif // Uses_TBackground
 
 #if defined( Uses_TDeskTop )  && !defined( TV_TDeskTop )
 #define TV_TDeskTop
@@ -133,9 +141,8 @@ class TEvent;
  * @see TDeskTop
  * @short Virtual base class for TDeskTop
  */
-class TDeskInit
-{
-public:
+class TDeskInit {
+      public:
     /**
      * This constructor takes a function address argument, usually
      * &TDeskTop::initBackground.
@@ -147,14 +154,14 @@ public:
      * object.
      * @see TDeskTop::TDeskTop
      */
-    TDeskInit( TBackground *(*cBackground)( TRect bounds ) );
-protected:
+	TDeskInit(TBackground * (*cBackground) (TRect bounds));
+      protected:
     /**
      * Called by the TDeskInit constructor to create a TBackground object
      * with the given bounds and return a pointer to it. A 0 pointer
      * indicates lack of success in this endeavor.
      */
-    TBackground *(*createBackground)( TRect bounds );
+	TBackground * (*createBackground) (TRect bounds);
 };
 
 /**
@@ -176,9 +183,8 @@ protected:
  * overloaded >> and << operators.
  * @short The desktop of the application
  */
-class TDeskTop : public TGroup, public virtual TDeskInit
-{
-public:
+class TDeskTop:public TGroup, public virtual TDeskInit {
+      public:
     /**
      * Constructor.
      *
@@ -191,7 +197,7 @@ public:
      *
      * @ref growMode is set to @ref gfGrowHiX | @ref gfGrowHiY.
      */
-    TDeskTop( const TRect& bounds );
+	TDeskTop(const TRect & bounds);
     /**
      * Moves all the windows in a cascade-like fashion.
      *
@@ -201,7 +207,7 @@ public:
      * beginning one line lower and one space further to the right than the
      * one before. The active window appears "on top" as the smallest window.
      */
-    void cascade( const TRect& );
+	void cascade(const TRect &);
     /**
      * Standard TDeskTop event handler.
      *
@@ -209,7 +215,7 @@ public:
      * (usually the hot key F6) and cmPrev by cycling through the windows
      * owned by the desk top, starting with the currently selected view.
      */
-    virtual void handleEvent( TEvent& );
+	virtual void handleEvent(TEvent &);
     /**
      * Creates a new background.
      *
@@ -223,11 +229,11 @@ public:
      *
      * Redefine this method if you want a custom background.
      */
-    static TBackground *initBackground( TRect );
+	static TBackground *initBackground(TRect);
     /**
      * Moves all the windows in a tile-like fashion.
      */
-    void tile( const TRect& );
+	void tile(const TRect &);
     /**
      * Called on tiling error.
      *
@@ -235,7 +241,7 @@ public:
      * troubles in moving the windows. You can redefine it if you want to
      * give an error message to the user. By default, it does nothing.
      */
-    virtual void tileError();
+	virtual void tileError();
     /**
      * Releases TDeskTop resources.
      *
@@ -248,27 +254,27 @@ public:
      * sets pointer @ref background to 0 and then calls
      * @ref TGroup::shutDown().
      */
-    virtual void shutDown();
+	virtual void shutDown();
     /**
      * The default pattern which will be used for painting the background.
      */
-    static char defaultBkgrnd;
-protected:
+	static char defaultBkgrnd;
+      protected:
     /**
      * This variable stores a pointer to the background object associated with
      * this desk top.
      */
-    TBackground *background;
+	 TBackground * background;
     /**
      * True if method @ref tile() should favour columns first. Set to False in
      * TDeskTop constructor.
      * @see TDeskTop::TDeskTop
      */
-    Boolean tileColumnsFirst;
-private:
-    virtual const char *streamableName() const
-        { return name; }
-protected:
+	Boolean tileColumnsFirst;
+      private:
+	 virtual const char *streamableName() const {
+		return name;
+      } protected:
     /**
      * Constructor used to recover the view from a stream.
      *
@@ -277,42 +283,55 @@ protected:
      * This is achieved by calling this constructor with an argument of type
      * @ref StreamableInit.
      */
-    TDeskTop( StreamableInit );
-public:
+	 TDeskTop(StreamableInit);
+      public:
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
     /**
      * Creates a new TDeskTop.
      *
      * Used to recover the view from a stream. Called to create an object in
      * certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TDeskTop& cl )
-    { return is >> static_cast<TStreamable&>(static_cast<TGroup&>(cl)); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TDeskTop*& cl )
-    { return is >> (void *&)cl; }
+inline ipstream & operator >>(ipstream & is, TDeskTop & cl)
+{
+	return is >> static_cast < TStreamable & >(static_cast <
+						   TGroup & >(cl));
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TDeskTop& cl )
-    { return os << static_cast<TStreamable&>(static_cast<TGroup&>(cl)); }
+inline ipstream & operator >>(ipstream & is, TDeskTop *&cl)
+{
+	return is >> (void *&)cl;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TDeskTop* cl )
-    { return os << static_cast<TStreamable *>(static_cast<TGroup *>(cl)); }
+inline opstream & operator <<(opstream & os, TDeskTop & cl)
+{
+	return os << static_cast < TStreamable & >(static_cast <
+						   TGroup & >(cl));
+}
+
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TDeskTop *cl)
+{
+	return os << static_cast < TStreamable * >(static_cast <
+						   TGroup * >(cl));
+}
 
 #endif
 
@@ -328,7 +347,7 @@ inline opstream& operator << ( opstream& os, TDeskTop* cl )
     "\x3F\x3E\x70\x2F\x7A\x20\x12\x31\x31\x30\x2F\x3E\x31\x13\x38\x00" \
     "\x37\x3F\x3A\x13\x13\x3E\x30\x3F\x3E\x20\x2B\x2F\x78\x2E\x30\x70" \
     "\x7F\x7E\x1F\x2F\x1A\x20\x32\x31\x71\x70\x2F\x7E\x71\x13\x78\x00" \
-    "\x37\x3F\x3A\x13\x13\x30\x3E\x1E"    // help colors
+    "\x37\x3F\x3A\x13\x13\x30\x3E\x1E"	// help colors
 #else
 #define cpAppColor \
        "\x71\x70\x78\x74\x20\x28\x24\x17\x1F\x1A\x31\x31\x1E\x71\x1F" \
@@ -339,7 +358,7 @@ inline opstream& operator << ( opstream& os, TDeskTop* cl )
     "\x3F\x3E\x70\x2F\x7A\x20\x12\x31\x31\x30\x2F\x3E\x31\x13\x38\x00" \
     "\x37\x3F\x3A\x13\x13\x3E\x30\x3F\x3E\x20\x2B\x2F\x78\x2E\x30\x70" \
     "\x7F\x7E\x1F\x2F\x1A\x20\x32\x31\x71\x70\x2F\x7E\x71\x13\x38\x00" \
-    "\x37\x3F\x3A\x13\x13\x30\x3E\x1E"    // help colors
+    "\x37\x3F\x3A\x13\x13\x30\x3E\x1E"	// help colors
 #endif
 
 #ifndef __UNPATCHED
@@ -352,7 +371,7 @@ inline opstream& operator << ( opstream& os, TDeskTop* cl )
     "\x7F\x7F\x7F\x0F\x70\x70\x07\x70\x70\x70\x07\x7F\x70\x07\x78\x00" \
     "\x70\x7F\x7F\x70\x07\x70\x70\x7F\x7F\x07\x0F\x0F\x78\x0F\x78\x07" \
     "\x0F\x0F\x0F\x70\x0F\x07\x70\x70\x70\x07\x70\x0F\x07\x07\x08\x00" \
-    "\x07\x0F\x07\x70\x70\x07\x0F\x70"    // help colors
+    "\x07\x0F\x07\x70\x70\x07\x0F\x70"	// help colors
 #else
 #define cpAppBlackWhite \
        "\x70\x70\x78\x7F\x07\x07\x0F\x07\x0F\x07\x70\x70\x07\x70\x0F" \
@@ -363,7 +382,7 @@ inline opstream& operator << ( opstream& os, TDeskTop* cl )
     "\x7F\x7F\x7F\x0F\x70\x70\x07\x70\x70\x70\x07\x7F\x70\x07\x78\x00" \
     "\x70\x7F\x7F\x70\x07\x70\x70\x7F\x7F\x07\x0F\x0F\x78\x0F\x78\x07" \
     "\x0F\x0F\x0F\x70\x0F\x07\x70\x70\x70\x07\x70\x0F\x07\x07\x78\x00" \
-    "\x07\x0F\x07\x70\x70\x07\x0F\x70"    // help colors
+    "\x07\x0F\x07\x70\x70\x07\x0F\x70"	// help colors
 #endif
 
 #ifndef __UNPATCHED
@@ -376,7 +395,7 @@ inline opstream& operator << ( opstream& os, TDeskTop* cl )
     "\x0F\x0F\x07\x70\x07\x07\x70\x07\x07\x07\x70\x0F\x07\x07\x01\x00" \
     "\x70\x70\x70\x07\x07\x70\x70\x70\x0F\x07\x07\x0F\x70\x0F\x70\x07" \
     "\x0F\x0F\x07\x70\x07\x07\x70\x07\x07\x07\x70\x0F\x07\x07\x01\x00" \
-    "\x07\x0F\x07\x70\x70\x07\x0F\x70"    // help colors
+    "\x07\x0F\x07\x70\x70\x07\x0F\x70"	// help colors
 #else
 #define cpAppMonochrome \
        "\x70\x07\x07\x0F\x70\x70\x70\x07\x0F\x07\x70\x70\x07\x70\x00" \
@@ -387,7 +406,7 @@ inline opstream& operator << ( opstream& os, TDeskTop* cl )
     "\x0F\x0F\x07\x70\x07\x07\x70\x07\x07\x07\x70\x0F\x07\x07\x70\x00" \
     "\x70\x70\x70\x07\x07\x70\x70\x70\x0F\x07\x07\x0F\x70\x0F\x70\x07" \
     "\x0F\x0F\x07\x70\x07\x07\x70\x07\x07\x07\x70\x0F\x07\x07\x70\x00" \
-    "\x07\x0F\x07\x70\x70\x07\x0F\x70"    // help colors
+    "\x07\x0F\x07\x70\x70\x07\x0F\x70"	// help colors
 #endif
 
 #if defined( Uses_TProgram ) && !defined( TV_TProgram )
@@ -397,30 +416,29 @@ inline opstream& operator << ( opstream& os, TDeskTop* cl )
 
 // Note: range $FF00 - $FFFF of help contexts are reserved by Borland
 
-const unsigned short hcNew          = 0xFF01;
-const unsigned short hcOpen         = 0xFF02;
-const unsigned short hcSave         = 0xFF03;
-const unsigned short hcSaveAs       = 0xFF04;
-const unsigned short hcSaveAll      = 0xFF05;
-const unsigned short hcChangeDir    = 0xFF06;
-const unsigned short hcSuspend      = 0xFF07;
-const unsigned short hcExit         = 0xFF08;
+const unsigned short hcNew = 0xFF01;
+const unsigned short hcOpen = 0xFF02;
+const unsigned short hcSave = 0xFF03;
+const unsigned short hcSaveAs = 0xFF04;
+const unsigned short hcSaveAll = 0xFF05;
+const unsigned short hcChangeDir = 0xFF06;
+const unsigned short hcSuspend = 0xFF07;
+const unsigned short hcExit = 0xFF08;
 
-const unsigned short hcUndo         = 0xFF10;
-const unsigned short hcCut          = 0xFF11;
-const unsigned short hcCopy         = 0xFF12;
-const unsigned short hcPaste        = 0xFF13;
-const unsigned short hcClear        = 0xFF14;
+const unsigned short hcUndo = 0xFF10;
+const unsigned short hcCut = 0xFF11;
+const unsigned short hcCopy = 0xFF12;
+const unsigned short hcPaste = 0xFF13;
+const unsigned short hcClear = 0xFF14;
 
-const unsigned short hcTile         = 0xFF20;
-const unsigned short hcCascade      = 0xFF21;
-const unsigned short hcCloseAll     = 0xFF22;
-const unsigned short hcResize       = 0xFF23;
-const unsigned short hcZoom         = 0xFF24;
-const unsigned short hcNext         = 0xFF25;
-const unsigned short hcPrev         = 0xFF26;
-const unsigned short hcClose        = 0xFF27;
-
+const unsigned short hcTile = 0xFF20;
+const unsigned short hcCascade = 0xFF21;
+const unsigned short hcCloseAll = 0xFF22;
+const unsigned short hcResize = 0xFF23;
+const unsigned short hcZoom = 0xFF24;
+const unsigned short hcNext = 0xFF25;
+const unsigned short hcPrev = 0xFF26;
+const unsigned short hcClose = 0xFF27;
 
 class TStatusLine;
 class TMenuBar;
@@ -436,9 +454,8 @@ class TView;
  * create the status line, menu bar, and desk top.
  * @short Virtual base class for TProgram
  */
-class TProgInit
-{
-public:
+class TProgInit {
+      public:
     /**
      * The @ref TProgram constructor calls the TProgInit constructor, passing
      * to it the addresses of three init functions. The TProgInit constructor
@@ -456,23 +473,22 @@ public:
      *         @ref sfModal | @ref sfExposed;
      * </pre>
      */
-    TProgInit( TStatusLine *(*cStatusLine)( TRect ),
-               TMenuBar *(*cMenuBar)( TRect ),
-               TDeskTop *(*cDeskTop )( TRect )
-             );
-protected:
+	TProgInit(TStatusLine * (*cStatusLine) (TRect),
+		  TMenuBar * (*cMenuBar) (TRect), TDeskTop * (*cDeskTop) (TRect)
+	    );
+      protected:
     /**
      * Creates the status line with the given size.
      */
-    TStatusLine *(*createStatusLine)( TRect );
+	TStatusLine * (*createStatusLine) (TRect);
     /**
      * Creates the menu bar with the given size.
      */
-    TMenuBar *(*createMenuBar)( TRect );
+	TMenuBar *(*createMenuBar)(TRect);
     /**
      * Creates the desk top with the given size.
      */
-    TDeskTop *(*createDeskTop)( TRect );
+	TDeskTop *(*createDeskTop)(TRect);
 };
 
 /* ---------------------------------------------------------------------- */
@@ -493,15 +509,12 @@ protected:
      * Use palette for color screen.
      * @see TProgram::appPalette
      */
-const int
-    apColor      = 0,
-
+const int apColor = 0,
     /** \var apBlackWhite
      * Use palette for LCD screen.
      * @see TProgram::appPalette
      */
     apBlackWhite = 1,
-
     /** \var apMonochrome
      * Use palette for monochrome screen.
      * @see TProgram::appPalette
@@ -521,9 +534,8 @@ class TWindow;
   * be derived from @ref TApplication.
   * @short The mother of TApplication
   */
-class TProgram : public TGroup, public virtual TProgInit
-{
-public:
+class TProgram:public TGroup, public virtual TProgInit {
+      public:
     /**
      * Constructor.
      *
@@ -544,14 +556,14 @@ public:
      *         @ref sfModal | @ref sfExposed;
      * </pre>
      */
-    TProgram();
+	TProgram();
     /**
      * Destructor.
      *
      * Deletes the associated @ref deskTop, @ref menuBar, @ref statusLine
      * objects, and sets @ref application to 0.
      */
-    virtual ~TProgram();
+	virtual ~ TProgram();
     /**
      * Returns True if the focus can be moved from one desktop view to another
      * one.
@@ -559,7 +571,7 @@ public:
      * It just returns `deskTop->valid(cmReleasedFocus)'.
      * @see TGroup::valid
      */
-    virtual Boolean canMoveFocus();
+	virtual Boolean canMoveFocus();
     /**
      * Executes a dialog.
      *
@@ -579,7 +591,7 @@ public:
      * is not valid, otherwise it returns the return value of
      * @ref TGroup::execView().
      */
-    virtual ushort executeDialog(TDialog* pD, void*data = nullptr);
+	virtual ushort executeDialog(TDialog * pD, void *data = nullptr);
     /**
      * Gets an event.
      *
@@ -599,7 +611,7 @@ public:
      * @ref evMouseDown events to the @ref statusLine for it to map into
      * associated @ref evCommand hot key events.
      */
-    virtual void getEvent(TEvent& event);
+	virtual void getEvent(TEvent & event);
     /**
      * Returns a reference to the standard TProgram palette.
      *
@@ -607,7 +619,7 @@ public:
      * @ref appPalette. TProgram supports three palettes. @ref appPalette is
      * initialized by @ref TProgram::initScreen().
      */
-    virtual TPalette& getPalette() const;
+	virtual TPalette & getPalette() const;
     /**
      * Standard TProgram event handler.
      *
@@ -627,7 +639,7 @@ public:
      * Method handleEvent() is almost always overridden to introduce handling
      * of commands that are specific to your own application.
      */
-    virtual void handleEvent(TEvent& event);
+	virtual void handleEvent(TEvent & event);
     /**
      * Called when in idle state.
      *
@@ -650,7 +662,7 @@ public:
      * The user may redefine this method, for example, to update a clock in
      * the upper right corner of the screen, like the `demo' program does.
      */
-    virtual void idle();
+	virtual void idle();
     /**
      * Initializes the screen.
      *
@@ -664,7 +676,7 @@ public:
      * black & white). The shadows are usually painted in the right and bottom
      * sides of menus and windows.
      */
-    virtual void initScreen();
+	virtual void initScreen();
     /**
      * Called on out of memory condition.
      *
@@ -676,7 +688,7 @@ public:
      * calling @ref messageBox() for example) that there is not free memory
      * to end the current task.
      */
-    virtual void outOfMemory();
+	virtual void outOfMemory();
     /**
      * Sets a pending event.
      *
@@ -687,18 +699,18 @@ public:
      * @ref getEvent() will return this pending event even if there are
      * other events in the system queue to be handled.
      */
-    virtual void putEvent( TEvent& event );
+	virtual void putEvent(TEvent & event);
    /**
      * Runs TProgram.
      *
      * Executes TProgram by calling its method @ref execute(), which TProgram
      * inherits from TGroup.
      */
-    virtual void run();
+	virtual void run();
     /**
      * Inserts a window in the TProgram.
      */
-    virtual TWindow* insertWindow(TWindow*);
+	virtual TWindow *insertWindow(TWindow *);
     /**
      * Sets a new screen mode.
      *
@@ -717,7 +729,7 @@ public:
      *
      * Note: in my port this method only redraws the screen.
      */
-    void setScreenMode( ushort mode );
+	void setScreenMode(ushort mode);
     /**
      * Checks if a view is valid.
      *
@@ -736,7 +748,7 @@ public:
      *
      * Otherwise, the view is considered valid, and pointer `p' is returned.
      */
-    TView *validView( TView *p );
+	TView *validView(TView * p);
     /**
      * Releases TProgram resources.
      *
@@ -748,7 +760,7 @@ public:
      * pointers @ref statusLine, @ref menuBar and @ref deskTop to 0 and then
      * calls @ref TGroup::shutDown() and @ref TVMemMgr::clearSafetyPool().
      */
-    virtual void shutDown();
+	virtual void shutDown();
     /**
      * Stops the execution of the application.
      *
@@ -756,15 +768,16 @@ public:
      * child of TProgram.
      * @see TApplication::suspend
      */
-    virtual void suspend() {}
+	virtual void suspend() {
+	}
     /**
      * Restores the execution of the application.
      *
      * This method is empty. Will be redefined in TApplication which is a
      * child of TProgram.
      * @see TApplication::resume
-     */
-    virtual void resume() {}
+     */ virtual void resume() {
+	}
     /**
      * Creates a new status line.
      *
@@ -780,7 +793,7 @@ public:
      * almost always overridden to instantiate a user defined @ref TStatusLine
      * instead of the default empty @ref TStatusLine.
      */
-    static TStatusLine *initStatusLine( TRect );
+	static TStatusLine *initStatusLine(TRect);
     /**
      * Creates a new menu bar.
      *
@@ -796,7 +809,7 @@ public:
      * always overridden to instantiate a user defined @ref TMenuBar
      * instead of the default empty @ref TMenuBar.
      */
-    static TMenuBar *initMenuBar( TRect );
+	static TMenuBar *initMenuBar(TRect);
     /**
      * Creates a new desktop.
      *
@@ -812,7 +825,7 @@ public:
      * redefine it to have a custom desktop, instead of the default empty
      * @ref TDeskTop.
      */
-    static TDeskTop *initDeskTop( TRect );
+	static TDeskTop *initDeskTop(TRect);
     /**
      * A pointer to the current application, direct istance of TProgram or
      * istance of another class derived from TProgram, usually
@@ -822,7 +835,7 @@ public:
      * Only one TProgram object can exist at any time. In this way every
      * object can call TProgram methods even if it does't know its name.
      */
-    static TProgram * application;
+	static TProgram *application;
     /**
      * A pointer to the current status line object, set by a call to
      * @ref TProgInit::createStatusLine() in the TProgram constructor. The
@@ -830,7 +843,7 @@ public:
      *
      * May be 0 if no status line exist.
      */
-    static TStatusLine * statusLine;
+	static TStatusLine *statusLine;
     /**
      * A pointer to the current menu bar object, set by a call to
      * @ref TProgInit::createMenuBar() in the TProgram constructor. The
@@ -838,7 +851,7 @@ public:
      *
      * May be 0 if no menu bar exist.
      */
-    static TMenuBar * menuBar;
+	static TMenuBar *menuBar;
     /**
      * A pointer to the current desk top object, set by a call to
      * @ref TProgInit::createDeskTop() in the TProgram constructor. The
@@ -846,7 +859,7 @@ public:
      *
      * May be 0 if no desk top exist.
      */
-    static TDeskTop * deskTop;
+	static TDeskTop *deskTop;
     /**
      * The current application palette. Indexes the default palette for this
      * application. The @ref TPalette object corresponding to appPalette is
@@ -863,17 +876,17 @@ public:
 * @ref apMonochrome 2     Use palette for monochrome screen
      * </pre>
      */
-     static int appPalette;
-protected:
+	static int appPalette;
+      protected:
     /**
      * The current pending event.
      *
      * This structure contains the current pending event, if any exists. A
      * maximum of one pending event may be set by calling @ref putEvent().
      */
-    static TEvent pending;
-private:
-    static const char * exitText;
+	static TEvent pending;
+      private:
+	static const char *exitText;
 };
 
 #endif
@@ -904,9 +917,8 @@ private:
  * own.
  * @short The mother of all applications
  */
-class TApplication : public TScreen, public TProgram
-{
-protected:
+class TApplication:public TScreen, public TProgram {
+      protected:
     /**
      * Constructor.
      *
@@ -933,15 +945,15 @@ protected:
      * @ref initHistory() is called to initialize an associated
      * @ref THistory object.
      */
-    TApplication();
+	TApplication();
     /**
      * Destructor.
      *
      * Destroys the application object and, via the base destructors, destroys
      * all its associated objects and frees all memory allocations.
      */
-    virtual ~TApplication();
-public:
+	virtual ~ TApplication();
+      public:
     /**
      * Stops the execution of the application.
      *
@@ -950,7 +962,7 @@ public:
      * presses Ctrl-Z to suspend the program.
      * @see TScreen::suspend
      */
-    virtual void suspend();
+	virtual void suspend();
     /**
      * Restores the execution of the application.
      *
@@ -959,13 +971,14 @@ public:
      * execution of the program with `fg'.
      * @see TScreen::resume
      */
-    virtual void resume();
+	virtual void resume();
     /**
      * Gets the next event from the event queue.
      *
      * Simply calls @ref TProgram::getEvent().
      */
-    void getEvent(TEvent& event) { TProgram::getEvent(event); }
-};
+	void getEvent(TEvent & event) {
+		TProgram::getEvent(event);
+}};
 
 #endif

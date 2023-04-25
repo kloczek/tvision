@@ -15,51 +15,50 @@
 #define Uses_ipstream
 #include <tv.h>
 
-#define cpBackground "\x01"      // background palette
+#define cpBackground "\x01"	// background palette
 
-TBackground::TBackground( const TRect& bounds, char aPattern ) :
-    TView(bounds),
-    pattern( aPattern )
+TBackground::TBackground(const TRect & bounds, char aPattern):TView(bounds),
+pattern(aPattern)
 {
-    growMode = gfGrowHiX | gfGrowHiY;
+	growMode = gfGrowHiX | gfGrowHiY;
 }
 
 void TBackground::draw()
 {
-    TDrawBuffer b;
+	TDrawBuffer b;
 
-    b.moveChar( 0, pattern, getColor(0x01), size.x );
-    writeLine( 0, 0, size.x, size.y, b );
+	b.moveChar(0, pattern, getColor(0x01), size.x);
+	writeLine(0, 0, size.x, size.y, b);
 }
 
-TPalette& TBackground::getPalette() const
+TPalette & TBackground::getPalette()const
 {
-    static TPalette palette( cpBackground, sizeof( cpBackground )-1 );
-    return palette;
+	static TPalette palette(cpBackground, sizeof(cpBackground) - 1);
+	return palette;
 }
 
 #if !defined(NO_STREAMABLE)
 
-TBackground::TBackground( StreamableInit ) : TView( streamableInit )
+TBackground::TBackground(StreamableInit):TView(streamableInit)
 {
 }
 
-void TBackground::write( opstream& os )
+void TBackground::write(opstream & os)
 {
-    TView::write( os );
-    os << pattern;
+	TView::write(os);
+	os << pattern;
 }
 
-void *TBackground::read( ipstream& is )
+void *TBackground::read(ipstream & is)
 {
-    TView::read( is );
-    is >> pattern;
-    return this;
+	TView::read(is);
+	is >> pattern;
+	return this;
 }
 
 TStreamable *TBackground::build()
 {
-    return new TBackground( streamableInit );
+	return new TBackground(streamableInit);
 }
 
 #endif

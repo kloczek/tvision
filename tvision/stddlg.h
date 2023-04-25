@@ -17,26 +17,22 @@
  */
 
 const
-
 //  Commands
-
-int cmFileOpen    = 1001,   // Returned from TFileDialog when Open pressed
-    cmFileReplace = 1002,   // Returned from TFileDialog when Replace pressed
-    cmFileClear   = 1003,   // Returned from TFileDialog when Clear pressed
-    cmFileInit    = 1004,   // Used by TFileDialog internally
-    cmChangeDir   = 1005,   //
-    cmRevert      = 1006,   // Used by TChDirDialog internally
+ int cmFileOpen = 1001,		// Returned from TFileDialog when Open pressed
+    cmFileReplace = 1002,	// Returned from TFileDialog when Replace pressed
+    cmFileClear = 1003,		// Returned from TFileDialog when Clear pressed
+    cmFileInit = 1004,		// Used by TFileDialog internally
+    cmChangeDir = 1005,		//
+    cmRevert = 1006,		// Used by TChDirDialog internally
 #ifndef __UNPATCHED
-    cmDirSelection= 1007,   //!! New event - Used by TChDirDialog internally
+    cmDirSelection = 1007,	//!! New event - Used by TChDirDialog internally
 #endif
-
 //  Messages
+    cmFileFocused = 102,	// A new file was focused in the TFileList
+    cmFileDoubleClicked		// A file was selected in the TFileList
+    = 103;
 
-    cmFileFocused = 102,    // A new file was focused in the TFileList
-    cmFileDoubleClicked     // A file was selected in the TFileList
-            = 103;
-
-#endif  // TV_FILE_CMDS
+#endif // TV_FILE_CMDS
 
 #if defined( Uses_TSearchRec ) && !defined( TV_TSearchRec )
 #define TV_TSearchRec
@@ -53,31 +49,31 @@ int cmFileOpen    = 1001,   // Returned from TFileDialog when Open pressed
  * Stores date and time information about a specified file.
  * @short Stores date and time information about a specified file
  */
-struct  ftime   {
+struct ftime {
     /**
      * Undocumented.
      */
-    unsigned    ft_tsec  : 5;   /* Two second interval */
+	unsigned ft_tsec:5;	/* Two second interval */
     /**
      * Undocumented.
      */
-    unsigned    ft_min   : 6;   /* Minutes */
+	unsigned ft_min:6;	/* Minutes */
     /**
      * Undocumented.
      */
-    unsigned    ft_hour  : 5;   /* Hours */
+	unsigned ft_hour:5;	/* Hours */
     /**
      * Undocumented.
      */
-    unsigned    ft_day   : 5;   /* Days */
+	unsigned ft_day:5;	/* Days */
     /**
      * Undocumented.
      */
-    unsigned    ft_month : 4;   /* Months */
+	unsigned ft_month:4;	/* Months */
     /**
      * Undocumented.
      */
-    unsigned    ft_year  : 7;   /* Year */
+	unsigned ft_year:7;	/* Year */
 };
 
 /** \struct TSearchRec
@@ -85,27 +81,26 @@ struct  ftime   {
  * @see TFileInfoPane::file_block
  * @short Internal structure used by TFileCollection
  */
-struct TSearchRec
-{
+struct TSearchRec {
     /**
      * Undocumented.
      */
-    uchar attr;
+	uchar attr;
     /**
      * Undocumented.
      */
-    long time;
+	long time;
     /**
      * Undocumented.
      */
-    long size;
+	long size;
     /**
      * Undocumented.
      */
-    char name[PATH_MAX];
+	char name[PATH_MAX];
 };
 
-#endif  // Uses_TSearchRec
+#endif // Uses_TSearchRec
 
 #if defined( Uses_TFileInputLine ) && !defined( TV_TFileInputLine )
 #define TV_TFileInputLine
@@ -121,16 +116,15 @@ class TEvent;
  * @short Allows the input and editing of file names, including optional paths
  * and wild cards
  */
-class TFileInputLine : public TInputLine
-{
-public:
+class TFileInputLine:public TInputLine {
+      public:
     /**
      * Calls TInputLine constructor TInputLine(bounds, aMaxLen) to create a
      * file input line with the given bounds and maximum length `aMaxLen'.
      *
      * @ref evBroadcast flag is set in the @ref eventMask.
      */
-    TFileInputLine( const TRect& bounds, short aMaxLen );
+	TFileInputLine(const TRect & bounds, short aMaxLen);
     /**
      * Calls @ref TInputLine::handleEvent(), then handles broadcast
      * cmFileFocused events by copying the entered file name into the input
@@ -139,49 +133,59 @@ public:
      * If the edited name is a directory, the current file name in the owning
      * @ref TFileDialog object is appended first.
      */
-    virtual void handleEvent( TEvent& event );
-private:
-    virtual const char *streamableName() const
-        { return name; }
-protected:
+	virtual void handleEvent(TEvent & event);
+      private:
+	 virtual const char *streamableName() const {
+		return name;
+      } protected:
     /**
      * Undocumented.
      */
-    TFileInputLine( StreamableInit );
-public:
+	 TFileInputLine(StreamableInit);
+      public:
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TFileInputLine& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TFileInputLine*& cl )
-    { return is >> (void *&)cl; }
+inline ipstream & operator >>(ipstream & is, TFileInputLine & cl)
+{
+	return is >> static_cast < TStreamable & >(cl);
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TFileInputLine& cl )
-    { return os << static_cast<TStreamable&>(cl); }
+inline ipstream & operator >>(ipstream & is, TFileInputLine *&cl)
+{
+	return is >> (void *&)cl;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TFileInputLine* cl )
-    { return os << static_cast<TStreamable *>(cl); }
+inline opstream & operator <<(opstream & os, TFileInputLine & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
 
-#endif  // Uses_TFileInputLine
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TFileInputLine *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
+
+#endif // Uses_TFileInputLine
 
 #if defined( Uses_TFileCollection ) && !defined( TV_TFileCollection )
 #define TV_TFileCollection
@@ -193,39 +197,43 @@ class TSearchRec;
  * sorted collection of file names.
  * @short Implements a sorted collection of file names
  */
-class TFileCollection: public TSortedCollection
-{
-public:
+class TFileCollection:public TSortedCollection {
+      public:
     /**
      * Calls the base @ref TSortedCollection constructor to create a
      * collection with the given limit `aLimit' and delta `aDelta'.
      */
-    TFileCollection( ccIndex aLimit, ccIndex aDelta) :
-        TSortedCollection( aLimit, aDelta ) {}
+	TFileCollection(ccIndex aLimit,
+			ccIndex aDelta):TSortedCollection(aLimit, aDelta) {
+	}
     /**
      * Returns a pointer to the @ref TSearchRec object indexed by `index'
      * in this file collection.
-     */
-    TSearchRec *at( ccIndex index )
-        { return static_cast<TSearchRec *>(TSortedCollection::at( index )); }
+     */ TSearchRec *at(ccIndex index) {
+		return static_cast <
+		    TSearchRec * >(TSortedCollection::at(index));
+	}
     /**
      * Returns the index of the given @ref TSearchRec file `item' in this
      * file collection.
      */
-    virtual ccIndex indexOf( TSearchRec *item )
-        { return TSortedCollection::indexOf( item ); }
+	virtual ccIndex indexOf(TSearchRec * item) {
+		return TSortedCollection::indexOf(item);
+	}
     /**
      * Removes (deletes) the given @ref TSearchRec file `item' from this file
      * collection. The space in the collection is not freed.
      */
-    void remove( TSearchRec *item )
-        { TSortedCollection::remove( item ); }
+	void remove(TSearchRec * item) {
+		TSortedCollection::remove(item);
+	}
     /**
      * Removes (deletes) the given @ref TSearchRec file `item' from the
      * collection and frees the space in the collection.
      */
-    void free( TSearchRec *item )
-        { TSortedCollection::free( item ); }
+	void free(TSearchRec * item) {
+		TSortedCollection::free(item);
+	}
     /**
      * Inserts the @ref TSearchRec file referenced by `item' into the
      * collection at the given `index' and moves the following items down
@@ -234,13 +242,15 @@ public:
      * The collection will be expanded by @ref delta if the insertion causes
      * the @ref limit to be exceeded.
      */
-    void atInsert( ccIndex index, TSearchRec *item )
-        { TSortedCollection::atInsert( index, item ); }
+	void atInsert(ccIndex index, TSearchRec * item) {
+		TSortedCollection::atInsert(index, item);
+	}
     /**
      * Replaces the TSearchRec file found at `index' with the given `item'.
      */
-    void atPut( ccIndex index, TSearchRec *item )
-        { TSortedCollection::atPut( index, item ); }
+	void atPut(ccIndex index, TSearchRec * item) {
+		TSortedCollection::atPut(index, item);
+	}
     /**
      * Inserts the @ref TSearchRec `item' into the collection, and adjusts the
      * other indexes if necessary.
@@ -248,22 +258,24 @@ public:
      * By default, insertions are made at the end of the collection. The index
      * of the inserted `item' is returned.
      */
-    virtual ccIndex insert( TSearchRec *item )
-        { return TSortedCollection::insert( item ); }
+	virtual ccIndex insert(TSearchRec * item) {
+		return TSortedCollection::insert(item);
+	}
     /**
      * This iterator returns a pointer to the first @ref TSearchRec object
      * in the collection for which the `Test' function returns True.
      */
-    TSearchRec *firstThat( ccTestFunc Test, void *arg );
+	TSearchRec *firstThat(ccTestFunc Test, void *arg);
     /**
      * This iterator scans the collection from last item to first. It returns
      * a pointer to the first item (that is, the nearest the end) in the
      * collection for which the `Test' function returns True.
      */
-    TSearchRec *lastThat( ccTestFunc Test, void *arg );
-private:
-    virtual void freeItem( void *item )
-        { delete static_cast<TSearchRec *>(item); }
+	TSearchRec *lastThat(ccTestFunc Test, void *arg);
+      private:
+	virtual void freeItem(void *item) {
+		delete static_cast < TSearchRec * >(item);
+	}
     /**
      * Performs a standard file string compare and returns a value depending
      * on the results.
@@ -278,72 +290,84 @@ private:
      *	  - if `key2' references the directory ".."
      *	  - if `key2' is a directory and `key1' is not a directory
      */
-    virtual int compare( void *key1, void *key2 );
+	virtual int compare(void *key1, void *key2);
     /**
      * Undocumented.
      */
-    virtual const char *streamableName() const
-        { return name; }
+	virtual const char *streamableName() const {
+		return name;
+	}
     /**
      * Called for each item in the collection. You'll need to override these
      * in order to read the items correctly.
-     */
-    virtual void *readItem( ipstream& );
+     */ virtual void *readItem(ipstream &);
     /**
      * Called for each item in the collection. You'll need to override these
      * in order to write the items correctly.
      */
-    virtual void writeItem( void *, opstream& );
-protected:
+	virtual void writeItem(void *, opstream &);
+      protected:
     /**
      * Undocumented.
      */
-    TFileCollection( StreamableInit ) : TSortedCollection ( streamableInit ) {}
-public:
+      TFileCollection(StreamableInit):TSortedCollection(streamableInit) {
+	}
+      public:
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TFileCollection& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TFileCollection*& cl )
-    { return is >> (void *&)cl; }
-
-/**
- * Undocumented.
- */
-inline opstream& operator << ( opstream& os, TFileCollection& cl )
-    { return os << static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline opstream& operator << ( opstream& os, TFileCollection* cl )
-    { return os << static_cast<TStreamable *>(cl); }
-
-inline TSearchRec *TFileCollection::firstThat( ccTestFunc func, void *arg )
+inline ipstream & operator >>(ipstream & is, TFileCollection & cl)
 {
-    return static_cast<TSearchRec *>(TSortedCollection::firstThat( ccTestFunc(func), arg ));
+	return is >> static_cast < TStreamable & >(cl);
 }
 
-inline TSearchRec *TFileCollection::lastThat( ccTestFunc func, void *arg )
+/**
+ * Undocumented.
+ */
+inline ipstream & operator >>(ipstream & is, TFileCollection *&cl)
 {
-    return static_cast<TSearchRec *>(TSortedCollection::lastThat( ccTestFunc(func), arg ));
+	return is >> (void *&)cl;
 }
 
-#endif  // Uses_TFileCollection
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TFileCollection & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
 
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TFileCollection *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
+
+inline TSearchRec *TFileCollection::firstThat(ccTestFunc func, void *arg)
+{
+	return static_cast <
+	    TSearchRec * >(TSortedCollection::firstThat(ccTestFunc(func), arg));
+}
+
+inline TSearchRec *TFileCollection::lastThat(ccTestFunc func, void *arg)
+{
+	return static_cast <
+	    TSearchRec * >(TSortedCollection::lastThat(ccTestFunc(func), arg));
+}
+
+#endif // Uses_TFileCollection
 
 #if defined( Uses_TSortedListBox ) && !defined( TV_TSortedListBox )
 #define TV_TSortedListBox
@@ -359,9 +383,8 @@ class TSortedCollection;
  * classes.
  * @short A base for other list box classes
  */
-class TSortedListBox: public TListBox
-{
-public:
+class TSortedListBox:public TListBox {
+      public:
     /**
      * Calls @ref TListBox constructor to create a list box with the given
      * size `bounds', number of columns `aNumCols', and vertical scroll bar
@@ -371,15 +394,13 @@ public:
      * Data member @ref shiftState is set to 0 and the cursor is set at the
      * first item.
      */
-    TSortedListBox( const TRect& bounds,
-                    ushort aNumCols,
-                    TScrollBar *aScrollBar
-                  );
+	TSortedListBox(const TRect & bounds,
+		       ushort aNumCols, TScrollBar * aScrollBar);
     /**
      * Calls @ref TListBox::handleEvent(), then handles the special key and
      * mouse events used to select items from the list.
      */
-    virtual void handleEvent( TEvent& event );
+	virtual void handleEvent(TEvent & event);
     /**
      * Calls @ref TListBox::newList() to delete the existing
      * @ref TSortedCollection object associated with this list box and
@@ -387,9 +408,9 @@ public:
      *
      * The first item of the new collection will receive the focus.
      */
-    void newList( TSortedCollection *aList );
+	void newList(TSortedCollection * aList);
 #ifndef __UNPATCHED
-    void *read( ipstream& is );
+	void *read(ipstream & is);
 #endif
     /**
      * Returns a pointer to the @ref TSortedCollection object currently
@@ -402,67 +423,77 @@ public:
      * provide a pointer to objects of a class derived from
      * @ref TSortedCollection.
      */
-    TSortedCollection *list();
-protected:
+	TSortedCollection *list();
+      protected:
     /**
      * Undocumented.
      */
-    uchar shiftState;
-private:
+	uchar shiftState;
+      private:
     /**
      * You must define this private member function in all derived classes to
      * provide a means of returning the key for the given string `s'. This
      * will depend on the sorting strategy adopted in your derived class. By
      * default, getKey() returns `s'.
      */
-    virtual void *getKey( const char *s );
-    short searchPos;
-    virtual const char *streamableName() const
-        { return name; }
-protected:
+	virtual void *getKey(const char *s);
+	short searchPos;
+	virtual const char *streamableName() const {
+		return name;
+      } protected:
     /**
      * Undocumented.
      */
-    TSortedListBox( StreamableInit ) : TListBox ( streamableInit ) {}
-public:
+	TSortedListBox(StreamableInit):TListBox(streamableInit) {
+      } public:
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
     /**
      * Undocumented.
      */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TSortedListBox& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TSortedListBox*& cl )
-    { return is >> (void *&)cl; }
+inline ipstream & operator >>(ipstream & is, TSortedListBox & cl)
+{
+	return is >> static_cast < TStreamable & >(cl);
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TSortedListBox& cl )
-    { return os << static_cast<TStreamable&>(cl); }
+inline ipstream & operator >>(ipstream & is, TSortedListBox *&cl)
+{
+	return is >> (void *&)cl;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TSortedListBox* cl )
-    { return os << static_cast<TStreamable *>(cl); }
+inline opstream & operator <<(opstream & os, TSortedListBox & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
+
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TSortedListBox *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
 
 inline TSortedCollection *TSortedListBox::list()
 {
-    return static_cast<TSortedCollection *>(TListBox::list());
+	return static_cast < TSortedCollection * >(TListBox::list());
 }
 
-#endif  // Uses_TSortedListBox
+#endif // Uses_TSortedListBox
 
 #if defined( Uses_TFileList ) && !defined( TV_TFileList )
 #define TV_TFileList
@@ -488,37 +519,34 @@ class TEvent;
  * @short Implements a sorted two-column list box of file names; you can
  * select a file name by mouse or keyboard cursor actions
  */
-class TFileList : public TSortedListBox
-{
-public:
+class TFileList:public TSortedListBox {
+      public:
     /**
      * Calls the @ref TSortedListBox constructor to create a two-column
      * TFileList object with the given bounds and, if `aScrollBar' is
      * non-zero, a vertical scrollbar.
      * @see TSortedListBox::TSortedListBox
      */
-    TFileList( const TRect& bounds,
-               TScrollBar *aScrollBar
-             );
+	TFileList(const TRect & bounds, TScrollBar * aScrollBar);
     /**
      * Deletes the file list.
      */
-    ~TFileList();
+	~TFileList();
     /**
      * Focuses the given item in the list. Calls
      * @ref TSortedListBox::focusItem() and broadcasts a cmFileFocused event.
      */
-    virtual void focusItem( short item );
+	virtual void focusItem(short item);
     /**
      * Undocumented.
      */
-    virtual void selectItem( short item );
+	virtual void selectItem(short item);
     /**
      * Grabs the @ref TSearchRec object at `item' and sets the file name in
      * `dest'.
      * "\\" is appended if the name is a directory.
      */
-    virtual void getText( char *dest, short item, short maxLen );
+	virtual void getText(char *dest, short item, short maxLen);
     /**
      * Calls @ref TSortedListBox::newList() to delete the existing
      * @ref TFileCollection object associated with this list box and replace
@@ -526,13 +554,13 @@ public:
      *
      * The first item of the new collection will receive the focus.
      */
-    void newList( TFileCollection *aList );
+	void newList(TFileCollection * aList);
     /**
      * Allows the separate submission of a relative or absolute path in the
      * `dir' argument. Either "/" or "\\" can be used as subdirectory
      * separators (but "\\" is converted to "/" for output).
      */
-    void readDirectory( const char *dir, const char *wildCard );
+	void readDirectory(const char *dir, const char *wildCard);
     /**
      * Expands the `wildCard' string to generate the file collection
      * associated with this file list. The resulting @ref TFileCollection
@@ -544,80 +572,89 @@ public:
      * readDirectory() knows about file attributes and will not generate
      * hidden file names.
      */
-    void readDirectory( const char *wildCard );
+	void readDirectory(const char *wildCard);
     /**
      * Undocumented.
      */
-    virtual ushort dataSize();
+	virtual ushort dataSize();
     /**
      * Undocumented.
      */
-    virtual void getData( void *rec );
+	virtual void getData(void *rec);
     /**
      * Undocumented.
      */
-    virtual void setData( void *rec );
+	virtual void setData(void *rec);
     /**
      * Returns the private @ref items data member, a pointer to the
      * @ref TFileCollection object currently associated with this file list
      * box.
      */
-    TFileCollection *list();
-private:
-    virtual void *getKey( const char *s );
-    static const char * tooManyFiles;
-    virtual const char *streamableName() const
-        { return name; }
-protected:
+	TFileCollection *list();
+      private:
+	virtual void *getKey(const char *s);
+	static const char *tooManyFiles;
+	virtual const char *streamableName() const {
+		return name;
+      } protected:
     /**
      * Undocumented.
      */
-    TFileList( StreamableInit ) : TSortedListBox ( streamableInit ) {}
-public:
+	TFileList(StreamableInit):TSortedListBox(streamableInit) {
+      } public:
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TFileList& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TFileList*& cl )
-    { return is >> (void *&)cl; }
-
-/**
- * Undocumented.
- */
-inline opstream& operator << ( opstream& os, TFileList& cl )
-    { return os << static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline opstream& operator << ( opstream& os, TFileList* cl )
-    { return os << static_cast<TStreamable *>(cl); }
-
-inline void TFileList::newList( TFileCollection *f )
+inline ipstream & operator >>(ipstream & is, TFileList & cl)
 {
-    TSortedListBox::newList( f );
+	return is >> static_cast < TStreamable & >(cl);
+}
+
+/**
+ * Undocumented.
+ */
+inline ipstream & operator >>(ipstream & is, TFileList *&cl)
+{
+	return is >> (void *&)cl;
+}
+
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TFileList & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
+
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TFileList *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
+
+inline void TFileList::newList(TFileCollection *f)
+{
+	TSortedListBox::newList(f);
 }
 
 inline TFileCollection *TFileList::list()
 {
-    return static_cast<TFileCollection *>(TSortedListBox::list());
+	return static_cast < TFileCollection * >(TSortedListBox::list());
 }
 
-#endif  // Uses_TFileList
-
+#endif // Uses_TFileList
 
 #if defined( Uses_TFileInfoPane ) && !defined( TV_TFileInfoPane )
 #define TV_TFileInfoPane
@@ -631,9 +668,8 @@ class TEvent;
  * @short Implements a simple, streamable view for displaying file information
  * in the owning file dialog box
  */
-class TFileInfoPane : public TView
-{
-public:
+class TFileInfoPane:public TView {
+      public:
     /**
      * Calls TView constructor TView(bounds) to create a file information pane
      * with the given bounds.
@@ -641,23 +677,23 @@ public:
      *
      * @ref evBroadcast flag is set in @ref TView::eventMask.
      */
-    TFileInfoPane( const TRect& bounds );
+	TFileInfoPane(const TRect & bounds);
     /**
      * Draws the file info pane in the default palette. The block size and
      * date/time stamp are displayed.
      */
-    virtual void draw();
+	virtual void draw();
     /**
      * Returns the default palette.
      */
-    virtual TPalette& getPalette() const;
+	virtual TPalette & getPalette() const;
     /**
      * Calls @ref TView::handleEvent(), then handles broadcast cmFileFocused
      * events (triggered when a new file is focused in a file list) by
      * displaying the file information pane.
      */
-    virtual void handleEvent( TEvent& event );
-private:
+	virtual void handleEvent(TEvent & event);
+      private:
     /**
      * The file name and attributes for this info pane. @ref TSearchRec is
      * defined as follows:
@@ -674,66 +710,76 @@ private:
      *
      * where the fields have their obvious DOS file meanings.
      */
-    TSearchRec file_block;
-    static const char * const months[13];
-    static const char * pmText;
-    static const char * amText;
-    virtual const char *streamableName() const
-        { return name; }
-protected:
+	TSearchRec file_block;
+	static const char *const months[13];
+	static const char *pmText;
+	static const char *amText;
+	virtual const char *streamableName() const {
+		return name;
+      } protected:
     /**
      * Undocumented.
      */
-    TFileInfoPane( StreamableInit ) : TView ( streamableInit ) {}
-public:
+	TFileInfoPane(StreamableInit):TView(streamableInit) {
+      } public:
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TFileInfoPane& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TFileInfoPane*& cl )
-    { return is >> (void *&)cl; }
+inline ipstream & operator >>(ipstream & is, TFileInfoPane & cl)
+{
+	return is >> static_cast < TStreamable & >(cl);
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TFileInfoPane& cl )
-    { return os << static_cast<TStreamable&>(cl); }
+inline ipstream & operator >>(ipstream & is, TFileInfoPane *&cl)
+{
+	return is >> (void *&)cl;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TFileInfoPane* cl )
-    { return os << static_cast<TStreamable *>(cl); }
+inline opstream & operator <<(opstream & os, TFileInfoPane & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
 
-#endif  // Uses_TFileInfoPane
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TFileInfoPane *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
+
+#endif // Uses_TFileInfoPane
 
 #if defined( Uses_TFileDialog ) && !defined( TV_TFileDialog )
 #define TV_TFileDialog
 
 const
-    int fdOKButton  = 0x0001,      // Put an OK button in the dialog
-    fdOpenButton    = 0x0002,      // Put an Open button in the dialog
-    fdReplaceButton = 0x0004,      // Put a Replace button in the dialog
-    fdClearButton   = 0x0008,      // Put a Clear button in the dialog
-    fdHelpButton    = 0x0010,      // Put a Help button in the dialog
-    fdNoLoadDir     = 0x0100;      // Do not load the current directory
-                                   // contents into the dialog at Init.
-                                   // This means you intend to change the
-                                   // WildCard by using SetData or store
-                                   // the dialog on a stream.
+int fdOKButton = 0x0001,	// Put an OK button in the dialog
+    fdOpenButton = 0x0002,	// Put an Open button in the dialog
+    fdReplaceButton = 0x0004,	// Put a Replace button in the dialog
+    fdClearButton = 0x0008,	// Put a Clear button in the dialog
+    fdHelpButton = 0x0010,	// Put a Help button in the dialog
+    fdNoLoadDir = 0x0100;	// Do not load the current directory
+				   // contents into the dialog at Init.
+				   // This means you intend to change the
+				   // WildCard by using SetData or store
+				   // the dialog on a stream.
 
 class TEvent;
 class TFileInputLine;
@@ -759,9 +805,8 @@ class TFileList;
  * which file names (including wildcards) can be input, edited, selected, and
  * opened for editing
  */
-class TFileDialog : public TDialog
-{
-public:
+class TFileDialog:public TDialog {
+      public:
     /**
      * Creates a fixed-size, framed dialog box with the given title `aTitle'.
      *
@@ -803,23 +848,23 @@ public:
      * fdNoLoadDir flag is not set, the files in the current directory are
      * loaded into the file list.
      */
-    TFileDialog( const char *aWildCard, const char *aTitle,
-                 const char *inputName, ushort aOptions, uchar histId );
+	TFileDialog(const char *aWildCard, const char *aTitle,
+		    const char *inputName, ushort aOptions, uchar histId);
     /**
      * Deletes directory, then destroys the file dialog.
      */
-    ~TFileDialog();
+	~TFileDialog();
     /**
      * Undocumented.
      */
-    virtual void getData( void *rec );
+	virtual void getData(void *rec);
     /**
      * Takes the fileName->data field and expands it to a full path format.
      * The result is set in `s'.
      * @see TFileDialog::fileName
      * @see TFileInputLine::data
      */
-    void getFileName( char *s );
+	void getFileName(char *s);
     /**
      * Calls @ref TDialog::handleEvent(), then handles cmFileOpen,
      * cmFileReplace and cmFileClear events.
@@ -827,11 +872,11 @@ public:
      * These all call @ref TView::endModal() and pass their commands to the
      * view that opened the file dialog.
      */
-    virtual void handleEvent( TEvent& event );
+	virtual void handleEvent(TEvent & event);
     /**
      * Undocumented.
      */
-    virtual void setData( void *rec );
+	virtual void setData(void *rec);
     /**
      * Returns True if `command' is cmValid, indicating a successful
      * construction. Otherwise calls @ref TDialog::valid().
@@ -842,7 +887,7 @@ public:
      * Valid names will return True. Invalid names invoke an
      * "Invalid file name" message box and return False.
      */
-    virtual Boolean valid( ushort command );
+	virtual Boolean valid(ushort command);
     /**
      * Used internally by @ref TObject::destroy() to ensure correct
      * destruction of derived and related objects.
@@ -850,87 +895,95 @@ public:
      * shutDown() is overridden in many classes to ensure the proper setting
      * of related data members when @ref destroy() is called.
      */
-    virtual void shutDown();
+	virtual void shutDown();
     /**
      * Pointer to the associated input line.
      */
-    TFileInputLine *fileName;
+	TFileInputLine *fileName;
     /**
      * Pointer to the associated file list.
      */
-    TFileList *fileList;
+	TFileList *fileList;
     /**
      * The current path and file name.
      */
-    char wildCard[PATH_MAX];
+	char wildCard[PATH_MAX];
     /**
      * The current directory.
      */
-    const char *directory;
-private:
-    void readDirectory();
-    Boolean checkDirectory( const char * );
-    static const char * filesText;
-    static const char * openText;
-    static const char * okText;
-    static const char * replaceText;
-    static const char * clearText;
-    static const char * cancelText;
-    static const char * helpText;
-    static const char * invalidDriveText;
-    static const char * invalidFileText;
-    virtual const char *streamableName() const
-        { return name; }
-protected:
+	const char *directory;
+      private:
+	void readDirectory();
+	Boolean checkDirectory(const char *);
+	static const char *filesText;
+	static const char *openText;
+	static const char *okText;
+	static const char *replaceText;
+	static const char *clearText;
+	static const char *cancelText;
+	static const char *helpText;
+	static const char *invalidDriveText;
+	static const char *invalidFileText;
+	virtual const char *streamableName() const {
+		return name;
+      } protected:
     /**
      * Undocumented.
      */
-    TFileDialog( StreamableInit ) :
-        TWindowInit( TFileDialog::initFrame ),
-        TDialog ( streamableInit ) {}
+	TFileDialog(StreamableInit):TWindowInit(TFileDialog::initFrame),
+	    TDialog(streamableInit) {
+	}
     /**
      * Writes to the output stream `os'.
-     */
-    virtual void write( opstream& os );
+     */ virtual void write(opstream & os);
     /**
      * Reads from the input stream `is'.
      */
-    virtual void *read( ipstream& is );
-public:
+	virtual void *read(ipstream & is);
+      public:
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TFileDialog& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TFileDialog*& cl )
-    { return is >> (void *&)cl; }
+inline ipstream & operator >>(ipstream & is, TFileDialog & cl)
+{
+	return is >> static_cast < TStreamable & >(cl);
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TFileDialog& cl )
-    { return os << static_cast<TStreamable&>(cl); }
+inline ipstream & operator >>(ipstream & is, TFileDialog *&cl)
+{
+	return is >> (void *&)cl;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TFileDialog* cl )
-    { return os << static_cast<TStreamable *>(cl); }
+inline opstream & operator <<(opstream & os, TFileDialog & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
 
-#endif  // Uses_TFileDialog
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TFileDialog *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
 
+#endif // Uses_TFileDialog
 
 #if defined( Uses_TDirEntry ) && !defined( TV_TDirEntry )
 #define TV_TDirEntry
@@ -941,44 +994,47 @@ inline opstream& operator << ( opstream& os, TFileDialog* cl )
  * TDirEntry objects are stored in @ref TDirCollection objects.
  * @short Simple class providing directory paths and descriptions
  */
-class TDirEntry
-{
-public:
+class TDirEntry {
+      public:
     /**
      * Undocumented.
      */
-    TDirEntry( const char *, const char * );
+	TDirEntry(const char *, const char *);
     /**
      * Undocumented.
      */
-    ~TDirEntry();
+	~TDirEntry();
     /**
      * Returns the current directory (the value of the private member
      * directory).
      */
-    char *dir() { return directory; }
+	char *dir() {
+		return directory;
+	}
     /**
      * Returns the current display text (the value of the private member
      * displayText).
-     */
-    char *text() { return displayText; }
-private:
-    char *displayText;
-    char *directory;
+     */ char *text() {
+		return displayText;
+	}
+      private:
+	char *displayText;
+	char *directory;
 };
 
-inline TDirEntry::TDirEntry( const char *txt, const char *dir ) :
-    displayText( newStr( txt ) ), directory( newStr( dir ) )
+inline TDirEntry::TDirEntry(const char *txt,
+			    const char *dir):displayText(newStr(txt)),
+directory(newStr(dir))
 {
 }
 
 inline TDirEntry::~TDirEntry()
 {
-    delete displayText;
-    delete directory;
+	delete displayText;
+	delete directory;
 }
 
-#endif  // Uses_TDirEntry
+#endif // Uses_TDirEntry
 
 #if defined( Uses_TDirCollection ) && !defined( TV_TDirCollection )
 #define TV_TDirCollection
@@ -993,42 +1049,45 @@ class TDirEntry;
  * its base class @ref TCollection.
  * @short Simple TCollection derivative used for storing TDirEntry objects
  */
-class TDirCollection : public TCollection
-{
-public:
+class TDirCollection:public TCollection {
+      public:
     /**
      * Calls the base @ref TCollection constructor to create a directory
      * collection with the given @ref limit `aLimit' and @ref delta `aDelta'.
      */
-    TDirCollection( ccIndex aLimit, ccIndex aDelta) :
-        TCollection( aLimit, aDelta ) {}
+	TDirCollection(ccIndex aLimit, ccIndex aDelta):TCollection(aLimit,
+								   aDelta) {
+	}
     /**
      * Returns a pointer to the @ref TDirEntry object indexed by `index' in
      * this directory collection.
      * @see TCollection::at
-     */
-    TDirEntry *at( ccIndex index )
-        { return static_cast<TDirEntry *>(TCollection::at( index ));}
+     */ TDirEntry *at(ccIndex index) {
+		return static_cast < TDirEntry * >(TCollection::at(index));
+	}
     /**
      * Returns the index of the given `item' in this directory collection.
      * @see TCollection::indexOf
      */
-    virtual ccIndex indexOf( TDirEntry *item )
-        { return TCollection::indexOf( item ); }
+	virtual ccIndex indexOf(TDirEntry * item) {
+		return TCollection::indexOf(item);
+	}
     /**
      * Removes (deletes) the given `item' from this collection. The space in
      * the collection is not freed.
      * @see TCollection::remove
      */
-    void remove( TDirEntry *item )
-        { TCollection::remove( item ); }
+	void remove(TDirEntry * item) {
+		TCollection::remove(item);
+	}
     /**
      * Removes (deletes) the given `item' from the collection and frees the
      * space in the collection.
      * @see TCollection::free
      */
-    void free( TDirEntry *item )
-        { TCollection::free( item ); }
+	void free(TDirEntry * item) {
+		TCollection::free(item);
+	}
     /**
      * Inserts the given `item' into the collection at the given `index' and
      * moves the following items down one position. The collection will be
@@ -1036,39 +1095,44 @@ public:
      * exceeded.
      * @see TCollection::atInsert
      */
-    void atInsert( ccIndex index, TDirEntry *item )
-        { TCollection::atInsert( index, item ); }
+	void atInsert(ccIndex index, TDirEntry * item) {
+		TCollection::atInsert(index, item);
+	}
     /**
      * Replaces the item at `index' with the given `item'.
      * @see TCollection::atPut
      */
-    void atPut( ccIndex index, TDirEntry *item )
-        { TCollection::atPut( index, item ); }
+	void atPut(ccIndex index, TDirEntry * item) {
+		TCollection::atPut(index, item);
+	}
     /**
      * Inserts the `item' into the collection, and adjust the other indexes
      * if necessary. By default, insertions are made at the end of the
      * collection. The index of the inserted item is returned.
      * @see TCollection::insert
      */
-    virtual ccIndex insert( TDirEntry *item )
-        { return TCollection::insert( item ); }
+	virtual ccIndex insert(TDirEntry * item) {
+		return TCollection::insert(item);
+	}
     /**
      * This iterator returns a pointer to the first @ref TDirEntry object
      * in the collection for which the `Test' function returns True.
      */
-    TDirEntry *firstThat( ccTestFunc Test, void *arg );
+	TDirEntry *firstThat(ccTestFunc Test, void *arg);
     /**
      * This iterator scans the collection from the last @ref TDirEntry object
      * to first. It returns a pointer to the first (that is, the nearest to
      * the end) item in the collection for which the `Test' function returns
      * True.
      */
-    TDirEntry *lastThat( ccTestFunc Test, void *arg );
-private:
-    virtual void freeItem( void *item )
-        { delete static_cast<TDirEntry *>(item); }
-    virtual const char *streamableName() const
-        { return name; }
+	TDirEntry *lastThat(ccTestFunc Test, void *arg);
+      private:
+	virtual void freeItem(void *item) {
+		delete static_cast < TDirEntry * >(item);
+	}
+	virtual const char *streamableName() const {
+		return name;
+	}
     /**
      * Called for each item in the collection.
      *
@@ -1077,8 +1141,7 @@ private:
      * correctly.
      *
      * TSortedCollection already overrides this function.
-     */
-    virtual void *readItem( ipstream& );
+     */ virtual void *readItem(ipstream &);
     /**
      * Called for each item in the collection.
      *
@@ -1088,57 +1151,69 @@ private:
      *
      * @ref TSortedCollection already overrides this function.
      */
-    virtual void writeItem( void *, opstream& );
-protected:
+	virtual void writeItem(void *, opstream &);
+      protected:
     /**
      * Undocumented.
      */
-    TDirCollection( StreamableInit ) : TCollection ( streamableInit ) {}
-public:
+      TDirCollection(StreamableInit):TCollection(streamableInit) {
+	}
+      public:
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TDirCollection& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TDirCollection*& cl )
-    { return is >> (void *&)cl; }
-
-/**
- * Undocumented.
- */
-inline opstream& operator << ( opstream& os, TDirCollection& cl )
-    { return os << static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline opstream& operator << ( opstream& os, TDirCollection* cl )
-    { return os << static_cast<TStreamable *>(cl); }
-
-inline TDirEntry *TDirCollection::firstThat( ccTestFunc func, void *arg )
+inline ipstream & operator >>(ipstream & is, TDirCollection & cl)
 {
-    return static_cast<TDirEntry *>(TCollection::firstThat( ccTestFunc(func), arg ));
+	return is >> static_cast < TStreamable & >(cl);
 }
 
-inline TDirEntry *TDirCollection::lastThat( ccTestFunc func, void *arg )
+/**
+ * Undocumented.
+ */
+inline ipstream & operator >>(ipstream & is, TDirCollection *&cl)
 {
-    return static_cast<TDirEntry *>(TCollection::lastThat( ccTestFunc(func), arg ));
+	return is >> (void *&)cl;
 }
 
-#endif  // Uses_TDirCollection
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TDirCollection & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
 
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TDirCollection *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
+
+inline TDirEntry *TDirCollection::firstThat(ccTestFunc func, void *arg)
+{
+	return static_cast <
+	    TDirEntry * >(TCollection::firstThat(ccTestFunc(func), arg));
+}
+
+inline TDirEntry *TDirCollection::lastThat(ccTestFunc func, void *arg)
+{
+	return static_cast <
+	    TDirEntry * >(TCollection::lastThat(ccTestFunc(func), arg));
+}
+
+#endif // Uses_TDirCollection
 
 #if defined( Uses_TDirListBox ) && !defined( TV_TDirListBox )
 #define TV_TDirListBox
@@ -1157,24 +1232,23 @@ class TDirCollection;
  * @short Specialized derivative of TListBox for displaying and selecting
  * directories stored in a TDirCollection object
  */
-class TDirListBox : public TListBox
-{
-public:
+class TDirListBox:public TListBox {
+      public:
    /**
     * Calls TListBox::TListBox(bounds, 1, aScrollBar) to create a
     * single-column list box with the given bounds and vertical scroll bar.
     * @see TListBox::TListBox
     */
-    TDirListBox( const TRect& bounds, TScrollBar *aScrollBar );
+	TDirListBox(const TRect & bounds, TScrollBar * aScrollBar);
     /**
      * Calls its base destructor to dispose of the list box.
      * @see TListBox::~TListBox
      */
-    ~TDirListBox();
+	~TDirListBox();
     /**
      * Grabs the text string at index `item' and copies it to `dest'.
      */
-    virtual void getText( char *dest, short item, short maxLen );
+	virtual void getText(char *dest, short item, short maxLen);
     /**
      * Handles double-click mouse events with putEvent(cmChangeDir).
      * @see putEvent
@@ -1186,107 +1260,117 @@ public:
     /**
      * Returns True if `item' is selected, otherwise returns False.
      */
-    virtual Boolean isSelected( short item );
+	virtual Boolean isSelected(short item);
     /**
      * Undocumented.
      */
-    virtual void selectItem( short item );
+	virtual void selectItem(short item);
     /**
      * Deletes the existing @ref TDirEntry object associated with this list
      * box and replaces it with the file collection given by `aList'.
      *
      * The first item of the new collection will receive the focus.
      */
-    void newDirectory( const char *aList );
+	void newDirectory(const char *aList);
     /**
      * By default, calls the ancestral @ref TListBox::setState().
      */
-    virtual void setState( ushort aState, Boolean enable );
+	virtual void setState(ushort aState, Boolean enable);
     /**
      * Returns a pointer to the @ref TDirCollection object currently
      * associated with this directory list box.
      */
-    TDirCollection *list();
+	TDirCollection *list();
     /**
      * Undocumented.
      */
-    static const char * pathDir;
+	static const char *pathDir;
     /**
      * Undocumented.
      */
-    static const char * firstDir;
+	static const char *firstDir;
     /**
      * Undocumented.
      */
-    static const char * middleDir;
+	static const char *middleDir;
     /**
      * Undocumented.
      */
-    static const char * lastDir;
+	static const char *lastDir;
     /**
      * Undocumented.
      */
-    static const char * graphics;
-private:
-    void showDrives( TDirCollection * );
-    void showDirs( TDirCollection * );
-    char dir[PATH_MAX];
-    ushort cur;
-    static const char * drives;
-    virtual const char *streamableName() const
-        { return name; }
-protected:
+	static const char *graphics;
+      private:
+	void showDrives(TDirCollection *);
+	void showDirs(TDirCollection *);
+	char dir[PATH_MAX];
+	ushort cur;
+	static const char *drives;
+	virtual const char *streamableName() const {
+		return name;
+      } protected:
     /**
      * Undocumented.
      */
-    TDirListBox( StreamableInit ): TListBox( streamableInit ) {}
-public:
+	TDirListBox(StreamableInit):TListBox(streamableInit) {
+      } public:
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
     /**
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TDirListBox& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TDirListBox*& cl )
-    { return is >> (void *&)cl; }
+inline ipstream & operator >>(ipstream & is, TDirListBox & cl)
+{
+	return is >> static_cast < TStreamable & >(cl);
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TDirListBox& cl )
-    { return os << static_cast<TStreamable&>(cl); }
+inline ipstream & operator >>(ipstream & is, TDirListBox *&cl)
+{
+	return is >> (void *&)cl;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TDirListBox* cl )
-    { return os << static_cast<TStreamable *>(cl); }
+inline opstream & operator <<(opstream & os, TDirListBox & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
+
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TDirListBox *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
 
 inline TDirCollection *TDirListBox::list()
 {
-    return (TDirCollection *)TListBox::list();
+	return (TDirCollection *) TListBox::list();
 }
 
-#endif  // Uses_TDirListBox
+#endif // Uses_TDirListBox
 
 #if defined( Uses_TChDirDialog ) && !defined( TV_TChDirDialog )
 #define TV_TChDirDialog
 
 const
-    int cdNormal = 0x0000, // Option to use dialog immediately
-    cdNoLoadDir  = 0x0001, // Option to init the dialog to store on a stream
-    cdHelpButton = 0x0002; // Put a help button in the dialog
+int cdNormal = 0x0000,		// Option to use dialog immediately
+    cdNoLoadDir = 0x0001,	// Option to init the dialog to store on a stream
+    cdHelpButton = 0x0002;	// Put a help button in the dialog
 
 class TEvent;
 class TInputLine;
@@ -1324,10 +1408,9 @@ class TButton;
  * TChDirDialog.
  * @short Dialog box used to change the current working directory
  */
-class TChDirDialog : public TDialog
-{
-public:
-    friend class TDirListBox;
+class TChDirDialog:public TDialog {
+      public:
+	friend class TDirListBox;
     /**
      * Constructor.
      *
@@ -1365,7 +1448,7 @@ public:
      * sets and all views with the same history identifier will share the same
      * history set.
      */
-    TChDirDialog( ushort aOptions, ushort histId );
+	TChDirDialog(ushort aOptions, ushort histId);
     /**
      * Returns the size of the data record of this dialog.
      *
@@ -1374,7 +1457,7 @@ public:
      * and retrieve dialog box input data.
      * @see TGroup::dataSize
      */
-    virtual ushort dataSize();
+	virtual ushort dataSize();
     /**
      * Reads the data record of this dialog.
      *
@@ -1383,7 +1466,7 @@ public:
      * and @ref setData() to store and retrieve dialog box input data.
      * @see TGroup::getData
      */
-    virtual void getData( void *rec );
+	virtual void getData(void *rec);
     /**
      * Standard TChDirDialog event handler.
      *
@@ -1391,7 +1474,7 @@ public:
      * previously current directory) and cmChangeDir (switch to selected
      * directory) events. The dialog is redrawn if necessary.
      */
-    virtual void handleEvent( TEvent& );
+	virtual void handleEvent(TEvent &);
     /**
      * Writes the data record of this dialog.
      *
@@ -1400,7 +1483,7 @@ public:
      * and @ref getData() to store and retrieve dialog box input data.
      * @see TGroup::setData
      */
-    virtual void setData( void *rec );
+	virtual void setData(void *rec);
     /**
      * Checks if the command `command' is valid.
      *
@@ -1410,7 +1493,7 @@ public:
      * the "Invalid directory" message box and returns False.
      * @see TDialog::valid
      */
-    virtual Boolean valid( ushort command );
+	virtual Boolean valid(ushort command);
     /**
      * Releases TChDirDialog resources.
      *
@@ -1425,76 +1508,85 @@ public:
      * TChDirDialog::dirInput, TChDirDialog::okButton, and
      * TChDirDialog::chDirButton to 0 and then calls @ref TDialog::shutDown().
      */
-    virtual void shutDown();
-private:
-    void setUpDialog();
-    TInputLine *dirInput;
-    TDirListBox *dirList;
-    TButton *okButton;
-    TButton *chDirButton;
-    static const char * changeDirTitle;
-    static const char * dirNameText;
-    static const char * dirTreeText;
-    static const char * okText;
-    static const char * chdirText;
-    static const char * revertText;
-    static const char * helpText;
-    static const char * drivesText;
-    static const char * invalidText;
-    virtual const char *streamableName() const
-        { return name; }
-protected:
+	virtual void shutDown();
+      private:
+	void setUpDialog();
+	TInputLine *dirInput;
+	TDirListBox *dirList;
+	TButton *okButton;
+	TButton *chDirButton;
+	static const char *changeDirTitle;
+	static const char *dirNameText;
+	static const char *dirTreeText;
+	static const char *okText;
+	static const char *chdirText;
+	static const char *revertText;
+	static const char *helpText;
+	static const char *drivesText;
+	static const char *invalidText;
+	virtual const char *streamableName() const {
+		return name;
+      } protected:
     /**
      * Constructor.
      *
      * Used to recover the view from a stream.
      */
-    TChDirDialog( StreamableInit ) :
-        TWindowInit( TChDirDialog::initFrame ),
-        TDialog( streamableInit ) {}
+	TChDirDialog(StreamableInit):TWindowInit(TChDirDialog::initFrame),
+	    TDialog(streamableInit) {
+	}
     /**
      * Used to store the view in a stream.
      * Writes to the output stream `os'.
-     */
-    virtual void write( opstream& os );
+     */ virtual void write(opstream & os);
     /**
      * Used to recover the view from a stream.
      * Reads from the input stream `is'.
      */
-    virtual void *read( ipstream& is );
-public:
+	virtual void *read(ipstream & is);
+      public:
     /**
      * Undocumented.
      */
-    static const char * const name;
+	static const char *const name;
     /**
      * Creates a new TChDirDialog.
      *
      * Called to create an object in certain stream-reading situations.
      */
-    static TStreamable *build();
+	static TStreamable *build();
 };
 
 /**
  * Undocumented.
  */
-inline ipstream& operator >> ( ipstream& is, TChDirDialog& cl )
-    { return is >> static_cast<TStreamable&>(cl); }
-/**
- * Undocumented.
- */
-inline ipstream& operator >> ( ipstream& is, TChDirDialog*& cl )
-    { return is >> (void *&)cl; }
+inline ipstream & operator >>(ipstream & is, TChDirDialog & cl)
+{
+	return is >> static_cast < TStreamable & >(cl);
+}
 
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TChDirDialog& cl )
-    { return os << static_cast<TStreamable&>(cl); }
+inline ipstream & operator >>(ipstream & is, TChDirDialog *&cl)
+{
+	return is >> (void *&)cl;
+}
+
 /**
  * Undocumented.
  */
-inline opstream& operator << ( opstream& os, TChDirDialog* cl )
-    { return os << static_cast<TStreamable *>(cl); }
+inline opstream & operator <<(opstream & os, TChDirDialog & cl)
+{
+	return os << static_cast < TStreamable & >(cl);
+}
 
-#endif  // Uses_TChDirDialog
+/**
+ * Undocumented.
+ */
+inline opstream & operator <<(opstream & os, TChDirDialog *cl)
+{
+	return os << static_cast < TStreamable * >(cl);
+}
+
+#endif // Uses_TChDirDialog

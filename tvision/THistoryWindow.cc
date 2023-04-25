@@ -13,41 +13,45 @@
 #define Uses_THistoryViewer
 #include <tv.h>
 
-THistInit::THistInit( TListViewer *(*cListViewer)( TRect, TWindow *, ushort ) ) :
-    createListViewer( cListViewer )
+THistInit::THistInit(TListViewer *(*cListViewer) (TRect, TWindow *, ushort)):
+createListViewer(cListViewer)
 {
 }
 
 #define cpHistoryWindow "\x13\x13\x15\x18\x17\x13\x14"
 
-THistoryWindow::THistoryWindow( const TRect& bounds,
-                                ushort historyId ) :
-    TWindowInit( &THistoryWindow::initFrame ),
-    THistInit( &THistoryWindow::initViewer ),
-    TWindow( bounds, nullptr, wnNoNumber)
+THistoryWindow::THistoryWindow(const TRect & bounds,
+			       ushort historyId):TWindowInit(&THistoryWindow::
+							     initFrame),
+THistInit(&THistoryWindow::initViewer), TWindow(bounds, nullptr, wnNoNumber)
 {
-    flags = wfClose;
-    if( createListViewer != nullptr &&
-        (viewer = createListViewer( getExtent(), this, historyId )) != nullptr )
-        insert( viewer );
+	flags = wfClose;
+	if (createListViewer != nullptr &&
+	    (viewer =
+	     createListViewer(getExtent(), this, historyId)) != nullptr)
+		insert(viewer);
 }
 
-TPalette& THistoryWindow::getPalette() const
+TPalette & THistoryWindow::getPalette()const
 {
-    static TPalette palette( cpHistoryWindow, sizeof( cpHistoryWindow )-1 );
-    return palette;
+	static TPalette palette(cpHistoryWindow, sizeof(cpHistoryWindow) - 1);
+	return palette;
 }
 
-void THistoryWindow::getSelection( char *dest )
+void THistoryWindow::getSelection(char *dest)
 {
-    viewer->getText( dest, viewer->focused, 255 );
+	viewer->getText(dest, viewer->focused, 255);
 }
 
-TListViewer *THistoryWindow::initViewer( TRect r, TWindow * win, ushort historyId )
+TListViewer *THistoryWindow::initViewer(TRect r, TWindow *win, ushort historyId)
 {
-    r.grow( -1, -1 );
-    return new THistoryViewer( r,
-        win->standardScrollBar( sbHorizontal | sbHandleKeyboard ),
-        win->standardScrollBar( sbVertical | sbHandleKeyboard ),
-        historyId);
+	r.grow(-1, -1);
+	return new THistoryViewer(r,
+				  win->
+				  standardScrollBar(sbHorizontal |
+						    sbHandleKeyboard),
+				  win->
+				  standardScrollBar(sbVertical |
+						    sbHandleKeyboard),
+				  historyId);
 }

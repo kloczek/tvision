@@ -36,53 +36,53 @@
 /**
  * Part of the help system.
  */
-class THelpViewer : public TScroller
-{
-public:
+class THelpViewer:public TScroller {
+      public:
     /**
      * Undocumented.
      */
-    THelpViewer( const TRect&, TScrollBar*, TScrollBar*, THelpFile*, ushort );
+	THelpViewer(const TRect &, TScrollBar *, TScrollBar *, THelpFile *,
+		    ushort);
     /**
      * Undocumented.
      */
-    ~THelpViewer();
+	~THelpViewer();
     /**
      * Undocumented.
      */
-    virtual void changeBounds( const TRect& );
+	virtual void changeBounds(const TRect &);
     /**
      * Undocumented.
      */
-    virtual void draw();
+	virtual void draw();
     /**
      * Undocumented.
      */
-    virtual TPalette& getPalette() const;
+	virtual TPalette & getPalette() const;
     /**
      * Undocumented.
      */
-    virtual void handleEvent( TEvent& );
+	virtual void handleEvent(TEvent &);
     /**
      * Undocumented.
      */
-    void makeSelectVisible( int, TPoint&, uchar&, int& );
+	void makeSelectVisible(int, TPoint &, uchar &, int &);
     /**
      * Undocumented.
      */
-    void switchToTopic( int );
+	void switchToTopic(int);
     /**
      * Undocumented.
      */
-    THelpFile *hFile;
+	THelpFile *hFile;
     /**
      * Undocumented.
      */
-    THelpTopic *topic;
+	THelpTopic *topic;
     /**
      * Undocumented.
      */
-    int selected;
+	int selected;
 };
 
 // THelpWindow
@@ -90,18 +90,17 @@ public:
 /**
  * Part of the help system.
  */
-class THelpWindow : public TWindow
-{
-    static const char * helpWinTitle;
-public:
+class THelpWindow:public TWindow {
+	static const char *helpWinTitle;
+      public:
     /**
      * Undocumented.
      */
-    THelpWindow( THelpFile*, ushort );
+	 THelpWindow(THelpFile *, ushort);
     /**
      * Undocumented.
      */
-    virtual TPalette& getPalette() const;
+	virtual TPalette & getPalette() const;
 };
 
 /**
@@ -109,4 +108,4 @@ public:
  */
 extern TCrossRefHandler crossRefHandler;
 
-#endif  // TV_INC_HELP_H
+#endif // TV_INC_HELP_H
