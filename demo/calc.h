@@ -87,10 +87,10 @@ class TCalculator:public TDialog {
       private:
 	virtual const char *streamableName() const {
 		return name;
-	}
-      //protected://      virtual void write( opstream& );//      virtual void *read( ipstream& ); public:
-	static const char *const
-	    name;
+	};
+
+      public:
+	static const char *const name;
 	static TStreamable *build();
 };
 
