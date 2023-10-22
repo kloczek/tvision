@@ -48,8 +48,9 @@ class TCalcDisplay:public TView {
 	}
 	virtual const char *streamableName() const {
 		return name;
-      } protected:
-	 virtual void write(opstream &);
+	};
+      protected:
+	virtual void write(opstream &);
 	virtual void *read(ipstream &);
 
       public:
@@ -82,8 +83,9 @@ class TCalculator:public TDialog {
 	TCalculator();
 	TCalculator(StreamableInit):TWindowInit(&TCalculator::initFrame),
 	    TDialog(streamableInit) {
-      } private:
-	 virtual const char *streamableName() const {
+	};
+      private:
+	virtual const char *streamableName() const {
 		return name;
 	}
       //protected://      virtual void write( opstream& );//      virtual void *read( ipstream& ); public:
