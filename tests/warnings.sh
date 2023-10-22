@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 
-dnf install -y gpm-devel ncurses-devel doxygen gcc-c++ clang llvm
+sudo dnf install -y doxygen gcc-c++ clang llvm automake libtool gpm-devel --disablerepo rawhide
 
 if [ -e ../Makefile ]; then
 	make -C .. distclean
