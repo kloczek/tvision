@@ -1,6 +1,6 @@
      40 -Wshadow
-     36 -Wswitch-default
      35 -Wmissing-declarations
+     27 -Wswitch-default
       9 -Wredundant-decls
       6 -Wformat-overflow=
       5 -Wunused-result
@@ -14,9 +14,6 @@
       1 -Warray-bounds=
 
 ----------------------------------------------------------------
-../../../tvision/TButton.cc: In member function 'virtual void TButton::handleEvent(TEvent&)':
-../../../tvision/TButton.cc:193:24: warning: switch missing default case [-Wswitch-default]
-../../../tvision/TButton.cc:159:16: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TDeskTop.cc:54:6: warning: no previous declaration for 'void doCount(TView*, void*)' [-Wmissing-declarations]
 ../../../tvision/TDeskTop.cc:62:6: warning: no previous declaration for 'void doCascade(TView*, void*)' [-Wmissing-declarations]
 ../../../tvision/TDeskTop.cc:125:7: warning: no previous declaration for 'short int iSqr(short int)' [-Wmissing-declarations]
@@ -25,12 +22,6 @@
 ../../../tvision/TDeskTop.cc:164:5: warning: no previous declaration for 'int dividerLoc(int, int, int, int)' [-Wmissing-declarations]
 ../../../tvision/TDeskTop.cc:169:7: warning: no previous declaration for 'TRect calcTileRect(short int, const TRect&)' [-Wmissing-declarations]
 ../../../tvision/TDeskTop.cc:194:6: warning: no previous declaration for 'void doTile(TView*, void*)' [-Wmissing-declarations]
-../../../tvision/TDialog.cc: In member function 'virtual TPalette& TDialog::getPalette() const':
-../../../tvision/TDialog.cc:36:16: warning: switch missing default case [-Wswitch-default]
-../../../tvision/TDialog.cc: In member function 'virtual void TDialog::handleEvent(TEvent&)':
-../../../tvision/TDialog.cc:52:24: warning: switch missing default case [-Wswitch-default]
-../../../tvision/TDialog.cc:71:24: warning: switch missing default case [-Wswitch-default]
-../../../tvision/TDialog.cc:50:16: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TDirCollection.cc: In function 'void getCurDir(char*)':
 ../../../tvision/TDirCollection.cc:75:15: warning: ignoring return value of 'char* getcwd(char*, size_t)' declared with attribute 'warn_unused_result' [-Wunused-result]
 ../../../tvision/TDirListBox.cc: In member function 'void TDirListBox::showDirs(TDirCollection*)':
@@ -68,23 +59,18 @@ In function 'int sprintf(char*, const char*, ...)',
 In file included from ../../../tvision/tv.h:659,
                  from ../../../tvision/TEditor.cc:22:
 ../../../tvision/views.h:865:14: note: shadowed declaration is here
-../../../tvision/TEditor.cc:433:16: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TEditor.cc: In member function 'Boolean TEditor::search(const char*, ushort)':
-../../../tvision/TEditor.cc:804:37: warning: declaration of 'findStr' shadows a member of 'TEditor' [-Wshadow]
+../../../tvision/TEditor.cc:807:37: warning: declaration of 'findStr' shadows a member of 'TEditor' [-Wshadow]
 In file included from ../../../tvision/tv.h:691:
 ../../../tvision/editors.h:960:21: note: shadowed declaration is here
 ../../../tvision/TEditor.cc: In member function 'void TEditor::setCurPtr(uint, uchar)':
-../../../tvision/TEditor.cc:869:39: warning: declaration of 'selectMode' shadows a member of 'TEditor' [-Wshadow]
+../../../tvision/TEditor.cc:872:39: warning: declaration of 'selectMode' shadows a member of 'TEditor' [-Wshadow]
 ../../../tvision/views.h:865:14: note: shadowed declaration is here
-../../../tvision/TEditor.cc: In member function 'virtual void TEditor::setState(ushort, Boolean)':
-../../../tvision/TEditor.cc:935:16: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TFileDialog.cc: In member function 'virtual Boolean TFileDialog::valid(ushort)':
 ../../../tvision/TFileDialog.cc:235:14: warning: declaration of 'name' shadows a member of 'TFileDialog' [-Wshadow]
 In file included from ../../../tvision/tv.h:675,
                  from ../../../tvision/TFileDialog.cc:25:
 ../../../tvision/stddlg.h:947:34: note: shadowed declaration is here
-../../../tvision/TFileEditor.cc: In member function 'virtual Boolean TFileEditor::valid(ushort)':
-../../../tvision/TFileEditor.cc:223:32: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TFileList.cc: In member function 'void DirSearchRec::readFf_blk(const char*, stat&)':
 ../../../tvision/TFileList.cc:128:25: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
 ../../../tvision/TFileList.cc:128:24: warning: array subscript 'long int[0]' is partly outside array bounds of 'ftime [1]' [-Warray-bounds=]
