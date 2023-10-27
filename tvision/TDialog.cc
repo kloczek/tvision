@@ -40,6 +40,8 @@ TPalette & TDialog::getPalette()const
 		return paletteBlue;
 	case dpCyanDialog:
 		return paletteCyan;
+	default:
+		;
 	}
 	return paletteGray;
 }
@@ -64,6 +66,8 @@ void TDialog::handleEvent(TEvent & event)
 			putEvent(event);
 			clearEvent(event);
 			break;
+		default:
+			;
 		}
 		break;
 
@@ -78,8 +82,12 @@ void TDialog::handleEvent(TEvent & event)
 				clearEvent(event);
 			}
 			break;
+		default:
+			;
 		}
 		break;
+	default:
+		;
 	}
 }
 

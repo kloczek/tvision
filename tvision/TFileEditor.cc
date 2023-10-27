@@ -228,6 +228,8 @@ Boolean TFileEditor::valid(ushort command)
 				return True;
 			case cmCancel:
 				return False;
+			default:
+				break;
 			}
 		}
 	}

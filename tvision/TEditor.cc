@@ -597,6 +597,9 @@ void TEditor::handleEvent(TEvent & event)
 		default:
 			return;
 		}
+		break;
+	default:
+		break;
 	}
 	clearEvent(event);
 }
@@ -946,6 +949,9 @@ void TEditor::setState(ushort aState, Boolean enable)
 	case sfExposed:
 		if (enable == True)
 			unlock();
+		break;
+	default:
+		;
 	}
 }
 

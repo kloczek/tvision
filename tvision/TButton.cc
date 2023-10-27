@@ -212,8 +212,12 @@ void TButton::handleEvent(TEvent & event)
 			setState(sfDisabled, Boolean(!commandEnabled(command)));
 			drawView();
 			break;
+		default:
+			;
 		}
 		break;
+	default:
+		;
 	}
 }
 
