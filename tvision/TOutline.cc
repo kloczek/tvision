@@ -495,6 +495,9 @@ void TOutlineViewer::handleEvent(TEvent & event)
 		clearEvent(event);
 		adjustFocus(newFocus);
 		drawView();
+		break;
+	default:
+		;
 	}
 }
 

@@ -159,6 +159,9 @@ void TProgram::getEvent(TEvent & event)
 			case cmSysWakeup:
 				idle();
 				clearEvent(event);
+				break;
+			default:
+				;
 			}
 	}
 

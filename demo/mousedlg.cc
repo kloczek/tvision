@@ -133,5 +133,7 @@ void TMouseDialog::handleEvent(TEvent & event)
 			clearEvent(event);
 		}
 		break;
+	default:
+		;
 	}
 }

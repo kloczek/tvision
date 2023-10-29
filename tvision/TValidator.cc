@@ -231,6 +231,8 @@ void TPXPictureValidator::toGroupEnd(int &i, int termCh)
 			case ';':
 				i++;
 				break;
+			default:
+				;
 			}
 		i++;
 	} while (!((brkLevel == 0) && (brcLevel == 0)));
@@ -530,6 +532,8 @@ Boolean TPXPictureValidator::syntaxCheck()
 		case ';':
 			i++;
 			break;
+		default:
+			;
 		}
 		i++;
 	}

@@ -180,6 +180,8 @@ void TStatusLine::handleEvent(TEvent & event)
 		if (event.message.command == cmCommandSetChanged)
 			drawView();
 		break;
+	default:
+		;
 	}
 }
 

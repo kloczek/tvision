@@ -243,6 +243,8 @@ void THelpViewer::handleEvent(TEvent & event)
 			clearEvent(event);
 		}
 		break;
+	default:
+		;
 	}
 }
 

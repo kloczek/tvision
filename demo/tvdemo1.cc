@@ -151,6 +151,8 @@ void TVDemo::getEvent(TEvent & event)
 		if (event.mouse.buttons != 1)
 			event.what = evNothing;
 		break;
+	default:
+		;
 	}
 }
 

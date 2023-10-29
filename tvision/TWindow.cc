@@ -126,6 +126,8 @@ void TWindow::handleEvent(TEvent & event)
 				clearEvent(event);
 			}
 			break;
+		default:
+			;
 	} else if (event.what == evKeyDown)
 		switch (event.keyDown.keyCode) {
 		case kbTab:
@@ -136,6 +138,8 @@ void TWindow::handleEvent(TEvent & event)
 			focusNext(True);
 			clearEvent(event);
 			break;
+		default:
+			;
 	} else if (event.what == evBroadcast &&
 		   event.message.command == cmSelectWindowNum &&
 		   /*

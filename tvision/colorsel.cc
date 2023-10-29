@@ -359,6 +359,9 @@ void TColorDisplay::handleEvent(TEvent & event)
 			    (*color & 0xF0) | ((long)event.message.
 					       infoPtr & 0x0F);
 			drawView();
+			break;
+		default:
+			;
 		}
 }
 

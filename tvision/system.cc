@@ -1337,6 +1337,9 @@ static void sigHandler(int signo)
 		break;
 	case SIGWINCH:
 		doResize++;
+		break;
+	default:
+		;
 	}
 }
 
@@ -1670,6 +1673,9 @@ void TScreen::drawMouse(int show)
 						break;
 					case 0x70:
 						color = 0x0f;
+						break;
+					default:
+						;
 					}
 			}
 			move(msWhere.y, msWhere.x);

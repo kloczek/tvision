@@ -272,6 +272,8 @@ ushort TMenuView::execute()
 			} else
 				action = doReturn;
 			break;
+		default:
+			;
 		}
 
 		if (itemShown != current) {
@@ -430,6 +432,8 @@ void TMenuView::handleEvent(TEvent & event)
 					drawView();
 			}
 			break;
+		default:
+			;
 		}
 }
 

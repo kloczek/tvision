@@ -190,7 +190,7 @@ void TScrollBar::handleEvent(TEvent & event)
 #ifndef __UNPATCHED
 					// nothing
 #else
-					p = i;
+				p = i;
 #endif
 				}
 			} while (mouseEvent(event, evMouseMove));
@@ -257,6 +257,9 @@ void TScrollBar::handleEvent(TEvent & event)
 			setValue(i);
 			clearEvent(event);
 		}
+		break;
+	default:
+		;
 	}
 }
 

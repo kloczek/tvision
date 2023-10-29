@@ -276,6 +276,8 @@ void TView::dragView(TEvent & event,
 			case kbPgDn:
 				p.y = limits.b.y - s.y;
 				break;
+			default:
+				;
 			}
 			moveGrow(p, s, limits, minSize, maxSize, mode);
 		} while (event.keyDown.keyCode != kbEsc &&
@@ -710,6 +712,8 @@ void TView::setState(ushort aState, Boolean enable)
 			(enable == True) ? cmReceivedFocus : cmReleasedFocus,
 			this);
 		break;
+	default:
+		;
 	}
 }
 

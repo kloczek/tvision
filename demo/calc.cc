@@ -106,6 +106,8 @@ void TCalcDisplay::handleEvent(TEvent & event)
 			clearEvent(event);
 		}
 		break;
+	default:
+		;
 	}
 }
 
@@ -243,22 +245,20 @@ void TCalcDisplay::calcKey(unsigned char key)
 			case '+':
 				setDisplay(operand + r);
 				break;
-
 			case '-':
 				setDisplay(operand - r);
 				break;
-
 			case '*':
 				setDisplay(operand * r);
 				break;
-
 			case '/':
 				if (r == 0)
 					error();
 				else
 					setDisplay(operand / r);
 				break;
-
+			default:
+				;
 			}
 		}
 		operate = key;
@@ -268,7 +268,8 @@ void TCalcDisplay::calcKey(unsigned char key)
 	case 'C':
 		clear();
 		break;
-
+	default:
+		;
 	}
 	drawView();
 }

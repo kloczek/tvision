@@ -199,6 +199,8 @@ void TPuzzleView::moveKey(int key)
 				moves++;
 		}
 		break;
+	default:
+		;
 	}
 	drawView();
 }
@@ -232,7 +234,8 @@ void TPuzzleView::moveTile(TPoint p)
 	case 4:		//  Piece moves up
 		moveKey(kbUp);
 		break;
-
+	default:
+		;
 	}
 	drawView();
 }

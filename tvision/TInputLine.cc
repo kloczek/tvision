@@ -280,8 +280,8 @@ void TInputLine::handleEvent(TEvent & event)
 #ifndef __UNPATCHED
 				if (anchor < 0)
 					anchor = curPos;
-			} else
-				anchor = -1;
+				} else
+					anchor = -1;
 #else
 				if (curPos == selEnd)
 					anchor = selStart;
