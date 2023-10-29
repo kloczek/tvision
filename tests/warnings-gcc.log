@@ -1,9 +1,9 @@
      40 -Wshadow
      35 -Wmissing-declarations
-     27 -Wswitch-default
       9 -Wredundant-decls
       6 -Wformat-overflow=
       5 -Wunused-result
+      3 -Wswitch-default
       3 -Wsuggest-attribute=format
       3 -Wmismatched-new-delete
       3 -Wformat=
@@ -144,67 +144,42 @@ In function 'int sprintf(char*, const char*, ...)',
 ../../../tvision/TInputLine.cc:204:39: note: returned from 'void* operator new [](std::size_t)'
 ../../../tvision/TMenuPopup.cc: In member function 'virtual void TMenuPopup::handleEvent(TEvent&)':
 ../../../tvision/TMenuPopup.cc:26:16: warning: switch missing default case [-Wswitch-default]
-../../../tvision/TMenuView.cc: In member function 'virtual ushort TMenuView::execute()':
-../../../tvision/TMenuView.cc:169:24: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TMenuView.cc: In member function 'Boolean TMenuView::updateMenu(TMenu*)':
-../../../tvision/TMenuView.cc:364:38: warning: declaration of 'menu' shadows a member of 'TMenuView' [-Wshadow]
+../../../tvision/TMenuView.cc:366:38: warning: declaration of 'menu' shadows a member of 'TMenuView' [-Wshadow]
 In file included from ../../../tvision/tv.h:683,
                  from ../../../tvision/TMenuView.cc:22:
 ../../../tvision/menus.h:325:16: note: shadowed declaration is here
-../../../tvision/TMenuView.cc: In member function 'virtual void TMenuView::handleEvent(TEvent&)':
-../../../tvision/TMenuView.cc:404:24: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TOutline.cc:52:9: warning: no previous declaration for 'Boolean drawTree(TOutlineViewer*, TNode*, int, int, long int, ushort)' [-Wmissing-declarations]
 ../../../tvision/TOutline.cc:243:8: warning: no previous declaration for 'TNode* traverseTree(TOutlineViewer*, Boolean (*)(TOutlineViewer*, TNode*, int, int, long int, ushort), int&, Boolean&, TNode*, int, long int, Boolean)' [-Wmissing-declarations]
-../../../tvision/TOutline.cc: In member function 'virtual void TOutlineViewer::handleEvent(TEvent&)':
-../../../tvision/TOutline.cc:391:16: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TParamText.cc: In member function 'virtual void TParamText::setText(char*, ...)':
 ../../../tvision/TParamText.cc:48:17: warning: function 'virtual void TParamText::setText(char*, ...)' might be a candidate for 'gnu_printf' format attribute [-Wsuggest-attribute=format]
-../../../tvision/TProgram.cc: In member function 'virtual void TProgram::getEvent(TEvent&)':
-../../../tvision/TProgram.cc:138:32: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TResourceFile.cc:173:6: warning: no previous declaration for 'void copyStream(fpstream*, fpstream*, long int)' [-Wmissing-declarations]
 ../../../tvision/TResourceFile.cc:201:6: warning: no previous declaration for 'void doCopyResource(void*, void*)' [-Wmissing-declarations]
 ../../../tvision/TResourceFile.cc: In function 'void copyStream(fpstream*, fpstream*, long int)':
 ../../../tvision/TResourceFile.cc:191:16: warning: 'void operator delete(void*, std::size_t)' called on pointer returned from a mismatched allocation function [-Wmismatched-new-delete]
 ../../../tvision/TResourceFile.cc:177:42: note: returned from 'void* operator new [](std::size_t)'
-../../../tvision/TScrollBar.cc: In member function 'virtual void TScrollBar::handleEvent(TEvent&)':
-../../../tvision/TScrollBar.cc:160:16: warning: switch missing default case [-Wswitch-default]
-../../../tvision/TStatusLine.cc: In member function 'virtual void TStatusLine::handleEvent(TEvent&)':
-../../../tvision/TStatusLine.cc:145:16: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TValidator.cc:152:9: warning: no previous declaration for 'Boolean isNumber(char)' [-Wmissing-declarations]
 ../../../tvision/TValidator.cc:157:9: warning: no previous declaration for 'Boolean isLetter(char)' [-Wmissing-declarations]
 ../../../tvision/TValidator.cc:163:9: warning: no previous declaration for 'Boolean isSpecial(char, const char*)' [-Wmissing-declarations]
 ../../../tvision/TValidator.cc:175:7: warning: no previous declaration for 'uchar numChar(char, const char*)' [-Wmissing-declarations]
 ../../../tvision/TValidator.cc:186:9: warning: no previous declaration for 'Boolean isComplete(TPicResult)' [-Wmissing-declarations]
 ../../../tvision/TValidator.cc:191:9: warning: no previous declaration for 'Boolean isIncomplete(TPicResult)' [-Wmissing-declarations]
-../../../tvision/TValidator.cc: In member function 'void TPXPictureValidator::toGroupEnd(int&, int)':
-../../../tvision/TValidator.cc:218:32: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TValidator.cc: In member function 'TPicResult TPXPictureValidator::checkComplete(TPicResult, int)':
-../../../tvision/TValidator.cc:330:17: warning: declaration of 'status' shadows a member of 'TPXPictureValidator' [-Wshadow]
+../../../tvision/TValidator.cc:332:17: warning: declaration of 'status' shadows a member of 'TPXPictureValidator' [-Wshadow]
 In file included from ../../../tvision/tv.h:671,
                  from ../../../tvision/TValidator.cc:20:
 ../../../tvision/validate.h:174:16: note: shadowed declaration is here
-../../../tvision/TValidator.cc: In member function 'Boolean TPXPictureValidator::syntaxCheck()':
-../../../tvision/TValidator.cc:517:24: warning: switch missing default case [-Wswitch-default]
-../../../tvision/TView.cc: In member function 'virtual void TView::dragView(TEvent&, uchar, TRect&, TPoint, TPoint)':
-../../../tvision/TView.cc:242:32: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/TView.cc: In static member function 'static void TView::getCommands(TCommandSet&)':
-../../../tvision/TView.cc:429:20: warning: implicitly-declared 'constexpr TCommandSet& TCommandSet::operator=(const TCommandSet&)' is deprecated [-Wdeprecated-copy]
+../../../tvision/TView.cc:431:20: warning: implicitly-declared 'constexpr TCommandSet& TCommandSet::operator=(const TCommandSet&)' is deprecated [-Wdeprecated-copy]
 In file included from ../../../tvision/tv.h:659,
                  from ../../../tvision/TView.cc:21:
 ../../../tvision/views.h:646:9: note: because 'TCommandSet' has user-provided 'TCommandSet::TCommandSet(const TCommandSet&)'
 ../../../tvision/TView.cc: In static member function 'static void TView::setCommands(TCommandSet&)':
-../../../tvision/TView.cc:664:25: warning: implicitly-declared 'constexpr TCommandSet& TCommandSet::operator=(const TCommandSet&)' is deprecated [-Wdeprecated-copy]
+../../../tvision/TView.cc:666:25: warning: implicitly-declared 'constexpr TCommandSet& TCommandSet::operator=(const TCommandSet&)' is deprecated [-Wdeprecated-copy]
 ../../../tvision/views.h:646:9: note: because 'TCommandSet' has user-provided 'TCommandSet::TCommandSet(const TCommandSet&)'
-../../../tvision/TView.cc: In member function 'virtual void TView::setState(ushort, Boolean)':
-../../../tvision/TView.cc:688:16: warning: switch missing default case [-Wswitch-default]
-../../../tvision/TWindow.cc: In member function 'virtual void TWindow::handleEvent(TEvent&)':
-../../../tvision/TWindow.cc:93:24: warning: switch missing default case [-Wswitch-default]
-../../../tvision/TWindow.cc:130:24: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/asm.cc:68:5: warning: no previous declaration for 'int countLines(void*, size_t)' [-Wmissing-declarations]
 ../../../tvision/asm.cc:80:8: warning: no previous declaration for 'size_t scan(const void*, size_t, const char*)' [-Wmissing-declarations]
 ../../../tvision/asm.cc:127:8: warning: no previous declaration for 'size_t iScan(const void*, size_t, const char*)' [-Wmissing-declarations]
-../../../tvision/colorsel.cc: In member function 'virtual void TColorDisplay::handleEvent(TEvent&)':
-../../../tvision/colorsel.cc:346:24: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/helpbase.cc:348:9: warning: no previous declaration for 'Boolean isBlank(char)' [-Wmissing-declarations]
 ../../../tvision/helpbase.cc:356:5: warning: no previous declaration for 'int scan(char*, int, char)' [-Wmissing-declarations]
 ../../../tvision/helpbase.cc:372:6: warning: no previous declaration for 'void textToLine(void*, int, int, char*)' [-Wmissing-declarations]
@@ -212,10 +187,8 @@ In file included from ../../../tvision/tv.h:659,
 ../../../tvision/help.cc:138:41: warning: declaration of 'selected' shadows a member of 'THelpViewer' [-Wshadow]
 In file included from ../../../tvision/help.cc:29:
 ../../../tvision/help.h:85:13: note: shadowed declaration is here
-../../../tvision/help.cc: In member function 'virtual void THelpViewer::handleEvent(TEvent&)':
-../../../tvision/help.cc:178:16: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/help.cc: In member function 'virtual TPalette& THelpWindow::getPalette() const':
-../../../tvision/help.cc:267:25: warning: declaration of 'palette' shadows a member of 'THelpWindow' [-Wshadow]
+../../../tvision/help.cc:269:25: warning: declaration of 'palette' shadows a member of 'THelpWindow' [-Wshadow]
 In file included from ../../../tvision/tv.h:659,
                  from ../../../tvision/help.cc:26:
 ../../../tvision/views.h:3725:15: note: shadowed declaration is here
@@ -258,15 +231,11 @@ In file included from ../../../tvision/tv.h:659,
 ../../../tvision/stddlg.cc:244:34: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'int' [-Wformat=]
 ../../../tvision/stddlg.cc:258:34: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'int' [-Wformat=]
 ../../../tvision/stddlg.cc:262:34: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'int' [-Wformat=]
-../../../tvision/system.cc: In function 'void sigHandler(int)':
-../../../tvision/system.cc:1275:16: warning: switch missing default case [-Wswitch-default]
-../../../tvision/system.cc: In static member function 'static void TScreen::drawMouse(int)':
-../../../tvision/system.cc:1664:48: warning: switch missing default case [-Wswitch-default]
 ../../../tvision/system.cc: In function 'void fexpand(char*)':
-../../../tvision/system.cc:1779:15: warning: ignoring return value of 'char* getcwd(char*, size_t)' declared with attribute 'warn_unused_result' [-Wunused-result]
-../../../tvision/system.cc:1780:14: warning: ignoring return value of 'int chdir(const char*)' declared with attribute 'warn_unused_result' [-Wunused-result]
-../../../tvision/system.cc:1781:15: warning: ignoring return value of 'char* getcwd(char*, size_t)' declared with attribute 'warn_unused_result' [-Wunused-result]
-../../../tvision/system.cc:1782:14: warning: ignoring return value of 'int chdir(const char*)' declared with attribute 'warn_unused_result' [-Wunused-result]
+../../../tvision/system.cc:1785:15: warning: ignoring return value of 'char* getcwd(char*, size_t)' declared with attribute 'warn_unused_result' [-Wunused-result]
+../../../tvision/system.cc:1786:14: warning: ignoring return value of 'int chdir(const char*)' declared with attribute 'warn_unused_result' [-Wunused-result]
+../../../tvision/system.cc:1787:15: warning: ignoring return value of 'char* getcwd(char*, size_t)' declared with attribute 'warn_unused_result' [-Wunused-result]
+../../../tvision/system.cc:1788:14: warning: ignoring return value of 'int chdir(const char*)' declared with attribute 'warn_unused_result' [-Wunused-result]
 In file included from ../../../tvision/tv.h:683,
                  from ../../../tvision/help.h:30,
                  from ../../../tvision/tvtext.cc:44:
@@ -325,12 +294,8 @@ In file included from ../../../tvhc/tvhc.cc:85:
 ../../../tvhc/tvhc.cc: In function ‘void skipBlankLines(std::fstream&)’:
 ../../../tvhc/tvhc.cc:718:14: warning: declaration of ‘line’ shadows a global declaration [-Wshadow]
 ../../../tvhc/tvhc.h:93:6: note: shadowed declaration is here
-../../../demo/calc.cc: In member function ‘virtual void TCalcDisplay::handleEvent(TEvent&)’:
-../../../demo/calc.cc:98:16: warning: switch missing default case [-Wswitch-default]
 ../../../demo/calc.cc: In member function ‘void TCalcDisplay::calcKey(unsigned char)’:
-../../../demo/calc.cc:256:39: warning: comparing floating-point with ‘==’ or ‘!=’ is unsafe [-Wfloat-equal]
-../../../demo/calc.cc:242:32: warning: switch missing default case [-Wswitch-default]
-../../../demo/calc.cc:179:16: warning: switch missing default case [-Wswitch-default]
+../../../demo/calc.cc:255:39: warning: comparing floating-point with ‘==’ or ‘!=’ is unsafe [-Wfloat-equal]
 ../../../demo/calendar.cc: In member function ‘virtual void TCalendarView::draw()’:
 ../../../demo/calendar.cc:121:14: warning: declaration of ‘days’ shadows a member of ‘TCalendarView’ [-Wshadow]
 In file included from ../../../demo/calendar.cc:32:
@@ -347,14 +312,8 @@ In file included from ../../../tvision/tv.h:631,
 ../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
 ../../../demo/fileview.h:22:42: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
 ../../../tvision/tvobjs.h:383:17: note: shadowed declaration is here
-../../../demo/mousedlg.cc: In member function ‘virtual void TMouseDialog::handleEvent(TEvent&)’:
-../../../demo/mousedlg.cc:124:16: warning: switch missing default case [-Wswitch-default]
-../../../demo/puzzle.cc: In member function ‘void TPuzzleView::moveKey(int)’:
-../../../demo/puzzle.cc:166:16: warning: switch missing default case [-Wswitch-default]
-../../../demo/puzzle.cc: In member function ‘void TPuzzleView::moveTile(TPoint)’:
-../../../demo/puzzle.cc:219:16: warning: switch missing default case [-Wswitch-default]
 ../../../demo/puzzle.cc: In member function ‘void TPuzzleView::scramble()’:
-../../../demo/puzzle.cc:245:24: warning: switch missing default case [-Wswitch-default]
+../../../demo/puzzle.cc:248:24: warning: switch missing default case [-Wswitch-default]
 In file included from ../../../tvision/tv.h:683,
                  from ../../../tvision/help.h:30,
                  from ../../../demo/tvdemo1.cc:34:
@@ -379,8 +338,6 @@ In file included from ../../../tvision/tv.h:631:
 ../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
 ../../../demo/fileview.h:22:42: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
 ../../../tvision/tvobjs.h:383:17: note: shadowed declaration is here
-../../../demo/tvdemo1.cc: In member function ‘virtual void TVDemo::getEvent(TEvent&)’:
-../../../demo/tvdemo1.cc:127:16: warning: switch missing default case [-Wswitch-default]
 In file included from ../../../demo/tvdemo3.cc:42:
 ../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
 ../../../demo/fileview.h:22:42: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
@@ -393,5 +350,3 @@ In file included from ../../../tvision/tv.h:631,
 ../../../demo/fileview.h: In constructor ‘TLineCollection::TLineCollection(short int, short int)’:
 ../../../demo/fileview.h:22:42: warning: declaration of ‘delta’ shadows a member of ‘TLineCollection’ [-Wshadow]
 ../../../tvision/tvobjs.h:383:17: note: shadowed declaration is here
-../../../tutorial/tvlife.cc: In member function ‘virtual void TLifeInterior::handleEvent(TEvent&)’:
-../../../tutorial/tvlife.cc:553:16: warning: switch missing default case [-Wswitch-default]

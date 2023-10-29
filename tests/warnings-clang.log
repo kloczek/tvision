@@ -7231,11 +7231,11 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:3368:10: warning: padding class 'TGroup' with 4 bytes to align 'buffer' [-Wpadded]
 ../../../tvision/views.h:3384:9: warning: padding class 'TGroup' with 1 byte to align 'endState' [-Wpadded]
 ../../../tvision/views.h:2938:7: warning: padding size of 'TGroup' with 4 bytes to alignment boundary [-Wpadded]
-../../../tvision/TMenuView.cc:322:7: warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
-../../../tvision/TMenuView.cc:326:23: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TMenuView.cc:326:31: warning: cast from 'const char *' to 'char *' drops const qualifier [-Wcast-qual]
-../../../tvision/TMenuView.cc:360:18: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
-../../../tvision/TMenuView.cc:364:38: warning: declaration shadows a field of 'TMenuView' [-Wshadow]
+../../../tvision/TMenuView.cc:324:7: warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+../../../tvision/TMenuView.cc:328:23: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TMenuView.cc:328:31: warning: cast from 'const char *' to 'char *' drops const qualifier [-Wcast-qual]
+../../../tvision/TMenuView.cc:362:18: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
+../../../tvision/TMenuView.cc:366:38: warning: declaration shadows a field of 'TMenuView' [-Wshadow]
 ../../../tvision/menus.h:325:9: note: previous declaration is here
 In file included from ../../../tvision/TMenuView.cc:22:
 In file included from ../../../tvision/tv.h:639:
@@ -7248,7 +7248,7 @@ In file included from ../../../tvision/tv.h:639:
 In file included from ../../../tvision/TMenuView.cc:22:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:780:9: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TMenuView.cc:328:49: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TMenuView.cc:330:49: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 In file included from ../../../tvision/TMultiCheckBoxes.cc:13:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:120:2: warning: '~TNSCollection' overrides a destructor but is not marked 'override' [-Wsuggest-destructor-override]
@@ -7659,7 +7659,7 @@ In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:285:2: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:372:2: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/TOutline.cc:429:19: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TOutline.cc:529:41: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+../../../tvision/TOutline.cc:532:41: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
 In file included from ../../../tvision/TOutline.cc:18:
 In file included from ../../../tvision/tv.h:695:
 ../../../tvision/outline.h:445:9: warning: padding class 'TOutline' with 4 bytes to align 'root' [-Wpadded]
@@ -8157,11 +8157,11 @@ In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:285:2: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:372:2: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/TProgram.cc:125:26: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TProgram.cc:176:18: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
-../../../tvision/TProgram.cc:177:18: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
 ../../../tvision/TProgram.cc:179:18: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
-../../../tvision/TProgram.cc:199:18: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TProgram.cc:199:10: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TProgram.cc:180:18: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
+../../../tvision/TProgram.cc:182:18: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
+../../../tvision/TProgram.cc:202:18: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TProgram.cc:202:10: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../tvision/TProgram.cc:28:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:798:15: warning: padding class 'TStatusDef' with 4 bytes to align 'items' [-Wpadded]
@@ -8177,7 +8177,7 @@ In file included from ../../../tvision/tv.h:639:
 In file included from ../../../tvision/TProgram.cc:28:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:780:9: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TProgram.cc:186:11: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TProgram.cc:189:11: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 In file included from ../../../tvision/TRadioButtons.cc:13:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:120:2: warning: '~TNSCollection' overrides a destructor but is not marked 'override' [-Wsuggest-destructor-override]
@@ -9699,49 +9699,49 @@ In file included from ../../../tvision/tv.h:671:
 ../../../tvision/TValidator.cc:186:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
 ../../../tvision/TValidator.cc:191:9: warning: no previous prototype for function 'isIncomplete' [-Wmissing-prototypes]
 ../../../tvision/TValidator.cc:191:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
-../../../tvision/TValidator.cc:365:16: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TValidator.cc:386:13: warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
-../../../tvision/TValidator.cc:389:12: warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
-../../../tvision/TValidator.cc:515:8: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
-../../../tvision/TValidator.cc:557:36: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TValidator.cc:564:19: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TValidator.cc:555:24: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
-../../../tvision/TValidator.cc:573:14: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
-../../../tvision/TValidator.cc:583:26: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
-../../../tvision/TValidator.cc:708:5: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TValidator.cc:712:23: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TValidator.cc:705:11: warning: enumeration value 'vtDataSize' not explicitly handled in switch [-Wswitch-enum]
+../../../tvision/TValidator.cc:367:16: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TValidator.cc:388:13: warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+../../../tvision/TValidator.cc:391:12: warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+../../../tvision/TValidator.cc:517:8: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+../../../tvision/TValidator.cc:561:36: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TValidator.cc:568:19: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TValidator.cc:559:24: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+../../../tvision/TValidator.cc:577:14: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+../../../tvision/TValidator.cc:587:26: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+../../../tvision/TValidator.cc:712:5: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TValidator.cc:716:23: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TValidator.cc:709:11: warning: enumeration value 'vtDataSize' not explicitly handled in switch [-Wswitch-enum]
 In file included from ../../../tvision/TValidator.cc:20:
 In file included from ../../../tvision/tv.h:671:
 ../../../tvision/validate.h:915:21: warning: padding class 'TStringLookupValidator' with 4 bytes to align 'strings' [-Wpadded]
-../../../tvision/TValidator.cc:784:24: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TValidator.cc:784:42: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/TValidator.cc:789:49: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TValidator.cc:788:24: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TValidator.cc:788:42: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TValidator.cc:793:49: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../tvision/TValidator.cc:20:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:79:7: warning: 'TStreamable' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 ../../../tvision/TValidator.cc:180:49: warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
 ../../../tvision/TValidator.cc:201:2: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 ../../../tvision/TValidator.cc:218:12: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:244:35: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:246:6: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:273:18: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:274:21: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:335:12: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:340:19: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:364:31: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:368:8: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:369:11: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:423:8: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:425:16: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:435:12: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:508:6: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:517:11: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:564:51: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:571:8: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:574:4: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:574:17: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/TValidator.cc:575:4: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:246:35: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:248:6: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:275:18: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:276:21: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:337:12: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:342:19: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:366:31: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:370:8: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:371:11: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:425:8: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:427:16: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:437:12: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:510:6: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:519:11: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:568:51: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:575:8: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:578:4: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:578:17: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/TValidator.cc:579:4: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 ../../../tvision/TView.cc:20:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TView.cc:19:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/TView.cc:13:9: warning: macro is not used [-Wunused-macros]
@@ -9882,16 +9882,16 @@ In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:261:8: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:285:2: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:372:2: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../tvision/TView.cc:293:39: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wimplicit-int-conversion]
-../../../tvision/TView.cc:294:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wimplicit-int-conversion]
-../../../tvision/TView.cc:294:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wimplicit-int-conversion]
-../../../tvision/TView.cc:420:35: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wimplicit-int-conversion]
-../../../tvision/TView.cc:420:24: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
+../../../tvision/TView.cc:295:39: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wimplicit-int-conversion]
+../../../tvision/TView.cc:296:31: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wimplicit-int-conversion]
+../../../tvision/TView.cc:296:23: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wimplicit-int-conversion]
+../../../tvision/TView.cc:422:35: warning: implicit conversion loses integer precision: 'int' to 'ushort' (aka 'unsigned short') [-Wimplicit-int-conversion]
+../../../tvision/TView.cc:422:24: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
 In file included from ../../../tvision/TView.cc:21:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:646:2: warning: definition of implicit copy assignment operator for 'TCommandSet' is deprecated because it has a user-provided copy constructor [-Wdeprecated-copy-with-user-provided-copy]
-../../../tvision/TView.cc:429:11: note: in implicit copy assignment operator for 'TCommandSet' first required here
-../../../tvision/TView.cc:457:18: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
+../../../tvision/TView.cc:431:11: note: in implicit copy assignment operator for 'TCommandSet' first required here
+../../../tvision/TView.cc:459:18: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
 In file included from ../../../tvision/TView.cc:21:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:79:7: warning: 'TStreamable' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
@@ -10094,7 +10094,7 @@ In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:261:8: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:285:2: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:372:2: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../tvision/TWindow.cc:144:6: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/TWindow.cc:148:6: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../tvision/TWindow.cc:21:
 In file included from ../../../tvision/tv.h:639:
 ../../../tvision/drawbuf.h:118:2: warning: unsafe buffer access [-Wunsafe-buffer-usage]
@@ -12535,32 +12535,32 @@ In file included from ../../../tvision/tv.h:647:
 ../../../tvision/colorsel.cc:335:18: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
 ../../../tvision/colorsel.cc:353:10: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/colorsel.cc:359:27: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/colorsel.cc:368:50: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/colorsel.cc:368:42: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/colorsel.cc:411:11: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wimplicit-int-conversion]
-../../../tvision/colorsel.cc:452:32: warning: implicit conversion changes signedness: 'short' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../tvision/colorsel.cc:499:26: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/colorsel.cc:499:26: warning: implicit conversion loses integer precision: 'long' to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
-../../../tvision/colorsel.cc:499:17: warning: implicit conversion loses integer precision: 'short' to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
-../../../tvision/colorsel.cc:616:11: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wimplicit-int-conversion]
-../../../tvision/colorsel.cc:622:56: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/colorsel.cc:622:48: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/colorsel.cc:628:11: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/colorsel.cc:628:3: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/colorsel.cc:636:31: warning: implicit conversion changes signedness: 'short' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../tvision/colorsel.cc:644:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/colorsel.cc:655:13: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wimplicit-int-conversion]
+../../../tvision/colorsel.cc:371:50: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/colorsel.cc:371:42: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/colorsel.cc:414:11: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wimplicit-int-conversion]
+../../../tvision/colorsel.cc:455:32: warning: implicit conversion changes signedness: 'short' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../tvision/colorsel.cc:502:26: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/colorsel.cc:502:26: warning: implicit conversion loses integer precision: 'long' to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
+../../../tvision/colorsel.cc:502:17: warning: implicit conversion loses integer precision: 'short' to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
+../../../tvision/colorsel.cc:619:11: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wimplicit-int-conversion]
+../../../tvision/colorsel.cc:625:56: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/colorsel.cc:625:48: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/colorsel.cc:631:11: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/colorsel.cc:631:3: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/colorsel.cc:639:31: warning: implicit conversion changes signedness: 'short' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../tvision/colorsel.cc:647:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/colorsel.cc:658:13: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wimplicit-int-conversion]
 In file included from ../../../tvision/colorsel.cc:31:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:719:10: warning: padding class 'TButton' with 1 byte to align 'amDefault' [-Wpadded]
-../../../tvision/colorsel.cc:791:24: warning: implicit conversion loses integer precision: 'short' to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
-../../../tvision/colorsel.cc:799:12: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/colorsel.cc:798:21: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/colorsel.cc:810:3: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/colorsel.cc:817:10: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/colorsel.cc:820:20: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/colorsel.cc:848:12: warning: use of old-style cast [-Wold-style-cast]
-../../../tvision/colorsel.cc:863:12: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/colorsel.cc:794:24: warning: implicit conversion loses integer precision: 'short' to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
+../../../tvision/colorsel.cc:802:12: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/colorsel.cc:801:21: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/colorsel.cc:813:3: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/colorsel.cc:820:10: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/colorsel.cc:823:20: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/colorsel.cc:851:12: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/colorsel.cc:866:12: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../tvision/colorsel.cc:31:
 In file included from ../../../tvision/tv.h:639:
 ../../../tvision/drawbuf.h:118:2: warning: unsafe buffer access [-Wunsafe-buffer-usage]
@@ -12575,12 +12575,12 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/colorsel.cc:282:17: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 ../../../tvision/colorsel.cc:295:10: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 ../../../tvision/colorsel.cc:301:10: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/colorsel.cc:453:2: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/colorsel.cc:637:2: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/colorsel.cc:798:33: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/colorsel.cc:820:32: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/colorsel.cc:854:32: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/colorsel.cc:869:3: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/colorsel.cc:456:2: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/colorsel.cc:640:2: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/colorsel.cc:801:33: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/colorsel.cc:823:32: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/colorsel.cc:857:32: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/colorsel.cc:872:3: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 In file included from ../../../tvision/drivers.cc:14:
 In file included from ../../../tvision/tv.h:631:
 ../../../tvision/tvobjs.h:120:2: warning: '~TNSCollection' overrides a destructor but is not marked 'override' [-Wsuggest-destructor-override]
@@ -13236,7 +13236,7 @@ In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:261:8: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:285:2: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:372:2: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../tvision/help.cc:267:18: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
+../../../tvision/help.cc:269:18: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
 In file included from ../../../tvision/help.cc:26:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:79:7: warning: 'TStreamable' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
@@ -17017,24 +17017,24 @@ In file included from ../../../tvision/tv.h:647:
 /usr/include/bits/sigaction.h:39:41: note: expanded from macro 'sa_handler'
 ../../../tvision/system.cc:1334:15: warning: disabled expansion of recursive macro [-Wdisabled-macro-expansion]
 /usr/include/bits/sigaction.h:39:41: note: expanded from macro 'sa_handler'
-../../../tvision/system.cc:1363:11: warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
-../../../tvision/system.cc:1371:17: warning: implicit conversion loses integer precision: 'int' to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
-../../../tvision/system.cc:1372:18: warning: implicit conversion loses integer precision: 'int' to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
-../../../tvision/system.cc:1385:27: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/system.cc:1366:11: warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+../../../tvision/system.cc:1374:17: warning: implicit conversion loses integer precision: 'int' to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
+../../../tvision/system.cc:1375:18: warning: implicit conversion loses integer precision: 'int' to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
+../../../tvision/system.cc:1388:27: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/system.cc:403:24: note: expanded from macro 'LOG'
-../../../tvision/system.cc:1385:54: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/system.cc:1388:54: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/system.cc:403:24: note: expanded from macro 'LOG'
-../../../tvision/system.cc:1421:14: warning: disabled expansion of recursive macro [-Wdisabled-macro-expansion]
+../../../tvision/system.cc:1424:14: warning: disabled expansion of recursive macro [-Wdisabled-macro-expansion]
 /usr/include/bits/sigaction.h:39:41: note: expanded from macro 'sa_handler'
-../../../tvision/system.cc:1502:18: warning: implicit conversion loses integer precision: 'int' to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
-../../../tvision/system.cc:1503:19: warning: implicit conversion loses integer precision: 'int' to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
-../../../tvision/system.cc:1506:32: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/system.cc:1505:18: warning: implicit conversion loses integer precision: 'int' to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
+../../../tvision/system.cc:1506:19: warning: implicit conversion loses integer precision: 'int' to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
+../../../tvision/system.cc:1509:32: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/system.cc:403:24: note: expanded from macro 'LOG'
-../../../tvision/system.cc:1507:11: warning: use of old-style cast [-Wold-style-cast]
+../../../tvision/system.cc:1510:11: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/system.cc:403:24: note: expanded from macro 'LOG'
-../../../tvision/system.cc:1529:25: warning: implicit conversion loses integer precision: 'int' to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
-../../../tvision/system.cc:1742:17: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
-../../../tvision/system.cc:1762:33: warning: implicit conversion changes signedness: 'long' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../tvision/system.cc:1532:25: warning: implicit conversion loses integer precision: 'int' to 'uchar' (aka 'unsigned char') [-Wimplicit-int-conversion]
+../../../tvision/system.cc:1748:17: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+../../../tvision/system.cc:1768:33: warning: implicit conversion changes signedness: 'long' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
 ../../../tvision/system.cc:83:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/system.cc:912:9: warning: macro is not used [-Wunused-macros]
 ../../../tvision/system.cc:82:9: warning: macro is not used [-Wunused-macros]
@@ -17357,48 +17357,48 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tvision/system.cc:1203:19: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 /usr/include/ncurses.h:367:20: note: expanded from macro 'ACS_BULLET'
 /usr/include/ncurses.h:347:25: note: expanded from macro 'NCURSES_ACS'
-../../../tvision/system.cc:1362:35: warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
-../../../tvision/system.cc:1363:5: warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
-../../../tvision/system.cc:1400:2: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-/usr/include/sys/select.h:88:26: note: expanded from macro 'FD_ZERO'
-/usr/include/bits/select.h:30:7: note: expanded from macro '__FD_ZERO'
-/usr/include/sys/select.h:65:26: note: expanded from macro '__FDS_BITS'
-../../../tvision/system.cc:1401:2: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-/usr/include/sys/select.h:88:26: note: expanded from macro 'FD_ZERO'
-/usr/include/bits/select.h:30:7: note: expanded from macro '__FD_ZERO'
-/usr/include/sys/select.h:65:26: note: expanded from macro '__FDS_BITS'
-../../../tvision/system.cc:1402:2: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-/usr/include/sys/select.h:88:26: note: expanded from macro 'FD_ZERO'
-/usr/include/bits/select.h:30:7: note: expanded from macro '__FD_ZERO'
-/usr/include/sys/select.h:65:26: note: expanded from macro '__FDS_BITS'
+../../../tvision/system.cc:1365:35: warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+../../../tvision/system.cc:1366:5: warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
 ../../../tvision/system.cc:1403:2: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+/usr/include/sys/select.h:88:26: note: expanded from macro 'FD_ZERO'
+/usr/include/bits/select.h:30:7: note: expanded from macro '__FD_ZERO'
+/usr/include/sys/select.h:65:26: note: expanded from macro '__FDS_BITS'
+../../../tvision/system.cc:1404:2: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+/usr/include/sys/select.h:88:26: note: expanded from macro 'FD_ZERO'
+/usr/include/bits/select.h:30:7: note: expanded from macro '__FD_ZERO'
+/usr/include/sys/select.h:65:26: note: expanded from macro '__FDS_BITS'
+../../../tvision/system.cc:1405:2: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+/usr/include/sys/select.h:88:26: note: expanded from macro 'FD_ZERO'
+/usr/include/bits/select.h:30:7: note: expanded from macro '__FD_ZERO'
+/usr/include/sys/select.h:65:26: note: expanded from macro '__FDS_BITS'
+../../../tvision/system.cc:1406:2: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 /usr/include/sys/select.h:85:28: note: expanded from macro 'FD_SET'
 /usr/include/bits/select.h:33:12: note: expanded from macro '__FD_SET'
 /usr/include/sys/select.h:65:26: note: expanded from macro '__FDS_BITS'
-../../../tvision/system.cc:1514:9: warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
-../../../tvision/system.cc:1514:19: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/system.cc:1556:14: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/system.cc:1517:9: warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+../../../tvision/system.cc:1517:19: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/system.cc:1559:14: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 /usr/include/sys/select.h:87:30: note: expanded from macro 'FD_ISSET'
 /usr/include/bits/select.h:37:5: note: expanded from macro '__FD_ISSET'
 /usr/include/sys/select.h:65:26: note: expanded from macro '__FDS_BITS'
-../../../tvision/system.cc:1558:27: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/system.cc:1561:27: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 /usr/include/sys/select.h:87:30: note: expanded from macro 'FD_ISSET'
 /usr/include/bits/select.h:37:5: note: expanded from macro '__FD_ISSET'
 /usr/include/sys/select.h:65:26: note: expanded from macro '__FDS_BITS'
-../../../tvision/system.cc:1602:9: warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
-../../../tvision/system.cc:1602:18: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/system.cc:1650:17: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tvision/system.cc:1676:12: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/system.cc:1605:9: warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+../../../tvision/system.cc:1605:18: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/system.cc:1653:17: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/system.cc:1682:12: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 /usr/include/ncurses.h:1277:39: note: expanded from macro 'attrset'
-../../../tvision/system.cc:1677:10: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/system.cc:1683:10: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 /usr/include/ncurses.h:1266:35: note: expanded from macro 'addch'
-../../../tvision/system.cc:1711:11: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/system.cc:1717:11: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 /usr/include/ncurses.h:1277:39: note: expanded from macro 'attrset'
-../../../tvision/system.cc:1712:9: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/system.cc:1718:9: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 /usr/include/ncurses.h:1266:35: note: expanded from macro 'addch'
-../../../tvision/system.cc:1713:3: warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
-../../../tvision/system.cc:1761:16: warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
-../../../tvision/system.cc:1763:3: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tvision/system.cc:1719:3: warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+../../../tvision/system.cc:1767:16: warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+../../../tvision/system.cc:1769:3: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 ../../../tvision/textview.cc:12:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tvision/textview.cc:15:
 In file included from ../../../tvision/tv.h:631:
@@ -19828,36 +19828,36 @@ In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:719:10: warning: padding class 'TButton' with 1 byte to align 'amDefault' [-Wpadded]
 ../../../demo/calc.cc:105:12: warning: implicit conversion changes signedness: 'const char' to 'unsigned char' [-Wsign-conversion]
-../../../demo/calc.cc:114:15: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wimplicit-int-conversion]
-../../../demo/calc.cc:118:6: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:118:19: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
-../../../demo/calc.cc:119:30: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:119:30: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calc.cc:119:23: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calc.cc:120:31: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:120:24: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calc.cc:120:15: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calc.cc:121:14: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:121:38: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calc.cc:121:14: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
-../../../demo/calc.cc:122:18: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:153:20: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
-../../../demo/calc.cc:175:8: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/calc.cc:194:14: warning: implicit conversion changes signedness: 'unsigned char' to 'char' [-Wsign-conversion]
-../../../demo/calc.cc:256:11: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+../../../demo/calc.cc:116:15: warning: implicit conversion loses integer precision: 'ushort' (aka 'unsigned short') to 'char' [-Wimplicit-int-conversion]
+../../../demo/calc.cc:120:6: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:120:19: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+../../../demo/calc.cc:121:30: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:121:30: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calc.cc:121:23: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calc.cc:122:31: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:122:24: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calc.cc:122:15: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calc.cc:123:14: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:123:38: warning: implicit conversion changes signedness: 'char' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calc.cc:123:14: warning: implicit conversion changes signedness: 'short' to 'ushort' (aka 'unsigned short') [-Wsign-conversion]
+../../../demo/calc.cc:124:18: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:155:20: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+../../../demo/calc.cc:177:8: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:196:14: warning: implicit conversion changes signedness: 'unsigned char' to 'char' [-Wsign-conversion]
+../../../demo/calc.cc:255:11: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
 ../../../demo/calc.cc:264:13: warning: implicit conversion changes signedness: 'unsigned char' to 'char' [-Wsign-conversion]
-../../../demo/calc.cc:212:14: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
-../../../demo/calc.cc:277:13: warning: no previous extern declaration for non-static variable 'keyChar' [-Wmissing-variable-declarations]
-../../../demo/calc.cc:277:7: note: declare 'static' if the variable is not intended to be used outside of this translation unit
-../../../demo/calc.cc:296:29: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:214:14: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+../../../demo/calc.cc:278:13: warning: no previous extern declaration for non-static variable 'keyChar' [-Wmissing-variable-declarations]
+../../../demo/calc.cc:278:7: note: declare 'static' if the variable is not intended to be used outside of this translation unit
+../../../demo/calc.cc:297:29: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:145:43: note: expanded from macro '__DELTA'
-../../../demo/calc.cc:296:29: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:297:29: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:145:29: note: expanded from macro '__DELTA'
-../../../demo/calc.cc:296:29: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/calc.cc:297:29: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:145:23: note: expanded from macro '__DELTA'
-../../../demo/calc.cc:295:18: warning: no previous extern declaration for non-static variable 'RCalculator' [-Wmissing-variable-declarations]
-../../../demo/calc.cc:295:1: note: declare 'static' if the variable is not intended to be used outside of this translation unit
-../../../demo/calc.cc:295:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+../../../demo/calc.cc:296:18: warning: no previous extern declaration for non-static variable 'RCalculator' [-Wmissing-variable-declarations]
+../../../demo/calc.cc:296:1: note: declare 'static' if the variable is not intended to be used outside of this translation unit
+../../../demo/calc.cc:296:18: warning: declaration requires a global constructor [-Wglobal-constructors]
 In file included from ../../../demo/calc.cc:33:
 ../../../demo/calc.h:81:7: warning: 'TCalculator' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
 In file included from ../../../demo/calc.cc:27:
@@ -19871,8 +19871,8 @@ In file included from ../../../tvision/tv.h:639:
 In file included from ../../../demo/calc.cc:27:
 In file included from ../../../tvision/tv.h:659:
 ../../../tvision/views.h:780:9: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../demo/calc.cc:215:4: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../demo/calc.cc:312:23: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../demo/calc.cc:217:4: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../demo/calc.cc:313:23: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 ../../../demo/calendar.cc:23:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/calendar.cc:17:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/calendar.cc:22:9: warning: macro is not used [-Wunused-macros]
@@ -21152,17 +21152,17 @@ In file included from ../../../tvision/tv.h:647:
 ../../../tvision/system.h:261:8: warning: padding struct 'KeyDownEvent' with 6 bytes to align 'controlKeyState' [-Wpadded]
 ../../../tvision/system.h:285:2: warning: padding struct 'MessageEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
 ../../../tvision/system.h:372:2: warning: padding struct 'TEvent' with 6 bytes to align anonymous bit-field [-Wpadded]
-../../../demo/puzzle.cc:268:13: warning: no previous extern declaration for non-static variable 'solution' [-Wmissing-variable-declarations]
-../../../demo/puzzle.cc:268:7: note: declare 'static' if the variable is not intended to be used outside of this translation unit
-../../../demo/puzzle.cc:307:33: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:271:13: warning: no previous extern declaration for non-static variable 'solution' [-Wmissing-variable-declarations]
+../../../demo/puzzle.cc:271:7: note: declare 'static' if the variable is not intended to be used outside of this translation unit
+../../../demo/puzzle.cc:310:33: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:145:43: note: expanded from macro '__DELTA'
-../../../demo/puzzle.cc:307:33: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:310:33: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:145:29: note: expanded from macro '__DELTA'
-../../../demo/puzzle.cc:307:33: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/puzzle.cc:310:33: warning: use of old-style cast [-Wold-style-cast]
 ../../../tvision/tobjstrm.h:145:23: note: expanded from macro '__DELTA'
-../../../demo/puzzle.cc:306:18: warning: no previous extern declaration for non-static variable 'RPuzzleWindow' [-Wmissing-variable-declarations]
-../../../demo/puzzle.cc:306:1: note: declare 'static' if the variable is not intended to be used outside of this translation unit
-../../../demo/puzzle.cc:306:18: warning: declaration requires a global constructor [-Wglobal-constructors]
+../../../demo/puzzle.cc:309:18: warning: no previous extern declaration for non-static variable 'RPuzzleWindow' [-Wmissing-variable-declarations]
+../../../demo/puzzle.cc:309:1: note: declare 'static' if the variable is not intended to be used outside of this translation unit
+../../../demo/puzzle.cc:309:18: warning: declaration requires a global constructor [-Wglobal-constructors]
 In file included from ../../../demo/puzzle.cc:25:
 In file included from ../../../tvision/tv.h:639:
 ../../../tvision/drawbuf.h:118:2: warning: unsafe buffer access [-Wunsafe-buffer-usage]
@@ -21214,11 +21214,11 @@ In file included from ../../../tvision/tv.h:659:
 ../../../demo/puzzle.cc:196:18: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 ../../../demo/puzzle.cc:197:4: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 ../../../demo/puzzle.cc:197:4: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../demo/puzzle.cc:214:7: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../demo/puzzle.cc:214:7: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../demo/puzzle.cc:276:7: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../demo/puzzle.cc:276:7: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../demo/puzzle.cc:276:30: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../demo/puzzle.cc:216:7: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../demo/puzzle.cc:216:7: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../demo/puzzle.cc:279:7: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../demo/puzzle.cc:279:7: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../demo/puzzle.cc:279:30: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 ../../../demo/tvdemo1.cc:26:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/tvdemo1.cc:25:9: warning: macro is not used [-Wunused-macros]
 ../../../demo/tvdemo1.cc:17:9: warning: macro is not used [-Wunused-macros]
@@ -21716,8 +21716,8 @@ In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:798:15: warning: padding class 'TStatusDef' with 4 bytes to align 'items' [-Wpadded]
 ../../../tvision/menus.h:710:7: warning: padding size of 'TStatusItem' with 4 bytes to alignment boundary [-Wpadded]
-../../../demo/tvdemo1.cc:189:24: warning: use of old-style cast [-Wold-style-cast]
-../../../demo/tvdemo1.cc:256:16: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/tvdemo1.cc:191:24: warning: use of old-style cast [-Wold-style-cast]
+../../../demo/tvdemo1.cc:258:16: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../demo/tvdemo1.cc:33:
 In file included from ../../../tvision/tv.h:635:
 ../../../tvision/tobjstrm.h:79:7: warning: 'TStreamable' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
@@ -31933,16 +31933,16 @@ In file included from ../../../tvision/tv.h:647:
 ../../../tutorial/tvlife.cc:510:30: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wimplicit-int-conversion]
 ../../../tutorial/tvlife.cc:510:22: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wimplicit-int-conversion]
 ../../../tutorial/tvlife.cc:536:10: warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-../../../tutorial/tvlife.cc:614:33: warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-../../../tutorial/tvlife.cc:694:15: warning: use of old-style cast [-Wold-style-cast]
-../../../tutorial/tvlife.cc:694:8: warning: use of old-style cast [-Wold-style-cast]
-../../../tutorial/tvlife.cc:695:15: warning: use of old-style cast [-Wold-style-cast]
-../../../tutorial/tvlife.cc:695:8: warning: use of old-style cast [-Wold-style-cast]
-../../../tutorial/tvlife.cc:720:22: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wimplicit-int-conversion]
+../../../tutorial/tvlife.cc:617:33: warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+../../../tutorial/tvlife.cc:697:15: warning: use of old-style cast [-Wold-style-cast]
+../../../tutorial/tvlife.cc:697:8: warning: use of old-style cast [-Wold-style-cast]
+../../../tutorial/tvlife.cc:698:15: warning: use of old-style cast [-Wold-style-cast]
+../../../tutorial/tvlife.cc:698:8: warning: use of old-style cast [-Wold-style-cast]
+../../../tutorial/tvlife.cc:723:22: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wimplicit-int-conversion]
 In file included from ../../../tutorial/tvlife.cc:27:
 In file included from ../../../tvision/tv.h:667:
 ../../../tvision/dialogs.h:719:10: warning: padding class 'TButton' with 1 byte to align 'amDefault' [-Wpadded]
-../../../tutorial/tvlife.cc:777:22: warning: use of old-style cast [-Wold-style-cast]
+../../../tutorial/tvlife.cc:780:22: warning: use of old-style cast [-Wold-style-cast]
 In file included from ../../../tutorial/tvlife.cc:27:
 In file included from ../../../tvision/tv.h:683:
 ../../../tvision/menus.h:798:15: warning: padding class 'TStatusDef' with 4 bytes to align 'items' [-Wpadded]
@@ -31967,10 +31967,10 @@ In file included from ../../../tvision/tv.h:659:
 ../../../tutorial/tvlife.cc:537:17: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 ../../../tutorial/tvlife.cc:540:17: warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
 ../../../tutorial/tvlife.cc:541:14: warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
-../../../tutorial/tvlife.cc:621:3: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tutorial/tvlife.cc:657:9: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tutorial/tvlife.cc:662:9: warning: unsafe buffer access [-Wunsafe-buffer-usage]
-../../../tutorial/tvlife.cc:671:6: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tutorial/tvlife.cc:624:3: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tutorial/tvlife.cc:660:9: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tutorial/tvlife.cc:665:9: warning: unsafe buffer access [-Wunsafe-buffer-usage]
+../../../tutorial/tvlife.cc:674:6: warning: unsafe buffer access [-Wunsafe-buffer-usage]
 ../../../tutorial/validator.cc:17:9: warning: macro is not used [-Wunused-macros]
 ../../../tutorial/validator.cc:22:9: warning: macro is not used [-Wunused-macros]
 In file included from ../../../tutorial/validator.cc:24:
